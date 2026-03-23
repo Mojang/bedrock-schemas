@@ -1,6 +1,6 @@
 {
   "name": "@minecraft/bedrock-schemas",
-  "version": "0.1.0",
+  "version": "1.26.20-beta.21",
   "description": "JSON Schemas and TypeScript types for Minecraft Bedrock Edition content files (entities, blocks, items, biomes, and more).",
   "license": "MIT",
   "types": "./types/index.d.ts",

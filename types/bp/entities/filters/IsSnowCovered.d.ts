@@ -85,7 +85,7 @@ export enum IsSnowCoveredOperator {
    * @remarks
    * Test for less-than the value.
    */
-  "<" = `<`,
+  lessThan = `<`,
   /**
    * @remarks
    * Test for less-than or equal to the value.
@@ -100,7 +100,7 @@ export enum IsSnowCoveredOperator {
    * @remarks
    * Test for equality.
    */
-  "=" = `=`,
+  equals = `=`,
   /**
    * @remarks
    * Test for equality.
@@ -110,17 +110,12 @@ export enum IsSnowCoveredOperator {
    * @remarks
    * Test for greater-than the value.
    */
-  ">" = `>`,
+  greaterThan = `>`,
   /**
    * @remarks
    * Test for greater-than or equal to the value.
    */
   greaterThanEquals = `>=`,
-  /**
-   * @remarks
-   * Test for equality.
-   */
-  equals = `equals`,
   /**
    * @remarks
    * Test for inequality.
