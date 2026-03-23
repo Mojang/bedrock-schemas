@@ -1,0 +1,238 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "**/entities/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/entities/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/blocks/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/blocks/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/items/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/items/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/biomes/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/biomes/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/features/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/features/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/feature_rules/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/feature_rules/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/loot_tables/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/loot_tables/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/recipes/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/recipes/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/spawn_rules/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/spawn_rules/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/trading/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/trading/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/dialogue/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/dialogue/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/animations/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/animations/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/animation_controllers/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/animation_controllers/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/voxel_shapes/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/voxel_shapes/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/tick.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/bp/functions/tick.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/entity/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/entity/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/models/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/models/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/fogs/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/fogs/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/particles/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/particles/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/attachables/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/attachables/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/render_controllers/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/render_controllers/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/sounds/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/sounds/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/blocks_resource.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/textures/blocks_resource.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/terrain_texture.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/textures/terrain_texture.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/item_texture.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/textures/item_texture.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/flipbook_textures.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/textures/flipbook_textures.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/block_culling/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/block_culling/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/ui/**/*.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/ui/index.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/global_variables.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/ui/global_variables.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/texture_set.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/textures/texture_set.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/languages.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/texts/languages.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/music_definitions.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/sounds/music_definitions.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/lighting.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/lighting.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/color_grading.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/color_grading.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/atmospherics.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/atmospherics.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/pbr.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/pbr.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/point_lights.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/point_lights.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/shadows.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/shadows.schema.json"
+    },
+    {
+      "fileMatch": [
+        "**/water.json"
+      ],
+      "url": "./node_modules/@minecraft/bedrock-schemas/schemas/rp/deferred_rendering/water.schema.json"
+    }
+  ]
+}

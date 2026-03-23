@@ -1,0 +1,172 @@
+{
+  "name": "@minecraft/bedrock-schemas",
+  "version": "0.1.0",
+  "description": "JSON Schemas and TypeScript types for Minecraft Bedrock Edition content files (entities, blocks, items, biomes, and more).",
+  "license": "MIT",
+  "types": "./types/index.d.ts",
+  "keywords": [
+    "minecraft",
+    "bedrock",
+    "schema",
+    "json-schema",
+    "types",
+    "addon",
+    "behavior-pack",
+    "resource-pack"
+  ],
+  "files": [
+    "schemas/",
+    "types/",
+    "forms/",
+    "catalog.json",
+    "settings-template.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts"
+    },
+    "./catalog.json": {
+      "default": "./catalog.json"
+    },
+    "./bp": {
+      "types": "./types/bp/index.d.ts"
+    },
+    "./bp/animations": {
+      "types": "./types/bp/animations/index.d.ts"
+    },
+    "./bp/animation_controllers": {
+      "types": "./types/bp/animation_controllers/index.d.ts"
+    },
+    "./bp/biomes": {
+      "types": "./types/bp/biomes/index.d.ts"
+    },
+    "./bp/biomes/components": {
+      "types": "./types/bp/biomes/components/index.d.ts"
+    },
+    "./bp/blocks": {
+      "types": "./types/bp/blocks/index.d.ts"
+    },
+    "./bp/blocks/components": {
+      "types": "./types/bp/blocks/components/index.d.ts"
+    },
+    "./bp/dialogue": {
+      "types": "./types/bp/dialogue/index.d.ts"
+    },
+    "./bp/entities": {
+      "types": "./types/bp/entities/index.d.ts"
+    },
+    "./bp/entities/behaviors": {
+      "types": "./types/bp/entities/behaviors/index.d.ts"
+    },
+    "./bp/entities/components": {
+      "types": "./types/bp/entities/components/index.d.ts"
+    },
+    "./bp/entities/event_actions": {
+      "types": "./types/bp/entities/event_actions/index.d.ts"
+    },
+    "./bp/entities/filters": {
+      "types": "./types/bp/entities/filters/index.d.ts"
+    },
+    "./bp/entities/triggers": {
+      "types": "./types/bp/entities/triggers/index.d.ts"
+    },
+    "./bp/features": {
+      "types": "./types/bp/features/index.d.ts"
+    },
+    "./bp/feature_rules": {
+      "types": "./types/bp/feature_rules/index.d.ts"
+    },
+    "./bp/functions": {
+      "types": "./types/bp/functions/index.d.ts"
+    },
+    "./bp/items": {
+      "types": "./types/bp/items/index.d.ts"
+    },
+    "./bp/items/components": {
+      "types": "./types/bp/items/components/index.d.ts"
+    },
+    "./bp/loot_tables": {
+      "types": "./types/bp/loot_tables/index.d.ts"
+    },
+    "./bp/manifest": {
+      "types": "./types/bp/manifest/index.d.ts"
+    },
+    "./bp/recipes": {
+      "types": "./types/bp/recipes/index.d.ts"
+    },
+    "./bp/spawn_rules": {
+      "types": "./types/bp/spawn_rules/index.d.ts"
+    },
+    "./bp/trading": {
+      "types": "./types/bp/trading/index.d.ts"
+    },
+    "./bp/voxel_shapes": {
+      "types": "./types/bp/voxel_shapes/index.d.ts"
+    },
+    "./common": {
+      "types": "./types/common/index.d.ts"
+    },
+    "./rp": {
+      "types": "./types/rp/index.d.ts"
+    },
+    "./rp/attachables": {
+      "types": "./types/rp/attachables/index.d.ts"
+    },
+    "./rp/biomes_client": {
+      "types": "./types/rp/biomes_client/index.d.ts"
+    },
+    "./rp/block_culling": {
+      "types": "./types/rp/block_culling/index.d.ts"
+    },
+    "./rp/client_biomes": {
+      "types": "./types/rp/client_biomes/index.d.ts"
+    },
+    "./rp/deferred_rendering": {
+      "types": "./types/rp/deferred_rendering/index.d.ts"
+    },
+    "./rp/entity": {
+      "types": "./types/rp/entity/index.d.ts"
+    },
+    "./rp/fogs": {
+      "types": "./types/rp/fogs/index.d.ts"
+    },
+    "./rp/manifest": {
+      "types": "./types/rp/manifest/index.d.ts"
+    },
+    "./rp/models": {
+      "types": "./types/rp/models/index.d.ts"
+    },
+    "./rp/particles": {
+      "types": "./types/rp/particles/index.d.ts"
+    },
+    "./rp/render_controllers": {
+      "types": "./types/rp/render_controllers/index.d.ts"
+    },
+    "./rp/sounds": {
+      "types": "./types/rp/sounds/index.d.ts"
+    },
+    "./rp/textures": {
+      "types": "./types/rp/textures/index.d.ts"
+    },
+    "./rp/ui": {
+      "types": "./types/rp/ui/index.d.ts"
+    },
+    "./rp/visuals": {
+      "types": "./types/rp/visuals/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mojang/bedrock-schemas"
+  },
+  "homepage": "https://learn.microsoft.com/minecraft/creator/"
+}

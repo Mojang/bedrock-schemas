@@ -1,0 +1,117 @@
+// Copyright (c) Microsoft Corporation.
+// Licensed under the MIT License.
+// Type definitions for working with Minecraft Bedrock Edition pack JSON schemas.
+// Project: https://learn.microsoft.com/minecraft/creator/
+
+/**
+ * @packageDocumentation
+ * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
+ * 
+ * Block Components Documentation - minecraft:destructible_by_mining
+ * 
+ * minecraft:destructible_by_mining Samples
+ * At JSON Object (Item Tags): 
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 10,
+  "item_specific_speeds": [
+    {
+      "item": {
+        "tags": "q.any_tag('minecraft:is_pickaxe', 'my_pack:custom_tool') "
+      },
+      "destroy_speed": 5
+    }
+  ]
+}
+
+ * At JSON Object (Item Ids): 
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 10,
+  "item_specific_speeds": [
+    {
+      "item": "minecraft:iron_pickaxe",
+      "destroy_speed": 5
+    },
+    {
+      "item": "minecraft:diamond_pickaxe",
+      "destroy_speed": 2
+    }
+  ]
+}
+
+ */
+
+import * as jsoncommon from '../../../common';
+
+/**
+ * Destructible By Mining (minecraft:destructible_by_mining)
+ * Describes the destructible by mining properties for this block. If
+ * set to true, the block will take the default number of seconds to
+ * destroy. If set to false, this block is indestructible by
+ * mining. If the component is omitted, the block will take the
+ * default number of seconds to destroy.
+ * NOTE: Alternate Simple Representations
+
+ * This can also be represent as a simple `Boolean true/false`.
+
+ */
+export default interface MinecraftDestructibleByMining {
+
+  /**
+   * @remarks
+   * Optional array of objects to describe item specific block destroy
+   * speeds, each object contains an 'item' ItemDescriptor and a
+   * 'destroy_speed' float. This array currently requires UpcomingFeatures
+   * experiment to be enabled.
+   * 
+   * Sample Values:
+   * Samples: "{<br> "minecraft:destructible_by_mining": {<br> "seconds_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": { "tags": "q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') " },<br> "destroy_speed": 5.0<br> }<br> ]<br> }<br>}", "{<br> "minecraft:destructible_by_mining": {<br> "seconds_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": "minecraft:iron_pickaxe",<br> "destroy_speed": 5.0<br> },<br> {<br> "item": "minecraft:diamond_pickaxe",<br> "destroy_speed": 2.0<br> }<br> ]<br> }<br>}"
+   *
+   */
+  item_specific_speeds?: MinecraftDestructibleByMiningItemSpecificSpeeds[];
+
+  /**
+   * @remarks
+   * Sets the number of seconds it takes to destroy the block with
+   * base equipment. Greater numbers result in greater mining 
+   * times.
+   */
+  seconds_to_destroy?: number;
+
+}
+
+
+/**
+ * Optional array of objects to describe item specific block destroy
+ * speeds, each object contains an 'item' ItemDescriptor and a
+ * 'destroy_speed' float. This array currently requires UpcomingFeatures
+ * experiment to be enabled.
+ */
+export interface MinecraftDestructibleByMiningItemSpecificSpeeds {
+
+  /**
+   * @remarks
+   * Required. A destroy speed applied while using the defined 
+   * 'item'.
+   */
+  destroy_speed?: number;
+
+  /**
+   * @remarks
+   * Required. A filter for the item used while mining.
+   */
+  item?: MinecraftDestructibleByMiningItemSpecificSpeedsItem[];
+
+}
+
+
+/**
+ * Optional array of objects to describe item specific block destroy
+ * speeds, each object contains an 'item' ItemDescriptor and a
+ * 'destroy_speed' float. This array currently requires UpcomingFeatures
+ * experiment to be enabled.
+ */
+export interface MinecraftDestructibleByMiningItemSpecificSpeedsItem {
+
+  tags?: number[];
+
+}

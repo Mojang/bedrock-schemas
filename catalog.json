@@ -1,0 +1,317 @@
+{
+  "name": "Minecraft Bedrock Edition Schema Catalog",
+  "schemas": [
+    {
+      "name": "Entity Behavior",
+      "description": "Schema for Entity Behavior (behavior pack: entities)",
+      "fileMatch": [
+        "**/entities/**/*.json"
+      ],
+      "url": "./schemas/bp/entities/index.schema.json"
+    },
+    {
+      "name": "Block Behavior",
+      "description": "Schema for Block Behavior (behavior pack: blocks)",
+      "fileMatch": [
+        "**/blocks/**/*.json"
+      ],
+      "url": "./schemas/bp/blocks/index.schema.json"
+    },
+    {
+      "name": "Item Behavior",
+      "description": "Schema for Item Behavior (behavior pack: items)",
+      "fileMatch": [
+        "**/items/**/*.json"
+      ],
+      "url": "./schemas/bp/items/index.schema.json"
+    },
+    {
+      "name": "Biome",
+      "description": "Schema for Biome (behavior pack: biomes)",
+      "fileMatch": [
+        "**/biomes/**/*.json"
+      ],
+      "url": "./schemas/bp/biomes/index.schema.json"
+    },
+    {
+      "name": "Feature",
+      "description": "Schema for Feature (behavior pack: features)",
+      "fileMatch": [
+        "**/features/**/*.json"
+      ],
+      "url": "./schemas/bp/features/index.schema.json"
+    },
+    {
+      "name": "Feature Rule",
+      "description": "Schema for Feature Rule (behavior pack: feature_rules)",
+      "fileMatch": [
+        "**/feature_rules/**/*.json"
+      ],
+      "url": "./schemas/bp/feature_rules/index.schema.json"
+    },
+    {
+      "name": "Loot Table",
+      "description": "Schema for Loot Table (behavior pack: loot_tables)",
+      "fileMatch": [
+        "**/loot_tables/**/*.json"
+      ],
+      "url": "./schemas/bp/loot_tables/index.schema.json"
+    },
+    {
+      "name": "Recipe",
+      "description": "Schema for Recipe (behavior pack: recipes)",
+      "fileMatch": [
+        "**/recipes/**/*.json"
+      ],
+      "url": "./schemas/bp/recipes/index.schema.json"
+    },
+    {
+      "name": "Spawn Rule",
+      "description": "Schema for Spawn Rule (behavior pack: spawn_rules)",
+      "fileMatch": [
+        "**/spawn_rules/**/*.json"
+      ],
+      "url": "./schemas/bp/spawn_rules/index.schema.json"
+    },
+    {
+      "name": "Trade Table",
+      "description": "Schema for Trade Table (behavior pack: trading)",
+      "fileMatch": [
+        "**/trading/**/*.json"
+      ],
+      "url": "./schemas/bp/trading/index.schema.json"
+    },
+    {
+      "name": "NPC Dialogue",
+      "description": "Schema for NPC Dialogue (behavior pack: dialogue)",
+      "fileMatch": [
+        "**/dialogue/**/*.json"
+      ],
+      "url": "./schemas/bp/dialogue/index.schema.json"
+    },
+    {
+      "name": "Animation (BP)",
+      "description": "Schema for Animation (BP) (behavior pack: animations)",
+      "fileMatch": [
+        "**/animations/**/*.json"
+      ],
+      "url": "./schemas/bp/animations/index.schema.json"
+    },
+    {
+      "name": "Animation Controller (BP)",
+      "description": "Schema for Animation Controller (BP) (behavior pack: animation_controllers)",
+      "fileMatch": [
+        "**/animation_controllers/**/*.json"
+      ],
+      "url": "./schemas/bp/animation_controllers/index.schema.json"
+    },
+    {
+      "name": "Voxel Shape",
+      "description": "Schema for Voxel Shape (behavior pack: voxel_shapes)",
+      "fileMatch": [
+        "**/voxel_shapes/**/*.json"
+      ],
+      "url": "./schemas/bp/voxel_shapes/index.schema.json"
+    },
+    {
+      "name": "Tick (functions)",
+      "description": "Schema for Tick (functions) (behavior pack: functions)",
+      "fileMatch": [
+        "**/tick.json"
+      ],
+      "url": "./schemas/bp/functions/tick.schema.json"
+    },
+    {
+      "name": "Entity Resource",
+      "description": "Schema for Entity Resource (resource pack: entity)",
+      "fileMatch": [
+        "**/entity/**/*.json"
+      ],
+      "url": "./schemas/rp/entity/index.schema.json"
+    },
+    {
+      "name": "Model Geometry",
+      "description": "Schema for Model Geometry (resource pack: models)",
+      "fileMatch": [
+        "**/models/**/*.json"
+      ],
+      "url": "./schemas/rp/models/index.schema.json"
+    },
+    {
+      "name": "Fog",
+      "description": "Schema for Fog (resource pack: fogs)",
+      "fileMatch": [
+        "**/fogs/**/*.json"
+      ],
+      "url": "./schemas/rp/fogs/index.schema.json"
+    },
+    {
+      "name": "Particle",
+      "description": "Schema for Particle (resource pack: particles)",
+      "fileMatch": [
+        "**/particles/**/*.json"
+      ],
+      "url": "./schemas/rp/particles/index.schema.json"
+    },
+    {
+      "name": "Attachable",
+      "description": "Schema for Attachable (resource pack: attachables)",
+      "fileMatch": [
+        "**/attachables/**/*.json"
+      ],
+      "url": "./schemas/rp/attachables/index.schema.json"
+    },
+    {
+      "name": "Render Controller",
+      "description": "Schema for Render Controller (resource pack: render_controllers)",
+      "fileMatch": [
+        "**/render_controllers/**/*.json"
+      ],
+      "url": "./schemas/rp/render_controllers/index.schema.json"
+    },
+    {
+      "name": "Sound Definition",
+      "description": "Schema for Sound Definition (resource pack: sounds)",
+      "fileMatch": [
+        "**/sounds/**/*.json"
+      ],
+      "url": "./schemas/rp/sounds/index.schema.json"
+    },
+    {
+      "name": "Blocks Resource (blocks.json)",
+      "description": "Schema for Blocks Resource (blocks.json) (resource pack: textures)",
+      "fileMatch": [
+        "**/blocks_resource.json"
+      ],
+      "url": "./schemas/rp/textures/blocks_resource.schema.json"
+    },
+    {
+      "name": "Terrain Texture",
+      "description": "Schema for Terrain Texture (resource pack: textures)",
+      "fileMatch": [
+        "**/terrain_texture.json"
+      ],
+      "url": "./schemas/rp/textures/terrain_texture.schema.json"
+    },
+    {
+      "name": "Item Texture",
+      "description": "Schema for Item Texture (resource pack: textures)",
+      "fileMatch": [
+        "**/item_texture.json"
+      ],
+      "url": "./schemas/rp/textures/item_texture.schema.json"
+    },
+    {
+      "name": "Flipbook Textures",
+      "description": "Schema for Flipbook Textures (resource pack: textures)",
+      "fileMatch": [
+        "**/flipbook_textures.json"
+      ],
+      "url": "./schemas/rp/textures/flipbook_textures.schema.json"
+    },
+    {
+      "name": "Block Culling",
+      "description": "Schema for Block Culling (resource pack: block_culling)",
+      "fileMatch": [
+        "**/block_culling/**/*.json"
+      ],
+      "url": "./schemas/rp/block_culling/index.schema.json"
+    },
+    {
+      "name": "UI Screen",
+      "description": "Schema for UI Screen (resource pack: ui)",
+      "fileMatch": [
+        "**/ui/**/*.json"
+      ],
+      "url": "./schemas/rp/ui/index.schema.json"
+    },
+    {
+      "name": "UI Global Variables",
+      "description": "Schema for UI Global Variables (resource pack: ui)",
+      "fileMatch": [
+        "**/global_variables.json"
+      ],
+      "url": "./schemas/rp/ui/global_variables.schema.json"
+    },
+    {
+      "name": "Texture Set",
+      "description": "Schema for Texture Set (resource pack: textures)",
+      "fileMatch": [
+        "**/texture_set.json"
+      ],
+      "url": "./schemas/rp/textures/texture_set.schema.json"
+    },
+    {
+      "name": "Languages",
+      "description": "Schema for Languages (resource pack: texts)",
+      "fileMatch": [
+        "**/languages.json"
+      ],
+      "url": "./schemas/rp/texts/languages.schema.json"
+    },
+    {
+      "name": "Music Definitions",
+      "description": "Schema for Music Definitions (resource pack: sounds)",
+      "fileMatch": [
+        "**/music_definitions.json"
+      ],
+      "url": "./schemas/rp/sounds/music_definitions.schema.json"
+    },
+    {
+      "name": "Lighting",
+      "description": "Schema for Lighting (resource pack: lighting)",
+      "fileMatch": [
+        "**/lighting.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/lighting.schema.json"
+    },
+    {
+      "name": "Color Grading",
+      "description": "Schema for Color Grading (resource pack: color_grading)",
+      "fileMatch": [
+        "**/color_grading.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/color_grading.schema.json"
+    },
+    {
+      "name": "Atmospherics",
+      "description": "Schema for Atmospherics (resource pack: atmospherics)",
+      "fileMatch": [
+        "**/atmospherics.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/atmospherics.schema.json"
+    },
+    {
+      "name": "PBR Fallback",
+      "description": "Schema for PBR Fallback (resource pack: pbr)",
+      "fileMatch": [
+        "**/pbr.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/pbr.schema.json"
+    },
+    {
+      "name": "Point Lights",
+      "description": "Schema for Point Lights (resource pack: point_lights)",
+      "fileMatch": [
+        "**/point_lights.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/point_lights.schema.json"
+    },
+    {
+      "name": "Shadows",
+      "description": "Schema for Shadows (resource pack: shadows)",
+      "fileMatch": [
+        "**/shadows.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/shadows.schema.json"
+    },
+    {
+      "name": "Water",
+      "description": "Schema for Water (resource pack: water)",
+      "fileMatch": [
+        "**/water.json"
+      ],
+      "url": "./schemas/rp/deferred_rendering/water.schema.json"
+    }
+  ]
+}
