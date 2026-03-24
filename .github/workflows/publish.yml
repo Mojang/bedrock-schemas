@@ -25,4 +25,15 @@ jobs:
 
       - run: npm run typecheck
 
-      - run: npm publish --provenance --access public
+      - name: Determine npm tag
+        id: npm-tag
+        shell: bash
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          if [[ "$VERSION" == *-* ]]; then
+            echo "tag=${VERSION#*-}" | sed 's/\..*//' >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=latest" >> "$GITHUB_OUTPUT"
+          fi
+
+      - run: npm publish --provenance --access public --tag ${{ steps.npm-tag.outputs.tag }}
