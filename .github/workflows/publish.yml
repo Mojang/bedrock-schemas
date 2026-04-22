@@ -21,6 +21,8 @@ jobs:
           cache: npm
           registry-url: https://registry.npmjs.org
 
+      - run: npm install -g npm@latest
+
       - run: npm ci
 
       - run: npm run validate
@@ -37,5 +39,3 @@ jobs:
           fi
 
       - run: npm publish --provenance --access public --tag ${{ steps.npm-tag.outputs.tag }}
-        env:
-          NODE_AUTH_TOKEN: ''
