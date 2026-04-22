@@ -170,5 +170,8 @@
     "type": "git",
     "url": "https://github.com/Mojang/bedrock-schemas"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "homepage": "https://learn.microsoft.com/minecraft/creator/"
 }
