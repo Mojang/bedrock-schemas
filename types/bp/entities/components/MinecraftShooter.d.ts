@@ -20,18 +20,11 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
 
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:shooter/: 
 "minecraft:shooter": {
   "aux_val": 26,
   "def": "minecraft:arrow",
   "sound": "bow"
-}
-
-
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:shooter": {
-  "def": "minecraft:thrown_trident",
-  "sound": "item.trident.throw"
 }
 
 
@@ -46,6 +39,16 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 "minecraft:shooter": {
   "def": "minecraft:llama_spit"
+}
+
+
+Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
+
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:shooter/: 
+"minecraft:shooter": {
+  "aux_val": 35,
+  "def": "minecraft:arrow",
+  "sound": "bow"
 }
 
  */
@@ -71,6 +74,8 @@ export default interface MinecraftShooter {
    * Sample Values:
    * Bogged: 26
    *
+   * Parched: 35
+   *
    */
   aux_val?: number;
 
@@ -85,7 +90,7 @@ export default interface MinecraftShooter {
    *
    * Bogged: "minecraft:arrow"
    *
-   * Drowned: "minecraft:thrown_trident"
+   * Ender Dragon: "minecraft:dragon_fireball"
    *
    */
   def?: string;
@@ -119,8 +124,6 @@ export default interface MinecraftShooter {
    * 
    * Sample Values:
    * Bogged: "bow"
-   *
-   * Drowned: "item.trident.throw"
    *
    */
   sound?: string;

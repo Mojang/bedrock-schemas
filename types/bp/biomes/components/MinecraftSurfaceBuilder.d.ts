@@ -14,13 +14,14 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Biome Surface Builder (minecraft:surface_builder)
- * Controls the materials used for terrain generation.
+ * Controls materials used for terrain generation.
  */
 export default interface MinecraftSurfaceBuilder {
 
   /**
    * @remarks
-   * Controls the block types used for terrain generation.
+   * Controls block types and strategy used for terrain 
+   * generation.
    */
   builder: MinecraftSurfaceBuilderBuilder;
 

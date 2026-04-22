@@ -70,19 +70,7 @@
           "title": "Not",
           "description": "Test for inequality."
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/zombification_sensor/minecraft:environment_sensor/triggers/filters/",
-            "content": "=="
-          },
-          {
-            "path": "/minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/",
-            "content": "=="
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "subject",
@@ -126,51 +114,14 @@
           "title": "Target",
           "description": "The caller's current target."
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/zombification_sensor/minecraft:environment_sensor/triggers/filters/",
-            "content": "self"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/",
-            "content": "self"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "value",
       "title": "Value",
       "description": "(Optional) true or false.",
       "defaultValue": true,
-      "dataType": "boolean",
-      "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/",
-            "content": true
-          }
-        ]
-      }
-    },
-    {
-      "id": "test",
-      "title": "Test",
-      "dataType": "string",
-      "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/zombification_sensor/minecraft:environment_sensor/triggers/filters/",
-            "content": "in_nether"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/",
-            "content": "in_nether"
-          }
-        ]
-      }
+      "dataType": "boolean"
     }
   ],
   "note": "Does not require any parameters to work properly. It can be used as a standalone filter.",
@@ -190,26 +141,6 @@
       {
         "path": "Short (using Defaults)..",
         "content": "{ \"test\": \"in_nether\" }"
-      }
-    ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
-      {
-        "path": "/minecraft:entity/component_groups/zombification_sensor/minecraft:environment_sensor/triggers/filters/",
-        "content": {
-          "test": "in_nether",
-          "subject": "self",
-          "operator": "==",
-          "value": false
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/",
-        "content": {
-          "test": "in_nether",
-          "subject": "self",
-          "operator": "==",
-          "value": true
-        }
       }
     ]
   },

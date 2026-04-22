@@ -2184,6 +2184,13 @@
       "subFormId": "entity/minecraft_wither_target_highest_damage"
     },
     {
+      "id": "minecraft:apply_knockback_rules",
+      "title": "Minecraft Apply Knockback Rules",
+      "description": "Defines how an entity applies knockback.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_apply_knockback_rules"
+    },
+    {
       "id": "minecraft:behavior.aquatic_charge_attack",
       "title": "Aquatic Charge Attack Minecraft Behavior",
       "description": "Enables an aquatic mob to dash at its target with knockback; includes overshoot and cooldown settings.",
@@ -2248,8 +2255,9 @@
     {
       "id": "minecraft:behavior.croak",
       "title": "Croak Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows the entity to croak at a random time interval with configurable conditions.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_croak"
     },
     {
       "id": "minecraft:behavior.defend_village_target",
@@ -2323,8 +2331,9 @@
     {
       "id": "minecraft:behavior.emerge",
       "title": "Emerge Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows this entity to emerge from the ground",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_emerge"
     },
     {
       "id": "minecraft:behavior.equip_item",
@@ -2350,26 +2359,36 @@
     {
       "id": "minecraft:behavior.fire_at_target",
       "title": "Fire At Target Minecraft Behavior",
+      "description": "Allows an entity to attack by firing a shot with a delay. Anchor and offset parameters of this component overrides the anchor and offset from projectile component.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_fire_at_target"
+    },
+    {
+      "id": "minecraft:behavior.follow_target_leader",
+      "title": "Follow Target Leader Minecraft Behavior",
       "description": "Dynamic value",
       "dataType": "object"
     },
     {
       "id": "minecraft:behavior.go_and_give_items_to_noteblock",
       "title": "Go And Give Items To Noteblock Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "The entity will attempt to toss the items from its inventory to a nearby recently played noteblock.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_go_and_give_items_to_noteblock"
     },
     {
       "id": "minecraft:behavior.go_and_give_items_to_owner",
       "title": "Go And Give Items To Owner Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "The entity will attempt to toss the items from its inventory to its owner.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_go_and_give_items_to_owner"
     },
     {
       "id": "minecraft:behavior.go_home",
       "title": "Go Home Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows the mob to move back to the position they were spawned.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_go_home"
     },
     {
       "id": "minecraft:behavior.guardian_attack",
@@ -2702,12 +2721,6 @@
       "dataType": "object"
     },
     {
-      "id": "minecraft:memory_behavior.collect_nectar",
-      "title": "Collect Nectar Minecraft Memory Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
-    },
-    {
       "id": "minecraft:memory_behavior.flee_threat",
       "title": "Flee Threat Minecraft Memory Behavior",
       "description": "Dynamic value",
@@ -2789,7 +2802,7 @@
     {
       "id": "minecraft:pushable_by_entity",
       "title": "Minecraft Pushable By Entity",
-      "description": "Dynamic value",
+      "description": "Allows an entity to be pushed by other entities.",
       "dataType": "object"
     },
     {
@@ -2802,6 +2815,13 @@
       "title": "Minecraft Spawn Egg Interaction",
       "description": "Dynamic value",
       "dataType": "object"
+    },
+    {
+      "id": "minecraft:spawn_on_death",
+      "title": "Minecraft Spawn On Death",
+      "description": "Component for spawning entities when an entity perishes.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_spawn_on_death"
     },
     {
       "id": "minecraft:underwater_mount_breathing",

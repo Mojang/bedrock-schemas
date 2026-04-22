@@ -34,7 +34,7 @@
         }
       ],
       "title": "Breed Items",
-      "description": "The list of items that can be used to get the entity into the 'love' state. Can be a single item or an array.\n\nSample values:\n• chicken: [\"wheat_seeds\",\"beetroot_seeds\",\"melon_seeds\",\"...\n• cow: [\"wheat\"]\n• fox: [\"sweet_berries\",\"glow_berries\"]"
+      "description": "The list of items that can be used to get the entity into the 'love' state. Can be a single item or an array.\n\nSample values:\n• chicken: [\"wheat_seeds\",\"beetroot_seeds\",\"melon_seeds\",\"...\n• cow: [\"wheat\"]\n• frog: [\"slime_ball\"]"
     },
     "breeds_with": {
       "anyOf": [
@@ -102,7 +102,7 @@
         }
       ],
       "title": "Breeds With",
-      "description": "The entity definitions that this entity can breed with. Can be a single object or an array.\n\nProperties:\n• baby_type (string)\n• breed_event (string)\n• mate_type\n\nSample values:\n• chicken: {\"minecraft:chicken\":{}}\n• cow: {\"minecraft:cow\":{}}\n• fox: {\"minecraft:fox\":{}}",
+      "description": "The entity definitions that this entity can breed with. Can be a single object or an array.\n\nProperties:\n• baby_type (string)\n• breed_event (string)\n• mate_type\n\nSample values:\n• chicken: {\"minecraft:chicken\":{}}\n• cow: {\"minecraft:cow\":{}}\n• frog: {\"minecraft:frog\":{\"event\":\"become_pregnant\",\"t...",
       "defaultSnippets": [
         {
           "label": "Breeds With (object)",
@@ -350,7 +350,7 @@
     },
     "require_tame": {
       "title": "Require Tame",
-      "description": "If true, the entities need to be tamed first before they can breed.",
+      "description": "If true, the entities need to be tamed first before they can breed.\n\nSample values:\n• llama: true",
       "type": "boolean",
       "default": true
     }

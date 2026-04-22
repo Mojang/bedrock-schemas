@@ -10,21 +10,6 @@
  * Entity Behaviors Documentation - minecraft:behavior.defend_trusted_target
  * 
  * minecraft:behavior.defend_trusted_target Samples
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.defend_trusted_target": {
-  "priority": 0,
-  "within_radius": 25,
-  "must_see": false,
-  "aggro_sound": "mad",
-  "sound_chance": 0.05,
-  "on_defend_start": {
-    "event": "minecraft:fox_configure_defending",
-    "target": "self"
-  }
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -43,10 +28,6 @@ export default interface MinecraftBehaviorDefendTrustedTarget {
   /**
    * @remarks
    * Sound to occasionally play while defending.
-   * 
-   * Sample Values:
-   * Fox: "mad"
-   *
    */
   aggro_sound?: string;
 
@@ -79,15 +60,6 @@ export default interface MinecraftBehaviorDefendTrustedTarget {
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Fox: {"event":"minecraft:fox_configure_defending","target":"self"}
-   *
-   */
-  on_defend_start?: jsoncommon.MinecraftEventTrigger;
-
-  /**
-   * @remarks
    * As priority approaches 0, the priority is increased. The higher the
    * priority, the sooner this behavior will be executed as a 
    * goal.
@@ -96,21 +68,8 @@ export default interface MinecraftBehaviorDefendTrustedTarget {
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Fox: 0.05
-   *
-   */
-  sound_chance?: number;
-
-  /**
-   * @remarks
    * Distance in blocks that the target can be within to launch an
    * attack
-   * 
-   * Sample Values:
-   * Fox: 25
-   *
    */
   within_radius?: number;
 

@@ -17,5 +17,6 @@
     }
   ],
   "description": "A component describing how a block can consume and potentially propogate a redstone signal. This component is not available for block permutations.\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.26.0)",
-  "title": "Redstone Consumer"
+  "title": "Redstone Consumer",
+  "samples": {}
 }

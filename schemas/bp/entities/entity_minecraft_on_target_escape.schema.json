@@ -6,7 +6,7 @@
   "properties": {
     "event": {
       "title": "Event",
-      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• drowned: minecraft:lost_target\n• llama: minecraft:on_calm\n• magma_cube: minecraft:become_calm",
+      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• llama: minecraft:on_calm\n• magma_cube: minecraft:become_calm",
       "type": "string"
     },
     "filters": {

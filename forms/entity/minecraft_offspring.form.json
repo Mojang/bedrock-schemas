@@ -79,6 +79,16 @@
             "dataType": "float"
           }
         ]
+      },
+      "samples": {
+        "/vanilla/behavior_pack/entities/goat.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:offspring/",
+            "content": {
+              "variant": 0
+            }
+          }
+        ]
       }
     },
     {
@@ -111,19 +121,19 @@
             }
           }
         ],
-        "/vanilla/behavior_pack/entities/drowned.json": [
+        "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:offspring/",
             "content": {
-              "minecraft:drowned": "minecraft:drowned"
+              "minecraft:frog": "minecraft:tadpole"
             }
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
+        "/vanilla/behavior_pack/entities/goat.json": [
           {
             "path": "/minecraft:entity/components/minecraft:offspring/",
             "content": {
-              "minecraft:fox": "minecraft:fox"
+              "minecraft:goat": "minecraft:goat"
             }
           }
         ]
@@ -213,22 +223,25 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/drowned.json": [
+    "/vanilla/behavior_pack/entities/frog.json": [
       {
         "path": "/minecraft:entity/components/minecraft:offspring/",
         "content": {
           "offspring_pairs": {
-            "minecraft:drowned": "minecraft:drowned"
+            "minecraft:frog": "minecraft:tadpole"
           }
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
+    "/vanilla/behavior_pack/entities/goat.json": [
       {
         "path": "/minecraft:entity/components/minecraft:offspring/",
         "content": {
           "offspring_pairs": {
-            "minecraft:fox": "minecraft:fox"
+            "minecraft:goat": "minecraft:goat"
+          },
+          "mutation_factor": {
+            "variant": 0
           }
         }
       }

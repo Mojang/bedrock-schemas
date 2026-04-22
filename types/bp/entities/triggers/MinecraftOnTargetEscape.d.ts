@@ -18,14 +18,6 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:on_target_escape": {
-  "event": "minecraft:lost_target",
-  "target": "self"
-}
-
-
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
 "minecraft:on_target_escape": {
@@ -73,11 +65,11 @@ export default interface MinecraftOnTargetEscape {
    * met.
    * 
    * Sample Values:
-   * Drowned: "minecraft:lost_target"
-   *
    * Llama: "minecraft:on_calm"
    *
    * Magma Cube: "minecraft:become_calm"
+   *
+   *
    *
    */
   event?: string;
@@ -88,6 +80,7 @@ export default interface MinecraftOnTargetEscape {
    * 
    * Sample Values:
    * Llama: {"all_of":[{"test":"is_family","subject":"target","value":"wolf"},{"test":"has_component","subject":"target","operator":"!=","value":"minecraft:is_tamed"}]}
+   *
    *
    */
   filters?: jsoncommon.MinecraftFilter;

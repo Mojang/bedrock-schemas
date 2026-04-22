@@ -61,42 +61,6 @@ Cow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 }
 
 
-Hoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/hoglin.json
-
-"minecraft:rideable": {
-  "seat_count": 3,
-  "family_types": [
-    "piglin"
-  ],
-  "seats": [
-    {
-      "position": [
-        0,
-        1.125,
-        -0.3
-      ],
-      "lock_rider_rotation": 0
-    },
-    {
-      "position": [
-        0,
-        2.625,
-        -0.3
-      ],
-      "lock_rider_rotation": 0
-    },
-    {
-      "position": [
-        0,
-        4.125,
-        -0.3
-      ],
-      "lock_rider_rotation": 0
-    }
-  ]
-}
-
-
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
  * At /minecraft:entity/component_groups/minecraft:llama_wild/minecraft:rideable/: 
@@ -143,6 +107,40 @@ Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/
     "position": [
       0,
       -0.2,
+      0
+    ]
+  }
+}
+
+
+Pig - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/pig.json
+
+ * At /minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:rideable/: 
+"minecraft:rideable": {
+  "seat_count": 1,
+  "family_types": [
+    "baby_undead"
+  ],
+  "seats": {
+    "position": [
+      0,
+      0.7,
+      0
+    ]
+  }
+}
+
+ * At /minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:rideable/: 
+"minecraft:rideable": {
+  "seat_count": 1,
+  "interact_text": "action.interact.ride.horse",
+  "family_types": [
+    "player"
+  ],
+  "seats": {
+    "position": [
+      0,
+      0.63,
       0
     ]
   }
@@ -196,8 +194,6 @@ export default interface MinecraftRideable {
    * Sample Values:
    * Chicken: ["baby_undead"]
    *
-   *
-   * Hoglin: ["piglin"]
    *
    * Llama: ["player"]
    *
@@ -276,8 +272,6 @@ export default interface MinecraftRideable {
    * Sample Values:
    * Chicken: 1
    *
-   *
-   * Hoglin: 3
    *
    */
   seat_count?: number;

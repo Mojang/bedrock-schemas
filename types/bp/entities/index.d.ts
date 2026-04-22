@@ -10,6 +10,8 @@ export { default as MinecraftAngerLevel } from './components/MinecraftAngerLevel
 export { default as MinecraftAngry } from './components/MinecraftAngry';
 export { default as MinecraftAnnotationBreakDoor } from './components/MinecraftAnnotationBreakDoor';
 export { default as MinecraftAnnotationOpenDoor } from './components/MinecraftAnnotationOpenDoor';
+export { default as MinecraftApplyKnockbackRules } from './components/MinecraftApplyKnockbackRules';
+export { default as MinecraftApplyKnockbackRulesInstance } from './components/MinecraftApplyKnockbackRulesInstance';
 export { default as MinecraftAreaAttack } from './components/MinecraftAreaAttack';
 export { default as MinecraftAttack } from './components/MinecraftAttack';
 export { default as MinecraftAttackCooldown } from './components/MinecraftAttackCooldown';
@@ -174,6 +176,7 @@ export { default as MinecraftSkinId } from './components/MinecraftSkinId';
 export { default as MinecraftSoundVolume } from './components/MinecraftSoundVolume';
 export { default as MinecraftSpawnEggInteraction } from './components/MinecraftSpawnEggInteraction';
 export { default as MinecraftSpawnEntity } from './components/MinecraftSpawnEntity';
+export { default as MinecraftSpawnOnDeath } from './components/MinecraftSpawnOnDeath';
 export { default as MinecraftSpellEffects } from './components/MinecraftSpellEffects';
 export { default as MinecraftStrength } from './components/MinecraftStrength';
 export { default as MinecraftSuspectTracking } from './components/MinecraftSuspectTracking';
@@ -255,6 +258,7 @@ export { default as MinecraftBehaviorFollowMob } from './behaviors/MinecraftBeha
 export { default as MinecraftBehaviorFollowOwner } from './behaviors/MinecraftBehaviorFollowOwner';
 export { default as MinecraftBehaviorFollowParent } from './behaviors/MinecraftBehaviorFollowParent';
 export { default as MinecraftBehaviorFollowTargetCaptain } from './behaviors/MinecraftBehaviorFollowTargetCaptain';
+export { default as MinecraftBehaviorFollowTargetLeader } from './behaviors/MinecraftBehaviorFollowTargetLeader';
 export { default as MinecraftBehaviorGoAndGiveItemsToNoteblock } from './behaviors/MinecraftBehaviorGoAndGiveItemsToNoteblock';
 export { default as MinecraftBehaviorGoAndGiveItemsToOwner } from './behaviors/MinecraftBehaviorGoAndGiveItemsToOwner';
 export { default as MinecraftBehaviorGoHome } from './behaviors/MinecraftBehaviorGoHome';
@@ -262,6 +266,7 @@ export { default as MinecraftBehaviorGuardianAttack } from './behaviors/Minecraf
 export { default as MinecraftBehaviorHarvestFarmBlock } from './behaviors/MinecraftBehaviorHarvestFarmBlock';
 export { default as MinecraftBehaviorHide } from './behaviors/MinecraftBehaviorHide';
 export { default as MinecraftBehaviorHoldGround } from './behaviors/MinecraftBehaviorHoldGround';
+export { default as MinecraftBehaviorHover } from './behaviors/MinecraftBehaviorHover';
 export { default as MinecraftBehaviorHurtByTarget } from './behaviors/MinecraftBehaviorHurtByTarget';
 export { default as MinecraftBehaviorInspectBookshelf } from './behaviors/MinecraftBehaviorInspectBookshelf';
 export { default as MinecraftBehaviorInvestigateSuspiciousLocation } from './behaviors/MinecraftBehaviorInvestigateSuspiciousLocation';
@@ -366,6 +371,7 @@ export { default as MinecraftBehaviorSwimWithEntity } from './behaviors/Minecraf
 export { default as MinecraftBehaviorSwoopAttack } from './behaviors/MinecraftBehaviorSwoopAttack';
 export { default as MinecraftBehaviorTakeBlock } from './behaviors/MinecraftBehaviorTakeBlock';
 export { default as MinecraftBehaviorTakeFlower } from './behaviors/MinecraftBehaviorTakeFlower';
+export { default as MinecraftBehaviorTargetWhenPushed } from './behaviors/MinecraftBehaviorTargetWhenPushed';
 export { default as MinecraftBehaviorTeleportToOwner } from './behaviors/MinecraftBehaviorTeleportToOwner';
 export { default as MinecraftBehaviorTempt } from './behaviors/MinecraftBehaviorTempt';
 export { default as MinecraftBehaviorTimerFlag1 } from './behaviors/MinecraftBehaviorTimerFlag1';
@@ -489,6 +495,7 @@ export { default as OnHotBlock } from './filters/OnHotBlock';
 export { default as OnLadder } from './filters/OnLadder';
 export { default as OwnerDistance } from './filters/OwnerDistance';
 export { default as RandomChance } from './filters/RandomChance';
+export { default as RedstoneStrengthAtPosition } from './filters/RedstoneStrengthAtPosition';
 export { default as RiderCount } from './filters/RiderCount';
 export { default as SurfaceMob } from './filters/SurfaceMob';
 export { default as TakingFireDamage } from './filters/TakingFireDamage';

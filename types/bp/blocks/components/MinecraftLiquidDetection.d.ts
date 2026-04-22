@@ -10,6 +10,30 @@
  * Block Components Documentation - minecraft:liquid_detection
  * 
  * minecraft:liquid_detection Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:liquid_detection": {
+  "detection_rules": [
+    {
+      "liquid_type": "water",
+      "on_liquid_touches": "broken"
+    }
+  ]
+}
+
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:liquid_detection": {
+  "detection_rules": [
+    {
+      "liquid_type": "water",
+      "on_liquid_touches": "popped"
+    }
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';

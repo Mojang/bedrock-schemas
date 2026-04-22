@@ -222,15 +222,7 @@
       "title": "Can Get Scared",
       "description": "If true, the mob can stop being tempted if the player moves too fast while close to this mob.",
       "defaultValue": false,
-      "dataType": "boolean",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-            "content": true
-          }
-        ]
-      }
+      "dataType": "boolean"
     },
     {
       "id": "can_tempt_vertically",
@@ -282,15 +274,6 @@
             ]
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-            "content": [
-              "sweet_berries",
-              "glow_berries"
-            ]
-          }
-        ],
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
@@ -304,6 +287,14 @@
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
             "content": [
               "wheat"
+            ]
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
+            "content": [
+              "hay_block"
             ]
           }
         ]
@@ -328,12 +319,6 @@
             "content": 1.25
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-            "content": 0.5
-          }
-        ],
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
@@ -344,6 +329,12 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
             "content": 0.75
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
+            "content": 1.2
           }
         ]
       }
@@ -366,15 +357,7 @@
       "title": "Within Radius",
       "description": "Distance in blocks this mob can get tempted by a player holding an item they like.",
       "defaultValue": 0,
-      "dataType": "float",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-            "content": 16
-          }
-        ]
-      }
+      "dataType": "float"
     },
     {
       "id": "priority",
@@ -395,13 +378,13 @@
             "content": 4
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
+        "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-            "content": 3
+            "content": 5
           }
         ],
-        "/vanilla/behavior_pack/entities/frog.json": [
+        "/vanilla/behavior_pack/entities/llama.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
             "content": 5
@@ -442,21 +425,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
-        "content": {
-          "priority": 3,
-          "speed_multiplier": 0.5,
-          "within_radius": 16,
-          "can_get_scared": true,
-          "items": [
-            "sweet_berries",
-            "glow_berries"
-          ]
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/frog.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
@@ -478,6 +446,18 @@
           "speed_multiplier": 0.75,
           "items": [
             "wheat"
+          ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/llama.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:behavior.tempt/",
+        "content": {
+          "priority": 5,
+          "speed_multiplier": 1.2,
+          "items": [
+            "hay_block"
           ]
         }
       }

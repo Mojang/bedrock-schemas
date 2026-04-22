@@ -11,20 +11,17 @@
  * 
  * minecraft:variant Samples
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
+Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
- * At /minecraft:entity/component_groups/minecraft:fox_red/minecraft:variant/: 
-"minecraft:variant": {
-  "value": 0
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:variant/: 
+ * At /minecraft:entity/component_groups/cold_frog/minecraft:variant/: 
 "minecraft:variant": {
   "value": 1
 }
 
-
-Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
+ * At /minecraft:entity/component_groups/temperate_frog/minecraft:variant/: 
+"minecraft:variant": {
+  "value": 0
+}
 
  * At /minecraft:entity/component_groups/warm_frog/minecraft:variant/: 
 "minecraft:variant": {
@@ -67,9 +64,8 @@ export default interface MinecraftVariant {
    * entity/default appearance.
    * 
    * Sample Values:
-   * Fox: 1
+   * Frog: 1, 2
    *
-   * Frog: 2
    *
    * Llama: 3
    *

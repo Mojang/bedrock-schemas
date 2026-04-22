@@ -32,6 +32,11 @@
       "title": "Menu Category",
       "description": "Configures the block behavior in inventory and menu category",
       "dataType": "object",
+      "defaultValue": {
+        "category": "none",
+        "group": "",
+        "is_hidden_in_commands": false
+      },
       "subFormId": "block/menu_category"
     },
     {

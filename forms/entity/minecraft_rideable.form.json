@@ -148,12 +148,6 @@
             "path": "/minecraft:entity/component_groups/minecraft:cow_baby/minecraft:rideable/",
             "content": 1
           }
-        ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:rideable/",
-            "content": 3
-          }
         ]
       },
       "defaultValue": 1,
@@ -297,37 +291,6 @@
             }
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:rideable/",
-            "content": [
-              {
-                "position": [
-                  0,
-                  1.125,
-                  -0.3
-                ],
-                "lock_rider_rotation": 0
-              },
-              {
-                "position": [
-                  0,
-                  2.625,
-                  -0.3
-                ],
-                "lock_rider_rotation": 0
-              },
-              {
-                "position": [
-                  0,
-                  4.125,
-                  -0.3
-                ],
-                "lock_rider_rotation": 0
-              }
-            ]
-          }
-        ],
         "/vanilla/behavior_pack/entities/llama.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:llama_wild/minecraft:rideable/",
@@ -361,6 +324,28 @@
               ]
             }
           }
+        ],
+        "/vanilla/behavior_pack/entities/pig.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:rideable/",
+            "content": {
+              "position": [
+                0,
+                0.7,
+                0
+              ]
+            }
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:rideable/",
+            "content": {
+              "position": [
+                0,
+                0.63,
+                0
+              ]
+            }
+          }
         ]
       },
       "description": "The list of positions and number of riders for each position for entities riding this entity.",
@@ -385,14 +370,6 @@
             "path": "/minecraft:entity/component_groups/minecraft:cow_baby/minecraft:rideable/",
             "content": [
               "baby_undead"
-            ]
-          }
-        ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:rideable/",
-            "content": [
-              "piglin"
             ]
           }
         ],
@@ -432,6 +409,12 @@
           {
             "path": "/minecraft:entity/components/minecraft:rideable/",
             "content": "action.interact.ride.minecart"
+          }
+        ],
+        "/vanilla/behavior_pack/entities/pig.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:rideable/",
+            "content": "action.interact.ride.horse"
           }
         ]
       }
@@ -519,43 +502,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:rideable/",
-        "content": {
-          "seat_count": 3,
-          "family_types": [
-            "piglin"
-          ],
-          "seats": [
-            {
-              "position": [
-                0,
-                1.125,
-                -0.3
-              ],
-              "lock_rider_rotation": 0
-            },
-            {
-              "position": [
-                0,
-                2.625,
-                -0.3
-              ],
-              "lock_rider_rotation": 0
-            },
-            {
-              "position": [
-                0,
-                4.125,
-                -0.3
-              ],
-              "lock_rider_rotation": 0
-            }
-          ]
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/llama.json": [
       {
         "path": "/minecraft:entity/component_groups/minecraft:llama_wild/minecraft:rideable/",
@@ -604,6 +550,41 @@
             "position": [
               0,
               -0.2,
+              0
+            ]
+          }
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/pig.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:rideable/",
+        "content": {
+          "seat_count": 1,
+          "family_types": [
+            "baby_undead"
+          ],
+          "seats": {
+            "position": [
+              0,
+              0.7,
+              0
+            ]
+          }
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:rideable/",
+        "content": {
+          "seat_count": 1,
+          "interact_text": "action.interact.ride.horse",
+          "family_types": [
+            "player"
+          ],
+          "seats": {
+            "position": [
+              0,
+              0.63,
               0
             ]
           }

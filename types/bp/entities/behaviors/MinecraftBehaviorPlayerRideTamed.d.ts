@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Player Ride Tamed Behavior 
+ * Entity Player Ride Tamed Behavior
  * (minecraft:behavior.player_ride_tamed)
  * Allows the mob to be ridden by the player after being tamed.
  */
 export default interface MinecraftBehaviorPlayerRideTamed {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -29,4 +31,11 @@ export default interface MinecraftBehaviorPlayerRideTamed {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorPlayerRideTamedControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

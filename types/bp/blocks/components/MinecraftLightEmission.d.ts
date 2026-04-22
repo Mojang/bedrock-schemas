@@ -10,6 +10,14 @@
  * Block Components Documentation - minecraft:light_emission
  * 
  * minecraft:light_emission Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:light_emission": 7
+
+Block Gray Ore - Block Gray Ore
+
+"minecraft:light_emission": 15
  */
 
 import * as jsoncommon from '../../../common';

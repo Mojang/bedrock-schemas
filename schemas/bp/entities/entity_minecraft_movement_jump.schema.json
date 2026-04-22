@@ -6,7 +6,7 @@
   "properties": {
     "jump_delay": {
       "title": "Jump Delay",
-      "description": "Delay in seconds after landing when using the slime move control. Can be a single number, an array [min, max], or an object with range_min and range_max.",
+      "description": "Delay in seconds after landing when using the slime move control. Can be a single number, an array [min, max], or an object with range_min and range_max.\n\nSample values:\n• sulfur_cube: [0.5,1.5]\n• sulfur_cube: [0.16,0.5]",
       "oneOf": [
         {
           "type": "number"

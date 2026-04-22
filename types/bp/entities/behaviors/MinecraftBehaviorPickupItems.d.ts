@@ -43,34 +43,6 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 }
 
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:behavior.pickup_items": {
-  "can_pickup_any_item": true,
-  "excluded_items": [
-    "minecraft:glow_ink_sac",
-    {
-      "tags": "q.all_tags('minecraft:is_spear')"
-    }
-  ],
-  "pickup_based_on_chance": true,
-  "goal_radius": 2,
-  "priority": 6,
-  "max_dist": 3,
-  "speed_multiplier": 1
-}
-
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.pickup_items": {
-  "priority": 11,
-  "max_dist": 3,
-  "goal_radius": 2,
-  "speed_multiplier": 0.5
-}
-
-
 Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
 
 "minecraft:behavior.pickup_items": {
@@ -92,14 +64,15 @@ Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Pickup Items Behavior (minecraft:behavior.pickup_items)
+ * Entity Pickup Items Behavior 
+ * (minecraft:behavior.pickup_items)
  * Allows the mob to pick up items on the ground.
  */
 export default interface MinecraftBehaviorPickupItems {
 
   /**
    * @remarks
-   * If true, the mob can pickup any item
+   * If true, the mob can pick up any item
    * 
    * Sample Values:
    * Bogged: true
@@ -110,9 +83,19 @@ export default interface MinecraftBehaviorPickupItems {
 
   /**
    * @remarks
-   * If true, the mob can pickup items to its hand or armor slots
+   * If true, the mob can pick up items to its hand or armor 
+   * slots
    */
   can_pickup_to_hand_or_equipment?: boolean;
+
+  control_flags?: string[];
+
+  /**
+   * @remarks
+   * Time in seconds the mob cannot pickup items after being 
+   * attacked
+   */
+  cooldown_after_being_attacked?: number;
 
   /**
    * @remarks
@@ -121,11 +104,9 @@ export default interface MinecraftBehaviorPickupItems {
    * Sample Values:
    * Bogged: [{"tags":"q.all_tags('minecraft:is_spear')"}]
    *
-   * Drowned: ["minecraft:glow_ink_sac",{"tags":"q.all_tags('minecraft:is_spear')"}]
-   *
    *
    */
-  excluded_items?: string[];
+  excluded_items?: string;
 
   /**
    * @remarks
@@ -154,6 +135,19 @@ export default interface MinecraftBehaviorPickupItems {
    *
    */
   max_dist?: number;
+
+  /**
+   * @remarks
+   * Event to run when this mob either finishes or loses interest in
+   * picking up an item
+   */
+  on_pickup_item_end?: MinecraftBehaviorPickupItemsOnPickupItemEnd;
+
+  /**
+   * @remarks
+   * Event to run when this mob moves to pick up an item
+   */
+  on_pickup_item_start?: MinecraftBehaviorPickupItemsOnPickupItemStart;
 
   /**
    * @remarks
@@ -189,13 +183,14 @@ export default interface MinecraftBehaviorPickupItems {
    *
    * Bogged: 5
    *
-   * Drowned: 6
+   * Parched: 6
    *
    */
   priority?: number;
 
   /**
    * @remarks
+   * Height in blocks the mob will search for items
    * 
    * Sample Values:
    * Allay: 32
@@ -213,8 +208,6 @@ export default interface MinecraftBehaviorPickupItems {
    * Bogged: 1
    *
    *
-   * Fox: 0.5
-   *
    */
   speed_multiplier?: number;
 
@@ -225,4 +218,169 @@ export default interface MinecraftBehaviorPickupItems {
    */
   track_target?: boolean;
 
+}
+
+
+export enum MinecraftBehaviorPickupItemsControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
+ */
+export interface MinecraftBehaviorPickupItemsOnPickupItemEnd {
+
+  event?: string;
+
+  /**
+   * @remarks
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
+   */
+  filters?: MinecraftBehaviorPickupItemsOnPickupItemEndFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorPickupItemsOnPickupItemEndFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorPickupItemsOnPickupItemEndTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
+}
+
+
+/**
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
+ */
+export interface MinecraftBehaviorPickupItemsOnPickupItemStart {
+
+  event?: string;
+
+  /**
+   * @remarks
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
+   */
+  filters?: MinecraftBehaviorPickupItemsOnPickupItemStartFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorPickupItemsOnPickupItemStartFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorPickupItemsOnPickupItemStartTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

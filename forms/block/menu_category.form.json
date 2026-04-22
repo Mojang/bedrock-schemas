@@ -48,6 +48,7 @@
       "title": "Group",
       "description": "The expandable group that the block is a part of. Must be a namespace and can use vanilla ones",
       "dataType": "string",
+      "defaultValue": "",
       "validity": [
         {
           "comparison": "pattern",
@@ -59,7 +60,8 @@
       "id": "is_hidden_in_commands",
       "title": "Is Hidden In Commands",
       "description": "Is the block hidden from use in commands.",
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": false
     }
   ],
   "description": "Configures the block behavior in inventory and menu category",

@@ -48,24 +48,6 @@ Sniffer - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "value": "minecraft:is_baby"
 }
 
-
-Zoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/zoglin.json
-
- * At /minecraft:entity/events/minecraft:entity_transformed/sequence[0]/filters/: 
-{
-  "subject": "other",
-  "test": "has_component",
-  "value": "minecraft:is_baby"
-}
-
- * At /minecraft:entity/events/minecraft:entity_transformed/sequence[1]/filters/: 
-{
-  "test": "has_component",
-  "operator": "!=",
-  "subject": "other",
-  "value": "minecraft:is_baby"
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -94,8 +76,6 @@ export default interface HasComponent {
    * Sample Values:
    * Sheep: "self"
    *
-   *
-   * Zoglin: "other"
    *
    */
   subject?: string;

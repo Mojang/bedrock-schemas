@@ -16,11 +16,31 @@
   "description": "Allows the mob to stay at a certain level when in liquid.",
   "fields": [
     {
+      "id": "control_flags",
+      "title": "Control Flags",
+      "dataType": "stringArray",
+      "defaultValue": [],
+      "choices": [
+        {
+          "id": "jump",
+          "title": "Jump"
+        },
+        {
+          "id": "look",
+          "title": "Look"
+        },
+        {
+          "id": "move",
+          "title": "Move"
+        }
+      ]
+    },
+    {
       "id": "liquid_y_offset",
       "title": "Liquid y Offset",
       "description": "Target distance down from the liquid surface. i.e. Positive values move the target Y down.",
-      "defaultValue": 0,
       "dataType": "float",
+      "defaultValue": 0,
       "samples": {
         "/vanilla/behavior_pack/entities/strider.json": [
           {
@@ -31,11 +51,18 @@
       }
     },
     {
+      "id": "priority",
+      "title": "Priority",
+      "dataType": "int",
+      "defaultValue": 0,
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
+    },
+    {
       "id": "rise_delta",
       "title": "Rise Delta",
       "description": "Movement up in Y per tick when below the liquid surface.",
-      "defaultValue": 0,
       "dataType": "float",
+      "defaultValue": 0,
       "samples": {
         "/vanilla/behavior_pack/entities/strider.json": [
           {
@@ -49,8 +76,8 @@
       "id": "sink_delta",
       "title": "Sink Delta",
       "description": "Movement down in Y per tick when above the liquid surface.",
-      "defaultValue": 0,
       "dataType": "float",
+      "defaultValue": 0,
       "samples": {
         "/vanilla/behavior_pack/entities/strider.json": [
           {
@@ -59,16 +86,9 @@
           }
         ]
       }
-    },
-    {
-      "id": "priority",
-      "title": "Priority",
-      "hideSamples": true,
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "dataType": "int"
     }
   ],
-  "title": "Rise To Liquid Level Behavior",
+  "title": "Entity Rise To Liquid Level Behavior",
   "samples": {
     "/vanilla/behavior_pack/entities/strider.json": [
       {

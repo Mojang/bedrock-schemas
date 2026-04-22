@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Roll Behavior (minecraft:behavior.roll)
+ * Entity Roll Behavior (minecraft:behavior.roll)
  * This allows the mob to roll forward.
  */
 export default interface MinecraftBehaviorRoll {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -34,4 +36,11 @@ export default interface MinecraftBehaviorRoll {
    */
   probability?: number;
 
+}
+
+
+export enum MinecraftBehaviorRollControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

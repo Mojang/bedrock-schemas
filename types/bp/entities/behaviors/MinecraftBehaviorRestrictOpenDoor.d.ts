@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Restrict Open Door Behavior 
+ * Entity Restrict Open Door Behavior
  * (minecraft:behavior.restrict_open_door)
  * Allows the mob to stay indoors during night time.
  */
 export default interface MinecraftBehaviorRestrictOpenDoor {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -29,4 +31,11 @@ export default interface MinecraftBehaviorRestrictOpenDoor {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorRestrictOpenDoorControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

@@ -220,12 +220,6 @@
       "description": "Entity Definition that this entity will transform into",
       "dataType": "string",
       "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/become_zombie/minecraft:transformation/",
-            "content": "minecraft:zoglin"
-          }
-        ],
         "/vanilla/behavior_pack/entities/pig.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:pig_transform/minecraft:transformation/",
@@ -253,12 +247,6 @@
       "defaultValue": false,
       "dataType": "boolean",
       "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/become_zombie/minecraft:transformation/",
-            "content": true
-          }
-        ],
         "/vanilla/behavior_pack/entities/skeleton.json": [
           {
             "path": "/minecraft:entity/component_groups/become_stray/minecraft:transformation/",
@@ -295,12 +283,6 @@
       "description": "Sound to play when the entity is done transforming",
       "dataType": "string",
       "samples": {
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/become_zombie/minecraft:transformation/",
-            "content": "mob.hoglin.converted_to_zombified"
-          }
-        ],
         "/vanilla/behavior_pack/entities/pig.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:pig_transform/minecraft:transformation/",
@@ -319,16 +301,6 @@
   "description": "Defines an entity's transformation from the current definition into another",
   "title": "Transformation",
   "samples": {
-    "/vanilla/behavior_pack/entities/hoglin.json": [
-      {
-        "path": "/minecraft:entity/component_groups/become_zombie/minecraft:transformation/",
-        "content": {
-          "into": "minecraft:zoglin",
-          "transformation_sound": "mob.hoglin.converted_to_zombified",
-          "keep_level": true
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/pig.json": [
       {
         "path": "/minecraft:entity/component_groups/minecraft:pig_transform/minecraft:transformation/",

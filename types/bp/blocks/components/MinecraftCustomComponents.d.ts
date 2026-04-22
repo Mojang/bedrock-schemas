@@ -10,6 +10,13 @@
  * Block Components Documentation - minecraft:custom_components
  * 
  * minecraft:custom_components Samples
+
+Luckyblock - Luckyblock
+
+"minecraft:custom_components": [
+  "mike_luck:luckyblock_actions"
+]
+
  */
 
 import * as jsoncommon from '../../../common';

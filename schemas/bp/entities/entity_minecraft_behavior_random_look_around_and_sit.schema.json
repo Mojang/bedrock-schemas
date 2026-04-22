@@ -24,13 +24,13 @@
     },
     "max_look_count": {
       "title": "Max Look Count",
-      "description": "The max amount of unique looks a mob will have while looking around.\n\nSample values:\n• fox: 5",
+      "description": "The max amount of unique looks a mob will have while looking around.",
       "type": "integer",
       "default": 2
     },
     "max_look_time": {
       "title": "Max Look Time",
-      "description": "The max amount of time (in ticks) a mob will stay looking at a direction while looking around.\n\nSample values:\n• fox: 100",
+      "description": "The max amount of time (in ticks) a mob will stay looking at a direction while looking around.",
       "type": "integer",
       "default": 40
     },
@@ -42,19 +42,19 @@
     },
     "min_look_count": {
       "title": "Min Look Count",
-      "description": "The min amount of unique looks a mob will have while looking around.\n\nSample values:\n• fox: 2",
+      "description": "The min amount of unique looks a mob will have while looking around.",
       "type": "integer",
       "default": 1
     },
     "min_look_time": {
       "title": "Min Look Time",
-      "description": "The min amount of time (in ticks) a mob will stay looking at a direction while looking around.\n\nSample values:\n• fox: 80",
+      "description": "The min amount of time (in ticks) a mob will stay looking at a direction while looking around.",
       "type": "integer",
       "default": 20
     },
     "probability": {
       "title": "Probability",
-      "description": "The probability of randomly looking around/sitting.\n\nSample values:\n• fox: 0.001",
+      "description": "The probability of randomly looking around/sitting.",
       "type": "number",
       "default": 0.02
     },

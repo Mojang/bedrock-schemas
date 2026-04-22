@@ -132,7 +132,7 @@
           "id": "minecraft:collision_box",
           "dataType": "object",
           "maxLength": 16,
-          "technicalDescription": "\"origin\" + \"size\", must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
+          "technicalDescription": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
         }
       ]
     },

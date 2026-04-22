@@ -151,16 +151,6 @@
             "path": "/minecraft:entity/events/on_scenting_success/sequence[0]/filters/",
             "content": "self"
           }
-        ],
-        "/vanilla/behavior_pack/entities/zoglin.json": [
-          {
-            "path": "/minecraft:entity/events/minecraft:entity_transformed/sequence[0]/filters/",
-            "content": "other"
-          },
-          {
-            "path": "/minecraft:entity/events/minecraft:entity_transformed/sequence[1]/filters/",
-            "content": "other"
-          }
         ]
       }
     },
@@ -250,25 +240,6 @@
           "test": "has_component",
           "subject": "self",
           "operator": "!=",
-          "value": "minecraft:is_baby"
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/zoglin.json": [
-      {
-        "path": "/minecraft:entity/events/minecraft:entity_transformed/sequence[0]/filters/",
-        "content": {
-          "subject": "other",
-          "test": "has_component",
-          "value": "minecraft:is_baby"
-        }
-      },
-      {
-        "path": "/minecraft:entity/events/minecraft:entity_transformed/sequence[1]/filters/",
-        "content": {
-          "test": "has_component",
-          "operator": "!=",
-          "subject": "other",
           "value": "minecraft:is_baby"
         }
       }

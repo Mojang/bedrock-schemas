@@ -32,15 +32,7 @@
       "title": "Can Spread On Fire",
       "description": "Allows the mob, if on fire and empty handed, to ignite its target upon a successful attack.",
       "dataType": "boolean",
-      "defaultValue": false,
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
-            "content": true
-          }
-        ]
-      }
+      "defaultValue": false
     },
     {
       "id": "control_flags",
@@ -227,15 +219,7 @@
       "title": "Require Complete Path",
       "description": "Specifies whether a full navigation path from the mob to the target is required.",
       "dataType": "boolean",
-      "defaultValue": false,
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
-            "content": true
-          }
-        ]
-      }
+      "defaultValue": false
     },
     {
       "id": "speed_multiplier",
@@ -335,12 +319,11 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/drowned.json": [
+    "/vanilla/behavior_pack/entities/endermite.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
+        "path": "/minecraft:entity/components/minecraft:behavior.melee_box_attack/",
         "content": {
-          "can_spread_on_fire": true,
-          "require_complete_path": true,
+          "track_target": true,
           "priority": 3
         }
       }

@@ -21,6 +21,10 @@
       "dataType": "string",
       "choices": [
         {
+          "id": "absorb_block",
+          "title": "Absorb block"
+        },
+        {
           "id": "activate",
           "title": "Activate"
         },
@@ -501,6 +505,10 @@
           "title": "Bottle.fill"
         },
         {
+          "id": "bounce",
+          "title": "Bounce"
+        },
+        {
           "id": "bow",
           "title": "Bow"
         },
@@ -863,6 +871,10 @@
         {
           "id": "eat",
           "title": "Eat"
+        },
+        {
+          "id": "eject_block",
+          "title": "Eject block"
         },
         {
           "id": "elderguardian.curse",
@@ -1789,6 +1801,10 @@
           "title": "Purreow"
         },
         {
+          "id": "pushed_by_player",
+          "title": "Pushed by player"
+        },
+        {
           "id": "raid.horn",
           "title": "Raid.horn"
         },
@@ -1987,6 +2003,10 @@
         {
           "id": "sleep",
           "title": "Sleep"
+        },
+        {
+          "id": "slime_landing",
+          "title": "Slime landing"
         },
         {
           "id": "smithing_table.use",
@@ -2245,6 +2265,10 @@
       "dataType": "string",
       "choices": [
         {
+          "id": "absorb_block",
+          "title": "Absorb block"
+        },
+        {
           "id": "activate",
           "title": "Activate"
         },
@@ -2725,6 +2749,10 @@
           "title": "Bottle.fill"
         },
         {
+          "id": "bounce",
+          "title": "Bounce"
+        },
+        {
           "id": "bow",
           "title": "Bow"
         },
@@ -3087,6 +3115,10 @@
         {
           "id": "eat",
           "title": "Eat"
+        },
+        {
+          "id": "eject_block",
+          "title": "Eject block"
         },
         {
           "id": "elderguardian.curse",
@@ -4013,6 +4045,10 @@
           "title": "Purreow"
         },
         {
+          "id": "pushed_by_player",
+          "title": "Pushed by player"
+        },
+        {
           "id": "raid.horn",
           "title": "Raid.horn"
         },
@@ -4211,6 +4247,10 @@
         {
           "id": "sleep",
           "title": "Sleep"
+        },
+        {
+          "id": "slime_landing",
+          "title": "Slime landing"
         },
         {
           "id": "smithing_table.use",
@@ -4469,6 +4509,10 @@
       "dataType": "string",
       "choices": [
         {
+          "id": "absorb_block",
+          "title": "Absorb block"
+        },
+        {
           "id": "activate",
           "title": "Activate"
         },
@@ -4949,6 +4993,10 @@
           "title": "Bottle.fill"
         },
         {
+          "id": "bounce",
+          "title": "Bounce"
+        },
+        {
           "id": "bow",
           "title": "Bow"
         },
@@ -5311,6 +5359,10 @@
         {
           "id": "eat",
           "title": "Eat"
+        },
+        {
+          "id": "eject_block",
+          "title": "Eject block"
         },
         {
           "id": "elderguardian.curse",
@@ -6237,6 +6289,10 @@
           "title": "Purreow"
         },
         {
+          "id": "pushed_by_player",
+          "title": "Pushed by player"
+        },
+        {
           "id": "raid.horn",
           "title": "Raid.horn"
         },
@@ -6435,6 +6491,10 @@
         {
           "id": "sleep",
           "title": "Sleep"
+        },
+        {
+          "id": "slime_landing",
+          "title": "Slime landing"
         },
         {
           "id": "smithing_table.use",

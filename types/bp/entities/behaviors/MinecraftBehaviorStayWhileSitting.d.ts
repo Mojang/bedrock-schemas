@@ -22,7 +22,7 @@ Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Stay While Sitting Behavior 
+ * Entity Stay While Sitting Behavior
  * (minecraft:behavior.stay_while_sitting)
  * Allows the mob to stay put while it is in a sitting state instead of
  * doing something else.
@@ -31,6 +31,8 @@ import * as jsoncommon from '../../../common';
  * from moving the entity.
  */
 export default interface MinecraftBehaviorStayWhileSitting {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -44,4 +46,11 @@ export default interface MinecraftBehaviorStayWhileSitting {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorStayWhileSittingControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

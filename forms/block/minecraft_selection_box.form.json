@@ -75,7 +75,14 @@
     ],
     "dataType": "boolean"
   },
+  "samples": {
+    "Block Fabricator": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
+        "content": true
+      }
+    ]
+  },
   "title": "Selection Box",
-  "samples": {},
   "id": "minecraft:selection_box"
 }

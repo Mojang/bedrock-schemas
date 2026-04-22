@@ -274,7 +274,7 @@
     },
     "attack_interval": {
       "title": "Attack Interval",
-      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}",
+      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}",
       "anyOf": [
         {
           "type": "number"
@@ -324,13 +324,13 @@
     },
     "must_see_forget_duration": {
       "title": "Must See Forget Duration",
-      "description": "Time (in seconds) the target must not be seen by this entity to become invalid. Used only if \"must_see\" is true.\n\nSample values:\n• drowned: 17",
+      "description": "Time (in seconds) the target must not be seen by this entity to become invalid. Used only if \"must_see\" is true.",
       "type": "number",
       "default": 3
     },
     "persist_time": {
       "title": "Persist Time",
-      "description": "Time (in seconds) this entity can continue attacking the target after the target is no longer valid.\n\nSample values:\n• drowned: 0.5",
+      "description": "Time (in seconds) this entity can continue attacking the target after the target is no longer valid.",
       "type": "number",
       "default": 0
     },
@@ -386,7 +386,7 @@
     },
     "within_radius": {
       "title": "Within Radius",
-      "description": "Maximum distance this entity can be from the target when following it, otherwise the target becomes invalid. This value is only used if the entity doesn't declare \"minecraft:follow_range\".\n\nSample values:\n• breeze: 24\n• drowned: 12",
+      "description": "Maximum distance this entity can be from the target when following it, otherwise the target becomes invalid. This value is only used if the entity doesn't declare \"minecraft:follow_range\".\n\nSample values:\n• breeze: 24",
       "type": "number",
       "default": 0
     }

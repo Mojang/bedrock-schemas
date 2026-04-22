@@ -23,6 +23,26 @@
   ]
 }
 
+
+Block Fabricator - Block Fabricator
+
+"minecraft:collision_box": true
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:collision_box": {
+  "origin": [
+    -8,
+    2,
+    -8
+  ],
+  "size": [
+    16,
+    4,
+    16
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';

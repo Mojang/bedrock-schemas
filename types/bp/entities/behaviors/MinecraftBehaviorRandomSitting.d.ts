@@ -13,10 +13,20 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Sitting Behavior (minecraft:behavior.random_sitting)
+ * Entity Random Sitting Behavior 
+ * (minecraft:behavior.random_sitting)
  * Allows the mob to randomly sit for a duration.
  */
 export default interface MinecraftBehaviorRandomSitting {
+
+  control_flags?: string[];
+
+  /**
+   * @remarks
+   * Time in seconds the mob has to wait before using the goal 
+   * again
+   */
+  cooldown?: number;
 
   /**
    * @remarks
@@ -27,7 +37,7 @@ export default interface MinecraftBehaviorRandomSitting {
 
   /**
    * @remarks
-   * The minimum amount of time in seconds before the mob can stand
+   * The minimum amount of time in seconds before the mob will stand
    * back up
    */
   min_sit_time?: number;
@@ -54,4 +64,11 @@ export default interface MinecraftBehaviorRandomSitting {
    */
   stop_chance?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomSittingControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

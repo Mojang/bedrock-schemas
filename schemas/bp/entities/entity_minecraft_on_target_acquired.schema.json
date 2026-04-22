@@ -6,7 +6,7 @@
   "properties": {
     "event": {
       "title": "Event",
-      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• cave_spider: minecraft:become_angry\n• drowned: minecraft:has_target\n• hoglin: become_angry_event",
+      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• cave_spider: minecraft:become_angry\n• llama: minecraft:mad_at_wolf\n• magma_cube: minecraft:become_aggressive",
       "type": "string"
     },
     "filters": {
@@ -49,7 +49,7 @@
     },
     "target": {
       "title": "Target",
-      "description": "The target of the event.\n\nSample values:\n• drowned: self",
+      "description": "The target of the event.\n\nSample values:\n• llama: self",
       "type": "string",
       "default": "self"
     }

@@ -27,19 +27,27 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.follow_parent": {
-  "priority": 9,
-  "speed_multiplier": 1.1
-}
-
-
 Goat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/goat.json
 
 "minecraft:behavior.follow_parent": {
   "priority": 6,
   "speed_multiplier": 1
+}
+
+
+Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
+
+"minecraft:behavior.follow_parent": {
+  "priority": 5,
+  "speed_multiplier": 1
+}
+
+
+Pig - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/pig.json
+
+"minecraft:behavior.follow_parent": {
+  "priority": 6,
+  "speed_multiplier": 1.1
 }
 
  */
@@ -66,7 +74,7 @@ export default interface MinecraftBehaviorFollowParent {
    *
    * Dolphin: 4
    *
-   * Fox: 9
+   * Goat: 6
    *
    */
   priority?: number;

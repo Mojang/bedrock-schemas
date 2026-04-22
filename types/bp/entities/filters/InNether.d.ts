@@ -14,25 +14,6 @@
 { "test": "in_nether", "subject": "self", "operator": "equals", "value": "true" }
  * At Short (using Defaults)..: 
 { "test": "in_nether" }
-
-Hoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/hoglin.json
-
- * At /minecraft:entity/component_groups/zombification_sensor/minecraft:environment_sensor/triggers/filters/: 
-{
-  "test": "in_nether",
-  "subject": "self",
-  "operator": "==",
-  "value": false
-}
-
- * At /minecraft:entity/component_groups/start_zombification/minecraft:environment_sensor/triggers/filters/: 
-{
-  "test": "in_nether",
-  "subject": "self",
-  "operator": "==",
-  "value": true
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -48,39 +29,18 @@ export default interface InNether {
   /**
    * @remarks
    * (Optional) The comparison to apply with 'value'.
-   * 
-   * Sample Values:
-   * Hoglin: "=="
-   *
    */
   operator?: string;
 
   /**
    * @remarks
    * (Optional) The subject of this filter test.
-   * 
-   * Sample Values:
-   * Hoglin: "self"
-   *
    */
   subject?: string;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Hoglin: "in_nether"
-   *
-   */
-  test?: string;
-
-  /**
-   * @remarks
    * (Optional) true or false.
-   * 
-   * Sample Values:
-   * Hoglin: true
-   *
    */
   value?: boolean;
 

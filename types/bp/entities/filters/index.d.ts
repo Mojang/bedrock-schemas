@@ -99,6 +99,7 @@ export { default as OnHotBlock } from './OnHotBlock';
 export { default as OnLadder } from './OnLadder';
 export { default as OwnerDistance } from './OwnerDistance';
 export { default as RandomChance } from './RandomChance';
+export { default as RedstoneStrengthAtPosition } from './RedstoneStrengthAtPosition';
 export { default as RiderCount } from './RiderCount';
 export { default as SurfaceMob } from './SurfaceMob';
 export { default as TakingFireDamage } from './TakingFireDamage';

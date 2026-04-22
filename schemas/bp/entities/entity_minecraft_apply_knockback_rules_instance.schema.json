@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Entity Apply Knockback Rules Instance",
+  "description": "Intance of rules definition.",
+  "properties": {
+    "check_if_target_is_immersed_in_water": {
+      "title": "Check If Target Is Immersed In Water",
+      "description": "Whether or not the target should be fully immersed in water for the knockback rules to apply.",
+      "type": "boolean",
+      "default": false
+    },
+    "filter": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "domain": {
+              "title": "Domain",
+              "description": "The domain the test should be performed in.",
+              "type": "object"
+            },
+            "operator": {
+              "title": "Operator",
+              "description": "The comparison to apply with 'value'.",
+              "type": "object"
+            },
+            "subject": {
+              "title": "Subject",
+              "description": "The subject of this filter test.",
+              "type": "object"
+            },
+            "test": {
+              "title": "Test",
+              "description": "The name of the test to apply.",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "description": "The value being compared with the test.",
+              "type": "object"
+            }
+          }
+        },
+        {
+          "type": "object"
+        }
+      ],
+      "description": "Filter for the entity type that will be affected by these knockback rules.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+    },
+    "horizontal_power": {
+      "title": "Horizontal Power",
+      "description": "Power with which a target should be knocked backwards.",
+      "type": "number",
+      "default": 1
+    },
+    "vertical_power": {
+      "title": "Vertical Power",
+      "description": "Power with which a target should be knocked upwards.",
+      "type": "number",
+      "default": 0.4000000059604645
+    },
+    "vertical_velocity_cap": {
+      "title": "Vertical Velocity Cap",
+      "description": "Maximum allowed Y velocity after target's knockback rules have been evaluated.",
+      "type": "number",
+      "default": 0.4000000059604645
+    }
+  }
+}

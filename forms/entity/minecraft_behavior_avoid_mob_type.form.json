@@ -21,6 +21,10 @@
       "dataType": "string",
       "choices": [
         {
+          "id": "absorb_block",
+          "title": "Absorb block"
+        },
+        {
           "id": "activate",
           "title": "Activate"
         },
@@ -501,6 +505,10 @@
           "title": "Bottle.fill"
         },
         {
+          "id": "bounce",
+          "title": "Bounce"
+        },
+        {
           "id": "bow",
           "title": "Bow"
         },
@@ -863,6 +871,10 @@
         {
           "id": "eat",
           "title": "Eat"
+        },
+        {
+          "id": "eject_block",
+          "title": "Eject block"
         },
         {
           "id": "elderguardian.curse",
@@ -1789,6 +1801,10 @@
           "title": "Purreow"
         },
         {
+          "id": "pushed_by_player",
+          "title": "Pushed by player"
+        },
+        {
           "id": "raid.horn",
           "title": "Raid.horn"
         },
@@ -1987,6 +2003,10 @@
         {
           "id": "sleep",
           "title": "Sleep"
+        },
+        {
+          "id": "slime_landing",
+          "title": "Slime landing"
         },
         {
           "id": "smithing_table.use",
@@ -2495,53 +2515,6 @@
             ]
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
-            "content": [
-              {
-                "filters": {
-                  "any_of": [
-                    {
-                      "all_of": [
-                        {
-                          "test": "is_family",
-                          "subject": "other",
-                          "value": "player"
-                        },
-                        {
-                          "test": "trusts",
-                          "subject": "other",
-                          "operator": "!=",
-                          "value": true
-                        },
-                        {
-                          "test": "is_sneaking",
-                          "subject": "other",
-                          "operator": "!=",
-                          "value": true
-                        }
-                      ]
-                    },
-                    {
-                      "test": "is_family",
-                      "subject": "other",
-                      "value": "polarbear"
-                    },
-                    {
-                      "test": "is_family",
-                      "subject": "other",
-                      "value": "wolf"
-                    }
-                  ]
-                },
-                "max_dist": 10,
-                "walk_speed_multiplier": 1,
-                "sprint_speed_multiplier": 1.5
-              }
-            ]
-          }
-        ],
         "/vanilla/behavior_pack/entities/guardian.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:guardian_passive/minecraft:behavior.avoid_mob_type/",
@@ -2558,6 +2531,23 @@
                   ]
                 },
                 "max_dist": 8
+              }
+            ]
+          }
+        ],
+        "/vanilla/behavior_pack/entities/parched.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
+            "content": [
+              {
+                "filters": {
+                  "test": "is_family",
+                  "subject": "other",
+                  "value": "wolf"
+                },
+                "max_dist": 6,
+                "walk_speed_multiplier": 1.2,
+                "sprint_speed_multiplier": 1.2
               }
             ]
           }
@@ -2630,16 +2620,16 @@
             "content": 2
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
-            "content": 5
-          }
-        ],
         "/vanilla/behavior_pack/entities/guardian.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:guardian_passive/minecraft:behavior.avoid_mob_type/",
             "content": 1
+          }
+        ],
+        "/vanilla/behavior_pack/entities/parched.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
+            "content": 5
           }
         ]
       },
@@ -2795,56 +2785,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
-        "content": {
-          "priority": 5,
-          "entity_types": [
-            {
-              "filters": {
-                "any_of": [
-                  {
-                    "all_of": [
-                      {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                      },
-                      {
-                        "test": "trusts",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                      },
-                      {
-                        "test": "is_sneaking",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": true
-                      }
-                    ]
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "polarbear"
-                  },
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "wolf"
-                  }
-                ]
-              },
-              "max_dist": 10,
-              "walk_speed_multiplier": 1,
-              "sprint_speed_multiplier": 1.5
-            }
-          ]
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/guardian.json": [
       {
         "path": "/minecraft:entity/component_groups/minecraft:guardian_passive/minecraft:behavior.avoid_mob_type/",
@@ -2865,6 +2805,26 @@
             }
           ],
           "priority": 1
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/parched.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:behavior.avoid_mob_type/",
+        "content": {
+          "entity_types": [
+            {
+              "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "wolf"
+              },
+              "max_dist": 6,
+              "walk_speed_multiplier": 1.2,
+              "sprint_speed_multiplier": 1.2
+            }
+          ],
+          "priority": 5
         }
       }
     ]

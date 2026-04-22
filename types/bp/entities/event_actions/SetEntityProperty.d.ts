@@ -18,7 +18,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Set Entity Property (set_entity_property)
+ * Set Entity Property (Set Entity Property)
  * Sets the value of an entity property. The property must be
  * defined in the 'properties' section of the file.
  */

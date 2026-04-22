@@ -17,7 +17,25 @@
       "id": "jump_delay",
       "title": "Jump Delay",
       "description": "Delay in seconds after landing when using the slime move control. Can be a single number, an array [min, max], or an object with range_min and range_max.",
-      "dataType": "floatRange"
+      "dataType": "floatRange",
+      "samples": {
+        "/vanilla/behavior_pack/entities/sulfur_cube.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_without_target/minecraft:movement.jump/",
+            "content": [
+              0.5,
+              1.5
+            ]
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_with_target/minecraft:movement.jump/",
+            "content": [
+              0.16,
+              0.5
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "max_turn",
@@ -30,5 +48,27 @@
   "note": "In order to follow targets, this entity must have the `minecraft:behavior.slime_attack` component, otherwise the entity will jump in the direction it's looking in.",
   "description": "Move control that causes the mob to jump as it moves with a specified delay between jumps.",
   "title": "Jump Movement",
+  "samples": {
+    "/vanilla/behavior_pack/entities/sulfur_cube.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_without_target/minecraft:movement.jump/",
+        "content": {
+          "jump_delay": [
+            0.5,
+            1.5
+          ]
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_with_target/minecraft:movement.jump/",
+        "content": {
+          "jump_delay": [
+            0.16,
+            0.5
+          ]
+        }
+      }
+    ]
+  },
   "id": "minecraft:movement.jump"
 }

@@ -10,14 +10,6 @@
  * Entity Behaviors Documentation - minecraft:behavior.eat_carried_item
  * 
  * minecraft:behavior.eat_carried_item Samples
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.eat_carried_item": {
-  "priority": 12,
-  "delay_before_eating": 28
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -37,10 +29,6 @@ export default interface MinecraftBehaviorEatCarriedItem {
   /**
    * @remarks
    * Time in seconds the mob should wait before eating the item.
-   * 
-   * Sample Values:
-   * Fox: 28
-   *
    */
   delay_before_eating?: number;
 
@@ -49,10 +37,6 @@ export default interface MinecraftBehaviorEatCarriedItem {
    * As priority approaches 0, the priority is increased. The higher the
    * priority, the sooner this behavior will be executed as a 
    * goal.
-   * 
-   * Sample Values:
-   * Fox: 12
-   *
    */
   priority?: number;
 

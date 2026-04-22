@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:movable
+ * 
+ * minecraft:movable Samples
  */
 
 import * as jsoncommon from '../../../common';

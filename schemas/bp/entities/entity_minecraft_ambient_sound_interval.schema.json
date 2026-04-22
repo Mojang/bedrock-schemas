@@ -6,7 +6,7 @@
   "properties": {
     "event_name": {
       "title": "Event Name",
-      "description": "Level sound event to be played as the ambient sound.\n\nSample values:\n• allay: ambient\n• fox: sleep\n• fox: screech",
+      "description": "Level sound event to be played as the ambient sound.\n\nSample values:\n• allay: ambient",
       "type": "string",
       "default": "ambient"
     },
@@ -32,13 +32,13 @@
     },
     "range": {
       "title": "Range",
-      "description": "Maximum time in seconds to randomly add to the ambient sound delay time.\n\nSample values:\n• allay: 5\n• fox: 160\n• warden: 4",
+      "description": "Maximum time in seconds to randomly add to the ambient sound delay time.\n\nSample values:\n• allay: 5\n• warden: 4",
       "type": "number",
       "default": 16
     },
     "value": {
       "title": "Value",
-      "description": "Minimum time in seconds before the entity plays its ambient sound again.\n\nSample values:\n• allay: 5\n• fox: 80\n• warden: 2",
+      "description": "Minimum time in seconds before the entity plays its ambient sound again.\n\nSample values:\n• allay: 5\n• warden: 2",
       "type": "number",
       "default": 8
     }

@@ -50,6 +50,7 @@
           }
         ]
       },
+      "defaultValue": [],
       "subForm": {
         "id": "",
         "description": "List of entity types that this mob can follow in a caravan",
@@ -113,43 +114,42 @@
       }
     },
     {
+      "id": "control_flags",
+      "title": "Control Flags",
+      "dataType": "stringArray",
+      "defaultValue": [],
+      "choices": [
+        {
+          "id": "jump",
+          "title": "Jump"
+        },
+        {
+          "id": "look",
+          "title": "Look"
+        },
+        {
+          "id": "move",
+          "title": "Move"
+        }
+      ]
+    },
+    {
       "id": "entity_count",
       "title": "Entity Count",
       "description": "Number of entities that can be in the caravan",
-      "defaultValue": 1,
       "dataType": "int",
-      "samples": {
-        "/vanilla/behavior_pack/entities/llama.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
-            "content": 10
-          }
-        ],
-        "/vanilla/behavior_pack/entities/trader_llama.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
-            "content": 10
-          }
-        ]
-      }
-    },
-    {
-      "id": "speed_multiplier",
-      "title": "Speed Multiplier",
-      "description": "Movement speed multiplier of the mob when using this AI Goal",
       "defaultValue": 1,
-      "dataType": "float",
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
-            "content": 2.1
+            "content": 10
           }
         ],
         "/vanilla/behavior_pack/entities/trader_llama.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
-            "content": 2.1
+            "content": 10
           }
         ]
       }
@@ -157,9 +157,8 @@
     {
       "id": "priority",
       "title": "Priority",
-      "hideSamples": true,
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
       "dataType": "int",
+      "defaultValue": 0,
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -173,11 +172,33 @@
             "content": 3
           }
         ]
+      },
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
+    },
+    {
+      "id": "speed_multiplier",
+      "title": "Speed Multiplier",
+      "description": "Movement speed multiplier of the mob when using this AI Goal",
+      "dataType": "float",
+      "defaultValue": 1,
+      "samples": {
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
+            "content": 2.1
+          }
+        ],
+        "/vanilla/behavior_pack/entities/trader_llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_unleashed/minecraft:behavior.follow_caravan/",
+            "content": 2.1
+          }
+        ]
       }
     }
   ],
   "description": "Allows the mob to follow mobs that are in a caravan.",
-  "title": "Follow Caravan Behavior",
+  "title": "Entity Follow Caravan Behavior",
   "samples": {
     "/vanilla/behavior_pack/entities/llama.json": [
       {

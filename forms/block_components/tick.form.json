@@ -32,6 +32,20 @@
       "defaultValue": true
     }
   ],
+  "samples": {
+    "Tick every 1 to 3 seconds": [
+      {
+        "path": "default",
+        "content": {
+          "interval_range": [
+            20,
+            60
+          ],
+          "looping": true
+        }
+      }
+    ]
+  },
   "description": "Defines tick interval behavior for a block.",
   "title": "Block Components Tick"
 }

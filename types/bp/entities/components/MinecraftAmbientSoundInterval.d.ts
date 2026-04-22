@@ -30,31 +30,6 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/component_groups/minecraft:fox_ambient_normal/minecraft:ambient_sound_interval/: 
-"minecraft:ambient_sound_interval": {
-  "event_name": "ambient"
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_ambient_sleep/minecraft:ambient_sound_interval/: 
-"minecraft:ambient_sound_interval": {
-  "event_name": "sleep"
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_ambient_night/minecraft:ambient_sound_interval/: 
-"minecraft:ambient_sound_interval": {
-  "event_name": "screech",
-  "value": 80,
-  "range": 160
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_ambient_defending_target/minecraft:ambient_sound_interval/: 
-"minecraft:ambient_sound_interval": {
-  "event_name": "mad"
-}
-
-
 Warden - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/warden.json
 
 "minecraft:ambient_sound_interval": {
@@ -90,7 +65,6 @@ export default interface MinecraftAmbientSoundInterval {
    * Sample Values:
    * Allay: "ambient"
    *
-   * Fox: "sleep", "screech", "mad"
    *
    */
   event_name?: string;
@@ -117,8 +91,6 @@ export default interface MinecraftAmbientSoundInterval {
    * Sample Values:
    * Allay: 5
    *
-   * Fox: 160
-   *
    * Warden: 4
    *
    */
@@ -131,8 +103,6 @@ export default interface MinecraftAmbientSoundInterval {
    * 
    * Sample Values:
    * Allay: 5
-   *
-   * Fox: 80
    *
    * Warden: 2
    *

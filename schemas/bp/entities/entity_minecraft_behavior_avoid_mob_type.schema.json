@@ -9,6 +9,7 @@
       "description": "The sound event to play when the mob is avoiding another mob.",
       "type": "string",
       "enum": [
+        "absorb_block",
         "activate",
         "add.chest",
         "admire",
@@ -129,6 +130,7 @@
         "bottle.dragonbreath",
         "bottle.empty",
         "bottle.fill",
+        "bounce",
         "bow",
         "bow.hit",
         "break",
@@ -220,6 +222,7 @@
         "drip.water.pointed_dripstone",
         "drop.slot",
         "eat",
+        "eject_block",
         "elderguardian.curse",
         "elemconstruct.open",
         "enderchest.closed",
@@ -451,6 +454,7 @@
         "pumpkin.carve",
         "purr",
         "purreow",
+        "pushed_by_player",
         "raid.horn",
         "ram_impact",
         "ram_impact.screamer",
@@ -501,6 +505,7 @@
         "shulkerbox.open",
         "single_swap",
         "sleep",
+        "slime_landing",
         "smithing_table.use",
         "sneeze",
         "sonic_boom",
@@ -814,7 +819,7 @@
     },
     "priority": {
       "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• bogged: 4\n• cave_spider: 2\n• fox: 5",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• bogged: 4\n• cave_spider: 2\n• guardian: 1",
       "type": "integer",
       "default": 0
     },

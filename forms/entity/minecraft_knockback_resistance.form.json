@@ -45,16 +45,44 @@
             "content": 100
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:knockback_resistance/",
-            "content": 0.6
-          }
-        ],
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
             "path": "/minecraft:entity/components/minecraft:knockback_resistance/",
             "content": 1
+          }
+        ],
+        "/vanilla/behavior_pack/entities/sulfur_cube.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_bouncy/minecraft:knockback_resistance/",
+            "content": -2
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_regular/minecraft:knockback_resistance/",
+            "content": -1
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_slow_flat/minecraft:knockback_resistance/",
+            "content": 0.7
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_fast_flat/minecraft:knockback_resistance/",
+            "content": -2
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_light/minecraft:knockback_resistance/",
+            "content": -1
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_fast_sliding/minecraft:knockback_resistance/",
+            "content": 0.5
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_slow_sliding/minecraft:knockback_resistance/",
+            "content": 0.8
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_high_resistance/minecraft:knockback_resistance/",
+            "content": 0.7
           }
         ]
       }
@@ -100,19 +128,73 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:knockback_resistance/",
-        "content": {
-          "value": 0.6
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/iron_golem.json": [
       {
         "path": "/minecraft:entity/components/minecraft:knockback_resistance/",
         "content": {
           "value": 1
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/sulfur_cube.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_medium_without_block/minecraft:knockback_resistance/",
+        "content": {
+          "value": 0
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_bouncy/minecraft:knockback_resistance/",
+        "content": {
+          "value": -2
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_regular/minecraft:knockback_resistance/",
+        "content": {
+          "value": -1
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_slow_flat/minecraft:knockback_resistance/",
+        "content": {
+          "value": 0.7
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_fast_flat/minecraft:knockback_resistance/",
+        "content": {
+          "value": -2
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_light/minecraft:knockback_resistance/",
+        "content": {
+          "value": -1
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_fast_sliding/minecraft:knockback_resistance/",
+        "content": {
+          "value": 0.5
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_slow_sliding/minecraft:knockback_resistance/",
+        "content": {
+          "value": 0.8
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_sticky/minecraft:knockback_resistance/",
+        "content": {
+          "value": -2
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_high_resistance/minecraft:knockback_resistance/",
+        "content": {
+          "value": 0.7
         }
       }
     ]

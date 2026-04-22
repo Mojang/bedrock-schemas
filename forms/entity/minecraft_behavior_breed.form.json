@@ -112,15 +112,21 @@
             "content": 3
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:behavior.breed/",
-            "content": 3
-          }
-        ],
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.breed/",
+            "content": 4
+          }
+        ],
+        "/vanilla/behavior_pack/entities/goat.json": [
+          {
+            "path": "/minecraft:entity/component_groups/goat_adult/minecraft:behavior.breed/",
+            "content": 3
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:behavior.breed/",
             "content": 4
           }
         ]
@@ -140,22 +146,16 @@
             "content": 1
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:behavior.breed/",
-            "content": 1
-          }
-        ],
         "/vanilla/behavior_pack/entities/goat.json": [
           {
             "path": "/minecraft:entity/component_groups/goat_adult/minecraft:behavior.breed/",
             "content": 0.6
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
+        "/vanilla/behavior_pack/entities/llama.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_adult/minecraft:behavior.breed/",
-            "content": 0.6
+            "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:behavior.breed/",
+            "content": 1
           }
         ]
       }
@@ -179,15 +179,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:behavior.breed/",
-        "content": {
-          "priority": 3,
-          "speed_multiplier": 1
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/frog.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.breed/",
@@ -205,12 +196,21 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
+    "/vanilla/behavior_pack/entities/llama.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:hoglin_adult/minecraft:behavior.breed/",
+        "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:behavior.breed/",
         "content": {
-          "priority": 3,
-          "speed_multiplier": 0.6
+          "priority": 4,
+          "speed_multiplier": 1
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/pig.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:pig_adult/minecraft:behavior.breed/",
+        "content": {
+          "priority": 4,
+          "speed_multiplier": 1
         }
       }
     ]

@@ -39,11 +39,13 @@ Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
 import * as jsoncommon from '../../../common';
 
 /**
- * Croak Behavior (minecraft:behavior.croak)
+ * Entity Croak Behavior (minecraft:behavior.croak)
  * Allows the entity to croak at a random time interval with
  * configurable conditions.
  */
 export default interface MinecraftBehaviorCroak {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -54,7 +56,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: 4.5
    *
    */
-  duration?: number[];
+  duration?: MinecraftBehaviorCroakDuration;
 
   /**
    * @remarks
@@ -65,7 +67,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: {"all_of":[{"test":"in_water","value":false},{"test":"in_lava","value":false}]}
    *
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftBehaviorCroakFilters;
 
   /**
    * @remarks
@@ -76,7 +78,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: [10,20]
    *
    */
-  interval?: number[];
+  interval?: MinecraftBehaviorCroakInterval;
 
   /**
    * @remarks
@@ -89,5 +91,76 @@ export default interface MinecraftBehaviorCroak {
    *
    */
   priority?: number;
+
+}
+
+
+export enum MinecraftBehaviorCroakControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
+ */
+export interface MinecraftBehaviorCroakDuration {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorCroakFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+/**
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
+ */
+export interface MinecraftBehaviorCroakInterval {
+
+  max?: number;
+
+  min?: number;
 
 }

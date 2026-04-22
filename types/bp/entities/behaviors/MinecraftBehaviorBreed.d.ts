@@ -33,6 +33,14 @@ Goat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   "speed_multiplier": 0.6
 }
 
+
+Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
+
+"minecraft:behavior.breed": {
+  "priority": 4,
+  "speed_multiplier": 1
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -54,8 +62,9 @@ export default interface MinecraftBehaviorBreed {
    * Sample Values:
    * Chicken: 3
    *
-   *
    * Frog: 4
+   *
+   *
    *
    */
   priority?: number;
@@ -67,7 +76,6 @@ export default interface MinecraftBehaviorBreed {
    * 
    * Sample Values:
    * Chicken: 1
-   *
    *
    * Goat: 0.6
    *

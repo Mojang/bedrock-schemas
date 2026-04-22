@@ -8,6 +8,24 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:loot
+ * 
+ * minecraft:loot Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:loot": "loot_tables/mikeamm/gray_wave/fabricator.loot.json
+
+Block Gray Ore - Block Gray Ore
+
+"minecraft:loot": "loot_tables/mikeamm/gray_wave/gray_ore.loot.json
+
+Block Orange Ore - Block Orange Ore
+
+"minecraft:loot": "loot_tables/blocks/orange_ore.json
+
+Apple Block - Apple Block
+
+"minecraft:loot": "loot_tables/blocks/apple_block.json
  */
 
 import * as jsoncommon from '../../../common';

@@ -23,7 +23,7 @@ jobs:
 
       - run: npm ci
 
-      - run: npm run typecheck
+      - run: npm run validate
 
       - name: Determine npm tag
         id: npm-tag

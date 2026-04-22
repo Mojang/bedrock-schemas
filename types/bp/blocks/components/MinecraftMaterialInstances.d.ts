@@ -10,6 +10,95 @@
  * Block Components Documentation - minecraft:material_instances
  * 
  * minecraft:material_instances Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "mikeamm_gwve_fabricator",
+    "render_method": "alpha_test",
+    "ambient_occlusion": 1
+  }
+}
+
+
+Block Gray Ore - Block Gray Ore
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "mikeamm_gwve_gray_ore",
+    "render_method": "alpha_test",
+    "face_dimming": false
+  }
+}
+
+
+Block Frond Top - Block Frond Top
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "frond_top",
+    "render_method": "alpha_test"
+  }
+}
+
+
+Block Palm Leave - Block Palm Leave
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "palm_leave",
+    "render_method": "alpha_test"
+  }
+}
+
+
+Block White Sand - Block White Sand
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "white_sand",
+    "render_method": "alpha_test"
+  }
+}
+
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "leaf_pile",
+    "render_method": "alpha_test",
+    "tint_method": "default_foliage"
+  }
+}
+
+
+Tuna Roll - Tuna Roll
+
+"minecraft:material_instances": {
+  "north": "sushi_side",
+  "south": "sushi_side",
+  "*": {
+    "texture": "sushi_wrap"
+  },
+  "sushi_side": {
+    "texture": "tuna_roll"
+  }
+}
+
+
+Blue Bubble Fish - Blue Bubble Fish
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "bubble_fish_blue",
+    "render_method": "blend",
+    "face_dimming": true,
+    "ambient_occlusion": 1
+  }
+}
+
  */
 
 import * as jsoncommon from '../../../common';

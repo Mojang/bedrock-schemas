@@ -14,7 +14,7 @@
         }
       ],
       "title": "On Inside Range",
-      "description": "Event to call when an entity gets in the inside range. Can be an object with event and target properties, or a simple event string.\n\nSample values:\n• blaze: {\"event\":\"switch_to_melee\",\"target\":\"self\"}\n• drowned: {\"event\":\"minecraft:switch_to_melee\",\"target\":\"..."
+      "description": "Event to call when an entity gets in the inside range. Can be an object with event and target properties, or a simple event string.\n\nSample values:\n• blaze: {\"event\":\"switch_to_melee\",\"target\":\"self\"}"
     },
     "on_outside_range": {
       "anyOf": [
@@ -26,11 +26,11 @@
         }
       ],
       "title": "On Outside Range",
-      "description": "Event to call when an entity gets outside the outside range. Can be an object with event and target properties, or a simple event string.\n\nSample values:\n• blaze: {\"event\":\"switch_to_ranged\",\"target\":\"self\"}\n• drowned: {\"event\":\"minecraft:switch_to_ranged\",\"target\":..."
+      "description": "Event to call when an entity gets outside the outside range. Can be an object with event and target properties, or a simple event string.\n\nSample values:\n• blaze: {\"event\":\"switch_to_ranged\",\"target\":\"self\"}"
     },
     "inside_range": {
       "title": "Inside Range",
-      "description": "Maximum distance in blocks that another entity will be considered in the 'inside' range\n\nSample values:\n• blaze: 2\n• drowned: 3",
+      "description": "Maximum distance in blocks that another entity will be considered in the 'inside' range\n\nSample values:\n• blaze: 2",
       "type": "number",
       "default": 1
     },
@@ -62,7 +62,7 @@
     },
     "outside_range": {
       "title": "Outside Range",
-      "description": "Maximum distance in blocks that another entity will be considered in the 'outside' range\n\nSample values:\n• blaze: 3\n• drowned: 5",
+      "description": "Maximum distance in blocks that another entity will be considered in the 'outside' range\n\nSample values:\n• blaze: 3",
       "type": "number",
       "default": 5
     }

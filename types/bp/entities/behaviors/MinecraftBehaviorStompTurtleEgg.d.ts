@@ -10,18 +10,6 @@
  * Entity Behaviors Documentation - minecraft:behavior.stomp_turtle_egg
  * 
  * minecraft:behavior.stomp_turtle_egg Samples
-
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:behavior.stomp_turtle_egg": {
-  "goal_radius": 1.14,
-  "priority": 4,
-  "search_height": 2,
-  "interval": 20,
-  "search_range": 10,
-  "speed_multiplier": 1
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -40,10 +28,6 @@ export default interface MinecraftBehaviorStompTurtleEgg {
    * Distance in blocks within the mob considers it has reached the
    * goal. This is the "wiggle room" to stop the AI from bouncing back
    * and forth trying to reach a specific spot.
-   * 
-   * Sample Values:
-   * Drowned: 1.14
-   *
    */
   goal_radius?: number;
 
@@ -51,10 +35,6 @@ export default interface MinecraftBehaviorStompTurtleEgg {
    * @remarks
    * A random value to determine when to randomly move somewhere. This
    * has a 1/interval chance to choose this goal
-   * 
-   * Sample Values:
-   * Drowned: 20
-   *
    */
   interval?: number;
 
@@ -63,10 +43,6 @@ export default interface MinecraftBehaviorStompTurtleEgg {
    * As priority approaches 0, the priority is increased. The higher the
    * priority, the sooner this behavior will be executed as a 
    * goal.
-   * 
-   * Sample Values:
-   * Drowned: 4
-   *
    */
   priority?: number;
 
@@ -83,10 +59,6 @@ export default interface MinecraftBehaviorStompTurtleEgg {
    * @remarks
    * Height in blocks the mob will look for turtle eggs to move
    * towards
-   * 
-   * Sample Values:
-   * Drowned: 2
-   *
    */
   search_height?: number;
 
@@ -94,20 +66,12 @@ export default interface MinecraftBehaviorStompTurtleEgg {
    * @remarks
    * The distance in blocks it will look for turtle eggs to move
    * towards
-   * 
-   * Sample Values:
-   * Drowned: 10
-   *
    */
   search_range?: number;
 
   /**
    * @remarks
    * Movement speed multiplier of the mob when using this goal.
-   * 
-   * Sample Values:
-   * Drowned: 1
-   *
    */
   speed_multiplier?: number;
 

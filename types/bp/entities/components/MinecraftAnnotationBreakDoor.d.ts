@@ -10,11 +10,6 @@
  * Entity Components Documentation - minecraft:annotation.break_door
  * 
  * minecraft:annotation.break_door Samples
-
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:annotation.break_door": {}
-
  */
 
 import * as jsoncommon from '../../../common';

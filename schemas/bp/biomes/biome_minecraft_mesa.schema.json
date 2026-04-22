@@ -123,7 +123,7 @@
           ]
         }
       ],
-      "description": "Controls the block type used deep underground in this biome",
+      "description": "Controls the block type used deep underground in this biome.",
       "defaultSnippets": [
         {
           "label": "Foundation Material (object)",
@@ -254,7 +254,7 @@
           ]
         }
       ],
-      "description": "Controls the block type used in a layer below the surface of this biome",
+      "description": "Controls the block type used in a layer below the surface of this biome.",
       "defaultSnippets": [
         {
           "label": "Mid Material (object)",
@@ -268,7 +268,7 @@
     },
     "sea_floor_depth": {
       "title": "Sea Floor Depth",
-      "description": "Controls how deep below the world water level the floor should occur",
+      "description": "Controls how deep below the world water level the floor should occur.",
       "type": "integer",
       "maximum": 127
     },
@@ -323,7 +323,7 @@
           ]
         }
       ],
-      "description": "Controls the block type used as a floor for bodies of water in this biome",
+      "description": "Controls the block type used as a floor for bodies of water in this biome.",
       "defaultSnippets": [
         {
           "label": "Sea Floor Material (object)",
@@ -386,7 +386,7 @@
           ]
         }
       ],
-      "description": "Controls the block type used for the bodies of water in this biome",
+      "description": "Controls the block type used for the bodies of water in this biome.",
       "defaultSnippets": [
         {
           "label": "Sea Material (object)",
@@ -449,7 +449,7 @@
           ]
         }
       ],
-      "description": "Controls the block type used for the surface of this biome",
+      "description": "Controls the block type used for the surface of this biome.",
       "defaultSnippets": [
         {
           "label": "Top Material (object)",
@@ -463,12 +463,13 @@
     },
     "type": {
       "title": "SurfaceBuilderType",
-      "description": "Controls the type of surface builder to use",
+      "description": "Controls the type of surface builder to use.",
       "type": "string",
       "enum": [
         "minecraft:capped",
         "minecraft:frozen_ocean",
         "minecraft:mesa",
+        "minecraft:noise_gradient",
         "minecraft:overworld",
         "minecraft:swamp",
         "minecraft:the_end"

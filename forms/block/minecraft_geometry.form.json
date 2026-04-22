@@ -108,6 +108,7 @@
       "id": "identifier",
       "description": "Specifies the geometry description identifier to use to render this block.",
       "technicalDescription": "This identifier must match an existing geometry identifier in any of the currently loaded resource packs.",
+      "humanifyValues": "none",
       "dataType": "string",
       "title": "Identifier"
     },
@@ -149,9 +150,67 @@
     }
   ],
   "scalarFieldUpgradeName": "identifier",
+  "samples": {
+    "Block Fabricator": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
+        "content": "geometry.mikeamm_gwve_fabricator"
+      }
+    ],
+    "Block Gray Ore": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/gray_ore.block.json",
+        "content": "geometry.mikeamm_gwve_gray_ore"
+      }
+    ],
+    "Block Frond Top": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/chill_oasis_blocks_and_features/chill_oasis_assets/behavior_packs/chill_oasis_assets/blocks/frond_top.block.json",
+        "content": "geometry.frond_top"
+      }
+    ],
+    "Block Palm Leave": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/chill_oasis_blocks_and_features/chill_oasis_assets/behavior_packs/chill_oasis_assets/blocks/palm_leave.block.json",
+        "content": "geometry.palm_leave"
+      }
+    ],
+    "Block White Sand": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/chill_oasis_blocks_and_features/chill_oasis_assets/behavior_packs/chill_oasis_assets/blocks/white_sand.block.json",
+        "content": "geometry.white_sand"
+      }
+    ],
+    "Tuna Roll": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/culled_block_sample/culled_block_behavior_pack/blocks/tuna_roll.json",
+        "content": {
+          "identifier": "geometry.sushi",
+          "culling": "test:sushi_cull"
+        }
+      }
+    ],
+    "Blue Bubble Fish": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/custom_blocks/behavior_packs/custom_blocks/blocks/blue_bubble_fish.json",
+        "content": {
+          "identifier": "geometry.bubble_fish",
+          "bone_visibility": {
+            "bb_main": true,
+            "fish": true
+          }
+        }
+      }
+    ],
+    "California Roll": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/custom_blocks/behavior_packs/custom_blocks/blocks/california_roll.json",
+        "content": "geometry.sushi"
+      }
+    ]
+  },
   "description": "The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: \"minecraft:geometry.full_block\" or \"minecraft:geometry.cross\".",
   "title": "Geometry",
-  "samples": {},
   "id": "minecraft:geometry",
   "scalarField": {
     "id": "string",

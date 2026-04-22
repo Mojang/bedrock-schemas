@@ -14,13 +14,16 @@
     },
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• minecraft:crafting_table (object)\n• minecraft:destructible_by_explosion (boolean)\n• minecraft:destructible_by_mining (boolean)\n• minecraft:destruction_particles (object)\n• ... and 38 more properties",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• minecraft:crafting_table (object)\n• ... and 38 more properties",
       "$ref": "./block_components_components.schema.json",
       "defaultSnippets": [
         {
           "label": "Block Components Components",
           "description": "Has custom geometry.",
           "body": {
+            "minecraft:light_dampening": 0,
+            "minecraft:light_emission": 0,
+            "minecraft:map_color": "",
             "minecraft:collision_box": true,
             "minecraft:destructible_by_explosion": true,
             "minecraft:destructible_by_mining": true,
@@ -34,7 +37,7 @@
     },
     "description": {
       "title": "Description",
-      "description": "Information about the block, must have at minimum an \"identifier\" and can have also the following optional field \"menu_category\", \"states\" and/or \"traits\"\n\nProperties:\n• identifier (string)\n• menu_category (object)\n• states (object) = {}\n• traits (object) = {\"minecraft:connecti",
+      "description": "Information about the block, must have at minimum an \"identifier\" and can have also the following optional field \"menu_category\", \"states\" and/or \"traits\"\n\nProperties:\n• identifier (string)\n• menu_category (object) = {\"category\":\"none\",\"\n• states (object) = {}\n• traits (object) = {\"minecraft:connecti",
       "$ref": "./block_description.schema.json",
       "defaultSnippets": [
         {
@@ -42,6 +45,11 @@
           "description": "Information about the block, must have at minimum an \"identifier\" and can have also the following optional field \"menu_category\", \"states\" and/or \"traits\"",
           "body": {
             "identifier": "",
+            "menu_category": {
+              "category": "none",
+              "group": "",
+              "is_hidden_in_commands": false
+            },
             "states": {},
             "traits": {
               "minecraft:connection": {

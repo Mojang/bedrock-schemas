@@ -102,6 +102,13 @@
       "dataType": "boolean"
     },
     {
+      "id": "isolated_physics",
+      "title": "Isolated Physics",
+      "description": "[EXPERIMENTAL] If true, this projectile will not be affected by outside forces such as friction and drag.",
+      "defaultValue": true,
+      "dataType": "boolean"
+    },
+    {
       "id": "knockback",
       "title": "Knockback",
       "description": "If true, the projectile will knock back the entity it hits",

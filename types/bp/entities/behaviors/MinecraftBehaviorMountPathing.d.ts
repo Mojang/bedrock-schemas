@@ -45,12 +45,15 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Mount Pathing Behavior (minecraft:behavior.mount_pathing)
+ * Entity Mount Pathing Behavior 
+ * (minecraft:behavior.mount_pathing)
  * Allows the mob to move around on its own while mounted seeking a
  * target to attack. Also will allow an entity to target another entity
  * for an attack.
  */
 export default interface MinecraftBehaviorMountPathing {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -102,4 +105,11 @@ export default interface MinecraftBehaviorMountPathing {
    */
   track_target?: boolean;
 
+}
+
+
+export enum MinecraftBehaviorMountPathingControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

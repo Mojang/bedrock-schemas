@@ -25,11 +25,13 @@ Strider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Rise To Liquid Level Behavior
+ * Entity Rise To Liquid Level Behavior
  * (minecraft:behavior.rise_to_liquid_level)
  * Allows the mob to stay at a certain level when in liquid.
  */
 export default interface MinecraftBehaviorRiseToLiquidLevel {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -70,4 +72,11 @@ export default interface MinecraftBehaviorRiseToLiquidLevel {
    */
   sink_delta?: number;
 
+}
+
+
+export enum MinecraftBehaviorRiseToLiquidLevelControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

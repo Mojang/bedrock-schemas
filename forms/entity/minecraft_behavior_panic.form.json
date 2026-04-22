@@ -201,6 +201,12 @@
             "path": "/minecraft:entity/component_groups/dolphin_baby/minecraft:behavior.panic/",
             "content": 1.25
           }
+        ],
+        "/vanilla/behavior_pack/entities/frog.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.panic/",
+            "content": 2
+          }
         ]
       }
     },
@@ -221,12 +227,6 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.panic/",
             "content": 1
-          }
-        ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:defending_fox/minecraft:behavior.panic/",
-            "content": 2
           }
         ]
       }
@@ -271,19 +271,12 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
+    "/vanilla/behavior_pack/entities/frog.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:docile_fox/minecraft:behavior.panic/",
+        "path": "/minecraft:entity/components/minecraft:behavior.panic/",
         "content": {
           "priority": 1,
-          "speed_multiplier": 1.25
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:defending_fox/minecraft:behavior.panic/",
-        "content": {
-          "priority": 2,
-          "speed_multiplier": 1.25
+          "speed_multiplier": 2
         }
       }
     ]

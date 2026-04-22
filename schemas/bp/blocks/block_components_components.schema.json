@@ -4,6 +4,57 @@
   "title": "Block Components Components",
   "description": "Has custom geometry.",
   "properties": {
+    "minecraft:light_dampening": {
+      "title": "Minecraft Light Dampening",
+      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more.",
+      "type": "integer"
+    },
+    "minecraft:light_emission": {
+      "title": "Minecraft Light Emission",
+      "description": "The amount of light this block will emit. Higher value means more light will be emitted.",
+      "type": "integer"
+    },
+    "minecraft:map_color": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minLength": 3,
+          "maxLength": 3
+        },
+        {
+          "description": "\n\nProperties:\n• color (string)\n• tint_method (string) = none",
+          "$ref": "./block_components_map_color.schema.json",
+          "defaultSnippets": [
+            {
+              "label": "Block Components Map Color (object)",
+              "description": "Sets the color and optional tint of the block when rendered to a map.",
+              "body": {
+                "color": "",
+                "tint_method": "none"
+              }
+            }
+          ]
+        }
+      ],
+      "title": "Minecraft Map Color",
+      "description": "Sets the color of the block when rendered to a map.Can be a direct color representation or an object with a \"color\" and \"tint_method\" field.",
+      "defaultSnippets": [
+        {
+          "label": "Block Components Map Color (object)",
+          "description": "Sets the color and optional tint of the block when rendered to a map.",
+          "body": {
+            "color": "",
+            "tint_method": "none"
+          }
+        }
+      ]
+    },
     "minecraft:breathability": {
       "title": "Minecraft Breathability",
       "description": "[DEPRECATED] \n\n*⚠️ Deprecated*",
@@ -166,7 +217,7 @@
         {
           "type": "object",
           "maxLength": 16,
-          "x-runtime-constraint-description": "\"origin\" + \"size\", must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
+          "x-runtime-constraint-description": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
         }
       ],
       "title": "Minecraft Collision Box",
@@ -599,16 +650,6 @@
         }
       ]
     },
-    "minecraft:light_dampening": {
-      "title": "Minecraft Light Dampening",
-      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more.",
-      "type": "object"
-    },
-    "minecraft:light_emission": {
-      "title": "Minecraft Light Emission",
-      "description": "The amount of light this block will emit. Higher value means more light will be emitted.",
-      "type": "object"
-    },
     "minecraft:liquid_detection": {
       "title": "Minecraft Liquid Detection",
       "description": "The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.\n\nProperties:\n• detection_rules [maxLen: 1]",
@@ -627,75 +668,6 @@
       "title": "Minecraft Loot",
       "description": "The path to the loot table, relative to the behavior pack. Path string is limited to 256 characters.",
       "type": "object"
-    },
-    "minecraft:map_color": {
-      "anyOf": [
-        {
-          "type": "object",
-          "additionalProperties": {
-            "type": "string"
-          }
-        },
-        {
-          "type": "object",
-          "additionalProperties": {
-            "type": "array",
-            "items": {
-              "type": "number"
-            }
-          },
-          "minLength": 3,
-          "maxLength": 3
-        },
-        {
-          "description": "\n\nProperties:\n• color (object)\n• tint_method (string) = none",
-          "type": "object",
-          "properties": {
-            "color": {
-              "title": "Color",
-              "description": "Sets the color of the block when rendered to a map.",
-              "type": "object"
-            },
-            "tint_method": {
-              "title": "Tint Method",
-              "description": "Sets the tint method of the block when rendered to a map. Tint method logic varies, but often refers to the \"rain\" and \"temperature\" of the biome the block is placed in to compute the tint. Supported tint methods are \"none\", \"default_foliage\", \"birch_foliage\", \"evergreen_foliage\", \"dry_foliage\", \"grass\" and \"water\"",
-              "type": "string",
-              "enum": [
-                "birch_foliage",
-                "default_foliage",
-                "dry_foliage",
-                "evergreen_foliage",
-                "grass",
-                "none",
-                "water"
-              ],
-              "default": "none"
-            }
-          },
-          "defaultSnippets": [
-            {
-              "label": "Map Color (object)",
-              "description": "Sets the color and optional tint of the block.",
-              "body": {
-                "color": "",
-                "tint_method": "none"
-              }
-            }
-          ]
-        }
-      ],
-      "title": "Minecraft Map Color",
-      "description": "Sets the color of the block when rendered to a map.Can be a direct color representation or an object with a \"color\" and \"tint_method\" field.",
-      "defaultSnippets": [
-        {
-          "label": "Map Color (object)",
-          "description": "Sets the color and optional tint of the block.",
-          "body": {
-            "color": "",
-            "tint_method": "none"
-          }
-        }
-      ]
     },
     "minecraft:material_instances": {
       "title": "Minecraft Material Instances",

@@ -24,12 +24,14 @@ Iron Golem - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
 import * as jsoncommon from '../../../common';
 
 /**
- * Move Through Village Behavior
+ * Entity Move Through Village Behavior
  * (minecraft:behavior.move_through_village)
  * Can only be used by Villagers. Allows the villagers to create paths
  * around the village.
  */
 export default interface MinecraftBehaviorMoveThroughVillage {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -64,4 +66,11 @@ export default interface MinecraftBehaviorMoveThroughVillage {
    */
   speed_multiplier?: number;
 
+}
+
+
+export enum MinecraftBehaviorMoveThroughVillageControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

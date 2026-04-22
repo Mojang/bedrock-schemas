@@ -77,7 +77,7 @@
         }
       ],
       "title": "Entities",
-      "description": "List of entity spawn definitions. Can be a single object or an array of objects.\n\nProperties:\n• filters\n• min_wait_time (number)\n• max_wait_time (number)\n• spawn_sound (string)\n• spawn_item (string)\n\nSample values:\n• chicken: [{\"min_wait_time\":300,\"max_wait_time\":600,\"spaw...\n• drowned: {\"max_wait_time\":0,\"min_wait_time\":0,\"num_to_sp...\n• sniffer: {\"min_wait_time\":0,\"max_wait_time\":0,\"spawn_sou..."
+      "description": "List of entity spawn definitions. Can be a single object or an array of objects.\n\nProperties:\n• filters\n• min_wait_time (number)\n• max_wait_time (number)\n• spawn_sound (string)\n• spawn_item (string)\n\nSample values:\n• chicken: [{\"min_wait_time\":300,\"max_wait_time\":600,\"spaw...\n• sniffer: {\"min_wait_time\":0,\"max_wait_time\":0,\"spawn_sou..."
     },
     "filters": {
       "title": "Filters",

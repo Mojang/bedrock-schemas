@@ -6,7 +6,7 @@
   "properties": {
     "slots": {
       "title": "Slots",
-      "description": "A list of slot-specific events to execute when the entity's equipment changes in those slots.\n\nProperties:\n• on_equip (string) = \n• on_unequip (string) = \n• slot (string) = slot.weapon.mainhand",
+      "description": "A list of slot-specific events to execute when the entity's equipment changes in those slots.\n\nProperties:\n• on_equip (string) = \n• on_unequip (string) = \n• slot (string) = slot.weapon.mainhand\n\nSample values:\n• sulfur_cube: [{\"slot\":\"slot.weapon.mainhand\",\"on_equip\":\"min...",
       "type": "array",
       "items": {
         "$ref": "./entity_onequipmentchangedslotentrydescriptor.schema.json"

@@ -39,10 +39,13 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Stroll Behavior (minecraft:behavior.random_stroll)
+ * Entity Random Stroll Behavior 
+ * (minecraft:behavior.random_stroll)
  * Allows a mob to randomly stroll around.
  */
 export default interface MinecraftBehaviorRandomStroll {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -93,4 +96,11 @@ export default interface MinecraftBehaviorRandomStroll {
    */
   y_dist?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomStrollControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

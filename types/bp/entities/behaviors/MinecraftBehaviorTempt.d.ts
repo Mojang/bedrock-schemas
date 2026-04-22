@@ -38,20 +38,6 @@ Cow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.tempt": {
-  "priority": 3,
-  "speed_multiplier": 0.5,
-  "within_radius": 16,
-  "can_get_scared": true,
-  "items": [
-    "sweet_berries",
-    "glow_berries"
-  ]
-}
-
-
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
 "minecraft:behavior.tempt": {
@@ -74,6 +60,17 @@ Goat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   ]
 }
 
+
+Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
+
+"minecraft:behavior.tempt": {
+  "priority": 5,
+  "speed_multiplier": 1.2,
+  "items": [
+    "hay_block"
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -89,10 +86,6 @@ export default interface MinecraftBehaviorTempt {
    * @remarks
    * If true, the mob can stop being tempted if the player moves too
    * fast while close to this mob.
-   * 
-   * Sample Values:
-   * Fox: true
-   *
    */
   can_get_scared?: boolean;
 
@@ -123,7 +116,7 @@ export default interface MinecraftBehaviorTempt {
    *
    * Cow: ["wheat"]
    *
-   * Fox: ["sweet_berries","glow_berries"]
+   * Frog: ["slime_ball"]
    *
    */
   items?: string[];
@@ -138,9 +131,8 @@ export default interface MinecraftBehaviorTempt {
    * Chicken: 4
    *
    *
-   * Fox: 3
-   *
    * Frog: 5
+   *
    *
    */
   priority?: number;
@@ -162,7 +154,8 @@ export default interface MinecraftBehaviorTempt {
    *
    * Cow: 1.25
    *
-   * Fox: 0.5
+   *
+   * Goat: 0.75
    *
    */
   speed_multiplier?: number;
@@ -184,10 +177,6 @@ export default interface MinecraftBehaviorTempt {
    * @remarks
    * Distance in blocks this mob can get tempted by a player holding an
    * item they like.
-   * 
-   * Sample Values:
-   * Fox: 16
-   *
    */
   within_radius?: number;
 

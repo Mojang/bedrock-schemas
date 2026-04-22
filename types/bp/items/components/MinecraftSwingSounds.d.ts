@@ -43,6 +43,7 @@ export default interface MinecraftSwingSounds {
 
 
 export enum MinecraftSwingSoundsAttackCriticalHit {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -163,6 +164,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -254,6 +256,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -485,6 +488,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -535,6 +539,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,
@@ -601,6 +606,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
 
 
 export enum MinecraftSwingSoundsAttackHit {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -721,6 +727,7 @@ export enum MinecraftSwingSoundsAttackHit {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -812,6 +819,7 @@ export enum MinecraftSwingSoundsAttackHit {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -1043,6 +1051,7 @@ export enum MinecraftSwingSoundsAttackHit {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -1093,6 +1102,7 @@ export enum MinecraftSwingSoundsAttackHit {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,
@@ -1159,6 +1169,7 @@ export enum MinecraftSwingSoundsAttackHit {
 
 
 export enum MinecraftSwingSoundsAttackMiss {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -1279,6 +1290,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -1370,6 +1382,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -1601,6 +1614,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -1651,6 +1665,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,

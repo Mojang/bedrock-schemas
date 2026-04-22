@@ -20,12 +20,14 @@
       "title": "Group",
       "description": "The expandable group that the block is a part of. Must be a namespace and can use vanilla ones",
       "type": "string",
-      "pattern": "^\\S+$"
+      "pattern": "^\\S+$",
+      "default": ""
     },
     "is_hidden_in_commands": {
       "title": "Is Hidden In Commands",
       "description": "Is the block hidden from use in commands.",
-      "type": "boolean"
+      "type": "boolean",
+      "default": false
     }
   },
   "required": [

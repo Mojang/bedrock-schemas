@@ -1,13 +1,25 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Random Hover Behavior",
-  "description": "Allows the mob to hover around randomly, close to the surface",
+  "title": "Entity Random Hover Behavior",
+  "description": "Allows the mob to hover around randomly, close to the surface.",
   "properties": {
+    "control_flags": {
+      "title": "Control Flags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
+      }
+    },
     "hover_height": {
       "title": "Hover Height",
-      "description": "The height above the surface which the mob will try to maintain\n\nSample values:\n• allay: [1,4]",
-      "oneOf": [
+      "description": "The height above the surface which the mob will try to maintain\n\nProperties:\n• max (int) = 0\n• min (int) = 0\n\nSample values:\n• allay: [1,4]",
+      "anyOf": [
         {
           "type": "integer"
         },
@@ -20,17 +32,7 @@
           "maxItems": 2
         },
         {
-          "type": "object",
-          "properties": {
-            "min": {
-              "type": "integer",
-              "description": "Minimum value of the range"
-            },
-            "max": {
-              "type": "integer",
-              "description": "Maximum value of the range"
-            }
-          }
+          "$ref": "../../common/intrange.schema.json"
         }
       ]
     },
@@ -39,6 +41,12 @@
       "description": "A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal\n\nSample values:\n• allay: 1",
       "type": "integer",
       "default": 120
+    },
+    "priority": {
+      "title": "Priority",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• allay: 9",
+      "type": "integer",
+      "default": 0
     },
     "speed_multiplier": {
       "title": "Speed Multiplier",
@@ -63,11 +71,6 @@
       "description": "Height in blocks to add to the selected target position\n\nSample values:\n• allay: -1",
       "type": "number",
       "default": 0
-    },
-    "priority": {
-      "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
     }
   }
 }

@@ -24,11 +24,13 @@ Iron Golem - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
 import * as jsoncommon from '../../../common';
 
 /**
- * Move Towards Target Behavior 
+ * Entity Move Towards Target Behavior
  * (minecraft:behavior.move_towards_target)
  * Allows mob to move towards its current target.
  */
 export default interface MinecraftBehaviorMoveTowardsTarget {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -44,6 +46,7 @@ export default interface MinecraftBehaviorMoveTowardsTarget {
 
   /**
    * @remarks
+   * Movement speed multiplier of the mob when using this AI Goal
    * 
    * Sample Values:
    * Iron Golem: 0.9
@@ -63,4 +66,11 @@ export default interface MinecraftBehaviorMoveTowardsTarget {
    */
   within_radius?: number;
 
+}
+
+
+export enum MinecraftBehaviorMoveTowardsTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

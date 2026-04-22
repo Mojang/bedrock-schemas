@@ -6,7 +6,7 @@
   "properties": {
     "hitboxes": {
       "title": "Hitboxes",
-      "description": "List of hitboxes for melee and ranged hits against the entity.\n\nProperties:\n• width (float)\n• height (float)\n• pivot\n\nSample values:\n• hoglin: [{\"width\":1,\"height\":0.85,\"pivot\":[0,0.5,0]}]\n• hoglin: [{\"width\":2,\"height\":1.75,\"pivot\":[0,1,0]}]\n• zoglin: [{\"height\":1.75,\"pivot\":[0,1,0],\"width\":2}]",
+      "description": "List of hitboxes for melee and ranged hits against the entity.\n\nProperties:\n• width (float)\n• height (float)\n• pivot",
       "type": "array",
       "items": {
         "type": "object",

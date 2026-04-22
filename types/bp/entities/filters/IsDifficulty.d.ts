@@ -23,6 +23,16 @@ Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 }
 
 
+Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
+
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[2]/filters/: 
+{
+  "test": "is_difficulty",
+  "operator": "!=",
+  "value": "hard"
+}
+
+
 Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/cave_spider.json
 
  * At /minecraft:entity/events/minecraft:become_angry/sequence[1]/filters/: 
@@ -50,6 +60,10 @@ export default interface IsDifficulty {
   /**
    * @remarks
    * (Optional) The comparison to apply with 'value'.
+   * 
+   * Sample Values:
+   * Bogged: "!="
+   *
    */
   operator?: string;
 
@@ -75,6 +89,7 @@ export default interface IsDifficulty {
    * 
    * Sample Values:
    * Arrow: "hard"
+   *
    *
    * Cave Spider: "easy", "normal"
    *

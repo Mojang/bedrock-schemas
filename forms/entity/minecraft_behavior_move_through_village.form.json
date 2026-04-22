@@ -14,11 +14,31 @@
   },
   "fields": [
     {
+      "id": "control_flags",
+      "title": "Control Flags",
+      "dataType": "stringArray",
+      "defaultValue": [],
+      "choices": [
+        {
+          "id": "jump",
+          "title": "Jump"
+        },
+        {
+          "id": "look",
+          "title": "Look"
+        },
+        {
+          "id": "move",
+          "title": "Move"
+        }
+      ]
+    },
+    {
       "id": "only_at_night",
       "title": "Only At Night",
       "description": "If true, the mob will only move through the village during night time",
-      "defaultValue": false,
       "dataType": "boolean",
+      "defaultValue": false,
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -29,11 +49,26 @@
       }
     },
     {
+      "id": "priority",
+      "title": "Priority",
+      "dataType": "int",
+      "defaultValue": 0,
+      "samples": {
+        "/vanilla/behavior_pack/entities/iron_golem.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.move_through_village/",
+            "content": 3
+          }
+        ]
+      },
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
+    },
+    {
       "id": "speed_multiplier",
       "title": "Speed Multiplier",
       "description": "Movement speed multiplier of the mob when using this AI Goal",
-      "defaultValue": 1,
       "dataType": "float",
+      "defaultValue": 1,
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -42,25 +77,10 @@
           }
         ]
       }
-    },
-    {
-      "id": "priority",
-      "title": "Priority",
-      "hideSamples": true,
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "dataType": "int",
-      "samples": {
-        "/vanilla/behavior_pack/entities/iron_golem.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.move_through_village/",
-            "content": 3
-          }
-        ]
-      }
     }
   ],
   "description": "Can only be used by Villagers. Allows the villagers to create paths around the village.",
-  "title": "Move Through Village Behavior",
+  "title": "Entity Move Through Village Behavior",
   "samples": {
     "/vanilla/behavior_pack/entities/iron_golem.json": [
       {

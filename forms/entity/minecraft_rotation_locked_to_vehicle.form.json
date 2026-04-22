@@ -17,12 +17,6 @@
   "description": "Causes the entity's rotation to match their vehicle's facing direction.",
   "title": "Rotation Locked To Vehicle",
   "samples": {
-    "/vanilla/behavior_pack/entities/drowned.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:rotation_locked_to_vehicle/",
-        "content": {}
-      }
-    ],
     "/vanilla/behavior_pack/entities/skeleton.json": [
       {
         "path": "/minecraft:entity/components/minecraft:rotation_locked_to_vehicle/",

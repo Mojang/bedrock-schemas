@@ -30,6 +30,6 @@ export default interface BlockReference {
  */
 export interface BlockReferenceStates {
 
-  "w:w"?: number;
+  "w:w"?: boolean;
 
 }

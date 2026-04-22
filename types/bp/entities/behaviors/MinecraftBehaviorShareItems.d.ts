@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Share Items Behavior (minecraft:behavior.share_items)
+ * Entity Share Items Behavior (minecraft:behavior.share_items)
  * Allows the mob to give items it has to others.
  */
 export default interface MinecraftBehaviorShareItems {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -55,6 +57,13 @@ export default interface MinecraftBehaviorShareItems {
    */
   speed_multiplier?: number;
 
+}
+
+
+export enum MinecraftBehaviorShareItemsControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

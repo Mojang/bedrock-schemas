@@ -249,6 +249,10 @@
           "title": "Minecraft:mesa"
         },
         {
+          "id": "minecraft:noise_gradient",
+          "title": "Minecraft:noise gradient"
+        },
+        {
           "id": "minecraft:overworld",
           "title": "Minecraft:overworld"
         },

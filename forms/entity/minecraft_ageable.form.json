@@ -214,12 +214,24 @@
             ]
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
+        "/vanilla/behavior_pack/entities/goat.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_baby/minecraft:ageable/",
+            "path": "/minecraft:entity/component_groups/goat_baby/minecraft:ageable/",
+            "content": "wheat"
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_baby/minecraft:ageable/",
             "content": [
-              "sweet_berries",
-              "glow_berries"
+              {
+                "item": "wheat",
+                "growth": 0.1
+              },
+              {
+                "item": "hay_block",
+                "growth": 0.9
+              }
             ]
           }
         ]
@@ -397,15 +409,12 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
+    "/vanilla/behavior_pack/entities/goat.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_baby/minecraft:ageable/",
+        "path": "/minecraft:entity/component_groups/goat_baby/minecraft:ageable/",
         "content": {
           "duration": 1200,
-          "feed_items": [
-            "sweet_berries",
-            "glow_berries"
-          ],
+          "feed_items": "wheat",
           "pause_growth_items": [
             "golden_dandelion"
           ],
@@ -419,11 +428,21 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/glow_squid.json": [
+    "/vanilla/behavior_pack/entities/llama.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:squid_baby/minecraft:ageable/",
+        "path": "/minecraft:entity/component_groups/minecraft:llama_baby/minecraft:ageable/",
         "content": {
           "duration": 1200,
+          "feed_items": [
+            {
+              "item": "wheat",
+              "growth": 0.1
+            },
+            {
+              "item": "hay_block",
+              "growth": 0.9
+            }
+          ],
           "pause_growth_items": [
             "golden_dandelion"
           ],

@@ -51,8 +51,8 @@ export default interface MinecraftBehaviorFleeSun {
    * Sample Values:
    * Bogged: 2
    *
-   *
    * Parched: 3
+   *
    *
    */
   priority?: number;

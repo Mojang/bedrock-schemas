@@ -30,11 +30,14 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Hover Behavior (minecraft:behavior.random_hover)
+ * Entity Random Hover Behavior 
+ * (minecraft:behavior.random_hover)
  * Allows the mob to hover around randomly, close to the 
  * surface.
  */
 export default interface MinecraftBehaviorRandomHover {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -45,7 +48,7 @@ export default interface MinecraftBehaviorRandomHover {
    * Allay: [1,4]
    *
    */
-  hover_height?: number[];
+  hover_height?: MinecraftBehaviorRandomHoverHoverHeight;
 
   /**
    * @remarks
@@ -107,5 +110,25 @@ export default interface MinecraftBehaviorRandomHover {
    *
    */
   y_offset?: number;
+
+}
+
+
+export enum MinecraftBehaviorRandomHoverControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Item Components IntRange (IntRange)
+ * Has minimum and maximum integer values.
+ */
+export interface MinecraftBehaviorRandomHoverHoverHeight {
+
+  max?: number;
+
+  min?: number;
 
 }

@@ -23,11 +23,13 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Run Around Like Crazy Behavior
+ * Entity Run Around Like Crazy Behavior
  * (minecraft:behavior.run_around_like_crazy)
  * Allows the mob to run around aimlessly.
  */
 export default interface MinecraftBehaviorRunAroundLikeCrazy {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -53,4 +55,11 @@ export default interface MinecraftBehaviorRunAroundLikeCrazy {
    */
   speed_multiplier?: number;
 
+}
+
+
+export enum MinecraftBehaviorRunAroundLikeCrazyControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

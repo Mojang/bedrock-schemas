@@ -14,18 +14,38 @@
   },
   "fields": [
     {
+      "id": "control_flags",
+      "title": "Control Flags",
+      "dataType": "stringArray",
+      "defaultValue": [],
+      "choices": [
+        {
+          "id": "jump",
+          "title": "Jump"
+        },
+        {
+          "id": "look",
+          "title": "Look"
+        },
+        {
+          "id": "move",
+          "title": "Move"
+        }
+      ]
+    },
+    {
       "id": "cooldown_time",
       "title": "Cooldown Time",
       "description": "Time in seconds the mob has to wait before using the goal again",
-      "defaultValue": 0.5,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 0.5
     },
     {
       "id": "duration",
       "title": "Duration",
       "description": "Goal duration in seconds",
-      "defaultValue": 5,
       "dataType": "float",
+      "defaultValue": 5,
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -39,7 +59,22 @@
       "id": "on_done",
       "title": "Done",
       "description": "Trigger to be executed when the goal execution is about to end",
-      "dataType": "minecraftEventTrigger",
+      "dataType": "object",
+      "defaultValue": {
+        "event": "",
+        "filters": {
+          "AND": null,
+          "NOT": null,
+          "OR": null,
+          "all": null,
+          "all_of": null,
+          "any": null,
+          "any_of": null,
+          "none_of": null
+        },
+        "target": "self"
+      },
+      "subFormId": "entity/actordefinitiontrigger",
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -55,13 +90,13 @@
     {
       "id": "priority",
       "title": "Priority",
-      "hideSamples": true,
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 0,
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
     }
   ],
   "description": "Allows this entity to emerge from the ground",
-  "title": "Emerge Behavior",
+  "title": "Entity Emerge Behavior",
   "samples": {
     "/vanilla/behavior_pack/entities/warden.json": [
       {

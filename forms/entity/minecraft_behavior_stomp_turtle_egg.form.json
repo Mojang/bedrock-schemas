@@ -44,15 +44,7 @@
           "comparison": ">",
           "value": 0
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 1.14
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "interval",
@@ -65,29 +57,13 @@
           "comparison": ">",
           "value": 0
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 20
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "priority",
       "title": "Priority",
       "dataType": "int",
       "defaultValue": 0,
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 4
-          }
-        ]
-      },
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
     },
     {
@@ -108,15 +84,7 @@
           "comparison": ">",
           "value": 0
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 2
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "search_range",
@@ -129,48 +97,18 @@
           "comparison": ">",
           "value": 0
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 10
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "speed_multiplier",
       "title": "Speed Multiplier",
       "description": "Movement speed multiplier of the mob when using this goal.",
       "dataType": "float",
-      "defaultValue": 1,
-      "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-            "content": 1
-          }
-        ]
-      }
+      "defaultValue": 1
     }
   ],
   "description": "Allows this mob to stomp turtle eggs",
   "title": "Entity Stomp Turtle Egg Behavior",
-  "samples": {
-    "/vanilla/behavior_pack/entities/drowned.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:behavior.stomp_turtle_egg/",
-        "content": {
-          "goal_radius": 1.14,
-          "priority": 4,
-          "search_height": 2,
-          "interval": 20,
-          "search_range": 10,
-          "speed_multiplier": 1
-        }
-      }
-    ]
-  },
+  "samples": {},
   "id": "minecraft:behavior.stomp_turtle_egg"
 }

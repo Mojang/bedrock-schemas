@@ -1,6 +1,6 @@
 {
   "name": "@minecraft/bedrock-schemas",
-  "version": "1.26.20-beta.21",
+  "version": "1.26.30-beta.20",
   "description": "JSON Schemas and TypeScript types for Minecraft Bedrock Edition content files (entities, blocks, items, biomes, and more).",
   "license": "MIT",
   "types": "./types/index.d.ts",
@@ -25,10 +25,12 @@
   ],
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run typecheck"
+    "validate": "node scripts/validate.mjs",
+    "prepublishOnly": "npm run validate"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
+    "ajv": "8.18.0",
+    "typescript": "5.9.3"
   },
   "exports": {
     ".": {
@@ -166,7 +168,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Mojang/bedrock-schemas.git"
+    "url": "https://github.com/Mojang/bedrock-schemas"
   },
   "homepage": "https://learn.microsoft.com/minecraft/creator/"
 }

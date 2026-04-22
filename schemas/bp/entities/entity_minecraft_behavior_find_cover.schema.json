@@ -18,19 +18,19 @@
     },
     "cooldown_time": {
       "title": "Cooldown Time",
-      "description": "Time in seconds the mob has to wait before using the goal again\n\nSample values:\n• fox: 5",
+      "description": "Time in seconds the mob has to wait before using the goal again",
       "type": "number",
       "default": 0
     },
     "priority": {
       "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• fox: 9",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
       "type": "integer",
       "default": 0
     },
     "speed_multiplier": {
       "title": "Speed Multiplier",
-      "description": "Movement speed multiplier of the mob when using this AI Goal\n\nSample values:\n• fox: 1",
+      "description": "Movement speed multiplier of the mob when using this AI Goal",
       "type": "number",
       "default": 1
     }

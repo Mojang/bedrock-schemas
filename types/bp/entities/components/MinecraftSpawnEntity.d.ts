@@ -79,20 +79,6 @@ Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:spawn_entity": {
-  "entities": {
-    "max_wait_time": 0,
-    "min_wait_time": 0,
-    "num_to_spawn": 1,
-    "single_use": true,
-    "spawn_entity": "minecraft:zombie_nautilus",
-    "spawn_event": "minecraft:entity_spawned"
-  }
-}
-
-
 Sniffer - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sniffer.json
 
 "minecraft:spawn_entity": {
@@ -127,8 +113,6 @@ export default interface MinecraftSpawnEntity {
    * 
    * Sample Values:
    * Chicken: [{"min_wait_time":300,"max_wait_time":600,"spawn_sound":"plop","spawn_item":"egg","filters":[{"test":"rider_count","subject":"self","operator":"==","value":0},{"test":"enum_property","subject":"self","domain":"minecraft:climate_variant","value":"temperate"}]},{"min_wait_time":300,"max_wait_time":600,"spawn_sound":"plop","spawn_item":"brown_egg","filters":[{"test":"rider_count","subject":"self","operator":"==","value":0},{"test":"enum_property","subject":"self","domain":"minecraft:climate_variant","value":"warm"}]},{"min_wait_time":300,"max_wait_time":600,"spawn_sound":"plop","spawn_item":"blue_egg","filters":[{"test":"rider_count","subject":"self","operator":"==","value":0},{"test":"enum_property","subject":"self","domain":"minecraft:climate_variant","value":"cold"}]}]
-   *
-   * Drowned: {"max_wait_time":0,"min_wait_time":0,"num_to_spawn":1,"single_use":true,"spawn_entity":"minecraft:zombie_nautilus","spawn_event":"minecraft:entity_spawned"}
    *
    * Sniffer: {"min_wait_time":0,"max_wait_time":0,"spawn_sound":"plop","spawn_item":"sniffer_egg","spawn_item_event":{"event":"on_egg_spawned","target":"self"},"single_use":true}
    *

@@ -30,13 +30,13 @@
       "subForm": {
         "fields": [
           {
-            "dataType": "int",
+            "dataType": "boolean",
             "id": "\\w*:?\\w+",
             "title": "\\w* ?\\w+",
             "isRequired": false,
             "alternates": [
               {
-                "dataType": "boolean",
+                "dataType": "int",
                 "id": "\\w*:?\\w+",
                 "isRequired": false
               },

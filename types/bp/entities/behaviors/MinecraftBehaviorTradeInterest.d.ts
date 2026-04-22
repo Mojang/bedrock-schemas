@@ -15,7 +15,8 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Trade Interest Behavior (minecraft:behavior.trade_interest)
+ * Entity Trade Interest Behavior 
+ * (minecraft:behavior.trade_interest)
  * Allows the mob to look at a player that is holding a tradable 
  * item.
  */
@@ -28,6 +29,8 @@ export default interface MinecraftBehaviorTradeInterest {
    * trade
    */
   carried_item_switch_time?: number;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -65,4 +68,11 @@ export default interface MinecraftBehaviorTradeInterest {
    */
   within_radius?: number;
 
+}
+
+
+export enum MinecraftBehaviorTradeInterestControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

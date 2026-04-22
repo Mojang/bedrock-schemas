@@ -14,6 +14,55 @@
 Example - Example
 
 "minecraft:destructible_by_explosion": true
+
+Block Fabricator - Block Fabricator
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 15
+}
+
+
+Block Gray Ore - Block Gray Ore
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 96
+}
+
+
+Block Palm Leave - Block Palm Leave
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 1.3
+}
+
+
+Block White Sand - Block White Sand
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 1.1
+}
+
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 0.5
+}
+
+
+Block Orange Ore - Block Orange Ore
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 30
+}
+
+
+Apple Block - Apple Block
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 2.9
+}
+
  */
 
 import * as jsoncommon from '../../../common';

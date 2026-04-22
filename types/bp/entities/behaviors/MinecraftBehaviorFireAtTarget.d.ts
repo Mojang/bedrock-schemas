@@ -51,7 +51,8 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Fire At Target Behavior (minecraft:behavior.fire_at_target)
+ * Entity Fire At Target Behavior 
+ * (minecraft:behavior.fire_at_target)
  * Allows an entity to attack by firing a shot with a delay. Anchor
  * and offset parameters of this component overrides the anchor and
  * offset from projectile component.
@@ -78,7 +79,9 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: [0,16]
    *
    */
-  attack_range?: number[];
+  attack_range?: MinecraftBehaviorFireAtTargetAttackRange;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -88,7 +91,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: {"all_of":[{"test":"is_navigating","value":false}]}
    *
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftBehaviorFireAtTargetFilters;
 
   /**
    * @remarks
@@ -112,7 +115,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: 2
    *
    */
-  owner_anchor?: number;
+  owner_anchor?: object;
 
   /**
    * @remarks
@@ -184,7 +187,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * @remarks
    * Entity anchor for projectile target.
    */
-  target_anchor?: number;
+  target_anchor?: object;
 
   /**
    * @remarks
@@ -195,5 +198,63 @@ export default interface MinecraftBehaviorFireAtTarget {
    *
    */
   target_offset?: number[];
+
+}
+
+
+/**
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
+ */
+export interface MinecraftBehaviorFireAtTargetAttackRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+export enum MinecraftBehaviorFireAtTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorFireAtTargetFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

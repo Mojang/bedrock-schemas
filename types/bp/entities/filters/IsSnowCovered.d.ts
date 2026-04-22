@@ -14,21 +14,6 @@
 { "test": "is_snow_covered", "subject": "self", "operator": "equals", "value": "true" }
  * At Short (using Defaults)..: 
 { "test": "is_snow_covered" }
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/: 
-{
-  "test": "is_snow_covered",
-  "value": true
-}
-
- * At /minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/: 
-{
-  "test": "is_snow_covered",
-  "value": false
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -55,20 +40,7 @@ export default interface IsSnowCovered {
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Fox: "is_snow_covered"
-   *
-   */
-  test?: string;
-
-  /**
-   * @remarks
    * (Optional) true or false.
-   * 
-   * Sample Values:
-   * Fox: true
-   *
    */
   value?: boolean;
 

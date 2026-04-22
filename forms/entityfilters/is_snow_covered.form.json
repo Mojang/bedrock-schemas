@@ -121,32 +121,7 @@
       "title": "Value",
       "description": "(Optional) true or false.",
       "defaultValue": true,
-      "dataType": "boolean",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
-            "content": true
-          }
-        ]
-      }
-    },
-    {
-      "id": "test",
-      "title": "Test",
-      "dataType": "string",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
-            "content": "is_snow_covered"
-          },
-          {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
-            "content": "is_snow_covered"
-          }
-        ]
-      }
+      "dataType": "boolean"
     }
   ],
   "note": "Does not require any parameters to work properly. It can be used as a standalone filter.",
@@ -166,22 +141,6 @@
       {
         "path": "Short (using Defaults)..",
         "content": "{ \"test\": \"is_snow_covered\" }"
-      }
-    ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
-        "content": {
-          "test": "is_snow_covered",
-          "value": true
-        }
-      },
-      {
-        "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
-        "content": {
-          "test": "is_snow_covered",
-          "value": false
-        }
       }
     ]
   },

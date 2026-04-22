@@ -25,7 +25,7 @@
         }
       ],
       "title": "Scheduled Events",
-      "description": "The list of triggers that fire when the conditions match the given filter criteria. Can be an array of event objects or a single event object.\n\nSample values:\n• fox: [{\"filters\":[{\"test\":\"is_sleeping\",\"value\":true..."
+      "description": "The list of triggers that fire when the conditions match the given filter criteria. Can be an array of event objects or a single event object."
     }
   }
 }

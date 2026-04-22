@@ -10,6 +10,22 @@
  * Block Components Documentation - minecraft:flammable
  * 
  * minecraft:flammable Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:flammable": {
+  "destroy_chance_modifier": 20,
+  "catch_chance_modifier": 5
+}
+
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:flammable": {
+  "destroy_chance_modifier": 100,
+  "catch_chance_modifier": 100
+}
+
  */
 
 import * as jsoncommon from '../../../common';

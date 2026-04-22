@@ -1,0 +1,7 @@
+.git/
+.github/
+.gitattributes
+.vscode/
+tsconfig.json
+.npmignore
+dist/

@@ -31,10 +31,13 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Follow Caravan Behavior (minecraft:behavior.follow_caravan)
+ * Entity Follow Caravan Behavior 
+ * (minecraft:behavior.follow_caravan)
  * Allows the mob to follow mobs that are in a caravan.
  */
 export default interface MinecraftBehaviorFollowCaravan {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -83,6 +86,13 @@ export default interface MinecraftBehaviorFollowCaravan {
    */
   speed_multiplier?: number;
 
+}
+
+
+export enum MinecraftBehaviorFollowCaravanControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Scared Behavior (minecraft:behavior.scared)
- * Allows the a mob to become scared when the weather outside is
+ * Entity Scared Behavior (minecraft:behavior.scared)
+ * Allows the mob to become scared when the weather outside is
  * thundering.
  */
 export default interface MinecraftBehaviorScared {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -32,8 +34,22 @@ export default interface MinecraftBehaviorScared {
   /**
    * @remarks
    * The interval in which a sound will play when active in a
+   * 1/delay chance to kick off.
+   */
+  sound_delay?: number;
+
+  /**
+   * @remarks
+   * The interval in which a sound will play when active in a
    * 1/delay chance to kick off
    */
   sound_interval?: number;
 
+}
+
+
+export enum MinecraftBehaviorScaredControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

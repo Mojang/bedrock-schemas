@@ -12,7 +12,7 @@
     },
     "base_buoyancy": {
       "title": "Base Buoyancy",
-      "description": "Base buoyancy used to calculate how much will a entity float.",
+      "description": "Base buoyancy used to calculate how much will a entity float.\n\nSample values:\n• sulfur_cube: 1",
       "type": "number",
       "default": 1
     },
@@ -30,7 +30,7 @@
     },
     "can_auto_step_from_liquid": {
       "title": "Can Auto Step From Liquid",
-      "description": "Whether the entity can move out of a liquid block to a neighboring solid block if pushed against it.",
+      "description": "Whether the entity can move out of a liquid block to a neighboring solid block if pushed against it.\n\nSample values:\n• sulfur_cube: true",
       "type": "boolean",
       "default": false
     },
@@ -42,7 +42,7 @@
     },
     "liquid_blocks": {
       "title": "Liquid Blocks",
-      "description": "List of blocks this entity can float on. Must be a liquid block.\n\nSample values:\n• xp_orb: [\"minecraft:flowing_water\",\"minecraft:water\"]",
+      "description": "List of blocks this entity can float on. Must be a liquid block.\n\nSample values:\n• sulfur_cube: [\"minecraft:water\",\"minecraft:flowing_water\",\"m...\n• xp_orb: [\"minecraft:flowing_water\",\"minecraft:water\"]",
       "type": "array",
       "items": {
         "type": "string"
@@ -50,7 +50,7 @@
     },
     "movement_type": {
       "title": "Movement Type",
-      "description": "Type of vertical movement applied to the entity:\n\"waves\", simulates wave movement based on the entity speed.\n\"bobbing\", simulates waves going through.\n\"none\", simulates waves going through.",
+      "description": "Type of vertical movement applied to the entity:\n\"waves\", simulates wave movement based on the entity speed.\n\"bobbing\", simulates waves going through.\n\"none\", simulates waves going through.\n\nSample values:\n• sulfur_cube: bobbing",
       "type": "string",
       "default": "waves"
     }

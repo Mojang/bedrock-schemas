@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Go Home Behavior (minecraft:behavior.go_home)
+ * Entity Go Home Behavior (minecraft:behavior.go_home)
  * Allows the mob to move back to the position they were 
  * spawned.
  */
@@ -28,6 +28,8 @@ export default interface MinecraftBehaviorGoHome {
    * continue toward home.
    */
   calculate_new_path_radius?: number;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -48,13 +50,13 @@ export default interface MinecraftBehaviorGoHome {
    * @remarks
    * Event(s) to run when this goal fails.
    */
-  on_failed?: jsoncommon.MinecraftEventTrigger;
+  on_failed?: MinecraftBehaviorGoHomeOnFailed[];
 
   /**
    * @remarks
    * Event(s) to run when this mob gets home.
    */
-  on_home?: jsoncommon.MinecraftEventTrigger;
+  on_home?: MinecraftBehaviorGoHomeOnHome[];
 
   /**
    * @remarks
@@ -71,4 +73,169 @@ export default interface MinecraftBehaviorGoHome {
    */
   speed_multiplier?: number;
 
+}
+
+
+export enum MinecraftBehaviorGoHomeControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
+ */
+export interface MinecraftBehaviorGoHomeOnFailed {
+
+  event?: string;
+
+  /**
+   * @remarks
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
+   */
+  filters?: MinecraftBehaviorGoHomeOnFailedFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorGoHomeOnFailedFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorGoHomeOnFailedTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
+}
+
+
+/**
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
+ */
+export interface MinecraftBehaviorGoHomeOnHome {
+
+  event?: string;
+
+  /**
+   * @remarks
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
+   */
+  filters?: MinecraftBehaviorGoHomeOnHomeFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorGoHomeOnHomeFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorGoHomeOnHomeTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

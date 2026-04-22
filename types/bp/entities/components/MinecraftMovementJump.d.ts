@@ -8,6 +8,27 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:movement.jump
+ * 
+ * minecraft:movement.jump Samples
+
+Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
+
+ * At /minecraft:entity/component_groups/minecraft:sulfur_cube_without_target/minecraft:movement.jump/: 
+"minecraft:movement.jump": {
+  "jump_delay": [
+    0.5,
+    1.5
+  ]
+}
+
+ * At /minecraft:entity/component_groups/minecraft:sulfur_cube_with_target/minecraft:movement.jump/: 
+"minecraft:movement.jump": {
+  "jump_delay": [
+    0.16,
+    0.5
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -27,6 +48,10 @@ export default interface MinecraftMovementJump {
    * Delay in seconds after landing when using the slime move control. Can
    * be a single number, an array [min, max], or an object with
    * range_min and range_max.
+   * 
+   * Sample Values:
+   * Sulfur Cube: [0.5,1.5], [0.16,0.5]
+   *
    */
   jump_delay?: number[];
 

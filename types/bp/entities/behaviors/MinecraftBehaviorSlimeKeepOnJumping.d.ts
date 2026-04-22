@@ -17,6 +17,14 @@ Magma Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
   "priority": 5
 }
 
+
+Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
+
+"minecraft:behavior.slime_keep_on_jumping": {
+  "priority": 5,
+  "speed_multiplier": 1
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -47,6 +55,10 @@ export default interface MinecraftBehaviorSlimeKeepOnJumping {
    * @remarks
    * Determines the multiplier this entity's speed is modified by
    * when jumping around.
+   * 
+   * Sample Values:
+   * Sulfur Cube: 1
+   *
    */
   speed_multiplier?: number;
 

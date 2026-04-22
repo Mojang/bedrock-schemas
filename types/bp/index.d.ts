@@ -10,6 +10,8 @@ export { default as MinecraftAngerLevel } from './entities/components/MinecraftA
 export { default as MinecraftAngry } from './entities/components/MinecraftAngry';
 export { default as MinecraftAnnotationBreakDoor } from './entities/components/MinecraftAnnotationBreakDoor';
 export { default as MinecraftAnnotationOpenDoor } from './entities/components/MinecraftAnnotationOpenDoor';
+export { default as MinecraftApplyKnockbackRules } from './entities/components/MinecraftApplyKnockbackRules';
+export { default as MinecraftApplyKnockbackRulesInstance } from './entities/components/MinecraftApplyKnockbackRulesInstance';
 export { default as MinecraftAreaAttack } from './entities/components/MinecraftAreaAttack';
 export { default as MinecraftAttack } from './entities/components/MinecraftAttack';
 export { default as MinecraftAttackCooldown } from './entities/components/MinecraftAttackCooldown';
@@ -174,6 +176,7 @@ export { default as MinecraftSkinId } from './entities/components/MinecraftSkinI
 export { default as MinecraftSoundVolume } from './entities/components/MinecraftSoundVolume';
 export { default as MinecraftSpawnEggInteraction } from './entities/components/MinecraftSpawnEggInteraction';
 export { default as MinecraftSpawnEntity } from './entities/components/MinecraftSpawnEntity';
+export { default as MinecraftSpawnOnDeath } from './entities/components/MinecraftSpawnOnDeath';
 export { default as MinecraftSpellEffects } from './entities/components/MinecraftSpellEffects';
 export { default as MinecraftStrength } from './entities/components/MinecraftStrength';
 export { default as MinecraftSuspectTracking } from './entities/components/MinecraftSuspectTracking';
@@ -255,6 +258,7 @@ export { default as MinecraftBehaviorFollowMob } from './entities/behaviors/Mine
 export { default as MinecraftBehaviorFollowOwner } from './entities/behaviors/MinecraftBehaviorFollowOwner';
 export { default as MinecraftBehaviorFollowParent } from './entities/behaviors/MinecraftBehaviorFollowParent';
 export { default as MinecraftBehaviorFollowTargetCaptain } from './entities/behaviors/MinecraftBehaviorFollowTargetCaptain';
+export { default as MinecraftBehaviorFollowTargetLeader } from './entities/behaviors/MinecraftBehaviorFollowTargetLeader';
 export { default as MinecraftBehaviorGoAndGiveItemsToNoteblock } from './entities/behaviors/MinecraftBehaviorGoAndGiveItemsToNoteblock';
 export { default as MinecraftBehaviorGoAndGiveItemsToOwner } from './entities/behaviors/MinecraftBehaviorGoAndGiveItemsToOwner';
 export { default as MinecraftBehaviorGoHome } from './entities/behaviors/MinecraftBehaviorGoHome';
@@ -262,6 +266,7 @@ export { default as MinecraftBehaviorGuardianAttack } from './entities/behaviors
 export { default as MinecraftBehaviorHarvestFarmBlock } from './entities/behaviors/MinecraftBehaviorHarvestFarmBlock';
 export { default as MinecraftBehaviorHide } from './entities/behaviors/MinecraftBehaviorHide';
 export { default as MinecraftBehaviorHoldGround } from './entities/behaviors/MinecraftBehaviorHoldGround';
+export { default as MinecraftBehaviorHover } from './entities/behaviors/MinecraftBehaviorHover';
 export { default as MinecraftBehaviorHurtByTarget } from './entities/behaviors/MinecraftBehaviorHurtByTarget';
 export { default as MinecraftBehaviorInspectBookshelf } from './entities/behaviors/MinecraftBehaviorInspectBookshelf';
 export { default as MinecraftBehaviorInvestigateSuspiciousLocation } from './entities/behaviors/MinecraftBehaviorInvestigateSuspiciousLocation';
@@ -366,6 +371,7 @@ export { default as MinecraftBehaviorSwimWithEntity } from './entities/behaviors
 export { default as MinecraftBehaviorSwoopAttack } from './entities/behaviors/MinecraftBehaviorSwoopAttack';
 export { default as MinecraftBehaviorTakeBlock } from './entities/behaviors/MinecraftBehaviorTakeBlock';
 export { default as MinecraftBehaviorTakeFlower } from './entities/behaviors/MinecraftBehaviorTakeFlower';
+export { default as MinecraftBehaviorTargetWhenPushed } from './entities/behaviors/MinecraftBehaviorTargetWhenPushed';
 export { default as MinecraftBehaviorTeleportToOwner } from './entities/behaviors/MinecraftBehaviorTeleportToOwner';
 export { default as MinecraftBehaviorTempt } from './entities/behaviors/MinecraftBehaviorTempt';
 export { default as MinecraftBehaviorTimerFlag1 } from './entities/behaviors/MinecraftBehaviorTimerFlag1';
@@ -489,6 +495,7 @@ export { default as OnHotBlock } from './entities/filters/OnHotBlock';
 export { default as OnLadder } from './entities/filters/OnLadder';
 export { default as OwnerDistance } from './entities/filters/OwnerDistance';
 export { default as RandomChance } from './entities/filters/RandomChance';
+export { default as RedstoneStrengthAtPosition } from './entities/filters/RedstoneStrengthAtPosition';
 export { default as RiderCount } from './entities/filters/RiderCount';
 export { default as SurfaceMob } from './entities/filters/SurfaceMob';
 export { default as TakingFireDamage } from './entities/filters/TakingFireDamage';
@@ -587,6 +594,7 @@ export { default as BiomeJSONFile } from './biomes/components/BiomeJSONFile';
 export { default as BiomeReplacement } from './biomes/components/BiomeReplacement';
 export { default as CustomMapTintGrassNoise } from './biomes/components/CustomMapTintGrassNoise';
 export { default as CustomMapTintGrassTint } from './biomes/components/CustomMapTintGrassTint';
+export { default as FloatRange } from './biomes/components/FloatRange';
 export { default as Grass } from './biomes/components/Grass';
 export { default as MinecraftCapped } from './biomes/components/MinecraftCapped';
 export { default as MinecraftClimate } from './biomes/components/MinecraftClimate';
@@ -597,6 +605,7 @@ export { default as MinecraftMapTints } from './biomes/components/MinecraftMapTi
 export { default as MinecraftMesa } from './biomes/components/MinecraftMesa';
 export { default as MinecraftMountainParameters } from './biomes/components/MinecraftMountainParameters';
 export { default as MinecraftMultinoiseGenerationRules } from './biomes/components/MinecraftMultinoiseGenerationRules';
+export { default as MinecraftNoiseGradient } from './biomes/components/MinecraftNoiseGradient';
 export { default as MinecraftOverworld } from './biomes/components/MinecraftOverworld';
 export { default as MinecraftOverworldGenerationRules } from './biomes/components/MinecraftOverworldGenerationRules';
 export { default as MinecraftOverworldHeight } from './biomes/components/MinecraftOverworldHeight';
@@ -606,6 +615,8 @@ export { default as MinecraftSurfaceMaterialAdjustments } from './biomes/compone
 export { default as MinecraftSwamp } from './biomes/components/MinecraftSwamp';
 export { default as MinecraftTheEnd } from './biomes/components/MinecraftTheEnd';
 export { default as MinecraftVillageType } from './biomes/components/MinecraftVillageType';
+export { default as NoiseBlockSpecifier } from './biomes/components/NoiseBlockSpecifier';
+export { default as NoiseDescriptor } from './biomes/components/NoiseDescriptor';
 export { default as MinecraftAggregateFeature } from './features/MinecraftAggregateFeature';
 export { default as MinecraftBeardsAndShavers } from './features/MinecraftBeardsAndShavers';
 export { default as MinecraftCaveCarverFeature } from './features/MinecraftCaveCarverFeature';

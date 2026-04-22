@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Sneeze Behavior (minecraft:behavior.sneeze)
- * Allows the mob to stop and sneeze possibly startling nearby mobs
- * and dropping an item.
+ * Entity Sneeze Behavior (minecraft:behavior.sneeze)
+ * Allows the mob to sneeze, causing it to drop items and affect
+ * nearby mobs.
  */
 export default interface MinecraftBehaviorSneeze {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -87,6 +89,13 @@ export default interface MinecraftBehaviorSneeze {
    */
   within_radius?: number;
 
+}
+
+
+export enum MinecraftBehaviorSneezeControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

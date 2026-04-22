@@ -17,15 +17,7 @@
       "id": "aggro_sound",
       "title": "Aggro Sound",
       "description": "Sound to occasionally play while defending.",
-      "dataType": "string",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:trusting_fox/minecraft:behavior.defend_trusted_target/",
-            "content": "mad"
-          }
-        ]
-      }
+      "dataType": "string"
     },
     {
       "id": "attack_interval",
@@ -120,15 +112,7 @@
       "title": "Within Radius",
       "description": "Distance in blocks that the target can be within to launch an attack",
       "defaultValue": 0,
-      "dataType": "float",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:trusting_fox/minecraft:behavior.defend_trusted_target/",
-            "content": 25
-          }
-        ]
-      }
+      "dataType": "float"
     },
     {
       "id": "priority",
@@ -136,57 +120,11 @@
       "hideSamples": true,
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
       "dataType": "int"
-    },
-    {
-      "id": "sound_chance",
-      "title": "Sound Chance",
-      "dataType": "number",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:trusting_fox/minecraft:behavior.defend_trusted_target/",
-            "content": 0.05
-          }
-        ]
-      }
-    },
-    {
-      "id": "on_defend_start",
-      "title": "Defend Start",
-      "dataType": "minecraftEventTrigger",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:trusting_fox/minecraft:behavior.defend_trusted_target/",
-            "content": {
-              "event": "minecraft:fox_configure_defending",
-              "target": "self"
-            }
-          }
-        ]
-      }
     }
   ],
   "note": "Requires a mob to be set to a trusted relationship in order for the behavior to work properly. The `minecraft:trust` component will set the entity state to trusted.",
   "description": "Allows the mob to target another mob that hurts an entity it trusts.",
   "title": "Defend Trusted Target Behavior",
-  "samples": {
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:trusting_fox/minecraft:behavior.defend_trusted_target/",
-        "content": {
-          "priority": 0,
-          "within_radius": 25,
-          "must_see": false,
-          "aggro_sound": "mad",
-          "sound_chance": 0.05,
-          "on_defend_start": {
-            "event": "minecraft:fox_configure_defending",
-            "target": "self"
-          }
-        }
-      }
-    ]
-  },
+  "samples": {},
   "id": "minecraft:behavior.defend_trusted_target"
 }

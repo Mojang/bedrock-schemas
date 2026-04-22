@@ -367,7 +367,7 @@
     {
       "id": "type",
       "title": "SurfaceBuilderType",
-      "description": "Controls the type of surface builder to use",
+      "description": "Controls the type of surface builder to use.",
       "dataType": "string",
       "choices": [
         {
@@ -381,6 +381,10 @@
         {
           "id": "minecraft:mesa",
           "title": "Minecraft:mesa"
+        },
+        {
+          "id": "minecraft:noise_gradient",
+          "title": "Minecraft:noise gradient"
         },
         {
           "id": "minecraft:overworld",

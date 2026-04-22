@@ -142,7 +142,7 @@
       "defaultSnippets": [
         {
           "label": "Biome Surface Builder",
-          "description": "Controls the materials used for terrain generation.",
+          "description": "Controls materials used for terrain generation.",
           "body": {
             "builder": ""
           }

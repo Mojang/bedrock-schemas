@@ -10,35 +10,6 @@
  * Entity Behaviors Documentation - minecraft:behavior.avoid_block
  * 
  * minecraft:behavior.avoid_block Samples
-
-Hoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/hoglin.json
-
-"minecraft:behavior.avoid_block": {
-  "priority": 1,
-  "tick_interval": 5,
-  "search_range": 8,
-  "search_height": 4,
-  "walk_speed_modifier": 1,
-  "sprint_speed_modifier": 1,
-  "avoid_block_sound": "retreat",
-  "sound_interval": {
-    "min": 2,
-    "max": 5
-  },
-  "target_selection_method": "nearest",
-  "target_blocks": [
-    "minecraft:warped_fungus",
-    "minecraft:portal",
-    "minecraft:respawn_anchor"
-  ],
-  "on_escape": [
-    {
-      "event": "escaped_event",
-      "target": "self"
-    }
-  ]
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -52,10 +23,6 @@ export default interface MinecraftBehaviorAvoidBlock {
   /**
    * @remarks
    * The sound event to play when the mob is avoiding a block.
-   * 
-   * Sample Values:
-   * Hoglin: "retreat"
-   *
    */
   avoid_block_sound?: string;
 
@@ -66,10 +33,6 @@ export default interface MinecraftBehaviorAvoidBlock {
    * Event triggers that fire when the entity escapes from the
    * avoided block. Can be a single trigger or an array of 
    * triggers.
-   * 
-   * Sample Values:
-   * Hoglin: [{"event":"escaped_event","target":"self"}]
-   *
    */
   on_escape?: jsoncommon.MinecraftEventTrigger[];
 
@@ -78,30 +41,18 @@ export default interface MinecraftBehaviorAvoidBlock {
    * As priority approaches 0, the priority is increased. The higher the
    * priority, the sooner this behavior will be executed as a 
    * goal.
-   * 
-   * Sample Values:
-   * Hoglin: 1
-   *
    */
   priority?: number;
 
   /**
    * @remarks
    * Maximum distance to look for a block in y.
-   * 
-   * Sample Values:
-   * Hoglin: 4
-   *
    */
   search_height?: number;
 
   /**
    * @remarks
    * Maximum distance to look for a block in xz.
-   * 
-   * Sample Values:
-   * Hoglin: 8
-   *
    */
   search_range?: number;
 
@@ -109,10 +60,6 @@ export default interface MinecraftBehaviorAvoidBlock {
    * @remarks
    * The range of time in seconds to randomly wait before playing the
    * sound again.
-   * 
-   * Sample Values:
-   * Hoglin: {"min":2,"max":5}
-   *
    */
   sound_interval?: MinecraftBehaviorAvoidBlockSoundInterval;
 
@@ -120,40 +67,24 @@ export default interface MinecraftBehaviorAvoidBlock {
    * @remarks
    * Modifier for sprint speed. 1.0 means keep the regular speed, while
    * higher numbers make the sprint speed faster.
-   * 
-   * Sample Values:
-   * Hoglin: 1
-   *
    */
   sprint_speed_modifier?: number;
 
   /**
    * @remarks
    * List of block types this mob avoids.
-   * 
-   * Sample Values:
-   * Hoglin: ["minecraft:warped_fungus","minecraft:portal","minecraft:respawn_anchor"]
-   *
    */
   target_blocks?: string;
 
   /**
    * @remarks
    * Block search method.
-   * 
-   * Sample Values:
-   * Hoglin: "nearest"
-   *
    */
   target_selection_method?: string;
 
   /**
    * @remarks
    * Should start tick interval.
-   * 
-   * Sample Values:
-   * Hoglin: 5
-   *
    */
   tick_interval?: number;
 
@@ -161,10 +92,6 @@ export default interface MinecraftBehaviorAvoidBlock {
    * @remarks
    * Modifier for walking speed. 1.0 means keep the regular speed, while
    * higher numbers make the walking speed faster.
-   * 
-   * Sample Values:
-   * Hoglin: 1
-   *
    */
   walk_speed_modifier?: number;
 
@@ -172,6 +99,7 @@ export default interface MinecraftBehaviorAvoidBlock {
 
 
 export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -292,6 +220,7 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -383,6 +312,7 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -614,6 +544,7 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -664,6 +595,7 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,

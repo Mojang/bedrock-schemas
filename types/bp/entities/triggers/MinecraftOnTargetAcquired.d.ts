@@ -18,22 +18,6 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 }
 
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:on_target_acquired": {
-  "event": "minecraft:has_target",
-  "target": "self"
-}
-
-
-Hoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/hoglin.json
-
-"minecraft:on_target_acquired": {
-  "event": "become_angry_event",
-  "target": "self"
-}
-
-
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
 "minecraft:on_target_acquired": {
@@ -64,6 +48,29 @@ Magma Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
   "target": "self"
 }
 
+
+Polar Bear - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/polar_bear.json
+
+ * At /minecraft:entity/component_groups/minecraft:baby_wild/minecraft:on_target_acquired/: 
+"minecraft:on_target_acquired": {
+  "event": "minecraft:on_scared",
+  "target": "self"
+}
+
+ * At /minecraft:entity/component_groups/minecraft:adult_wild/minecraft:on_target_acquired/: 
+"minecraft:on_target_acquired": {
+  "event": "minecraft:on_anger",
+  "target": "self"
+}
+
+
+Silverfish - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/silverfish.json
+
+"minecraft:on_target_acquired": {
+  "event": "minecraft:become_angry",
+  "target": "self"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -82,9 +89,9 @@ export default interface MinecraftOnTargetAcquired {
    * Sample Values:
    * Cave Spider: "minecraft:become_angry"
    *
-   * Drowned: "minecraft:has_target"
+   * Llama: "minecraft:mad_at_wolf"
    *
-   * Hoglin: "become_angry_event"
+   * Magma Cube: "minecraft:become_aggressive"
    *
    */
   event?: string;
@@ -104,7 +111,7 @@ export default interface MinecraftOnTargetAcquired {
    * The target of the event.
    * 
    * Sample Values:
-   * Drowned: "self"
+   * Llama: "self"
    *
    *
    */

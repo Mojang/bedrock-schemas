@@ -21,12 +21,12 @@
       "description": "The order in which coordinates will be evaluated. Should be used when a coordinate depends on another. Defaults to 'xzy'.",
       "type": "string",
       "enum": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
+        "xyz",
+        "xzy",
+        "yxz",
+        "yzx",
+        "zxy",
+        "zyx"
       ],
       "default": "xzy"
     },

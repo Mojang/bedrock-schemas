@@ -214,6 +214,15 @@
           "subject": "self",
           "value": true
         }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[0]/filters/",
+        "content": {
+          "operator": "==",
+          "test": "is_underwater",
+          "subject": "self",
+          "value": true
+        }
       }
     ],
     "/vanilla/behavior_pack/entities/parched.json": [
@@ -225,6 +234,12 @@
       },
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:environment_sensor/triggers[0]/filters/",
+        "content": {
+          "test": "is_underwater"
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[0]/filters/",
         "content": {
           "test": "is_underwater"
         }
@@ -248,6 +263,12 @@
         "content": {
           "test": "is_underwater"
         }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[0]/filters/",
+        "content": {
+          "test": "is_underwater"
+        }
       }
     ],
     "/vanilla/behavior_pack/entities/stray.json": [
@@ -262,6 +283,15 @@
       },
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:environment_sensor/triggers[0]/filters/",
+        "content": {
+          "operator": "==",
+          "test": "is_underwater",
+          "subject": "self",
+          "value": true
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[0]/filters/",
         "content": {
           "operator": "==",
           "test": "is_underwater",

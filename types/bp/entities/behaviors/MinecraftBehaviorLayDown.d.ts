@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Lay Down Behavior (minecraft:behavior.lay_down)
+ * Entity Lay Down Behavior (minecraft:behavior.lay_down)
  * Allows mobs to lay down at times.
  */
 export default interface MinecraftBehaviorLayDown {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -37,9 +39,16 @@ export default interface MinecraftBehaviorLayDown {
 
   /**
    * @remarks
-   * a random value in which the goal can use to pull out of the
-   * behavior. This is a 1/interval chance to play the sound
+   * A random value in which the goal can use to pull out of the
+   * behavior. This is a 1/interval chance to stop laying down
    */
   random_stop_interval?: number;
 
+}
+
+
+export enum MinecraftBehaviorLayDownControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

@@ -21,6 +21,16 @@ Example - Example
   "table_name": "My Crafting Table"
 }
 
+
+Block Fabricator - Block Fabricator
+
+"minecraft:crafting_table": {
+  "crafting_tags": [
+    "graywave_fabricator"
+  ],
+  "table_name": "Fabricator"
+}
+
  */
 
 import * as jsoncommon from '../../../common';

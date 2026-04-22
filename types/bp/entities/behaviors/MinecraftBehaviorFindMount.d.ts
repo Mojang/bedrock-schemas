@@ -11,16 +11,6 @@
  * 
  * minecraft:behavior.find_mount Samples
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:behavior.find_mount": {
-  "max_failed_attempts": 20,
-  "priority": 1,
-  "start_delay": 15,
-  "within_radius": 16
-}
-
-
 Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parrot.json
 
 "minecraft:behavior.find_mount": {
@@ -59,10 +49,6 @@ export default interface MinecraftBehaviorFindMount {
   /**
    * @remarks
    * Number of attempts to find mount
-   * 
-   * Sample Values:
-   * Drowned: 20
-   *
    */
   max_failed_attempts?: number;
 
@@ -85,8 +71,6 @@ export default interface MinecraftBehaviorFindMount {
    * goal.
    * 
    * Sample Values:
-   * Drowned: 1
-   *
    * Parrot: 4
    *
    */
@@ -98,8 +82,6 @@ export default interface MinecraftBehaviorFindMount {
    * mount
    * 
    * Sample Values:
-   * Drowned: 15
-   *
    * Parrot: 100
    *
    */
@@ -118,8 +100,7 @@ export default interface MinecraftBehaviorFindMount {
    * mount
    * 
    * Sample Values:
-   * Drowned: 16
-   *
+   * Parrot: 16
    *
    */
   within_radius?: number;

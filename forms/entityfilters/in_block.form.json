@@ -223,6 +223,14 @@
           "test": "in_block",
           "value": "minecraft:powder_snow"
         }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[2]/filters/",
+        "content": {
+          "subject": "self",
+          "test": "in_block",
+          "value": "minecraft:powder_snow"
+        }
       }
     ]
   },

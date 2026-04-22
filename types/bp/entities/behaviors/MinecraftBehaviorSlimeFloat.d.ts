@@ -17,6 +17,15 @@ Magma Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
   "priority": 1
 }
 
+
+Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
+
+"minecraft:behavior.slime_float": {
+  "priority": 1,
+  "jump_chance_percentage": 0.8,
+  "speed_multiplier": 1.2
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -33,6 +42,10 @@ export default interface MinecraftBehaviorSlimeFloat {
    * @remarks
    * Percent chance a slime or magma cube has to jump while in water /
    * lava.
+   * 
+   * Sample Values:
+   * Sulfur Cube: 0.8
+   *
    */
   jump_chance_percentage?: number;
 
@@ -53,6 +66,10 @@ export default interface MinecraftBehaviorSlimeFloat {
    * @remarks
    * Determines the multiplier the entity's speed is modified by
    * when moving through water / lava.
+   * 
+   * Sample Values:
+   * Sulfur Cube: 1.2
+   *
    */
   speed_multiplier?: number;
 

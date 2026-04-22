@@ -39,22 +39,10 @@
             "content": "ambient"
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
+        "/vanilla/behavior_pack/entities/warden.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_normal/minecraft:ambient_sound_interval/",
+            "path": "/minecraft:entity/components/minecraft:ambient_sound_interval/",
             "content": "ambient"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_sleep/minecraft:ambient_sound_interval/",
-            "content": "sleep"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_night/minecraft:ambient_sound_interval/",
-            "content": "screech"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_defending_target/minecraft:ambient_sound_interval/",
-            "content": "mad"
           }
         ]
       },
@@ -131,12 +119,6 @@
             "content": 5
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_night/minecraft:ambient_sound_interval/",
-            "content": 160
-          }
-        ],
         "/vanilla/behavior_pack/entities/warden.json": [
           {
             "path": "/minecraft:entity/components/minecraft:ambient_sound_interval/",
@@ -156,12 +138,6 @@
           {
             "path": "/minecraft:entity/components/minecraft:ambient_sound_interval/",
             "content": 5
-          }
-        ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_night/minecraft:ambient_sound_interval/",
-            "content": 80
           }
         ],
         "/vanilla/behavior_pack/entities/warden.json": [
@@ -192,34 +168,6 @@
           ],
           "range": 5,
           "value": 5
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_normal/minecraft:ambient_sound_interval/",
-        "content": {
-          "event_name": "ambient"
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_sleep/minecraft:ambient_sound_interval/",
-        "content": {
-          "event_name": "sleep"
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_night/minecraft:ambient_sound_interval/",
-        "content": {
-          "event_name": "screech",
-          "value": 80,
-          "range": 160
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_ambient_defending_target/minecraft:ambient_sound_interval/",
-        "content": {
-          "event_name": "mad"
         }
       }
     ],

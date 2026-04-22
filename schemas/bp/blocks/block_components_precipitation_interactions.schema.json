@@ -6,12 +6,13 @@
   "properties": {
     "precipitation_behavior": {
       "title": "Precipitation Behavior",
-      "description": "What behavior should the block have. Three possible values: obrain, obstruct_rain_accumulate_snow and none",
+      "description": "What behavior should the block have. Possible values: obrain, obstruct_rain_accumulate_snow, snowlogging, and none",
       "type": "string",
       "enum": [
         "none",
         "obstruct_rain",
-        "obstruct_rain_accumulate_snow"
+        "obstruct_rain_accumulate_snow",
+        "snowlogging"
       ]
     }
   },

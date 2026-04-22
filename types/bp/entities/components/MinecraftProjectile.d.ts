@@ -111,6 +111,13 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
+   * [EXPERIMENTAL] If true, this projectile will not be affected by
+   * outside forces such as friction and drag.
+   */
+  isolated_physics?: boolean;
+
+  /**
+   * @remarks
    * If true, the projectile will knock back the entity it hits
    */
   knockback?: boolean;

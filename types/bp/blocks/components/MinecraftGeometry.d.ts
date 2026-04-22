@@ -10,6 +10,49 @@
  * Block Components Documentation - minecraft:geometry
  * 
  * minecraft:geometry Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:geometry": "geometry.mikeamm_gwve_fabricator
+
+Block Gray Ore - Block Gray Ore
+
+"minecraft:geometry": "geometry.mikeamm_gwve_gray_ore
+
+Block Frond Top - Block Frond Top
+
+"minecraft:geometry": "geometry.frond_top
+
+Block Palm Leave - Block Palm Leave
+
+"minecraft:geometry": "geometry.palm_leave
+
+Block White Sand - Block White Sand
+
+"minecraft:geometry": "geometry.white_sand
+
+Tuna Roll - Tuna Roll
+
+"minecraft:geometry": {
+  "identifier": "geometry.sushi",
+  "culling": "test:sushi_cull"
+}
+
+
+Blue Bubble Fish - Blue Bubble Fish
+
+"minecraft:geometry": {
+  "identifier": "geometry.bubble_fish",
+  "bone_visibility": {
+    "bb_main": true,
+    "fish": true
+  }
+}
+
+
+California Roll - California Roll
+
+"minecraft:geometry": "geometry.sushi
  */
 
 import * as jsoncommon from '../../../common';

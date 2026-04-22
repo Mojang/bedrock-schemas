@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Trade Interest Behavior",
+  "title": "Entity Trade Interest Behavior",
   "description": "Allows the mob to look at a player that is holding a tradable item.",
   "properties": {
     "carried_item_switch_time": {
@@ -9,6 +9,18 @@
       "description": "The max time in seconds that the trader will hold an item before attempting to switch for a different item that takes the same trade",
       "type": "number",
       "default": 2
+    },
+    "control_flags": {
+      "title": "Control Flags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
+      }
     },
     "cooldown": {
       "title": "Cooldown",
@@ -22,6 +34,12 @@
       "type": "number",
       "default": 45
     },
+    "priority": {
+      "title": "Priority",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
+      "type": "integer",
+      "default": 0
+    },
     "remove_item_time": {
       "title": "Remove Item Time",
       "description": "The max time in seconds that the trader will wait when you no longer have items to trade",
@@ -33,11 +51,6 @@
       "description": "Distance in blocks this mob can be interested by a player holding an item they like",
       "type": "number",
       "default": 0
-    },
-    "priority": {
-      "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
     }
   }
 }

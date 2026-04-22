@@ -30,5 +30,6 @@
     }
   ],
   "description": "The description identifier of the movable component\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.21.100)",
-  "title": "Movable"
+  "title": "Movable",
+  "samples": {}
 }

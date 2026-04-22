@@ -14,30 +14,6 @@
 { "test": "weather_at_position", "subject": "self", "operator": "equals", "value": "player" }
  * At Short (using Defaults)..: 
 { "test": "weather_at_position", "value": "player" }
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/component_groups/minecraft:fox_thunderstorm/minecraft:environment_sensor/triggers[0]/filters/all_of[0]/: 
-{
-  "test": "weather_at_position",
-  "operator": "!=",
-  "value": "thunderstorm"
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_day/minecraft:environment_sensor/triggers[0]/filters/: 
-{
-  "test": "weather_at_position",
-  "value": "thunderstorm"
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_day/minecraft:behavior.nap/can_nap_filters/all_of[3]/: 
-{
-  "test": "weather_at_position",
-  "subject": "self",
-  "operator": "!=",
-  "value": "thunderstorm"
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -52,39 +28,18 @@ export default interface WeatherAtPosition {
   /**
    * @remarks
    * (Optional) The comparison to apply with 'value'.
-   * 
-   * Sample Values:
-   * Fox: "!="
-   *
    */
   operator?: string;
 
   /**
    * @remarks
    * (Optional) The subject of this filter test.
-   * 
-   * Sample Values:
-   * Fox: "self"
-   *
    */
   subject?: string;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Fox: "weather_at_position"
-   *
-   */
-  test?: string;
-
-  /**
-   * @remarks
    * (Required) The Family name to look for
-   * 
-   * Sample Values:
-   * Fox: "thunderstorm"
-   *
    */
   value?: string;
 

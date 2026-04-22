@@ -18,7 +18,7 @@
       "id": "components",
       "title": "Components",
       "dataType": "object",
-      "technicalDescription": "Block with \"geometry\" set at \"minecraft:geometry.full_block\" cannot have a \"random_offset\"",
+      "technicalDescription": "Blocks with precipitation interactions \"snowlogging\" must have collision box disabled",
       "subFormId": "block_components/components",
       "isRequired": true
     },

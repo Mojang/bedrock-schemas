@@ -10,11 +10,6 @@
  * Entity Components Documentation - minecraft:movement.generic
  * 
  * minecraft:movement.generic Samples
-
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
-"minecraft:movement.generic": {}
-
  */
 
 import * as jsoncommon from '../../../common';

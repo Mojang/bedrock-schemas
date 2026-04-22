@@ -15,21 +15,6 @@
  * At Short (using Defaults)..: 
 { "test": "is_daytime" }
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/component_groups/minecraft:defending_fox/minecraft:environment_sensor/triggers[0]/filters/all_of[0]/: 
-{
-  "test": "is_daytime",
-  "value": true
-}
-
- * At /minecraft:entity/component_groups/minecraft:defending_fox/minecraft:environment_sensor/triggers[1]/filters/all_of[0]/: 
-{
-  "test": "is_daytime",
-  "value": false
-}
-
-
 Iron Golem - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/iron_golem.json
 
 {
@@ -64,7 +49,7 @@ export default interface IsDaytime {
    * @remarks
    * 
    * Sample Values:
-   * Fox: "is_daytime"
+   * Iron Golem: "is_daytime"
    *
    */
   test?: string;
@@ -72,10 +57,6 @@ export default interface IsDaytime {
   /**
    * @remarks
    * (Optional) true or false.
-   * 
-   * Sample Values:
-   * Fox: true
-   *
    */
   value?: boolean;
 

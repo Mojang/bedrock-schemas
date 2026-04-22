@@ -34,15 +34,6 @@ Cow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
   "speed_multiplier": 1.25
 }
 
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/component_groups/minecraft:defending_fox/minecraft:behavior.panic/: 
-"minecraft:behavior.panic": {
-  "priority": 2,
-  "speed_multiplier": 1.25
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -91,8 +82,6 @@ export default interface MinecraftBehaviorPanic {
    * Sample Values:
    * Allay: 1
    *
-   *
-   * Fox: 2
    *
    */
   priority?: number;

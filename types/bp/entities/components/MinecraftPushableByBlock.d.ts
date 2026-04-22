@@ -11,7 +11,7 @@
  * 
  * minecraft:pushable_by_block Samples
 
-Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/chicken.json
+Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/boat.json
 
 "minecraft:pushable_by_block": {}
 

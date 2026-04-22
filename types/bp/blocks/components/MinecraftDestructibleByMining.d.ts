@@ -38,6 +38,73 @@
   ]
 }
 
+
+Block Fabricator - Block Fabricator
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 0.4
+}
+
+
+Block White Sand - Block White Sand
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 7.5,
+  "item_specific_speeds": [
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:wooden_tier')"
+      },
+      "destroy_speed": 1.15
+    },
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:stone_tier')"
+      },
+      "destroy_speed": 0.6
+    },
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:iron_tier')"
+      },
+      "destroy_speed": 0.4
+    },
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:golden_tier')"
+      },
+      "destroy_speed": 0.2
+    },
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:diamond_tier')"
+      },
+      "destroy_speed": 0.3
+    },
+    {
+      "item": {
+        "tags": "q.all_tags('minecraft:is_pickaxe', 'minecraft:netherite_tier')"
+      },
+      "destroy_speed": 0.25
+    }
+  ]
+}
+
+
+Block Leaf Pile - Block Leaf Pile
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 1
+}
+
+
+Luckyblock - Luckyblock
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 5,
+  "item_specific_speeds": []
+}
+
  */
 
 import * as jsoncommon from '../../../common';

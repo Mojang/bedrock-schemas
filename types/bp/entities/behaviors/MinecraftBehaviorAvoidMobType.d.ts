@@ -87,55 +87,6 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.avoid_mob_type": {
-  "priority": 5,
-  "entity_types": [
-    {
-      "filters": {
-        "any_of": [
-          {
-            "all_of": [
-              {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-              },
-              {
-                "test": "trusts",
-                "subject": "other",
-                "operator": "!=",
-                "value": true
-              },
-              {
-                "test": "is_sneaking",
-                "subject": "other",
-                "operator": "!=",
-                "value": true
-              }
-            ]
-          },
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "polarbear"
-          },
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "wolf"
-          }
-        ]
-      },
-      "max_dist": 10,
-      "walk_speed_multiplier": 1,
-      "sprint_speed_multiplier": 1.5
-    }
-  ]
-}
-
-
 Guardian - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/guardian.json
 
 "minecraft:behavior.avoid_mob_type": {
@@ -155,6 +106,25 @@ Guardian - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/
     }
   ],
   "priority": 1
+}
+
+
+Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
+
+"minecraft:behavior.avoid_mob_type": {
+  "entity_types": [
+    {
+      "filters": {
+        "test": "is_family",
+        "subject": "other",
+        "value": "wolf"
+      },
+      "max_dist": 6,
+      "walk_speed_multiplier": 1.2,
+      "sprint_speed_multiplier": 1.2
+    }
+  ],
+  "priority": 5
 }
 
  */
@@ -248,7 +218,7 @@ export default interface MinecraftBehaviorAvoidMobType {
    * Cave Spider: 2
    *
    *
-   * Fox: 5
+   * Guardian: 1
    *
    */
   priority?: number;
@@ -309,6 +279,7 @@ export default interface MinecraftBehaviorAvoidMobType {
 
 
 export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -429,6 +400,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -520,6 +492,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -751,6 +724,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -801,6 +775,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,

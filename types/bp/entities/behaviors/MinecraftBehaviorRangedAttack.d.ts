@@ -27,21 +27,18 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
 
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
   "attack_interval": 3.5,
   "attack_radius": 15,
   "priority": 0
 }
 
-
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
-
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval_max": 3,
-  "attack_interval_min": 1,
-  "attack_radius": 10,
-  "priority": 3,
-  "swing": true
+  "attack_interval": 2.5,
+  "attack_radius": 15,
+  "priority": 0
 }
 
 
@@ -58,10 +55,27 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
 
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
   "attack_interval": 3.5,
   "attack_radius": 15,
   "priority": 1
+}
+
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/: 
+"minecraft:behavior.ranged_attack": {
+  "attack_interval": 2.5,
+  "attack_radius": 15,
+  "priority": 1
+}
+
+
+Shulker - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/shulker.json
+
+"minecraft:behavior.ranged_attack": {
+  "attack_interval_max": 3,
+  "attack_interval_min": 1,
+  "attack_radius": 15
 }
 
  */
@@ -84,7 +98,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * scale with target-distance.
    * 
    * Sample Values:
-   * Bogged: 3.5
+   * Bogged: 3.5, 2.5
    *
    *
    */
@@ -98,7 +112,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 5
    *
-   * Drowned: 3
+   * Shulker: 3
    *
    */
   attack_interval_max?: number;
@@ -111,7 +125,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 3
    *
-   * Drowned: 1
+   * Shulker: 1
    *
    */
   attack_interval_min?: number;
@@ -126,7 +140,7 @@ export default interface MinecraftBehaviorRangedAttack {
    *
    * Bogged: 15
    *
-   * Drowned: 10
+   * Llama: 64
    *
    */
   attack_radius?: number;
@@ -195,7 +209,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 3
    *
-   *
    * Llama: 2
    *
    * Parched: 1
@@ -229,10 +242,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * If a swing animation (using variable.attack_time) exists, this
    * causes the actor to swing their arm(s) upon firing the ranged
    * attack.
-   * 
-   * Sample Values:
-   * Drowned: true
-   *
    */
   swing?: boolean;
 

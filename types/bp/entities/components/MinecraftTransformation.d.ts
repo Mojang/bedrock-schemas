@@ -11,15 +11,6 @@
  * 
  * minecraft:transformation Samples
 
-Hoglin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/hoglin.json
-
-"minecraft:transformation": {
-  "into": "minecraft:zoglin",
-  "transformation_sound": "mob.hoglin.converted_to_zombified",
-  "keep_level": true
-}
-
-
 Pig - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/pig.json
 
 "minecraft:transformation": {
@@ -105,11 +96,11 @@ export default interface MinecraftTransformation {
    * Entity Definition that this entity will transform into
    * 
    * Sample Values:
-   * Hoglin: "minecraft:zoglin"
-   *
    * Pig: "minecraft:pig_zombie"
    *
    * Skeleton: "minecraft:stray"
+   *
+   * Stray: "minecraft:skeleton"
    *
    */
   into?: string;
@@ -120,8 +111,7 @@ export default interface MinecraftTransformation {
    * level after transformation.
    * 
    * Sample Values:
-   * Hoglin: true
-   *
+   * Skeleton: true
    *
    */
   keep_level?: boolean;
@@ -149,8 +139,6 @@ export default interface MinecraftTransformation {
    * Sound to play when the entity is done transforming
    * 
    * Sample Values:
-   * Hoglin: "mob.hoglin.converted_to_zombified"
-   *
    * Pig: "mob.pig.death"
    *
    * Skeleton: "convert_to_stray"

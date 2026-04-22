@@ -41,10 +41,10 @@
           "subFormId": "biome/minecraft_the_end"
         }
       ],
-      "description": "Controls the block types used for terrain generation.",
+      "description": "Controls block types and strategy used for terrain generation.",
       "title": "Builder"
     }
   ],
-  "description": "Controls the materials used for terrain generation.",
+  "description": "Controls materials used for terrain generation.",
   "title": "Biome Surface Builder"
 }

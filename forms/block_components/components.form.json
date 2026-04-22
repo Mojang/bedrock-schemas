@@ -119,6 +119,37 @@
   "id": "Components",
   "fields": [
     {
+      "id": "minecraft:light_dampening",
+      "dataType": "int",
+      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more.",
+      "title": "Minecraft Light Dampening"
+    },
+    {
+      "id": "minecraft:light_emission",
+      "dataType": "int",
+      "description": "The amount of light this block will emit. Higher value means more light will be emitted.",
+      "title": "Minecraft Light Emission"
+    },
+    {
+      "id": "minecraft:map_color",
+      "dataType": "string",
+      "alternates": [
+        {
+          "id": "minecraft:map_color",
+          "dataType": "numberArray",
+          "minLength": 3,
+          "maxLength": 3
+        },
+        {
+          "id": "minecraft:map_color",
+          "dataType": "object",
+          "subFormId": "block_components/map_color"
+        }
+      ],
+      "description": "Sets the color of the block when rendered to a map.Can be a direct color representation or an object with a \"color\" and \"tint_method\" field.",
+      "title": "Minecraft Map Color"
+    },
+    {
       "id": "minecraft:breathability",
       "title": "Minecraft Breathability",
       "dataType": "object",
@@ -236,7 +267,7 @@
           "id": "minecraft:collision_box",
           "dataType": "object",
           "maxLength": 16,
-          "technicalDescription": "\"origin\" + \"size\", must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
+          "technicalDescription": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
         }
       ]
     },
@@ -499,18 +530,6 @@
       "subFormId": "block_components/leashable"
     },
     {
-      "id": "minecraft:light_dampening",
-      "title": "Minecraft Light Dampening",
-      "description": "The amount that light will be dampened when it passes through the block. Higher value means the light will be dampened more.",
-      "dataType": "object"
-    },
-    {
-      "id": "minecraft:light_emission",
-      "title": "Minecraft Light Emission",
-      "description": "The amount of light this block will emit. Higher value means more light will be emitted.",
-      "dataType": "object"
-    },
-    {
       "id": "minecraft:liquid_detection",
       "title": "Minecraft Liquid Detection",
       "description": "The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.",
@@ -522,75 +541,6 @@
       "title": "Minecraft Loot",
       "description": "The path to the loot table, relative to the behavior pack. Path string is limited to 256 characters.",
       "dataType": "object"
-    },
-    {
-      "id": "minecraft:map_color",
-      "title": "Minecraft Map Color",
-      "description": "Sets the color of the block when rendered to a map.Can be a direct color representation or an object with a \"color\" and \"tint_method\" field.",
-      "dataType": "keyedStringCollection",
-      "alternates": [
-        {
-          "id": "minecraft:map_color",
-          "dataType": "keyedNumberArrayCollection",
-          "minLength": 3,
-          "maxLength": 3
-        },
-        {
-          "id": "minecraft:map_color",
-          "dataType": "object",
-          "subForm": {
-            "id": "minecraft:map_color",
-            "title": "Map Color",
-            "description": "Sets the color and optional tint of the block.",
-            "fields": [
-              {
-                "id": "color",
-                "title": "Color",
-                "description": "Sets the color of the block when rendered to a map.",
-                "dataType": "object",
-                "isRequired": true
-              },
-              {
-                "id": "tint_method",
-                "title": "Tint Method",
-                "description": "Sets the tint method of the block when rendered to a map. Tint method logic varies, but often refers to the \"rain\" and \"temperature\" of the biome the block is placed in to compute the tint. Supported tint methods are \"none\", \"default_foliage\", \"birch_foliage\", \"evergreen_foliage\", \"dry_foliage\", \"grass\" and \"water\"",
-                "dataType": "string",
-                "choices": [
-                  {
-                    "id": "birch_foliage",
-                    "title": "Birch foliage"
-                  },
-                  {
-                    "id": "default_foliage",
-                    "title": "Default foliage"
-                  },
-                  {
-                    "id": "dry_foliage",
-                    "title": "Dry foliage"
-                  },
-                  {
-                    "id": "evergreen_foliage",
-                    "title": "Evergreen foliage"
-                  },
-                  {
-                    "id": "grass",
-                    "title": "Grass"
-                  },
-                  {
-                    "id": "none",
-                    "title": "None"
-                  },
-                  {
-                    "id": "water",
-                    "title": "Water"
-                  }
-                ],
-                "defaultValue": "none"
-              }
-            ]
-          }
-        }
-      ]
     },
     {
       "id": "minecraft:material_instances",

@@ -16,7 +16,7 @@
   "fields": [
     {
       "id": "foundation_material",
-      "description": "Controls the block type used deep underground in this biome",
+      "description": "Controls the block type used deep underground in this biome.",
       "dataType": "string",
       "alternates": [
         {
@@ -59,7 +59,7 @@
     },
     {
       "id": "mid_material",
-      "description": "Controls the block type used in a layer below the surface of this biome",
+      "description": "Controls the block type used in a layer below the surface of this biome.",
       "dataType": "string",
       "alternates": [
         {
@@ -103,7 +103,7 @@
     {
       "id": "sea_floor_depth",
       "title": "Sea Floor Depth",
-      "description": "Controls how deep below the world water level the floor should occur",
+      "description": "Controls how deep below the world water level the floor should occur.",
       "dataType": "int",
       "validity": [
         {
@@ -115,7 +115,7 @@
     },
     {
       "id": "sea_floor_material",
-      "description": "Controls the block type used as a floor for bodies of water in this biome",
+      "description": "Controls the block type used as a floor for bodies of water in this biome.",
       "dataType": "string",
       "alternates": [
         {
@@ -158,7 +158,7 @@
     },
     {
       "id": "sea_material",
-      "description": "Controls the block type used for the bodies of water in this biome",
+      "description": "Controls the block type used for the bodies of water in this biome.",
       "dataType": "string",
       "alternates": [
         {
@@ -201,7 +201,7 @@
     },
     {
       "id": "top_material",
-      "description": "Controls the block type used for the surface of this biome",
+      "description": "Controls the block type used for the surface of this biome.",
       "dataType": "string",
       "alternates": [
         {
@@ -245,7 +245,7 @@
     {
       "id": "type",
       "title": "SurfaceBuilderType",
-      "description": "Controls the type of surface builder to use",
+      "description": "Controls the type of surface builder to use.",
       "dataType": "string",
       "choices": [
         {
@@ -259,6 +259,10 @@
         {
           "id": "minecraft:mesa",
           "title": "Minecraft:mesa"
+        },
+        {
+          "id": "minecraft:noise_gradient",
+          "title": "Minecraft:noise gradient"
         },
         {
           "id": "minecraft:overworld",

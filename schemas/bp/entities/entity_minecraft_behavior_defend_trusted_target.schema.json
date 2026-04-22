@@ -6,7 +6,7 @@
   "properties": {
     "aggro_sound": {
       "title": "Aggro Sound",
-      "description": "Sound to occasionally play while defending.\n\nSample values:\n• fox: mad",
+      "description": "Sound to occasionally play while defending.",
       "type": "string"
     },
     "attack_interval": {
@@ -119,7 +119,7 @@
     },
     "within_radius": {
       "title": "Within Radius",
-      "description": "Distance in blocks that the target can be within to launch an attack\n\nSample values:\n• fox: 25",
+      "description": "Distance in blocks that the target can be within to launch an attack",
       "type": "number",
       "default": 0
     },
@@ -127,31 +127,6 @@
       "title": "Priority",
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
       "type": "integer"
-    },
-    "sound_chance": {
-      "title": "Sound Chance",
-      "description": "\n\nSample values:\n• fox: 0.05",
-      "type": "number"
-    },
-    "on_defend_start": {
-      "title": "Defend Start",
-      "description": "\n\nSample values:\n• fox: {\"event\":\"minecraft:fox_configure_defending\",\"t...",
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "event": {
-              "type": "string"
-            },
-            "target": {
-              "type": "string"
-            }
-          }
-        }
-      ]
     }
   }
 }

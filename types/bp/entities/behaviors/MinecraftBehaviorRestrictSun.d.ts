@@ -13,11 +13,14 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Restrict Sun Behavior (minecraft:behavior.restrict_sun)
+ * Entity Restrict Sun Behavior 
+ * (minecraft:behavior.restrict_sun)
  * Allows the mob to automatically start avoiding the sun when its
  * a clear day out.
  */
 export default interface MinecraftBehaviorRestrictSun {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -27,4 +30,11 @@ export default interface MinecraftBehaviorRestrictSun {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorRestrictSunControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

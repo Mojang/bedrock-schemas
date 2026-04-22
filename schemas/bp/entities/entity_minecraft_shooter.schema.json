@@ -6,18 +6,18 @@
   "properties": {
     "sound": {
       "title": "Sound",
-      "description": "Sound that is played when the shooter shoots a projectile.\n\nSample values:\n• bogged: bow\n• drowned: item.trident.throw",
+      "description": "Sound that is played when the shooter shoots a projectile.\n\nSample values:\n• bogged: bow",
       "type": "string"
     },
     "aux_val": {
       "title": "Aux Val",
-      "description": "ID of the Potion effect for the default projectile to be applied on hit.\n\nSample values:\n• bogged: 26",
+      "description": "ID of the Potion effect for the default projectile to be applied on hit.\n\nSample values:\n• bogged: 26\n• parched: 35",
       "type": "integer",
       "default": -1
     },
     "def": {
       "title": "Def",
-      "description": "Actor definition to use as the default projectile for the ranged attack. The actor definition must have the projectile component to be able to be shot as a projectile.\n\nSample values:\n• blaze: minecraft:small_fireball\n• bogged: minecraft:arrow\n• drowned: minecraft:thrown_trident",
+      "description": "Actor definition to use as the default projectile for the ranged attack. The actor definition must have the projectile component to be able to be shot as a projectile.\n\nSample values:\n• blaze: minecraft:small_fireball\n• bogged: minecraft:arrow\n• ender_dragon: minecraft:dragon_fireball",
       "type": "string"
     },
     "magic": {

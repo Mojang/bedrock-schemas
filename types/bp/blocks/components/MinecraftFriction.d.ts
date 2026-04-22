@@ -10,6 +10,14 @@
  * Block Components Documentation - minecraft:friction
  * 
  * minecraft:friction Samples
+
+Block Palm Leave - Block Palm Leave
+
+"minecraft:friction": 0.38
+
+Block White Sand - Block White Sand
+
+"minecraft:friction": 0.2
  */
 
 import * as jsoncommon from '../../../common';

@@ -12,7 +12,7 @@
     },
     "menu_category": {
       "title": "Menu Category",
-      "description": "Configures the block behavior in inventory and menu category\n\nProperties:\n• category (string)\n• group (string)\n• is_hidden_in_commands (boolean)",
+      "description": "Configures the block behavior in inventory and menu category\n\nProperties:\n• category (string)\n• group (string) = \n• is_hidden_in_commands (boolean) = false",
       "$ref": "./block_menu_category.schema.json",
       "defaultSnippets": [
         {
@@ -21,7 +21,7 @@
           "body": {
             "category": "",
             "group": "",
-            "is_hidden_in_commands": true
+            "is_hidden_in_commands": false
           }
         }
       ]

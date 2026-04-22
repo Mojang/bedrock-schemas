@@ -30,6 +30,31 @@
       "defaultValue": ""
     }
   ],
+  "samples": {
+    "Example": [
+      {
+        "path": "Crafting Table",
+        "content": {
+          "crafting_tags": [
+            "crafting_table",
+            "custom_crafting_tag"
+          ],
+          "table_name": "My Crafting Table"
+        }
+      }
+    ],
+    "Block Fabricator": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
+        "content": {
+          "crafting_tags": [
+            "graywave_fabricator"
+          ],
+          "table_name": "Fabricator"
+        }
+      }
+    ]
+  },
   "description": "Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes.",
   "title": "Block Components Crafting Table"
 }

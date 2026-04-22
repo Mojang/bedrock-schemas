@@ -18,19 +18,7 @@
       "title": "Attack Interval",
       "description": "Time in seconds before selecting a target",
       "defaultValue": 0,
-      "dataType": "int",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 2
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 2
-          }
-        ]
-      }
+      "dataType": "int"
     },
     {
       "id": "cooldown",
@@ -102,153 +90,6 @@
             "description": "Multiplier for the walking speed. A value of 1.0 means the speed is unchanged",
             "defaultValue": 1,
             "dataType": "float"
-          },
-          {
-            "id": "priority",
-            "title": "Priority",
-            "dataType": "number"
-          }
-        ]
-      },
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": [
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "rabbit"
-                },
-                "max_dist": 12,
-                "priority": 0
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "chicken"
-                },
-                "max_dist": 12,
-                "priority": 0
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "cod"
-                },
-                "max_dist": 12,
-                "priority": 1
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "salmon"
-                },
-                "max_dist": 12,
-                "priority": 1
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "tropicalfish"
-                },
-                "max_dist": 12,
-                "priority": 1
-              },
-              {
-                "filters": {
-                  "all_of": [
-                    {
-                      "test": "is_family",
-                      "subject": "other",
-                      "value": "baby_turtle"
-                    },
-                    {
-                      "test": "in_water",
-                      "subject": "other",
-                      "operator": "!=",
-                      "value": true
-                    }
-                  ]
-                },
-                "max_dist": 12,
-                "priority": 0
-              }
-            ]
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": [
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "rabbit"
-                },
-                "max_dist": 12,
-                "priority": 1
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "chicken"
-                },
-                "max_dist": 12,
-                "priority": 1
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "cod"
-                },
-                "max_dist": 12,
-                "priority": 0
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "salmon"
-                },
-                "max_dist": 12,
-                "priority": 0
-              },
-              {
-                "filters": {
-                  "test": "is_family",
-                  "subject": "other",
-                  "value": "tropicalfish"
-                },
-                "max_dist": 12,
-                "priority": 0
-              },
-              {
-                "filters": {
-                  "all_of": [
-                    {
-                      "test": "is_family",
-                      "subject": "other",
-                      "value": "baby_turtle"
-                    },
-                    {
-                      "test": "in_water",
-                      "subject": "other",
-                      "operator": "!=",
-                      "value": true
-                    }
-                  ]
-                },
-                "max_dist": 12,
-                "priority": 1
-              }
-            ]
           }
         ]
       }
@@ -286,38 +127,14 @@
       "title": "Priority",
       "description": "Specifies the priority in which filtered enemy types should be attacked. Lower number means higher priority.",
       "defaultValue": 0,
-      "dataType": "int",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 6
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 6
-          }
-        ]
-      }
+      "dataType": "int"
     },
     {
       "id": "reselect_targets",
       "title": "Reselect Targets",
       "description": "If true, the target will change to the current closest entity whenever a different entity is closer",
       "defaultValue": false,
-      "dataType": "boolean",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": true
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": true
-          }
-        ]
-      }
+      "dataType": "boolean"
     },
     {
       "id": "scan_interval",
@@ -338,19 +155,7 @@
       "title": "Target Search Height",
       "description": "Height in blocks to search for a target mob. -1.0f means the height does not matter.",
       "defaultValue": -1,
-      "dataType": "float",
-      "samples": {
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 5
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-            "content": 5
-          }
-        ]
-      }
+      "dataType": "float"
     },
     {
       "id": "within_radius",
@@ -362,159 +167,6 @@
   ],
   "description": "Allows the mob to check for and pursue the nearest valid target.",
   "title": "Nearest Prioritized Attackable Target Behavior",
-  "samples": {
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/",
-        "content": {
-          "priority": 6,
-          "attack_interval": 2,
-          "reselect_targets": true,
-          "target_search_height": 5,
-          "entity_types": [
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "rabbit"
-              },
-              "max_dist": 12,
-              "priority": 0
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "chicken"
-              },
-              "max_dist": 12,
-              "priority": 0
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "cod"
-              },
-              "max_dist": 12,
-              "priority": 1
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "salmon"
-              },
-              "max_dist": 12,
-              "priority": 1
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "tropicalfish"
-              },
-              "max_dist": 12,
-              "priority": 1
-            },
-            {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "baby_turtle"
-                  },
-                  {
-                    "test": "in_water",
-                    "subject": "other",
-                    "operator": "!=",
-                    "value": true
-                  }
-                ]
-              },
-              "max_dist": 12,
-              "priority": 0
-            }
-          ]
-        }
-      },
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/",
-        "content": {
-          "priority": 6,
-          "attack_interval": 2,
-          "reselect_targets": true,
-          "target_search_height": 5,
-          "entity_types": [
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "rabbit"
-              },
-              "max_dist": 12,
-              "priority": 1
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "chicken"
-              },
-              "max_dist": 12,
-              "priority": 1
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "cod"
-              },
-              "max_dist": 12,
-              "priority": 0
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "salmon"
-              },
-              "max_dist": 12,
-              "priority": 0
-            },
-            {
-              "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "tropicalfish"
-              },
-              "max_dist": 12,
-              "priority": 0
-            },
-            {
-              "filters": {
-                "all_of": [
-                  {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "baby_turtle"
-                  },
-                  {
-                    "test": "in_water",
-                    "subject": "other",
-                    "operator": "!=",
-                    "value": true
-                  }
-                ]
-              },
-              "max_dist": 12,
-              "priority": 1
-            }
-          ]
-        }
-      }
-    ]
-  },
+  "samples": {},
   "id": "minecraft:behavior.nearest_prioritized_attackable_target"
 }

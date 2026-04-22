@@ -6,13 +6,13 @@
   "properties": {
     "all_items": {
       "title": "All Items",
-      "description": "A bucket for all other items in the game. Note this category is always least priority items.\n\nSample values:\n• fox: true",
+      "description": "A bucket for all other items in the game. Note this category is always least priority items.",
       "type": "boolean",
       "default": false
     },
     "all_items_max_amount": {
       "title": "All Items Max Amount",
-      "description": "Maximum number of this item the mob will hold.\n\nSample values:\n• fox: 1",
+      "description": "Maximum number of this item the mob will hold.",
       "type": "integer",
       "default": -1
     },
@@ -30,7 +30,7 @@
     },
     "items": {
       "title": "Items",
-      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nProperties:\n• admire (boolean) = false\n• barter (boolean) = false\n• consume_item (boolean) = false\n• craft_into (string)\n• item (string)\n• max_amount (int) = -1\n• pickup_limit (int) = -1\n• pickup_only (boolean) = false\n• ... and 4 more properties\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...\n• drowned: [{\"item\":\"minecraft:trident\",\"priority\":0,\"surp...",
+      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nProperties:\n• admire (boolean) = false\n• barter (boolean) = false\n• consume_item (boolean) = false\n• craft_into (string)\n• item (string)\n• max_amount (int) = -1\n• pickup_limit (int) = -1\n• pickup_only (boolean) = false\n• ... and 4 more properties\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...",
       "type": "array",
       "items": {
         "type": "object",

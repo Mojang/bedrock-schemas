@@ -182,114 +182,44 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 }
 
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+Elder Guardian - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/elder_guardian.json
 
 "minecraft:behavior.nearest_attackable_target": {
-  "reselect_targets": true,
+  "attack_interval": {
+    "max": 1
+  },
   "must_see": true,
-  "within_radius": 12,
-  "must_see_forget_duration": 17,
-  "persist_time": 0.5,
   "entity_types": [
     {
       "filters": {
-        "all_of": [
+        "AND": [
           {
-            "any_of": [
+            "OR": [
               {
                 "test": "is_family",
-                "subject": "other",
+                "subject": 1,
+                "operator": 0,
                 "value": "player"
               },
               {
                 "test": "is_family",
-                "subject": "other",
-                "value": "snowgolem"
+                "subject": 1,
+                "operator": 0,
+                "value": "squid"
               },
               {
                 "test": "is_family",
-                "subject": "other",
-                "value": "irongolem"
-              },
-              {
-                "test": "is_family",
-                "subject": "other",
+                "subject": 1,
+                "operator": 0,
                 "value": "axolotl"
               }
             ]
-          },
-          {
-            "any_of": [
-              {
-                "test": "in_water",
-                "subject": "other",
-                "value": true
-              },
-              {
-                "test": "is_daytime",
-                "value": false
-              }
-            ]
           }
         ]
-      },
-      "max_dist": 20
-    },
-    {
-      "filters": {
-        "all_of": [
-          {
-            "any_of": [
-              {
-                "test": "is_family",
-                "subject": "other",
-                "value": "villager"
-              },
-              {
-                "test": "is_family",
-                "subject": "other",
-                "value": "wandering_trader"
-              }
-            ]
-          },
-          {
-            "any_of": [
-              {
-                "test": "in_water",
-                "subject": "other",
-                "value": true
-              },
-              {
-                "test": "is_daytime",
-                "value": false
-              }
-            ]
-          }
-        ]
-      },
-      "max_dist": 20,
-      "must_see": false
-    },
-    {
-      "filters": {
-        "all_of": [
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "baby_turtle"
-          },
-          {
-            "test": "in_water",
-            "subject": "other",
-            "operator": "!=",
-            "value": true
-          }
-        ]
-      },
-      "max_dist": 20
+      }
     }
   ],
-  "priority": 2
+  "priority": 1
 }
 
  */
@@ -313,6 +243,8 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * 
    * Sample Values:
    * Cave Spider: {"min":10,"max":10}, {"min":5,"max":5}
+   *
+   * Elder Guardian: {"max":1}
    *
    */
   attack_interval?: MinecraftBehaviorNearestAttackableTargetAttackInterval;
@@ -363,10 +295,6 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * @remarks
    * Time (in seconds) the target must not be seen by this entity to
    * become invalid. Used only if "must_see" is true.
-   * 
-   * Sample Values:
-   * Drowned: 17
-   *
    */
   must_see_forget_duration?: number;
 
@@ -374,10 +302,6 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * @remarks
    * Time (in seconds) this entity can continue attacking the target
    * after the target is no longer valid.
-   * 
-   * Sample Values:
-   * Drowned: 0.5
-   *
    */
   persist_time?: number;
 
@@ -393,6 +317,7 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    *
    * Breeze: 1
    *
+   *
    */
   priority?: number;
 
@@ -404,7 +329,6 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * 
    * Sample Values:
    * Bogged: true
-   *
    *
    */
   reselect_targets?: boolean;
@@ -464,8 +388,6 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * 
    * Sample Values:
    * Breeze: 24
-   *
-   * Drowned: 12
    *
    */
   within_radius?: number;

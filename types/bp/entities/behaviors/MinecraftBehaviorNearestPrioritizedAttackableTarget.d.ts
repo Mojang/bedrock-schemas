@@ -10,157 +10,6 @@
  * Entity Behaviors Documentation - minecraft:behavior.nearest_prioritized_attackable_target
  * 
  * minecraft:behavior.nearest_prioritized_attackable_target Samples
-
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
- * At /minecraft:entity/component_groups/minecraft:fox_red/minecraft:behavior.nearest_prioritized_attackable_target/: 
-"minecraft:behavior.nearest_prioritized_attackable_target": {
-  "priority": 6,
-  "attack_interval": 2,
-  "reselect_targets": true,
-  "target_search_height": 5,
-  "entity_types": [
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "rabbit"
-      },
-      "max_dist": 12,
-      "priority": 0
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "chicken"
-      },
-      "max_dist": 12,
-      "priority": 0
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "cod"
-      },
-      "max_dist": 12,
-      "priority": 1
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "salmon"
-      },
-      "max_dist": 12,
-      "priority": 1
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "tropicalfish"
-      },
-      "max_dist": 12,
-      "priority": 1
-    },
-    {
-      "filters": {
-        "all_of": [
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "baby_turtle"
-          },
-          {
-            "test": "in_water",
-            "subject": "other",
-            "operator": "!=",
-            "value": true
-          }
-        ]
-      },
-      "max_dist": 12,
-      "priority": 0
-    }
-  ]
-}
-
- * At /minecraft:entity/component_groups/minecraft:fox_arctic/minecraft:behavior.nearest_prioritized_attackable_target/: 
-"minecraft:behavior.nearest_prioritized_attackable_target": {
-  "priority": 6,
-  "attack_interval": 2,
-  "reselect_targets": true,
-  "target_search_height": 5,
-  "entity_types": [
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "rabbit"
-      },
-      "max_dist": 12,
-      "priority": 1
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "chicken"
-      },
-      "max_dist": 12,
-      "priority": 1
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "cod"
-      },
-      "max_dist": 12,
-      "priority": 0
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "salmon"
-      },
-      "max_dist": 12,
-      "priority": 0
-    },
-    {
-      "filters": {
-        "test": "is_family",
-        "subject": "other",
-        "value": "tropicalfish"
-      },
-      "max_dist": 12,
-      "priority": 0
-    },
-    {
-      "filters": {
-        "all_of": [
-          {
-            "test": "is_family",
-            "subject": "other",
-            "value": "baby_turtle"
-          },
-          {
-            "test": "in_water",
-            "subject": "other",
-            "operator": "!=",
-            "value": true
-          }
-        ]
-      },
-      "max_dist": 12,
-      "priority": 1
-    }
-  ]
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -176,10 +25,6 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
   /**
    * @remarks
    * Time in seconds before selecting a target
-   * 
-   * Sample Values:
-   * Fox: 2
-   *
    */
   attack_interval?: number;
 
@@ -193,10 +38,6 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
   /**
    * @remarks
    * List of entity types that this mob considers valid targets
-   * 
-   * Sample Values:
-   * Fox: [{"filters":{"test":"is_family","subject":"other","value":"rabbit"},"max_dist":12,"priority":0},{"filters":{"test":"is_family","subject":"other","value":"chicken"},"max_dist":12,"priority":0},{"filters":{"test":"is_family","subject":"other","value":"cod"},"max_dist":12,"priority":1},{"filters":{"test":"is_family","subject":"other","value":"salmon"},"max_dist":12,"priority":1},{"filters":{"test":"is_family","subject":"other","value":"tropicalfish"},"max_dist":12,"priority":1},{"filters":{"all_of":[{"test":"is_family","subject":"other","value":"baby_turtle"},{"test":"in_water","subject":"other","operator":"!=","value":true}]},"max_dist":12,"priority":0}], [{"filters":{"test":"is_family","subject":"other","value":"rabbit"},"max_dist":12,"priority":1},{"filters":{"test":"is_family","subject":"other","value":"chicken"},"max_dist":12,"priority":1},{"filters":{"test":"is_family","subject":"other","value":"cod"},"max_dist":12,"priority":0},{"filters":{"test":"is_family","subject":"other","value":"salmon"},"max_dist":12,"priority":0},{"filters":{"test":"is_family","subject":"other","value":"tropicalfish"},"max_dist":12,"priority":0},{"filters":{"all_of":[{"test":"is_family","subject":"other","value":"baby_turtle"},{"test":"in_water","subject":"other","operator":"!=","value":true}]},"max_dist":12,"priority":1}]
-   *
    */
   entity_types?: MinecraftBehaviorNearestPrioritizedAttackableTargetEntityTypes[];
 
@@ -233,10 +74,6 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    * @remarks
    * Specifies the priority in which filtered enemy types should be
    * attacked. Lower number means higher priority.
-   * 
-   * Sample Values:
-   * Fox: 6
-   *
    */
   priority?: number;
 
@@ -244,10 +81,6 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    * @remarks
    * If true, the target will change to the current closest entity
    * whenever a different entity is closer
-   * 
-   * Sample Values:
-   * Fox: true
-   *
    */
   reselect_targets?: boolean;
 
@@ -268,10 +101,6 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    * @remarks
    * Height in blocks to search for a target mob. -1.0f means the
    * height does not matter.
-   * 
-   * Sample Values:
-   * Fox: 5
-   *
    */
   target_search_height?: number;
 
@@ -322,8 +151,6 @@ export interface MinecraftBehaviorNearestPrioritizedAttackableTargetEntityTypes 
    * one when the target isn't visible any more
    */
   must_see_forget_duration?: number;
-
-  priority?: number;
 
   /**
    * @remarks

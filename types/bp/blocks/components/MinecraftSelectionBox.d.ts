@@ -10,6 +10,10 @@
  * Block Components Documentation - minecraft:selection_box
  * 
  * minecraft:selection_box Samples
+
+Block Fabricator - Block Fabricator
+
+"minecraft:selection_box": true
  */
 
 import * as jsoncommon from '../../../common';

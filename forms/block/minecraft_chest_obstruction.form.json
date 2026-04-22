@@ -9,6 +9,6 @@
       "dataType": "string"
     }
   ],
-  "description": "The description identifier of the chest obstruction component\nExperimental toggles required: Upcoming Creator Features",
+  "description": "The description identifier of the chest obstruction component\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.26.20)",
   "title": "Chest Obstruction"
 }

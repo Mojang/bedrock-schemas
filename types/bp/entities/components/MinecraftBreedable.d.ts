@@ -42,20 +42,6 @@ Cow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:breedable": {
-  "require_tame": false,
-  "breed_items": [
-    "sweet_berries",
-    "glow_berries"
-  ],
-  "breeds_with": {
-    "minecraft:fox": {}
-  }
-}
-
-
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
 "minecraft:breedable": {
@@ -83,6 +69,19 @@ Goat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   "breeds_with": {
     "minecraft:goat": {}
   }
+}
+
+
+Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
+
+"minecraft:breedable": {
+  "require_tame": true,
+  "breeds_with": {
+    "minecraft:llama": {}
+  },
+  "breed_items": [
+    "hay_block"
+  ]
 }
 
  */
@@ -128,7 +127,7 @@ export default interface MinecraftBreedable {
    *
    * Cow: ["wheat"]
    *
-   * Fox: ["sweet_berries","glow_berries"]
+   * Frog: ["slime_ball"]
    *
    */
   breed_items?: string[];
@@ -143,7 +142,7 @@ export default interface MinecraftBreedable {
    *
    * Cow: {"minecraft:cow":{}}
    *
-   * Fox: {"minecraft:fox":{}}
+   * Frog: {"minecraft:frog":{"event":"become_pregnant","target":"self"}}
    *
    */
   breeds_with?: MinecraftBreedableBreedsWith[];
@@ -211,6 +210,10 @@ export default interface MinecraftBreedable {
    * @remarks
    * If true, the entities need to be tamed first before they can
    * breed.
+   * 
+   * Sample Values:
+   * Llama: true
+   *
    */
   require_tame?: boolean;
 

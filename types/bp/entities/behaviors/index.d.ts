@@ -55,6 +55,7 @@ export { default as MinecraftBehaviorFollowMob } from './MinecraftBehaviorFollow
 export { default as MinecraftBehaviorFollowOwner } from './MinecraftBehaviorFollowOwner';
 export { default as MinecraftBehaviorFollowParent } from './MinecraftBehaviorFollowParent';
 export { default as MinecraftBehaviorFollowTargetCaptain } from './MinecraftBehaviorFollowTargetCaptain';
+export { default as MinecraftBehaviorFollowTargetLeader } from './MinecraftBehaviorFollowTargetLeader';
 export { default as MinecraftBehaviorGoAndGiveItemsToNoteblock } from './MinecraftBehaviorGoAndGiveItemsToNoteblock';
 export { default as MinecraftBehaviorGoAndGiveItemsToOwner } from './MinecraftBehaviorGoAndGiveItemsToOwner';
 export { default as MinecraftBehaviorGoHome } from './MinecraftBehaviorGoHome';
@@ -62,6 +63,7 @@ export { default as MinecraftBehaviorGuardianAttack } from './MinecraftBehaviorG
 export { default as MinecraftBehaviorHarvestFarmBlock } from './MinecraftBehaviorHarvestFarmBlock';
 export { default as MinecraftBehaviorHide } from './MinecraftBehaviorHide';
 export { default as MinecraftBehaviorHoldGround } from './MinecraftBehaviorHoldGround';
+export { default as MinecraftBehaviorHover } from './MinecraftBehaviorHover';
 export { default as MinecraftBehaviorHurtByTarget } from './MinecraftBehaviorHurtByTarget';
 export { default as MinecraftBehaviorInspectBookshelf } from './MinecraftBehaviorInspectBookshelf';
 export { default as MinecraftBehaviorInvestigateSuspiciousLocation } from './MinecraftBehaviorInvestigateSuspiciousLocation';
@@ -166,6 +168,7 @@ export { default as MinecraftBehaviorSwimWithEntity } from './MinecraftBehaviorS
 export { default as MinecraftBehaviorSwoopAttack } from './MinecraftBehaviorSwoopAttack';
 export { default as MinecraftBehaviorTakeBlock } from './MinecraftBehaviorTakeBlock';
 export { default as MinecraftBehaviorTakeFlower } from './MinecraftBehaviorTakeFlower';
+export { default as MinecraftBehaviorTargetWhenPushed } from './MinecraftBehaviorTargetWhenPushed';
 export { default as MinecraftBehaviorTeleportToOwner } from './MinecraftBehaviorTeleportToOwner';
 export { default as MinecraftBehaviorTempt } from './MinecraftBehaviorTempt';
 export { default as MinecraftBehaviorTimerFlag1 } from './MinecraftBehaviorTimerFlag1';

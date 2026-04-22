@@ -101,7 +101,26 @@
     ],
     "dataType": "boolean"
   },
+  "samples": {
+    "Block Fabricator": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
+        "content": {
+          "destroy_chance_modifier": 20,
+          "catch_chance_modifier": 5
+        }
+      }
+    ],
+    "Block Leaf Pile": [
+      {
+        "path": "https://github.com/microsoft/minecraft-samples/tree/main/creator_camp/behavior_packs/creator_camp/blocks/leaf_pile.block.json",
+        "content": {
+          "destroy_chance_modifier": 100,
+          "catch_chance_modifier": 100
+        }
+      }
+    ]
+  },
   "title": "Flammable",
-  "samples": {},
   "id": "minecraft:flammable"
 }

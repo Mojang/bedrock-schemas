@@ -25,18 +25,6 @@
             "content": "minecraft:become_angry"
           }
         ],
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
-            "content": "minecraft:has_target"
-          }
-        ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_adult/minecraft:on_target_acquired/",
-            "content": "become_angry_event"
-          }
-        ],
         "/vanilla/behavior_pack/entities/llama.json": [
           {
             "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
@@ -47,6 +35,22 @@
           {
             "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
             "content": "minecraft:become_aggressive"
+          }
+        ],
+        "/vanilla/behavior_pack/entities/polar_bear.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:baby_wild/minecraft:on_target_acquired/",
+            "content": "minecraft:on_scared"
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:adult_wild/minecraft:on_target_acquired/",
+            "content": "minecraft:on_anger"
+          }
+        ],
+        "/vanilla/behavior_pack/entities/silverfish.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:silverfish_calm/minecraft:on_target_acquired/",
+            "content": "minecraft:become_angry"
           }
         ]
       }
@@ -86,15 +90,15 @@
       "defaultValue": "self",
       "dataType": "string",
       "samples": {
-        "/vanilla/behavior_pack/entities/drowned.json": [
+        "/vanilla/behavior_pack/entities/llama.json": [
           {
             "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
             "content": "self"
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
+        "/vanilla/behavior_pack/entities/magma_cube.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_adult/minecraft:on_target_acquired/",
+            "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
             "content": "self"
           }
         ]
@@ -109,24 +113,6 @@
         "path": "/minecraft:entity/component_groups/minecraft:spider_neutral/minecraft:on_target_acquired/",
         "content": {
           "event": "minecraft:become_angry"
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/drowned.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
-        "content": {
-          "event": "minecraft:has_target",
-          "target": "self"
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:hoglin_adult/minecraft:on_target_acquired/",
-        "content": {
-          "event": "become_angry_event",
-          "target": "self"
         }
       }
     ],
@@ -159,6 +145,31 @@
         "path": "/minecraft:entity/components/minecraft:on_target_acquired/",
         "content": {
           "event": "minecraft:become_aggressive",
+          "target": "self"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/polar_bear.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:baby_wild/minecraft:on_target_acquired/",
+        "content": {
+          "event": "minecraft:on_scared",
+          "target": "self"
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:adult_wild/minecraft:on_target_acquired/",
+        "content": {
+          "event": "minecraft:on_anger",
+          "target": "self"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/silverfish.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:silverfish_calm/minecraft:on_target_acquired/",
+        "content": {
+          "event": "minecraft:become_angry",
           "target": "self"
         }
       }

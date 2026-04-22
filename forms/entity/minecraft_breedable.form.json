@@ -179,15 +179,6 @@
             ]
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:breedable/",
-            "content": [
-              "sweet_berries",
-              "glow_berries"
-            ]
-          }
-        ],
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:breedable/",
@@ -201,6 +192,14 @@
             "path": "/minecraft:entity/component_groups/goat_adult/minecraft:breedable/",
             "content": [
               "wheat"
+            ]
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:breedable/",
+            "content": [
+              "hay_block"
             ]
           }
         ]
@@ -289,14 +288,6 @@
             }
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:breedable/",
-            "content": {
-              "minecraft:fox": {}
-            }
-          }
-        ],
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:breedable/",
@@ -313,6 +304,14 @@
             "path": "/minecraft:entity/component_groups/goat_adult/minecraft:breedable/",
             "content": {
               "minecraft:goat": {}
+            }
+          }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:breedable/",
+            "content": {
+              "minecraft:llama": {}
             }
           }
         ]
@@ -457,6 +456,14 @@
       "description": "If true, the entities need to be tamed first before they can breed.",
       "dataType": "boolean",
       "defaultValue": true,
+      "samples": {
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:breedable/",
+            "content": true
+          }
+        ]
+      },
       "title": "Require Tame"
     }
   ],
@@ -495,21 +502,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_adult/minecraft:breedable/",
-        "content": {
-          "require_tame": false,
-          "breed_items": [
-            "sweet_berries",
-            "glow_berries"
-          ],
-          "breeds_with": {
-            "minecraft:fox": {}
-          }
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/frog.json": [
       {
         "path": "/minecraft:entity/components/minecraft:breedable/",
@@ -539,6 +531,20 @@
           "breeds_with": {
             "minecraft:goat": {}
           }
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/llama.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:llama_adult/minecraft:breedable/",
+        "content": {
+          "require_tame": true,
+          "breeds_with": {
+            "minecraft:llama": {}
+          },
+          "breed_items": [
+            "hay_block"
+          ]
         }
       }
     ]

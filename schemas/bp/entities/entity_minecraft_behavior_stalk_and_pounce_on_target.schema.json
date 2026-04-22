@@ -6,7 +6,7 @@
   "properties": {
     "interest_time": {
       "title": "Interest Time",
-      "description": "The amount of time the mob will be interested before pouncing. This happens when the mob is within range of pouncing\n\nSample values:\n• fox: 2",
+      "description": "The amount of time the mob will be interested before pouncing. This happens when the mob is within range of pouncing",
       "type": "number",
       "default": 2
     },
@@ -18,19 +18,19 @@
     },
     "leap_height": {
       "title": "Leap Height",
-      "description": "The height in blocks the mob jumps when leaping at its target\n\nSample values:\n• fox: 0.9",
+      "description": "The height in blocks the mob jumps when leaping at its target",
       "type": "number",
       "default": 0.9
     },
     "max_stalk_dist": {
       "title": "Max Stalk Dist",
-      "description": "The maximum distance away a target can be before the mob gives up on stalking\n\nSample values:\n• fox: 12",
+      "description": "The maximum distance away a target can be before the mob gives up on stalking",
       "type": "number",
       "default": 10
     },
     "pounce_max_dist": {
       "title": "Pounce Max Dist",
-      "description": "The maximum distance away from the target in blocks to begin pouncing at the target\n\nSample values:\n• fox: 5",
+      "description": "The maximum distance away from the target in blocks to begin pouncing at the target",
       "type": "number",
       "default": 5
     },
@@ -42,19 +42,19 @@
     },
     "stalk_speed": {
       "title": "Stalk Speed",
-      "description": "The movement speed in which you stalk your target\n\nSample values:\n• fox: 1.2",
+      "description": "The movement speed in which you stalk your target",
       "type": "number",
       "default": 1.2
     },
     "strike_dist": {
       "title": "Strike Dist",
-      "description": "The max distance away from the target when landing from the pounce that will still result in damaging the target\n\nSample values:\n• fox: 2",
+      "description": "The max distance away from the target when landing from the pounce that will still result in damaging the target",
       "type": "number",
       "default": 2
     },
     "stuck_time": {
       "title": "Stuck Time",
-      "description": "The amount of time the mob will be stuck if they fail and land on a block they can be stuck on\n\nSample values:\n• fox: 2",
+      "description": "The amount of time the mob will be stuck if they fail and land on a block they can be stuck on",
       "type": "number",
       "default": 2
     },
@@ -62,50 +62,6 @@
       "title": "Priority",
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
       "type": "integer"
-    },
-    "leap_dist": {
-      "title": "Leap Dist",
-      "description": "\n\nSample values:\n• fox: 0.8",
-      "type": "number"
-    },
-    "stuck_blocks": {
-      "title": "Stuck Blocks",
-      "description": "\n\nProperties:\n• test (string)\n• subject (string)\n• operator (string)\n• value (string)\n\nSample values:\n• fox: {\"test\":\"is_block\",\"subject\":\"block\",\"operator\"...",
-      "type": "object",
-      "properties": {
-        "test": {
-          "title": "Test",
-          "description": "\n\nSample values:\n• fox: is_block",
-          "type": "string"
-        },
-        "subject": {
-          "title": "Subject",
-          "description": "\n\nSample values:\n• fox: block",
-          "type": "string"
-        },
-        "operator": {
-          "title": "Operator",
-          "description": "\n\nSample values:\n• fox: ==",
-          "type": "string"
-        },
-        "value": {
-          "title": "Value",
-          "description": "\n\nSample values:\n• fox: snow_layer",
-          "type": "string"
-        }
-      },
-      "defaultSnippets": [
-        {
-          "label": "Stuck blocks",
-          "description": "Create a Stuck blocks",
-          "body": {
-            "test": "",
-            "subject": "",
-            "operator": "",
-            "value": ""
-          }
-        }
-      ]
     }
   }
 }

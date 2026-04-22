@@ -6,7 +6,7 @@
   "properties": {
     "seat_count": {
       "title": "Number of seats",
-      "description": "The number of entities that can ride this entity at the same time.\n\nSample values:\n• chicken: 1\n• hoglin: 3",
+      "description": "The number of entities that can ride this entity at the same time.\n\nSample values:\n• chicken: 1",
       "type": "integer",
       "default": 1
     },
@@ -107,7 +107,7 @@
     },
     "family_types": {
       "title": "Family Types",
-      "description": "List of entities that can ride this entity.\n\nSample values:\n• chicken: [\"baby_undead\"]\n• hoglin: [\"piglin\"]\n• llama: [\"player\"]",
+      "description": "List of entities that can ride this entity.\n\nSample values:\n• chicken: [\"baby_undead\"]\n• llama: [\"player\"]",
       "type": "array",
       "items": {
         "type": "string"

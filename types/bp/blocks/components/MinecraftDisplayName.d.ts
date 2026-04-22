@@ -10,6 +10,14 @@
  * Block Components Documentation - minecraft:display_name
  * 
  * minecraft:display_name Samples
+
+Block White Sand - Block White Sand
+
+"minecraft:display_name": "White Sand
+
+Luckyblock - Luckyblock
+
+"minecraft:display_name": "Lucky Block
  */
 
 import * as jsoncommon from '../../../common';

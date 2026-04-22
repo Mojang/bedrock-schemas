@@ -6,7 +6,7 @@
   "properties": {
     "filters": {
       "title": "Filters",
-      "description": "The list of conditions that must be satisfied for other entities to be counted towards group size.\n\nSample values:\n• hoglin: {\"all_of\":[{\"test\":\"has_component\",\"operator\":\"...",
+      "description": "The list of conditions that must be satisfied for other entities to be counted towards group size.",
       "anyOf": [
         {
           "type": "object"
@@ -44,7 +44,7 @@
     },
     "radius": {
       "title": "Radius",
-      "description": "Radius from center of entity.\n\nSample values:\n• hoglin: 32",
+      "description": "Radius from center of entity.",
       "type": "number",
       "default": 16
     }

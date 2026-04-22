@@ -76,5 +76,6 @@
   ],
   "description": "Defines an entity's teleporting behavior.",
   "title": "Teleport",
+  "samples": {},
   "id": "minecraft:teleport"
 }

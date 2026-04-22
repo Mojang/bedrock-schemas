@@ -24,7 +24,7 @@
     },
     "max_failed_attempts": {
       "title": "Max Failed Attempts",
-      "description": "Number of attempts to find mount\n\nSample values:\n• drowned: 20",
+      "description": "Number of attempts to find mount",
       "type": "integer",
       "default": 20
     },
@@ -36,13 +36,13 @@
     },
     "priority": {
       "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• drowned: 1\n• parrot: 4",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• parrot: 4",
       "type": "integer",
       "default": 0
     },
     "start_delay": {
       "title": "Start Delay",
-      "description": "Time the mob will wait before starting to move towards the mount\n\nSample values:\n• drowned: 15\n• parrot: 100",
+      "description": "Time the mob will wait before starting to move towards the mount\n\nSample values:\n• parrot: 100",
       "type": "integer",
       "default": 0
     },
@@ -54,7 +54,7 @@
     },
     "within_radius": {
       "title": "Within Radius",
-      "description": "Distance in blocks within which the mob will look for a mount\n\nSample values:\n• drowned: 16",
+      "description": "Distance in blocks within which the mob will look for a mount\n\nSample values:\n• parrot: 16",
       "type": "number",
       "default": 0
     }

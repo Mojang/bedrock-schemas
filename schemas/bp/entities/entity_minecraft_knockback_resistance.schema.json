@@ -6,7 +6,7 @@
   "properties": {
     "value": {
       "title": "Value",
-      "description": "The amount of knockback resistance, from 0.0 (none) to 1.0 (full immunity).\n\nSample values:\n• armor_stand: 1\n• ender_dragon: 100\n• hoglin: 0.6",
+      "description": "The amount of knockback resistance, from 0.0 (none) to 1.0 (full immunity).\n\nSample values:\n• armor_stand: 1\n• ender_dragon: 100\n• sulfur_cube: -2",
       "type": "number"
     },
     "max": {

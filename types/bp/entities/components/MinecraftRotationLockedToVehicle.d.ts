@@ -11,7 +11,7 @@
  * 
  * minecraft:rotation_locked_to_vehicle Samples
 
-Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+Skeleton - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/skeleton.json
 
 "minecraft:rotation_locked_to_vehicle": {}
 

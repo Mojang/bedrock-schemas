@@ -26,8 +26,8 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.move_towards_home_restriction)
  * Allows entities with a `minecraft:home` component to move towards
  * their home position. 
-		If `restriction_radius` is set, entities
- * will be able to run this behavior only if outside of it.
+		If `restriction_radius` is set, entities will
+ * be able to run this behavior only if outside of it.
  */
 export default interface MinecraftBehaviorMoveTowardsHomeRestriction {
 

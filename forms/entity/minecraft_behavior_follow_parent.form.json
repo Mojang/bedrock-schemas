@@ -133,21 +133,21 @@
             "content": 4
           }
         ],
-        "/vanilla/behavior_pack/entities/fox.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:fox_baby/minecraft:behavior.follow_parent/",
-            "content": 9
-          }
-        ],
         "/vanilla/behavior_pack/entities/goat.json": [
           {
             "path": "/minecraft:entity/component_groups/goat_baby/minecraft:behavior.follow_parent/",
             "content": 6
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
+        "/vanilla/behavior_pack/entities/llama.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:behavior.follow_parent/",
+            "path": "/minecraft:entity/component_groups/minecraft:llama_baby/minecraft:behavior.follow_parent/",
+            "content": 5
+          }
+        ],
+        "/vanilla/behavior_pack/entities/pig.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_baby/minecraft:behavior.follow_parent/",
             "content": 6
           }
         ]
@@ -179,9 +179,9 @@
             "content": 1
           }
         ],
-        "/vanilla/behavior_pack/entities/hoglin.json": [
+        "/vanilla/behavior_pack/entities/llama.json": [
           {
-            "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:behavior.follow_parent/",
+            "path": "/minecraft:entity/component_groups/minecraft:llama_baby/minecraft:behavior.follow_parent/",
             "content": 1
           }
         ]
@@ -216,15 +216,6 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/fox.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:fox_baby/minecraft:behavior.follow_parent/",
-        "content": {
-          "priority": 9,
-          "speed_multiplier": 1.1
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/goat.json": [
       {
         "path": "/minecraft:entity/component_groups/goat_baby/minecraft:behavior.follow_parent/",
@@ -234,12 +225,21 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/hoglin.json": [
+    "/vanilla/behavior_pack/entities/llama.json": [
       {
-        "path": "/minecraft:entity/component_groups/minecraft:hoglin_baby/minecraft:behavior.follow_parent/",
+        "path": "/minecraft:entity/component_groups/minecraft:llama_baby/minecraft:behavior.follow_parent/",
+        "content": {
+          "priority": 5,
+          "speed_multiplier": 1
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/pig.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:pig_baby/minecraft:behavior.follow_parent/",
         "content": {
           "priority": 6,
-          "speed_multiplier": 1
+          "speed_multiplier": 1.1
         }
       }
     ]

@@ -317,7 +317,7 @@
     },
     "minecraft:behavior.defend_trusted_target": {
       "title": "Defend Trusted Target Minecraft Behavior",
-      "description": "Allows the mob to target another mob that hurts an entity it trusts.\n\nProperties:\n• aggro_sound (string)\n• attack_interval (int) = 0\n• entity_types\n• must_see (boolean) = false\n• must_see_forget_duration (float) = 3\n• within_radius (float) = 0\n• priority (int)\n• sound_chance (number)\n• ... and 1 more properties",
+      "description": "Allows the mob to target another mob that hurts an entity it trusts.\n\nProperties:\n• aggro_sound (string)\n• attack_interval (int) = 0\n• entity_types\n• must_see (boolean) = false\n• must_see_forget_duration (float) = 3\n• within_radius (float) = 0\n• priority (int)",
       "$ref": "./entity_minecraft_behavior_defend_trusted_target.schema.json",
       "defaultSnippets": [
         {
@@ -329,8 +329,7 @@
             "must_see": false,
             "must_see_forget_duration": 3,
             "within_radius": 0,
-            "priority": 0,
-            "sound_chance": 0
+            "priority": 0
           }
         }
       ]
@@ -618,16 +617,18 @@
     },
     "minecraft:behavior.follow_caravan": {
       "title": "Follow Caravan Minecraft Behavior",
-      "description": "Allows the mob to follow mobs that are in a caravan.\n\nProperties:\n• entity_types ({ cooldown, filters, max_dist, ... })\n• entity_count (int) = 1\n• speed_multiplier (float) = 1\n• priority (int)",
+      "description": "Allows the mob to follow mobs that are in a caravan.\n\nProperties:\n• entity_types ({ cooldown, filters, max_dist, ... }) = []\n• control_flags (string[]) = []\n• entity_count (int) = 1\n• priority (int) = 0\n• speed_multiplier (float) = 1",
       "$ref": "./entity_minecraft_behavior_follow_caravan.schema.json",
       "defaultSnippets": [
         {
-          "label": "Follow Caravan Behavior",
+          "label": "Entity Follow Caravan Behavior",
           "description": "Allows the mob to follow mobs that are in a caravan.",
           "body": {
+            "entity_types": [],
+            "control_flags": [],
             "entity_count": 1,
-            "speed_multiplier": 1,
-            "priority": 0
+            "priority": 0,
+            "speed_multiplier": 1
           }
         }
       ]
@@ -758,7 +759,18 @@
     },
     "minecraft:behavior.hover": {
       "title": "Hover Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the mob to hover in place.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0",
+      "$ref": "./entity_minecraft_behavior_hover.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Hover Behavior",
+          "description": "Allows the mob to hover in place.",
+          "body": {
+            "control_flags": [],
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.hurt_by_target": {
       "title": "Hurt By Target Minecraft Behavior",
@@ -798,16 +810,17 @@
     },
     "minecraft:behavior.lay_down": {
       "title": "Lay Down Minecraft Behavior",
-      "description": "Allows mobs to lay down at times\n\nProperties:\n• interval (int) = 120\n• random_stop_interval (int) = 120\n• priority (int)",
+      "description": "Allows mobs to lay down at times\n\nProperties:\n• control_flags (string[]) = []\n• interval (int) = 120\n• priority (int) = 0\n• random_stop_interval (int) = 120",
       "$ref": "./entity_minecraft_behavior_lay_down.schema.json",
       "defaultSnippets": [
         {
-          "label": "Lay Down Behavior",
+          "label": "Entity Lay Down Behavior",
           "description": "Allows mobs to lay down at times",
           "body": {
+            "control_flags": [],
             "interval": 120,
-            "random_stop_interval": 120,
-            "priority": 0
+            "priority": 0,
+            "random_stop_interval": 120
           }
         }
       ]
@@ -1014,33 +1027,35 @@
     },
     "minecraft:behavior.mount_pathing": {
       "title": "Mount Pathing Minecraft Behavior",
-      "description": "Allows the mob to move around on its own while mounted seeking a target to attack. Also will allow an entity to target another entity for an attack.\n\nProperties:\n• speed_multiplier (float) = 1\n• target_dist (float) = 0\n• track_target (boolean) = false\n• priority (int)",
+      "description": "Allows the mob to move around on its own while mounted seeking a target to attack. Also will allow an entity to target another entity for an attack.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0\n• speed_multiplier (float) = 1\n• target_dist (float) = 0\n• track_target (boolean) = false",
       "$ref": "./entity_minecraft_behavior_mount_pathing.schema.json",
       "defaultSnippets": [
         {
-          "label": "Mount Pathing Behavior",
+          "label": "Entity Mount Pathing Behavior",
           "description": "Allows the mob to move around on its own while mounted seeking a target to attack. Also will allow an entity to target another entity for an attack.",
           "body": {
+            "control_flags": [],
+            "priority": 0,
             "speed_multiplier": 1,
             "target_dist": 0,
-            "track_target": false,
-            "priority": 0
+            "track_target": false
           }
         }
       ]
     },
     "minecraft:behavior.move_through_village": {
       "title": "Move Through Village Minecraft Behavior",
-      "description": "Can only be used by Villagers. Allows the villagers to create paths around the village.\n\nProperties:\n• only_at_night (boolean) = false\n• speed_multiplier (float) = 1\n• priority (int)",
+      "description": "Can only be used by Villagers. Allows the villagers to create paths around the village.\n\nProperties:\n• control_flags (string[]) = []\n• only_at_night (boolean) = false\n• priority (int) = 0\n• speed_multiplier (float) = 1",
       "$ref": "./entity_minecraft_behavior_move_through_village.schema.json",
       "defaultSnippets": [
         {
-          "label": "Move Through Village Behavior",
+          "label": "Entity Move Through Village Behavior",
           "description": "Can only be used by Villagers. Allows the villagers to create paths around the village.",
           "body": {
+            "control_flags": [],
             "only_at_night": false,
-            "speed_multiplier": 1,
-            "priority": 0
+            "priority": 0,
+            "speed_multiplier": 1
           }
         }
       ]
@@ -1152,16 +1167,18 @@
     },
     "minecraft:behavior.move_to_random_block": {
       "title": "Move To Random Block Minecraft Behavior",
-      "description": "Allows mob to move towards a random block.\n\nProperties:\n• block_distance (float) = 16\n• within_radius (float) = 0\n• priority (int)",
+      "description": "Allows mob to move towards a random block.\n\nProperties:\n• block_distance (float) = 16\n• control_flags (string[]) = []\n• priority (int) = 0\n• speed_multiplier (float) = 1\n• within_radius (float) = 0",
       "$ref": "./entity_minecraft_behavior_move_to_random_block.schema.json",
       "defaultSnippets": [
         {
-          "label": "Move To Random Block Behavior",
+          "label": "Entity Move To Random Block Behavior",
           "description": "Allows mob to move towards a random block.",
           "body": {
             "block_distance": 16,
-            "within_radius": 0,
-            "priority": 0
+            "control_flags": [],
+            "priority": 0,
+            "speed_multiplier": 1,
+            "within_radius": 0
           }
         }
       ]
@@ -1207,16 +1224,17 @@
     },
     "minecraft:behavior.move_towards_target": {
       "title": "Move Towards Target Minecraft Behavior",
-      "description": "Allows mob to move towards its current target.\n\nProperties:\n• within_radius (float) = 0\n• priority (int)\n• speed_multiplier (number)",
+      "description": "Allows mob to move towards its current target.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0\n• speed_multiplier (float) = 1\n• within_radius (float) = 0",
       "$ref": "./entity_minecraft_behavior_move_towards_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Move Towards Target Behavior",
+          "label": "Entity Move Towards Target Behavior",
           "description": "Allows mob to move towards its current target.",
           "body": {
-            "within_radius": 0,
+            "control_flags": [],
             "priority": 0,
-            "speed_multiplier": 0
+            "speed_multiplier": 1,
+            "within_radius": 0
           }
         }
       ]
@@ -1395,36 +1413,68 @@
     },
     "minecraft:behavior.pickup_items": {
       "title": "Pickup Items Minecraft Behavior",
-      "description": "Allows the mob to pick up items on the ground.\n\nProperties:\n• pickup_same_items_as_in_hand (boolean)\n• can_pickup_any_item (boolean) = false\n• can_pickup_to_hand_or_equipment (boolean) = true\n• excluded_items (string[])\n• goal_radius (float) = 0.5\n• max_dist (float) = 0\n• pickup_based_on_chance (boolean) = false\n• speed_multiplier (float) = 1\n• ... and 3 more properties",
+      "description": "Allows the mob to pick up items on the ground.\n\nProperties:\n• pickup_same_items_as_in_hand (boolean) = false\n• can_pickup_any_item (boolean) = false\n• can_pickup_to_hand_or_equipment (boolean) = true\n• control_flags (string[]) = []\n• cooldown_after_being_attacked (int) = 0\n• excluded_items (string) = []\n• goal_radius (float) = 0.5\n• max_dist (int) = 1\n• ... and 7 more properties",
       "$ref": "./entity_minecraft_behavior_pickup_items.schema.json",
       "defaultSnippets": [
         {
-          "label": "Pickup Items Behavior",
+          "label": "Entity Pickup Items Behavior",
           "description": "Allows the mob to pick up items on the ground.",
           "body": {
-            "pickup_same_items_as_in_hand": true,
+            "pickup_same_items_as_in_hand": false,
             "can_pickup_any_item": false,
             "can_pickup_to_hand_or_equipment": true,
+            "control_flags": [],
+            "cooldown_after_being_attacked": 0,
+            "excluded_items": [],
             "goal_radius": 0.5,
-            "max_dist": 0,
+            "max_dist": 1,
+            "on_pickup_item_end": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "on_pickup_item_start": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
             "pickup_based_on_chance": false,
-            "speed_multiplier": 1,
-            "track_target": false,
             "priority": 0,
-            "search_height": 0
+            "search_height": 1,
+            "speed_multiplier": 1,
+            "track_target": false
           }
         }
       ]
     },
     "minecraft:behavior.player_ride_tamed": {
       "title": "Player Ride Tamed Minecraft Behavior",
-      "description": "Allows the mob to be ridden by the player after being tamed.\n\nProperties:\n• priority (int)",
+      "description": "Allows the mob to be ridden by the player after being tamed.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0",
       "$ref": "./entity_minecraft_behavior_player_ride_tamed.schema.json",
       "defaultSnippets": [
         {
-          "label": "Player Ride Tamed Behavior",
+          "label": "Entity Player Ride Tamed Behavior",
           "description": "Allows the mob to be ridden by the player after being tamed.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1495,19 +1545,24 @@
     },
     "minecraft:behavior.random_hover": {
       "title": "Random Hover Minecraft Behavior",
-      "description": "Allows the mob to hover around randomly, close to the surface\n\nProperties:\n• hover_height\n• interval (int) = 120\n• speed_multiplier (float) = 1\n• xz_dist (int) = 10\n• y_dist (int) = 7\n• y_offset (float) = 0\n• priority (int)",
+      "description": "Allows the mob to hover around randomly, close to the surface.\n\nProperties:\n• control_flags (string[]) = []\n• hover_height (object) = {\"max\":0,\"min\":0}\n• interval (int) = 120\n• priority (int) = 0\n• speed_multiplier (float) = 1\n• xz_dist (int) = 10\n• y_dist (int) = 7\n• y_offset (float) = 0",
       "$ref": "./entity_minecraft_behavior_random_hover.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Hover Behavior",
-          "description": "Allows the mob to hover around randomly, close to the surface",
+          "label": "Entity Random Hover Behavior",
+          "description": "Allows the mob to hover around randomly, close to the surface.",
           "body": {
+            "control_flags": [],
+            "hover_height": {
+              "max": 0,
+              "min": 0
+            },
             "interval": 120,
+            "priority": 0,
             "speed_multiplier": 1,
             "xz_dist": 10,
             "y_dist": 7,
-            "y_offset": 0,
-            "priority": 0
+            "y_offset": 0
           }
         }
       ]
@@ -1554,36 +1609,39 @@
     },
     "minecraft:behavior.random_sitting": {
       "title": "Random Sitting Minecraft Behavior",
-      "description": "Allows the mob to randomly sit for a duration.\n\nProperties:\n• cooldown_time (float) = 0\n• min_sit_time (float) = 10\n• start_chance (float) = 0.1\n• stop_chance (float) = 0.3\n• priority (int)",
+      "description": "Allows the mob to randomly sit for a duration.\n\nProperties:\n• control_flags (string[]) = []\n• cooldown (float) = 100\n• min_sit_time (float) = 10\n• priority (int) = 0\n• start_chance (float) = 0.10000000149011612\n• stop_chance (float) = 0.30000001192092896\n• cooldown_time (float) = 0",
       "$ref": "./entity_minecraft_behavior_random_sitting.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Sitting Behavior",
+          "label": "Entity Random Sitting Behavior",
           "description": "Allows the mob to randomly sit for a duration.",
           "body": {
-            "cooldown_time": 0,
+            "control_flags": [],
+            "cooldown": 100,
             "min_sit_time": 10,
-            "start_chance": 0.1,
-            "stop_chance": 0.3,
-            "priority": 0
+            "priority": 0,
+            "start_chance": 0.10000000149011612,
+            "stop_chance": 0.30000001192092896,
+            "cooldown_time": 0
           }
         }
       ]
     },
     "minecraft:behavior.random_stroll": {
       "title": "Random Stroll Minecraft Behavior",
-      "description": "Allows a mob to randomly stroll around.\n\nProperties:\n• interval (int) = 120\n• speed_multiplier (float) = 1\n• xz_dist (int) = 10\n• y_dist (int) = 7\n• priority (int)",
+      "description": "Allows a mob to randomly stroll around.\n\nProperties:\n• control_flags (string[]) = []\n• interval (int) = 120\n• priority (int) = 0\n• speed_multiplier (float) = 1\n• xz_dist (int) = 10\n• y_dist (int) = 7",
       "$ref": "./entity_minecraft_behavior_random_stroll.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Stroll Behavior",
+          "label": "Entity Random Stroll Behavior",
           "description": "Allows a mob to randomly stroll around.",
           "body": {
+            "control_flags": [],
             "interval": 120,
+            "priority": 0,
             "speed_multiplier": 1,
             "xz_dist": 10,
-            "y_dist": 7,
-            "priority": 0
+            "y_dist": 7
           }
         }
       ]
@@ -1623,13 +1681,14 @@
     },
     "minecraft:behavior.restrict_open_door": {
       "title": "Restrict Open Door Minecraft Behavior",
-      "description": "Allows the mob to stay indoors during night time.\n\nProperties:\n• priority (int)",
+      "description": "Allows the mob to stay indoors during night time.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0",
       "$ref": "./entity_minecraft_behavior_restrict_open_door.schema.json",
       "defaultSnippets": [
         {
-          "label": "Restrict Open Door Behavior",
+          "label": "Entity Restrict Open Door Behavior",
           "description": "Allows the mob to stay indoors during night time.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1637,13 +1696,14 @@
     },
     "minecraft:behavior.restrict_sun": {
       "title": "Restrict Sun Minecraft Behavior",
-      "description": "Allows the mob to automatically start avoiding the sun when its a clear day out.\n\nProperties:\n• priority (int)",
+      "description": "Allows the mob to automatically start avoiding the sun when its a clear day out.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0",
       "$ref": "./entity_minecraft_behavior_restrict_sun.schema.json",
       "defaultSnippets": [
         {
-          "label": "Restrict Sun Behavior",
+          "label": "Entity Restrict Sun Behavior",
           "description": "Allows the mob to automatically start avoiding the sun when its a clear day out.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1651,62 +1711,67 @@
     },
     "minecraft:behavior.rise_to_liquid_level": {
       "title": "Rise To Liquid Level Minecraft Behavior",
-      "description": "Allows the mob to stay at a certain level when in liquid.\n\nProperties:\n• liquid_y_offset (float) = 0\n• rise_delta (float) = 0\n• sink_delta (float) = 0\n• priority (int)",
+      "description": "Allows the mob to stay at a certain level when in liquid.\n\nProperties:\n• control_flags (string[]) = []\n• liquid_y_offset (float) = 0\n• priority (int) = 0\n• rise_delta (float) = 0\n• sink_delta (float) = 0",
       "$ref": "./entity_minecraft_behavior_rise_to_liquid_level.schema.json",
       "defaultSnippets": [
         {
-          "label": "Rise To Liquid Level Behavior",
+          "label": "Entity Rise To Liquid Level Behavior",
           "description": "Allows the mob to stay at a certain level when in liquid.",
           "body": {
+            "control_flags": [],
             "liquid_y_offset": 0,
+            "priority": 0,
             "rise_delta": 0,
-            "sink_delta": 0,
-            "priority": 0
+            "sink_delta": 0
           }
         }
       ]
     },
     "minecraft:behavior.roll": {
       "title": "Roll Minecraft Behavior",
-      "description": "This allows the mob to roll forward.\n\nProperties:\n• probability (float)\n• priority (int)",
+      "description": "This allows the mob to roll forward.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0\n• probability (float) = 0.019999999552965164",
       "$ref": "./entity_minecraft_behavior_roll.schema.json",
       "defaultSnippets": [
         {
-          "label": "Roll Behavior",
+          "label": "Entity Roll Behavior",
           "description": "This allows the mob to roll forward.",
           "body": {
-            "probability": 0,
-            "priority": 0
+            "control_flags": [],
+            "priority": 0,
+            "probability": 0.019999999552965164
           }
         }
       ]
     },
     "minecraft:behavior.run_around_like_crazy": {
       "title": "Run Around Like Crazy Minecraft Behavior",
-      "description": "Allows the mob to run around aimlessly.\n\nProperties:\n• speed_multiplier (float) = 1\n• priority (int)",
+      "description": "Allows the mob to run around aimlessly.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0\n• speed_multiplier (float) = 1",
       "$ref": "./entity_minecraft_behavior_run_around_like_crazy.schema.json",
       "defaultSnippets": [
         {
-          "label": "Run Around Like Crazy Behavior",
+          "label": "Entity Run Around Like Crazy Behavior",
           "description": "Allows the mob to run around aimlessly.",
           "body": {
-            "speed_multiplier": 1,
-            "priority": 0
+            "control_flags": [],
+            "priority": 0,
+            "speed_multiplier": 1
           }
         }
       ]
     },
     "minecraft:behavior.scared": {
       "title": "Scared Minecraft Behavior",
-      "description": "Allows the a mob to become scared when the weather outside is thundering\n\nProperties:\n• sound_interval (int) = 0\n• priority (int)",
+      "description": "Allows the mob to become scared when the weather outside is thundering.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0\n• sound_delay (int) = 0\n• sound_interval (int) = 0",
       "$ref": "./entity_minecraft_behavior_scared.schema.json",
       "defaultSnippets": [
         {
-          "label": "Scared Behavior",
-          "description": "Allows the a mob to become scared when the weather outside is thundering",
+          "label": "Entity Scared Behavior",
+          "description": "Allows the mob to become scared when the weather outside is thundering.",
           "body": {
-            "sound_interval": 0,
-            "priority": 0
+            "control_flags": [],
+            "priority": 0,
+            "sound_delay": 0,
+            "sound_interval": 0
           }
         }
       ]
@@ -1729,17 +1794,19 @@
     },
     "minecraft:behavior.share_items": {
       "title": "Share Items Minecraft Behavior",
-      "description": "Allows the mob to give items it has to others.\n\nProperties:\n• entity_types\n• goal_radius (float) = 0.5\n• max_dist (float) = 0\n• speed_multiplier (float) = 1\n• priority (int)",
+      "description": "Allows the mob to give items it has to others.\n\nProperties:\n• control_flags (string[]) = []\n• entity_types = []\n• goal_radius (float) = 0.5\n• max_dist (int) = 1\n• priority (int) = 0\n• speed_multiplier (float) = 1",
       "$ref": "./entity_minecraft_behavior_share_items.schema.json",
       "defaultSnippets": [
         {
-          "label": "Share Items Behavior",
+          "label": "Entity Share Items Behavior",
           "description": "Allows the mob to give items it has to others.",
           "body": {
+            "control_flags": [],
+            "entity_types": [],
             "goal_radius": 0.5,
-            "max_dist": 0,
-            "speed_multiplier": 1,
-            "priority": 0
+            "max_dist": 1,
+            "priority": 0,
+            "speed_multiplier": 1
           }
         }
       ]
@@ -1829,22 +1896,24 @@
     },
     "minecraft:behavior.sneeze": {
       "title": "Sneeze Minecraft Behavior",
-      "description": "Allows the mob to stop and sneeze possibly startling nearby mobs and dropping an item.\n\nProperties:\n• sound (string)\n• cooldown_time (float) = 0\n• drop_item_chance (float) = 1\n• entity_types\n• loot_table (string)\n• prepare_sound (string)\n• prepare_time (float) = 1\n• probability (float) = 0.02\n• ... and 2 more properties",
+      "description": "Allows the mob to sneeze, causing it to drop items and affect nearby mobs.\n\nProperties:\n• sound (string) = \n• control_flags (string[]) = []\n• cooldown_time (float) = 0\n• drop_item_chance (float) = 1\n• entity_types = []\n• loot_table (string) = \n• prepare_sound (string) = \n• prepare_time (float) = 1\n• ... and 3 more properties",
       "$ref": "./entity_minecraft_behavior_sneeze.schema.json",
       "defaultSnippets": [
         {
-          "label": "Sneeze Behavior",
-          "description": "Allows the mob to stop and sneeze possibly startling nearby mobs and dropping an item.",
+          "label": "Entity Sneeze Behavior",
+          "description": "Allows the mob to sneeze, causing it to drop items and affect nearby mobs.",
           "body": {
             "sound": "",
+            "control_flags": [],
             "cooldown_time": 0,
             "drop_item_chance": 1,
+            "entity_types": [],
             "loot_table": "",
             "prepare_sound": "",
             "prepare_time": 1,
-            "probability": 0.02,
-            "within_radius": 0,
-            "priority": 0
+            "priority": 0,
+            "probability": 0.019999999552965164,
+            "within_radius": 0
           }
         }
       ]
@@ -1921,7 +1990,7 @@
     },
     "minecraft:behavior.stalk_and_pounce_on_target": {
       "title": "Stalk And Pounce On Target Minecraft Behavior",
-      "description": "Allows a mob to stalk a target, then once within range pounce onto a target, on success the target will be attacked dealing damage defined by the attack component. On failure, the mob will risk getting stuck\n\nProperties:\n• interest_time (float) = 2\n• leap_distance (float) = 0.8\n• leap_height (float) = 0.9\n• max_stalk_dist (float) = 10\n• pounce_max_dist (float) = 5\n• set_persistent (boolean) = false\n• stalk_speed (float) = 1.2\n• strike_dist (float) = 2\n• ... and 4 more properties",
+      "description": "Allows a mob to stalk a target, then once within range pounce onto a target, on success the target will be attacked dealing damage defined by the attack component. On failure, the mob will risk getting stuck\n\nProperties:\n• interest_time (float) = 2\n• leap_distance (float) = 0.8\n• leap_height (float) = 0.9\n• max_stalk_dist (float) = 10\n• pounce_max_dist (float) = 5\n• set_persistent (boolean) = false\n• stalk_speed (float) = 1.2\n• strike_dist (float) = 2\n• ... and 2 more properties",
       "$ref": "./entity_minecraft_behavior_stalk_and_pounce_on_target.schema.json",
       "defaultSnippets": [
         {
@@ -1937,21 +2006,21 @@
             "stalk_speed": 1.2,
             "strike_dist": 2,
             "stuck_time": 2,
-            "priority": 0,
-            "leap_dist": 0
+            "priority": 0
           }
         }
       ]
     },
     "minecraft:behavior.stay_while_sitting": {
       "title": "Stay While Sitting Minecraft Behavior",
-      "description": "Allows the mob to stay put while it is in a sitting state instead of doing something else.\n\nProperties:\n• priority (int)",
+      "description": "Allows the mob to stay put while it is in a sitting state instead of doing something else.\n\nProperties:\n• control_flags (string[]) = []\n• priority (int) = 0",
       "$ref": "./entity_minecraft_behavior_stay_while_sitting.schema.json",
       "defaultSnippets": [
         {
-          "label": "Stay While Sitting Behavior",
+          "label": "Entity Stay While Sitting Behavior",
           "description": "Allows the mob to stay put while it is in a sitting state instead of doing something else.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2030,7 +2099,20 @@
     },
     "minecraft:behavior.target_when_pushed": {
       "title": "Target When Pushed Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the mob to target another mob when it is pushed by that mob.\n\nProperties:\n• control_flags (string[]) = []\n• entity_types = []\n• percent_chance (float) = 0\n• priority (int) = 0",
+      "$ref": "./entity_minecraft_behavior_target_when_pushed.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Target When Pushed Behavior",
+          "description": "Allows the mob to target another mob when it is pushed by that mob.",
+          "body": {
+            "control_flags": [],
+            "entity_types": [],
+            "percent_chance": 0,
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.tempt": {
       "title": "Tempt Minecraft Behavior",
@@ -2057,19 +2139,20 @@
     },
     "minecraft:behavior.trade_interest": {
       "title": "Trade Interest Minecraft Behavior",
-      "description": "Allows the mob to look at a player that is holding a tradable item.\n\nProperties:\n• carried_item_switch_time (float) = 2\n• cooldown (float) = 2\n• interest_time (float) = 45\n• remove_item_time (float) = 1\n• within_radius (float) = 0\n• priority (int)",
+      "description": "Allows the mob to look at a player that is holding a tradable item.\n\nProperties:\n• carried_item_switch_time (float) = 2\n• control_flags (string[]) = []\n• cooldown (float) = 2\n• interest_time (float) = 45\n• priority (int) = 0\n• remove_item_time (float) = 1\n• within_radius (float) = 0",
       "$ref": "./entity_minecraft_behavior_trade_interest.schema.json",
       "defaultSnippets": [
         {
-          "label": "Trade Interest Behavior",
+          "label": "Entity Trade Interest Behavior",
           "description": "Allows the mob to look at a player that is holding a tradable item.",
           "body": {
             "carried_item_switch_time": 2,
+            "control_flags": [],
             "cooldown": 2,
             "interest_time": 45,
+            "priority": 0,
             "remove_item_time": 1,
-            "within_radius": 0,
-            "priority": 0
+            "within_radius": 0
           }
         }
       ]
@@ -3978,7 +4061,7 @@
     },
     "minecraft:projectile": {
       "title": "Minecraft Projectile",
-      "description": "Allows the entity to be a thrown entity.\n\nProperties:\n• catch_fire (boolean) = false\n• angle_offset (float) = 0\n• crit_particle_on_hurt (boolean) = false\n• destroy_on_hurt (boolean) = false\n• filter (string)\n• fire_affected_by_griefing (boolean) = false\n• gravity (float) = 0.05\n• hit_nearest_passenger (boolean) = false\n• ... and 24 more properties",
+      "description": "Allows the entity to be a thrown entity.\n\nProperties:\n• catch_fire (boolean) = false\n• angle_offset (float) = 0\n• crit_particle_on_hurt (boolean) = false\n• destroy_on_hurt (boolean) = false\n• filter (string)\n• fire_affected_by_griefing (boolean) = false\n• gravity (float) = 0.05\n• hit_nearest_passenger (boolean) = false\n• ... and 25 more properties",
       "$ref": "./entity_minecraft_projectile.schema.json",
       "defaultSnippets": [
         {
@@ -3997,6 +4080,7 @@
             "homing": false,
             "inertia": 0.99,
             "is_dangerous": false,
+            "isolated_physics": true,
             "knockback": true,
             "lightning": false,
             "liquid_inertia": 0.6,
@@ -4613,6 +4697,20 @@
       "title": "Minecraft Wither Target Highest Damage",
       "type": "object"
     },
+    "minecraft:apply_knockback_rules": {
+      "title": "Minecraft Apply Knockback Rules",
+      "description": "Defines how an entity applies knockback.\n\nProperties:\n• presets = []",
+      "$ref": "./entity_minecraft_apply_knockback_rules.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Apply Knockback Rules",
+          "description": "Defines how an entity applies knockback.",
+          "body": {
+            "presets": []
+          }
+        }
+      ]
+    },
     "minecraft:behavior.aquatic_charge_attack": {
       "title": "Aquatic Charge Attack Minecraft Behavior",
       "description": "Enables an aquatic mob to dash at its target with knockback; includes overshoot and cooldown settings.\n\nProperties:\n• attack_reach (float) = 0.05000000074505806\n• charge_cooldown_time (object) = {\"max\":6,\"min\":2}\n• charge_overshoot_distance (float) = 1.5\n• charge_speed (float) = 0.05999999865889549\n• control_flags (string[]) = []\n• knockback_force (float) = 2\n• max_charge_distance (float) = 16\n• priority (int) = 0",
@@ -4861,7 +4959,36 @@
     },
     "minecraft:behavior.croak": {
       "title": "Croak Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the entity to croak at a random time interval with configurable conditions.\n\nProperties:\n• control_flags (string[]) = []\n• duration (object) = {\"max\":4.5,\"min\":4.5\n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• interval (object) = {\"max\":20,\"min\":10}\n• priority (int) = 0",
+      "$ref": "./entity_minecraft_behavior_croak.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Croak Behavior",
+          "description": "Allows the entity to croak at a random time interval with configurable conditions.",
+          "body": {
+            "control_flags": [],
+            "duration": {
+              "max": 4.5,
+              "min": 4.5
+            },
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "interval": {
+              "max": 20,
+              "min": 10
+            },
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.defend_village_target": {
       "title": "Defend Village Target Minecraft Behavior",
@@ -5165,7 +5292,34 @@
     },
     "minecraft:behavior.emerge": {
       "title": "Emerge Minecraft Behavior",
-      "type": "object"
+      "description": "Allows this entity to emerge from the ground\n\nProperties:\n• control_flags (string[]) = []\n• cooldown_time (float) = 0.5\n• duration (float) = 5\n• on_done (object) = {\"event\":\"\",\"filters\n• priority (int) = 0",
+      "$ref": "./entity_minecraft_behavior_emerge.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Emerge Behavior",
+          "description": "Allows this entity to emerge from the ground",
+          "body": {
+            "control_flags": [],
+            "cooldown_time": 0.5,
+            "duration": 5,
+            "on_done": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.equip_item": {
       "title": "Equip Item Minecraft Behavior",
@@ -5236,19 +5390,119 @@
     },
     "minecraft:behavior.fire_at_target": {
       "title": "Fire At Target Minecraft Behavior",
+      "description": "Allows an entity to attack by firing a shot with a delay. Anchor and offset parameters of this component overrides the anchor and offset from projectile component.\n\nProperties:\n• attack_cooldown (float) = 0.5\n• attack_range (object) = {\"max\":0,\"min\":0}\n• control_flags (string[]) = []\n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• max_head_rotation_x (float) = 30\n• max_head_rotation_y (float) = 30\n• owner_anchor (object) = 2\n• owner_offset = [0,0,0]\n• ... and 7 more properties",
+      "$ref": "./entity_minecraft_behavior_fire_at_target.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Fire At Target Behavior",
+          "description": "Allows an entity to attack by firing a shot with a delay. Anchor and offset parameters of this component overrides the anchor and offset from projectile component.",
+          "body": {
+            "attack_cooldown": 0.5,
+            "attack_range": {
+              "max": 0,
+              "min": 0
+            },
+            "control_flags": [],
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "max_head_rotation_x": 30,
+            "max_head_rotation_y": 30,
+            "owner_anchor": 2,
+            "owner_offset": [
+              0,
+              0,
+              0
+            ],
+            "post_shoot_delay": 0.20000000298023224,
+            "pre_shoot_delay": 0.75,
+            "priority": 0,
+            "projectile_def": "",
+            "ranged_fov": 90,
+            "target_anchor": 2,
+            "target_offset": [
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ]
+    },
+    "minecraft:behavior.follow_target_leader": {
+      "title": "Follow Target Leader Minecraft Behavior",
       "type": "object"
     },
     "minecraft:behavior.go_and_give_items_to_noteblock": {
       "title": "Go And Give Items To Noteblock Minecraft Behavior",
-      "type": "object"
+      "description": "The entity will attempt to toss the items from its inventory to a nearby recently played noteblock.\n\nProperties:\n• control_flags (string[]) = []\n• listen_time (int) = 30\n• on_item_throw = []\n• priority (int) = 0\n• reach_block_distance (float) = 3\n• run_speed (float) = 1\n• throw_force (float) = 0.20000000298023224\n• throw_sound (string) = charge\n• ... and 1 more properties",
+      "$ref": "./entity_minecraft_behavior_go_and_give_items_to_noteblock.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Go And Give Items To Noteblock Behavior",
+          "description": "The entity will attempt to toss the items from its inventory to a nearby recently played noteblock.",
+          "body": {
+            "control_flags": [],
+            "listen_time": 30,
+            "on_item_throw": [],
+            "priority": 0,
+            "reach_block_distance": 3,
+            "run_speed": 1,
+            "throw_force": 0.20000000298023224,
+            "throw_sound": "charge",
+            "vertical_throw_mul": 1.5
+          }
+        }
+      ]
     },
     "minecraft:behavior.go_and_give_items_to_owner": {
       "title": "Go And Give Items To Owner Minecraft Behavior",
-      "type": "object"
+      "description": "The entity will attempt to toss the items from its inventory to its owner.\n\nProperties:\n• control_flags (string[]) = []\n• on_item_throw = []\n• priority (int) = 0\n• reach_mob_distance (float) = 3\n• run_speed (float) = 1\n• throw_force (float) = 0.20000000298023224\n• throw_sound (string) = charge\n• vertical_throw_mul (float) = 1.5",
+      "$ref": "./entity_minecraft_behavior_go_and_give_items_to_owner.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Go And Give Items To Owner Behavior",
+          "description": "The entity will attempt to toss the items from its inventory to its owner.",
+          "body": {
+            "control_flags": [],
+            "on_item_throw": [],
+            "priority": 0,
+            "reach_mob_distance": 3,
+            "run_speed": 1,
+            "throw_force": 0.20000000298023224,
+            "throw_sound": "charge",
+            "vertical_throw_mul": 1.5
+          }
+        }
+      ]
     },
     "minecraft:behavior.go_home": {
       "title": "Go Home Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the mob to move back to the position they were spawned.\n\nProperties:\n• calculate_new_path_radius (float) = 2\n• control_flags (string[]) = []\n• goal_radius (float) = 0.5\n• interval (int) = 120\n• on_failed = []\n• on_home = []\n• priority (int) = 0\n• speed_multiplier (float) = 1",
+      "$ref": "./entity_minecraft_behavior_go_home.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Go Home Behavior",
+          "description": "Allows the mob to move back to the position they were spawned.",
+          "body": {
+            "calculate_new_path_radius": 2,
+            "control_flags": [],
+            "goal_radius": 0.5,
+            "interval": 120,
+            "on_failed": [],
+            "on_home": [],
+            "priority": 0,
+            "speed_multiplier": 1
+          }
+        }
+      ]
     },
     "minecraft:behavior.guardian_attack": {
       "title": "Guardian Attack Minecraft Behavior",
@@ -6654,10 +6908,6 @@
       "title": "Minecraft Free Camera Controlled",
       "type": "object"
     },
-    "minecraft:memory_behavior.collect_nectar": {
-      "title": "Collect Nectar Minecraft Memory Behavior",
-      "type": "object"
-    },
     "minecraft:memory_behavior.flee_threat": {
       "title": "Flee Threat Minecraft Memory Behavior",
       "type": "object"
@@ -6722,6 +6972,7 @@
     },
     "minecraft:pushable_by_entity": {
       "title": "Minecraft Pushable By Entity",
+      "description": "Allows an entity to be pushed by other entities.",
       "type": "object"
     },
     "minecraft:rotation_locked_to_vehicle": {
@@ -6731,6 +6982,37 @@
     "minecraft:spawn_egg_interaction": {
       "title": "Minecraft Spawn Egg Interaction",
       "type": "object"
+    },
+    "minecraft:spawn_on_death": {
+      "title": "Minecraft Spawn On Death",
+      "description": "Component for spawning entities when an entity perishes.\n\nProperties:\n• additional_spawn_range (object) = {\"max\":0,\"min\":0}\n• entity_to_spawn (string) = self\n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• inherit_parent_name (boolean) = true\n• spawn_amount (int) = 1\n• spawn_method (string) = spawned",
+      "$ref": "./entity_minecraft_spawn_on_death.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Spawn On Death",
+          "description": "Component for spawning entities when an entity perishes.",
+          "body": {
+            "additional_spawn_range": {
+              "max": 0,
+              "min": 0
+            },
+            "entity_to_spawn": "self",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "inherit_parent_name": true,
+            "spawn_amount": 1,
+            "spawn_method": "spawned"
+          }
+        }
+      ]
     },
     "minecraft:underwater_mount_breathing": {
       "title": "Minecraft Underwater Mount Breathing",

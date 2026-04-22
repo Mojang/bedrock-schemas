@@ -23,13 +23,6 @@
   ],
   "description": "This move control allows a mob to fly, swim, climb, etc.",
   "title": "Generic Movement",
-  "samples": {
-    "/vanilla/behavior_pack/entities/drowned.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:movement.generic/",
-        "content": {}
-      }
-    ]
-  },
+  "samples": {},
   "id": "minecraft:movement.generic"
 }

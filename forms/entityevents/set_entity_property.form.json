@@ -13,7 +13,9 @@
       }
     ]
   },
-  "tags": ["entityevent"],
+  "tags": [
+    "entityevent"
+  ],
   "description": "Sets the value of an entity property. The property must be defined in the 'properties' section of the file.",
   "title": "Set Entity Property",
   "samples": {
@@ -24,5 +26,5 @@
       }
     ]
   },
-  "id": "set_entity_property"
+  "id": "Set Entity Property"
 }

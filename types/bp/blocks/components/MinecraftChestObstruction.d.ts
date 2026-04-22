@@ -16,8 +16,8 @@ import * as jsoncommon from '../../../common';
  * Chest Obstruction (minecraft:chest_obstruction)
  * The description identifier of the chest obstruction
  * component
-Experimental toggles required: Upcoming Creator 
- * Features.
+Experimental toggles required: Upcoming Creator Features
+ * (in format versions before 1.26.20).
  */
 export default interface MinecraftChestObstruction {
 

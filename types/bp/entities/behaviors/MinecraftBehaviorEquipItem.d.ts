@@ -18,17 +18,17 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 }
 
 
-Fox - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/fox.json
-
-"minecraft:behavior.equip_item": {
-  "priority": 2
-}
-
-
 Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
 
 "minecraft:behavior.equip_item": {
   "priority": 4
+}
+
+
+Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
+
+"minecraft:behavior.equip_item": {
+  "priority": 2
 }
 
  */
@@ -52,10 +52,10 @@ export default interface MinecraftBehaviorEquipItem {
    * Sample Values:
    * Bogged: 3
    *
-   *
-   * Fox: 2
-   *
    * Parched: 4
+   *
+   *
+   * Sulfur Cube: 2
    *
    */
   priority?: number;

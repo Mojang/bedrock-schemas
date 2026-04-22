@@ -33,7 +33,7 @@ export default interface MinecraftMesa {
 
   /**
    * @remarks
-   * Controls the block type used deep underground in this biome
+   * Controls the block type used deep underground in this biome.
    */
   foundation_material: string;
 
@@ -52,40 +52,40 @@ export default interface MinecraftMesa {
   /**
    * @remarks
    * Controls the block type used in a layer below the surface of
-   * this biome
+   * this biome.
    */
   mid_material: string;
 
   /**
    * @remarks
    * Controls how deep below the world water level the floor should
-   * occur
+   * occur.
    */
   sea_floor_depth: number;
 
   /**
    * @remarks
    * Controls the block type used as a floor for bodies of water in
-   * this biome
+   * this biome.
    */
   sea_floor_material: string;
 
   /**
    * @remarks
    * Controls the block type used for the bodies of water in this
-   * biome
+   * biome.
    */
   sea_material: string;
 
   /**
    * @remarks
-   * Controls the block type used for the surface of this biome
+   * Controls the block type used for the surface of this biome.
    */
   top_material: string;
 
   /**
    * @remarks
-   * Controls the type of surface builder to use
+   * Controls the type of surface builder to use.
    */
   type: string;
 
@@ -96,6 +96,7 @@ export enum MinecraftMesaType {
   minecraftCapped = `minecraft:capped`,
   minecraftFrozenOcean = `minecraft:frozen_ocean`,
   minecraftMesa = `minecraft:mesa`,
+  minecraftNoiseGradient = `minecraft:noise_gradient`,
   minecraftOverworld = `minecraft:overworld`,
   minecraftSwamp = `minecraft:swamp`,
   minecraftTheEnd = `minecraft:the_end`
