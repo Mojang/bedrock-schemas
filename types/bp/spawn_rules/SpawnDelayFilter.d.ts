@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn DelayFilter (Spawn DelayFilter)
+ * Delay Filter (Spawn DelayFilter)
  * Delays entity spawning by a configurable amount of time after
  * spawn conditions are met. Useful for preventing immediate respawning
  * after mob deaths or creating spawn cooldowns for rare 

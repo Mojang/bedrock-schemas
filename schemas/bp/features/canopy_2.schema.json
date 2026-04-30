@@ -7,7 +7,7 @@
     "canopy_decoration": {
       "$ref": "./canopy_decoration_3.schema.json",
       "title": "Canopy Decoration",
-      "description": "Configuration object for the canopy decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+      "description": "Configuration object for the canopy decoration.",
       "defaultSnippets": [
         {
           "label": "Canopy Decoration",
@@ -22,7 +22,7 @@
     },
     "canopy_offset": {
       "title": "Canopy Offset",
-      "description": "Canopy position offset relative to the block above the trunk.\n\nProperties:\n• min (int)\n• max (int)",
+      "description": "Canopy position offset relative to the block above the trunk.",
       "type": "object",
       "properties": {
         "min": {
@@ -54,7 +54,7 @@
     },
     "canopy_slope": {
       "title": "Canopy Slope",
-      "description": "Configuration object for the canopy slope.\n\nProperties:\n• rise (int)\n• run (int)",
+      "description": "Configuration object for the canopy slope.",
       "type": "object",
       "properties": {
         "rise": {

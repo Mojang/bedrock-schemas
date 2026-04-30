@@ -41,7 +41,7 @@
         }
       ],
       "title": "Feed Items",
-      "description": "List of items that can be fed to an entity to age them up. Can be a single item string, an array of strings, or an array of objects with item and growth properties.\n\nProperties:\n• item (string)\n• growth (float)\n\nSample values:\n• chicken: [\"wheat_seeds\",\"beetroot_seeds\",\"melon_seeds\",\"...\n• cow: wheat\n• dolphin: [\"fish\",\"salmon\"]"
+      "description": "List of items that can be fed to an entity to age them up. Can be a single item string, an array of strings, or an array of objects with item and growth properties.\n\nSample values:\n• chicken: [\"wheat_seeds\",\"beetroot_seeds\",\"melon_seeds\",\"...\n• cow: wheat\n• dolphin: [\"fish\",\"salmon\"]"
     },
     "drop_items": {
       "title": "Drop Items",

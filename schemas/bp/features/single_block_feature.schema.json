@@ -73,7 +73,7 @@
     "may_attach_to": {
       "$ref": "./may_attach_to.schema.json",
       "title": "May Attach To",
-      "description": "Allowlist which specifies where the block can be placed.\n\nProperties:\n• min_sides_must_attach (int)\n• auto_rotate (boolean)\n• top (string[])\n• bottom (string[])\n• north (string[])\n• east (string[])\n• south (string[])\n• west (string[])\n• ... and 3 more properties",
+      "description": "Allowlist which specifies where the block can be placed.",
       "defaultSnippets": [
         {
           "label": "May Attach To",
@@ -88,7 +88,7 @@
     "may_not_attach_to": {
       "$ref": "./may_not_attach_to.schema.json",
       "title": "May Not Attach To",
-      "description": "Denylist which specifies where the block can't be placed.\n\nProperties:\n• top (string[])\n• bottom (string[])\n• north (string[])\n• east (string[])\n• south (string[])\n• west (string[])\n• all (string[])\n• sides (string[])\n• ... and 1 more properties"
+      "description": "Denylist which specifies where the block can't be placed."
     },
     "may_replace": {
       "title": "May Replace",

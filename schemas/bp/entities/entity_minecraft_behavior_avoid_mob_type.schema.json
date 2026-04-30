@@ -655,7 +655,7 @@
                   "type": "object"
                 }
               ],
-              "description": "Conditions that make this entry in the list valid\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+              "description": "Conditions that make this entry in the list valid"
             },
             "max_dist": {
               "title": "Max Dist",
@@ -794,7 +794,7 @@
     },
     "on_escape_event": {
       "title": "Escape Event",
-      "description": "Event that is triggered when escaping from a mob.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self",
+      "description": "Event that is triggered when escaping from a mob.",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -844,7 +844,7 @@
     },
     "sound_interval": {
       "title": "Sound Interval",
-      "description": "The range of time in seconds to randomly wait before playing the sound again.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "The range of time in seconds to randomly wait before playing the sound again.",
       "anyOf": [
         {
           "type": "number"

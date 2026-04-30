@@ -6,7 +6,7 @@
   "properties": {
     "steep_material_adjustment": {
       "title": "Steep Material Adjustment",
-      "description": "Defines surface material for steep slopes\n\nProperties:\n• east_slopes (boolean)\n• material (string)\n• north_slopes (boolean)\n• south_slopes (boolean)\n• west_slopes (boolean)",
+      "description": "Defines surface material for steep slopes",
       "type": "object",
       "properties": {
         "east_slopes": {
@@ -109,7 +109,7 @@
     },
     "top_slide": {
       "title": "Top Slide",
-      "description": "Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high\n\nProperties:\n• enabled (boolean)",
+      "description": "Controls the density tapering that happens at the top of the world to prevent terrain from reaching too high",
       "type": "object",
       "properties": {
         "enabled": {

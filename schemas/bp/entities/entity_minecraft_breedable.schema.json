@@ -102,7 +102,7 @@
         }
       ],
       "title": "Breeds With",
-      "description": "The entity definitions that this entity can breed with. Can be a single object or an array.\n\nProperties:\n• baby_type (string)\n• breed_event (string)\n• mate_type\n\nSample values:\n• chicken: {\"minecraft:chicken\":{}}\n• cow: {\"minecraft:cow\":{}}\n• frog: {\"minecraft:frog\":{\"event\":\"become_pregnant\",\"t...",
+      "description": "The entity definitions that this entity can breed with. Can be a single object or an array.\n\nSample values:\n• chicken: {\"minecraft:chicken\":{}}\n• cow: {\"minecraft:cow\":{}}\n• frog: {\"minecraft:frog\":{\"event\":\"become_pregnant\",\"t...",
       "defaultSnippets": [
         {
           "label": "Breeds With (object)",
@@ -121,7 +121,7 @@
       "default": false
     },
     "deny_parents_variant": {
-      "description": "Determines how likely the baby of parents with the same variant will deny that variant and take a random variant within the given range instead.\n\nProperties:\n• chance (float)\n• max_variant (string)\n• min_variant (string)",
+      "description": "Determines how likely the baby of parents with the same variant will deny that variant and take a random variant within the given range instead.",
       "type": "object",
       "properties": {
         "chance": {
@@ -151,7 +151,7 @@
     },
     "environment_requirements": {
       "title": "Environment Requirements",
-      "description": "The list of nearby block requirements to get the entity into the 'love' state.\n\nProperties:\n• block_types (string[])\n• count (int)\n• radius (float)",
+      "description": "The list of nearby block requirements to get the entity into the 'love' state.",
       "type": "array",
       "items": {
         "type": "object",
@@ -250,7 +250,7 @@
       ]
     },
     "mutation_factor": {
-      "description": "Determines how likely the babies are to NOT inherit one of their parent's variances.\n\nProperties:\n• color\n• variant\n• extra_variant",
+      "description": "Determines how likely the babies are to NOT inherit one of their parent's variances.",
       "type": "object",
       "properties": {
         "color": {

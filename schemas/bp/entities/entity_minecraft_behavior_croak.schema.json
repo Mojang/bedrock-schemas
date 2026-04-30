@@ -18,7 +18,7 @@
     },
     "duration": {
       "title": "Duration",
-      "description": "Random range in seconds after which the croaking stops. Can also be a constant.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• frog: 4.5",
+      "description": "Random range in seconds after which the croaking stops. Can also be a constant.\n\nSample values:\n• frog: 4.5",
       "anyOf": [
         {
           "type": "number"
@@ -74,11 +74,11 @@
         }
       ],
       "title": "Filters",
-      "description": "Conditions for the behavior to start and keep running. The interval between runs only starts after passing the filters.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)\n\nSample values:\n• frog: {\"all_of\":[{\"test\":\"in_water\",\"value\":false},{\"..."
+      "description": "Conditions for the behavior to start and keep running. The interval between runs only starts after passing the filters.\n\nSample values:\n• frog: {\"all_of\":[{\"test\":\"in_water\",\"value\":false},{\"..."
     },
     "interval": {
       "title": "Interval",
-      "description": "Random range in seconds between runs of this behavior. Can also be a constant.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• frog: [10,20]",
+      "description": "Random range in seconds between runs of this behavior. Can also be a constant.\n\nSample values:\n• frog: [10,20]",
       "anyOf": [
         {
           "type": "number"

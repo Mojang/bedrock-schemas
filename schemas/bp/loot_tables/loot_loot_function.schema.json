@@ -29,11 +29,11 @@
         }
       ],
       "title": "Count",
-      "description": "For 'set_count' and 'looting_enchant': the count value or range.\n\nProperties:\n• min (int)\n• max (int)"
+      "description": "For 'set_count' and 'looting_enchant': the count value or range."
     },
     "data": {
       "title": "Data",
-      "description": "For 'set_data': the data value or range to set.\n\nProperties:\n• min (int)\n• max (int)",
+      "description": "For 'set_data': the data value or range to set.",
       "type": "object",
       "properties": {
         "min": {
@@ -58,7 +58,7 @@
     },
     "damage": {
       "title": "Damage",
-      "description": "For 'set_damage': the damage percentage or range (0.0-1.0).\n\nProperties:\n• min (float)\n• max (float)",
+      "description": "For 'set_damage': the damage percentage or range (0.0-1.0).",
       "type": "object",
       "properties": {
         "min": {
@@ -88,7 +88,7 @@
     },
     "levels": {
       "title": "Levels",
-      "description": "For 'enchant_with_levels': the enchantment level or range.\n\nProperties:\n• min (int)\n• max (int)",
+      "description": "For 'enchant_with_levels': the enchantment level or range.",
       "type": "object",
       "properties": {
         "min": {
@@ -123,7 +123,7 @@
     },
     "conditions": {
       "title": "Conditions",
-      "description": "Conditions that must be met for this function to apply.\n\nProperties:\n• condition (string)\n• chance (float)\n• looting_multiplier (float)\n• value (int)\n• default_chance (float)\n• peaceful (float)\n• easy (float)\n• normal (float)\n• ... and 4 more properties",
+      "description": "Conditions that must be met for this function to apply.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_condition.schema.json"

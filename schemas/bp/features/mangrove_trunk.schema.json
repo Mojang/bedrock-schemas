@@ -7,7 +7,7 @@
     "trunk_decoration": {
       "$ref": "./trunk_decoration_3.schema.json",
       "title": "Trunk Decoration",
-      "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+      "description": "Configuration object for the trunk decoration.",
       "defaultSnippets": [
         {
           "label": "Trunk Decoration",
@@ -28,7 +28,7 @@
     "trunk_height": {
       "$ref": "./trunk_height_2.schema.json",
       "title": "Trunk Height",
-      "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• height_rand_a (int)\n• height_rand_b (int)",
+      "description": "Configuration object for the trunk height.",
       "defaultSnippets": [
         {
           "label": "Trunk Height",

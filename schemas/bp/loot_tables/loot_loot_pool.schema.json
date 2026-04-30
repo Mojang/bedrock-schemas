@@ -58,7 +58,7 @@
     },
     "entries": {
       "title": "Entries",
-      "description": "Array of possible entries to select from when rolling this pool.\n\nProperties:\n• type (string)\n• name (string)\n• weight (int) = 1\n• functions\n• conditions\n• pools",
+      "description": "Array of possible entries to select from when rolling this pool.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_entry.schema.json"
@@ -66,7 +66,7 @@
     },
     "conditions": {
       "title": "Conditions",
-      "description": "Array of conditions that must be met for this pool to be rolled.\n\nProperties:\n• condition (string)\n• chance (float)\n• looting_multiplier (float)\n• value (int)\n• default_chance (float)\n• peaceful (float)\n• easy (float)\n• normal (float)\n• ... and 4 more properties",
+      "description": "Array of conditions that must be met for this pool to be rolled.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_condition.schema.json"
@@ -74,7 +74,7 @@
     },
     "tiers": {
       "title": "Tiers",
-      "description": "Tiered entry selection configuration.\n\nProperties:\n• initial_range (int)\n• bonus_rolls (int)\n• bonus_chance (float)",
+      "description": "Tiered entry selection configuration.",
       "type": "object",
       "properties": {
         "initial_range": {

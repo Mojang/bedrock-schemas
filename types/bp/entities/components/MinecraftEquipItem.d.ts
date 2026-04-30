@@ -21,13 +21,6 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
   ]
 }
 
-
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
-"minecraft:equip_item": {
-  "can_wear_armor": false
-}
-
  */
 
 import * as jsoncommon from '../../../common';

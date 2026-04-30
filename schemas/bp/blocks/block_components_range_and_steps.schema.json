@@ -6,7 +6,7 @@
   "properties": {
     "range": {
       "title": "Range",
-      "description": "The range of the random offset.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "The range of the random offset.",
       "anyOf": [
         {
           "type": "number"

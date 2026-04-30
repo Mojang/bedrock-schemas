@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "midtones",
-  "description": "midtones\n\nProperties:\n• contrast\n• gain\n• offset\n• gamma\n• saturation",
+  "description": "midtones",
   "type": "object",
   "properties": {
     "contrast": {

@@ -12,12 +12,12 @@
     },
     "minecraft:item": {
       "title": "Item Definition",
-      "description": "The item definition container with description and components sections.\n\nProperties:\n• description (object)\n• components (object)",
+      "description": "The item definition container with description and components sections.",
       "type": "object",
       "properties": {
         "description": {
           "title": "Description",
-          "description": "Contains the item's unique identifier and optional menu category placement.\n\nProperties:\n• identifier (string)\n• menu_category (object) = {\"category\":\"none\",\"",
+          "description": "Contains the item's unique identifier and optional menu category placement.",
           "$ref": "./item_description.schema.json",
           "defaultSnippets": [
             {

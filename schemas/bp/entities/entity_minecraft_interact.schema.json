@@ -38,7 +38,7 @@
               },
               "repair_entity_item": {
                 "title": "Repair Entity Item",
-                "description": "Allows to repair one of the entity's items.\n\nProperties:\n• amount (int)\n• slot (int)",
+                "description": "Allows to repair one of the entity's items.",
                 "type": "array",
                 "items": {
                   "type": "object",
@@ -153,7 +153,7 @@
           "type": "object"
         }
       ],
-      "description": "The list of interactions for this entity.\n\nProperties:\n• particle_on_start\n• play_sounds (string)\n• repair_entity_item\n• spawn_entities (string)\n• spawn_items\n• swing (boolean) = false\n• transform_to_item (string)\n• use_item (boolean) = false\n• ... and 11 more properties"
+      "description": "The list of interactions for this entity."
     },
     "cooldown": {
       "title": "Cooldown",

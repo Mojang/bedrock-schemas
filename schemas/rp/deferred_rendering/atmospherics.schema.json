@@ -13,7 +13,7 @@
     "minecraft:atmosphere_settings": {
       "$ref": "./minecraft_atmosphere_settings.schema.json",
       "title": "minecraft:atmosphere_settings",
-      "description": "minecraft:atmosphere_settings\n\nProperties:\n• description ({ identifier })\n• sky_zenith_color\n• sky_horizon_color\n• moon_mie_strength (float)\n• horizon_blend_stops ({ min, start, mie_start, ... })\n• rayleigh_strength (float)\n• sun_mie_strength (float)\n• sun_glare_shape (float)",
+      "description": "minecraft:atmosphere_settings",
       "defaultSnippets": [
         {
           "label": "AtmosphericScattering AtmosphericScatteringConfigSettings AtmosphericScatteringSettings",

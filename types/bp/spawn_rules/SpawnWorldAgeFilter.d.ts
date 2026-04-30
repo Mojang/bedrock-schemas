@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn WorldAgeFilter (Spawn WorldAgeFilter)
+ * World Age Filter (Spawn WorldAgeFilter)
  * Restricts spawning based on how long the world has existed (measured
  * in ticks). Useful for progressive difficulty where certain mobs
  * only start appearing after the world has been played for a

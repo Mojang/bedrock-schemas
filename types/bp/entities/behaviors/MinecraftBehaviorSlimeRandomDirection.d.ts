@@ -17,16 +17,6 @@ Magma Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
   "priority": 4
 }
 
-
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
-"minecraft:behavior.slime_random_direction": {
-  "priority": 4,
-  "add_random_time_range": 3,
-  "turn_range": 360,
-  "min_change_direction_time": 2
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -43,10 +33,6 @@ export default interface MinecraftBehaviorSlimeRandomDirection {
    * Additional time (in whole seconds), chosen randomly in the range
    * of [0, "add_random_time_range"], to add to
    * "min_change_direction_time".
-   * 
-   * Sample Values:
-   * Sulfur Cube: 3
-   *
    */
   add_random_time_range?: number;
 
@@ -56,10 +42,6 @@ export default interface MinecraftBehaviorSlimeRandomDirection {
    * @remarks
    * Constant minimum time (in seconds) to wait before choosing a
    * new direction.
-   * 
-   * Sample Values:
-   * Sulfur Cube: 2
-   *
    */
   min_change_direction_time?: number;
 
@@ -80,10 +62,6 @@ export default interface MinecraftBehaviorSlimeRandomDirection {
    * @remarks
    * Maximum rotation angle range (in degrees) when randomly choosing a
    * new direction.
-   * 
-   * Sample Values:
-   * Sulfur Cube: 360
-   *
    */
   turn_range?: number;
 

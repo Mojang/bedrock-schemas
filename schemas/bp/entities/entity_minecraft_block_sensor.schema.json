@@ -6,7 +6,7 @@
   "properties": {
     "on_break": {
       "title": "Break",
-      "description": "List of blocks to watch for being broken to fire off a specified event. If a block is in multiple lists, multiple events will fire.\n\nProperties:\n• block_list (string[])\n• on_block_broken (string)",
+      "description": "List of blocks to watch for being broken to fire off a specified event. If a block is in multiple lists, multiple events will fire.",
       "type": "array",
       "items": {
         "type": "object",

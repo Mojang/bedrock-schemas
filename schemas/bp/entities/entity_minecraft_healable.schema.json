@@ -50,7 +50,7 @@
     },
     "items": {
       "title": "Items",
-      "description": "The array of items that can be used to heal this entity.\n\nProperties:\n• heal_amount (int) = 1\n• item (string)\n• effects\n\nSample values:\n• llama: [{\"item\":\"wheat\",\"heal_amount\":2},{\"item\":\"hay_...\n• parrot: [{\"effects\":[{\"amplifier\":0,\"chance\":1,\"duratio...",
+      "description": "The array of items that can be used to heal this entity.\n\nSample values:\n• llama: [{\"item\":\"wheat\",\"heal_amount\":2},{\"item\":\"hay_...\n• parrot: [{\"effects\":[{\"amplifier\":0,\"chance\":1,\"duratio...",
       "type": "array",
       "items": {
         "type": "object",

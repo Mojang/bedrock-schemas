@@ -13,7 +13,7 @@
     "minecraft:recipe_brewing_mix": {
       "$ref": "./brewing_mix_recipe_definition.schema.json",
       "title": "Brewing Mix Recipe Definition",
-      "description": "The brewing mix recipe definition container.\n\nProperties:\n• description ({ identifier })\n• tags (string[])\n• input (string)\n• reagent (string)\n• output (string)",
+      "description": "The brewing mix recipe definition container.",
       "defaultSnippets": [
         {
           "label": "Brewing Mix Recipe Definition",

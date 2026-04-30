@@ -18,7 +18,7 @@
     },
     "cooldown_range": {
       "title": "Cooldown Range",
-      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted jump.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• frog: [5,7]\n• goat: [30,60]",
+      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted jump.\n\nSample values:\n• frog: [5,7]\n• goat: [30,60]",
       "anyOf": [
         {
           "type": "number"

@@ -94,7 +94,7 @@
           ]
         }
       ],
-      "description": "Evaluates all tests in the group, all must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates all tests in the group, all must pass in order for the group to pass."
     },
     "NOT": {
       "anyOf": [
@@ -185,7 +185,7 @@
           ]
         }
       ],
-      "description": "Evaluates all tests in the group, all must fail in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates all tests in the group, all must fail in order for the group to pass."
     },
     "OR": {
       "anyOf": [
@@ -276,7 +276,7 @@
           ]
         }
       ],
-      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass."
     },
     "all": {
       "anyOf": [
@@ -367,7 +367,7 @@
           ]
         }
       ],
-      "description": "Evaluates all tests in the group, all must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates all tests in the group, all must pass in order for the group to pass."
     },
     "all_of": {
       "anyOf": [
@@ -458,7 +458,7 @@
           ]
         }
       ],
-      "description": "Evaluates all tests in the group, all must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates all tests in the group, all must pass in order for the group to pass."
     },
     "any": {
       "anyOf": [
@@ -549,7 +549,7 @@
           ]
         }
       ],
-      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass."
     },
     "any_of": {
       "anyOf": [
@@ -640,7 +640,7 @@
           ]
         }
       ],
-      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates tests in the group, one or more must pass in order for the group to pass."
     },
     "none_of": {
       "anyOf": [
@@ -731,7 +731,7 @@
           ]
         }
       ],
-      "description": "Evaluates all tests in the group, all must fail in order for the group to pass.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Evaluates all tests in the group, all must fail in order for the group to pass."
     }
   }
 }

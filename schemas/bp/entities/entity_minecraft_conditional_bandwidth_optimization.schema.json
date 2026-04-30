@@ -6,7 +6,7 @@
   "properties": {
     "default_values": {
       "title": "Default Values",
-      "description": "The object containing the default bandwidth optimization values.\n\nProperties:\n• max_optimized_distance (float) = 80\n• max_dropped_ticks (int) = 10\n• use_motion_prediction_hints (boolean) = false\n\nSample values:\n• arrow: {\"max_dropped_ticks\":7,\"max_optimized_distance\"...",
+      "description": "The object containing the default bandwidth optimization values.\n\nSample values:\n• arrow: {\"max_dropped_ticks\":7,\"max_optimized_distance\"...",
       "type": "object",
       "properties": {
         "max_optimized_distance": {
@@ -42,7 +42,7 @@
     },
     "conditional_values": {
       "title": "Conditional Values",
-      "description": "The object containing the conditional bandwidth optimization values.\n\nProperties:\n• conditional_values\n• max_dropped_ticks (int) = 10\n• max_optimized_distance (float) = 80\n• use_motion_prediction_hints (boolean) = false",
+      "description": "The object containing the conditional bandwidth optimization values.",
       "type": "array",
       "items": {
         "type": "object",

@@ -15,11 +15,14 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Receive Love Behavior (minecraft:behavior.receive_love)
+ * Entity Receive Love Behavior 
+ * (minecraft:behavior.receive_love)
  * Allows the villager to stop so another villager can breed with
  * it. Can only be used by a Villager.
  */
 export default interface MinecraftBehaviorReceiveLove {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -29,4 +32,11 @@ export default interface MinecraftBehaviorReceiveLove {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorReceiveLoveControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

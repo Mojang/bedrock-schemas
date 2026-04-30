@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "horizon_blend_stops",
-  "description": "horizon_blend_stops\n\nProperties:\n• min (float)\n• start (float)\n• mie_start (float)\n• max (float)",
+  "description": "horizon_blend_stops",
   "type": "object",
   "properties": {
     "min": {

@@ -12,7 +12,7 @@
     },
     "minecraft:shadow_settings": {
       "title": "minecraft:shadow_settings",
-      "description": "minecraft:shadow_settings\n\nProperties:\n• shadow_style (string)\n• texel_size (int)",
+      "description": "minecraft:shadow_settings",
       "type": "object",
       "properties": {
         "shadow_style": {

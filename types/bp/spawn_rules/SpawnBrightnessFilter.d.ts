@@ -22,10 +22,23 @@ import * as jsoncommon from '../../common';
  */
 export default interface SpawnBrightnessFilter {
 
+  /**
+   * @remarks
+   * When true, brightness is adjusted for the current weather
+   * (rain/thunder reduce light levels).
+   */
   adjust_for_weather?: boolean;
 
+  /**
+   * @remarks
+   * Maximum light level (0-15) at which this entity can spawn.
+   */
   max?: number;
 
+  /**
+   * @remarks
+   * Minimum light level (0-15) at which this entity can spawn.
+   */
   min?: number;
 
 }

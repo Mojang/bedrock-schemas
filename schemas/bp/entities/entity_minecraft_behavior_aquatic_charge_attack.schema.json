@@ -12,7 +12,7 @@
     },
     "charge_cooldown_time": {
       "title": "Charge Cooldown Time",
-      "description": "Range of time in seconds to wait before starting another charge.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "Range of time in seconds to wait before starting another charge.",
       "anyOf": [
         {
           "type": "number"

@@ -12,7 +12,7 @@
     },
     "event_names": {
       "title": "Event Names",
-      "description": "List of dynamic level sound events, with conditions for choosing between them. Evaluated in order, first one wins. If none evaluate to true, 'event_name' will take precedence.\n\nProperties:\n• condition (string)\n• event_name (string)\n\nSample values:\n• allay: [{\"condition\":\"query.is_using_item\",\"event_name...\n• warden: [{\"condition\":\"query.anger_level(this) >= 80\",\"...",
+      "description": "List of dynamic level sound events, with conditions for choosing between them. Evaluated in order, first one wins. If none evaluate to true, 'event_name' will take precedence.\n\nSample values:\n• allay: [{\"condition\":\"query.is_using_item\",\"event_name...\n• warden: [{\"condition\":\"query.anger_level(this) >= 80\",\"...",
       "type": "array",
       "items": {
         "type": "object",

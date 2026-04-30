@@ -6,7 +6,7 @@
   "properties": {
     "entity_types": {
       "title": "Entity Types",
-      "description": "List of entity types that this mob can target if they hurt their owner\n\nProperties:\n• reevaluate_description (boolean) = false",
+      "description": "List of entity types that this mob can target if they hurt their owner",
       "type": "array",
       "items": {
         "type": "object",

@@ -13,7 +13,7 @@
     "minecraft:lighting_settings": {
       "$ref": "./minecraft_lighting_settings.schema.json",
       "title": "minecraft:lighting_settings",
-      "description": "minecraft:lighting_settings\n\nProperties:\n• description ({ identifier })\n• directional_lights ({ sun, moon, orbital_offset_degrees })\n• emissive ({ desaturation })\n• sky ({ intensity })\n• ambient ({ color, illuminance })"
+      "description": "minecraft:lighting_settings"
     }
   }
 }

@@ -103,7 +103,7 @@
         }
       ],
       "title": "Seats",
-      "description": "The list of positions and number of riders for each position for entities riding this entity.\n\nProperties:\n• third_person_camera_radius\n• camera_relax_distance_smoothing\n• rotate_rider_by = 0\n• lock_rider_rotation = 0\n\nSample values:\n• chicken: {\"position\":[0,0.48,0]}\n• cow: {\"position\":[0,1,0]}\n• cow: {\"position\":[0,1.15,0]}"
+      "description": "The list of positions and number of riders for each position for entities riding this entity.\n\nSample values:\n• chicken: {\"position\":[0,0.48,0]}\n• cow: {\"position\":[0,1,0]}\n• cow: {\"position\":[0,1.15,0]}"
     },
     "family_types": {
       "title": "Family Types",

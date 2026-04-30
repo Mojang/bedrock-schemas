@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Spawn DelayFilter",
+  "title": "Delay Filter",
   "description": "Delays entity spawning by a configurable amount of time after spawn conditions are met. Useful for preventing immediate respawning after mob deaths or creating spawn cooldowns for rare creatures.",
   "properties": {
     "identifier": {

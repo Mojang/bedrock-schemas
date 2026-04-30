@@ -6,7 +6,7 @@
   "properties": {
     "permutations": {
       "title": "Permutations",
-      "description": "Array of conditional component overrides. Each permutation has a Molang condition and components that override the base components when the condition is true.\n\nProperties:\n• components (object)\n• condition",
+      "description": "Array of conditional component overrides. Each permutation has a Molang condition and components that override the base components when the condition is true.",
       "type": "array",
       "items": {
         "$ref": "./block_permutation.schema.json"
@@ -37,7 +37,7 @@
     },
     "description": {
       "title": "Description",
-      "description": "Information about the block, must have at minimum an \"identifier\" and can have also the following optional field \"menu_category\", \"states\" and/or \"traits\"\n\nProperties:\n• identifier (string)\n• menu_category (object) = {\"category\":\"none\",\"\n• states (object) = {}\n• traits (object) = {\"minecraft:connecti",
+      "description": "Information about the block, must have at minimum an \"identifier\" and can have also the following optional field \"menu_category\", \"states\" and/or \"traits\"",
       "$ref": "./block_description.schema.json",
       "defaultSnippets": [
         {

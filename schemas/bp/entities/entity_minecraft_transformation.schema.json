@@ -66,11 +66,11 @@
         }
       ],
       "title": "Delay",
-      "description": "Defines the properties of the delay for the transformation. Can be a simple number (seconds) or a complex object.\n\nProperties:\n• block_assist_chance (float) = 0\n• block_chance (float) = 0\n• block_max (int) = 0\n• block_radius (int) = 0\n• block_types (string[])\n• range_max (float) = 0\n• range_min (float) = 0\n• value (float) = 0\n\nSample values:\n• pig: 0.5"
+      "description": "Defines the properties of the delay for the transformation. Can be a simple number (seconds) or a complex object.\n\nSample values:\n• pig: 0.5"
     },
     "add": {
       "title": "Add",
-      "description": "List of components to add to the entity after the transformation\n\nProperties:\n• component_groups (string[])",
+      "description": "List of components to add to the entity after the transformation",
       "type": "array",
       "items": {
         "type": "object",

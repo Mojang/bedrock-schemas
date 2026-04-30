@@ -17,7 +17,7 @@
     },
     "values": {
       "title": "Values",
-      "description": "An array of function paths to execute every tick. Function paths are relative to the functions folder without the .mcfunction extension (e.g., 'namespace/function_name').\n\nProperties:\n• value (string)\n\nSample values:\n• tick: null",
+      "description": "An array of function paths to execute every tick. Function paths are relative to the functions folder without the .mcfunction extension (e.g., 'namespace/function_name').\n\nSample values:\n• tick: null",
       "type": "array",
       "items": {
         "type": "string"

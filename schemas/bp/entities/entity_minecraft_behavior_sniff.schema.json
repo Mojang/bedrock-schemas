@@ -18,7 +18,7 @@
     },
     "cooldown_range": {
       "title": "Cooldown Range",
-      "description": "Cooldown range between sniffs in seconds\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• warden: {\"min\":5,\"max\":10}",
+      "description": "Cooldown range between sniffs in seconds\n\nSample values:\n• warden: {\"min\":5,\"max\":10}",
       "anyOf": [
         {
           "type": "number"

@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn DistanceFilter (Spawn DistanceFilter)
+ * Distance Filter (Spawn DistanceFilter)
  * Controls spawning based on distance from the nearest player. Mobs
  * typically spawn within a certain radius around players (24-128
  * blocks) and despawn when players move too far away.

@@ -35,9 +35,45 @@ export default interface MinecraftApplyKnockbackRulesInstance {
 
   /**
    * @remarks
+   * Scaling factor to angle the knockback horizontally based on the
+   * attacker's aim direction.
+   */
+  horizontal_hit_angle_scale?: number;
+
+  /**
+   * @remarks
    * Power with which a target should be knocked backwards.
    */
   horizontal_power?: number;
+
+  /**
+   * @remarks
+   * Scaling factor to apply to the target's velocity before applying
+   * knockback.
+   */
+  scale_previous_velocity?: number;
+
+  /**
+   * @remarks
+   * Scaling factor to the magnitude of knockback based on the
+   * inverse square of the damage.
+   */
+  scale_with_damage?: boolean;
+
+  /**
+   * @remarks
+   * Scaling factor to angle the knockback vertically based on the
+   * attacker's aim direction.
+   */
+  vertical_hit_angle_scale?: number;
+
+  /**
+   * @remarks
+   * Scaling factor to angle the knockback vertically based on the
+   * difference in the attacker's feet position to the target's feet
+   * position.
+   */
+  vertical_position_angle_scale?: number;
 
   /**
    * @remarks

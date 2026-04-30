@@ -76,7 +76,7 @@
                   "type": "object"
                 }
               ],
-              "description": "Conditions that make this entry in the list valid\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+              "description": "Conditions that make this entry in the list valid"
             },
             "max_dist": {
               "title": "Max Dist",

@@ -12,12 +12,12 @@
     },
     "minecraft:block_culling_rules": {
       "title": "minecraft:block_culling_rules",
-      "description": "minecraft:block_culling_rules\n\nProperties:\n• description ({ identifier })\n• rules",
+      "description": "minecraft:block_culling_rules",
       "type": "object",
       "properties": {
         "description": {
           "title": "description",
-          "description": "description\n\nProperties:\n• identifier (string)",
+          "description": "description",
           "type": "object",
           "properties": {
             "identifier": {

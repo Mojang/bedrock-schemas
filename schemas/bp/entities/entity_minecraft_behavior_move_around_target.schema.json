@@ -24,7 +24,7 @@
     },
     "destination_position_range": {
       "title": "Destination Position Range",
-      "description": "The range of distances from the target entity within which the goal should look for a position to move the owner entity to.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• breeze: [4,8]",
+      "description": "The range of distances from the target entity within which the goal should look for a position to move the owner entity to.\n\nSample values:\n• breeze: [4,8]",
       "anyOf": [
         {
           "type": "number"
@@ -79,7 +79,7 @@
         }
       ],
       "title": "Filters",
-      "description": "Conditions that need to be met for the behavior to start.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)\n\nSample values:\n• breeze: {\"all_of\":[{\"test\":\"on_ground\",\"value\":true},{\"..."
+      "description": "Conditions that need to be met for the behavior to start.\n\nSample values:\n• breeze: {\"all_of\":[{\"test\":\"on_ground\",\"value\":true},{\"..."
     },
     "height_difference_limit": {
       "title": "Height Difference Limit",

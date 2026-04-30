@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Swell Behavior (minecraft:behavior.swell)
+ * Entity Swell Behavior (minecraft:behavior.swell)
  * Allows the creeper to swell up when a player is nearby. It can
  * only be used by Creepers.
  */
 export default interface MinecraftBehaviorSwell {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -32,15 +34,22 @@ export default interface MinecraftBehaviorSwell {
   /**
    * @remarks
    * This mob starts swelling when a target is at least this many
-   * blocks away
+   * blocks away.
    */
   start_distance?: number;
 
   /**
    * @remarks
    * This mob stops swelling when a target has moved away at least this
-   * many blocks
+   * many blocks.
    */
   stop_distance?: number;
 
+}
+
+
+export enum MinecraftBehaviorSwellControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

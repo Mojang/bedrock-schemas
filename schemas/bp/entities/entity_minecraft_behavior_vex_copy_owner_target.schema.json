@@ -6,7 +6,7 @@
   "properties": {
     "entity_types": {
       "title": "Entity Types",
-      "description": "List of entities this mob can copy the owner from\n\nProperties:\n• cooldown (float) = 0\n• filters\n• max_dist (float) = 16\n• must_see (boolean) = false\n• must_see_forget_duration (float) = 3\n• reevaluate_description (boolean) = false\n• sprint_speed_multiplier (float) = 1\n• walk_speed_multiplier (float) = 1",
+      "description": "List of entities this mob can copy the owner from",
       "type": "array",
       "items": {
         "type": "object",

@@ -6,7 +6,7 @@
   "properties": {
     "trunk_height": {
       "title": "Trunk Height",
-      "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• variance (int)",
+      "description": "Configuration object for the trunk height.",
       "type": "object",
       "properties": {
         "base": {

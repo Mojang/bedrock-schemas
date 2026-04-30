@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Trunk Height",
-  "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• intervals (string[])\n• min_height_for_canopy (int)",
+  "description": "Configuration object for the trunk height.",
   "type": "object",
   "properties": {
     "base": {

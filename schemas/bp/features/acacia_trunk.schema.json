@@ -6,20 +6,20 @@
   "properties": {
     "branches": {
       "title": "Branches",
-      "description": "Configuration object for branches.\n\nProperties:\n• branch_canopy ({ canopy, mangrove_canopy, acacia_canopy, ... })",
+      "description": "Configuration object for branches.",
       "type": "object",
       "properties": {
         "branch_canopy": {
           "$ref": "./branch_canopy.schema.json",
           "title": "Branch Canopy",
-          "description": "Configuration object for the canopy.\n\nProperties:\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• acacia_canopy ({ canopy_size, simplify_canopy })\n• cherry_canopy ({ trunk_width })\n• fancy_canopy ({ height, radius })\n• mega_canopy ({ base_radius, core_width, simplify_canopy })\n• mega_pine_canopy ({ base_radius, core_width })\n• pine_canopy ({ base_radius })\n• ... and 2 more properties"
+          "description": "Configuration object for the canopy."
         }
       }
     },
     "trunk_decoration": {
       "$ref": "./trunk_decoration.schema.json",
       "title": "Trunk Decoration",
-      "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+      "description": "Configuration object for the trunk decoration.",
       "defaultSnippets": [
         {
           "label": "Trunk Decoration",
@@ -40,7 +40,7 @@
     "trunk_height": {
       "$ref": "./trunk_height.schema.json",
       "title": "Trunk Height",
-      "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• intervals (string[])\n• min_height_for_canopy (int)",
+      "description": "Configuration object for the trunk height.",
       "defaultSnippets": [
         {
           "label": "Trunk Height",
@@ -54,7 +54,7 @@
     },
     "trunk_lean": {
       "title": "Trunk Lean",
-      "description": "Configuration object for diagonal branches.\n\nProperties:\n• allow_diagonal_growth (boolean)",
+      "description": "Configuration object for diagonal branches.",
       "type": "object",
       "properties": {
         "allow_diagonal_growth": {

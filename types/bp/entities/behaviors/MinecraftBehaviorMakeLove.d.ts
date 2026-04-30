@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Make Love Behavior (minecraft:behavior.make_love)
+ * Entity Make Love Behavior (minecraft:behavior.make_love)
  * Allows the villager to look for a mate to spawn other villagers 
  * with.
  */
 export default interface MinecraftBehaviorMakeLove {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -29,4 +31,11 @@ export default interface MinecraftBehaviorMakeLove {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorMakeLoveControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

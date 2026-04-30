@@ -6,14 +6,14 @@
   "properties": {
     "block_list": {
       "title": "Block List",
-      "description": "List of blocks, with certain block states, that we are monitoring to see if the entity is inside.\n\nProperties:\n• block ({ name, states })\n• entered_block_event\n• exited_block_event\n\nSample values:\n• boat: [{\"block\":{\"name\":\"minecraft:bubble_column\",\"st...",
+      "description": "List of blocks, with certain block states, that we are monitoring to see if the entity is inside.\n\nSample values:\n• boat: [{\"block\":{\"name\":\"minecraft:bubble_column\",\"st...",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "block": {
             "title": "Block",
-            "description": "The block to monitor, including name and optional states.\n\nProperties:\n• name (string)\n• states",
+            "description": "The block to monitor, including name and optional states.",
             "type": "object",
             "properties": {
               "name": {

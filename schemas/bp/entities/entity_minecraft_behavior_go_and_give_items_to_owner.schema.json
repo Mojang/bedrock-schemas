@@ -18,7 +18,7 @@
     },
     "on_item_throw": {
       "title": "Item Throw",
-      "description": "Event(s) to run when this mob throws items.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• allay: [{\"event\":\"pickup_item_delay\",\"target\":\"self\"}]",
+      "description": "Event(s) to run when this mob throws items.\n\nSample values:\n• allay: [{\"event\":\"pickup_item_delay\",\"target\":\"self\"}]",
       "type": "array",
       "items": {
         "$ref": "./entity_actordefinitiontrigger.schema.json"

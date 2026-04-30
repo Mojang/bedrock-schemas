@@ -13,7 +13,7 @@
     },
     "sound_definitions": {
       "title": "Sound Definitions",
-      "description": "A collection of sound event definitions, where each key is a sound event identifier (e.g., 'mob.zombie.say') and the value defines which sounds can play for that event.\n\nProperties:\n• category (enum)\n• sounds\n• min_distance (float) = 0\n• max_distance (float)",
+      "description": "A collection of sound event definitions, where each key is a sound event identifier (e.g., 'mob.zombie.say') and the value defines which sounds can play for that event.",
       "type": "object",
       "additionalProperties": {
         "type": "object",
@@ -38,7 +38,7 @@
           },
           "sounds": {
             "title": "Sounds",
-            "description": "Array of sound files or sound objects that can play for this event. When multiple sounds are defined, one is chosen randomly.\n\nProperties:\n• name (string)\n• volume = 1\n• pitch = 1\n• load_on_low_memory (boolean) = false\n• stream (boolean) = false\n• weight (int) = 1\n• is3D (boolean)",
+            "description": "Array of sound files or sound objects that can play for this event. When multiple sounds are defined, one is chosen randomly.",
             "type": "array",
             "items": {
               "type": "object",

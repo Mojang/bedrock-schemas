@@ -7,7 +7,7 @@
   "properties": {
     "pools": {
       "title": "Pools",
-      "description": "A list of loot pools. Each pool is rolled independently to select entries.\n\nProperties:\n• rolls (int) = 1\n• bonus_rolls (int) = 0\n• entries\n• conditions\n• tiers ({ initial_range, bonus_rolls, bonus_chance })",
+      "description": "A list of loot pools. Each pool is rolled independently to select entries.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_pool.schema.json"

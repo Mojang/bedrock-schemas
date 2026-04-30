@@ -30,12 +30,12 @@
     },
     "transition_fog": {
       "title": "Transition Fog",
-      "description": "Settings for fog transition when entering this environment.\n\nProperties:\n• init_fog (object)\n• min_percent (float)\n• mid_seconds (float)\n• mid_percent (float)\n• max_seconds (float)",
+      "description": "Settings for fog transition when entering this environment.",
       "type": "object",
       "properties": {
         "init_fog": {
           "title": "Initial Fog",
-          "description": "The initial fog settings when entering transition.\n\nProperties:\n• fog_start (float)\n• fog_end (float)\n• fog_color (string)\n• render_distance_type (enum)",
+          "description": "The initial fog settings when entering transition.",
           "$ref": "./fog_fog_distance_settings.schema.json",
           "defaultSnippets": [
             {

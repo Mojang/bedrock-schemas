@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Lists",
-  "description": "Lists of available textures, materials, and geometries that can be selected\n\nProperties:\n• textures\n• materials\n• geometries",
+  "description": "Lists of available textures, materials, and geometries that can be selected",
   "type": "object",
   "properties": {
     "textures": {

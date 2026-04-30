@@ -57,7 +57,7 @@
     },
     "target_zone": {
       "title": "Target Zone",
-      "description": "Minimum and maximum distance, from the target, this entity can use this behavior.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "Minimum and maximum distance, from the target, this entity can use this behavior.",
       "anyOf": [
         {
           "type": "number"

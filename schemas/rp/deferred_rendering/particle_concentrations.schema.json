@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "particle_concentrations",
-  "description": "particle_concentrations\n\nProperties:\n• chlorophyll (float)\n• suspended_sediment (float)\n• cdom (float)",
+  "description": "particle_concentrations",
   "type": "object",
   "properties": {
     "chlorophyll": {

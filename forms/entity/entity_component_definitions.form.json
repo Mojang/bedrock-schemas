@@ -2184,6 +2184,12 @@
       "subFormId": "entity/minecraft_wither_target_highest_damage"
     },
     {
+      "id": "minecraft:air_drag_modifier",
+      "title": "Minecraft Air Drag Modifier",
+      "description": "Dynamic value",
+      "dataType": "object"
+    },
+    {
       "id": "minecraft:apply_knockback_rules",
       "title": "Minecraft Apply Knockback Rules",
       "description": "Defines how an entity applies knockback.",
@@ -2709,6 +2715,12 @@
       "subFormId": "entity/minecraft_behavior_work_composter"
     },
     {
+      "id": "minecraft:bounciness",
+      "title": "Minecraft Bounciness",
+      "description": "Dynamic value",
+      "dataType": "object"
+    },
+    {
       "id": "minecraft:dash_action",
       "title": "Minecraft Dash Action",
       "description": "Dynamic value",
@@ -2803,7 +2815,8 @@
       "id": "minecraft:pushable_by_entity",
       "title": "Minecraft Pushable By Entity",
       "description": "Allows an entity to be pushed by other entities.",
-      "dataType": "object"
+      "dataType": "object",
+      "subFormId": "entity/minecraft_pushable_by_entity"
     },
     {
       "id": "minecraft:rotation_locked_to_vehicle",

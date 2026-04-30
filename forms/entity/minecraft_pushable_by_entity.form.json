@@ -4,78 +4,10 @@
     {
       "id": "presets",
       "title": "Presets",
+      "description": "Defines how this entity behaves when pushed by another entity. The first preset whose \"filter\" conditions are met will be applied; if none match, a default configuration is used instead.",
       "dataType": "objectArray",
-      "subForm": {
-        "id": "presets",
-        "title": "Presets",
-        "fields": [
-          {
-            "id": "push_mode",
-            "title": "Push mode",
-            "dataType": "string",
-            "samples": {
-              "/vanilla/behavior_pack/entities/boat.json": [
-                {
-                  "path": "push_mode",
-                  "content": "legacy_boat"
-                }
-              ]
-            }
-          },
-          {
-            "id": "strength_multiplier",
-            "title": "Strength multiplier",
-            "dataType": "number",
-            "samples": {
-              "/vanilla/behavior_pack/entities/boat.json": [
-                {
-                  "path": "strength_multiplier",
-                  "content": 0.1
-                }
-              ]
-            }
-          },
-          {
-            "id": "min_distance",
-            "title": "Min distance",
-            "dataType": "number",
-            "samples": {
-              "/vanilla/behavior_pack/entities/boat.json": [
-                {
-                  "path": "min_distance",
-                  "content": 0.3
-                }
-              ]
-            }
-          },
-          {
-            "id": "push_scale_self",
-            "title": "Push scale self",
-            "dataType": "number",
-            "samples": {
-              "/vanilla/behavior_pack/entities/boat.json": [
-                {
-                  "path": "push_scale_self",
-                  "content": 0.5
-                }
-              ]
-            }
-          },
-          {
-            "id": "push_scale_other",
-            "title": "Push scale other",
-            "dataType": "number",
-            "samples": {
-              "/vanilla/behavior_pack/entities/boat.json": [
-                {
-                  "path": "push_scale_other",
-                  "content": 0.25
-                }
-              ]
-            }
-          }
-        ]
-      },
+      "defaultValue": [],
+      "subFormId": "entity/pushablebyentitypreset",
       "samples": {
         "/vanilla/behavior_pack/entities/boat.json": [
           {
@@ -109,7 +41,7 @@
     }
   ],
   "description": "Allows an entity to be pushed by other entities.",
-  "title": "Pushable By Entity",
+  "title": "Entity Pushable By Entity",
   "samples": {
     "/vanilla/behavior_pack/entities/boat.json": [
       {

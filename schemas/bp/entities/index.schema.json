@@ -12,7 +12,7 @@
     },
     "minecraft:entity": {
       "title": "Entity Definition",
-      "description": "The entity definition container with all behavior pack entity data.\n\nProperties:\n• component_groups = {}\n• components (object)\n• description (object)\n• events",
+      "description": "The entity definition container with all behavior pack entity data.",
       "$ref": "./entity_actor_document.schema.json",
       "defaultSnippets": [
         {

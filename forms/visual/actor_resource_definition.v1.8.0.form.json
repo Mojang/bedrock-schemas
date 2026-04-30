@@ -298,7 +298,5 @@
       }
     }
   ],
-  "description": "Defines an entity client resource definition document with format_version 1.8.0.",
-  "title": "Actor Resource Definition (v1.8.0)",
   "dataVersion": "1.8.0"
 }

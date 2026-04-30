@@ -11,23 +11,6 @@
  * 
  * minecraft:buoyant Samples
 
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
- * At /minecraft:entity/component_groups/minecraft:sulfur_cube_bouncy/minecraft:buoyant/: 
-"minecraft:buoyant": {
-  "base_buoyancy": 1,
-  "apply_gravity": false,
-  "can_auto_step_from_liquid": true,
-  "movement_type": "bobbing",
-  "liquid_blocks": [
-    "minecraft:water",
-    "minecraft:flowing_water",
-    "minecraft:lava",
-    "minecraft:flowing_lava"
-  ]
-}
-
-
 Xp Orb - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/xp_orb.json
 
 "minecraft:buoyant": {
@@ -60,10 +43,6 @@ export default interface MinecraftBuoyant {
    * @remarks
    * Base buoyancy used to calculate how much will a entity 
    * float.
-   * 
-   * Sample Values:
-   * Sulfur Cube: 1
-   *
    */
   base_buoyancy?: number;
 
@@ -85,10 +64,6 @@ export default interface MinecraftBuoyant {
    * @remarks
    * Whether the entity can move out of a liquid block to a
    * neighboring solid block if pushed against it.
-   * 
-   * Sample Values:
-   * Sulfur Cube: true
-   *
    */
   can_auto_step_from_liquid?: boolean;
 
@@ -105,8 +80,6 @@ export default interface MinecraftBuoyant {
    * block.
    * 
    * Sample Values:
-   * Sulfur Cube: ["minecraft:water","minecraft:flowing_water","minecraft:lava","minecraft:flowing_lava"]
-   *
    * Xp Orb: ["minecraft:flowing_water","minecraft:water"]
    *
    */
@@ -120,10 +93,6 @@ export default interface MinecraftBuoyant {
 "bobbing", simulates waves
    * going through.
 "none", simulates waves going through.
-   * 
-   * Sample Values:
-   * Sulfur Cube: "bobbing"
-   *
    */
   movement_type?: string;
 

@@ -18,7 +18,7 @@
     },
     "jump_chance_percentage": {
       "title": "Jump Chance Percentage",
-      "description": "Percent chance a slime or magma cube has to jump while in water / lava.\n\nSample values:\n• sulfur_cube: 0.8",
+      "description": "Percent chance a slime or magma cube has to jump while in water / lava.",
       "type": "number",
       "default": 0.800000011920929
     },
@@ -30,7 +30,7 @@
     },
     "speed_multiplier": {
       "title": "Speed Multiplier",
-      "description": "Determines the multiplier the entity's speed is modified by when moving through water / lava.\n\nSample values:\n• sulfur_cube: 1.2",
+      "description": "Determines the multiplier the entity's speed is modified by when moving through water / lava.",
       "type": "number",
       "default": 1.2000000476837158
     }

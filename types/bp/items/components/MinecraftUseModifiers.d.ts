@@ -14,6 +14,7 @@
 Apple - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/apple.json
 
 "minecraft:use_modifiers": {
+  "start_using": "always",
   "use_duration": 1.6,
   "movement_modifier": 0.35
 }
@@ -58,6 +59,10 @@ export default interface MinecraftUseModifiers {
    * Controls how using the item triggers start using behavior. "if_first"
    * only starts if no other component has started using yet; "always"
    * always restarts using. Defaults to "if_first".
+   * 
+   * Sample Values:
+   * Apple: "always"
+   *
    */
   start_using?: string;
 

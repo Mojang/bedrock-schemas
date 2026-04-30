@@ -13,12 +13,12 @@
     },
     "header": {
       "title": "Header",
-      "description": "The header section containing the pack's identity: name, description, unique UUID, and version.\n\nProperties:\n• modules\n• dependencies",
+      "description": "The header section containing the pack's identity: name, description, unique UUID, and version.",
       "$ref": "./pack_behavior_pack_rest_of_file.schema.json"
     },
     "modules": {
       "title": "Modules",
-      "description": "Declares modules within the pack. For resource packs, use type 'resources'.\n\nProperties:\n• description\n• language (string)\n• type (string)\n• uuid (string)\n• version (string)\n• entry (string)",
+      "description": "Declares modules within the pack. For resource packs, use type 'resources'.",
       "type": "array",
       "items": {
         "type": "object",
@@ -52,7 +52,7 @@
     },
     "dependencies": {
       "title": "Dependencies",
-      "description": "Optional list of other packs this pack depends on, referenced by UUID and version.\n\nProperties:\n• uuid (string)\n• module_name (string)\n• version (string)",
+      "description": "Optional list of other packs this pack depends on, referenced by UUID and version.",
       "type": "array",
       "items": {
         "type": "object",

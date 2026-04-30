@@ -28,7 +28,7 @@
     "search_volume": {
       "$ref": "./search_volume.schema.json",
       "title": "Search Volume",
-      "description": "Axis-aligned bounding box that will be searched for valid placement positions. Expressed as offsets from the input position.\n\nProperties:\n• min (string[])\n• [0..0] (int)\n• [1..1] (int)\n• [2..2] (int)\n• max (string[])",
+      "description": "Axis-aligned bounding box that will be searched for valid placement positions. Expressed as offsets from the input position.",
       "defaultSnippets": [
         {
           "label": "Search Volume",

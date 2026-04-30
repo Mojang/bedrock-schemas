@@ -6,7 +6,7 @@
   "properties": {
     "add_effects": {
       "title": "Add Effects",
-      "description": "List of effects to add to this entity.\n\nProperties:\n• display_on_screen_animation (boolean)\n• effect (string)\n• duration (number)\n\nSample values:\n• player: [{\"display_on_screen_animation\":true,\"duration\"...",
+      "description": "List of effects to add to this entity.\n\nSample values:\n• player: [{\"display_on_screen_animation\":true,\"duration\"...",
       "type": "array",
       "items": {
         "type": "object",

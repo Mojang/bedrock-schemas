@@ -49,7 +49,7 @@
           "type": "object"
         }
       ],
-      "description": "List of blocks that this block can be placed against in the \"allowed_faces\" direction. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor.\n\nProperties:\n• name (string) = \n• states (int) = {}\n• tags (string) = "
+      "description": "List of blocks that this block can be placed against in the \"allowed_faces\" direction. Each block in this list can either be specified as a String (block name) or as a BlockDescriptor."
     }
   }
 }

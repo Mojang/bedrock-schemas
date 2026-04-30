@@ -32,7 +32,7 @@
         }
       ],
       "title": "Cooldown Range",
-      "description": "Goal cooldown range in seconds. Can be a range object or a single number.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• sniffer: {\"min\":400,\"max\":500}"
+      "description": "Goal cooldown range in seconds. Can be a range object or a single number.\n\nSample values:\n• sniffer: {\"min\":400,\"max\":500}"
     },
     "duration_range": {
       "oneOf": [
@@ -62,7 +62,7 @@
         }
       ],
       "title": "Duration Range",
-      "description": "Goal duration range in seconds. Can be a range object or a single number.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• sniffer: {\"min\":2,\"max\":2}"
+      "description": "Goal duration range in seconds. Can be a range object or a single number.\n\nSample values:\n• sniffer: {\"min\":2,\"max\":2}"
     },
     "control_flags": {
       "title": "Control Flags",
@@ -79,7 +79,7 @@
     },
     "on_end": {
       "title": "End",
-      "description": "Event(s) to run when the goal ends.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_scenting_success\",\"target\":\"self\"}",
+      "description": "Event(s) to run when the goal ends.\n\nSample values:\n• sniffer: {\"event\":\"on_scenting_success\",\"target\":\"self\"}",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -104,7 +104,7 @@
     },
     "on_start": {
       "title": "Start",
-      "description": "Event(s) to run when the goal starts.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self",
+      "description": "Event(s) to run when the goal starts.",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {

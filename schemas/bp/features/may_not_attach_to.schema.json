@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "May Not Attach To",
-  "description": "Denylist which specifies where the block can't be placed.\n\nProperties:\n• top (string[])\n• bottom (string[])\n• north (string[])\n• east (string[])\n• south (string[])\n• west (string[])\n• all (string[])\n• sides (string[])\n• ... and 1 more properties",
+  "description": "Denylist which specifies where the block can't be placed.",
   "type": "object",
   "properties": {
     "top": {

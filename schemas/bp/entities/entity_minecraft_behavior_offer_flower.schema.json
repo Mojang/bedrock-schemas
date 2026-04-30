@@ -60,7 +60,7 @@
         }
       ],
       "title": "Filters",
-      "description": "Conditions that need to be met for the behavior to start.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)\n\nSample values:\n• iron_golem: {\"test\":\"is_daytime\"}"
+      "description": "Conditions that need to be met for the behavior to start.\n\nSample values:\n• iron_golem: {\"test\":\"is_daytime\"}"
     },
     "max_head_rotation_y": {
       "title": "Max Head Rotation Y",

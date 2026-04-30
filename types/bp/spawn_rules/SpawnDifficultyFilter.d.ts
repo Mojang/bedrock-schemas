@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn DifficultyFilter (Spawn DifficultyFilter)
+ * Difficulty Filter (Spawn DifficultyFilter)
  * Restricts mob spawning to specific difficulty levels (Peaceful, Easy,
  * Normal, Hard). For example, hostile mobs don't spawn on
  * Peaceful, and some dangerous variants only appear on Hard

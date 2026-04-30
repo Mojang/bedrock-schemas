@@ -6,7 +6,7 @@
   "properties": {
     "conditions": {
       "title": "Conditions",
-      "description": "Array of spawn condition objects that define when and how this entity spawns.\n\nProperties:\n• minecraft:spawns_lava (object)\n• minecraft:disallow_spawns_in_bubble (object)\n• minecraft:biome_filter = {\"AND\":null,\"NOT\":nu\n• minecraft:spawns_on_block_filter = []\n• minecraft:spawns_on_block_prevented_filter (string[]) = []\n• minecraft:herd (object) = []\n• minecraft:permute_type (object) = []\n• minecraft:brightness_filter (object)\n• ... and 16 more properties",
+      "description": "Array of spawn condition objects that define when and how this entity spawns.",
       "type": "array",
       "items": {
         "$ref": "./spawn_spawn_biomeconditions.schema.json"

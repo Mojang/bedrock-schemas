@@ -24,7 +24,7 @@
     },
     "delay_range": {
       "title": "Delay Range",
-      "description": "Minimum and maximum cooldown time-range (in seconds) between each attempted swoop attack.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "Minimum and maximum cooldown time-range (in seconds) between each attempted swoop attack.",
       "anyOf": [
         {
           "type": "number"

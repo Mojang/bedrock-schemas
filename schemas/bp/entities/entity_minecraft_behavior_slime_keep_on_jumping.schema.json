@@ -24,7 +24,7 @@
     },
     "speed_multiplier": {
       "title": "Speed Multiplier",
-      "description": "Determines the multiplier this entity's speed is modified by when jumping around.\n\nSample values:\n• sulfur_cube: 1",
+      "description": "Determines the multiplier this entity's speed is modified by when jumping around.",
       "type": "number",
       "default": 1
     }

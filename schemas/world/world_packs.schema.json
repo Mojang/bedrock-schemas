@@ -34,7 +34,7 @@
     },
     "packs": {
       "title": "Packs",
-      "description": "An array of pack registrations defining which packs are active.\n\nProperties:\n• pack_id (string)\n• version (string[])\n• priority (int)",
+      "description": "An array of pack registrations defining which packs are active.",
       "type": "array",
       "items": {
         "type": "string"

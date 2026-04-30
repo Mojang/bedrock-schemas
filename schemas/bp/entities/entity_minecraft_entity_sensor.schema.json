@@ -18,7 +18,7 @@
     },
     "subsensors": {
       "title": "Subsensors",
-      "description": "The list of subsensors which sense for entities and emit events when all their conditions are met.\n\nProperties:\n• cooldown (float) = -1\n• event\n• event_filters\n• maximum_count (int) = -1\n• minimum_count (int) = 1\n• range = [10, 10]\n• require_all (boolean) = false\n• y_offset (float) = 0\n\nSample values:\n• parrot: [{\"event\":\"minecraft:on_riding_player\",\"event_f...\n• parrot: [{\"event\":\"minecraft:on_not_riding_player\",\"eve...",
+      "description": "The list of subsensors which sense for entities and emit events when all their conditions are met.\n\nSample values:\n• parrot: [{\"event\":\"minecraft:on_riding_player\",\"event_f...\n• parrot: [{\"event\":\"minecraft:on_not_riding_player\",\"eve...",
       "type": "array",
       "items": {
         "type": "object",

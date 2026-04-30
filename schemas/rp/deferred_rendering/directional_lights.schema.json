@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "directional_lights",
-  "description": "directional_lights\n\nProperties:\n• sun ({ illuminance, color })\n• moon ({ illuminance, color })\n• orbital_offset_degrees (float)",
+  "description": "directional_lights",
   "type": "object",
   "properties": {
     "sun": {
       "title": "sun",
-      "description": "sun\n\nProperties:\n• illuminance (float)\n• color",
+      "description": "sun",
       "type": "object",
       "properties": {
         "illuminance": {
@@ -67,7 +67,7 @@
     },
     "moon": {
       "title": "moon",
-      "description": "moon\n\nProperties:\n• illuminance (float)\n• color",
+      "description": "moon",
       "type": "object",
       "properties": {
         "illuminance": {

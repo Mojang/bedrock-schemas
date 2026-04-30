@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "East",
-  "description": "Specifies the UV's for the face that stretches along the z and y axes, and faces the x axis\n\nProperties:\n• uv (string[])\n• uv_size (string[])\n• material_instance (string)",
+  "description": "Specifies the UV's for the face that stretches along the z and y axes, and faces the x axis",
   "type": "object",
   "properties": {
     "uv": {

@@ -43,7 +43,7 @@
     "constraints": {
       "$ref": "./constraints.schema.json",
       "title": "Constraints",
-      "description": "Specific constraints that must be satisfied when placing this structure.\n\nProperties:\n• grounded (object)\n• unburied (object)\n• block_intersection ({ block_allowlist|block_whitelist })"
+      "description": "Specific constraints that must be satisfied when placing this structure."
     }
   },
   "defaultSnippets": [

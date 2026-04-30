@@ -10,19 +10,6 @@
  * Entity Triggers Documentation - minecraft:on_equipment_changed
  * 
  * minecraft:on_equipment_changed Samples
-
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
-"minecraft:on_equipment_changed": {
-  "slots": [
-    {
-      "slot": "slot.weapon.mainhand",
-      "on_equip": "minecraft:on_block_absorbed",
-      "on_unequip": "minecraft:on_block_ejected"
-    }
-  ]
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -39,10 +26,6 @@ export default interface MinecraftOnEquipmentChanged {
    * @remarks
    * A list of slot-specific events to execute when the entity's equipment
    * changes in those slots.
-   * 
-   * Sample Values:
-   * Sulfur Cube: [{"slot":"slot.weapon.mainhand","on_equip":"minecraft:on_block_absorbed","on_unequip":"minecraft:on_block_ejected"}]
-   *
    */
   slots?: MinecraftOnEquipmentChangedSlots[];
 

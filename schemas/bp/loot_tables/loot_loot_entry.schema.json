@@ -23,7 +23,7 @@
     },
     "functions": {
       "title": "Functions",
-      "description": "Array of functions to apply to the item when selected.\n\nProperties:\n• function (string)\n• count ({ min, max })\n• data ({ min, max })\n• damage ({ min, max })\n• treasure (boolean)\n• levels ({ min, max })\n• id (string)\n• destination (string)\n• ... and 1 more properties",
+      "description": "Array of functions to apply to the item when selected.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_function.schema.json"
@@ -31,7 +31,7 @@
     },
     "conditions": {
       "title": "Conditions",
-      "description": "Array of conditions that must be met for this entry to be considered.\n\nProperties:\n• condition (string)\n• chance (float)\n• looting_multiplier (float)\n• value (int)\n• default_chance (float)\n• peaceful (float)\n• easy (float)\n• normal (float)\n• ... and 4 more properties",
+      "description": "Array of conditions that must be met for this entry to be considered.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_condition.schema.json"
@@ -39,7 +39,7 @@
     },
     "pools": {
       "title": "Pools",
-      "description": "Nested pools for type 'loot_table'. Allows inline loot table definition.\n\nProperties:\n• rolls (int) = 1\n• bonus_rolls (int) = 0\n• entries\n• conditions\n• tiers ({ initial_range, bonus_rolls, bonus_chance })",
+      "description": "Nested pools for type 'loot_table'. Allows inline loot table definition.",
       "type": "array",
       "items": {
         "$ref": "./loot_loot_pool.schema.json"

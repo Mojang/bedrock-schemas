@@ -99,7 +99,7 @@
         }
       ],
       "title": "Entity Types",
-      "description": "List of entity types that this mob can target when hurt by them\n\nProperties:\n• cooldown (float) = 0\n• filters\n• max_dist (float) = 16\n• must_see (boolean) = false\n• must_see_forget_duration (float) = 3\n• reevaluate_description (boolean) = false\n• sprint_speed_multiplier (float) = 1\n• walk_speed_multiplier (float) = 1\n\nSample values:\n• bogged: [{\"filters\":{\"operator\":\"!=\",\"test\":\"is_family\"...\n• breeze: [{\"filters\":{\"all_of\":[{\"operator\":\"!=\",\"test\":..."
+      "description": "List of entity types that this mob can target when hurt by them\n\nSample values:\n• bogged: [{\"filters\":{\"operator\":\"!=\",\"test\":\"is_family\"...\n• breeze: [{\"filters\":{\"all_of\":[{\"operator\":\"!=\",\"test\":..."
     },
     "alert_same_type": {
       "title": "Alert Same Type",

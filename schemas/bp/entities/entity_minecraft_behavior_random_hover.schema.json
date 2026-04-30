@@ -18,7 +18,7 @@
     },
     "hover_height": {
       "title": "Hover Height",
-      "description": "The height above the surface which the mob will try to maintain\n\nProperties:\n• max (int) = 0\n• min (int) = 0\n\nSample values:\n• allay: [1,4]",
+      "description": "The height above the surface which the mob will try to maintain\n\nSample values:\n• allay: [1,4]",
       "anyOf": [
         {
           "type": "integer"

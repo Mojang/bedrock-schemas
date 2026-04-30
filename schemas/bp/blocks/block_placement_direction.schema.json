@@ -45,7 +45,7 @@
           "type": "object"
         }
       ],
-      "description": "A list of block descriptors that define the blocks to connect with the corner shape.\n\nProperties:\n• name (string) = \n• states (int) = {}\n• tags (string) = "
+      "description": "A list of block descriptors that define the blocks to connect with the corner shape."
     },
     "enabled_states": {
       "title": "Enabled States",

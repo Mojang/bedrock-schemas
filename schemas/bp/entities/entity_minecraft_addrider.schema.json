@@ -16,7 +16,7 @@
     },
     "riders": {
       "title": "Riders",
-      "description": "List of riders to be added to the entity. Can only spawn as many riders as \"minecraft:rideable\" has \"seat_count\".\n\nProperties:\n• entity_type (string)\n• spawn_event (string) = \n\nSample values:\n• cave_spider: [{\"entity_type\":\"minecraft:bogged\"}]\n• cave_spider: [{\"entity_type\":\"minecraft:wither_skeleton\"}]",
+      "description": "List of riders to be added to the entity. Can only spawn as many riders as \"minecraft:rideable\" has \"seat_count\".\n\nSample values:\n• cave_spider: [{\"entity_type\":\"minecraft:bogged\"}]\n• cave_spider: [{\"entity_type\":\"minecraft:wither_skeleton\"}]",
       "type": "array",
       "items": {
         "$ref": "./entity_rider_data.schema.json"

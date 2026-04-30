@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn PlayerInVillageFilter (Spawn PlayerInVillageFilter)
+ * Player In Village Filter (Spawn PlayerInVillageFilter)
  * Restricts spawning based on whether a player is within village
  * boundaries. Used for village-specific spawns like iron golems, cats,
  * and raid mobs that should only appear when players are near

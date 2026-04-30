@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Description",
-  "description": "Contains all the visual definition properties for this entity, including identifier, textures, geometry, materials, animations, and spawn egg settings.\n\nProperties:\n• identifier (string)\n• min_engine_version\n• materials (object)\n• textures (object)\n• geometry (object)\n• queryable_geometry (string)\n• spawn_egg ({ texture, base_color, overlay_color, ... })\n• scripts ({ variables, initialize, pre_animation, ... })\n• ... and 8 more properties",
+  "description": "Contains all the visual definition properties for this entity, including identifier, textures, geometry, materials, animations, and spawn egg settings.",
   "type": "object",
   "properties": {
     "identifier": {
@@ -64,7 +64,7 @@
     "spawn_egg": {
       "$ref": "./spawn_egg.schema.json",
       "title": "Spawn Egg",
-      "description": "Defines the appearance of the spawn egg for this entity in the creative inventory.\n\nProperties:\n• texture (string)\n• base_color (string)\n• overlay_color (string)\n• texture_index (int)",
+      "description": "Defines the appearance of the spawn egg for this entity in the creative inventory.",
       "defaultSnippets": [
         {
           "label": "Spawn Egg",

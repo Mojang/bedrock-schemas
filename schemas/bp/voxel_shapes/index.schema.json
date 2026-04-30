@@ -12,7 +12,7 @@
     },
     "minecraft:voxel_shape": {
       "title": "Voxel Shape Definition",
-      "description": "The voxel shape definition container with description and shape data.\n\nProperties:\n• description (object)\n• shape (object)",
+      "description": "The voxel shape definition container with description and shape data.",
       "$ref": "./voxel_shapes_voxelshapefile.schema.json",
       "defaultSnippets": [
         {

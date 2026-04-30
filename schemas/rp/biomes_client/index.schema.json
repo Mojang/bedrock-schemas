@@ -7,7 +7,7 @@
   "properties": {
     "biomes": {
       "title": "Biomes",
-      "description": "A collection of biome visual definitions. Keys are biome identifiers (e.g., 'minecraft:plains') or 'default' for fallback settings.\n\nProperties:\n• water_surface_color (string)\n• water_surface_transparency (float)\n• water_fog_color (string)\n• water_fog_distance (int)\n• fog_color (string)\n• fog_identifier (string)\n• remove_all_prior_fog (boolean)\n• inherit_from_prior_fog (boolean)",
+      "description": "A collection of biome visual definitions. Keys are biome identifiers (e.g., 'minecraft:plains') or 'default' for fallback settings.",
       "type": "object",
       "additionalProperties": {
         "type": "object",

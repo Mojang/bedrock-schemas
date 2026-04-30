@@ -30,7 +30,7 @@
     },
     "height_above_target_range": {
       "title": "Height Above Target Range",
-      "description": "The number of blocks above the target that the next anchor point can be set. This value is used only when the entity is tracking a target.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• phantom: {\"min\":20,\"max\":40}",
+      "description": "The number of blocks above the target that the next anchor point can be set. This value is used only when the entity is tracking a target.\n\nSample values:\n• phantom: {\"min\":20,\"max\":40}",
       "anyOf": [
         {
           "type": "number"
@@ -57,7 +57,7 @@
     },
     "height_offset_range": {
       "title": "Height Offset Range",
-      "description": "Vertical distance from the anchor point this entity must stay within, upon a successful height adjustment.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• phantom: {\"min\":-4,\"max\":5}",
+      "description": "Vertical distance from the anchor point this entity must stay within, upon a successful height adjustment.\n\nSample values:\n• phantom: {\"min\":-4,\"max\":5}",
       "anyOf": [
         {
           "type": "number"
@@ -95,7 +95,7 @@
     },
     "radius_range": {
       "title": "Radius Range",
-      "description": "Horizontal distance from the anchor point this entity must stay within upon a successful radius adjustment.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "Horizontal distance from the anchor point this entity must stay within upon a successful radius adjustment.",
       "anyOf": [
         {
           "type": "number"

@@ -12,7 +12,7 @@
     },
     "minecraft:npc_dialogue": {
       "title": "NPC Dialogue",
-      "description": "The NPC dialogue definition containing scenes.\n\nProperties:\n• scenes (string[])",
+      "description": "The NPC dialogue definition containing scenes.",
       "type": "object",
       "properties": {
         "scenes": {

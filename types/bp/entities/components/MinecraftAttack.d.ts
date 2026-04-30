@@ -33,6 +33,14 @@ export default interface MinecraftAttack {
 
   /**
    * @remarks
+   * Amplifier level (potion tier) of the status ailment applied to
+   * the damaged entity. Higher values increase the strength of the
+   * effect.
+   */
+  effect_amplifier?: number;
+
+  /**
+   * @remarks
    * Duration in seconds of the status ailment applied to the damaged
    * entity.
    */

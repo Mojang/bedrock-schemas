@@ -38,7 +38,7 @@
           "arrays": {
             "$ref": "./lists.schema.json",
             "title": "Lists",
-            "description": "Lists of available textures, materials, and geometries that can be selected\n\nProperties:\n• textures\n• materials\n• geometries"
+            "description": "Lists of available textures, materials, and geometries that can be selected"
           },
           "part_visibility": {
             "title": "Part Visibility",

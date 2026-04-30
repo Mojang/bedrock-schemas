@@ -7,7 +7,7 @@
     "branches": {
       "$ref": "./branches.schema.json",
       "title": "Branches",
-      "description": "Configuration object for branches.\n\nProperties:\n• branch_canopy ({ canopy, mangrove_canopy, acacia_canopy, ... })\n• branch_length (int)\n• branch_altitude_factor (object)",
+      "description": "Configuration object for branches.",
       "defaultSnippets": [
         {
           "label": "Branches",
@@ -22,7 +22,7 @@
     "trunk_decoration": {
       "$ref": "./trunk_decoration_4.schema.json",
       "title": "Trunk Decoration",
-      "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+      "description": "Configuration object for the trunk decoration.",
       "defaultSnippets": [
         {
           "label": "Trunk Decoration",
@@ -42,7 +42,7 @@
     },
     "trunk_height": {
       "title": "Trunk Height",
-      "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• intervals (string[])",
+      "description": "Configuration object for the trunk height.",
       "type": "object",
       "properties": {
         "base": {

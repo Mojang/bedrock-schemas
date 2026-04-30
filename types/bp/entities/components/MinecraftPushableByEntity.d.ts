@@ -50,72 +50,22 @@ Chest Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior
 import * as jsoncommon from '../../../common';
 
 /**
- * Pushable By Entity (minecraft:pushable_by_entity)
+ * Entity Pushable By Entity (minecraft:pushable_by_entity)
  * Allows an entity to be pushed by other entities.
  */
 export default interface MinecraftPushableByEntity {
 
   /**
    * @remarks
+   * Defines how this entity behaves when pushed by another entity. The
+   * first preset whose "filter" conditions are met will be applied; if
+   * none match, a default configuration is used instead.
    * 
    * Sample Values:
    * Boat: [{"push_mode":"legacy_boat","strength_multiplier":0.1,"min_distance":0.3,"push_scale_self":0.5,"push_scale_other":0.25}]
    *
    *
    */
-  presets?: MinecraftPushableByEntityPresets[];
-
-}
-
-
-/**
- * Presets (presets)
- */
-export interface MinecraftPushableByEntityPresets {
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Boat: 0.3
-   *
-   */
-  min_distance?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Boat: "legacy_boat"
-   *
-   */
-  push_mode?: string;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Boat: 0.25
-   *
-   */
-  push_scale_other?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Boat: 0.5
-   *
-   */
-  push_scale_self?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Boat: 0.1
-   *
-   */
-  strength_multiplier?: number;
+  presets?: object[];
 
 }

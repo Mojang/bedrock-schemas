@@ -6,7 +6,7 @@
   "properties": {
     "summon_choices": {
       "title": "Summon Choices",
-      "description": "List of spells for the mob to use to summon entities.\n\nProperties:\n• cast_duration (float)\n• cooldown_time (float) = 0\n• do_casting (boolean) = true\n• filters (object)\n• max_activation_range (float) = 32\n• min_activation_range (float) = 1\n• particle_color (string)\n• sequence\n• ... and 2 more properties",
+      "description": "List of spells for the mob to use to summon entities.",
       "type": "array",
       "items": {
         "type": "object",
@@ -59,7 +59,7 @@
           },
           "sequence": {
             "title": "Sequence",
-            "description": "List of summon steps for the spell.\n\nProperties:\n• base_delay (float) = 0\n• delay_per_summon (float) = 0\n• entity_type (string)\n• num_entities_spawned (int) = 1\n• shape (string) = circle\n• size (float) = 1\n• sound_event (string)\n• summon_cap (int) = 0\n• ... and 2 more properties",
+            "description": "List of summon steps for the spell.",
             "type": "array",
             "items": {
               "type": "object",

@@ -12,7 +12,7 @@
     },
     "minecraft:block": {
       "title": "Block Definition",
-      "description": "The block definition container with all behavior pack block data.\n\nProperties:\n• permutations = []\n• components (object)\n• description (object)",
+      "description": "The block definition container with all behavior pack block data.",
       "$ref": "./block_blockdefinitiondocument.schema.json",
       "defaultSnippets": [
         {

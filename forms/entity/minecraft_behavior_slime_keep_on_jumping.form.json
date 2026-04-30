@@ -59,15 +59,7 @@
       "title": "Speed Multiplier",
       "description": "Determines the multiplier this entity's speed is modified by when jumping around.",
       "dataType": "float",
-      "defaultValue": 1,
-      "samples": {
-        "/vanilla/behavior_pack/entities/sulfur_cube.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_ai/minecraft:behavior.slime_keep_on_jumping/",
-            "content": 1
-          }
-        ]
-      }
+      "defaultValue": 1
     }
   ],
   "restrictions": [
@@ -96,15 +88,6 @@
         "path": "/minecraft:entity/components/minecraft:behavior.slime_keep_on_jumping/",
         "content": {
           "priority": 5
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/sulfur_cube.json": [
-      {
-        "path": "/minecraft:entity/component_groups/minecraft:sulfur_cube_ai/minecraft:behavior.slime_keep_on_jumping/",
-        "content": {
-          "priority": 5,
-          "speed_multiplier": 1
         }
       }
     ]

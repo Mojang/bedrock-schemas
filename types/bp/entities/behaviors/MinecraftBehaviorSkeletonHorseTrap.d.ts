@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Skeleton Horse Trap Behavior 
+ * Entity Skeleton Horse Trap Behavior
  * (minecraft:behavior.skeleton_horse_trap)
  * Allows Equine mobs to be Horse Traps and be triggered like them,
  * spawning a lightning bolt and a bunch of horses when a player is
@@ -23,6 +23,8 @@ import * as jsoncommon from '../../../common';
  * Horses.
  */
 export default interface MinecraftBehaviorSkeletonHorseTrap {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -43,8 +45,15 @@ export default interface MinecraftBehaviorSkeletonHorseTrap {
   /**
    * @remarks
    * Distance in blocks that the player has to be within to trigger the
-   * horse trap
+   * horse trap.
    */
   within_radius?: number;
 
+}
+
+
+export enum MinecraftBehaviorSkeletonHorseTrapControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

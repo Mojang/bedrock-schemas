@@ -6,7 +6,7 @@
   "properties": {
     "event_choices": {
       "title": "Event Choices",
-      "description": "List of possible events to send with conditions, weights, and targeting parameters.\n\nProperties:\n• min_activation_range (float)\n• max_activation_range (float)\n• cooldown_time (float)\n• cast_duration (float)\n• particle_color (string)\n• weight (float)\n• filters (object)\n• start_sound_event (string)\n• ... and 1 more properties",
+      "description": "List of possible events to send with conditions, weights, and targeting parameters.",
       "type": "array",
       "items": {
         "type": "object",
@@ -53,7 +53,7 @@
           },
           "sequence": {
             "title": "Sequence",
-            "description": "List of events to send in order with timing.\n\nProperties:\n• base_delay (float)\n• event (string)\n• sound_event (string)",
+            "description": "List of events to send in order with timing.",
             "type": "array",
             "items": {
               "type": "object",
@@ -92,7 +92,7 @@
     },
     "sequence": {
       "title": "Sequence",
-      "description": "List of events to send\n\nProperties:\n• base_delay (float) = 0\n• event\n• sound_event",
+      "description": "List of events to send",
       "type": "array",
       "items": {
         "type": "object",

@@ -7,7 +7,7 @@
   "properties": {
     "biome_music": {
       "title": "Biome/State Music",
-      "description": "Music configuration keyed by biome identifier or game state (e.g., 'forest', 'desert', 'menu', 'creative', 'credits').\n\nProperties:\n• event_name (string)\n• min_delay (int) = 60\n• max_delay (int) = 180",
+      "description": "Music configuration keyed by biome identifier or game state (e.g., 'forest', 'desert', 'menu', 'creative', 'credits').",
       "type": "object",
       "additionalProperties": {
         "type": "object",

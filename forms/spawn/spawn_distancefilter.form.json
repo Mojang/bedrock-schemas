@@ -1,6 +1,8 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "Spawn DistanceFilter",
+  "title": "Distance Filter",
+  "description": "Controls spawning based on distance from the nearest player. Mobs typically spawn within a certain radius around players (24-128 blocks) and despawn when players move too far away.",
   "summarizer": {
     "phrases": [
       {
@@ -42,7 +44,5 @@
       "dataType": "int",
       "defaultValue": 24
     }
-  ],
-  "description": "Controls spawning based on distance from the nearest player. Mobs typically spawn within a certain radius around players (24-128 blocks) and despawn when players move too far away.",
-  "title": "Spawn DistanceFilter"
+  ]
 }

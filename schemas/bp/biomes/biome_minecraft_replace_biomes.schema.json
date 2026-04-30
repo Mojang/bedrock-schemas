@@ -6,7 +6,7 @@
   "properties": {
     "replacements": {
       "title": "Replacements",
-      "description": "List of biome replacement configurations. Retroactively adding a new replacement to the front of this list will cause the world generation to change. Please add any new replacements to the end of the list.\n\nProperties:\n• amount (float)\n• dimension (string)\n• noise_frequency_scale (float)\n• targets",
+      "description": "List of biome replacement configurations. Retroactively adding a new replacement to the front of this list will cause the world generation to change. Please add any new replacements to the end of the list.",
       "type": "array",
       "items": {
         "$ref": "./biome_biome_replacement.schema.json"

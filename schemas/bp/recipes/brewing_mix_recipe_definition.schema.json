@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Brewing Mix Recipe Definition",
-  "description": "The brewing mix recipe definition container.\n\nProperties:\n• description ({ identifier })\n• tags (string[])\n• input (string)\n• reagent (string)\n• output (string)",
+  "description": "The brewing mix recipe definition container.",
   "type": "object",
   "properties": {
     "description": {
       "title": "Description",
-      "description": "The recipe description containing identifier.\n\nProperties:\n• identifier (string)",
+      "description": "The recipe description containing identifier.",
       "type": "object",
       "properties": {
         "identifier": {

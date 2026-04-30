@@ -6,7 +6,7 @@
   "properties": {
     "additional_spawn_range": {
       "title": "Additional Spawn Range",
-      "description": "Additional random range of entities to spawn, defaults to 0, 0 when not set\n\nProperties:\n• max (int) = 0\n• min (int) = 0",
+      "description": "Additional random range of entities to spawn, defaults to 0, 0 when not set",
       "anyOf": [
         {
           "type": "integer"
@@ -66,7 +66,7 @@
           "type": "object"
         }
       ],
-      "description": "Conditions that need to be met for the behavior to start.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Conditions that need to be met for the behavior to start."
     },
     "inherit_parent_name": {
       "title": "Inherit Parent Name",

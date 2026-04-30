@@ -158,7 +158,7 @@
         }
       ],
       "title": "Triggers",
-      "description": "List of triggers with the events to call when taking specific kinds of damage.\n\nProperties:\n• cause (string) = none\n• damage_modifier (float) = 0\n• damage_multiplier (float) = 1\n• deals_damage (boolean) = false\n• on_damage\n• on_damage_sound_event\n• filters\n• event (string)\n\nSample values:\n• allay: [{\"deals_damage\":\"no\",\"on_damage\":{\"filters\":{\"...\n• bat: {\"cause\":\"fall\",\"deals_damage\":\"no\"}\n• breeze: [{\"cause\":\"fall\",\"deals_damage\":\"no\"},{\"cause\":..."
+      "description": "List of triggers with the events to call when taking specific kinds of damage.\n\nSample values:\n• allay: [{\"deals_damage\":\"no\",\"on_damage\":{\"filters\":{\"...\n• bat: {\"cause\":\"fall\",\"deals_damage\":\"no\"}\n• breeze: [{\"cause\":\"fall\",\"deals_damage\":\"no\"},{\"cause\":..."
     }
   }
 }

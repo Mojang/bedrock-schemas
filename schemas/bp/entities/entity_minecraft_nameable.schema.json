@@ -23,7 +23,7 @@
     },
     "name_actions": {
       "title": "Name Actions",
-      "description": "Describes the special names for this entity and the events to call when the entity acquires those names\n\nProperties:\n• name_filter (string)\n• on_named",
+      "description": "Describes the special names for this entity and the events to call when the entity acquires those names",
       "type": "array",
       "items": {
         "type": "object",

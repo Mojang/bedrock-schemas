@@ -13,10 +13,6 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Actor Resource Definition (v1.8.0) 
- * (actor_resource_definition)
- * Defines an entity client resource definition document with
- * format_version 1.8.0.
  */
 export default interface ActorResourceDefinition {
 

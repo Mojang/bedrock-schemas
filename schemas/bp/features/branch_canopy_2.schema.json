@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Branch Canopy",
-  "description": "Configuration object for the canopy.\n\nProperties:\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• acacia_canopy ({ canopy_size, simplify_canopy })\n• cherry_canopy ({ trunk_width })\n• fancy_canopy ({ height, radius })\n• mega_canopy ({ base_radius, core_width, simplify_canopy })\n• mega_pine_canopy ({ base_radius, core_width })\n• pine_canopy ({ base_radius })\n• ... and 2 more properties",
+  "description": "Configuration object for the canopy.",
   "type": "object",
   "properties": {
     "canopy": {
@@ -29,7 +29,7 @@
           "canopy_decoration": {
             "$ref": "./canopy_decoration_4.schema.json",
             "title": "Canopy Decoration",
-            "description": "Configuration object for the canopy decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+            "description": "Configuration object for the canopy decoration.",
             "defaultSnippets": [
               {
                 "label": "Canopy Decoration",

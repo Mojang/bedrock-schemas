@@ -6,7 +6,7 @@
   "properties": {
     "damage_conditions": {
       "title": "Damage Conditions",
-      "description": "List of damage conditions that when met can cause damage to the entity.\n\nProperties:\n• cause (string)\n• damage_per_tick (int) = 1\n• filters\n\nSample values:\n• allay: [{\"cause\":\"lava\",\"damage_per_tick\":4,\"filters\":...",
+      "description": "List of damage conditions that when met can cause damage to the entity.\n\nSample values:\n• allay: [{\"cause\":\"lava\",\"damage_per_tick\":4,\"filters\":...",
       "type": "array",
       "items": {
         "type": "object",

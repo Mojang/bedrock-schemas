@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Scripts",
-  "description": "Script definitions for the attachable, including initialization and animation triggers.\n\nProperties:\n• parent_setup\n• pre_animation\n• scale\n• animate\n• should_update_bones_and_effects_offscreen (boolean)\n• should_update_effects_offscreen (boolean)",
+  "description": "Script definitions for the attachable, including initialization and animation triggers.",
   "type": "object",
   "properties": {
     "parent_setup": {
@@ -65,7 +65,7 @@
         }
       ],
       "title": "Animate",
-      "description": "List of animations to play. Can be animation short names or objects with conditional playback.\n\nProperties:\n• animation_name (string)"
+      "description": "List of animations to play. Can be animation short names or objects with conditional playback."
     },
     "should_update_bones_and_effects_offscreen": {
       "title": "Should Update Bones And Effects Offscreen",

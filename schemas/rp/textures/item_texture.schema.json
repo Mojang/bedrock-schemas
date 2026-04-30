@@ -28,7 +28,7 @@
     },
     "texture_data": {
       "title": "Texture Data",
-      "description": "A collection of texture definitions keyed by texture name. Each entry maps a texture name to its source file(s).\n\nProperties:\n• textures (string[])",
+      "description": "A collection of texture definitions keyed by texture name. Each entry maps a texture name to its source file(s).",
       "type": "object",
       "additionalProperties": {
         "type": "object",

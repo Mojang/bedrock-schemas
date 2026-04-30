@@ -10,11 +10,6 @@
  * Entity Components Documentation - minecraft:rotation_axis_aligned
  * 
  * minecraft:rotation_axis_aligned Samples
-
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
-"minecraft:rotation_axis_aligned": {}
-
  */
 
 import * as jsoncommon from '../../../common';

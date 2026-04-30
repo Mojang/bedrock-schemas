@@ -6,7 +6,7 @@
   "properties": {
     "basic_render_parameters": {
       "title": "Basic Render Parameters",
-      "description": "The parameters MUST contain a material and texture.\n\nProperties:\n• material (string)\n• texture (string)",
+      "description": "The parameters MUST contain a material and texture.",
       "$ref": "./client_particles_particle_effect_basic_render_parameters.schema.json",
       "defaultSnippets": [
         {

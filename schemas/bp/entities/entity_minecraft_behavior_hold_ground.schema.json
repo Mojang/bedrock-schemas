@@ -6,7 +6,7 @@
   "properties": {
     "within_radius_event": {
       "title": "Within Radius Event",
-      "description": "Event to run when target is within the radius. This event is broadcasted if broadcast is true.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self",
+      "description": "Event to run when target is within the radius. This event is broadcasted if broadcast is true.",
       "type": "string"
     },
     "broadcast": {

@@ -6,7 +6,7 @@
   "properties": {
     "component_groups": {
       "title": "Component Groups",
-      "description": "Named groups of components that can be dynamically added/removed via events. Each key is a group name (e.g., 'minecraft:baby'), and the value contains components for that state.\n\nProperties:\n• minecraft:absorption (object)\n• minecraft:addrider (object)\n• minecraft:admire_item (object)\n• minecraft:ageable (object)\n• minecraft:ambient_sound_interval (object)\n• minecraft:anger_level (object)\n• minecraft:angry (object)\n• minecraft:annotation.break_door (object)\n• ... and 400 more properties",
+      "description": "Named groups of components that can be dynamically added/removed via events. Each key is a group name (e.g., 'minecraft:baby'), and the value contains components for that state.",
       "type": "object",
       "additionalProperties": {
         "$ref": "./entity_entity_component_definitions.schema.json"
@@ -14,7 +14,7 @@
     },
     "components": {
       "title": "Components",
-      "description": "The base components always active on this entity, defining its default behavior, attributes, and AI.\n\nProperties:\n• minecraft:absorption (object)\n• minecraft:addrider (object)\n• minecraft:admire_item (object)\n• minecraft:ageable (object)\n• minecraft:ambient_sound_interval (object)\n• minecraft:anger_level (object)\n• minecraft:angry (object)\n• minecraft:annotation.break_door (object)\n• ... and 400 more properties",
+      "description": "The base components always active on this entity, defining its default behavior, attributes, and AI.",
       "$ref": "./entity_entity_component_definitions.schema.json"
     },
     "description": {

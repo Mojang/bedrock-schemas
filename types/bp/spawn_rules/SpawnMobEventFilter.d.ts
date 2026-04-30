@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn MobEventFilter (Spawn MobEventFilter)
+ * Mob Event Filter (Spawn MobEventFilter)
  * Controls spawning based on whether a specific mob event is
  * active. Mob events are world-level toggles (like raids or
  * wandering traders) that can enable or disable certain spawn

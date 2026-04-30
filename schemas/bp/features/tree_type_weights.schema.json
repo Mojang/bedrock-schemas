@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Tree Type Weights",
-  "description": "Configuration object to pick a tree variant based on a weighted random number.\n\nProperties:\n• one_branch (int)\n• two_branches (int)\n• two_branches_and_trunk (int)",
+  "description": "Configuration object to pick a tree variant based on a weighted random number.",
   "type": "object",
   "properties": {
     "one_branch": {

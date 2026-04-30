@@ -311,7 +311,7 @@
           }
         }
       ],
-      "description": "Filters allow data objects to specify test criteria which allows their use. Filters can be defined by a single object of type (Filter Test), an array of tests, collection groups, or a combination of these objects.\n\nProperties:\n• domain (string)\n• operator (string)\n• subject (string)\n• test (string)\n• value (int)\n• all_of\n• any_of\n• none_of"
+      "description": "Filters allow data objects to specify test criteria which allows their use. Filters can be defined by a single object of type (Filter Test), an array of tests, collection groups, or a combination of these objects."
     },
     "minecraft:spawns_on_block_filter": {
       "anyOf": [
@@ -377,8 +377,8 @@
       "description": "Specifies permutation types for spawning. Can be a single object or an array of permutation objects."
     },
     "minecraft:brightness_filter": {
-      "title": "Minecraft Brightness Filter",
-      "description": "\n\nProperties:\n• adjust_for_weather (boolean) = false\n• max (int) = 15\n• min (int) = 0",
+      "title": "Brightness Filter",
+      "description": "Restricts spawning based on light level. Hostile mobs typically spawn in darkness (0-7), passive mobs in brighter areas.",
       "$ref": "./spawn_spawn_brightnessfilter.schema.json",
       "defaultSnippets": [
         {
@@ -393,12 +393,12 @@
       ]
     },
     "minecraft:delay_filter": {
-      "title": "Minecraft Delay Filter",
-      "description": "\n\nProperties:\n• identifier (string) = \n• max (int) = 0\n• min (int) = 0\n• spawn_chance (int) = 100",
+      "title": "Delay Filter",
+      "description": "Delays entity spawning by a configurable time after conditions are met. Useful for cooldowns after mob deaths.",
       "$ref": "./spawn_spawn_delayfilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn DelayFilter",
+          "label": "Delay Filter",
           "description": "Delays entity spawning by a configurable amount of time after spawn conditions are met. Useful for preventing immediate respawning after mob deaths or creating spawn cooldowns for rare creatures.",
           "body": {
             "identifier": "",
@@ -410,12 +410,12 @@
       ]
     },
     "minecraft:density_limit": {
-      "title": "Minecraft Density Limit",
-      "description": "\n\nProperties:\n• surface (int) = -1\n• underground (int) = -1",
+      "title": "Density Limit",
+      "description": "Limits how many of this entity can exist in an area, with separate caps for surface and underground. Set -1 for unlimited.",
       "$ref": "./spawn_spawn_densitylimit.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn DensityLimit",
+          "label": "Density Limit",
           "description": "Limits how many of this entity type can exist in an area, with separate caps for surface and underground spawning. This prevents overpopulation and controls mob density for performance and gameplay balance.",
           "body": {
             "surface": -1,
@@ -425,12 +425,12 @@
       ]
     },
     "minecraft:difficulty_filter": {
-      "title": "Minecraft Difficulty Filter",
-      "description": "\n\nProperties:\n• max (string) = hard\n• min (string) = peaceful",
+      "title": "Difficulty Filter",
+      "description": "Restricts spawning to specific difficulty levels (Peaceful, Easy, Normal, Hard).",
       "$ref": "./spawn_spawn_difficultyfilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn DifficultyFilter",
+          "label": "Difficulty Filter",
           "description": "Restricts mob spawning to specific difficulty levels (Peaceful, Easy, Normal, Hard). For example, hostile mobs don't spawn on Peaceful, and some dangerous variants only appear on Hard difficulty.",
           "body": {
             "max": "hard",
@@ -440,12 +440,12 @@
       ]
     },
     "minecraft:distance_filter": {
-      "title": "Minecraft Distance Filter",
-      "description": "\n\nProperties:\n• max (int) = 128\n• min (int) = 24",
+      "title": "Distance Filter",
+      "description": "Controls spawning based on distance from the nearest player. Mobs typically spawn 24-128 blocks from players.",
       "$ref": "./spawn_spawn_distancefilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn DistanceFilter",
+          "label": "Distance Filter",
           "description": "Controls spawning based on distance from the nearest player. Mobs typically spawn within a certain radius around players (24-128 blocks) and despawn when players move too far away.",
           "body": {
             "max": 128,
@@ -455,12 +455,12 @@
       ]
     },
     "minecraft:height_filter": {
-      "title": "Minecraft Height Filter",
-      "description": "\n\nProperties:\n• max (int) = 128\n• min (int) = 24",
+      "title": "Height Filter",
+      "description": "Restricts spawning to specific Y-coordinate ranges. Useful for depth-based mob distribution.",
       "$ref": "./spawn_spawn_heightfilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn HeightFilter",
+          "label": "Height Filter",
           "description": "Restricts entity spawning to specific Y-coordinate ranges. Useful for creating depth-based mob distribution like slimes in swamps (below Y=40), or limiting surface mobs from spawning underground.",
           "body": {
             "max": 128,
@@ -470,20 +470,22 @@
       ]
     },
     "minecraft:is_experimental": {
-      "title": "Minecraft Is Experimental",
+      "title": "Is Experimental",
+      "description": "Marks this spawn rule as experimental. Only active when the corresponding experiment toggle is enabled.",
       "type": "object"
     },
     "minecraft:is_persistent": {
-      "title": "Minecraft Is Persistent",
+      "title": "Is Persistent",
+      "description": "When enabled, spawned entities will not despawn naturally. Used for mobs like villagers.",
       "type": "object"
     },
     "minecraft:mob_event_filter": {
-      "title": "Minecraft Mob Event Filter",
-      "description": "\n\nProperties:\n• event (string) = ",
+      "title": "Mob Event Filter",
+      "description": "Controls spawning based on whether a specific mob event (like raids or wandering traders) is active.",
       "$ref": "./spawn_spawn_mobeventfilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn MobEventFilter",
+          "label": "Mob Event Filter",
           "description": "Controls spawning based on whether a specific mob event is active. Mob events are world-level toggles (like raids or wandering traders) that can enable or disable certain spawn behaviors.",
           "body": {
             "event": ""
@@ -492,12 +494,12 @@
       ]
     },
     "minecraft:player_in_village_filter": {
-      "title": "Minecraft Player In Village Filter",
-      "description": "\n\nProperties:\n• distance (int)\n• village_border_tolerance (int) = 10",
+      "title": "Player In Village Filter",
+      "description": "Restricts spawning to when a player is near a village. Used for iron golems, cats, and raid mobs.",
       "$ref": "./spawn_spawn_playerinvillagefilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn PlayerInVillageFilter",
+          "label": "Player In Village Filter",
           "description": "Restricts spawning based on whether a player is within village boundaries. Used for village-specific spawns like iron golems, cats, and raid mobs that should only appear when players are near villages.",
           "body": {
             "distance": 0,
@@ -507,12 +509,12 @@
       ]
     },
     "minecraft:spawn_event": {
-      "title": "Minecraft Spawn Event",
-      "description": "\n\nProperties:\n• event (string) = ",
+      "title": "Spawn Event",
+      "description": "Triggers a specific entity event when the mob spawns. Commonly used to initialize entity behavior.",
       "$ref": "./spawn_spawn_mobeventfilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn MobEventFilter",
+          "label": "Mob Event Filter",
           "description": "Controls spawning based on whether a specific mob event is active. Mob events are world-level toggles (like raids or wandering traders) that can enable or disable certain spawn behaviors.",
           "body": {
             "event": ""
@@ -521,8 +523,8 @@
       ]
     },
     "minecraft:spawns_above_block_filter": {
-      "title": "Minecraft Spawns Above Block Filter",
-      "description": "\n\nProperties:\n• blocks (object) = []\n• distance (int) = 1",
+      "title": "Spawns Above Block Filter",
+      "description": "Filters spawning based on blocks above the spawn point.",
       "$ref": "./spawn_spawn_spawnaboveblockfilter.schema.json",
       "defaultSnippets": [
         {
@@ -536,20 +538,23 @@
       ]
     },
     "minecraft:spawns_on_surface": {
-      "title": "Minecraft Spawns On Surface",
+      "title": "Spawns On Surface",
+      "description": "When enabled, this entity can spawn on the world surface.",
       "type": "object"
     },
     "minecraft:spawns_underground": {
-      "title": "Minecraft Spawns Underground",
+      "title": "Spawns Underground",
+      "description": "When enabled, this entity can spawn underground (below the surface).",
       "type": "object"
     },
     "minecraft:spawns_underwater": {
-      "title": "Minecraft Spawns Underwater",
+      "title": "Spawns Underwater",
+      "description": "When enabled, this entity can spawn in water.",
       "type": "object"
     },
     "minecraft:weight": {
-      "title": "Minecraft Weight",
-      "description": "\n\nProperties:\n• default (int)\n• rarity (int) = 0",
+      "title": "Weight",
+      "description": "Relative spawn probability compared to other entities in the same biome. Higher values = more frequent spawns. 100 is typical for common mobs.",
       "$ref": "./spawn_spawn_weight.schema.json",
       "defaultSnippets": [
         {
@@ -563,12 +568,12 @@
       ]
     },
     "minecraft:world_age_filter": {
-      "title": "Minecraft World Age Filter",
-      "description": "\n\nProperties:\n• max (int) = -1\n• min (int) = 0",
+      "title": "World Age Filter",
+      "description": "Restricts spawning based on world age (in ticks). Useful for progressive difficulty where certain mobs appear later.",
       "$ref": "./spawn_spawn_worldagefilter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spawn WorldAgeFilter",
+          "label": "World Age Filter",
           "description": "Restricts spawning based on how long the world has existed (measured in ticks). Useful for progressive difficulty where certain mobs only start appearing after the world has been played for a minimum amount of time.",
           "body": {
             "max": -1,

@@ -12,7 +12,7 @@
     },
     "autoRejectItems": {
       "title": "AutoRejectItems",
-      "description": "The list of items that, if carried while interacting with the entity, will anger it.\n\nProperties:\n• item (string)",
+      "description": "The list of items that, if carried while interacting with the entity, will anger it.",
       "type": "array",
       "items": {
         "type": "object",
@@ -27,7 +27,7 @@
     },
     "feed_items": {
       "title": "Feed Items",
-      "description": "The list of items that can be used to increase the entity's temper and speed up the taming process.\n\nProperties:\n• item (string)\n• temper_mod (int) = 0\n\nSample values:\n• llama: [{\"item\":\"wheat\",\"temper_mod\":3},{\"item\":\"hay_b...",
+      "description": "The list of items that can be used to increase the entity's temper and speed up the taming process.\n\nSample values:\n• llama: [{\"item\":\"wheat\",\"temper_mod\":3},{\"item\":\"hay_b...",
       "type": "array",
       "items": {
         "type": "object",

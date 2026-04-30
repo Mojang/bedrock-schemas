@@ -6,7 +6,7 @@
   "properties": {
     "hitboxes": {
       "title": "Hitboxes",
-      "description": "List of hitboxes for melee and ranged hits against the entity.\n\nProperties:\n• width (float)\n• height (float)\n• pivot",
+      "description": "List of hitboxes for melee and ranged hits against the entity.",
       "type": "array",
       "items": {
         "type": "object",

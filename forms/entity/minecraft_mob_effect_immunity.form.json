@@ -42,14 +42,6 @@
               "oozing"
             ]
           }
-        ],
-        "/vanilla/behavior_pack/entities/sulfur_cube.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:mob_effect_immunity/",
-            "content": [
-              "oozing"
-            ]
-          }
         ]
       }
     }
@@ -78,16 +70,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/slime.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:mob_effect_immunity/",
-        "content": {
-          "mob_effects": [
-            "oozing"
-          ]
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/sulfur_cube.json": [
       {
         "path": "/minecraft:entity/components/minecraft:mob_effect_immunity/",
         "content": {

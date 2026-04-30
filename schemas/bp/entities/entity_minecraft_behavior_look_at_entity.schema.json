@@ -67,7 +67,7 @@
         }
       ],
       "title": "Filters",
-      "description": "Filter to determine the conditions for this mob to look at the entity\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)\n\nSample values:\n• evocation_illager: {\"test\":\"is_family\",\"subject\":\"other\",\"value\":\"..."
+      "description": "Filter to determine the conditions for this mob to look at the entity\n\nSample values:\n• evocation_illager: {\"test\":\"is_family\",\"subject\":\"other\",\"value\":\"..."
     },
     "look_distance": {
       "title": "Look Distance",
@@ -77,7 +77,7 @@
     },
     "look_time": {
       "title": "Look Time",
-      "description": "Time range to look at the nearest entity.\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+      "description": "Time range to look at the nearest entity.",
       "anyOf": [
         {
           "type": "number"

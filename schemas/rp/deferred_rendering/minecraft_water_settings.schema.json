@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "minecraft:water_settings",
-  "description": "minecraft:water_settings\n\nProperties:\n• description ({ identifier })\n• particle_concentrations ({ chlorophyll, suspended_sediment, cdom })\n• caustics ({ enabled, power, frame_length, ... })\n• waves ({ enabled, pull, frequency, ... })",
+  "description": "minecraft:water_settings",
   "type": "object",
   "properties": {
     "description": {
       "title": "description",
-      "description": "description\n\nProperties:\n• identifier (string)",
+      "description": "description",
       "type": "object",
       "properties": {
         "identifier": {
@@ -28,7 +28,7 @@
     "particle_concentrations": {
       "$ref": "./particle_concentrations.schema.json",
       "title": "particle_concentrations",
-      "description": "particle_concentrations\n\nProperties:\n• chlorophyll (float)\n• suspended_sediment (float)\n• cdom (float)",
+      "description": "particle_concentrations",
       "defaultSnippets": [
         {
           "label": "WaterConfig WaterConfigSettingsV0 WaterSettings PSY",
@@ -44,7 +44,7 @@
     "caustics": {
       "$ref": "./caustics.schema.json",
       "title": "caustics",
-      "description": "caustics\n\nProperties:\n• enabled (boolean)\n• power (int)\n• frame_length (float)\n• texture (string)\n• scale (float)",
+      "description": "caustics",
       "defaultSnippets": [
         {
           "label": "Mce Framebuilder CausticsParameters",
@@ -62,7 +62,7 @@
     "waves": {
       "$ref": "./waves.schema.json",
       "title": "waves",
-      "description": "waves\n\nProperties:\n• enabled (boolean)\n• pull (float)\n• frequency (float)\n• sampleWidth (float)\n• mix (float)\n• octaves (int)\n• speed_scaling (float)\n• depth (float)\n• ... and 4 more properties",
+      "description": "waves",
       "defaultSnippets": [
         {
           "label": "Mce Framebuilder WaterSurfaceParameters",

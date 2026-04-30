@@ -8,7 +8,7 @@
     "distribution": {
       "$ref": "./distribution.schema.json",
       "title": "Distribution",
-      "description": "Parameters controlling the initial scatter of the feature.\n\nProperties:\n• iterations (int) = 1\n• scatter_chance (float) = 1\n• coordinate_eval_order (enum) = xzy\n• x (int) = 0\n• y (int) = 0\n• z (int) = 0",
+      "description": "Parameters controlling the initial scatter of the feature.",
       "defaultSnippets": [
         {
           "label": "Distribution",

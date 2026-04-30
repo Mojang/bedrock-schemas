@@ -9,7 +9,7 @@
       "packFolder": "entities",
       "title": "Entity Behavior",
       "description": "A behavior pack entity definition document for Minecraft Bedrock Edition. This describes the complete JSON file structure including format_version and the minecraft:entity wrapper.",
-      "componentCount": 379
+      "componentCount": 381
     },
     {
       "folder": "bp/blocks",

@@ -6,7 +6,7 @@
   "properties": {
     "potions": {
       "title": "Potions",
-      "description": "A list of potions that this entity can drink. Each potion entry has the following parameters:\n\nProperties:\n• chance (float) = 1\n• filters\n• id (int) = -1",
+      "description": "A list of potions that this entity can drink. Each potion entry has the following parameters:",
       "type": "array",
       "items": {
         "type": "object",

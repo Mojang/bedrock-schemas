@@ -5,7 +5,7 @@
   "properties": {
     "conditions": {
       "title": "Conditions",
-      "description": "List of conditions where the block can be placed/survive\n\nProperties:\n• allowed_faces (object) = [\"down\",\"up\",\"north\"\n• block_filter = [] [maxLen: 64]",
+      "description": "List of conditions where the block can be placed/survive",
       "type": "array",
       "items": {
         "$ref": "./block_components_placement_condition.schema.json"

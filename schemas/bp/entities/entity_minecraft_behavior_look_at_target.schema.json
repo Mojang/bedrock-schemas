@@ -38,7 +38,7 @@
     },
     "look_time": {
       "title": "Look Time",
-      "description": "Time range to look at the nearest entity.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• axe_turret.behavior: [1,5]",
+      "description": "Time range to look at the nearest entity.\n\nSample values:\n• axe_turret.behavior: [1,5]",
       "anyOf": [
         {
           "type": "number"

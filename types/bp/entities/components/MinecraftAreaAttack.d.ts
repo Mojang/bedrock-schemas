@@ -214,4 +214,13 @@ export default interface MinecraftAreaAttack {
    */
   play_attack_sound?: boolean;
 
+  /**
+   * @remarks
+   * If the entity should use itself as the damage source when
+   * attacking a target. If set to `false`, the target entity won't
+   * retaliate and its `minecraft:damage_sensor` won't be able to
+   * identify the attacker as the damage source.
+   */
+  use_self_as_damage_source?: boolean;
+
 }

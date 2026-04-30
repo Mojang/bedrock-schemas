@@ -12,7 +12,7 @@
     },
     "particle_effect": {
       "title": "Particle Effect",
-      "description": "The particle effect definition containing description and components.\n\nProperties:\n• components (object)\n• curves ({ horizontal_range, input, nodes, ... })\n• description (object)\n• events (object)",
+      "description": "The particle effect definition containing description and components.",
       "$ref": "./client_particles_particle_effect.schema.json",
       "defaultSnippets": [
         {

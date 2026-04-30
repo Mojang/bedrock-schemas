@@ -28,12 +28,33 @@ export default interface SpawnBiomeConditions {
    */
   "minecraft:biome_filter"?: jsoncommon.MinecraftFilter;
 
+  /**
+   * @remarks
+   * Restricts spawning based on light level. Hostile mobs typically spawn
+   * in darkness (0-7), passive mobs in brighter areas.
+   */
   "minecraft:brightness_filter"?: SpawnBiomeConditionsMinecraftBrightnessFilter;
 
+  /**
+   * @remarks
+   * Delays entity spawning by a configurable time after conditions are
+   * met. Useful for cooldowns after mob deaths.
+   */
   "minecraft:delay_filter"?: SpawnBiomeConditionsMinecraftDelayFilter;
 
+  /**
+   * @remarks
+   * Limits how many of this entity can exist in an area, with
+   * separate caps for surface and underground. Set -1 for 
+   * unlimited.
+   */
   "minecraft:density_limit"?: SpawnBiomeConditionsMinecraftDensityLimit;
 
+  /**
+   * @remarks
+   * Restricts spawning to specific difficulty levels (Peaceful, Easy,
+   * Normal, Hard).
+   */
   "minecraft:difficulty_filter"?: SpawnBiomeConditionsMinecraftDifficultyFilter;
 
   /**
@@ -42,8 +63,18 @@ export default interface SpawnBiomeConditions {
    */
   "minecraft:disallow_spawns_in_bubble"?: object;
 
+  /**
+   * @remarks
+   * Controls spawning based on distance from the nearest player. Mobs
+   * typically spawn 24-128 blocks from players.
+   */
   "minecraft:distance_filter"?: SpawnBiomeConditionsMinecraftDistanceFilter;
 
+  /**
+   * @remarks
+   * Restricts spawning to specific Y-coordinate ranges. Useful for
+   * depth-based mob distribution.
+   */
   "minecraft:height_filter"?: SpawnBiomeConditionsMinecraftHeightFilter;
 
   /**
@@ -53,10 +84,25 @@ export default interface SpawnBiomeConditions {
    */
   "minecraft:herd"?: object;
 
+  /**
+   * @remarks
+   * Marks this spawn rule as experimental. Only active when the
+   * corresponding experiment toggle is enabled.
+   */
   "minecraft:is_experimental"?: object;
 
+  /**
+   * @remarks
+   * When enabled, spawned entities will not despawn naturally. Used
+   * for mobs like villagers.
+   */
   "minecraft:is_persistent"?: object;
 
+  /**
+   * @remarks
+   * Controls spawning based on whether a specific mob event (like
+   * raids or wandering traders) is active.
+   */
   "minecraft:mob_event_filter"?: SpawnBiomeConditionsMinecraftMobEventFilter;
 
   /**
@@ -66,10 +112,24 @@ export default interface SpawnBiomeConditions {
    */
   "minecraft:permute_type"?: object;
 
+  /**
+   * @remarks
+   * Restricts spawning to when a player is near a village. Used for
+   * iron golems, cats, and raid mobs.
+   */
   "minecraft:player_in_village_filter"?: SpawnBiomeConditionsMinecraftPlayerInVillageFilter;
 
+  /**
+   * @remarks
+   * Triggers a specific entity event when the mob spawns. Commonly used
+   * to initialize entity behavior.
+   */
   "minecraft:spawn_event"?: SpawnBiomeConditionsMinecraftSpawnEvent;
 
+  /**
+   * @remarks
+   * Filters spawning based on blocks above the spawn point.
+   */
   "minecraft:spawns_above_block_filter"?: SpawnBiomeConditionsMinecraftSpawnsAboveBlockFilter;
 
   /**
@@ -93,14 +153,38 @@ export default interface SpawnBiomeConditions {
    */
   "minecraft:spawns_on_block_prevented_filter"?: string[];
 
+  /**
+   * @remarks
+   * When enabled, this entity can spawn on the world surface.
+   */
   "minecraft:spawns_on_surface"?: object;
 
+  /**
+   * @remarks
+   * When enabled, this entity can spawn underground (below the
+   * surface).
+   */
   "minecraft:spawns_underground"?: object;
 
+  /**
+   * @remarks
+   * When enabled, this entity can spawn in water.
+   */
   "minecraft:spawns_underwater"?: object;
 
+  /**
+   * @remarks
+   * Relative spawn probability compared to other entities in the
+   * same biome. Higher values = more frequent spawns. 100 is
+   * typical for common mobs.
+   */
   "minecraft:weight"?: SpawnBiomeConditionsMinecraftWeight;
 
+  /**
+   * @remarks
+   * Restricts spawning based on world age (in ticks). Useful for
+   * progressive difficulty where certain mobs appear later.
+   */
   "minecraft:world_age_filter"?: SpawnBiomeConditionsMinecraftWorldAgeFilter;
 
 }

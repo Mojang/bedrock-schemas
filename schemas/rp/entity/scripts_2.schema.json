@@ -6,7 +6,7 @@
   "properties": {
     "variables": {
       "title": "Variables",
-      "description": "A list of variables that need certain settings applied to them.  Currently, for the client, only \"public\" is supported.\n\nProperties:\n• variable.[a-zA-Z_][a-zA-Z0-9_]* (string)",
+      "description": "A list of variables that need certain settings applied to them.  Currently, for the client, only \"public\" is supported.",
       "type": "object",
       "properties": {
         "variable.[a-zA-Z_][a-zA-Z0-9_]*": {

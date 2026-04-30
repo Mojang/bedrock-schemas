@@ -56,7 +56,7 @@
     },
     "properties": {
       "title": "Properties",
-      "description": "For 'entity_properties': the entity properties to match.\n\nProperties:\n• on_fire (boolean)\n• on_ground (boolean)",
+      "description": "For 'entity_properties': the entity properties to match.",
       "type": "object",
       "properties": {
         "on_fire": {
@@ -81,7 +81,7 @@
     },
     "match_tool": {
       "title": "Match Tool",
-      "description": "For 'match_tool': the tool item properties to match.\n\nProperties:\n• item (string)\n• enchantments",
+      "description": "For 'match_tool': the tool item properties to match.",
       "type": "object",
       "properties": {
         "item": {

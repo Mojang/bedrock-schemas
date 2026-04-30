@@ -59,7 +59,7 @@
         }
       ],
       "title": "Filters",
-      "description": "Conditions to be satisfied for the entity to teleport to its owner.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)\n\nSample values:\n• parrot: {\"all_of\":[{\"test\":\"owner_distance\",\"operator\":..."
+      "description": "Conditions to be satisfied for the entity to teleport to its owner.\n\nSample values:\n• parrot: {\"all_of\":[{\"test\":\"owner_distance\",\"operator\":..."
     },
     "priority": {
       "title": "Priority",

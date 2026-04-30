@@ -66,7 +66,7 @@
     },
     "presets": {
       "title": "Presets",
-      "description": "Defines how this entity behaves when leashed to another entity. The first preset which \"filter\" conditions are met will be applied; if none match, a default configuration is used instead.\n\nProperties:\n• filter\n• hard_distance (float) = 7\n• max_distance (float) = 12\n• rotation_adjustment (float) = 0\n• soft_distance (float) = 4\n• spring_type (string) = dampened\n\nSample values:\n• boat: [{\"filter\":{\"subject\":\"other\",\"test\":\"is_family...",
+      "description": "Defines how this entity behaves when leashed to another entity. The first preset which \"filter\" conditions are met will be applied; if none match, a default configuration is used instead.\n\nSample values:\n• boat: [{\"filter\":{\"subject\":\"other\",\"test\":\"is_family...",
       "type": "array",
       "items": {
         "type": "object",

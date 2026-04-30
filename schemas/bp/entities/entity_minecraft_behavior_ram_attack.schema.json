@@ -6,7 +6,7 @@
   "properties": {
     "on_start": {
       "title": "Start",
-      "description": "The event to trigger when attacking\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• goat: [{\"event\":\"start_event\",\"target\":\"self\"}]",
+      "description": "The event to trigger when attacking\n\nSample values:\n• goat: [{\"event\":\"start_event\",\"target\":\"self\"}]",
       "type": "array",
       "items": {
         "oneOf": [
@@ -39,7 +39,7 @@
     },
     "cooldown_range": {
       "title": "Cooldown Range",
-      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted ram attack.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• goat: {\"min\":30,\"max\":300}\n• goat: {\"min\":5,\"max\":15}",
+      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted ram attack.\n\nSample values:\n• goat: {\"min\":30,\"max\":300}\n• goat: {\"min\":5,\"max\":15}",
       "anyOf": [
         {
           "type": "number"

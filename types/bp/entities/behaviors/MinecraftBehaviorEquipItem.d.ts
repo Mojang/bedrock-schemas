@@ -24,13 +24,6 @@ Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "priority": 4
 }
 
-
-Sulfur Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sulfur_cube.json
-
-"minecraft:behavior.equip_item": {
-  "priority": 2
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -54,8 +47,6 @@ export default interface MinecraftBehaviorEquipItem {
    *
    * Parched: 4
    *
-   *
-   * Sulfur Cube: 2
    *
    */
   priority?: number;

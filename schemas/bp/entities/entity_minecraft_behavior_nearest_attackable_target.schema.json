@@ -153,7 +153,7 @@
                   "type": "object"
                 }
               ],
-              "description": "Conditions that make this entry in the list valid\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+              "description": "Conditions that make this entry in the list valid"
             },
             "max_dist": {
               "title": "Max Dist",
@@ -241,7 +241,7 @@
         }
       ],
       "title": "Entity Types",
-      "description": "List of entity types that this mob considers valid targets\n\nProperties:\n• cooldown (float) = 0\n• filters\n• max_dist (float) = 16\n• must_see (boolean) = false\n• must_see_forget_duration (float) = 3\n• reevaluate_description (boolean) = false\n• sprint_speed_multiplier (float) = 1\n• walk_speed_multiplier (float) = 1\n• ... and 1 more properties\n\nSample values:\n• blaze: [{\"filters\":{\"AND\":[{\"test\":\"is_family\",\"subjec...\n• bogged: [{\"filters\":{\"test\":\"is_family\",\"subject\":\"othe...\n• cave_spider: [{\"filters\":{\"any_of\":[{\"test\":\"is_family\",\"sub...",
+      "description": "List of entity types that this mob considers valid targets\n\nSample values:\n• blaze: [{\"filters\":{\"AND\":[{\"test\":\"is_family\",\"subjec...\n• bogged: [{\"filters\":{\"test\":\"is_family\",\"subject\":\"othe...\n• cave_spider: [{\"filters\":{\"any_of\":[{\"test\":\"is_family\",\"sub...",
       "defaultSnippets": [
         {
           "label": "Entity Types (object)",
@@ -274,7 +274,7 @@
     },
     "attack_interval": {
       "title": "Attack Interval",
-      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}",
+      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}",
       "anyOf": [
         {
           "type": "number"

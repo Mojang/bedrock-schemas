@@ -6,12 +6,12 @@
   "properties": {
     "components": {
       "title": "Components",
-      "description": "Components for this Biome.\n\nProperties:\n• minecraft:climate (object)\n• minecraft:creature_spawn_probability (object)\n• minecraft:humidity (object)\n• minecraft:map_tints (object)\n• minecraft:mountain_parameters (object)\n• minecraft:multinoise_generation_rules (object)\n• minecraft:overworld_generation_rules (object)\n• minecraft:overworld_height (object)\n• ... and 6 more properties",
+      "description": "Components for this Biome.",
       "$ref": "./biome_biome_components.schema.json"
     },
     "description": {
       "title": "Description",
-      "description": "Non-component settings, including the Biome name.\n\nProperties:\n• identifier (string)",
+      "description": "Non-component settings, including the Biome name.",
       "$ref": "./biome_biome_description.schema.json",
       "defaultSnippets": [
         {

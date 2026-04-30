@@ -12,13 +12,13 @@
     },
     "minecraft:attachable": {
       "title": "Attachable Definition",
-      "description": "The attachable definition container.\n\nProperties:\n• description ({ identifier, min_engine_version, item, ... })",
+      "description": "The attachable definition container.",
       "type": "object",
       "properties": {
         "description": {
           "$ref": "./description.schema.json",
           "title": "Description",
-          "description": "The attachable description containing all configuration.\n\nProperties:\n• identifier (string)\n• min_engine_version (int)\n• item (string)\n• materials\n• textures\n• geometry\n• animations\n• scripts ({ parent_setup, pre_animation, scale, ... })\n• ... and 5 more properties",
+          "description": "The attachable description containing all configuration.",
           "defaultSnippets": [
             {
               "label": "Description",

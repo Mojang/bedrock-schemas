@@ -30,7 +30,7 @@
     },
     "items": {
       "title": "Items",
-      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nProperties:\n• admire (boolean) = false\n• barter (boolean) = false\n• consume_item (boolean) = false\n• craft_into (string)\n• item (string)\n• max_amount (int) = -1\n• pickup_limit (int) = -1\n• pickup_only (boolean) = false\n• ... and 4 more properties\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...",
+      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...",
       "type": "array",
       "items": {
         "type": "object",

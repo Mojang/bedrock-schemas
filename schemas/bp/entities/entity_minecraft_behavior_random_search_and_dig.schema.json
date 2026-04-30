@@ -18,7 +18,7 @@
     },
     "cooldown_range": {
       "title": "Cooldown Range",
-      "description": "Goal cooldown range in seconds.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• sniffer: {\"min\":0,\"max\":0}",
+      "description": "Goal cooldown range in seconds.\n\nSample values:\n• sniffer: {\"min\":0,\"max\":0}",
       "anyOf": [
         {
           "type": "number"
@@ -38,7 +38,7 @@
     },
     "digging_duration_range": {
       "title": "Digging Duration Range",
-      "description": "Digging duration in seconds.\n\nProperties:\n• max (float) = 0\n• min (float) = 0\n\nSample values:\n• sniffer: {\"min\":8,\"max\":10}",
+      "description": "Digging duration in seconds.\n\nSample values:\n• sniffer: {\"min\":8,\"max\":10}",
       "anyOf": [
         {
           "type": "number"
@@ -76,7 +76,7 @@
     },
     "on_digging_start": {
       "title": "Digging Start",
-      "description": "Event to run when the goal ends searching has begins digging.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_digging_start\",\"target\":\"self\"}",
+      "description": "Event to run when the goal ends searching has begins digging.\n\nSample values:\n• sniffer: {\"event\":\"on_digging_start\",\"target\":\"self\"}",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -101,7 +101,7 @@
     },
     "on_fail_during_digging": {
       "title": "Fail During Digging",
-      "description": "Event to run when the goal failed while in digging state.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_fail_during_digging\",\"target\":\"self\"}",
+      "description": "Event to run when the goal failed while in digging state.\n\nSample values:\n• sniffer: {\"event\":\"on_fail_during_digging\",\"target\":\"self\"}",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -126,7 +126,7 @@
     },
     "on_fail_during_searching": {
       "title": "Fail During Searching",
-      "description": "Event to run when the goal failed while in searching state.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_fail_during_searching\",\"target\":\"s...",
+      "description": "Event to run when the goal failed while in searching state.\n\nSample values:\n• sniffer: {\"event\":\"on_fail_during_searching\",\"target\":\"s...",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -151,7 +151,7 @@
     },
     "on_item_found": {
       "title": "Item Found",
-      "description": "Event to run when the goal find a item.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_item_found\",\"target\":\"self\"}",
+      "description": "Event to run when the goal find a item.\n\nSample values:\n• sniffer: {\"event\":\"on_item_found\",\"target\":\"self\"}",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -176,7 +176,7 @@
     },
     "on_searching_start": {
       "title": "Searching Start",
-      "description": "Event to run when the goal starts searching.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_searching_start\",\"target\":\"self\"}",
+      "description": "Event to run when the goal starts searching.\n\nSample values:\n• sniffer: {\"event\":\"on_searching_start\",\"target\":\"self\"}",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -201,7 +201,7 @@
     },
     "on_success": {
       "title": "Success",
-      "description": "Event to run when searching and digging has ended.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self\n\nSample values:\n• sniffer: {\"event\":\"on_search_and_digging_success\",\"targe...",
+      "description": "Event to run when searching and digging has ended.\n\nSample values:\n• sniffer: {\"event\":\"on_search_and_digging_success\",\"targe...",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {
@@ -302,7 +302,7 @@
         }
       ],
       "title": "Target Blocks",
-      "description": "List of target block types the goal will look to dig on. Overrides the default list.\n\nProperties:\n• name (string) = \n• states (int) = {}\n• tags (string) = \n\nSample values:\n• sniffer: [\"minecraft:dirt\",\"minecraft:coarse_dirt\",\"mine..."
+      "description": "List of target block types the goal will look to dig on. Overrides the default list.\n\nSample values:\n• sniffer: [\"minecraft:dirt\",\"minecraft:coarse_dirt\",\"mine..."
     },
     "target_dig_position_offset": {
       "title": "Target Dig Position Offset",

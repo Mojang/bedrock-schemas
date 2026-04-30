@@ -59,7 +59,7 @@
         }
       ],
       "title": "Filters",
-      "description": "Conditions that need to be met for the behavior to start.\n\nProperties:\n• domain (object)\n• operator (object)\n• subject (object)\n• test (string)\n• value (object)"
+      "description": "Conditions that need to be met for the behavior to start."
     },
     "priority": {
       "title": "Priority",

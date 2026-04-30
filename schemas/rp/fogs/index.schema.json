@@ -13,7 +13,7 @@
     "minecraft:fog_settings": {
       "$ref": "./fog_settings.schema.json",
       "title": "Fog Settings",
-      "description": "The fog settings definition containing description, distance, and volumetric properties.\n\nProperties:\n• description ({ identifier })\n• distance ({ air, water, lava, ... })\n• volumetric (object)",
+      "description": "The fog settings definition containing description, distance, and volumetric properties.",
       "defaultSnippets": [
         {
           "label": "Fog Settings Definition",

@@ -1,13 +1,13 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Branches",
-  "description": "Configuration object for branches.\n\nProperties:\n• branch_canopy ({ canopy, mangrove_canopy, acacia_canopy, ... })\n• branch_length (int)\n• branch_altitude_factor (object)",
+  "description": "Configuration object for branches.",
   "type": "object",
   "properties": {
     "branch_canopy": {
       "$ref": "./branch_canopy_3.schema.json",
       "title": "Branch Canopy",
-      "description": "Configuration object for the canopy.\n\nProperties:\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• acacia_canopy ({ canopy_size, simplify_canopy })\n• cherry_canopy ({ trunk_width })\n• fancy_canopy ({ height, radius })\n• mega_canopy ({ base_radius, core_width, simplify_canopy })\n• mega_pine_canopy ({ base_radius, core_width })\n• pine_canopy ({ base_radius })\n• ... and 2 more properties"
+      "description": "Configuration object for the canopy."
     },
     "branch_length": {
       "title": "Branch Length",

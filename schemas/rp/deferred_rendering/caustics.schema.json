@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "caustics",
-  "description": "caustics\n\nProperties:\n• enabled (boolean)\n• power (int)\n• frame_length (float)\n• texture (string)\n• scale (float)",
+  "description": "caustics",
   "type": "object",
   "properties": {
     "enabled": {

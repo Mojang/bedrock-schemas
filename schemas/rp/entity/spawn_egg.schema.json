@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Spawn Egg",
-  "description": "Defines the appearance of the spawn egg for this entity in the creative inventory.\n\nProperties:\n• texture (string)\n• base_color (string)\n• overlay_color (string)\n• texture_index (int)",
+  "description": "Defines the appearance of the spawn egg for this entity in the creative inventory.",
   "type": "object",
   "properties": {
     "texture": {

@@ -41,7 +41,7 @@
         }
       ],
       "title": "Destination Container Types",
-      "description": "A list of block descriptors that should be container types to put items in. Can be simple block identifier strings or objects with name, states, and tags.\n\nProperties:\n• name (string) = \n• states (int) = {}\n• tags (string) = "
+      "description": "A list of block descriptors that should be container types to put items in. Can be simple block identifier strings or objects with name, states, and tags."
     },
     "source_container_types": {
       "anyOf": [
@@ -80,7 +80,7 @@
         }
       ],
       "title": "Source Container Types",
-      "description": "A list of block descriptors that should be container types to take items from. Can be simple block identifier strings or objects with name, states, and tags.\n\nProperties:\n• name (string) = \n• states (int) = {}\n• tags (string) = "
+      "description": "A list of block descriptors that should be container types to take items from. Can be simple block identifier strings or objects with name, states, and tags."
     },
     "allow_simultaneous_interaction": {
       "title": "Allow Simultaneous Interaction",

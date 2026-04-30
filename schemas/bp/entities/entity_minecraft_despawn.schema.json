@@ -6,7 +6,7 @@
   "properties": {
     "despawn_from_distance": {
       "title": "Despawn From Distance",
-      "description": "Specifies if the 'min_distance' and 'max_distance' are used in the standard despawn rules.\n\nProperties:\n• max_distance (int) = 128\n• min_distance (int) = 32\n\nSample values:\n• bat: {}",
+      "description": "Specifies if the 'min_distance' and 'max_distance' are used in the standard despawn rules.\n\nSample values:\n• bat: {}",
       "type": "object",
       "properties": {
         "max_distance": {

@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../common';
 
 /**
- * Spawn HeightFilter (Spawn HeightFilter)
+ * Height Filter (Spawn HeightFilter)
  * Restricts entity spawning to specific Y-coordinate ranges. Useful
  * for creating depth-based mob distribution like slimes in swamps
  * (below Y=40), or limiting surface mobs from spawning 

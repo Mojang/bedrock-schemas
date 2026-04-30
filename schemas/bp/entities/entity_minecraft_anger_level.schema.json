@@ -156,7 +156,7 @@
     },
     "on_increase_sounds": {
       "title": "On Increase Sounds",
-      "description": "Sounds to play when the entity is getting provoked. Evaluated in order. First matching condition wins\n\nProperties:\n• condition (string)\n• sound (string)\n\nSample values:\n• warden: [{\"condition\":\"query.anger_level(this) >= 40\",\"...",
+      "description": "Sounds to play when the entity is getting provoked. Evaluated in order. First matching condition wins\n\nSample values:\n• warden: [{\"condition\":\"query.anger_level(this) >= 40\",\"...",
       "type": "array",
       "items": {
         "type": "object",

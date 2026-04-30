@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "waves",
-  "description": "waves\n\nProperties:\n• enabled (boolean)\n• pull (float)\n• frequency (float)\n• sampleWidth (float)\n• mix (float)\n• octaves (int)\n• speed_scaling (float)\n• depth (float)\n• ... and 4 more properties",
+  "description": "waves",
   "type": "object",
   "properties": {
     "enabled": {

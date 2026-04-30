@@ -36,7 +36,7 @@
     },
     "on_arrival": {
       "title": "Arrival",
-      "description": "Event to run when the mob reaches their jobsite.\n\nProperties:\n• event (string) = \n• filters ({ domain, operator, subject, ... }) = {\"AND\":null,\"NOT\":nu\n• target (string) = self",
+      "description": "Event to run when the mob reaches their jobsite.",
       "$ref": "./entity_actordefinitiontrigger.schema.json",
       "defaultSnippets": [
         {

@@ -12,7 +12,7 @@
     },
     "minecraft:biome": {
       "title": "Minecraft Biome",
-      "description": "A single biome definition\n\nProperties:\n• components (object)\n• description (object)",
+      "description": "A single biome definition",
       "$ref": "./biome_biome_definition.schema.json",
       "defaultSnippets": [
         {

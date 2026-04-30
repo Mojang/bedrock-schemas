@@ -135,7 +135,7 @@
     },
     "description": {
       "title": "Description",
-      "description": "The description MUST contain an identifier and basic_render_parameters.\n\nProperties:\n• basic_render_parameters (object)\n• identifier (string)",
+      "description": "The description MUST contain an identifier and basic_render_parameters.",
       "$ref": "./client_particles_particle_effect_description.schema.json",
       "defaultSnippets": [
         {

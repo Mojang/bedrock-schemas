@@ -27,18 +27,18 @@
       "properties": {
         "branches": {
           "title": "Branches",
-          "description": "Configuration object for branches.\n\nProperties:\n• branch_canopy ({ canopy, mangrove_canopy, acacia_canopy, ... })\n• tree_type_weights ({ one_branch, two_branches, two_branches_and_trunk })",
+          "description": "Configuration object for branches.",
           "type": "object",
           "properties": {
             "branch_canopy": {
               "$ref": "./branch_canopy_2.schema.json",
               "title": "Branch Canopy",
-              "description": "Configuration object for the canopy.\n\nProperties:\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• acacia_canopy ({ canopy_size, simplify_canopy })\n• cherry_canopy ({ trunk_width })\n• fancy_canopy ({ height, radius })\n• mega_canopy ({ base_radius, core_width, simplify_canopy })\n• mega_pine_canopy ({ base_radius, core_width })\n• pine_canopy ({ base_radius })\n• ... and 2 more properties"
+              "description": "Configuration object for the canopy."
             },
             "tree_type_weights": {
               "$ref": "./tree_type_weights.schema.json",
               "title": "Tree Type Weights",
-              "description": "Configuration object to pick a tree variant based on a weighted random number.\n\nProperties:\n• one_branch (int)\n• two_branches (int)\n• two_branches_and_trunk (int)",
+              "description": "Configuration object to pick a tree variant based on a weighted random number.",
               "defaultSnippets": [
                 {
                   "label": "Tree Type Weights",
@@ -55,7 +55,7 @@
         },
         "trunk_height": {
           "title": "Trunk Height",
-          "description": "Configuration object for the trunk height.\n\nProperties:\n• base (int)\n• intervals (string[])",
+          "description": "Configuration object for the trunk height.",
           "type": "object",
           "properties": {
             "base": {
@@ -101,7 +101,7 @@
         "trunk_decoration": {
           "$ref": "./trunk_decoration_2.schema.json",
           "title": "Trunk Decoration",
-          "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+          "description": "Configuration object for the trunk decoration.",
           "defaultSnippets": [
             {
               "label": "Trunk Decoration",
@@ -154,7 +154,7 @@
         "trunk_decoration": {
           "$ref": "./trunk_decoration_5.schema.json",
           "title": "Trunk Decoration",
-          "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+          "description": "Configuration object for the trunk decoration.",
           "defaultSnippets": [
             {
               "label": "Trunk Decoration",
@@ -185,7 +185,7 @@
             }
           ],
           "title": "Can Be Submerged",
-          "description": "Specifies if the trunk can be submerged.\n\nProperties:\n• max_depth (int)"
+          "description": "Specifies if the trunk can be submerged."
         }
       }
     },
@@ -214,7 +214,7 @@
           "canopy_decoration": {
             "$ref": "./canopy_decoration_8.schema.json",
             "title": "Canopy Decoration",
-            "description": "Configuration object for the canopy decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+            "description": "Configuration object for the canopy decoration.",
             "defaultSnippets": [
               {
                 "label": "Canopy Decoration",
@@ -289,7 +289,7 @@
     "base_cluster": {
       "$ref": "./base_cluster.schema.json",
       "title": "Base Cluster",
-      "description": "Clusters of blocks randomly replaced with \"base_block\" around the base of the tree.\n\nProperties:\n• may_replace (string[])\n• num_clusters (int)\n• cluster_radius (int)",
+      "description": "Clusters of blocks randomly replaced with \"base_block\" around the base of the tree.",
       "defaultSnippets": [
         {
           "label": "Base Cluster",

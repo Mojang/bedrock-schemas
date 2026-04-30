@@ -6,7 +6,7 @@
   "properties": {
     "slots": {
       "title": "Slots",
-      "description": "List of slots and the item that can be equipped.\n\nProperties:\n• accepted_items (string[])\n• interact_text (string)\n• item (string)\n• on_equip\n• on_unequip\n• slot (int) = 0\n\nSample values:\n• llama: [{\"slot\":1,\"item\":\"carpet\",\"accepted_items\":[\"c...",
+      "description": "List of slots and the item that can be equipped.\n\nSample values:\n• llama: [{\"slot\":1,\"item\":\"carpet\",\"accepted_items\":[\"c...",
       "type": "array",
       "items": {
         "type": "object",

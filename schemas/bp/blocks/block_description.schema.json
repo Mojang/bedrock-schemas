@@ -12,7 +12,7 @@
     },
     "menu_category": {
       "title": "Menu Category",
-      "description": "Configures the block behavior in inventory and menu category\n\nProperties:\n• category (string)\n• group (string) = \n• is_hidden_in_commands (boolean) = false",
+      "description": "Configures the block behavior in inventory and menu category",
       "$ref": "./block_menu_category.schema.json",
       "defaultSnippets": [
         {
@@ -33,7 +33,7 @@
     },
     "traits": {
       "title": "Traits",
-      "description": "Change the connection, multiblock state, placement position and/or direction behaviors of a block\n\nProperties:\n• minecraft:connection (object) = {\"enabled_states\":[]\n• minecraft:multi_block (object) = {\"direction\":\"up\",\"e\n• minecraft:placement_direction (object) = {\"blocks_to_corner_w\n• minecraft:placement_position (object) = {\"enabled_states\":[]",
+      "description": "Change the connection, multiblock state, placement position and/or direction behaviors of a block",
       "$ref": "./block_traits.schema.json",
       "defaultSnippets": [
         {

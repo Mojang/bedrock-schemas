@@ -91,7 +91,19 @@ export default interface BiomeComponents {
 
   /**
    * @remarks
-   * Controls the materials used for terrain generation.
+   * Sub Surface Builders allow specifying a
+   * `minecraft:surface_builder` to be applied to biomes located
+   * underneath regular terrain surface. Note, however, that
+   * pre-existing surface builder types' processing have not been
+   * updated to accommodate the ability to specify them for
+   * sub-terrain height ranges, which may lead to unexpected results when
+   * using them.
+   */
+  "minecraft:subsurface_builder"?: BiomeComponentsMinecraftSubsurfaceBuilder;
+
+  /**
+   * @remarks
+   * Controls materials used for terrain generation.
    */
   "minecraft:surface_builder"?: BiomeComponentsMinecraftSurfaceBuilder;
 
@@ -605,6 +617,87 @@ export interface BiomeComponentsMinecraftReplaceBiomesReplacements {
    */
   targets: object[];
 
+}
+
+
+/**
+ * Biome Surface Builder (minecraft:surface_builder)
+ * Controls the materials used for terrain generation.
+ */
+export interface BiomeComponentsMinecraftSubsurfaceBuilder {
+
+  /**
+   * @remarks
+   * Controls the block types used for terrain generation.
+   */
+  builder: BiomeComponentsMinecraftSubsurfaceBuilderBuilder;
+
+}
+
+
+/**
+ * Biome Overworld (minecraft:overworld)
+ * Controls the blocks used for the default Minecraft Overworld terrain
+ * generation.
+ */
+export interface BiomeComponentsMinecraftSubsurfaceBuilderBuilder {
+
+  /**
+   * @remarks
+   * Controls the block type used deep underground in this biome
+   */
+  foundation_material: string;
+
+  /**
+   * @remarks
+   * Controls the block type used in a layer below the surface of
+   * this biome
+   */
+  mid_material: string;
+
+  /**
+   * @remarks
+   * Controls how deep below the world water level the floor should
+   * occur
+   */
+  sea_floor_depth: number;
+
+  /**
+   * @remarks
+   * Controls the block type used as a floor for bodies of water in
+   * this biome
+   */
+  sea_floor_material: string;
+
+  /**
+   * @remarks
+   * Controls the block type used for the bodies of water in this
+   * biome
+   */
+  sea_material: string;
+
+  /**
+   * @remarks
+   * Controls the block type used for the surface of this biome
+   */
+  top_material: string;
+
+  /**
+   * @remarks
+   * Controls the type of surface builder to use
+   */
+  type: string;
+
+}
+
+
+export enum BiomeComponentsMinecraftSubsurfaceBuilderBuilderType {
+  minecraftCapped = `minecraft:capped`,
+  minecraftFrozenOcean = `minecraft:frozen_ocean`,
+  minecraftMesa = `minecraft:mesa`,
+  minecraftOverworld = `minecraft:overworld`,
+  minecraftSwamp = `minecraft:swamp`,
+  minecraftTheEnd = `minecraft:the_end`
 }
 
 

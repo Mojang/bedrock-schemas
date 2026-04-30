@@ -6,7 +6,7 @@
   "properties": {
     "genes": {
       "title": "Genes",
-      "description": "The list of genes that this entity has and will cross with a partner during breeding.\n\nProperties:\n• allele_range (int)\n• genetic_variants\n• mutation_rate (float) = -1\n• name (string)\n• use_simplified_breeding (boolean)\n\nSample values:\n• goat: [{\"name\":\"goat_variant\",\"use_simplified_breedin...",
+      "description": "The list of genes that this entity has and will cross with a partner during breeding.\n\nSample values:\n• goat: [{\"name\":\"goat_variant\",\"use_simplified_breedin...",
       "type": "array",
       "items": {
         "type": "object",
@@ -56,7 +56,7 @@
           },
           "genetic_variants": {
             "title": "Genetic Variants",
-            "description": "The list of genetic variants for this gene. These check for particular allele combinations and fire events when all of them are satisfied.\n\nProperties:\n• birth_event\n• both_allele (int) = -1\n• either_allele (int) = -1\n• hidden_allele (int) = -1\n• main_allele (int) = -1",
+            "description": "The list of genetic variants for this gene. These check for particular allele combinations and fire events when all of them are satisfied.",
             "type": "array",
             "items": {
               "type": "object",

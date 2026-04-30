@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Trunk Decoration",
-  "description": "Configuration object for the trunk decoration.\n\nProperties:\n• decoration_block (string)\n• decoration_blocks_sequence\n• decoration_chance ({ numerator, denominator })\n• num_steps (int)\n• step_direction (string)",
+  "description": "Configuration object for the trunk decoration.",
   "type": "object",
   "properties": {
     "decoration_block": {
@@ -39,11 +39,11 @@
         }
       ],
       "title": "Decoration Blocks Sequence",
-      "description": "A list of blocks and counts to place in sequence as decoration. Each entry specifies a block identifier and a count for how many to place. This replaces the legacy decoration_block and num_steps properties. If both formats are present, this property takes priority.\n\nProperties:\n• block (string)\n• count (int)"
+      "description": "A list of blocks and counts to place in sequence as decoration. Each entry specifies a block identifier and a count for how many to place. This replaces the legacy decoration_block and num_steps properties. If both formats are present, this property takes priority."
     },
     "decoration_chance": {
       "title": "Decoration Chance",
-      "description": "Probability of decorating on each step, specified as a fraction with numerator and denominator fields.\n\nProperties:\n• numerator (int)\n• denominator (int)",
+      "description": "Probability of decorating on each step, specified as a fraction with numerator and denominator fields.",
       "type": "object",
       "properties": {
         "numerator": {

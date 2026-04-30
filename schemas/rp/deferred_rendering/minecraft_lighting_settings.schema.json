@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "minecraft:lighting_settings",
-  "description": "minecraft:lighting_settings\n\nProperties:\n• description ({ identifier })\n• directional_lights ({ sun, moon, orbital_offset_degrees })\n• emissive ({ desaturation })\n• sky ({ intensity })\n• ambient ({ color, illuminance })",
+  "description": "minecraft:lighting_settings",
   "type": "object",
   "properties": {
     "description": {
       "title": "description",
-      "description": "description\n\nProperties:\n• identifier (string)",
+      "description": "description",
       "type": "object",
       "properties": {
         "identifier": {
@@ -28,7 +28,7 @@
     "directional_lights": {
       "$ref": "./directional_lights.schema.json",
       "title": "directional_lights",
-      "description": "directional_lights\n\nProperties:\n• sun ({ illuminance, color })\n• moon ({ illuminance, color })\n• orbital_offset_degrees (float)",
+      "description": "directional_lights",
       "defaultSnippets": [
         {
           "label": "LightingGroup LightingImpl<1,21,70> LightingSettings DirectionalLights",
@@ -41,7 +41,7 @@
     },
     "emissive": {
       "title": "emissive",
-      "description": "emissive\n\nProperties:\n• desaturation (float)",
+      "description": "emissive",
       "type": "object",
       "properties": {
         "desaturation": {
@@ -63,7 +63,7 @@
     },
     "sky": {
       "title": "sky",
-      "description": "sky\n\nProperties:\n• intensity (float)",
+      "description": "sky",
       "type": "object",
       "properties": {
         "intensity": {
@@ -86,7 +86,7 @@
     },
     "ambient": {
       "title": "ambient",
-      "description": "ambient\n\nProperties:\n• color (string)\n• illuminance (float)",
+      "description": "ambient",
       "type": "object",
       "properties": {
         "color": {

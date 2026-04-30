@@ -6,7 +6,7 @@
   "properties": {
     "excluded_items": {
       "title": "Excluded Items",
-      "description": "List of items that the entity should not equip.\n\nProperties:\n• item (string)\n\nSample values:\n• bogged: [{\"item\":\"minecraft:banner:15\"}]",
+      "description": "List of items that the entity should not equip.\n\nSample values:\n• bogged: [{\"item\":\"minecraft:banner:15\"}]",
       "type": "array",
       "items": {
         "type": "object",

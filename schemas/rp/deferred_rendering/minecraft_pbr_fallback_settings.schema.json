@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "minecraft:pbr_fallback_settings",
-  "description": "minecraft:pbr_fallback_settings\n\nProperties:\n• blocks ({ global_metalness_emissive_roughness })\n• actors ({ global_metalness_emissive_roughness })\n• particles ({ global_metalness_emissive_roughness })\n• items ({ global_metalness_emissive_roughness })",
+  "description": "minecraft:pbr_fallback_settings",
   "type": "object",
   "properties": {
     "blocks": {
@@ -62,7 +62,7 @@
         }
       ],
       "title": "blocks",
-      "description": "blocks\n\nProperties:\n• global_metalness_emissive_roughness (string)",
+      "description": "blocks",
       "defaultSnippets": [
         {
           "label": "Blocks (object)",
@@ -131,7 +131,7 @@
         }
       ],
       "title": "actors",
-      "description": "actors\n\nProperties:\n• global_metalness_emissive_roughness (string)",
+      "description": "actors",
       "defaultSnippets": [
         {
           "label": "Actors (object)",
@@ -200,7 +200,7 @@
         }
       ],
       "title": "particles",
-      "description": "particles\n\nProperties:\n• global_metalness_emissive_roughness (string)",
+      "description": "particles",
       "defaultSnippets": [
         {
           "label": "Particles (object)",
@@ -269,7 +269,7 @@
         }
       ],
       "title": "items",
-      "description": "items\n\nProperties:\n• global_metalness_emissive_roughness (string)",
+      "description": "items",
       "defaultSnippets": [
         {
           "label": "Items (object)",

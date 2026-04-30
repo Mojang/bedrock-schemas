@@ -6,7 +6,7 @@
   "properties": {
     "preferred_path_blocks": {
       "title": "Preferred Path Blocks",
-      "description": "A list of block types with their associated pathfinding costs. Each entry specifies blocks and their cost value.\n\nProperties:\n• cost (int)\n• blocks (string[])\n\nSample values:\n• iron_golem: [{\"blocks\":[\"grass_path\"],\"cost\":0},{\"blocks\":[...",
+      "description": "A list of block types with their associated pathfinding costs. Each entry specifies blocks and their cost value.\n\nSample values:\n• iron_golem: [{\"blocks\":[\"grass_path\"],\"cost\":0},{\"blocks\":[...",
       "type": "array",
       "items": {
         "type": "object",

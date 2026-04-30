@@ -6,7 +6,7 @@
   "properties": {
     "boost_items": {
       "title": "Boost Items",
-      "description": "List of items that can be used to boost while riding this entity.\n\nProperties:\n• damage (int)\n• item (string)\n• replace_item (string)\n\nSample values:\n• pig: [{\"item\":\"carrotOnAStick\",\"damage\":2,\"replace_i...\n• strider: [{\"item\":\"warped_fungus_on_a_stick\",\"damage\":1,...",
+      "description": "List of items that can be used to boost while riding this entity.\n\nSample values:\n• pig: [{\"item\":\"carrotOnAStick\",\"damage\":2,\"replace_i...\n• strider: [{\"item\":\"warped_fungus_on_a_stick\",\"damage\":1,...",
       "type": "array",
       "items": {
         "type": "object",
