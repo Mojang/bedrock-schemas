@@ -811,6 +811,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
   spit = `spit`,
   stalactitedriplava = `stalactitedriplava`,
   stalactitedripwater = `stalactitedripwater`,
+  sulfurcube = `sulfurcube`,
   terrain = `terrain`,
   totem = `totem`,
   townaura = `townaura`,
@@ -830,6 +831,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
 
 
 export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -950,6 +952,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -1041,6 +1044,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -1272,6 +1276,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -1322,6 +1327,7 @@ export enum MinecraftItemV1260ComponentsMinecraftDurabilitySensorDurabilityThres
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,
@@ -1740,6 +1746,7 @@ export interface MinecraftItemV1260ComponentsMinecraftRecord {
 
 
 export enum MinecraftItemV1260ComponentsMinecraftRecordSoundEvent {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -1860,6 +1867,7 @@ export enum MinecraftItemV1260ComponentsMinecraftRecordSoundEvent {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -1951,6 +1959,7 @@ export enum MinecraftItemV1260ComponentsMinecraftRecordSoundEvent {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -2182,6 +2191,7 @@ export enum MinecraftItemV1260ComponentsMinecraftRecordSoundEvent {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -2232,6 +2242,7 @@ export enum MinecraftItemV1260ComponentsMinecraftRecordSoundEvent {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,
@@ -2659,6 +2670,14 @@ export interface MinecraftItemV1260ComponentsMinecraftUseModifiers {
 
   /**
    * @remarks
+   * Controls how using the item triggers start using behavior. "if_first"
+   * only starts if no other component has started using yet; "always"
+   * always restarts using. Defaults to "if_first".
+   */
+  start_using?: string;
+
+  /**
+   * @remarks
    * Time, in seconds, that the item takes to use.
    * 
    * Sample Values:
@@ -2671,6 +2690,7 @@ export interface MinecraftItemV1260ComponentsMinecraftUseModifiers {
 
 
 export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -2791,6 +2811,7 @@ export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -2882,6 +2903,7 @@ export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -3113,6 +3135,7 @@ export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -3163,6 +3186,7 @@ export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,
@@ -3225,6 +3249,12 @@ export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartSound {
   water = `water`,
   whine = `whine`,
   windChargeBurst = `wind_charge.burst`
+}
+
+
+export enum MinecraftItemV1260ComponentsMinecraftUseModifiersStartUsing {
+  always = `always`,
+  ifFirst = `if_first`
 }
 
 

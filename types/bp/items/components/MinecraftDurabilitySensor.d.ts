@@ -141,6 +141,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsParticleType {
   spit = `spit`,
   stalactitedriplava = `stalactitedriplava`,
   stalactitedripwater = `stalactitedripwater`,
+  sulfurcube = `sulfurcube`,
   terrain = `terrain`,
   totem = `totem`,
   townaura = `townaura`,
@@ -160,6 +161,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsParticleType {
 
 
 export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
+  absorbBlock = `absorb_block`,
   activate = `activate`,
   addChest = `add.chest`,
   admire = `admire`,
@@ -280,6 +282,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   bottleDragonbreath = `bottle.dragonbreath`,
   bottleEmpty = `bottle.empty`,
   bottleFill = `bottle.fill`,
+  bounce = `bounce`,
   bow = `bow`,
   bowHit = `bow.hit`,
   break = `break`,
@@ -371,6 +374,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   dripWaterPointedDripstone = `drip.water.pointed_dripstone`,
   dropSlot = `drop.slot`,
   eat = `eat`,
+  ejectBlock = `eject_block`,
   elderguardianCurse = `elderguardian.curse`,
   elemconstructOpen = `elemconstruct.open`,
   enderchestClosed = `enderchest.closed`,
@@ -602,6 +606,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   pumpkinCarve = `pumpkin.carve`,
   purr = `purr`,
   purreow = `purreow`,
+  pushedByPlayer = `pushed_by_player`,
   raidHorn = `raid.horn`,
   ramImpact = `ram_impact`,
   ramImpactScreamer = `ram_impact.screamer`,
@@ -652,6 +657,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   shulkerboxOpen = `shulkerbox.open`,
   singleSwap = `single_swap`,
   sleep = `sleep`,
+  slimeLanding = `slime_landing`,
   smithingTableUse = `smithing_table.use`,
   sneeze = `sneeze`,
   sonicBoom = `sonic_boom`,

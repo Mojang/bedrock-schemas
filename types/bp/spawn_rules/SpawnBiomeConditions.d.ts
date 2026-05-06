@@ -256,17 +256,30 @@ export interface SpawnBiomeConditionsMinecraftBiomeFilter {
  */
 export interface SpawnBiomeConditionsMinecraftBrightnessFilter {
 
+  /**
+   * @remarks
+   * When true, brightness is adjusted for the current weather
+   * (rain/thunder reduce light levels).
+   */
   adjust_for_weather?: boolean;
 
+  /**
+   * @remarks
+   * Maximum light level (0-15) at which this entity can spawn.
+   */
   max?: number;
 
+  /**
+   * @remarks
+   * Minimum light level (0-15) at which this entity can spawn.
+   */
   min?: number;
 
 }
 
 
 /**
- * Spawn DelayFilter (Spawn DelayFilter)
+ * Delay Filter (Spawn DelayFilter)
  * Delays entity spawning by a configurable amount of time after
  * spawn conditions are met. Useful for preventing immediate respawning
  * after mob deaths or creating spawn cooldowns for rare 
@@ -286,7 +299,7 @@ export interface SpawnBiomeConditionsMinecraftDelayFilter {
 
 
 /**
- * Spawn DensityLimit (Spawn DensityLimit)
+ * Density Limit (Spawn DensityLimit)
  * Limits how many of this entity type can exist in an area, with
  * separate caps for surface and underground spawning. This prevents
  * overpopulation and controls mob density for performance and
@@ -302,7 +315,7 @@ export interface SpawnBiomeConditionsMinecraftDensityLimit {
 
 
 /**
- * Spawn DifficultyFilter (Spawn DifficultyFilter)
+ * Difficulty Filter (Spawn DifficultyFilter)
  * Restricts mob spawning to specific difficulty levels (Peaceful, Easy,
  * Normal, Hard). For example, hostile mobs don't spawn on
  * Peaceful, and some dangerous variants only appear on Hard
@@ -334,7 +347,7 @@ export enum SpawnBiomeConditionsMinecraftDifficultyFilterMin {
 
 
 /**
- * Spawn DistanceFilter (Spawn DistanceFilter)
+ * Distance Filter (Spawn DistanceFilter)
  * Controls spawning based on distance from the nearest player. Mobs
  * typically spawn within a certain radius around players (24-128
  * blocks) and despawn when players move too far away.
@@ -349,7 +362,7 @@ export interface SpawnBiomeConditionsMinecraftDistanceFilter {
 
 
 /**
- * Spawn HeightFilter (Spawn HeightFilter)
+ * Height Filter (Spawn HeightFilter)
  * Restricts entity spawning to specific Y-coordinate ranges. Useful
  * for creating depth-based mob distribution like slimes in swamps
  * (below Y=40), or limiting surface mobs from spawning 
@@ -365,7 +378,7 @@ export interface SpawnBiomeConditionsMinecraftHeightFilter {
 
 
 /**
- * Spawn MobEventFilter (Spawn MobEventFilter)
+ * Mob Event Filter (Spawn MobEventFilter)
  * Controls spawning based on whether a specific mob event is
  * active. Mob events are world-level toggles (like raids or
  * wandering traders) that can enable or disable certain spawn
@@ -379,7 +392,7 @@ export interface SpawnBiomeConditionsMinecraftMobEventFilter {
 
 
 /**
- * Spawn PlayerInVillageFilter (Spawn PlayerInVillageFilter)
+ * Player In Village Filter (Spawn PlayerInVillageFilter)
  * Restricts spawning based on whether a player is within village
  * boundaries. Used for village-specific spawns like iron golems, cats,
  * and raid mobs that should only appear when players are near
@@ -395,7 +408,7 @@ export interface SpawnBiomeConditionsMinecraftPlayerInVillageFilter {
 
 
 /**
- * Spawn MobEventFilter (Spawn MobEventFilter)
+ * Mob Event Filter (Spawn MobEventFilter)
  * Controls spawning based on whether a specific mob event is
  * active. Mob events are world-level toggles (like raids or
  * wandering traders) that can enable or disable certain spawn
@@ -446,7 +459,7 @@ export interface SpawnBiomeConditionsMinecraftWeight {
 
 
 /**
- * Spawn WorldAgeFilter (Spawn WorldAgeFilter)
+ * World Age Filter (Spawn WorldAgeFilter)
  * Restricts spawning based on how long the world has existed (measured
  * in ticks). Useful for progressive difficulty where certain mobs
  * only start appearing after the world has been played for a

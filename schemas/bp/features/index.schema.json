@@ -555,7 +555,7 @@
     "minecraft:structure_template_feature": {
       "$ref": "./structure_template_feature.schema.json",
       "title": "Structure Template Feature",
-      "description": "\n\nProperties:\n• description ({ identifier })\n• adjustment_radius (int)\n• facing_direction (string)\n• rotate_around_center (boolean)\n• constraints ({ grounded, unburied, block_intersection })",
+      "description": "\n\nProperties:\n• description ({ identifier })\n• adjustment_radius (int)\n• facing_direction (string)\n• rotate_around_center (boolean)\n• ground_level (int)\n• constraints ({ grounded, leveled, unburied, ... })",
       "defaultSnippets": [
         {
           "label": "Structure Template Feature",
@@ -565,6 +565,7 @@
             "adjustment_radius": 0,
             "facing_direction\"<\"north\", \"south\", \"east\", \"west\", \"random\"": "",
             "rotate_around_center": true,
+            "ground_level": 0,
             "constraints": ""
           }
         }
@@ -684,6 +685,25 @@
           }
         }
       }
+    },
+    "minecraft:height_difference_filter_feature": {
+      "$ref": "./height_difference_filter_feature.schema.json",
+      "title": "Height Difference Filter Feature",
+      "description": "\n\nProperties:\n• description ({ identifier })\n• min_required_upward_height_diff (int)\n• min_required_downward_height_diff (int)\n• max_allowed_upward_height_diff (int)\n• max_allowed_downward_height_diff (int)\n• search_radius (int)",
+      "defaultSnippets": [
+        {
+          "label": "Height Difference Filter Feature",
+          "description": "Create a Height Difference Filter Feature",
+          "body": {
+            "description": "",
+            "min_required_upward_height_diff": 0,
+            "min_required_downward_height_diff": 0,
+            "max_allowed_upward_height_diff": 0,
+            "max_allowed_downward_height_diff": 0,
+            "search_radius": 0
+          }
+        }
+      ]
     }
   },
   "required": [

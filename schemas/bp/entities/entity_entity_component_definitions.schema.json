@@ -4097,6 +4097,7 @@
               0
             ],
             "on_fire_time": 5,
+            "owner_launch_immunity_ticks": 5,
             "particle": "iconcrack",
             "potion_effect": -1,
             "power": 1.3,

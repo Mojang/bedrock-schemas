@@ -85,8 +85,20 @@ export default interface MinecraftStructureTemplateFeature {
 
   /**
    * @remarks
-   * If true, tries to rotate the structure around its center when
-   * placed in the world. Defaults to "false" if omitted.
+   * Specifies which Y coordinate of the structure is considered its
+   * ground level. This value determines which layer of the structure is
+   * checked by the "grounded" and "leveled" constraints and is used
+   * as a downward vertical offset during placement. If the value
+   * exceeds the structure's height, it is clamped to the maximum valid
+   * value and a content warning is emitted. Defaults to 0.
+   */
+  ground_level?: number;
+
+  /**
+   * @remarks
+   * If true, centers and rotates the structure around the placement
+   * position, overriding any specified horizontal "offset". Defaults to
+   * "false" if omitted.
    */
   rotate_around_center?: boolean;
 
@@ -106,9 +118,17 @@ export interface MinecraftStructureTemplateFeatureConstraints {
 
   /**
    * @remarks
-   * When specified, ensures the structure is on the ground.
+   * When specified, ensures the structure's ground level touches the
+   * ground.
    */
   grounded?: object;
+
+  /**
+   * @remarks
+   * When specified, ensures the structure's ground level is placed on
+   * mostly flat terrain.
+   */
+  leveled?: MinecraftStructureTemplateFeatureConstraintsLeveled;
 
   /**
    * @remarks
@@ -124,6 +144,32 @@ export interface MinecraftStructureTemplateFeatureConstraints {
 export interface MinecraftStructureTemplateFeatureConstraintsBlockIntersection {
 
   block_allowlistblock_whitelist: string[];
+
+  /**
+   * @remarks
+   * If true, only motion-blocking blocks within the structure are
+   * checked for intersections with blocks in
+   * "block_allowlist|block_whitelist". If false, all blocks in the
+   * structure except empty ones are checked for intersections, including
+   * air.
+   */
+  only_check_intersection_for_motion_blocking_blocks: boolean;
+
+}
+
+
+/**
+ */
+export interface MinecraftStructureTemplateFeatureConstraintsLeveled {
+
+  /**
+   * @remarks
+   * Maximum allowed height difference between the placement position and
+   * terrain samples taken halfway along each side of the structure. A
+   * valid terrain sample consists of a solid block with a
+   * non‑solid block above it. Defaults to 2.
+   */
+  max_steepness?: number;
 
 }
 

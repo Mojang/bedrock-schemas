@@ -156,6 +156,13 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
+   * [EXPERIMENTAL] Number of ticks after launch during which the
+   * projectile cannot hit its owner
+   */
+  owner_launch_immunity_ticks?: number;
+
+  /**
+   * @remarks
    * Particle to use upon collision
    */
   particle?: string;

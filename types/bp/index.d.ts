@@ -624,6 +624,7 @@ export { default as MinecraftConditionalList } from './features/MinecraftConditi
 export { default as MinecraftFossilFeature } from './features/MinecraftFossilFeature';
 export { default as MinecraftGeodeFeature } from './features/MinecraftGeodeFeature';
 export { default as MinecraftGrowingPlantFeature } from './features/MinecraftGrowingPlantFeature';
+export { default as MinecraftHeightDifferenceFilterFeature } from './features/MinecraftHeightDifferenceFilterFeature';
 export { default as MinecraftMultifaceFeature } from './features/MinecraftMultifaceFeature';
 export { default as MinecraftNetherCaveCarverFeature } from './features/MinecraftNetherCaveCarverFeature';
 export { default as MinecraftOreFeature } from './features/MinecraftOreFeature';

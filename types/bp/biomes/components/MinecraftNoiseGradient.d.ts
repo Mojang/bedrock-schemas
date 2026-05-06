@@ -26,13 +26,13 @@ export default interface MinecraftNoiseGradient {
    * associated with which blocks. The ranges provided are valid on
    * the interval [0, 1], and may overlap at their endpoints.
    */
-  noise_block_specifiers: object[];
+  noise_block_specifiers: MinecraftNoiseGradientNoiseBlockSpecifiers[];
 
   /**
    * @remarks
    * The Specification for the Noise used by the surface builder.
    */
-  noise_descriptor: object;
+  noise_descriptor: MinecraftNoiseGradientNoiseDescriptor;
 
   /**
    * @remarks
@@ -43,6 +43,84 @@ export default interface MinecraftNoiseGradient {
   non_replaceable_blocks?: string;
 
   type: string;
+
+}
+
+
+/**
+ * Biome NoiseBlockSpecifier (NoiseBlockSpecifier)
+ */
+export interface MinecraftNoiseGradientNoiseBlockSpecifiers {
+
+  /**
+   * @remarks
+   * The block to place if the noise sample satisfies the provided
+   * threshold/range
+   */
+  block: string;
+
+  /**
+   * @remarks
+   * The string identifier of the noise associated with this
+   * NoiseBlockSpecifier.
+   */
+  noise?: string;
+
+  /**
+   * @remarks
+   * The range of sampled noise value associated with the provided 
+   * Block.
+   */
+  range?: MinecraftNoiseGradientNoiseBlockSpecifiersRange;
+
+  /**
+   * @remarks
+   * The minimum sampled noise value associated with the provided 
+   * Block.
+   */
+  threshold?: number;
+
+}
+
+
+/**
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
+ */
+export interface MinecraftNoiseGradientNoiseBlockSpecifiersRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Biome NoiseDescriptor (NoiseDescriptor)
+ */
+export interface MinecraftNoiseGradientNoiseDescriptor {
+
+  /**
+   * @remarks
+   * Governs the attenuation of the first n octaves in the generated 
+   * noise.
+   */
+  amplitudes: number[];
+
+  /**
+   * @remarks
+   * Governs the general frequency characteristics of the generated noise.
+   * Lower value results in noise with lower frequency content.
+   */
+  first_octave: number;
+
+  /**
+   * @remarks
+   * The string used to initialize the noise. Has no impact on the
+   * qualitative aspects of the generated values.
+   */
+  name: string;
 
 }
 

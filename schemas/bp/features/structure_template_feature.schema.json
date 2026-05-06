@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Structure Template Feature",
-  "description": "\n\nProperties:\n• description ({ identifier })\n• adjustment_radius (int)\n• facing_direction (string)\n• rotate_around_center (boolean)\n• constraints ({ grounded, unburied, block_intersection })",
+  "description": "\n\nProperties:\n• description ({ identifier })\n• adjustment_radius (int)\n• facing_direction (string)\n• rotate_around_center (boolean)\n• ground_level (int)\n• constraints ({ grounded, leveled, unburied, ... })",
   "type": "object",
   "properties": {
     "description": {
@@ -37,8 +37,13 @@
     },
     "rotate_around_center": {
       "title": "Rotate Around Center",
-      "description": "If true, tries to rotate the structure around its center when placed in the world. Defaults to \"false\" if omitted.",
+      "description": "If true, centers and rotates the structure around the placement position, overriding any specified horizontal \"offset\". Defaults to \"false\" if omitted.",
       "type": "boolean"
+    },
+    "ground_level": {
+      "title": "Ground Level",
+      "description": "Specifies which Y coordinate of the structure is considered its ground level. This value determines which layer of the structure is checked by the \"grounded\" and \"leveled\" constraints and is used as a downward vertical offset during placement. If the value exceeds the structure's height, it is clamped to the maximum valid value and a content warning is emitted. Defaults to 0.",
+      "type": "integer"
     },
     "constraints": {
       "$ref": "./constraints.schema.json",
@@ -55,6 +60,7 @@
         "adjustment_radius": 0,
         "facing_direction\"<\"north\", \"south\", \"east\", \"west\", \"random\"": "",
         "rotate_around_center": true,
+        "ground_level": 0,
         "constraints": ""
       }
     }
