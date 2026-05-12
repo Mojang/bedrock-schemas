@@ -36,18 +36,20 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Look Around Behavior 
+ * Entity Random Look Around Behavior
  * (minecraft:behavior.random_look_around)
  * Allows the mob to randomly look around.
  */
 export default interface MinecraftBehaviorRandomLookAround {
+
+  control_flags?: string[];
 
   /**
    * @remarks
    * The range of time in seconds the mob will stay looking in a
    * random direction before looking elsewhere
    */
-  look_time?: number[];
+  look_time?: MinecraftBehaviorRandomLookAroundLookTime;
 
   /**
    * @remarks
@@ -79,5 +81,31 @@ export default interface MinecraftBehaviorRandomLookAround {
    *
    */
   priority?: number;
+
+  /**
+   * @remarks
+   * The probability of randomly looking around.
+   */
+  probability?: number;
+
+}
+
+
+export enum MinecraftBehaviorRandomLookAroundControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Item Components IntRange (IntRange)
+ * Has minimum and maximum integer values.
+ */
+export interface MinecraftBehaviorRandomLookAroundLookTime {
+
+  max?: number;
+
+  min?: number;
 
 }

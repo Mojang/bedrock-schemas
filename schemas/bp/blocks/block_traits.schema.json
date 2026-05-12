@@ -36,12 +36,12 @@
     },
     "minecraft:placement_direction": {
       "title": "Minecraft Placement Direction",
-      "description": "Adds the \"minecraft:cardinal_direction\", \"minecraft:facing_direction\" and/or \"minecraft:corner_and_cardinal_direction\" states and setter function to the block.",
+      "description": "Adds the \"minecraft:cardinal_direction\", \"minecraft:facing_direction\", \"minecraft:corner_and_cardinal_direction\" and/or \"minecraft:sixteen_way_rotation\" states and setter function to the block.",
       "$ref": "./block_placement_direction.schema.json",
       "defaultSnippets": [
         {
           "label": "Block Placement Direction",
-          "description": "Adds the \"minecraft:cardinal_direction\", \"minecraft:facing_direction\" and/or \"minecraft:corner_and_cardinal_direction\" states and setter function to the block.",
+          "description": "Adds the \"minecraft:cardinal_direction\", \"minecraft:facing_direction\", \"minecraft:corner_and_cardinal_direction\" and/or \"minecraft:sixteen_way_rotation\" states and setter function to the block.",
           "body": {
             "blocks_to_corner_with": [],
             "enabled_states": "",

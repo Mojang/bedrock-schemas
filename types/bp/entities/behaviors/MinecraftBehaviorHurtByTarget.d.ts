@@ -96,7 +96,8 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Hurt By Target Behavior (minecraft:behavior.hurt_by_target)
+ * Entity Hurt By Target Behavior 
+ * (minecraft:behavior.hurt_by_target)
  * Allows the mob to target another mob that hurts them.
  */
 export default interface MinecraftBehaviorHurtByTarget {
@@ -107,6 +108,8 @@ export default interface MinecraftBehaviorHurtByTarget {
    * damage
    */
   alert_same_type?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -136,6 +139,13 @@ export default interface MinecraftBehaviorHurtByTarget {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorHurtByTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

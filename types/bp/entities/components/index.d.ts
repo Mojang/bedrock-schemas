@@ -205,3 +205,4 @@ export { default as MinecraftVibrationListener } from './MinecraftVibrationListe
 export { default as MinecraftWalkAnimationSpeed } from './MinecraftWalkAnimationSpeed';
 export { default as MinecraftWantsJockey } from './MinecraftWantsJockey';
 export { default as MinecraftWaterMovement } from './MinecraftWaterMovement';
+export { default as MinecraftWitherTargetHighestDamage } from './MinecraftWitherTargetHighestDamage';

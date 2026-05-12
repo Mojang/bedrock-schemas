@@ -653,6 +653,10 @@
           "title": "Bucket.empty.fish"
         },
         {
+          "id": "bucket.empty.land_animal",
+          "title": "Bucket.empty.land animal"
+        },
+        {
           "id": "bucket.empty.lava",
           "title": "Bucket.empty.lava"
         },
@@ -667,6 +671,10 @@
         {
           "id": "bucket.fill.fish",
           "title": "Bucket.fill.fish"
+        },
+        {
+          "id": "bucket.fill.land_animal",
+          "title": "Bucket.fill.land animal"
         },
         {
           "id": "bucket.fill.lava",
@@ -1043,6 +1051,14 @@
         {
           "id": "gallop",
           "title": "Gallop"
+        },
+        {
+          "id": "geyser_eruption_active",
+          "title": "Geyser eruption active"
+        },
+        {
+          "id": "geyser_eruption_start",
+          "title": "Geyser eruption start"
         },
         {
           "id": "glass",
@@ -1925,6 +1941,10 @@
           "title": "Record.blocks"
         },
         {
+          "id": "record.bounce",
+          "title": "Record.bounce"
+        },
+        {
           "id": "record.cat",
           "title": "Record.cat"
         },
@@ -1955,6 +1975,10 @@
         {
           "id": "record.mellohi",
           "title": "Record.mellohi"
+        },
+        {
+          "id": "record.null",
+          "title": "Record.null"
         },
         {
           "id": "record.otherside",

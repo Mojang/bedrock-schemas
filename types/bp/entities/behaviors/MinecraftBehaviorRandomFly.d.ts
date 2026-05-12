@@ -28,7 +28,7 @@ Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Fly Behavior (minecraft:behavior.random_fly)
+ * Entity Random Fly Behavior (minecraft:behavior.random_fly)
  * Allows a mob to randomly fly around.
  */
 export default interface MinecraftBehaviorRandomFly {
@@ -54,6 +54,8 @@ export default interface MinecraftBehaviorRandomFly {
    *
    */
   can_land_on_trees?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -101,4 +103,11 @@ export default interface MinecraftBehaviorRandomFly {
 
   y_offset?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomFlyControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

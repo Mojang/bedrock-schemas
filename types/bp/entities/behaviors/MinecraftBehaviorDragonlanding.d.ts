@@ -22,11 +22,14 @@ Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Dragonlanding Behavior (minecraft:behavior.dragonlanding)
+ * Entity Dragonlanding Behavior 
+ * (minecraft:behavior.dragonlanding)
  * Allows the Dragon to stop flying and transition into perching 
  * mode.
  */
 export default interface MinecraftBehaviorDragonlanding {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -36,4 +39,11 @@ export default interface MinecraftBehaviorDragonlanding {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDragonlandingControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

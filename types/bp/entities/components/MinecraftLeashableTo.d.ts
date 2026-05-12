@@ -35,4 +35,11 @@ export default interface MinecraftLeashableTo {
    */
   can_retrieve_from?: boolean;
 
+  /**
+   * @remarks
+   * If true, all entities leashed to this entity are automatically unleashed
+   * when this component is removed.
+   */
+  unleash_on_removal?: boolean;
+
 }

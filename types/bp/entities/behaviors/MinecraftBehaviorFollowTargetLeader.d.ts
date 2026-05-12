@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Follow Target Leader Behavior
+ * Entity Follow Target Leader Behavior
  * (minecraft:behavior.follow_target_leader)
  * Allows mob to move towards its target leader.
  */
@@ -27,6 +27,8 @@ export default interface MinecraftBehaviorFollowTargetLeader {
    */
   always_look_for_leader?: boolean;
 
+  control_flags?: string[];
+
   /**
    * @remarks
    * Defines the distance in blocks the mob will stay from its target
@@ -39,7 +41,7 @@ export default interface MinecraftBehaviorFollowTargetLeader {
    * The filters to use when determining if a mob is a suitable leader
    * or not.
    */
-  leader_filters?: jsoncommon.MinecraftFilter;
+  leader_filters?: MinecraftBehaviorFollowTargetLeaderLeaderFilters;
 
   /**
    * @remarks
@@ -58,9 +60,60 @@ export default interface MinecraftBehaviorFollowTargetLeader {
 
   /**
    * @remarks
+   * Movement speed multiplier of the mob when using this AI Goal
+   */
+  speed_multiplier?: number;
+
+  /**
+   * @remarks
    * Defines the maximum distance in blocks a mob can get from its
    * target leader before giving up trying to follow it.
    */
   within_radius?: number;
+
+}
+
+
+export enum MinecraftBehaviorFollowTargetLeaderControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Leader Filters (leader_filters)
+ */
+export interface MinecraftBehaviorFollowTargetLeaderLeaderFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

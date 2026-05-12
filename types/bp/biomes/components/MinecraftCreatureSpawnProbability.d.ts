@@ -22,7 +22,7 @@ export default interface MinecraftCreatureSpawnProbability {
 
   /**
    * @remarks
-   * Probabiltity between [0.0, 0.75] of creatures spawning within the
+   * Probability between [0.0, 0.75] of creatures spawning within the
    * biome on chunk generation.
    */
   probability?: number;

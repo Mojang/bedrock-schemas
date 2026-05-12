@@ -6,7 +6,7 @@
   "properties": {
     "probability": {
       "title": "Probability",
-      "description": "Probabiltity between [0.0, 0.75] of creatures spawning within the biome on chunk generation.",
+      "description": "Probability between [0.0, 0.75] of creatures spawning within the biome on chunk generation.",
       "type": "number",
       "maximum": 0.75
     }

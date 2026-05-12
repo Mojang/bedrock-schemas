@@ -22,11 +22,14 @@ Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Dragontakeoff Behavior (minecraft:behavior.dragontakeoff)
+ * Entity Dragontakeoff Behavior 
+ * (minecraft:behavior.dragontakeoff)
  * Allows the dragon to leave perch mode and go back to flying 
  * around.
  */
 export default interface MinecraftBehaviorDragontakeoff {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -36,4 +39,11 @@ export default interface MinecraftBehaviorDragontakeoff {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDragontakeoffControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

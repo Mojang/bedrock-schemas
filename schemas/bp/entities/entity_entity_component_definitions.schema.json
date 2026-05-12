@@ -293,9 +293,10 @@
       "$ref": "./entity_minecraft_behavior_break_door.schema.json",
       "defaultSnippets": [
         {
-          "label": "Break Door Behavior",
+          "label": "Entity Break Door Behavior",
           "description": "Allows this mob to break doors.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -323,15 +324,31 @@
       "$ref": "./entity_minecraft_behavior_defend_trusted_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Defend Trusted Target Behavior",
+          "label": "Entity Defend Trusted Target Behavior",
           "description": "Allows the mob to target another mob that hurts an entity it trusts.",
           "body": {
-            "aggro_sound": "",
+            "aggro_sound": "undefined",
             "attack_interval": 0,
+            "control_flags": [],
+            "entity_types": [],
             "must_see": false,
             "must_see_forget_duration": 3,
-            "within_radius": 0,
-            "priority": 0
+            "on_defend_start": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0,
+            "within_radius": 0
           }
         }
       ]
@@ -342,9 +359,10 @@
       "$ref": "./entity_minecraft_behavior_door_interact.schema.json",
       "defaultSnippets": [
         {
-          "label": "Door Interact Behavior",
+          "label": "Entity Door Interact Behavior",
           "description": "Allows the mob to open and close doors.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -356,9 +374,10 @@
       "$ref": "./entity_minecraft_behavior_dragondeath.schema.json",
       "defaultSnippets": [
         {
-          "label": "Dragondeath Behavior",
+          "label": "Entity Dragondeath Behavior",
           "description": "Allows the dragon to go out with glory. This controls the Ender Dragon's death animation.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -370,9 +389,10 @@
       "$ref": "./entity_minecraft_behavior_dragonholdingpattern.schema.json",
       "defaultSnippets": [
         {
-          "label": "Dragonholdingpattern Behavior",
+          "label": "Entity Dragonholdingpattern Behavior",
           "description": "Allows the Dragon to fly around in a circle around the center podium.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -384,9 +404,10 @@
       "$ref": "./entity_minecraft_behavior_dragonlanding.schema.json",
       "defaultSnippets": [
         {
-          "label": "Dragonlanding Behavior",
+          "label": "Entity Dragonlanding Behavior",
           "description": "Allows the Dragon to stop flying and transition into perching mode.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -398,9 +419,10 @@
       "$ref": "./entity_minecraft_behavior_dragonscanning.schema.json",
       "defaultSnippets": [
         {
-          "label": "Dragonscanning Behavior",
+          "label": "Entity Dragonscanning Behavior",
           "description": "Allows the dragon to look around for a player to attack while in perch mode.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -412,9 +434,10 @@
       "$ref": "./entity_minecraft_behavior_dragontakeoff.schema.json",
       "defaultSnippets": [
         {
-          "label": "Dragontakeoff Behavior",
+          "label": "Entity Dragontakeoff Behavior",
           "description": "Allows the dragon to leave perch mode and go back to flying around.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -780,12 +803,14 @@
       "$ref": "./entity_minecraft_behavior_hurt_by_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Hurt By Target Behavior",
+          "label": "Entity Hurt By Target Behavior",
           "description": "Allows the mob to target another mob that hurts them.",
           "body": {
-            "alert_same_type": false,
+            "entity_types": [],
+            "control_flags": [],
             "hurt_owner": false,
-            "priority": 0
+            "priority": 0,
+            "alert_same_type": false
           }
         }
       ]
@@ -1269,11 +1294,11 @@
           "label": "Entity Nearest Attackable Target Behavior",
           "description": "Allows an entity to attack the closest target within a given subset of specific target types.",
           "body": {
-            "entity_types": [],
             "attack_interval": {
               "max": 0,
               "min": 0
             },
+            "entity_types": [],
             "attack_owner": false,
             "control_flags": [],
             "must_reach": false,
@@ -1299,11 +1324,13 @@
       "$ref": "./entity_minecraft_behavior_nearest_prioritized_attackable_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Nearest Prioritized Attackable Target Behavior",
+          "label": "Entity Nearest Prioritized Attackable Target Behavior",
           "description": "Allows the mob to check for and pursue the nearest valid target.",
           "body": {
             "attack_interval": 0,
-            "cooldown": 0,
+            "control_flags": [],
+            "entity_types": [],
+            "hurt_owner": false,
             "must_reach": false,
             "must_see": false,
             "must_see_forget_duration": 3,
@@ -1313,7 +1340,8 @@
             "scan_interval": 10,
             "set_persistent": false,
             "target_search_height": -1,
-            "within_radius": 0
+            "within_radius": 0,
+            "cooldown": 0
           }
         }
       ]
@@ -1340,10 +1368,11 @@
       "$ref": "./entity_minecraft_behavior_open_door.schema.json",
       "defaultSnippets": [
         {
-          "label": "Open Door Behavior",
+          "label": "Entity Open Door Behavior",
           "description": "Allows the mob to open doors. Requires the mob to be able to path through doors, otherwise the mob won't even want to try opening them.",
           "body": {
             "close_door_after": true,
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1355,9 +1384,11 @@
       "$ref": "./entity_minecraft_behavior_owner_hurt_by_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Owner Hurt By Target Behavior",
+          "label": "Entity Owner Hurt By Target Behavior",
           "description": "Allows the mob to target another mob that hurts their owner.",
           "body": {
+            "entity_types": [],
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1369,9 +1400,11 @@
       "$ref": "./entity_minecraft_behavior_owner_hurt_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Owner Hurt Target Behavior",
+          "label": "Entity Owner Hurt Target Behavior",
           "description": "Allows the mob to target a mob that is hurt by their owner.",
           "body": {
+            "control_flags": [],
+            "entity_types": [],
             "priority": 0
           }
         }
@@ -1513,15 +1546,16 @@
       "$ref": "./entity_minecraft_behavior_random_breach.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Breach Behavior",
+          "label": "Entity Random Breach Behavior",
           "description": "Allows the mob to randomly break surface of the water.",
           "body": {
+            "control_flags": [],
             "cooldown_time": 0,
             "interval": 120,
+            "priority": 0,
             "speed_multiplier": 1,
             "xz_dist": 10,
-            "y_dist": 7,
-            "priority": 0
+            "y_dist": 7
           }
         }
       ]
@@ -1532,15 +1566,16 @@
       "$ref": "./entity_minecraft_behavior_random_fly.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Fly Behavior",
+          "label": "Entity Random Fly Behavior",
           "description": "Allows a mob to randomly fly around.",
           "body": {
             "avoid_damage_blocks": true,
             "can_land_on_trees": true,
+            "control_flags": [],
+            "priority": 0,
             "speed_multiplier": 1,
             "xz_dist": 10,
             "y_dist": 7,
-            "priority": 0,
             "y_offset": 0
           }
         }
@@ -1576,12 +1611,18 @@
       "$ref": "./entity_minecraft_behavior_random_look_around.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Look Around Behavior",
+          "label": "Entity Random Look Around Behavior",
           "description": "Allows the mob to randomly look around.",
           "body": {
-            "max_angle_of_view_horizontal": 30,
-            "min_angle_of_view_horizontal": -30,
-            "priority": 0
+            "control_flags": [],
+            "look_time": {
+              "max": 40,
+              "min": 20
+            },
+            "max_angle_of_view_horizontal": 180,
+            "min_angle_of_view_horizontal": -180,
+            "priority": 0,
+            "probability": 0.019999999552965164
           }
         }
       ]
@@ -1592,20 +1633,21 @@
       "$ref": "./entity_minecraft_behavior_random_look_around_and_sit.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Look Around And Sit Behavior",
+          "label": "Entity Random Look Around And Sit Behavior",
           "description": "Allows the mob to randomly sit and look around for a duration. Note: Must have a sitting animation set up to use this.",
           "body": {
             "continue_if_leashed": false,
             "continue_sitting_on_reload": false,
-            "max_angle_of_view_horizontal": 30,
+            "control_flags": [],
+            "max_angle_of_view_horizontal": 180,
             "max_look_count": 2,
             "max_look_time": 40,
-            "min_angle_of_view_horizontal": -30,
+            "min_angle_of_view_horizontal": -180,
             "min_look_count": 1,
             "min_look_time": 20,
-            "probability": 0.02,
-            "random_look_around_cooldown": 0,
-            "priority": 0
+            "priority": 0,
+            "probability": 0.019999999552965164,
+            "random_look_around_cooldown": 0
           }
         }
       ]
@@ -1655,15 +1697,16 @@
       "$ref": "./entity_minecraft_behavior_random_swim.schema.json",
       "defaultSnippets": [
         {
-          "label": "Random Swim Behavior",
+          "label": "Entity Random Swim Behavior",
           "description": "Allows an entity to randomly move through water",
           "body": {
             "avoid_surface": true,
+            "control_flags": [],
             "interval": 120,
+            "priority": 0,
             "speed_multiplier": 1,
             "xz_dist": 10,
-            "y_dist": 7,
-            "priority": 0
+            "y_dist": 7
           }
         }
       ]
@@ -2197,9 +2240,10 @@
       "$ref": "./entity_minecraft_behavior_wither_random_attack_pos_goal.schema.json",
       "defaultSnippets": [
         {
-          "label": "Wither Random Attack Pos Goal Behavior",
+          "label": "Entity Wither Random Attack Pos Goal Behavior",
           "description": "Allows the wither to launch random attacks.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2211,9 +2255,11 @@
       "$ref": "./entity_minecraft_behavior_wither_target_highest_damage.schema.json",
       "defaultSnippets": [
         {
-          "label": "Wither Target Highest Damage Behavior",
+          "label": "Entity Wither Target Highest Damage Behavior",
           "description": "Allows the wither to focus its attacks on whichever mob has dealt the most damage to it.",
           "body": {
+            "control_flags": [],
+            "entity_types": [],
             "priority": 0
           }
         }
@@ -3299,7 +3345,8 @@
             "soft_distance": 4,
             "max_distance": 0,
             "can_be_cut": true,
-            "on_unleash_interact_only": false
+            "on_unleash_interact_only": false,
+            "unleash_on_removal": true
           }
         }
       ]
@@ -3313,7 +3360,8 @@
           "label": "Leashable To",
           "description": "Allows players to leash entities to this entity, retrieve entities already leashed to it, or free them using shears. For the last interaction to work, the leashed entities must have \"can_be_cut\" set to true in their \"minecraft:leashable\" component.",
           "body": {
-            "can_retrieve_from": false
+            "can_retrieve_from": false,
+            "unleash_on_removal": true
           }
         }
       ]
@@ -4702,7 +4750,19 @@
     },
     "minecraft:wither_target_highest_damage": {
       "title": "Minecraft Wither Target Highest Damage",
-      "type": "object"
+      "description": "Allows the wither to focus its attacks on whichever mob has dealt the most damage to it.",
+      "$ref": "./entity_minecraft_wither_target_highest_damage.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Wither Target Highest Damage",
+          "description": "Allows the wither to focus its attacks on whichever mob has dealt the most damage to it.",
+          "body": {
+            "control_flags": [],
+            "entity_types": [],
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:air_drag_modifier": {
       "title": "Minecraft Air Drag Modifier",
@@ -5449,7 +5509,33 @@
     },
     "minecraft:behavior.follow_target_leader": {
       "title": "Follow Target Leader Minecraft Behavior",
-      "type": "object"
+      "description": "Allows mob to move towards its target leader.",
+      "$ref": "./entity_minecraft_behavior_follow_target_leader.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Follow Target Leader Behavior",
+          "description": "Allows mob to move towards its target leader.",
+          "body": {
+            "always_look_for_leader": false,
+            "control_flags": [],
+            "follow_distance": 0,
+            "leader_filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "priority": 0,
+            "search_cooldown": 20,
+            "speed_multiplier": 1,
+            "within_radius": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.go_and_give_items_to_noteblock": {
       "title": "Go And Give Items To Noteblock Minecraft Behavior",
@@ -5949,7 +6035,54 @@
     },
     "minecraft:behavior.place_block": {
       "title": "Place Block Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the entity to place a block.",
+      "$ref": "./entity_minecraft_behavior_place_block.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Place Block Behavior",
+          "description": "AI goal that makes entities place blocks into the world, like Endermen placing their carried block or snow golems leaving snow trails. Configure which blocks can be placed, where they can be placed, and how often the entity attempts placement. Creates mobs that modify the environment.",
+          "body": {
+            "affected_by_griefing_rule": true,
+            "can_place": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "chance": 1,
+            "control_flags": [],
+            "on_place": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "placeable_carried_blocks": [],
+            "priority": 0,
+            "randomly_placeable_blocks": [],
+            "xz_range": {
+              "max": 2,
+              "min": -2
+            },
+            "y_range": {
+              "max": 3,
+              "min": 0
+            }
+          }
+        }
+      ]
     },
     "minecraft:behavior.play": {
       "title": "Play Minecraft Behavior",
@@ -6482,7 +6615,54 @@
     },
     "minecraft:behavior.take_block": {
       "title": "Take Block Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the entity to take a block from the world and carry it around.",
+      "$ref": "./entity_minecraft_behavior_take_block.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Take Block Behavior",
+          "description": "AI goal that makes entities pick up blocks from the world, like Endermen grabbing blocks to carry. Configure which blocks the entity can take and the search radius. Works with place_block behavior to create entities that relocate blocks or harvest materials from the environment.",
+          "body": {
+            "affected_by_griefing_rule": true,
+            "blocks": [],
+            "can_take": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "chance": 1,
+            "control_flags": [],
+            "on_take": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0,
+            "requires_line_of_sight": true,
+            "xz_range": {
+              "max": 2,
+              "min": -2
+            },
+            "y_range": {
+              "max": 3,
+              "min": 0
+            }
+          }
+        }
+      ]
     },
     "minecraft:behavior.take_flower": {
       "title": "Take Flower Minecraft Behavior",
@@ -6933,14 +7113,21 @@
     },
     "minecraft:memory_behavior.move_to_position": {
       "title": "Move To Position Minecraft Memory Behavior",
-      "type": "object"
+      "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
+      "$ref": "./entity_minecraft_memory_behavior_move_to_position.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Move To Position Memory Behavior",
+          "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
+          "body": {
+            "control_flags": [],
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:memory_sensor.find_nearest_block": {
       "title": "Find Nearest Block Minecraft Memory Sensor",
-      "type": "object"
-    },
-    "minecraft:memory_sensor.find_nearest_block_from": {
-      "title": "Find Nearest Block From Minecraft Memory Sensor",
       "type": "object"
     },
     "minecraft:memory_sensor.find_nearest_entity": {

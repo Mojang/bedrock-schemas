@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Break Door Behavior (minecraft:behavior.break_door)
+ * Entity Break Door Behavior (minecraft:behavior.break_door)
  * Allows this mob to break doors.
  * Note: Not currently used by any entities within Minecraft: Bedrock
  * Edition. In its place, the parameter `can_break_doors` has been
@@ -21,6 +21,8 @@ import * as jsoncommon from '../../../common';
  * break down doors.
  */
 export default interface MinecraftBehaviorBreakDoor {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -30,4 +32,11 @@ export default interface MinecraftBehaviorBreakDoor {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorBreakDoorControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

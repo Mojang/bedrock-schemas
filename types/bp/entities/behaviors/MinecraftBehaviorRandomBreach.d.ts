@@ -25,10 +25,13 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Breach Behavior (minecraft:behavior.random_breach)
+ * Entity Random Breach Behavior 
+ * (minecraft:behavior.random_breach)
  * Allows the mob to randomly break surface of the water.
  */
 export default interface MinecraftBehaviorRandomBreach {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -88,4 +91,11 @@ export default interface MinecraftBehaviorRandomBreach {
    */
   y_dist?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomBreachControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

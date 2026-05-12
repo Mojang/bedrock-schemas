@@ -9,6 +9,12 @@
       "description": "Allows players to retrieve entities that are leashed to this entity.",
       "type": "boolean",
       "default": false
+    },
+    "unleash_on_removal": {
+      "title": "Unleash On Removal",
+      "description": "If true, all entities leashed to this entity are automatically unleashed when this component is removed.",
+      "type": "boolean",
+      "default": true
     }
   }
 }

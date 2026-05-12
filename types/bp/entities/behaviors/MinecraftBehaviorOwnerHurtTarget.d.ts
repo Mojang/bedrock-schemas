@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Owner Hurt Target Behavior 
+ * Entity Owner Hurt Target Behavior
  * (minecraft:behavior.owner_hurt_target)
  * Allows the mob to target a mob that is hurt by their owner.
  */
 export default interface MinecraftBehaviorOwnerHurtTarget {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -36,6 +38,13 @@ export default interface MinecraftBehaviorOwnerHurtTarget {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorOwnerHurtTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

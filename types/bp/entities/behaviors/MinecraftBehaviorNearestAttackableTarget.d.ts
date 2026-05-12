@@ -247,7 +247,7 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    * Elder Guardian: {"max":1}
    *
    */
-  attack_interval?: MinecraftBehaviorNearestAttackableTargetAttackInterval;
+  attack_interval?: number[];
 
   attack_intervalattack_interval_min?: string;
 

@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Open Door Behavior (minecraft:behavior.open_door)
+ * Entity Open Door Behavior (minecraft:behavior.open_door)
  * Allows the mob to open doors. Requires the mob to be able to
  * path through doors, otherwise the mob won't even want to try
  * opening them.
@@ -25,9 +25,11 @@ export default interface MinecraftBehaviorOpenDoor {
   /**
    * @remarks
    * If true, the mob will close the door after opening it and going
-   * through it
+   * through it.
    */
   close_door_after?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -37,4 +39,11 @@ export default interface MinecraftBehaviorOpenDoor {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorOpenDoorControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

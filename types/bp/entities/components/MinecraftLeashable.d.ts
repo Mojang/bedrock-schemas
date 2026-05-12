@@ -116,6 +116,13 @@ export default interface MinecraftLeashable {
    */
   soft_distance?: number;
 
+  /**
+   * @remarks
+   * If true, the entity is unleashed when the component is 
+   * removed.
+   */
+  unleash_on_removal?: boolean;
+
 }
 
 

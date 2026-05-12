@@ -2372,8 +2372,9 @@
     {
       "id": "minecraft:behavior.follow_target_leader",
       "title": "Follow Target Leader Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows mob to move towards its target leader.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_follow_target_leader"
     },
     {
       "id": "minecraft:behavior.go_and_give_items_to_noteblock",
@@ -2503,8 +2504,9 @@
     {
       "id": "minecraft:behavior.place_block",
       "title": "Place Block Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows the entity to place a block.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_place_block"
     },
     {
       "id": "minecraft:behavior.play",
@@ -2641,8 +2643,9 @@
     {
       "id": "minecraft:behavior.take_block",
       "title": "Take Block Minecraft Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows the entity to take a block from the world and carry it around.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_behavior_take_block"
     },
     {
       "id": "minecraft:behavior.take_flower",
@@ -2747,18 +2750,13 @@
     {
       "id": "minecraft:memory_behavior.move_to_position",
       "title": "Move To Position Minecraft Memory Behavior",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_memory_behavior_move_to_position"
     },
     {
       "id": "minecraft:memory_sensor.find_nearest_block",
       "title": "Find Nearest Block Minecraft Memory Sensor",
-      "description": "Dynamic value",
-      "dataType": "object"
-    },
-    {
-      "id": "minecraft:memory_sensor.find_nearest_block_from",
-      "title": "Find Nearest Block From Minecraft Memory Sensor",
       "description": "Dynamic value",
       "dataType": "object"
     },

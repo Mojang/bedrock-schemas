@@ -22,11 +22,13 @@ Wither - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Wither Random Attack Pos Goal Behavior
+ * Entity Wither Random Attack Pos Goal Behavior
  * (minecraft:behavior.wither_random_attack_pos_goal)
  * Allows the wither to launch random attacks.
  */
 export default interface MinecraftBehaviorWitherRandomAttackPosGoal {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -40,4 +42,11 @@ export default interface MinecraftBehaviorWitherRandomAttackPosGoal {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorWitherRandomAttackPosGoalControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

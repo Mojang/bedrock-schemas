@@ -7,6 +7,36 @@
     "attack_interval|attack_interval_min": {
       "type": "string"
     },
+    "attack_interval": {
+      "oneOf": [
+        {
+          "type": "integer"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        {
+          "type": "object",
+          "properties": {
+            "min": {
+              "type": "integer",
+              "description": "Minimum value of the range"
+            },
+            "max": {
+              "type": "integer",
+              "description": "Maximum value of the range"
+            }
+          }
+        }
+      ],
+      "title": "Attack Interval",
+      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}"
+    },
     "entity_types": {
       "anyOf": [
         {
@@ -269,26 +299,6 @@
             "sprint_speed_multiplier": 1,
             "walk_speed_multiplier": 1
           }
-        }
-      ]
-    },
-    "attack_interval": {
-      "title": "Attack Interval",
-      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}",
-      "anyOf": [
-        {
-          "type": "number"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "number"
-          },
-          "minItems": 2,
-          "maxItems": 2
-        },
-        {
-          "$ref": "../../common/floatrange.schema.json"
         }
       ]
     },

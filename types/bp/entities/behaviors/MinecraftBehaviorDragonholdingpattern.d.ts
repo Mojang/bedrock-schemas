@@ -22,12 +22,14 @@ Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Dragonholdingpattern Behavior
+ * Entity Dragonholdingpattern Behavior
  * (minecraft:behavior.dragonholdingpattern)
  * Allows the Dragon to fly around in a circle around the center
  * podium.
  */
 export default interface MinecraftBehaviorDragonholdingpattern {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -41,4 +43,11 @@ export default interface MinecraftBehaviorDragonholdingpattern {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDragonholdingpatternControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

@@ -22,11 +22,13 @@ Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Dragondeath Behavior (minecraft:behavior.dragondeath)
+ * Entity Dragondeath Behavior (minecraft:behavior.dragondeath)
  * Allows the dragon to go out with glory. This controls the Ender
  * Dragon's death animation.
  */
 export default interface MinecraftBehaviorDragondeath {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -36,4 +38,11 @@ export default interface MinecraftBehaviorDragondeath {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDragondeathControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

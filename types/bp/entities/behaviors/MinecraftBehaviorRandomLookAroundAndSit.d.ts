@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Look Around And Sit Behavior
+ * Entity Random Look Around And Sit Behavior
  * (minecraft:behavior.random_look_around_and_sit)
  * Allows the mob to randomly sit and look around for a duration. Note:
  * Must have a sitting animation set up to use this.
@@ -34,6 +34,8 @@ export default interface MinecraftBehaviorRandomLookAroundAndSit {
    * The mob will stay sitting on reload.
    */
   continue_sitting_on_reload?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -87,7 +89,7 @@ export default interface MinecraftBehaviorRandomLookAroundAndSit {
 
   /**
    * @remarks
-   * The probability of randomly looking around/sitting.
+   * The probability of randomly looking around.
    */
   probability?: number;
 
@@ -97,4 +99,11 @@ export default interface MinecraftBehaviorRandomLookAroundAndSit {
    */
   random_look_around_cooldown?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomLookAroundAndSitControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

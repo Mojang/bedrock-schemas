@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Random Swim Behavior",
+  "title": "Entity Random Swim Behavior",
   "description": "Allows an entity to randomly move through water",
   "properties": {
     "avoid_surface": {
@@ -10,11 +10,29 @@
       "type": "boolean",
       "default": true
     },
+    "control_flags": {
+      "title": "Control Flags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
+      }
+    },
     "interval": {
       "title": "Interval",
       "description": "A random value to determine when to randomly move somewhere. This has a 1/interval chance to choose this goal\n\nSample values:\n• guardian: 80",
       "type": "integer",
       "default": 120
+    },
+    "priority": {
+      "title": "Priority",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• dolphin: 5\n• elder_guardian: 7",
+      "type": "integer",
+      "default": 0
     },
     "speed_multiplier": {
       "title": "Speed Multiplier",
@@ -33,11 +51,6 @@
       "description": "Distance in blocks that the mob will look up or down for a new spot to move to. Must be at least 1",
       "type": "integer",
       "default": 7
-    },
-    "priority": {
-      "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
     }
   }
 }

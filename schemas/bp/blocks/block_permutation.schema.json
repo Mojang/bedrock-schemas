@@ -6,7 +6,7 @@
   "properties": {
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• minecraft:crafting_table (object)\n• ... and 38 more properties",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 39 more properties",
       "$ref": "./block_components_components.schema.json",
       "defaultSnippets": [
         {

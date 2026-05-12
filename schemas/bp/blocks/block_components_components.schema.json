@@ -55,6 +55,20 @@
         }
       ]
     },
+    "minecraft:block_entity": {
+      "title": "Minecraft Block Entity",
+      "description": "Adds per-instance metadata for this block.",
+      "$ref": "./block_components_block_entity.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Components Block Entity",
+          "description": "Adds per-instance metadata for this block.",
+          "body": {
+            "dynamic_properties": false
+          }
+        }
+      ]
+    },
     "minecraft:breathability": {
       "title": "Minecraft Breathability",
       "description": "[DEPRECATED] \n\n*⚠️ Deprecated*",
@@ -448,7 +462,7 @@
           "type": "boolean"
         },
         {
-          "description": "\n\nProperties:\n• catch_chance_modifier (int) = 5\n• destroy_chance_modifier (int) = 20",
+          "description": "\n\nProperties:\n• catch_chance_modifier (int) = 5\n• destroy_chance_modifier (int) = 20\n• lava_flammable (string) = never",
           "type": "object",
           "properties": {
             "catch_chance_modifier": {
@@ -462,6 +476,16 @@
               "description": "A modifier affecting the chance that this block will be destroyed by flames when on fire. Values are greater than or equal to 0, with a higher number meaning more likely to be destroyed by fire. For a destroy_chance_modifier of 0, the block will never be destroyed by fire, and the fire will burn forever if the catch_chance_modifier is greater than 0. The default value of 20 is the same as that of Planks.",
               "type": "integer",
               "default": 20
+            },
+            "lava_flammable": {
+              "title": "Lava Flammable",
+              "description": "Determines lava fire consideration. \"always\" includes this block when lava attempts to spread fire\"\n\t\t\t\t\t\" (triggered by adjacent block changes), but normal fire-placement rules still apply. \"never\" excludes\"\n\t\t\t\t\t\" this block from that check.",
+              "type": "string",
+              "enum": [
+                "always",
+                "never"
+              ],
+              "default": "never"
             }
           },
           "defaultSnippets": [
@@ -470,7 +494,8 @@
               "description": "Describes the flammable properties for this block. If this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.",
               "body": {
                 "catch_chance_modifier": 5,
-                "destroy_chance_modifier": 20
+                "destroy_chance_modifier": 20,
+                "lava_flammable": "never"
               }
             }
           ]
@@ -484,7 +509,8 @@
           "description": "Describes the flammable properties for this block. If this component is omitted, the block will not be able to catch on fire naturally from neighbors, but it can still be directly ignited.",
           "body": {
             "catch_chance_modifier": 5,
-            "destroy_chance_modifier": 20
+            "destroy_chance_modifier": 20,
+            "lava_flammable": "never"
           }
         },
         {
@@ -515,7 +541,7 @@
           "type": "string"
         },
         {
-          "description": "\n\nProperties:\n• bone_visibility = {}\n• culling (string) = \n• culling_layer (string)\n• culling_shape (string) = \n• identifier (string)\n• uv_lock (object) = false",
+          "description": "\n\nProperties:\n• bone_visibility = {}\n• culling (string) = \n• culling_layer (string)\n• culling_shape (string) = \n• identifier (string)\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
           "type": "object",
           "properties": {
             "bone_visibility": {
@@ -576,6 +602,22 @@
               "title": "Identifier",
               "description": "The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: \"minecraft:geometry.full_block\" or \"minecraft:geometry.cross\".",
               "type": "string"
+            },
+            "n_way_visual_rotation": {
+              "title": "n Way Visual Rotation",
+              "description": "Optional object that maps x/y/z axes to block state names that drive visual-only geometry rotation.",
+              "$ref": "./block_components_nwayvisualrotation.schema.json",
+              "defaultSnippets": [
+                {
+                  "label": "Block Components NWayVisualRotation",
+                  "description": "Optional object that maps x/y/z axes to block state names that drive visual-only geometry rotation.",
+                  "body": {
+                    "x": "",
+                    "y": "",
+                    "z": ""
+                  }
+                }
+              ]
             },
             "uv_lock": {
               "title": "Uv Lock",

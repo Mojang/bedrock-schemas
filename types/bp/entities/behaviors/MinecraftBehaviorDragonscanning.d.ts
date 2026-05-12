@@ -22,11 +22,14 @@ Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Dragonscanning Behavior (minecraft:behavior.dragonscanning)
+ * Entity Dragonscanning Behavior 
+ * (minecraft:behavior.dragonscanning)
  * Allows the dragon to look around for a player to attack while in
  * perch mode.
  */
 export default interface MinecraftBehaviorDragonscanning {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -40,4 +43,11 @@ export default interface MinecraftBehaviorDragonscanning {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDragonscanningControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

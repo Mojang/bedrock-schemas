@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Nearest Prioritized Attackable Target Behavior
+ * Entity Nearest Prioritized Attackable Target Behavior
  * (minecraft:behavior.nearest_prioritized_attackable_target)
  * Allows the mob to check for and pursue the nearest valid 
  * target.
@@ -27,6 +27,8 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    * Time in seconds before selecting a target
    */
   attack_interval?: number;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -40,6 +42,12 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    * List of entity types that this mob considers valid targets
    */
   entity_types?: MinecraftBehaviorNearestPrioritizedAttackableTargetEntityTypes[];
+
+  /**
+   * @remarks
+   * If true, this mob will also attack mobs that hurt its owner.
+   */
+  hurt_owner?: boolean;
 
   /**
    * @remarks
@@ -66,7 +74,7 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
   /**
    * @remarks
    * Time in seconds for a valid target to stay targeted when it
-   * becomes and invalid target.
+   * becomes an invalid target.
    */
   persist_time?: number;
 
@@ -111,6 +119,13 @@ export default interface MinecraftBehaviorNearestPrioritizedAttackableTarget {
    */
   within_radius?: number;
 
+}
+
+
+export enum MinecraftBehaviorNearestPrioritizedAttackableTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

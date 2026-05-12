@@ -205,6 +205,7 @@ export { default as MinecraftVibrationListener } from './entities/components/Min
 export { default as MinecraftWalkAnimationSpeed } from './entities/components/MinecraftWalkAnimationSpeed';
 export { default as MinecraftWantsJockey } from './entities/components/MinecraftWantsJockey';
 export { default as MinecraftWaterMovement } from './entities/components/MinecraftWaterMovement';
+export { default as MinecraftWitherTargetHighestDamage } from './entities/components/MinecraftWitherTargetHighestDamage';
 export { default as MinecraftBehaviorAdmireItem } from './entities/behaviors/MinecraftBehaviorAdmireItem';
 export { default as MinecraftBehaviorAquaticChargeAttack } from './entities/behaviors/MinecraftBehaviorAquaticChargeAttack';
 export { default as MinecraftBehaviorAvoidBlock } from './entities/behaviors/MinecraftBehaviorAvoidBlock';

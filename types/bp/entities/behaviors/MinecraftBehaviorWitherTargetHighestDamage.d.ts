@@ -22,12 +22,14 @@ Wither - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Wither Target Highest Damage Behavior
+ * Entity Wither Target Highest Damage Behavior
  * (minecraft:behavior.wither_target_highest_damage)
  * Allows the wither to focus its attacks on whichever mob has
  * dealt the most damage to it.
  */
 export default interface MinecraftBehaviorWitherTargetHighestDamage {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -48,6 +50,13 @@ export default interface MinecraftBehaviorWitherTargetHighestDamage {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorWitherTargetHighestDamageControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }
 
 

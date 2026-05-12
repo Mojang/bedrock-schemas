@@ -13,12 +13,15 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Door Interact Behavior (minecraft:behavior.door_interact)
+ * Entity Door Interact Behavior 
+ * (minecraft:behavior.door_interact)
  * Allows the mob to open and close doors.
  * Note: Not currently used by any entities within Minecraft: Bedrock
  * Edition.
  */
 export default interface MinecraftBehaviorDoorInteract {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -28,4 +31,11 @@ export default interface MinecraftBehaviorDoorInteract {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorDoorInteractControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

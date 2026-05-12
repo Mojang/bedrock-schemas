@@ -43,7 +43,7 @@ Guardian - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/
 import * as jsoncommon from '../../../common';
 
 /**
- * Random Swim Behavior (minecraft:behavior.random_swim)
+ * Entity Random Swim Behavior (minecraft:behavior.random_swim)
  * Allows an entity to randomly move through water.
  */
 export default interface MinecraftBehaviorRandomSwim {
@@ -54,6 +54,8 @@ export default interface MinecraftBehaviorRandomSwim {
    * them
    */
   avoid_surface?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -111,4 +113,11 @@ export default interface MinecraftBehaviorRandomSwim {
    */
   y_dist?: number;
 
+}
+
+
+export enum MinecraftBehaviorRandomSwimControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

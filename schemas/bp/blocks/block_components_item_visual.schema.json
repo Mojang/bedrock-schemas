@@ -10,7 +10,7 @@
           "type": "string"
         },
         {
-          "description": "\n\nProperties:\n• bone_visibility = {}\n• culling (string) = \n• culling_layer (string)\n• culling_shape (string) = \n• identifier (string)\n• uv_lock (object) = false",
+          "description": "\n\nProperties:\n• bone_visibility = {}\n• culling (string) = \n• culling_layer (string)\n• culling_shape (string) = \n• identifier (string)\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
           "type": "object",
           "properties": {
             "bone_visibility": {
@@ -71,6 +71,22 @@
               "title": "Identifier",
               "description": "The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: \"minecraft:geometry.full_block\" or \"minecraft:geometry.cross\".",
               "type": "string"
+            },
+            "n_way_visual_rotation": {
+              "title": "n Way Visual Rotation",
+              "description": "Optional object that maps x/y/z axes to block state names that drive visual-only geometry rotation.",
+              "$ref": "./block_components_nwayvisualrotation.schema.json",
+              "defaultSnippets": [
+                {
+                  "label": "Block Components NWayVisualRotation",
+                  "description": "Optional object that maps x/y/z axes to block state names that drive visual-only geometry rotation.",
+                  "body": {
+                    "x": "",
+                    "y": "",
+                    "z": ""
+                  }
+                }
+              ]
             },
             "uv_lock": {
               "title": "Uv Lock",
