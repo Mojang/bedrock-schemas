@@ -59,6 +59,9 @@ import * as jsoncommon from '../../../common';
  * Entity Jump To Block Behavior 
  * (minecraft:behavior.jump_to_block)
  * Allows an entity to jump to another random block.
+ * Note: In format version 1.26.20, `cooldown_range` must be
+ * specified as a Float Range object (an object with `range_min` /
+ * `range_max`). Legacy scalar or array forms no longer parse.
  */
 export default interface MinecraftBehaviorJumpToBlock {
 
@@ -207,8 +210,12 @@ export enum MinecraftBehaviorJumpToBlockControlFlags {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorJumpToBlockCooldownRange {
 

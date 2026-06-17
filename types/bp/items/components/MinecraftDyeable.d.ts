@@ -8,6 +8,12 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Item Components Documentation - minecraft:dyeable
+ * 
+ * minecraft:dyeable Samples
+"minecraft:dyeable": {
+  "default_color": "#175882"
+}
+
  */
 
 import * as jsoncommon from '../../../common';

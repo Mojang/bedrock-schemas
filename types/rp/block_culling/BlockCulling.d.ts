@@ -15,6 +15,9 @@ import * as jsoncommon from '../../common';
 /**
  * BlockCulling
  * BlockCulling.
+ * Note: Data-driven block culling rules were added in 1.20.60 to
+ * improve custom block performance and provide more control over
+ * per-face rendering.
  */
 export default interface BlockCulling {
 

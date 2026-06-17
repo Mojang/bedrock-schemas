@@ -399,6 +399,7 @@ export { default as MinecraftOnStartTakeoff } from './triggers/MinecraftOnStartT
 export { default as MinecraftOnTargetAcquired } from './triggers/MinecraftOnTargetAcquired';
 export { default as MinecraftOnTargetEscape } from './triggers/MinecraftOnTargetEscape';
 export { default as MinecraftOnWakeWithOwner } from './triggers/MinecraftOnWakeWithOwner';
+export { default as ActorHasItemWithEnchantmentInSlot } from './filters/ActorHasItemWithEnchantmentInSlot';
 export { default as ActorHealth } from './filters/ActorHealth';
 export { default as AllSlotsEmpty } from './filters/AllSlotsEmpty';
 export { default as AnySlotEmpty } from './filters/AnySlotEmpty';

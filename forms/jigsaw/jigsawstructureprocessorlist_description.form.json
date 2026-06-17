@@ -1,5 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
+  "title": "Processor List Description",
+  "description": "Identifies the Processor List. The identifier set here is what Template Pool elements reference in their 'processors' field to pair a set of block-processing rules with a Structure Template.",
   "summarizer": {
     "phrases": [
       {
@@ -19,7 +21,5 @@
       "description": "Identifier of the Processor List. This is referenced by Template Pools when pairing processors with Structure Templates.",
       "dataType": "string"
     }
-  ],
-  "description": "JigsawStructureProcessorList Description",
-  "title": "JigsawStructureProcessorList Description"
+  ]
 }

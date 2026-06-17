@@ -6,9 +6,15 @@
   "properties": {
     "chance_per_tick_to_float": {
       "title": "Chance Per Tick To Float",
-      "description": "The chance per tick to cause an upward impulse.",
+      "description": "Probability per tick (0-1) that the entity will attempt to float when in water. Lower values produce slower, more deliberate floating behavior.\n\n*Introduced in version 1.21.130*",
       "type": "number",
-      "default": 0.800000011920929
+      "default": 0.8
+    },
+    "time_under_water_to_dismount_passengers": {
+      "title": "Time Under Water To Dismount Passengers",
+      "description": "Time in seconds the entity must spend with its head underwater before any passengers are dismounted. A value of 0 dismounts passengers as soon as the entity's head submerges.\n\n*Introduced in version 1.21.130*",
+      "type": "number",
+      "default": 0
     },
     "control_flags": {
       "title": "Control Flags",
@@ -33,12 +39,6 @@
       "description": "If true, the mob will keep sinking as long as it has passengers.",
       "type": "boolean",
       "default": false
-    },
-    "time_under_water_to_dismount_passengers": {
-      "title": "Time Under Water To Dismount Passengers",
-      "description": "Time in seconds that a floating vehicles head can be underwater before it causes its passengers to dismount.",
-      "type": "number",
-      "default": 0
     }
   }
 }

@@ -31,7 +31,7 @@ Trader Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * On Friendly Anger (minecraft:on_friendly_anger)
+ * Entity On Friendly Anger (minecraft:on_friendly_anger)
  * Adds a trigger that will run when a nearby entity of the same
  * type as this entity becomes Angry.
  */
@@ -52,9 +52,12 @@ export default interface MinecraftOnFriendlyAnger {
 
   /**
    * @remarks
-   * The list of conditions for this trigger to execute.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftOnFriendlyAngerFilters;
 
   /**
    * @remarks
@@ -67,4 +70,56 @@ export default interface MinecraftOnFriendlyAnger {
    */
   target?: string;
 
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftOnFriendlyAngerFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftOnFriendlyAngerTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

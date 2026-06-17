@@ -67,8 +67,8 @@ export default interface MinecraftSnapToSurfaceFeature {
 
   /**
    * @remarks
-   * Determines whether the placed feature should be embedded in the
-   * found surface.
+   * If true, the snapped feature is embedded into the located surface
+   * block instead of being placed on top of it.
    */
   embed_in_surface?: boolean;
 

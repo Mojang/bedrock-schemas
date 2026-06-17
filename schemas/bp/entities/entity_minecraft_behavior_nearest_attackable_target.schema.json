@@ -35,7 +35,7 @@
         }
       ],
       "title": "Attack Interval",
-      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}\n• elder_guardian: {\"max\":1}"
+      "description": "Time range (in seconds) between searching for an attack target, range is in (0, \"attack_interval\"]. Only used if \"attack_interval\" is greater than 0, otherwise \"scan_interval\" is used.\n\nSample values:\n• cave_spider: {\"min\":10,\"max\":10}\n• cave_spider: {\"min\":5,\"max\":5}"
     },
     "entity_types": {
       "anyOf": [
@@ -302,6 +302,12 @@
         }
       ]
     },
+    "target_acquisition_probability": {
+      "title": "Target Acquisition Probability",
+      "description": "Probability (0-1) that the goal will succeed when a candidate target passes all filters. Lower values cause the mob to acquire targets less reliably; the default of 1 always acquires.\n\n*Introduced in version 1.21.130*",
+      "type": "number",
+      "default": 1
+    },
     "attack_owner": {
       "title": "Attack Owner",
       "description": "If true, this entity can attack its owner.",
@@ -334,13 +340,13 @@
     },
     "must_see_forget_duration": {
       "title": "Must See Forget Duration",
-      "description": "Time (in seconds) the target must not be seen by this entity to become invalid. Used only if \"must_see\" is true.",
+      "description": "Time (in seconds) the target must not be seen by this entity to become invalid. Used only if \"must_see\" is true.\n\nSample values:\n• drowned: 17",
       "type": "number",
       "default": 3
     },
     "persist_time": {
       "title": "Persist Time",
-      "description": "Time (in seconds) this entity can continue attacking the target after the target is no longer valid.",
+      "description": "Time (in seconds) this entity can continue attacking the target after the target is no longer valid.\n\nSample values:\n• drowned: 0.5",
       "type": "number",
       "default": 0
     },
@@ -369,12 +375,6 @@
       "type": "boolean",
       "default": false
     },
-    "target_acquisition_probability": {
-      "title": "Target Acquisition Probability",
-      "description": "Probability (0.0 to 1.0) that this entity will accept a found target. Checked each time a valid target is found during scanning.",
-      "type": "number",
-      "default": 1
-    },
     "target_invisible_multiplier": {
       "title": "Target Invisible Multiplier",
       "description": "Multiplied with the target's armor coverage percentage to modify \"max_dist\" when detecting an invisible target.",
@@ -396,7 +396,7 @@
     },
     "within_radius": {
       "title": "Within Radius",
-      "description": "Maximum distance this entity can be from the target when following it, otherwise the target becomes invalid. This value is only used if the entity doesn't declare \"minecraft:follow_range\".\n\nSample values:\n• breeze: 24",
+      "description": "Maximum distance this entity can be from the target when following it, otherwise the target becomes invalid. This value is only used if the entity doesn't declare \"minecraft:follow_range\".\n\nSample values:\n• breeze: 24\n• drowned: 12",
       "type": "number",
       "default": 0
     }

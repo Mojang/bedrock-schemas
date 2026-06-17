@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:display_name",
+  "versionIntroduced": "1.20.0",
   "summarizer": {
     "phrases": [
       {
@@ -68,9 +69,22 @@
       }
     }
   ],
-  "description": "The display_name item component specifies the text shown whenever an item's name is displayed, like in hover text.",
-  "title": "Item Display Name",
+  "description": "Sets the item display name within Minecraft: Bedrock Edition. This component may also be used to pull from the localization file by referencing a key from it.",
   "samples": {
+    "sample": [
+      {
+        "path": "sample",
+        "content": {
+          "value": "secret_weapon"
+        }
+      },
+      {
+        "path": "sample with localication key",
+        "content": {
+          "value": "item.snowball.name"
+        }
+      }
+    ],
     "/vanilla/behavior_pack/items/apple.json": [
       {
         "path": "/minecraft:item/components/minecraft:display_name/",
@@ -111,5 +125,6 @@
         }
       }
     ]
-  }
+  },
+  "title": "Item Display Name"
 }

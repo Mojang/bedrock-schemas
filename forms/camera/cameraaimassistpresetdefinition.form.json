@@ -12,6 +12,7 @@
       }
     ]
   },
+  "versionIntroduced": "1.21.70",
   "fields": [
     {
       "id": "item_settings",

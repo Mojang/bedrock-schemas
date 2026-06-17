@@ -29,6 +29,9 @@ import * as jsoncommon from '../../../common';
  * torch (14), glowstone (15), redstone torch (7), soul torch (10).
  * Monsters cannot spawn on blocks with light level 8 or 
  * higher.
+ * Note: In format version 1.26.20, validation strictly enforces that
+ * the value must be an integer between 0 and 15 inclusive; out-of-range
+ * values are rejected at load time.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `Integer number`.

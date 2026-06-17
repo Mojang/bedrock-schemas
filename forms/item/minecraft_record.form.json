@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:record",
+  "versionIntroduced": "1.20.10",
   "summarizer": {
     "phrases": [
       {
@@ -15,24 +16,11 @@
   },
   "fields": [
     {
-      "id": "comparator_signal",
-      "title": "Comparator Signal",
-      "description": "Specifies signal strength for comparator blocks to use, from 1 - 13.",
-      "dataType": "int",
-      "defaultValue": 1
-    },
-    {
-      "id": "duration",
-      "title": "Duration",
-      "description": "Specifies duration of sound event in seconds, float value.",
-      "dataType": "float",
-      "defaultValue": 0
-    },
-    {
       "id": "sound_event",
-      "title": "LevelSoundEvent",
+      "title": "Sound Event",
       "description": "Sound event type: 13, cat, blocks, chirp, far, mall, mellohi, stal, strad, ward, 11, wait, pigstep, otherside, 5, relic.",
       "dataType": "string",
+      "defaultValue": "undefined",
       "choices": [
         {
           "id": "absorb_block",
@@ -981,6 +969,14 @@
         {
           "id": "gallop",
           "title": "Gallop"
+        },
+        {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
         },
         {
           "id": "geyser_eruption_active",
@@ -2294,11 +2290,35 @@
           "id": "wind_charge.burst",
           "title": "Wind charge.burst"
         }
-      ],
-      "defaultValue": "undefined"
+      ]
+    },
+    {
+      "id": "comparator_signal",
+      "title": "Comparator Signal",
+      "description": "Specifies signal strength for comparator blocks to use, from 1 - 13.",
+      "dataType": "int",
+      "defaultValue": 1
+    },
+    {
+      "id": "duration",
+      "title": "Duration",
+      "description": "Specifies duration of sound event in seconds, float value.",
+      "dataType": "float",
+      "defaultValue": 0
     }
   ],
-  "description": "Record Item Component. Used by record items to play music.",
-  "title": "Item Record",
-  "samples": {}
+  "description": "Used by record items to play music.",
+  "samples": {
+    "sample": [
+      {
+        "path": "sample",
+        "content": {
+          "comparator_signal": 1,
+          "duration": 5,
+          "sound_event": "ambient.tame"
+        }
+      }
+    ]
+  },
+  "title": "Item Record"
 }

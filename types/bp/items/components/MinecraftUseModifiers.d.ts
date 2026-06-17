@@ -25,8 +25,10 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Item Use Modifiers (minecraft:use_modifiers)
- * Modifies use behavior, including how long the item takes to use
- * and the player's movement speed.
+ * Determines how long an item takes to use in combination with
+ * components such as Shooter, Throwable, or Food.
+ * Note: Renamed from `chargeable` in 1.20.50 and available without an
+ * experimental toggle.
  */
 export default interface MinecraftUseModifiers {
 
@@ -56,9 +58,10 @@ export default interface MinecraftUseModifiers {
 
   /**
    * @remarks
-   * Controls how using the item triggers start using behavior. "if_first"
-   * only starts if no other component has started using yet; "always"
-   * always restarts using. Defaults to "if_first".
+   * When the player begins using the item. Use `always` to start as
+   * soon as the use action is triggered (default), or `on_attack` to
+   * start using only when an attack input is received while the item
+   * is selected.
    * 
    * Sample Values:
    * Apple: "always"
@@ -317,6 +320,8 @@ export enum MinecraftUseModifiersStartSound {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
   geyserEruptionActive = `geyser_eruption_active`,
   geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,

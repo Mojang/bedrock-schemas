@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Squid Dive Behavior (minecraft:behavior.squid_dive)
+ * Entity Squid Dive Behavior (minecraft:behavior.squid_dive)
  * Allows the squid to dive down in water.
  */
 export default interface MinecraftBehaviorSquidDive {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -28,4 +30,11 @@ export default interface MinecraftBehaviorSquidDive {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSquidDiveControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

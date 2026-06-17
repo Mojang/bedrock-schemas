@@ -34,12 +34,15 @@ export default interface MinecraftEntityFallOn {
 
   /**
    * @remarks
+   * The minimum distance in blocks that an actor needs to fall before
+   * events are triggered.
+   */
+  min_fall_distance?: number;
+
+  /**
+   * @remarks
    * The minimum distance in blocks that an entity needs to fall
    * before events are raised.
-   * 
-   * Sample Values:
-   * Fall Distance Of 2 Blocks: 2
-   *
    */
   minimum_fall_distance?: number;
 

@@ -6,7 +6,7 @@
   "properties": {
     "cause": {
       "title": "Cause",
-      "description": "The type of damage that is applied to entities that enter the damage range. A list of available damage sources can be found at [Entity Damage Sources located in the Vanilla Listings Documentation](../../VanillaListingsReference/AddonEntityDamageSources.md).\n\nSample values:\n• magma_cube: entity_attack",
+      "description": "The type of damage that is applied to entities that enter the damage range. A list of available damage sources can be found at [Entity Damage Sources located in the Vanilla Listings Documentation](../../../VanillaListingsReference/AddonEntityDamageSources.md).\n\nSample values:\n• magma_cube: entity_attack",
       "type": "string"
     },
     "entity_filter": {
@@ -59,21 +59,26 @@
       "type": "number",
       "default": 0.2
     },
+    "use_self_as_damage_source": {
+      "title": "Use Self As Damage Source",
+      "description": "Whether the entity is treated as the source of the area damage. When true (default), other entities can retaliate against the attacking entity. Set to false to apply damage without making the attacker a valid retaliation target.\n\n*Introduced in version 1.26.30*",
+      "type": "boolean",
+      "default": true
+    },
     "damage_cooldown": {
       "title": "Damage Cooldown",
       "description": "Attack cooldown (in seconds) for how often this entity can attack a target.\n\nSample values:\n• magma_cube: 0.5",
       "type": "number",
       "default": 0
     },
+    "death_message_override": {
+      "title": "Death Message Override",
+      "description": "A localization key to use as the death message when the area attack kills an entity. If empty, the default death message for the damage cause is used.",
+      "type": "string"
+    },
     "play_attack_sound": {
       "title": "Play Attack Sound",
       "description": "If the entity should play their attack sound when attacking a target.",
-      "type": "boolean",
-      "default": true
-    },
-    "use_self_as_damage_source": {
-      "title": "Use Self As Damage Source",
-      "description": "If the entity should use itself as the damage source when attacking a target. If set to `false`, the target entity won't retaliate and its `minecraft:damage_sensor` won't be able to identify the attacker as the damage source.",
       "type": "boolean",
       "default": true
     }

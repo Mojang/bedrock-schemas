@@ -4,6 +4,12 @@
   "title": "Exhaustion Values",
   "description": "Defines how much exhaustion each player action should take.",
   "properties": {
+    "lunge": {
+      "title": "Lunge",
+      "description": "Amount of exhaustion applied when triggering the Lunge enchantment, multiplied by the enchantment level.\n\n*Introduced in version 1.21.130*\n\nSample values:\n• player: 4",
+      "type": "number",
+      "default": 4
+    },
     "attack": {
       "title": "Attack",
       "description": "Amount of exhaustion applied when attacking.\n\nSample values:\n• player: 0.1",
@@ -27,12 +33,6 @@
       "description": "Amount of exhaustion applied when jumping.\n\nSample values:\n• player: 0.05",
       "type": "number",
       "default": 0.05
-    },
-    "lunge": {
-      "title": "Lunge",
-      "description": "Amount of exhaustion applied when triggering the lunge enchantment, multiplied by the enchantment level.\n\nSample values:\n• player: 4",
-      "type": "number",
-      "default": 4
     },
     "mine": {
       "title": "Mine",

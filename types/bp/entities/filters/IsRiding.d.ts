@@ -15,6 +15,15 @@
  * At Short (using Defaults)..: 
 { "test": "is_riding" }
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+ * At /minecraft:entity/events/minecraft:has_target/filters/: 
+{
+  "test": "is_riding",
+  "value": false
+}
+
+
 Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parrot.json
 
  * At /minecraft:entity/components/minecraft:healable/filters/: 
@@ -77,7 +86,7 @@ export default interface IsRiding {
    * @remarks
    * 
    * Sample Values:
-   * Parrot: "is_riding"
+   * Drowned: "is_riding"
    *
    */
   test?: string;

@@ -19,6 +19,8 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.delayed_attack)
  * Allows an entity to attack, while also delaying the damage-dealt until
  * a specific time in the attack animation.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorDelayedAttack {
 
@@ -593,6 +595,8 @@ export enum MinecraftBehaviorDelayedAttackSoundEvent {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
   geyserEruptionActive = `geyser_eruption_active`,
   geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,

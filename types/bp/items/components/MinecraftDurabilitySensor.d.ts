@@ -29,11 +29,17 @@ export default interface MinecraftDurabilitySensor {
    */
   durability_thresholds: MinecraftDurabilitySensorDurabilityThresholds[];
 
+  /**
+   * @remarks
+   * Sound effect to emit when the threshold is met.
+   */
+  sound_event?: string;
+
 }
 
 
 /**
- * Item Components Durability Sensor Durability Threshold
+ * Item Durability Sensor Durability Threshold
  * (minecraft:durability_sensor durability_threshold)
  * Defines both the durability threshold, and the effects emitted when
  * that threshold is met.

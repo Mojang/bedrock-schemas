@@ -23,8 +23,9 @@ export default interface MinecraftMobEffect {
 
   /**
    * @remarks
-   * If the effect is considered an ambient effect (like the ones
-   * applied by Beacons or Conduits).
+   * If true, the effect renders with the ambient effect background (like
+   * Beacons or Conduits) and does not pulse as it nears 
+   * expiration.
    */
   ambient?: boolean;
 

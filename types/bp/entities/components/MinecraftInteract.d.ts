@@ -17,6 +17,10 @@ import * as jsoncommon from '../../../common';
 /**
  * Interact (minecraft:interact)
  * Defines interactions with this entity.
+ * Note: In 1.26.0, the `swing` field on each interaction entry
+ * defaults to `true` (it previously defaulted to `false`). Set it
+ * explicitly to `false` to opt out of the player's swing 
+ * animation.
  */
 export default interface MinecraftInteract {
 
@@ -96,6 +100,15 @@ export default interface MinecraftInteract {
 /**
  */
 export interface MinecraftInteractInteractions {
+
+  /**
+   * @remarks
+   * If set, an item held by the player is equipped to this slot upon
+   * successful interaction. Any existing item in the slot is moved to
+   * the player's inventory; in non-Creative mode the equipped item is
+   * removed from the player's inventory.
+   */
+  equip_item_slot?: string;
 
   /**
    * @remarks

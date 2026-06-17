@@ -54,6 +54,14 @@ import * as jsoncommon from '../../../common';
  * set to false, the block's collision with entities is disabled,
  * allowing entities to pass through. If this component is
  * omitted, default values are used.
+ * Note: Released from the Holiday Creator Features experiment in
+ * 1.19.50. Pairs with the custom geometry component so creators can
+ * author bespoke collision shapes.
+ * Note: Supports an array of collision boxes (for multi-part collision
+ * shapes) and a maximum collision box height of 24 units (up from
+ * 16). Available without the Upcoming Creator Features experiment and
+ * without the format_version 1.21.130 requirement starting in
+ * 1.26.0.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `Boolean true/false`.

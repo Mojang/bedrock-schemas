@@ -124,7 +124,14 @@ export enum MinecraftDamageSensorDealsDamage {
    * loses durability, enchantment side effects are applied, and so
    * on.
    */
-  noButSideEffectsApply = `no_but_side_effects_apply`
+  noButSideEffectsApply = `no_but_side_effects_apply`,
+  /**
+   * @remarks
+   * Damage is not applied to the entity, but knockback and
+   * enchantments are still applied and the attacker's weapon is
+   * used as normal. The entity does not flash red.
+   */
+  noButEntityEffectsApply = `no_but_entity_effects_apply`
 }
 
 

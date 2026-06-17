@@ -4,6 +4,12 @@
   "title": "Explode",
   "description": "Defines how the entity explodes.",
   "properties": {
+    "damage_scaling": {
+      "title": "Damage Scaling",
+      "description": "A scale factor applied to the explosion's damage to entities. A value of 0 prevents the explosion from dealing any damage. Negative values cause the explosion to heal entities instead.\n\n*Introduced in version 1.21.40*",
+      "type": "number",
+      "default": 1
+    },
     "toggles_blocks": {
       "title": "Toggles Blocks",
       "description": "If true, the explosion will toggle blocks in the explosion radius.\n\n*Introduced in version 1.21.40*\n\nSample values:\n• breeze_wind_charge_projectile: true",
@@ -51,12 +57,6 @@
       "description": "If true, blocks in the explosion radius will be set on fire.\n\nSample values:\n• fireball: true",
       "type": "boolean",
       "default": false
-    },
-    "damage_scaling": {
-      "title": "Damage Scaling",
-      "description": "A scale factor applied to the explosion's damage to entities. A value of 0 prevents the explosion from dealing any damage. Negative values cause the explosion to heal entities instead.",
-      "type": "number",
-      "default": 1
     },
     "destroy_affected_by_griefing": {
       "title": "Destroy Affected By Griefing",

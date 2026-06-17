@@ -10,15 +10,23 @@
  * Item Components Documentation - minecraft:durability
  * 
  * minecraft:durability Samples
+"minecraft:durability": {
+  "damage_chance": {
+    "min": 10,
+    "max": 50
+  },
+  "max_durability": 36
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Durability (minecraft:durability)
- * The durability item component specifies how much damage the item
- * takes before breaking, and allows the item to be combined to
- * repair or augment them.
+ * Sets how much damage the item can take before breaking, and
+ * allows the item to be combined at an anvil, grindstone, or
+ * crafting table.
  */
 export default interface MinecraftDurability {
 
@@ -42,8 +50,12 @@ export default interface MinecraftDurability {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftDurabilityDamageChance {
 

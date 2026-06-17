@@ -13,17 +13,19 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Snacking Behavior (minecraft:behavior.snacking)
+ * Entity Snacking Behavior (minecraft:behavior.snacking)
  * Allows the mob to take a load off and snack on food that it
  * found nearby.
  */
 export default interface MinecraftBehaviorSnacking {
 
+  control_flags?: string[];
+
   /**
    * @remarks
    * Items that we are interested in snacking on
    */
-  items?: string[];
+  items?: string;
 
   /**
    * @remarks
@@ -54,4 +56,11 @@ export default interface MinecraftBehaviorSnacking {
    */
   snacking_stop_chance?: number;
 
+}
+
+
+export enum MinecraftBehaviorSnackingControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

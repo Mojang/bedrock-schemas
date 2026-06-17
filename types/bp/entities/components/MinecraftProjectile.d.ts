@@ -20,7 +20,7 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * Determines the angle at which the projectile is thrown
+   * Determines the angle at which the projectile is thrown.
    */
   angle_offset?: number;
 
@@ -36,34 +36,34 @@ export default interface MinecraftProjectile {
   /**
    * @remarks
    * If true, the projectile will produce additional particles when a
-   * critical hit happens
+   * critical hit happens.
    */
   crit_particle_on_hurt?: boolean;
 
   /**
    * @remarks
-   * If true, this entity will be destroyed when hit
+   * If true, this entity will be destroyed when hit.
    */
   destroy_on_hurt?: boolean;
 
   /**
    * @remarks
-   * Entity Definitions defined here can't be hurt by the 
-   * projectile
+   * Entity definitions listed here cannot be hurt by the 
+   * projectile.
    */
   filter?: string;
 
   /**
    * @remarks
    * If true, whether the projectile causes fire is affected by the
-   * mob griefing game rule
+   * mob griefing game rule.
    */
   fire_affected_by_griefing?: boolean;
 
   /**
    * @remarks
    * The gravity applied to this entity when thrown. The higher the
-   * value, the faster the entity falls
+   * value, the faster the entity falls.
    */
   gravity?: number;
 
@@ -78,13 +78,13 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * The sound that plays when the projectile hits something
+   * The sound that plays when the projectile hits something.
    */
   hit_sound?: string;
 
   /**
    * @remarks
-   * If true, the projectile homes in to the nearest entity
+   * If true, the projectile homes in on the nearest entity.
    */
   homing?: boolean;
 
@@ -98,142 +98,146 @@ export default interface MinecraftProjectile {
   /**
    * @remarks
    * The fraction of the projectile's speed maintained every frame
-   * while traveling in air
+   * while traveling in air.
    */
   inertia?: number;
 
   /**
    * @remarks
    * If true, the projectile will be treated as dangerous to the
-   * players
+   * players.
    */
   is_dangerous?: boolean;
 
   /**
    * @remarks
-   * [EXPERIMENTAL] If true, this projectile will not be affected by
-   * outside forces such as friction and drag.
+   * If true, this projectile is not affected by outside forces such
+   * as friction and drag.
    */
   isolated_physics?: boolean;
 
   /**
    * @remarks
-   * If true, the projectile will knock back the entity it hits
+   * If true, the projectile will knock back the entity it hits.
    */
   knockback?: boolean;
 
   /**
    * @remarks
-   * If true, the entity hit will be struck by lightning
+   * If true, the entity hit will be struck by lightning.
    */
   lightning?: boolean;
 
   /**
    * @remarks
    * The fraction of the projectile's speed maintained every frame
-   * while traveling in water
+   * while traveling in water.
    */
   liquid_inertia?: number;
 
   /**
    * @remarks
-   * If true, the projectile can hit multiple entities per flight
+   * If true, the projectile can hit multiple entities per 
+   * flight.
    */
   multiple_targets?: boolean;
 
   /**
    * @remarks
    * The offset from the entity's anchor where the projectile will
-   * spawn
+   * spawn.
    */
   offset?: number[];
 
   /**
    * @remarks
-   * Time in seconds that the entity hit will be on fire for
+   * Time in seconds that the entity hit will be on fire.
    */
   on_fire_time?: number;
 
   /**
    * @remarks
-   * [EXPERIMENTAL] Number of ticks after launch during which the
-   * projectile cannot hit its owner
+   * Number of ticks after launch during which the projectile cannot hit
+   * its owner.
    */
   owner_launch_immunity_ticks?: number;
 
   /**
    * @remarks
-   * Particle to use upon collision
+   * Particle to use upon collision.
    */
   particle?: string;
 
   /**
    * @remarks
    * Defines the effect the arrow will apply to the entity it 
-   * hits
+   * hits.
    */
   potion_effect?: number;
 
   /**
    * @remarks
-   * Determines the velocity of the projectile
+   * Determines the velocity of the projectile.
    */
   power?: number;
 
   /**
    * @remarks
    * During the specified time, in seconds, the projectile cannot be
-   * reflected by hitting it
+   * reflected by hitting it.
    */
   reflect_immunity?: number;
 
   /**
    * @remarks
-   * If true, this entity will be reflected back when hit
+   * If true, this projectile will be reflected back when hit by
+   * another projectile or by taking damage.
    */
   reflect_on_hurt?: boolean;
 
   /**
    * @remarks
-   * If true, damage will be randomized based on damage and speed
+   * If true, damage will be randomized based on damage and 
+   * speed.
    */
   semi_random_diff_damage?: boolean;
 
   /**
    * @remarks
-   * The sound that plays when the projectile is shot
+   * The sound that plays when the projectile is shot.
    */
   shoot_sound?: string;
 
   /**
    * @remarks
    * If true, the projectile will be shot towards the target of the
-   * entity firing it
+   * entity firing it.
    */
   shoot_target?: boolean;
 
   /**
    * @remarks
-   * If true, the projectile will bounce upon hit
+   * If true, the projectile will bounce upon hit.
    */
   should_bounce?: boolean;
 
   /**
    * @remarks
-   * If true, the projectile will be treated like a splash potion
+   * If true, the projectile will be treated like a splash 
+   * potion.
    */
   splash_potion?: boolean;
 
   /**
    * @remarks
-   * Radius in blocks of the 'splash' effect
+   * Radius in blocks of the 'splash' effect.
    */
   splash_range?: number;
 
   /**
    * @remarks
    * The base accuracy. Accuracy is determined by the formula
-   * uncertaintyBase - difficultyLevel * uncertaintyMultiplier
+   * uncertaintyBase - difficultyLevel * uncertaintyMultiplier.
    */
   uncertainty_base?: number;
 
@@ -241,7 +245,7 @@ export default interface MinecraftProjectile {
    * @remarks
    * Determines how much difficulty affects accuracy. Accuracy is
    * determined by the formula uncertaintyBase - difficultyLevel *
-   * uncertaintyMultiplier
+   * uncertaintyMultiplier.
    */
   uncertainty_multiplier?: number;
 

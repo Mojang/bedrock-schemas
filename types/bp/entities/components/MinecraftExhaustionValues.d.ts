@@ -79,7 +79,7 @@ export default interface MinecraftExhaustionValues {
 
   /**
    * @remarks
-   * Amount of exhaustion applied when triggering the lunge
+   * Amount of exhaustion applied when triggering the Lunge
    * enchantment, multiplied by the enchantment level.
    * 
    * Sample Values:

@@ -34,6 +34,9 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.random_hover)
  * Allows the mob to hover around randomly, close to the 
  * surface.
+ * Note: In format version 1.26.20, `hover_height` must be
+ * specified as a Float Range object (an object with `range_min` /
+ * `range_max`). Legacy scalar or array forms no longer parse.
  */
 export default interface MinecraftBehaviorRandomHover {
 
@@ -122,8 +125,12 @@ export enum MinecraftBehaviorRandomHoverControlFlags {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftBehaviorRandomHoverHoverHeight {
 

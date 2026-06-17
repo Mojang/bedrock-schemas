@@ -40,18 +40,18 @@
       "id": "cooldown_after_being_attacked",
       "title": "Cooldown After Being Attacked",
       "description": "Duration, in seconds, for which mob won't admire items if it was hurt",
-      "defaultValue": 0,
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 10
     },
     {
       "id": "duration",
       "title": "Duration",
-      "description": "Duration, in seconds, that the mob is pacified.",
-      "defaultValue": 10,
-      "dataType": "int"
+      "description": "Duration, in seconds, that the mob admires an item.",
+      "dataType": "int",
+      "defaultValue": 10
     }
   ],
-  "title": "Admire Item",
+  "title": "Entity Admire Item",
   "samples": {},
   "id": "minecraft:admire_item"
 }

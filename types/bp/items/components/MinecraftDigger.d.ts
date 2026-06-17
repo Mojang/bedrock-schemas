@@ -8,27 +8,50 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Item Components Documentation - minecraft:digger
+ * 
+ * minecraft:digger Samples
+"minecraft:digger": {
+  "minecraft:digger": {
+    "use_efficiency": true,
+    "destroy_speeds": [
+      {
+        "speed": 6,
+        "block": {
+          "tags": "query.any_tag( 'wood' )"
+        }
+      },
+      {
+        "block": "minecraft:coal_ore",
+        "speed": 2
+      }
+    ]
+  }
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Digger (minecraft:digger)
- * Digger item component specifies how quickly this item can dig
- * specific blocks.
+ * Configures an item as a digging tool, allowing it to break
+ * specific blocks faster than normal. Define which blocks are
+ * affected and the speed multiplier for each.
  */
 export default interface MinecraftDigger {
 
   /**
    * @remarks
-   * A list of blocks to dig with correlating speeds of digging.
+   * An array of objects that define which blocks this item can dig
+   * and at what speed. Each entry specifies a block (by ID or tag
+   * query) and a speed multiplier.
    */
   destroy_speeds?: MinecraftDiggerDestroySpeeds[];
 
   /**
    * @remarks
-   * Determines whether this item should be impacted if the
-   * efficiency enchantment is applied to it.
+   * When true, the Efficiency enchantment will increase the dig
+   * speed of this item. Default is false.
    */
   use_efficiency?: boolean;
 
@@ -36,8 +59,12 @@ export default interface MinecraftDigger {
 
 
 /**
- * Item Components BlockInfo (BlockInfo)
- * Has block and digging speed configuration.
+ * Item BlockInfo (BlockInfo)
+ * Associates a block type with a custom digging speed multiplier for
+ * the minecraft:digger component. Map blocks to speed values so
+ * pickaxes mine stone quickly, axes chop wood faster, and custom
+ * tools excel at specific materials. Enables tool specialization matching
+ * vanilla Minecraft conventions.
  */
 export interface MinecraftDiggerDestroySpeeds {
 

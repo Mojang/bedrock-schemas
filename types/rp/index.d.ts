@@ -32,6 +32,7 @@ export { default as EmitterShapeDisc } from './particles/EmitterShapeDisc';
 export { default as EmitterShapeEntityAabb } from './particles/EmitterShapeEntityAabb';
 export { default as EmitterShapePoint } from './particles/EmitterShapePoint';
 export { default as EmitterShapeSphere } from './particles/EmitterShapeSphere';
+export { default as MolangExpression } from './particles/MolangExpression';
 export { default as ParticleLifetimeEventsProxy } from './particles/ParticleLifetimeEventsProxy';
 export { default as ParticleAppearanceBillboard } from './particles/ParticleAppearanceBillboard';
 export { default as ParticleAppearanceBillboardFlipbookData } from './particles/ParticleAppearanceBillboardFlipbookData';

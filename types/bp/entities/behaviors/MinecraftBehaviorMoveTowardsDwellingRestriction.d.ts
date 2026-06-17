@@ -27,6 +27,8 @@ import * as jsoncommon from '../../../common';
  * Allows entities with the "minecraft:dweller" component to move
  * toward their village area that the entity should be restricted 
  * to.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorMoveTowardsDwellingRestriction {
 

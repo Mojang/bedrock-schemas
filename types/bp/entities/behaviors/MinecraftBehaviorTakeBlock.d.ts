@@ -230,8 +230,12 @@ export enum MinecraftBehaviorTakeBlockOnTakeTarget {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftBehaviorTakeBlockXzRange {
 
@@ -243,8 +247,12 @@ export interface MinecraftBehaviorTakeBlockXzRange {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftBehaviorTakeBlockYRange {
 

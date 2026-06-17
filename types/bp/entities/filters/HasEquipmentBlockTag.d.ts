@@ -22,6 +22,10 @@ import * as jsoncommon from '../../../common';
  * Has Equipment Block Tag (has_equipment_block_tag)
  * Tests for the presence of a block item with the specified block
  * tag in the specified slot of the entity.
+ * Note: Removed in format version 1.26.20. Block tags should not
+ * be used to drive item or equipment behavior decisions — use
+ * item-side conditions (such as `has_equipment` combined with item
+ * tags) instead.
  */
 export default interface HasEquipmentBlockTag {
 

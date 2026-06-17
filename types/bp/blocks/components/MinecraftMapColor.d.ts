@@ -66,11 +66,10 @@ export default interface MinecraftMapColor {
 
   /**
    * @remarks
-   * Optional, tint multiplied to the color. Tint method logic varies,
-   * but often refers to the "rain" and "temperature" of the biome the
-   * block is placed in to compute the tint. Supported tint methods are
-   * "none", "default_foliage", "birch_foliage", "evergreen_foliage", "dry_foliage",
-   * "grass" and "water"
+   * Tint multiplier applied to the map color. Typically references the
+   * biome's "rain" and "temperature" to compute the tint. Supported
+   * values: "none", "default_foliage", "birch_foliage", "evergreen_foliage",
+   * "dry_foliage", "grass", "water".
    */
   tint_method?: string;
 

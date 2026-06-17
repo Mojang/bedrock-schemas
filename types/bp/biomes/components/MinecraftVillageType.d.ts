@@ -15,6 +15,9 @@ import * as jsoncommon from '../../../common';
 /**
  * Biome Village Type (minecraft:village_type)
  * Determines the type of village for the Biome.
+ * Note: Biome component added in 1.26.0 that determines the type of
+ * village (default, desert, ice, savanna, or taiga) that generates in
+ * this biome.
  */
 export default interface MinecraftVillageType {
 

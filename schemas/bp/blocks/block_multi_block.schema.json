@@ -10,7 +10,11 @@
       "type": "string",
       "enum": [
         "down",
-        "up"
+        "east",
+        "north",
+        "south",
+        "up",
+        "west"
       ]
     },
     "enabled_states": {

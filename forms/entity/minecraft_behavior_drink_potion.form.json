@@ -50,54 +50,50 @@
   },
   "fields": [
     {
+      "id": "control_flags",
+      "title": "Control Flags",
+      "dataType": "stringArray",
+      "defaultValue": [],
+      "choices": [
+        {
+          "id": "jump",
+          "title": "Jump"
+        },
+        {
+          "id": "look",
+          "title": "Look"
+        },
+        {
+          "id": "move",
+          "title": "Move"
+        }
+      ]
+    },
+    {
       "id": "potions",
       "title": "Potions",
       "description": "A list of potions that this entity can drink. Each potion entry has the following parameters:",
       "dataType": "objectArray",
-      "subForm": {
-        "id": "",
-        "description": "A list of potions that this entity can drink. Each potion entry has the following parameters:",
-        "fields": [
-          {
-            "id": "chance",
-            "title": "Chance",
-            "description": "The percent chance (from 0.0 to 1.0) of this potion being selected when searching for a potion to use.",
-            "defaultValue": 1,
-            "dataType": "float"
-          },
-          {
-            "id": "filters",
-            "title": "Filters",
-            "description": "The filters to use when determining if this potion can be selected.",
-            "dataType": "minecraftFilter"
-          },
-          {
-            "id": "id",
-            "title": "Id",
-            "description": "The registry ID of the potion to use",
-            "defaultValue": -1,
-            "dataType": "int"
-          }
-        ]
-      }
+      "defaultValue": [],
+      "subFormId": "entity/drinkpotiongoaldefinition_potiondata"
+    },
+    {
+      "id": "priority",
+      "title": "Priority",
+      "dataType": "int",
+      "defaultValue": 0,
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
     },
     {
       "id": "speed_modifier",
       "title": "Speed Modifier",
       "description": "The movement speed modifier to apply to the entity while it is drinking a potion. A value of 0 represents no change in speed.",
-      "defaultValue": 0,
-      "dataType": "float"
-    },
-    {
-      "id": "priority",
-      "title": "Priority",
-      "hideSamples": true,
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "dataType": "int"
+      "dataType": "float",
+      "defaultValue": 0
     }
   ],
   "description": "Allows the mob to drink potions based on specified environment conditions.",
-  "title": "Drink Potion Behavior",
+  "title": "Entity Drink Potion Behavior",
   "samples": {},
   "id": "minecraft:behavior.drink_potion"
 }

@@ -10,24 +10,34 @@
  * Item Components Documentation - minecraft:block_placer
  * 
  * minecraft:block_placer Samples
+"minecraft:block_placer": {
+  "block": "seeds",
+  "use_on": [
+    "dirt",
+    "grass"
+  ],
+  "replace_block_item": true
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Block Placer (minecraft:block_placer)
- * Items with the block_placer component will place a block when
- * used. 
-This component can also be used instead of the
- * "minecraft:icon" component to render the referenced block as
- * the item icon.
+ * Sets the item as a placer item component for blocks. Items with
+ * this component will place a block when used.
+ * Note: This component can also be used instead of the
+ * minecraft:icon component to render the block this item will place
+ * as the icon.
  */
 export default interface MinecraftBlockPlacer {
 
   /**
    * @remarks
-   * If true, block placement through this item will be aligned while
-   * holding the interaction button down. Defaults to false.
+   * When true, block placement through this item is aligned while the
+   * interaction button is held down. Supported from `format_version` 1.26.0
+   * onward.
    */
   aligned_placement?: boolean;
 

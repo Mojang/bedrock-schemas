@@ -12,13 +12,15 @@
       }
     ]
   },
+  "id": "minecraft:mob_effect",
   "fields": [
     {
       "id": "ambient",
       "title": "Ambient",
-      "description": "If the effect is considered an ambient effect (like the ones applied by Beacons or Conduits).",
+      "description": "If true, the effect renders with the ambient effect background (like Beacons or Conduits) and does not pulse as it nears expiration.",
+      "dataType": "boolean",
       "defaultValue": false,
-      "dataType": "boolean"
+      "versionIntroduced": "1.21.130"
     },
     {
       "id": "cooldown_time",
@@ -56,6 +58,5 @@
   ],
   "description": "A component that applies a mob effect to entities that get within range.",
   "title": "Mob Effect",
-  "samples": {},
-  "id": "minecraft:mob_effect"
+  "samples": {}
 }

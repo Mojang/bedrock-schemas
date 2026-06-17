@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Nap Behavior (minecraft:behavior.nap)
+ * Entity Nap Behavior (minecraft:behavior.nap)
  * Allows mobs to occassionally stop and take a nap under certain
  * conditions.
  */
@@ -26,6 +26,8 @@ export default interface MinecraftBehaviorNap {
    * Conditions that need to be met for the entity to nap.
    */
   can_nap_filters?: jsoncommon.MinecraftFilter;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -69,5 +71,88 @@ export default interface MinecraftBehaviorNap {
    * napping.
    */
   wake_mob_exceptions?: jsoncommon.MinecraftFilter;
+
+}
+
+
+/**
+ * Can Nap Filters (can_nap_filters)
+ */
+export interface MinecraftBehaviorNapCanNapFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorNapControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Wake Mob Exceptions (wake_mob_exceptions)
+ */
+export interface MinecraftBehaviorNapWakeMobExceptions {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

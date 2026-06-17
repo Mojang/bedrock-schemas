@@ -67,6 +67,16 @@ import * as jsoncommon from '../../../common';
  * Note: From 1.21.80 onward, when using a minecraft:geometry component
  * or minecraft:material_instances component, you must include 
  * both.
+ * Note: In format_version 1.26.0 and higher, the
+ * `minecraft:geometry.full_block` identifier renders its DOWN face
+ * rotated 180° to match non-data-driven full blocks and Java
+ * Edition. The new `minecraft:geometry.full_block_v1` identifier
+ * preserves the original orientation. Blocks using `full_block` with
+ * format_version older than 1.26.0 continue to render 
+ * unchanged.
+ * Note: Fixed in 1.26.10: rotation for blocks displayed in item
+ * frames using `minecraft:geometry.full_block` is now correct for
+ * `format_version` >= 1.26.0.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `String`.
@@ -105,17 +115,12 @@ export default interface MinecraftGeometry {
 
   /**
    * @remarks
-   * Currently only available with the VoxelShape experiment on. The
-   * voxel shape used for culling adjacent block faces. Voxel shapes
-   * work together with culling rules and will not function if there is
-   * no culling rule defined for the block. Only adjacent blocks with
-   * voxel shapes will occlude using this shape. Blocks using
+   * The voxel shape used for culling adjacent block faces. Voxel
+   * shapes work together with culling rules and will not function if
+   * there is no culling rule defined for the block. Only adjacent blocks
+   * with voxel shapes will occlude using this shape. Blocks using
    * "minecraft:geometry.full_block" always use the unit cube shape and
-   * will ignore custom shapes if specified. When using the minecraft
-   * namespace, the only currently available culling shape identifiers are
-   * : "minecraft:empty" or "minecraft:unit_cube". When using no
-   * namespaces or a custom one, the names must start and end with an
-   * alpha-numeric character.
+   * will ignore custom shapes if specified.
    */
   culling_shape?: string;
 
@@ -128,11 +133,22 @@ export default interface MinecraftGeometry {
 
   /**
    * @remarks
+   * The name of a block state that drives visual-only rotation of
+   * this block. The renderer reads the current value of the named
+   * state at runtime and rotates the geometry accordingly without
+   * changing collision or interaction. Supported states are
+   * `minecraft:cardinal_direction`, `minecraft:sixteen_way_rotation`, and
+   * any custom integer state.
+   */
+  n_way_visual_rotation?: string;
+
+  /**
+   * @remarks
    * A Boolean locking UV orientation of all bones in the geometry, or
    * an array of strings locking UV orientation of specific bones in
    * the geometry. For performance reasons it is recommended to use
    * the Boolean. Note that for cubes using Box UVs, rather than
-   * Per-face UVs, 'uv_lock' is only supported if the cube faces are
+   * Per-face UVs, uv_lock is only supported if the cube faces are
    * square.
    */
   uv_lock?: string;

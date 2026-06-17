@@ -94,6 +94,16 @@ import * as jsoncommon from '../../../common';
  * used for breeding.
  * Note: This component is commonly used in conjunction with the
  * 'minecraft:behavior.breed' component.
+ * Note: In 1.21.130 the `transform_to_item` field on each entry of
+ * `breed_items` was renamed to `result_item`. The new field is
+ * defined per-item, so different breed items can transform into
+ * different result items on use.
+ * Note: In 1.26.0 the offspring-related fields were split out into
+ * the separate `minecraft:offspring_data` component.
+ * `minecraft:breedable` now contains only love-state, taming/health
+ * requirements, and pregnancy-flow data; the new
+ * `minecraft:offspring_data` component is required to actually spawn
+ * the child entity.
  */
 export default interface MinecraftBreedable {
 
@@ -157,6 +167,15 @@ export default interface MinecraftBreedable {
    *
    */
   causes_pregnancy?: boolean;
+
+  /**
+   * @remarks
+   * If true and no color mutation occurs, the baby's `minecraft:color` is
+   * set to a blend of the parents' colors (following DyeItem combination
+   * rules). If the parents' colors aren't compatible, the baby
+   * inherits one parent's color at random.
+   */
+  combine_parent_colors?: boolean;
 
   /**
    * @remarks

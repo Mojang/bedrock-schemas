@@ -22,6 +22,10 @@ import * as jsoncommon from '../../../common';
  * Redstone Strength At Position 
  * (redstone_strength_at_position)
  * Tests the redstone strength at the subject's position.
+ * Note: Introduced in 1.26.30. Tests the redstone signal strength at
+ * the subject's position. Reads the same composed level as
+ * redstone components (e.g. comparator, observer) and returns 0
+ * when the position is unloaded.
  */
 export default interface RedstoneStrengthAtPosition {
 

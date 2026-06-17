@@ -15,18 +15,20 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Charge Held Item Behavior 
+ * Entity Charge Held Item Behavior
  * (minecraft:behavior.charge_held_item)
  * Allows an entity to charge and use their held item.
  */
 export default interface MinecraftBehaviorChargeHeldItem {
+
+  control_flags?: string[];
 
   /**
    * @remarks
    * The list of items that can be used to charge the held item. This
    * list is required and must have at least one item in it.
    */
-  items?: string[];
+  items: string;
 
   /**
    * @remarks
@@ -36,4 +38,11 @@ export default interface MinecraftBehaviorChargeHeldItem {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorChargeHeldItemControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

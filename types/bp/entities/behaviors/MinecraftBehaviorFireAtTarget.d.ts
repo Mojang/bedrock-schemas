@@ -56,6 +56,12 @@ import * as jsoncommon from '../../../common';
  * Allows an entity to attack by firing a shot with a delay. Anchor
  * and offset parameters of this component overrides the anchor and
  * offset from projectile component.
+ * Note: In 1.26.0, `max_head_rotation_x` and `max_head_rotation_y` are
+ * applied to the correct axes (they were previously swapped).
+ * Note: Under the Custom Projectiles experiment in format version
+ * 1.26.20, the component's `projectile_x_offset`, `projectile_y_offset`, and
+ * `projectile_z_offset` values are applied relative to the firing
+ * entity's rotation rather than world axes.
  */
 export default interface MinecraftBehaviorFireAtTarget {
 
@@ -203,8 +209,12 @@ export default interface MinecraftBehaviorFireAtTarget {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorFireAtTargetAttackRange {
 

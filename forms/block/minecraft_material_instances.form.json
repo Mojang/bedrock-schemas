@@ -125,7 +125,9 @@
   "tags": [
     "visual"
   ],
+  "versionIntroduced": "1.19.40",
   "note": "From 1.21.80 onward, when using a minecraft:geometry component or minecraft:material_instances component, you must include both.",
+  "note2": "In format version 1.26.20, `ambient_occlusion` no longer accepts boolean values — it must be a float between 0.0 and 10.0 inclusive, and defaults to 1.0 when omitted.",
   "customField": {
     "id": "<custom material id>",
     "title": "<Custom Material Instance Id>",
@@ -310,7 +312,7 @@
       }
     ]
   },
-  "description": "The material instances for a block. Maps face or material_instance names in a geometry file to an actual material instance. You can assign a material instance object to any of these faces: \"up\", \"down\", \"north\", \"south\", \"east\", \"west\", or \"*\". You can also give an instance the name of your choosing such as \"my_instance\", and then assign it to a face by doing \"north\":\"my_instance\".",
-  "title": "Material Instances",
-  "id": "minecraft:material_instances"
+  "id": "minecraft:material_instances",
+  "description": "The material instances for a block.\nMaps face or material_instance names in a geometry file to an actual material instance. Material instance can either be a full material instance or a name to another already defined instance.\nLimited to 64 instances.",
+  "title": "Material Instances"
 }

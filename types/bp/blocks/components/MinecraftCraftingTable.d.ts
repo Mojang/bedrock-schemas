@@ -36,15 +36,11 @@ Block Fabricator - Block Fabricator
 import * as jsoncommon from '../../../common';
 
 /**
- * Crafting Table (minecraft:crafting_table)
+ * Block Crafting Table (minecraft:crafting_table)
  * Makes your block into a custom crafting table which enables the
- * crafting table UI and the ability to craft recipes. This
- * component supports only "recipe_shaped" and "recipe_shapeless" typed
- * recipes and not others like "recipe_furnace" or
- * "recipe_brewing_mix". If there are two recipes for one item, the
- * recipe book will pick the first that was parsed. If two input
- * recipes are the same, crafting may assert and the resulting item
- * may vary.
+ * crafting table UI and the ability to craft recipes.
+ * Note: Released from the Holiday Creator Features experiment in
+ * 1.19.50.
  */
 export default interface MinecraftCraftingTable {
 
@@ -54,7 +50,7 @@ export default interface MinecraftCraftingTable {
    * table. Limited to 64 tags. Each tag is limited to 64
    * characters.
    */
-  crafting_tags?: string[];
+  crafting_tags: string[];
 
   /**
    * @remarks

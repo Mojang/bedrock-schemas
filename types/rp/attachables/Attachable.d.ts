@@ -88,6 +88,9 @@ import * as jsoncommon from '../../common';
  * equipped. They reference materials, textures, geometry, and
  * optionally animations and render controllers defined in other
  * resource pack files.
+ * Note: In format_version 1.26.0 and higher, the `pre_animation` and
+ * `initialize` Molang script fields support multi-line `{}` brace
+ * scope delimiters.
  */
 export default interface Attachable {
 

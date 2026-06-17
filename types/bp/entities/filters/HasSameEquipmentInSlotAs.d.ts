@@ -24,6 +24,10 @@ import * as jsoncommon from '../../../common';
  * Returns whether the subject entity has the same item equipped in
  * the specified slot as calling entity. Only supports specified slots:
  * "main_hand", "head", "torso", "leg", "feet", and "body".
+ * Note: Added in 1.26.20. Returns true when the subject entity has
+ * the same item equipped in the specified equipment slot as the
+ * referenced target (calling) entity. Supports the `main_hand`, `head`,
+ * `torso`, `leg`, `feet`, and `body` slots.
  */
 export default interface HasSameEquipmentInSlotAs {
 

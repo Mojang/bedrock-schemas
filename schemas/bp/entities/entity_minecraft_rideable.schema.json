@@ -46,7 +46,7 @@
     },
     "dismount_mode": {
       "title": "Dismount Mode",
-      "description": "Defines where riders are placed when dismounting this entity:\n- \"default\", riders are placed on a valid ground position around the entity, or at the center of the entity's collision box if none is found.\n- \"on_top_center\", riders are placed at the center of the top of the entity's collision box.",
+      "description": "Defines where riders are placed when dismounting this entity:\n- \"default\", riders are placed on a valid ground position around the entity, or at the center of the entity's collision box if none is found.\n- \"on_top_center\", riders are placed at the center of the top of the entity's collision box.\n\n*Introduced in version 1.21.80*",
       "type": "string",
       "enum": [
         "default",
@@ -62,12 +62,14 @@
             "type": "object",
             "properties": {
               "third_person_camera_radius": {
-                "description": "\n\n*Introduced in version 1.21.80*",
-                "type": "string"
+                "title": "Third Person Camera Radius",
+                "description": "Camera radius to use for this seat when in third person or third person front camera. Overrides the default third-person camera distance for riders in this seat.\n\n*Introduced in version 1.21.80*",
+                "type": "number"
               },
               "camera_relax_distance_smoothing": {
-                "description": "\n\n*Introduced in version 1.21.80*",
-                "type": "string"
+                "title": "Camera Relax Distance Smoothing",
+                "description": "Adds springiness to camera movement when the camera moves back to its radius after being pushed closer to the player by an obstacle.\n\n*Introduced in version 1.21.80*",
+                "type": "number"
               },
               "rotate_rider_by": {
                 "title": "Rotate Rider By",

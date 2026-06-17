@@ -19,6 +19,9 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.use_kinetic_weapon)
  * Enables a mob to use kinetic weaponry by intermittently charging at
  * its target and repositioning afterward.
+ * Note: Lets a mob attack with an item carrying the
+ * `minecraft:kinetic_weapon` component by charging at the target, then
+ * repositioning between strikes.
  */
 export default interface MinecraftBehaviorUseKineticWeapon {
 
@@ -239,8 +242,12 @@ export enum MinecraftBehaviorUseKineticWeaponControlFlags {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorUseKineticWeaponCooldownDistance {
 
@@ -410,8 +417,12 @@ export enum MinecraftBehaviorUseKineticWeaponOnKillTarget {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorUseKineticWeaponRepositionDistance {
 

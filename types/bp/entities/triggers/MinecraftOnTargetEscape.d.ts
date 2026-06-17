@@ -18,6 +18,14 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:on_target_escape": {
+  "event": "minecraft:lost_target",
+  "target": "self"
+}
+
+
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
 "minecraft:on_target_escape": {
@@ -53,7 +61,7 @@ Magma Cube - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
 import * as jsoncommon from '../../../common';
 
 /**
- * On Target Escape (minecraft:on_target_escape)
+ * Entity On Target Escape (minecraft:on_target_escape)
  * Adds a trigger to call when this entity loses the target it
  * currently has.
  */
@@ -65,25 +73,27 @@ export default interface MinecraftOnTargetEscape {
    * met.
    * 
    * Sample Values:
+   * Drowned: "minecraft:lost_target"
+   *
    * Llama: "minecraft:on_calm"
    *
    * Magma Cube: "minecraft:become_calm"
-   *
-   *
    *
    */
   event?: string;
 
   /**
    * @remarks
-   * The list of conditions for this trigger to execute.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    * 
    * Sample Values:
    * Llama: {"all_of":[{"test":"is_family","subject":"target","value":"wolf"},{"test":"has_component","subject":"target","operator":"!=","value":"minecraft:is_tamed"}]}
    *
-   *
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftOnTargetEscapeFilters;
 
   /**
    * @remarks
@@ -96,4 +106,56 @@ export default interface MinecraftOnTargetEscape {
    */
   target?: string;
 
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftOnTargetEscapeFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftOnTargetEscapeTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

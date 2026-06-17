@@ -25,8 +25,13 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Item Throwable (minecraft:throwable)
- * Throwable items can be thrown by the player, such as a
- * snowball.
+ * Makes an item throwable by the player, similar to a snowball or
+ * ender pearl. Use with minecraft:projectile to specify which entity
+ * is spawned when thrown.
+ * Note: Combine with minecraft:projectile to define the projectile
+ * entity. For charged throws (like tridents), set
+ * scale_power_by_draw_duration to true and configure min/max draw
+ * durations.
  */
 export default interface MinecraftThrowable {
 

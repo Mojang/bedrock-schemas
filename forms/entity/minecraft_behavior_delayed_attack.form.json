@@ -1154,6 +1154,14 @@
           "title": "Gallop"
         },
         {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
+        },
+        {
           "id": "geyser_eruption_active",
           "title": "Geyser eruption active"
         },
@@ -2497,6 +2505,7 @@
       "defaultValue": 30
     }
   ],
+  "note": "In 1.26.0 the schema is stricter and rejects invalid JSON for this behavior.",
   "description": "Allows an entity to attack, while also delaying the damage-dealt until a specific time in the attack animation.",
   "title": "Entity Delayed Attack Behavior",
   "samples": {},

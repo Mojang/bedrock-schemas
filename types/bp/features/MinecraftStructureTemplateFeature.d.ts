@@ -96,9 +96,9 @@ export default interface MinecraftStructureTemplateFeature {
 
   /**
    * @remarks
-   * If true, centers and rotates the structure around the placement
-   * position, overriding any specified horizontal "offset". Defaults to
-   * "false" if omitted.
+   * If true, the structure is centered on the placement position before
+   * rotation is applied so it rotates around its center rather than
+   * its origin corner.
    */
   rotate_around_center?: boolean;
 
@@ -153,7 +153,7 @@ export interface MinecraftStructureTemplateFeatureConstraintsBlockIntersection {
    * structure except empty ones are checked for intersections, including
    * air.
    */
-  only_check_intersection_for_motion_blocking_blocks: boolean;
+  only_check_intersection_for_motion_blocking_blocks?: boolean;
 
 }
 

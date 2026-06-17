@@ -14,7 +14,8 @@
           "enum": [
             "yes",
             "no",
-            "no_but_side_effects_apply"
+            "no_but_side_effects_apply",
+            "no_but_entity_effects_apply"
           ]
         },
         {
@@ -24,7 +25,7 @@
         }
       ],
       "title": "Deals Damage",
-      "description": "Defines how received damage affects the entity.\n\nValues:\n• yes: Received damage is applied to the entity.\n• no: Received damage is not applied to the entity.\n• no_but_side_effects_apply: Received damage is not applied to the entity, but the side effects of the attack are. This means that the attacker's weapon loses durability, enchantment side effects are applied, and so on."
+      "description": "Defines how received damage affects the entity.\n\nValues:\n• yes: Received damage is applied to the entity.\n• no: Received damage is not applied to the entity.\n• no_but_side_effects_apply: Received damage is not applied to the entity, but the side effects of the attack are. This means that the attacker's weapon loses durability, enchantment side effects are applied, and so on.\n• no_but_entity_effects_apply: Damage is not applied to the entity, but knockback and enchantments are still applied and the attacker's weapon is used as normal. The entity does not flash red."
     },
     "triggers": {
       "anyOf": [

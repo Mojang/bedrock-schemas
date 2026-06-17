@@ -13,6 +13,8 @@
     ]
   },
   "id": "minecraft:behavior.use_kinetic_weapon",
+  "versionIntroduced": "1.21.130",
+  "note": "Lets a mob attack with an item carrying the `minecraft:kinetic_weapon` component by charging at the target, then repositioning between strikes.",
   "fields": [
     {
       "id": "approach_distance",
@@ -71,7 +73,7 @@
         "max": 8,
         "min": 8
       },
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "cooldown_speed_multiplier",
@@ -214,7 +216,7 @@
         "max": 2,
         "min": 2
       },
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "reposition_speed_multiplier",

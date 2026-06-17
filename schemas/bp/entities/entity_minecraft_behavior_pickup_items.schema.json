@@ -10,6 +10,36 @@
       "type": "boolean",
       "default": false
     },
+    "stop_if_holding_item": {
+      "title": "Stop If Holding Item",
+      "description": "If true, the mob will not begin a pickup goal while it is already holding an item. Useful for mobs that should only hold one item at a time.\n\n*Introduced in version 1.26.30*",
+      "type": "boolean",
+      "default": false
+    },
+    "on_pickup_item_start": {
+      "title": "Pickup Item Start",
+      "description": "Event to run when this mob moves to pick up an item.\n\n*Introduced in version 1.26.20*",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "./entity_actordefinitiontrigger.schema.json"
+        }
+      ]
+    },
+    "on_pickup_item_end": {
+      "title": "Pickup Item End",
+      "description": "Event to run when this mob either finishes or loses interest in picking up an item.\n\n*Introduced in version 1.26.20*",
+      "oneOf": [
+        {
+          "type": "string"
+        },
+        {
+          "$ref": "./entity_actordefinitiontrigger.schema.json"
+        }
+      ]
+    },
     "can_pickup_any_item": {
       "title": "Can Pickup Any Item",
       "description": "If true, the mob can pick up any item\n\nSample values:\n• bogged: true",
@@ -53,7 +83,7 @@
         }
       ],
       "title": "Excluded Items",
-      "description": "List of items this mob will not pick up\n\nSample values:\n• bogged: [{\"tags\":\"q.all_tags('minecraft:is_spear')\"}]",
+      "description": "List of items this mob will not pick up\n\nSample values:\n• bogged: [{\"tags\":\"q.all_tags('minecraft:is_spear')\"}]\n• drowned: [\"minecraft:glow_ink_sac\",{\"tags\":\"q.all_tags('...",
       "defaultSnippets": [
         {
           "label": "Excluded Items (default)",
@@ -74,56 +104,6 @@
       "type": "integer",
       "default": 1
     },
-    "on_pickup_item_end": {
-      "title": "Pickup Item End",
-      "description": "Event to run when this mob either finishes or loses interest in picking up an item",
-      "$ref": "./entity_actordefinitiontrigger.schema.json",
-      "defaultSnippets": [
-        {
-          "label": "Entity ActorDefinitionTrigger",
-          "description": "Triggers an entity event when specified conditions are met. Events activate component groups that change entity behavior—transforming villagers into zombie villagers, switching mobs to aggressive mode, or triggering growth stages. Combine with filters to create conditional state machines that respond to gameplay.",
-          "body": {
-            "event": "",
-            "filters": {
-              "AND": null,
-              "NOT": null,
-              "OR": null,
-              "all": null,
-              "all_of": null,
-              "any": null,
-              "any_of": null,
-              "none_of": null
-            },
-            "target": "self"
-          }
-        }
-      ]
-    },
-    "on_pickup_item_start": {
-      "title": "Pickup Item Start",
-      "description": "Event to run when this mob moves to pick up an item",
-      "$ref": "./entity_actordefinitiontrigger.schema.json",
-      "defaultSnippets": [
-        {
-          "label": "Entity ActorDefinitionTrigger",
-          "description": "Triggers an entity event when specified conditions are met. Events activate component groups that change entity behavior—transforming villagers into zombie villagers, switching mobs to aggressive mode, or triggering growth stages. Combine with filters to create conditional state machines that respond to gameplay.",
-          "body": {
-            "event": "",
-            "filters": {
-              "AND": null,
-              "NOT": null,
-              "OR": null,
-              "all": null,
-              "all_of": null,
-              "any": null,
-              "any_of": null,
-              "none_of": null
-            },
-            "target": "self"
-          }
-        }
-      ]
-    },
     "pickup_based_on_chance": {
       "title": "Pickup Based On Chance",
       "description": "If true, depending on the difficulty, there is a random chance that the mob may not be able to pickup items\n\nSample values:\n• bogged: true",
@@ -132,7 +112,7 @@
     },
     "priority": {
       "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• allay: 2\n• bogged: 5\n• parched: 6",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• allay: 2\n• bogged: 5\n• drowned: 6",
       "type": "integer",
       "default": 0
     },

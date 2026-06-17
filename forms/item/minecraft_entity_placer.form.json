@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:entity_placer",
+  "versionIntroduced": "1.20.10",
   "summarizer": {
     "phrases": [
       {
@@ -170,7 +171,22 @@
       ]
     }
   ],
-  "description": "The entity_placer item component specifies the blocks that the item can be placed on.",
-  "title": "Item Entity Placer",
-  "samples": {}
+  "description": "Allows an item to place entities into the world. Additionally, in version 1.19.80 and above, the component allows the item to set the spawn type of a monster spawner.",
+  "samples": {
+    "sample": [
+      {
+        "path": "sample",
+        "content": {
+          "entity": "minecraft:spider",
+          "dispense_on": [
+            "minecraft:web"
+          ],
+          "use_on": [
+            "minecraft:web"
+          ]
+        }
+      }
+    ]
+  },
+  "title": "Item Entity Placer"
 }

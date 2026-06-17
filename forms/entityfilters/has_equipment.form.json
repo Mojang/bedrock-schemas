@@ -20,9 +20,22 @@
     {
       "id": "domain",
       "title": "Domain",
-      "description": "(Optional) The equipment location to test",
+      "description": "The equipment location to test.",
       "defaultValue": "any",
       "dataType": "string",
+      "note": "`inventory` was added as a supported domain value in 1.19.60, allowing the filter to check items stored in the entity's inventory.",
+      "samples": {
+        "/vanilla/behavior_pack/entities/pig.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:interact/interactions[0]/on_interact/filters/",
+            "content": "hand"
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:interact/interactions[0]/on_interact/filters/all_of[1]/",
+            "content": "hand"
+          }
+        ]
+      },
       "choices": [
         {
           "id": "any",
@@ -64,19 +77,7 @@
           "id": "torso",
           "title": "Torso"
         }
-      ],
-      "samples": {
-        "/vanilla/behavior_pack/entities/pig.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:interact/interactions[0]/on_interact/filters/",
-            "content": "hand"
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:interact/interactions[0]/on_interact/filters/all_of[1]/",
-            "content": "hand"
-          }
-        ]
-      }
+      ]
     },
     {
       "id": "operator",

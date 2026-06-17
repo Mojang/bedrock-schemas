@@ -23,7 +23,7 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * On Hurt By Player (minecraft:on_hurt_by_player)
+ * Entity On Hurt By Player (minecraft:on_hurt_by_player)
  * Adds a trigger to call when this entity is attacked by the
  * player.
  */
@@ -42,9 +42,12 @@ export default interface MinecraftOnHurtByPlayer {
 
   /**
    * @remarks
-   * The list of conditions for this trigger to execute.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftOnHurtByPlayerFilters;
 
   /**
    * @remarks
@@ -56,4 +59,56 @@ export default interface MinecraftOnHurtByPlayer {
    */
   target?: string;
 
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftOnHurtByPlayerFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftOnHurtByPlayerTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

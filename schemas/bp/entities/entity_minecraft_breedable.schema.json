@@ -120,6 +120,11 @@
       "type": "boolean",
       "default": false
     },
+    "combine_parent_colors": {
+      "description": "If true and no color mutation occurs, the baby's `minecraft:color` is set to a blend of the parents' colors (following DyeItem combination rules). If the parents' colors aren't compatible, the baby inherits one parent's color at random.\n\n*Introduced in version 1.21.60*",
+      "type": "boolean",
+      "default": false
+    },
     "deny_parents_variant": {
       "description": "Determines how likely the baby of parents with the same variant will deny that variant and take a random variant within the given range instead.",
       "type": "object",

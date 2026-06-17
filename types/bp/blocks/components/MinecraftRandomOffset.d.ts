@@ -49,22 +49,25 @@ export default interface MinecraftRandomOffset {
 
 
 /**
- * Range of values between two numbers
- * Specifies a range of values between two numbers, with a
- * defined number of steps. This is used to control the variation in
- * block properties such as offset, color, or other attributes.
+ * Block Range And Steps (Range And Steps)
+ * Defines an integer block state with a range of valid values and
+ * optional step increment. Used for block properties like growth
+ * stages (0-7 for crops), signal strength (0-15 for redstone), or
+ * rotation angles. The game only allows values within the
+ * specified min/max range at the given step intervals.
  */
 export interface MinecraftRandomOffsetx {
 
   /**
    * @remarks
-   * Range of values
+   * The range of the random offset.
    */
-  range?: MinecraftRandomOffsetxRange;
+  range: MinecraftRandomOffsetxRange;
 
   /**
    * @remarks
-   * Number of steps between the range
+   * The number of steps between the range. Specify 0 for all
+   * possible values between the range.
    */
   steps?: number;
 
@@ -72,42 +75,38 @@ export interface MinecraftRandomOffsetx {
 
 
 /**
- * Range of values (range)
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
  */
 export interface MinecraftRandomOffsetxRange {
 
-  /**
-   * @remarks
-   * Maximum value of the range
-   */
   max?: number;
 
-  /**
-   * @remarks
-   * Minimum value of the range
-   */
   min?: number;
 
 }
 
 
 /**
- * Range of values between two numbers
- * Specifies a range of values between two numbers, with a
- * defined number of steps. This is used to control the variation in
- * block properties such as offset, color, or other attributes.
+ * Block Range And Steps (Range And Steps)
+ * Defines an integer block state with a range of valid values and
+ * optional step increment. Used for block properties like growth
+ * stages (0-7 for crops), signal strength (0-15 for redstone), or
+ * rotation angles. The game only allows values within the
+ * specified min/max range at the given step intervals.
  */
 export interface MinecraftRandomOffsety {
 
   /**
    * @remarks
-   * Range of values
+   * The range of the random offset.
    */
-  range?: MinecraftRandomOffsetyRange;
+  range: MinecraftRandomOffsetyRange;
 
   /**
    * @remarks
-   * Number of steps between the range
+   * The number of steps between the range. Specify 0 for all
+   * possible values between the range.
    */
   steps?: number;
 
@@ -115,42 +114,38 @@ export interface MinecraftRandomOffsety {
 
 
 /**
- * Range of values (range)
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
  */
 export interface MinecraftRandomOffsetyRange {
 
-  /**
-   * @remarks
-   * Maximum value of the range
-   */
   max?: number;
 
-  /**
-   * @remarks
-   * Minimum value of the range
-   */
   min?: number;
 
 }
 
 
 /**
- * Range of values between two numbers
- * Specifies a range of values between two numbers, with a
- * defined number of steps. This is used to control the variation in
- * block properties such as offset, color, or other attributes.
+ * Block Range And Steps (Range And Steps)
+ * Defines an integer block state with a range of valid values and
+ * optional step increment. Used for block properties like growth
+ * stages (0-7 for crops), signal strength (0-15 for redstone), or
+ * rotation angles. The game only allows values within the
+ * specified min/max range at the given step intervals.
  */
 export interface MinecraftRandomOffsetz {
 
   /**
    * @remarks
-   * Range of values
+   * The range of the random offset.
    */
-  range?: MinecraftRandomOffsetzRange;
+  range: MinecraftRandomOffsetzRange;
 
   /**
    * @remarks
-   * Number of steps between the range
+   * The number of steps between the range. Specify 0 for all
+   * possible values between the range.
    */
   steps?: number;
 
@@ -158,20 +153,13 @@ export interface MinecraftRandomOffsetz {
 
 
 /**
- * Range of values (range)
+ * Item Components FloatRange (FloatRange)
+ * Has minimum and maximum float values.
  */
 export interface MinecraftRandomOffsetzRange {
 
-  /**
-   * @remarks
-   * Maximum value of the range
-   */
   max?: number;
 
-  /**
-   * @remarks
-   * Minimum value of the range
-   */
   min?: number;
 
 }

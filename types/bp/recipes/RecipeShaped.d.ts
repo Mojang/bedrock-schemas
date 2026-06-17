@@ -52,6 +52,9 @@ import * as jsoncommon from '../../common';
  * the crafting grid.
  * Note: The 'data' field for items is deprecated in versions 1.20.0
  * and later. Use flattened item identifiers instead.
+ * Note: Starting in 1.19.40, pattern key entries may specify a
+ * 'tag' instead of an 'item', allowing the recipe to accept any
+ * item that belongs to the named item tag.
  */
 export default interface RecipeShaped {
 
@@ -77,7 +80,9 @@ export interface RecipeShapedMinecraftRecipeShaped {
 
   /**
    * @remarks
-   * If true, the recipe pattern can be mirrored horizontally.
+   * When true, the shaped recipe's pattern may be mirrored horizontally,
+   * allowing both the pattern and its mirror image to produce the
+   * same result.
    */
   assume_symmetry?: boolean;
 

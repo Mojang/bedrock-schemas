@@ -43,6 +43,24 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:behavior.pickup_items": {
+  "can_pickup_any_item": true,
+  "excluded_items": [
+    "minecraft:glow_ink_sac",
+    {
+      "tags": "q.all_tags('minecraft:is_spear')"
+    }
+  ],
+  "pickup_based_on_chance": true,
+  "goal_radius": 2,
+  "priority": 6,
+  "max_dist": 3,
+  "speed_multiplier": 1
+}
+
+
 Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
 
 "minecraft:behavior.pickup_items": {
@@ -104,6 +122,8 @@ export default interface MinecraftBehaviorPickupItems {
    * Sample Values:
    * Bogged: [{"tags":"q.all_tags('minecraft:is_spear')"}]
    *
+   * Drowned: ["minecraft:glow_ink_sac",{"tags":"q.all_tags('minecraft:is_spear')"}]
+   *
    *
    */
   excluded_items?: string;
@@ -139,15 +159,15 @@ export default interface MinecraftBehaviorPickupItems {
   /**
    * @remarks
    * Event to run when this mob either finishes or loses interest in
-   * picking up an item
+   * picking up an item.
    */
-  on_pickup_item_end?: MinecraftBehaviorPickupItemsOnPickupItemEnd;
+  on_pickup_item_end?: jsoncommon.MinecraftEventTrigger;
 
   /**
    * @remarks
-   * Event to run when this mob moves to pick up an item
+   * Event to run when this mob moves to pick up an item.
    */
-  on_pickup_item_start?: MinecraftBehaviorPickupItemsOnPickupItemStart;
+  on_pickup_item_start?: jsoncommon.MinecraftEventTrigger;
 
   /**
    * @remarks
@@ -183,7 +203,7 @@ export default interface MinecraftBehaviorPickupItems {
    *
    * Bogged: 5
    *
-   * Parched: 6
+   * Drowned: 6
    *
    */
   priority?: number;
@@ -210,6 +230,14 @@ export default interface MinecraftBehaviorPickupItems {
    *
    */
   speed_multiplier?: number;
+
+  /**
+   * @remarks
+   * If true, the mob will not begin a pickup goal while it is
+   * already holding an item. Useful for mobs that should only hold
+   * one item at a time.
+   */
+  stop_if_holding_item?: boolean;
 
   /**
    * @remarks

@@ -10,15 +10,21 @@
  * Item Components Documentation - minecraft:food
  * 
  * minecraft:food Samples
+"minecraft:food": {
+  "can_always_eat": false,
+  "nutrition": 3,
+  "saturation_modifier": 0.6,
+  "using_converts_to": "bowl"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Food (minecraft:food)
- * When an item has a food component, it becomes edible to the
- * player. Must have the 'minecraft:use_duration' component in
- * order to function properly.
+ * Sets the item as a food component, allowing it to be edible to
+ * the player.
  */
 export default interface MinecraftFood {
 
@@ -35,6 +41,14 @@ export default interface MinecraftFood {
    * used. Default is set to 0.
    */
   nutrition?: number;
+
+  /**
+   * @remarks
+   * Array of effect names to remove when eating this food. This
+   * property was deprecated and is no longer supported in newer
+   * versions.
+   */
+  remove_effects?: string[];
 
   /**
    * @remarks

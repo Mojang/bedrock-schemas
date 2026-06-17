@@ -16,6 +16,10 @@ import * as jsoncommon from '../../../common';
  * Flower Pottable (minecraft:flower_pottable)
  * When added to a block type, indicates that this block can be
  * placed inside a flower pot.
+ * Note: In format version 1.26.20, validation enforces that
+ * `minecraft:flower_pottable` may only appear in the root
+ * `components` object; placing it under `permutations` is
+ * rejected.
  */
 export default interface MinecraftFlowerPottable {
 

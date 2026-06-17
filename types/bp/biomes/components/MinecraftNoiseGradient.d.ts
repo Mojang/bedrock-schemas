@@ -17,6 +17,11 @@ import * as jsoncommon from '../../../common';
  * Places continuous bands of blocks according to a noise
  * distribution. This surface builder's processing has been
  * implemented with sub-terrain height ranges in mind.
+ * Note: In format version 1.26.30, the noise distribution returned by
+ * `noise_descriptor` is clamped to the interval [-1, 1] before being
+ * matched against `noise_block_specifiers`. Authors that previously
+ * relied on out-of-range noise values may see different block
+ * placement after upgrading.
  */
 export default interface MinecraftNoiseGradient {
 
@@ -24,7 +29,7 @@ export default interface MinecraftNoiseGradient {
    * @remarks
    * The noise block specifiers defining which ranges of noise are
    * associated with which blocks. The ranges provided are valid on
-   * the interval [0, 1], and may overlap at their endpoints.
+   * the interval [-1, 1], and may overlap at their endpoints.
    */
   noise_block_specifiers: MinecraftNoiseGradientNoiseBlockSpecifiers[];
 

@@ -18,6 +18,8 @@ import * as jsoncommon from '../../../common';
  * Entity Melee Attack Behavior 
  * (minecraft:behavior.melee_attack)
  * Allows an entity to deal damage through a melee attack.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorMeleeAttack {
 

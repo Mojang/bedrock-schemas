@@ -44,6 +44,13 @@ import * as jsoncommon from '../../../common';
 /**
  * Leashable (minecraft:leashable)
  * Describes how this mob can be leashed to other items.
+ * Note: In 1.21.90, the `can_be_cut` root field and the
+ * `spring_type` and `rotation_adjustment` fields within `presets` were
+ * added.
+ * Note: From 1.21.80 onward, supports multiple presets via the
+ * `presets` array. Each preset has its own `filter`, `hard_distance`,
+ * `soft_distance`, and `max_distance` — replacing the flat root
+ * fields previously used.
  */
 export default interface MinecraftLeashable {
 
@@ -118,8 +125,8 @@ export default interface MinecraftLeashable {
 
   /**
    * @remarks
-   * If true, the entity is unleashed when the component is 
-   * removed.
+   * If true, the entity is unleashed when this component is
+   * removed. Defaults to true.
    */
   unleash_on_removal?: boolean;
 

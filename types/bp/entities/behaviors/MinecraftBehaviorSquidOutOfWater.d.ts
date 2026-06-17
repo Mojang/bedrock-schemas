@@ -15,11 +15,13 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Squid Out Of Water Behavior 
+ * Entity Squid Out Of Water Behavior
  * (minecraft:behavior.squid_out_of_water)
  * Allows the squid to stick to the ground when outside water.
  */
 export default interface MinecraftBehaviorSquidOutOfWater {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -29,4 +31,11 @@ export default interface MinecraftBehaviorSquidOutOfWater {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSquidOutOfWaterControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

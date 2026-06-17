@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:kinetic_weapon",
+  "versionIntroduced": "1.21.130",
   "summarizer": {
     "phrases": [
       {
@@ -19,14 +20,14 @@
       "title": "Creative Reach",
       "description": "Defines the reach used when the user is in Creative Mode. Defaults to \"reach\" if unspecified.",
       "dataType": "object",
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "damage_conditions",
       "title": "Damage Conditions",
       "description": "Conditions that need to be satisfied for damage to be applied. If not specified, damage is not applied.",
       "dataType": "object",
-      "subFormId": "item_components/minecraft_kinetic_weapon_kinetic_effect_conditions"
+      "subFormId": "item/minecraft_kinetic_weapon_kinetic_effect_conditions"
     },
     {
       "id": "damage_modifier",
@@ -54,7 +55,7 @@
       "title": "Dismount Conditions",
       "description": "Conditions that need to be satisfied for riders to be dismounted. If not specified, riders cannot be dismounted.",
       "dataType": "object",
-      "subFormId": "item_components/minecraft_kinetic_weapon_kinetic_effect_conditions"
+      "subFormId": "item/minecraft_kinetic_weapon_kinetic_effect_conditions"
     },
     {
       "id": "hitbox_margin",
@@ -68,7 +69,7 @@
       "title": "Knockback Conditions",
       "description": "Conditions that need to be satisfied for knockback to be applied. If not specified, knockback is not applied.",
       "dataType": "object",
-      "subFormId": "item_components/minecraft_kinetic_weapon_kinetic_effect_conditions"
+      "subFormId": "item/minecraft_kinetic_weapon_kinetic_effect_conditions"
     },
     {
       "id": "reach",
@@ -79,7 +80,7 @@
         "max": 3,
         "min": 0
       },
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     }
   ],
   "description": "Allows an item to deal kinetic damage and its effects. This happens every tick while in use, in a straight line along the user's view vector, with damage computed based on both the user's and the target's velocity projected onto the view vector (via a dot product). The more the user and target move toward each other, and the more this movement is aligned with the user's view vector, the higher the damage. After \"damage_multiplier\" and \"damage_modifier\" are applied, the resulting damage is floored to the nearest lower integer.",

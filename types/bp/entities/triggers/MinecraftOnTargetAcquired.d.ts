@@ -18,6 +18,14 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:on_target_acquired": {
+  "event": "minecraft:has_target",
+  "target": "self"
+}
+
+
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
 "minecraft:on_target_acquired": {
@@ -63,20 +71,12 @@ Polar Bear - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
   "target": "self"
 }
 
-
-Silverfish - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/silverfish.json
-
-"minecraft:on_target_acquired": {
-  "event": "minecraft:become_angry",
-  "target": "self"
-}
-
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * On Target Acquired (minecraft:on_target_acquired)
+ * Entity On Target Acquired (minecraft:on_target_acquired)
  * Adds a trigger to call when this entity finds a target.
  */
 export default interface MinecraftOnTargetAcquired {
@@ -89,32 +89,87 @@ export default interface MinecraftOnTargetAcquired {
    * Sample Values:
    * Cave Spider: "minecraft:become_angry"
    *
-   * Llama: "minecraft:mad_at_wolf"
+   * Drowned: "minecraft:has_target"
    *
-   * Magma Cube: "minecraft:become_aggressive"
+   * Llama: "minecraft:mad_at_wolf"
    *
    */
   event?: string;
 
   /**
    * @remarks
-   * The list of conditions for this trigger to execute.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    * 
    * Sample Values:
    * Llama: {"all_of":[{"test":"is_family","subject":"target","value":"wolf"},{"test":"has_component","subject":"target","operator":"!=","value":"minecraft:is_tamed"}]}
    *
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftOnTargetAcquiredFilters;
 
   /**
    * @remarks
    * The target of the event.
    * 
    * Sample Values:
-   * Llama: "self"
+   * Drowned: "self"
    *
    *
    */
   target?: string;
 
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftOnTargetAcquiredFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftOnTargetAcquiredTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

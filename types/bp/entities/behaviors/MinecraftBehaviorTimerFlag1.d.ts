@@ -45,6 +45,10 @@ import * as jsoncommon from '../../../common';
  * due to being interrupted by another behavior, fires another event.
  * query.timer_flag_1 will return 1.0 on both the client and server
  * when this behavior is running, and 0.0 otherwise.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON.
+ * `cooldown_range` and `duration_range` now only accept an object
+ * with `min` and `max` values; the previous single-number shorthand is
+ * no longer accepted in 1.26.0 and newer.
  */
 export default interface MinecraftBehaviorTimerFlag1 {
 
@@ -118,8 +122,12 @@ export enum MinecraftBehaviorTimerFlag1ControlFlags {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorTimerFlag1CooldownRange {
 
@@ -131,8 +139,12 @@ export interface MinecraftBehaviorTimerFlag1CooldownRange {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorTimerFlag1DurationRange {
 

@@ -28,6 +28,14 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:shooter": {
+  "def": "minecraft:thrown_trident",
+  "sound": "item.trident.throw"
+}
+
+
 Ender Dragon - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/ender_dragon.json
 
 "minecraft:shooter": {
@@ -39,16 +47,6 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 "minecraft:shooter": {
   "def": "minecraft:llama_spit"
-}
-
-
-Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/parched.json
-
- * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:shooter/: 
-"minecraft:shooter": {
-  "aux_val": 35,
-  "def": "minecraft:arrow",
-  "sound": "bow"
 }
 
  */
@@ -63,6 +61,10 @@ import * as jsoncommon from '../../../common';
  * Note: Ammunition used by minecraft:shooter must have the
  * minecraft:projectile component in order to function 
  * properly.
+ * Note: Expanded in 1.19.60: the `projectiles` list can now
+ * specify multiple projectile definitions with condition filters, and
+ * `power`, `magic`, and `sound` are exposed for per-shooter 
+ * customization.
  */
 export default interface MinecraftShooter {
 
@@ -73,8 +75,6 @@ export default interface MinecraftShooter {
    * 
    * Sample Values:
    * Bogged: 26
-   *
-   * Parched: 35
    *
    */
   aux_val?: number;
@@ -90,33 +90,33 @@ export default interface MinecraftShooter {
    *
    * Bogged: "minecraft:arrow"
    *
-   * Ender Dragon: "minecraft:dragon_fireball"
+   * Drowned: "minecraft:thrown_trident"
    *
    */
   def?: string;
 
   /**
    * @remarks
-   * Sets whether the projectiles being used are flagged as magic. If
-   * set, the ranged attack goal will not be used at the same time as
-   * other magic goals, such as minecraft:behavior.drink_potion
+   * If set, the projectiles are flagged as magic and the ranged attack
+   * goal will not run at the same time as other magic goals (for
+   * example, drink_potion).
    */
   magic?: boolean;
 
   /**
    * @remarks
-   * Velocity in which the projectiles will be shot at. A power of 0
-   * will be overwritten by the default projectile throw power.
+   * Velocity at which projectiles will be shot. A power of 0 falls
+   * back to the default projectile throw power.
    */
   power?: number;
 
   /**
    * @remarks
-   * List of projectiles that can be used by the shooter. Projectiles are
-   * evaluated in the order of the list; After a projectile is
-   * chosen, the rest of the list is ignored.
+   * List of projectiles that can be used by the shooter. Each entry
+   * can specify its own projectile definition and condition filters;
+   * entries are evaluated in order and the first match is used.
    */
-  projectiles?: string[];
+  projectiles?: object[];
 
   /**
    * @remarks
@@ -124,6 +124,8 @@ export default interface MinecraftShooter {
    * 
    * Sample Values:
    * Bogged: "bow"
+   *
+   * Drowned: "item.trident.throw"
    *
    */
   sound?: string;

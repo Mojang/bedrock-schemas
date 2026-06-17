@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * On Ignite (minecraft:on_ignite)
+ * Entity On Ignite (minecraft:on_ignite)
  * Adds a trigger to call when this entity is set on fire.
  */
 export default interface MinecraftOnIgnite {
@@ -27,9 +27,12 @@ export default interface MinecraftOnIgnite {
 
   /**
    * @remarks
-   * The list of conditions for this trigger to execute.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftOnIgniteFilters;
 
   /**
    * @remarks
@@ -37,4 +40,56 @@ export default interface MinecraftOnIgnite {
    */
   target?: string;
 
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftOnIgniteFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftOnIgniteTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

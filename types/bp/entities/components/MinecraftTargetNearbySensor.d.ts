@@ -27,6 +27,22 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
   }
 }
 
+
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:target_nearby_sensor": {
+  "inside_range": 3,
+  "on_inside_range": {
+    "event": "minecraft:switch_to_melee",
+    "target": "self"
+  },
+  "on_outside_range": {
+    "event": "minecraft:switch_to_ranged",
+    "target": "self"
+  },
+  "outside_range": 5
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -45,6 +61,8 @@ export default interface MinecraftTargetNearbySensor {
    * 
    * Sample Values:
    * Blaze: 2
+   *
+   * Drowned: 3
    *
    */
   inside_range?: number;
@@ -69,6 +87,8 @@ export default interface MinecraftTargetNearbySensor {
    * Sample Values:
    * Blaze: {"event":"switch_to_melee","target":"self"}
    *
+   * Drowned: {"event":"minecraft:switch_to_melee","target":"self"}
+   *
    */
   on_inside_range?: object;
 
@@ -80,6 +100,8 @@ export default interface MinecraftTargetNearbySensor {
    * 
    * Sample Values:
    * Blaze: {"event":"switch_to_ranged","target":"self"}
+   *
+   * Drowned: {"event":"minecraft:switch_to_ranged","target":"self"}
    *
    */
   on_outside_range?: object;
@@ -99,6 +121,8 @@ export default interface MinecraftTargetNearbySensor {
    * 
    * Sample Values:
    * Blaze: 3
+   *
+   * Drowned: 5
    *
    */
   outside_range?: number;

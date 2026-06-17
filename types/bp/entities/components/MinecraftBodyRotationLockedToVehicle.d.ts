@@ -24,6 +24,10 @@ import * as jsoncommon from '../../../common';
  * (minecraft:body_rotation_locked_to_vehicle)
  * Causes the entity's body rotation to match their vehicle's facing
  * direction.
+ * Note: In 1.21.130 this component was renamed to
+ * `minecraft:rotation_locked_to_vehicle`, which now locks both body
+ * and overall entity rotation to the vehicle. Existing usages should
+ * migrate to the new identifier.
  */
 export default interface MinecraftBodyRotationLockedToVehicle {
 

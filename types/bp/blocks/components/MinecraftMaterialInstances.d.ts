@@ -105,16 +105,19 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Material Instances (minecraft:material_instances)
- * The material instances for a block. Maps face or
+ * The material instances for a block.
+Maps face or
  * material_instance names in a geometry file to an actual material
- * instance. You can assign a material instance object to any of
- * these faces: "up", "down", "north", "south", "east", "west", or
- * "*". You can also give an instance the name of your choosing such
- * as "my_instance", and then assign it to a face by doing
- * "north":"my_instance".
+ * instance. Material instance can either be a full material instance or
+ * a name to another already defined instance.
+Limited to 64
+ * instances.
  * Note: From 1.21.80 onward, when using a minecraft:geometry component
  * or minecraft:material_instances component, you must include 
  * both.
+ * Note: In format version 1.26.20, `ambient_occlusion` no longer
+ * accepts boolean values — it must be a float between 0.0 and 10.0
+ * inclusive, and defaults to 1.0 when omitted.
  */
 export default interface MinecraftMaterialInstances {
 

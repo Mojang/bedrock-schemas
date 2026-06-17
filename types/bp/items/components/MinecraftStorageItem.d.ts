@@ -28,8 +28,16 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Item Storage Item (minecraft:storage_item)
- * [EXPERIMENTAL] Storage Items can be used by other components to
- * store other items within this item.
+ * Enables an item to store data of the dynamic container associated with
+ * it. A dynamic container is a container for storing items that is
+ * linked to an item instead of a block or an entity.
+ * Note: While this component can be defined on its own, to be
+ * able to interact with the item's storage container the item must
+ * have a `minecraft:bundle_interaction` item component 
+ * defined.
+ * Note: Available without experimental toggle in 1.21.110.
+ * Note: In 1.26.0, equipping an item with this component into an
+ * armor or hand slot no longer deletes the storage contents.
  */
 export default interface MinecraftStorageItem {
 

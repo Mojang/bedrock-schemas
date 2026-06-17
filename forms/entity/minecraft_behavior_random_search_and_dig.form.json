@@ -12,6 +12,8 @@
       }
     ]
   },
+  "id": "minecraft:behavior.random_search_and_dig",
+  "versionIntroduced": "1.20.40",
   "fields": [
     {
       "id": "control_flags",
@@ -42,7 +44,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item_components/floatrange",
+      "subFormId": "item/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/sniffer.json": [
           {
@@ -64,7 +66,7 @@
         "max": 10,
         "min": 8
       },
-      "subFormId": "item_components/floatrange",
+      "subFormId": "item/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/sniffer.json": [
           {
@@ -543,6 +545,5 @@
         }
       }
     ]
-  },
-  "id": "minecraft:behavior.random_search_and_dig"
+  }
 }

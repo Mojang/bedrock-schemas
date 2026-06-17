@@ -37,7 +37,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item_components/floatrange",
+      "subFormId": "item/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
@@ -363,6 +363,8 @@
     }
   ],
   "versionIntroduced": "1.21.30",
+  "note": "In 1.26.0, `max_head_rotation_x` and `max_head_rotation_y` are applied to the correct axes (they were previously swapped).",
+  "note2": "Under the Custom Projectiles experiment in format version 1.26.20, the component's `projectile_x_offset`, `projectile_y_offset`, and `projectile_z_offset` values are applied relative to the firing entity's rotation rather than world axes.",
   "description": "Allows an entity to attack by firing a shot with a delay. Anchor and offset parameters of this component overrides the anchor and offset from projectile component.",
   "title": "Entity Fire At Target Behavior",
   "samples": {

@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Admire Item (minecraft:admire_item)
+ * Entity Admire Item (minecraft:admire_item)
  * Allows an entity to ignore attackable targets for a given
  * duration.
  */
@@ -30,7 +30,7 @@ export default interface MinecraftAdmireItem {
 
   /**
    * @remarks
-   * Duration, in seconds, that the mob is pacified.
+   * Duration, in seconds, that the mob admires an item.
    */
   duration?: number;
 

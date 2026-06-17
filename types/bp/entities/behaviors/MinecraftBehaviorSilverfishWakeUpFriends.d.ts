@@ -22,11 +22,13 @@ Silverfish - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
 import * as jsoncommon from '../../../common';
 
 /**
- * Silverfish Wake Up Friends Behavior
+ * Entity Silverfish Wake Up Friends Behavior
  * (minecraft:behavior.silverfish_wake_up_friends)
  * Allows the mob to alert mobs in nearby blocks to come out.
  */
 export default interface MinecraftBehaviorSilverfishWakeUpFriends {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -40,4 +42,11 @@ export default interface MinecraftBehaviorSilverfishWakeUpFriends {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSilverfishWakeUpFriendsControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

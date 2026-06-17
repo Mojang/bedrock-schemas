@@ -48,25 +48,33 @@
           "id": "water",
           "title": "Water"
         }
-      ]
+      ],
+      "defaultValue": "none"
     },
     {
       "id": "particle_count",
       "title": "Particle Count",
-      "description": "Optional, number of particles to spawn of destruction. Default is 100, maximum is 255 inclusively",
-      "dataType": "int"
+      "description": "Sets number of particles to spawn on block destruction.",
+      "dataType": "int",
+      "defaultValue": 100,
+      "validity": [
+        {
+          "comparison": "<=",
+          "value": 255
+        }
+      ]
     },
     {
       "id": "texture",
       "title": "Texture",
       "description": "The texture name used for the particle.",
-      "dataType": "string"
+      "dataType": "string",
+      "defaultValue": ""
     }
   ],
   "versionIntroduced": "1.21.80",
-  "isExperimental": true,
-  "requiredExperiment": "Upcoming Creator Features",
-  "description": "[Note: This component is currently experimental]. Sets the particles that will be used when block is destroyed.",
-  "title": "Destruction Particles",
-  "id": "minecraft:destruction_particles"
+  "note": "Available without experimental toggle in 1.21.100. The particle_count field controls how many particles spawn when the block is broken.",
+  "description": "Sets the particles that will be used when block is destroyed.",
+  "title": "Block Destruction Particles",
+  "id": "Destruction Particles"
 }

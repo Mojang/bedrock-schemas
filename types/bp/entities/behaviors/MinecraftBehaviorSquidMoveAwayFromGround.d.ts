@@ -15,12 +15,14 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Squid Move Away From Ground Behavior
+ * Entity Squid Move Away From Ground Behavior
  * (minecraft:behavior.squid_move_away_from_ground)
  * Allows the squid to move away from ground blocks and back to
  * water.
  */
 export default interface MinecraftBehaviorSquidMoveAwayFromGround {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -30,4 +32,11 @@ export default interface MinecraftBehaviorSquidMoveAwayFromGround {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSquidMoveAwayFromGroundControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

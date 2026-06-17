@@ -6,7 +6,7 @@
   "properties": {
     "ambient": {
       "title": "Ambient",
-      "description": "If the effect is considered an ambient effect (like the ones applied by Beacons or Conduits).",
+      "description": "If true, the effect renders with the ambient effect background (like Beacons or Conduits) and does not pulse as it nears expiration.\n\n*Introduced in version 1.21.130*",
       "type": "boolean",
       "default": false
     },

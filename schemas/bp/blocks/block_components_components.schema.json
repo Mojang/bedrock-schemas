@@ -659,6 +659,11 @@
         }
       ]
     },
+    "minecraft:instrument_sound": {
+      "title": "Minecraft Instrument Sound",
+      "description": "This defines what sound will play based on above or below relative position to a note block.\nAn instrument can be assigned to the \"up\" and \"down\" faces where at least one face needs to be defined for the component to be valid.\nAn undefined face will use its default value: \"up\" = \"note.harp\" and \"down\" = \"note.none\".\n\"note.none\" can be used to specify no sound for a face.",
+      "type": "object"
+    },
     "minecraft:item_visual": {
       "title": "Minecraft Item Visual",
       "description": "The \"minecraft:geometry\" component and \"minecraft:material_instances\" component of an item. Can be used instead of having separated component for each.",

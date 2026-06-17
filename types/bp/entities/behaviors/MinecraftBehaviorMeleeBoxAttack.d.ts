@@ -50,6 +50,15 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "track_target": true
 }
 
+
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:behavior.melee_box_attack": {
+  "can_spread_on_fire": true,
+  "require_complete_path": true,
+  "priority": 3
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -59,6 +68,8 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.melee_box_attack)
  * Allows an entity to deal damage through a melee attack with reach
  * calculations based on bounding boxes.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorMeleeBoxAttack {
 
@@ -79,6 +90,10 @@ export default interface MinecraftBehaviorMeleeBoxAttack {
    * @remarks
    * Allows the mob, if on fire and empty handed, to ignite its
    * target upon a successful attack.
+   * 
+   * Sample Values:
+   * Drowned: true
+   *
    */
   can_spread_on_fire?: boolean;
 
@@ -200,6 +215,10 @@ export default interface MinecraftBehaviorMeleeBoxAttack {
    * @remarks
    * Specifies whether a full navigation path from the mob to the
    * target is required.
+   * 
+   * Sample Values:
+   * Drowned: true
+   *
    */
   require_complete_path?: boolean;
 

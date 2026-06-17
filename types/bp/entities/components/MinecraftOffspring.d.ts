@@ -44,23 +44,20 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:offspring": {
+  "offspring_pairs": {
+    "minecraft:drowned": "minecraft:drowned"
+  }
+}
+
+
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
 "minecraft:offspring": {
   "offspring_pairs": {
     "minecraft:frog": "minecraft:tadpole"
-  }
-}
-
-
-Goat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/goat.json
-
-"minecraft:offspring": {
-  "offspring_pairs": {
-    "minecraft:goat": "minecraft:goat"
-  },
-  "mutation_factor": {
-    "variant": 0
   }
 }
 
@@ -101,10 +98,6 @@ export default interface MinecraftOffspring {
    * Determines how likely the babies are to NOT inherit one of
    * their parent's variances. Values are between 0.0 and 1.0, with a
    * higher number meaning more likely to mutate.
-   * 
-   * Sample Values:
-   * Goat: {"variant":0}
-   *
    */
   mutation_factor?: MinecraftOffspringMutationFactor[];
 

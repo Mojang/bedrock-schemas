@@ -275,6 +275,7 @@
       "defaultValue": 30
     }
   ],
+  "note": "In 1.26.0 the schema is stricter and rejects invalid JSON for this behavior.",
   "description": "Allows an entity to attack using stomp AoE damage behavior.",
   "title": "Entity Stomp Attack Behavior",
   "samples": {

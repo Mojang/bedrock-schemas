@@ -15,6 +15,12 @@ import * as jsoncommon from '../../common';
 /**
  * Height Difference Filter Feature
  * (minecraft:height_difference_filter_feature)
+ * Note: Introduced in 1.26.30. Conditionally places a referenced
+ * `places_feature` based on the upward and downward height
+ * differences (relative to the placement position) found within
+ * `search_radius` in each cardinal direction. Useful for placing
+ * features that only make sense on terrain with a specific shape
+ * (cliffs, gentle slopes, flat plateaus).
  */
 export default interface MinecraftHeightDifferenceFilterFeature {
 

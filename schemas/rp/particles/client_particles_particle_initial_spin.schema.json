@@ -19,17 +19,7 @@
           "description": "\n\nProperties:\n• expression (string)\n• version (int)",
           "type": "object",
           "additionalProperties": {
-            "type": "object",
-            "properties": {
-              "expression": {
-                "title": "Expression",
-                "type": "string"
-              },
-              "version": {
-                "title": "Version",
-                "type": "integer"
-              }
-            }
+            "$ref": "../../common/expression.schema.json"
           }
         },
         {
@@ -53,17 +43,7 @@
           "description": "\n\nProperties:\n• expression (string)\n• version (int)",
           "type": "object",
           "additionalProperties": {
-            "type": "object",
-            "properties": {
-              "expression": {
-                "title": "Expression",
-                "type": "string"
-              },
-              "version": {
-                "title": "Version",
-                "type": "integer"
-              }
-            }
+            "$ref": "../../common/expression.schema.json"
           }
         },
         {

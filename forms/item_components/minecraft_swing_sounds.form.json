@@ -969,6 +969,14 @@
           "title": "Gallop"
         },
         {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
+        },
+        {
           "id": "geyser_eruption_active",
           "title": "Geyser eruption active"
         },
@@ -3237,6 +3245,14 @@
           "title": "Gallop"
         },
         {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
+        },
+        {
           "id": "geyser_eruption_active",
           "title": "Geyser eruption active"
         },
@@ -5503,6 +5519,14 @@
         {
           "id": "gallop",
           "title": "Gallop"
+        },
+        {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
         },
         {
           "id": "geyser_eruption_active",

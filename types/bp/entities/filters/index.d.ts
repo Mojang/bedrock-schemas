@@ -2,6 +2,7 @@
 // Licensed under the MIT License.
 // Barrel export for bp/entities/filters
 
+export { default as ActorHasItemWithEnchantmentInSlot } from './ActorHasItemWithEnchantmentInSlot';
 export { default as ActorHealth } from './ActorHealth';
 export { default as AllSlotsEmpty } from './AllSlotsEmpty';
 export { default as AnySlotEmpty } from './AnySlotEmpty';

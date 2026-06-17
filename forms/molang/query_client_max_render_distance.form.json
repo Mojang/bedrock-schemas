@@ -13,6 +13,7 @@
     ]
   },
   "id": "query.client_max_render_distance",
+  "versionIntroduced": "1.21.50",
   "fields": [],
   "description": "Returns the max render distance in chunks of the current client. Available on the Client (Resource Packs) only.",
   "title": "Client Max Render Distance"

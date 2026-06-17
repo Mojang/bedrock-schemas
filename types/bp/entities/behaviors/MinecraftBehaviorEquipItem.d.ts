@@ -45,8 +45,8 @@ export default interface MinecraftBehaviorEquipItem {
    * Sample Values:
    * Bogged: 3
    *
-   * Parched: 4
    *
+   * Parched: 4
    *
    */
   priority?: number;

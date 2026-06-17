@@ -12,6 +12,8 @@
       }
     ]
   },
+  "versionIntroduced": "1.20.60",
+  "note": "Data-driven block culling rules were added in 1.20.60 to improve custom block performance and provide more control over per-face rendering.",
   "fields": [
     {
       "id": "format_version",

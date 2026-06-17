@@ -2,6 +2,15 @@
   "id": "Detection Rule",
   "fields": [
     {
+      "id": "use_liquid_clipping",
+      "title": "Use Liquid Clipping",
+      "description": "If true, the block uses its collision box to visually clip the liquid (reducing the visible water volume to match the block's shape). If false, the liquid renders as a full square across the whole block regardless of the collision shape.",
+      "dataType": "boolean",
+      "versionIntroduced": "1.26.0",
+      "note": "Added to `detection_rules` entries in 1.26.0. Defaults to `true` for format_version older than 1.26.0 and to `false` for 1.26.0 and newer.",
+      "defaultValue": false
+    },
+    {
       "id": "can_contain_liquid",
       "title": "Can Contain Liquid",
       "description": "Whether this block can contain the liquid. For example, if the liquid type is `water`, this means the block can be waterlogged.",
@@ -52,13 +61,6 @@
       "description": "When a block contains a liquid, controls the directions in which the liquid can't flow out from the block. Also controls the directions in which a block can stop liquid flowing into it if `no_reaction` is set for the `on_liquid_touches` field. Can be a list of the following directions: \"up\", \"down\", \"north\", \"south\", \"east\", \"west\". The default is an empty list; this means that liquid can flow out of all directions by default.",
       "dataType": "object",
       "defaultValue": []
-    },
-    {
-      "id": "use_liquid_clipping",
-      "title": "Use Liquid Clipping",
-      "description": "Whether this block uses the encompassing collider to visually clip the liquid. The encompassing collider is the smallest single AABB that contains all of the block's colliders.\nA liquid's base visual shape is ALWAYS a quad, they do not have more subdivisions.\nWhen use_liquid_clipping is TRUE, the game will attempt to reduce the visible volume of water if the collision shape allows it. Eg. a wall will turn the water base shape into a rectangle on the side of the incoming water.\nWhen use_liquid_clipping is FALSE, the game will preserve the water base shape as a full square, no matter what the collision shape of the block they share space with is.",
-      "dataType": "boolean",
-      "defaultValue": false
     }
   ],
   "title": "Block Detection Rule"

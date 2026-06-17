@@ -13,20 +13,35 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Precipitation Interactions 
+ * Block Precipitation Interactions 
  * (minecraft:precipitation_interactions)
- * Component that determines how the block will interact with rain
- * and snow
-Experimental toggles required: Upcoming Creator Features (in
- * format versions before 1.21.120).
+ * Determines interactions the block will have with different
+ * precipitations. Three possible values: obrain,
+ * obstruct_rain_accumulate_snow and none.
+ * Note: In format version 1.26.30, the `snow_log_no_collision` value
+ * for `precipitation_behavior` was renamed to `snowlogging` (the
+ * legacy value still parses but is deprecated). Snow logging itself
+ * requires `format_version` 1.21.120 or newer.
+ * Note: The `snow_log_no_collision` value for
+ * `precipitation_behavior` (which lets custom blocks be covered by
+ * snow) was first added in 1.26.20 under the Upcoming Creator Features
+ * experiment, then renamed to `snowlogging` in 1.26.30.
  */
 export default interface MinecraftPrecipitationInteractions {
 
   /**
    * @remarks
-   * What behavior should the block have. Three possible values: obrain,
-   * obstruct_rain_accumulate_snow and none
+   * What behavior should the block have. Possible values: obrain,
+   * obstruct_rain_accumulate_snow, snowlogging, and none
    */
-  precipitation_behavior?: string;
+  precipitation_behavior: string;
 
+}
+
+
+export enum MinecraftPrecipitationInteractionsPrecipitationBehavior {
+  none = `none`,
+  obstructRain = `obstruct_rain`,
+  obstructRainAccumulateSnow = `obstruct_rain_accumulate_snow`,
+  snowlogging = `snowlogging`
 }

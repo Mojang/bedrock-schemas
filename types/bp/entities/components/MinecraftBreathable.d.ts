@@ -83,6 +83,13 @@ export default interface MinecraftBreathable {
 
   /**
    * @remarks
+   * If true, entities that only breathe water (for example, fish) will
+   * take dehydration damage when out of water.
+   */
+  can_dehydrate?: boolean;
+
+  /**
+   * @remarks
    * If set, this entity will have visible bubbles while in 
    * water.
    */

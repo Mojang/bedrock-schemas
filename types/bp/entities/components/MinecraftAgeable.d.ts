@@ -110,6 +110,10 @@ import * as jsoncommon from '../../../common';
  * Adds a timer for the entity to grow up. It can be accelerated by
  * giving the entity the items it likes as defined by 
  * feed_items.
+ * Note: In 1.21.130 the `transform_to_item` field on each entry of
+ * `feed_items` was renamed to `result_item`. The new field is
+ * defined per-item, so different feed items can transform into
+ * different result items on use.
  */
 export default interface MinecraftAgeable {
 
@@ -169,8 +173,16 @@ export default interface MinecraftAgeable {
 
   /**
    * @remarks
-   * List of items that can be fed to the entity to pause growth for
-   * baby entities.
+   * Event triggered when a baby entity's growth is paused (via a
+   * `pause_growth_items` feed). Can be an object with `event` and
+   * `target` properties, or a simple event string.
+   */
+  pause_growth?: object;
+
+  /**
+   * @remarks
+   * List of items that can be fed to a baby entity to pause its
+   * growth.
    * 
    * Sample Values:
    * Chicken: ["golden_dandelion"]
@@ -181,8 +193,16 @@ export default interface MinecraftAgeable {
 
   /**
    * @remarks
-   * List of items that can be used to reset growth for baby 
-   * entities.
+   * Event triggered when a baby entity's growth is reset (via a
+   * `reset_growth_items` feed). Can be an object with `event` and
+   * `target` properties, or a simple event string.
+   */
+  reset_growth?: object;
+
+  /**
+   * @remarks
+   * List of items that can be fed to a baby entity to reset its
+   * growth timer.
    * 
    * Sample Values:
    * Chicken: ["golden_dandelion"]

@@ -63,6 +63,46 @@
       "title": "Grow up event",
       "description": "Event to fire when an entity grows up. Can be an object with event and target properties, or a simple event string.\n\nSample values:\n• chicken: {\"event\":\"minecraft:ageable_grow_up\",\"target\":\"...\n• dolphin: {\"event\":\"ageable_grow_up\",\"target\":\"self\"}"
     },
+    "pause_growth_items": {
+      "title": "Pause Growth Items",
+      "description": "List of items that can be fed to a baby entity to pause its growth.\n\n*Introduced in version 1.26.10*\n\nSample values:\n• chicken: [\"golden_dandelion\"]",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reset_growth_items": {
+      "title": "Reset Growth Items",
+      "description": "List of items that can be fed to a baby entity to reset its growth timer.\n\n*Introduced in version 1.26.10*\n\nSample values:\n• chicken: [\"golden_dandelion\"]",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pause_growth": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Pause Growth",
+      "description": "Event triggered when a baby entity's growth is paused (via a `pause_growth_items` feed). Can be an object with `event` and `target` properties, or a simple event string.\n\n*Introduced in version 1.26.10*"
+    },
+    "reset_growth": {
+      "anyOf": [
+        {
+          "type": "object"
+        },
+        {
+          "type": "string"
+        }
+      ],
+      "title": "Reset Growth",
+      "description": "Event triggered when a baby entity's growth is reset (via a `reset_growth_items` feed). Can be an object with `event` and `target` properties, or a simple event string.\n\n*Introduced in version 1.26.10*"
+    },
     "interact_filters": {
       "title": "Interact Filters",
       "description": "List of conditions to meet so that the entity can be fed.",
@@ -100,22 +140,6 @@
           }
         }
       ]
-    },
-    "pause_growth_items": {
-      "title": "Pause Growth Items",
-      "description": "List of items that can be fed to the entity to pause growth for baby entities.\n\nSample values:\n• chicken: [\"golden_dandelion\"]",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "reset_growth_items": {
-      "title": "Reset Growth Items",
-      "description": "List of items that can be used to reset growth for baby entities.\n\nSample values:\n• chicken: [\"golden_dandelion\"]",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
     }
   }
 }

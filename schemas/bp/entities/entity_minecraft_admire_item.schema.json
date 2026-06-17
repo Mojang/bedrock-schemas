@@ -1,18 +1,18 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Admire Item",
+  "title": "Entity Admire Item",
   "description": "Allows an entity to ignore attackable targets for a given duration",
   "properties": {
     "cooldown_after_being_attacked": {
       "title": "Cooldown After Being Attacked",
       "description": "Duration, in seconds, for which mob won't admire items if it was hurt",
       "type": "integer",
-      "default": 0
+      "default": 10
     },
     "duration": {
       "title": "Duration",
-      "description": "Duration, in seconds, that the mob is pacified.",
+      "description": "Duration, in seconds, that the mob admires an item.",
       "type": "integer",
       "default": 10
     }

@@ -10,46 +10,80 @@
  * Item Components Documentation - minecraft:shooter
  * 
  * minecraft:shooter Samples
+"minecraft:shooter": {
+  "ammunition": [
+    {
+      "item": "custom_projectile",
+      "use_offhand": true,
+      "search_inventory": true,
+      "use_in_creative": true
+    }
+  ],
+  "max_draw_duration": 1,
+  "scale_power_by_draw_duration": true,
+  "charge_on_draw": false
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Shooter (minecraft:shooter)
- * Shooter Item Component.
+ * Compels an item to shoot projectiles, similarly to a bow or
+ * crossbow. Must have the minecraft:use_modifiers component in
+ * order to function properly.
+ * Note: Ammunition used by minecraft:shooter must have the
+ * minecraft:projectile component in order to function 
+ * properly.
+ * Note: Items equipped with the shooter component will only sustain
+ * damage while shooting. Durability will remain unaffected if the
+ * item is used for melee attacks.
  */
 export default interface MinecraftShooter {
 
   /**
    * @remarks
-   * Ammunition.
+   * A list of ammunition entries that define which items can be
+   * used as projectiles for this shooter. Each entry specifies the
+   * item, whether to search the offhand, inventory, and whether to
+   * use in creative mode.
    */
   ammunition?: MinecraftShooterAmmunition[];
 
   /**
    * @remarks
-   * Charge on draw? Default is set to false.
+   * When true, the shooter begins charging when the player starts
+   * drawing, similar to a crossbow. Default is false.
    */
-  charge_on_draw?: boolean;
+  charge_on_draw: boolean;
 
   /**
    * @remarks
-   * Draw Duration. Default is set to 0.
+   * The maximum time in seconds that a player can draw the shooter
+   * before it automatically fires or reaches maximum power. Default is
+   * 0.
    */
-  max_draw_duration?: number;
+  max_draw_duration: number;
 
   /**
    * @remarks
-   * Scale power by draw duration? Default is set to false.
+   * When true, the projectile's launch power increases based on how
+   * long the player holds the use button before releasing. Default is
+   * false.
    */
-  scale_power_by_draw_duration?: boolean;
+  scale_power_by_draw_duration: boolean;
 
 }
 
 
 /**
- * Item Components Ammunition (Ammunition)
- * Is ammunition for a shooter item.
+ * Item Ammunition (Ammunition)
+ * Configures this item as ammunition consumed by ranged weapons like
+ * bows and crossbows. Reference compatible shooter items and
+ * specify search behavior for inventory slots. When players use
+ * the associated weapon, this item is consumed and its projectile is
+ * launched.
  */
 export interface MinecraftShooterAmmunition {
 

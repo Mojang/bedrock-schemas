@@ -46,15 +46,17 @@ Sheep - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Eat Block Behavior (minecraft:behavior.eat_block)
+ * Entity Eat Block Behavior (minecraft:behavior.eat_block)
  * Allows the entity to consume a block, replace the eaten block with
  * another block, and trigger an event as a result.
  */
 export default interface MinecraftBehaviorEatBlock {
 
+  control_flags?: string[];
+
   /**
    * @remarks
-   * A collection of pairs of blocks; the first ("eat_block")is the
+   * A collection of pairs of blocks; the first ("eat_block") is the
    * block the entity should eat, the second ("replace_block") is
    * the block that should replace the eaten block.
    * 
@@ -62,7 +64,7 @@ export default interface MinecraftBehaviorEatBlock {
    * Sheep: [{"eat_block":"grass","replace_block":"dirt"},{"eat_block":"tallgrass","replace_block":"air"},{"eat_block":"short_dry_grass","replace_block":"air"},{"eat_block":"tall_dry_grass","replace_block":"air"}]
    *
    */
-  eat_and_replace_block_pairs?: string[];
+  eat_and_replace_block_pairs?: object[];
 
   /**
    * @remarks
@@ -73,7 +75,7 @@ export default interface MinecraftBehaviorEatBlock {
    * Sheep: {"event":"minecraft:on_eat_block","target":"self"}
    *
    */
-  on_eat?: jsoncommon.MinecraftEventTrigger;
+  on_eat?: MinecraftBehaviorEatBlockOnEat;
 
   /**
    * @remarks
@@ -96,7 +98,7 @@ export default interface MinecraftBehaviorEatBlock {
    * Sheep: "query.is_baby ? 0.02 : 0.001"
    *
    */
-  success_chance?: string;
+  success_chance?: { [key: string]: string };
 
   /**
    * @remarks
@@ -109,4 +111,90 @@ export default interface MinecraftBehaviorEatBlock {
    */
   time_until_eat?: number;
 
+}
+
+
+export enum MinecraftBehaviorEatBlockControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
+ */
+export interface MinecraftBehaviorEatBlockOnEat {
+
+  event?: string;
+
+  /**
+   * @remarks
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
+   */
+  filters?: MinecraftBehaviorEatBlockOnEatFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorEatBlockOnEatFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftBehaviorEatBlockOnEatTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

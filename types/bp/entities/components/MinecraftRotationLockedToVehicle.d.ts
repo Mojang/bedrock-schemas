@@ -11,7 +11,7 @@
  * 
  * minecraft:rotation_locked_to_vehicle Samples
 
-Skeleton - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/skeleton.json
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
 
 "minecraft:rotation_locked_to_vehicle": {}
 
@@ -24,6 +24,10 @@ import * as jsoncommon from '../../../common';
  * (minecraft:rotation_locked_to_vehicle)
  * Causes the entity's rotation to match their vehicle's facing
  * direction.
+ * Note: Introduced in 1.21.130 as a rename of
+ * `minecraft:body_rotation_locked_to_vehicle`. Locks both the
+ * entity's body rotation and overall rotation to its mounted vehicle's
+ * facing direction.
  */
 export default interface MinecraftRotationLockedToVehicle {
 

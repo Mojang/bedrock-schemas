@@ -56,6 +56,8 @@
       }
     }
   ],
+  "versionIntroduced": "1.21.110",
+  "note": "Available without experimental toggle in 1.21.110.",
   "description": "Specifies the maximum weight limit that a storage item can hold",
   "title": "Item Storage Weight Limit",
   "samples": {

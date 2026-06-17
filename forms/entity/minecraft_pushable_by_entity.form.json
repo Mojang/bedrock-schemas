@@ -1,5 +1,8 @@
 {
   "id": "minecraft:pushable_by_entity",
+  "versionIntroduced": "1.26.10",
+  "note": "Added in 1.26.10 as part of the split of `minecraft:pushable` into `minecraft:pushable_by_block` (pistons and Shulker Boxes) and `minecraft:pushable_by_entity` (other entities). The legacy `minecraft:pushable` component is no longer parsed.",
+  "note2": "Released out of beta in format version 1.26.30. The `presets` field replaces the previous flat property layout; the preset field `max_distance` was renamed from `kick_distance_threshold`.",
   "fields": [
     {
       "id": "presets",
@@ -14,9 +17,33 @@
             "path": "/minecraft:entity/components/minecraft:pushable_by_entity/",
             "content": [
               {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "sulfur_cube"
+                    },
+                    {
+                      "test": "enum_property",
+                      "subject": "other",
+                      "domain": "minecraft:sulfur_cube_archetype",
+                      "operator": "not",
+                      "value": "none"
+                    },
+                    {
+                      "test": "is_controlling_passenger_family",
+                      "subject": "self",
+                      "value": "player"
+                    }
+                  ]
+                },
+                "push_mode": "none"
+              },
+              {
                 "push_mode": "legacy_boat",
                 "strength_multiplier": 0.1,
-                "min_distance": 0.3,
+                "min_distance": 0.55,
                 "push_scale_self": 0.5,
                 "push_scale_other": 0.25
               }
@@ -28,9 +55,33 @@
             "path": "/minecraft:entity/components/minecraft:pushable_by_entity/",
             "content": [
               {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "sulfur_cube"
+                    },
+                    {
+                      "test": "enum_property",
+                      "subject": "other",
+                      "domain": "minecraft:sulfur_cube_archetype",
+                      "operator": "not",
+                      "value": "none"
+                    },
+                    {
+                      "test": "is_controlling_passenger_family",
+                      "subject": "self",
+                      "value": "player"
+                    }
+                  ]
+                },
+                "push_mode": "none"
+              },
+              {
                 "push_mode": "legacy_boat",
                 "strength_multiplier": 0.1,
-                "min_distance": 0.3,
+                "min_distance": 0.55,
                 "push_scale_self": 0.5,
                 "push_scale_other": 0.25
               }
@@ -49,9 +100,33 @@
         "content": {
           "presets": [
             {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sulfur_cube"
+                  },
+                  {
+                    "test": "enum_property",
+                    "subject": "other",
+                    "domain": "minecraft:sulfur_cube_archetype",
+                    "operator": "not",
+                    "value": "none"
+                  },
+                  {
+                    "test": "is_controlling_passenger_family",
+                    "subject": "self",
+                    "value": "player"
+                  }
+                ]
+              },
+              "push_mode": "none"
+            },
+            {
               "push_mode": "legacy_boat",
               "strength_multiplier": 0.1,
-              "min_distance": 0.3,
+              "min_distance": 0.55,
               "push_scale_self": 0.5,
               "push_scale_other": 0.25
             }
@@ -71,9 +146,33 @@
         "content": {
           "presets": [
             {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "sulfur_cube"
+                  },
+                  {
+                    "test": "enum_property",
+                    "subject": "other",
+                    "domain": "minecraft:sulfur_cube_archetype",
+                    "operator": "not",
+                    "value": "none"
+                  },
+                  {
+                    "test": "is_controlling_passenger_family",
+                    "subject": "self",
+                    "value": "player"
+                  }
+                ]
+              },
+              "push_mode": "none"
+            },
+            {
               "push_mode": "legacy_boat",
               "strength_multiplier": 0.1,
-              "min_distance": 0.3,
+              "min_distance": 0.55,
               "push_scale_self": 0.5,
               "push_scale_other": 0.25
             }
@@ -89,7 +188,7 @@
             {
               "push_mode": "legacy_minecart",
               "strength_multiplier": 0.1,
-              "min_distance": 0.0001,
+              "min_distance": 0.01,
               "push_scale_self": 0.5,
               "push_scale_other": 0.25
             }

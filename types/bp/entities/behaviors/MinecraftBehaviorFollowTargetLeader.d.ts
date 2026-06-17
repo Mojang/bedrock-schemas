@@ -16,6 +16,12 @@ import * as jsoncommon from '../../../common';
  * Entity Follow Target Leader Behavior
  * (minecraft:behavior.follow_target_leader)
  * Allows mob to move towards its target leader.
+ * Note: Added in 1.26.20 as the generalized replacement for
+ * `minecraft:behavior.follow_target_captain`. Use `leader_filters` (required)
+ * to define which entities qualify as leaders, `search_cooldown` (default
+ * 20 ticks) to throttle leader searches, and
+ * `always_look_for_leader` (default false) to keep searching even
+ * after a leader has been found.
  */
 export default interface MinecraftBehaviorFollowTargetLeader {
 

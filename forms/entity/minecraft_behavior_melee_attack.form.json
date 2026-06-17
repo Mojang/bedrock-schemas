@@ -350,6 +350,7 @@
       "defaultValue": 30
     }
   ],
+  "note": "In 1.26.0 the schema is stricter and rejects invalid JSON for this behavior.",
   "requires": [
     {
       "id": "targeting_entity_component",

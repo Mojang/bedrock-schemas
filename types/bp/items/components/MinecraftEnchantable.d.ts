@@ -16,9 +16,11 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Item Enchantable (minecraft:enchantable)
- * The enchantable component specifies what enchantments can be
- * applied to the item. Not all enchantments will have an effect on
- * all item components.
+ * Determines what enchantments can be applied to the item. Not all
+ * enchantments will have an effect on all item components.
+ * Note: The following enchantment slot types that can be set for
+ * the value of `slot`: sword, bow, pickaxe, armor_head, armor_torso,
+ * armor_legs, armor_feet.
  */
 export default interface MinecraftEnchantable {
 

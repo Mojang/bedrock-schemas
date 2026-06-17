@@ -14,6 +14,22 @@
   },
   "fields": [
     {
+      "id": "lay_seconds",
+      "title": "Lay Seconds",
+      "description": "Duration of the laying egg process in seconds.",
+      "defaultValue": 10,
+      "dataType": "float",
+      "note": "From 1.26.10 onward, `lay_seconds` only accepts values greater than or equal to 0; entity JSON with negative values will fail to load.",
+      "samples": {
+        "/vanilla/behavior_pack/entities/frog.json": [
+          {
+            "path": "/minecraft:entity/component_groups/pregnant/minecraft:behavior.lay_egg/",
+            "content": 2
+          }
+        ]
+      }
+    },
+    {
       "id": "allow_laying_from_below",
       "title": "Allow Laying From Below",
       "description": "Allows the mob to lay its eggs from below the target if it can't get there. This is useful if the target block is water with air above, since mobs may not be able to get to the air block above water.",
@@ -1037,6 +1053,14 @@
         {
           "id": "gallop",
           "title": "Gallop"
+        },
+        {
+          "id": "geyser_continuous_eruption_active",
+          "title": "Geyser continuous eruption active"
+        },
+        {
+          "id": "geyser_continuous_eruption_start",
+          "title": "Geyser continuous eruption start"
         },
         {
           "id": "geyser_eruption_active",
@@ -2357,21 +2381,6 @@
           {
             "path": "/minecraft:entity/component_groups/pregnant/minecraft:behavior.lay_egg/",
             "content": "lay_spawn"
-          }
-        ]
-      }
-    },
-    {
-      "id": "lay_seconds",
-      "title": "Lay Seconds",
-      "description": "Duration of the laying egg process in seconds.",
-      "dataType": "float",
-      "defaultValue": 10,
-      "samples": {
-        "/vanilla/behavior_pack/entities/frog.json": [
-          {
-            "path": "/minecraft:entity/component_groups/pregnant/minecraft:behavior.lay_egg/",
-            "content": 2
           }
         ]
       }

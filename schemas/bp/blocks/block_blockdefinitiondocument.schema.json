@@ -14,12 +14,12 @@
     },
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 39 more properties",
-      "$ref": "./block_components_components.schema.json",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 40 more properties",
+      "$ref": "./block_components.schema.json",
       "defaultSnippets": [
         {
-          "label": "Block Components Components",
-          "description": "Has custom geometry.",
+          "label": "Block Components",
+          "description": "Container for all components that define custom block behavior and properties. Components control collision, selection boxes, destruction time, light emission, flammability, placement rules, crafting table functionality, and more. Combine components to create unique blocks with specific gameplay characteristics.",
           "body": {
             "minecraft:light_dampening": 0,
             "minecraft:light_emission": 0,

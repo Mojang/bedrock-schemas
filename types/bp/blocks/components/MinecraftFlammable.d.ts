@@ -33,10 +33,11 @@ import * as jsoncommon from '../../../common';
 /**
  * Flammable (minecraft:flammable)
  * Describes the flammable properties for this block. If set to
- * true, default values are used (catch: 5, destroy: 20, same as
- * planks). If set to false, or if this component is omitted, the
- * block will not be able to catch on fire naturally from neighbors, but
- * it can still be directly ignited.
+ * true, default values are used (catch: 5, destroy: 20). Note that
+ * the default value of lava_flammable is false for backwards
+ * compatibility. If set to false, or if this component is
+ * omitted, the block will not be able to catch on fire naturally from
+ * neighbors, but it can still be directly ignited.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `Boolean true/false`.
@@ -71,5 +72,14 @@ export default interface MinecraftFlammable {
    * default value of 20 is the same as that of Planks.
    */
   destroy_chance_modifier?: number;
+
+  /**
+   * @remarks
+   * Whether the block can be ignited by adjacent lava. Defaults to
+   * false for backwards compatibility; set to true to allow lava to
+   * set the block on fire the way it does Planks and other vanilla
+   * flammable blocks.
+   */
+  lava_flammable?: boolean;
 
 }

@@ -16,10 +16,11 @@
   "fields": [
     {
       "id": "protection_slot",
+      "title": "Protection Slot",
       "description": "The equipment slot that provides protection from burning in sunlight. If armor is equipped in this slot, the entity will not burn. Commonly set to 'slot.armor.head' for helmets or 'slot.armor.body' for horse armor.",
-      "defaultValue": "slot.armor.head",
       "dataType": "string",
-      "title": "EquipmentSlot",
+      "defaultValue": "slot.armor.head",
+      "versionIntroduced": "1.21.130",
       "choices": [
         {
           "id": "slot.armor.body",
@@ -60,6 +61,12 @@
         "content": {}
       }
     ],
+    "/vanilla/behavior_pack/entities/drowned.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:burns_in_daylight/",
+        "content": {}
+      }
+    ],
     "/vanilla/behavior_pack/entities/magma_cube.json": [
       {
         "path": "/minecraft:entity/components/minecraft:burns_in_daylight/",
@@ -73,12 +80,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/skeleton.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:burns_in_daylight/",
-        "content": {}
-      }
-    ],
-    "/vanilla/behavior_pack/entities/stray.json": [
       {
         "path": "/minecraft:entity/components/minecraft:burns_in_daylight/",
         "content": {}

@@ -322,6 +322,8 @@ export enum MinecraftBehaviorDefendTrustedTargetAggroSound {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
   geyserEruptionActive = `geyser_eruption_active`,
   geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,

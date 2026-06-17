@@ -1,5 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
+  "title": "Template Pool Description",
+  "description": "Identifies the template pool. The identifier set here is what other definitions reference: the Jigsaw Structure's start_pool, a Jigsaw Block's target pool, and any pool_aliases targets all match against this value.",
   "summarizer": {
     "phrases": [
       {
@@ -19,7 +21,5 @@
       "description": "Identifier of the template pool. Used by Jigsaw Structures to assign processors to Structure Templates.",
       "dataType": "string"
     }
-  ],
-  "description": "JigsawStructureTemplatePool Description",
-  "title": "JigsawStructureTemplatePool Description"
+  ]
 }

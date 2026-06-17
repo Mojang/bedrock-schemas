@@ -153,7 +153,7 @@ export default interface MinecraftAreaAttack {
    * damage range. A list of available damage sources can be found at
    * [Entity Damage Sources located in the Vanilla Listings
    * 
-   * Documentation](../../VanillaListingsReference/AddonEntityDamageSources.md).
+   * Documentation](../../../VanillaListingsReference/AddonEntityDamageSources.md).
    * 
    * Sample Values:
    * Magma Cube: "entity_attack"
@@ -196,6 +196,14 @@ export default interface MinecraftAreaAttack {
 
   /**
    * @remarks
+   * A localization key to use as the death message when the area
+   * attack kills an entity. If empty, the default death message for
+   * the damage cause is used.
+   */
+  death_message_override?: string;
+
+  /**
+   * @remarks
    * The set of entities that are valid to apply the damage to when
    * within range.
    * 
@@ -216,10 +224,10 @@ export default interface MinecraftAreaAttack {
 
   /**
    * @remarks
-   * If the entity should use itself as the damage source when
-   * attacking a target. If set to `false`, the target entity won't
-   * retaliate and its `minecraft:damage_sensor` won't be able to
-   * identify the attacker as the damage source.
+   * Whether the entity is treated as the source of the area damage. When
+   * true (default), other entities can retaliate against the
+   * attacking entity. Set to false to apply damage without making the
+   * attacker a valid retaliation target.
    */
   use_self_as_damage_source?: boolean;
 

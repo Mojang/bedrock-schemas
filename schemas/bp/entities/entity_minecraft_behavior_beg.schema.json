@@ -1,16 +1,42 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Beg Behavior",
+  "title": "Entity Beg Behavior",
   "description": "Allows this mob to look at and follow the player that holds food they like.",
   "properties": {
-    "items": {
-      "title": "Items",
-      "description": "List of items that this mob likes",
+    "control_flags": {
+      "title": "Control Flags",
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
       }
+    },
+    "items": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      ],
+      "title": "Items",
+      "description": "List of items that this mob likes",
+      "defaultSnippets": [
+        {
+          "label": "Items (default)",
+          "description": "Use default value: ",
+          "body": []
+        }
+      ]
     },
     "look_distance": {
       "title": "Look Distance",
@@ -21,7 +47,7 @@
     "look_time": {
       "title": "Look Time",
       "description": "The range of time in seconds this mob will stare at the player holding a food they like, begging for it",
-      "oneOf": [
+      "anyOf": [
         {
           "type": "integer"
         },
@@ -34,24 +60,15 @@
           "maxItems": 2
         },
         {
-          "type": "object",
-          "properties": {
-            "min": {
-              "type": "integer",
-              "description": "Minimum value of the range"
-            },
-            "max": {
-              "type": "integer",
-              "description": "Maximum value of the range"
-            }
-          }
+          "$ref": "../../common/intrange.schema.json"
         }
       ]
     },
     "priority": {
       "title": "Priority",
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
+      "type": "integer",
+      "default": 0
     }
   }
 }

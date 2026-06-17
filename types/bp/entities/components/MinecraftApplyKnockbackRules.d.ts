@@ -11,13 +11,27 @@
  * 
  * minecraft:apply_knockback_rules Samples
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:apply_knockback_rules": {
+  "presets": [
+    {
+      "horizontal_power": 0.6,
+      "vertical_power": -0.6,
+      "vertical_velocity_cap": -0.4,
+      "check_if_target_is_immersed_in_water": true
+    }
+  ]
+}
+
+
 Egg - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/egg.json
 
 "minecraft:apply_knockback_rules": {
   "presets": [
     {
-      "vertical_power": 0.12,
-      "vertical_velocity_cap": 0.12
+      "vertical_power": 0.1,
+      "vertical_velocity_cap": 0.1
     }
   ]
 }
@@ -28,7 +42,7 @@ Iron Golem - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pac
 "minecraft:apply_knockback_rules": {
   "presets": [
     {
-      "horizontal_power": 1.3,
+      "horizontal_power": 0.52,
       "vertical_power": 0.39,
       "vertical_velocity_cap": 0.8
     }
@@ -47,14 +61,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "bouncy"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.07,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.105,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -63,30 +76,28 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "regular"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.07,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.105,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
         "test": "enum_property",
         "subject": "other",
-        "domain": "minecraft:ball_archetype",
+        "domain": "minecraft:sulfur_cube_archetype",
         "value": "slow_bouncy"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.16,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.24,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -95,14 +106,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "slow_flat"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.07,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.105,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -111,14 +121,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "fast_flat"
       },
-      "horizontal_power": 0.73,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.365,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -127,14 +136,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "light"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.12,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.18,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -143,14 +151,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "fast_sliding"
       },
-      "horizontal_power": 0.53,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.265,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -159,14 +166,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "slow_sliding"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -175,14 +181,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "sticky"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -191,14 +196,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "high_resistance"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -207,14 +211,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "explosive"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.09,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     },
     {
       "filter": {
@@ -223,14 +226,13 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
         "domain": "minecraft:sulfur_cube_archetype",
         "value": "hot"
       },
-      "horizontal_power": 0.33,
-      "vertical_power": 0.06,
+      "horizontal_power": 0.165,
+      "vertical_power": 0.105,
       "vertical_velocity_cap": 8,
-      "scale_previous_velocity": 1,
-      "horizontal_hit_angle_scale": 1.6,
-      "vertical_hit_angle_scale": 0.5,
-      "vertical_position_angle_scale": 0.8,
-      "scale_with_damage": true
+      "slowdown_scale": 1,
+      "scale_with_damage": true,
+      "knockback_mode": "hit_direction",
+      "extra_knockback_approach": "multiply_reduced"
     }
   ]
 }
@@ -243,6 +245,12 @@ import * as jsoncommon from '../../../common';
  * Entity Apply Knockback Rules 
  * (minecraft:apply_knockback_rules)
  * Defines how an entity applies knockback.
+ * Note: Released out of beta in format version 1.26.30. The preset
+ * field `extra_knockback_approach` controls how knockback from
+ * enchantments, sprinting, and swimming combines with the preset's
+ * power (`reapply_default` preserves the prior behavior; `multiply`
+ * multiplies the preset's power by the extra-knockback 
+ * factor).
  */
 export default interface MinecraftApplyKnockbackRules {
 
@@ -252,11 +260,11 @@ export default interface MinecraftApplyKnockbackRules {
    * applied to the entity.
    * 
    * Sample Values:
-   * Egg: [{"vertical_power":0.12,"vertical_velocity_cap":0.12}]
+   * Drowned: [{"horizontal_power":0.6,"vertical_power":-0.6,"vertical_velocity_cap":-0.4,"check_if_target_is_immersed_in_water":true}]
    *
-   * Iron Golem: [{"horizontal_power":1.3,"vertical_power":0.39,"vertical_velocity_cap":0.8}]
+   * Egg: [{"vertical_power":0.1,"vertical_velocity_cap":0.1}]
    *
-   * Player: [{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"bouncy"},"horizontal_power":0.33,"vertical_power":0.07,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"regular"},"horizontal_power":0.33,"vertical_power":0.07,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:ball_archetype","value":"slow_bouncy"},"horizontal_power":0.33,"vertical_power":0.16,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"slow_flat"},"horizontal_power":0.33,"vertical_power":0.07,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"fast_flat"},"horizontal_power":0.73,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"light"},"horizontal_power":0.33,"vertical_power":0.12,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"fast_sliding"},"horizontal_power":0.53,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"slow_sliding"},"horizontal_power":0.33,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"sticky"},"horizontal_power":0.33,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"high_resistance"},"horizontal_power":0.33,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"explosive"},"horizontal_power":0.33,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true},{"filter":{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","value":"hot"},"horizontal_power":0.33,"vertical_power":0.06,"vertical_velocity_cap":8,"scale_previous_velocity":1,"horizontal_hit_angle_scale":1.6,"vertical_hit_angle_scale":0.5,"vertical_position_angle_scale":0.8,"scale_with_damage":true}]
+   * Iron Golem: [{"horizontal_power":0.52,"vertical_power":0.39,"vertical_velocity_cap":0.8}]
    *
    */
   presets?: MinecraftApplyKnockbackRulesPresets[];

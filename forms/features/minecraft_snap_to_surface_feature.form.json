@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:snap_to_surface_feature",
+  "versionIntroduced": "1.20.30",
   "description": "Snaps the y-value of a feature placement pos to the floor or the ceiling within the provided vertical_search_range. The placement biome is preserved. If the snap position goes outside of the placement biome, placement will fail.",
   "summarizer": {
     "phrases": [
@@ -96,6 +97,15 @@
       "dataType": "string"
     },
     {
+      "id": "embed_in_surface",
+      "title": "Embed In Surface",
+      "description": "If true, the snapped feature is embedded into the located surface block instead of being placed on top of it.",
+      "defaultValue": false,
+      "dataType": "boolean",
+      "versionIntroduced": "1.26.20",
+      "isRequired": false
+    },
+    {
       "dataType": "object",
       "id": "description",
       "title": "Description",
@@ -145,13 +155,6 @@
       "id": "allowed_surface_blocks",
       "title": "Allowed Surface Blocks",
       "description": "A list of blocks that the feature is permitted to snap to. Leaving this empty results in the feature snapping to blocks that can provide support for the given face (up/down/horizontal)",
-      "isRequired": false
-    },
-    {
-      "dataType": "boolean",
-      "id": "embed_in_surface",
-      "title": "Embed In Surface",
-      "description": "Determines whether the placed feature should be embedded in the found surface.",
       "isRequired": false
     }
   ],

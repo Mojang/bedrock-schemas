@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Squid Idle Behavior (minecraft:behavior.squid_idle)
+ * Entity Squid Idle Behavior (minecraft:behavior.squid_idle)
  * Allows the squid to swim in place idly.
  */
 export default interface MinecraftBehaviorSquidIdle {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -28,4 +30,11 @@ export default interface MinecraftBehaviorSquidIdle {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSquidIdleControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

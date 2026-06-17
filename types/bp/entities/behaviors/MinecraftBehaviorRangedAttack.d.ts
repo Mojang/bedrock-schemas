@@ -42,6 +42,17 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 }
 
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:behavior.ranged_attack": {
+  "attack_interval_max": 3,
+  "attack_interval_min": 1,
+  "attack_radius": 10,
+  "priority": 3,
+  "swing": true
+}
+
+
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
  * At /minecraft:entity/component_groups/minecraft:llama_angry/minecraft:behavior.ranged_attack/: 
@@ -69,21 +80,13 @@ Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "priority": 1
 }
 
-
-Shulker - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/shulker.json
-
-"minecraft:behavior.ranged_attack": {
-  "attack_interval_max": 3,
-  "attack_interval_min": 1,
-  "attack_radius": 15
-}
-
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * Ranged Attack Behavior (minecraft:behavior.ranged_attack)
+ * Entity Ranged Attack Behavior 
+ * (minecraft:behavior.ranged_attack)
  * Allows an entity to attack by using ranged shots.
  * "charge_shoot_trigger" must be greater than 0 to enable charged up
  * burst-shot attacks. Requires minecraft:shooter to define projectile
@@ -93,16 +96,15 @@ export default interface MinecraftBehaviorRangedAttack {
 
   /**
    * @remarks
-   * Alternative to "attack_interval_min" & "attack_interval_max". Consistent
-   * reload-time (in seconds), when not using a charged shot. Does not
-   * scale with target-distance.
+   * Reload-time range (in seconds), when not using a charged shot.
+   * Reload-time range scales with target-distance.
    * 
    * Sample Values:
    * Bogged: 3.5, 2.5
    *
    *
    */
-  attack_interval?: number;
+  attack_interval?: MinecraftBehaviorRangedAttackAttackInterval;
 
   /**
    * @remarks
@@ -112,7 +114,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 5
    *
-   * Shulker: 3
+   * Drowned: 3
    *
    */
   attack_interval_max?: number;
@@ -125,7 +127,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 3
    *
-   * Shulker: 1
+   * Drowned: 1
    *
    */
   attack_interval_min?: number;
@@ -140,7 +142,7 @@ export default interface MinecraftBehaviorRangedAttack {
    *
    * Bogged: 15
    *
-   * Llama: 64
+   * Drowned: 10
    *
    */
   attack_radius?: number;
@@ -200,6 +202,8 @@ export default interface MinecraftBehaviorRangedAttack {
    */
   charge_shoot_trigger?: number;
 
+  control_flags?: string[];
+
   /**
    * @remarks
    * As priority approaches 0, the priority is increased. The higher the
@@ -208,6 +212,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * 
    * Sample Values:
    * Blaze: 3
+   *
    *
    * Llama: 2
    *
@@ -242,6 +247,10 @@ export default interface MinecraftBehaviorRangedAttack {
    * If a swing animation (using variable.attack_time) exists, this
    * causes the actor to swing their arm(s) upon firing the ranged
    * attack.
+   * 
+   * Sample Values:
+   * Drowned: true
+   *
    */
   swing?: boolean;
 
@@ -266,4 +275,28 @@ export default interface MinecraftBehaviorRangedAttack {
    */
   y_max_head_rotation?: number;
 
+}
+
+
+/**
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
+ */
+export interface MinecraftBehaviorRangedAttackAttackInterval {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+export enum MinecraftBehaviorRangedAttackControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

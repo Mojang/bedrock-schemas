@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Float Wander Behavior",
+  "title": "Entity Float Wander Behavior",
   "description": "Allows the mob to float around like the Ghast.",
   "properties": {
     "float_duration": {
@@ -31,6 +31,18 @@
       "type": "boolean",
       "default": false
     },
+    "control_flags": {
+      "title": "Control Flags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
+      }
+    },
     "float_wander_has_move_control": {
       "title": "Float Wander Has Move Control",
       "description": "If true, the MoveControl flag will be added to the behavior which means that it can no longer be active at the same time as other behaviors with MoveControl.",
@@ -49,6 +61,12 @@
       "type": "boolean",
       "default": false
     },
+    "priority": {
+      "title": "Priority",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
+      "type": "integer",
+      "default": 0
+    },
     "random_reselect": {
       "title": "Random Reselect",
       "description": "If true, the mob will randomly pick a new point while moving to the previously selected one\n\nSample values:\n• bat: true",
@@ -59,13 +77,13 @@
       "title": "Surface Xz Dist",
       "description": "The horizontal distance in blocks that the goal will check for a surface from a candidate position. Only valid when `navigate_around_surface` is true.",
       "type": "integer",
-      "default": 0
+      "default": 8
     },
     "surface_y_dist": {
       "title": "Surface y Dist",
       "description": "The vertical distance in blocks that the goal will check for a surface from a candidate position. Only valid when `navigate_around_surface` is true.",
       "type": "integer",
-      "default": 0
+      "default": 8
     },
     "use_home_position_restriction": {
       "title": "Use Home Position Restriction",
@@ -90,11 +108,6 @@
       "description": "Height in blocks to add to the selected target position\n\nSample values:\n• bat: -2",
       "type": "number",
       "default": 0
-    },
-    "priority": {
-      "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
     }
   }
 }

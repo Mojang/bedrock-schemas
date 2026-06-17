@@ -56,6 +56,8 @@ import * as jsoncommon from '../../../common';
  * Note: This behavior is typically used with the minecraft:dweller component
  * which defines the entity's role in a village. See
  * iron_golem.json for a complete example.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorDefendVillageTarget {
 

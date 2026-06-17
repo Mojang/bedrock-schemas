@@ -4,10 +4,10 @@
   "title": "Dynamic Jump",
   "description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob. Requires `minecraft:movement.skip` to be used.",
   "properties": {
-    "fast_skip_data": {
-      "title": "Fast Skip Data",
-      "description": "The jump data used for the fast skip.\n\nValues:\n• Animation Duration: Duration of the jump animation.\n• Distance Scale: The multiplier applied to horizontal velocity when jumping.\n• Height: The force applied vertically when jumping.\n• Jump Delay: Amount of ticks between sequential jumps.",
-      "type": "string",
+    "regular_skip_data": {
+      "title": "Regular Skip Data",
+      "description": "Jump data used during normal skip movement. Object with optional `distance_scale` (horizontal velocity multiplier), `height` (vertical force), `jump_delay` (ticks between jumps), and `animation_duration` (jump animation length).\n\n*Introduced in version 1.26.0*\n\nValues:\n• Animation Duration: Duration of the jump animation.\n• Distance Scale: The multiplier applied to horizontal velocity when jumping.\n• Height: The force applied vertically when jumping.\n• Jump Delay: Amount of ticks between sequential jumps.",
+      "type": "object",
       "enum": [
         "animation_duration",
         "distance_scale",
@@ -15,10 +15,10 @@
         "jump_delay"
       ]
     },
-    "regular_skip_data": {
-      "title": "Regular Skip Data",
-      "description": "The jump data used for the regular skip.\n\nValues:\n• Animation Duration: Duration of the jump animation.\n• Distance Scale: The multiplier applied to horizontal velocity when jumping.\n• Height: The force applied vertically when jumping.\n• Jump Delay: Amount of ticks between sequential jumps.",
-      "type": "string",
+    "fast_skip_data": {
+      "title": "Fast Skip Data",
+      "description": "Jump data used while traveling quickly with skip movement. Object with the same shape as `regular_skip_data`.\n\n*Introduced in version 1.26.0*\n\nValues:\n• Animation Duration: Duration of the jump animation.\n• Distance Scale: The multiplier applied to horizontal velocity when jumping.\n• Height: The force applied vertically when jumping.\n• Jump Delay: Amount of ticks between sequential jumps.",
+      "type": "object",
       "enum": [
         "animation_duration",
         "distance_scale",

@@ -19,6 +19,9 @@ import * as jsoncommon from '../../../common';
  * dampened more. A value of 15 means fully opaque (like stone), while
  * 0 means fully transparent (like glass). Leaves use 1, water uses
  * 2.
+ * Note: In format version 1.26.20, validation strictly enforces that
+ * the value must be an integer between 0 and 15 inclusive; out-of-range
+ * values are rejected at load time.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `Integer number`.

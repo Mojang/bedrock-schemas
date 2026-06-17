@@ -12,6 +12,8 @@
       }
     ]
   },
+  "versionIntroduced": "1.21.70",
+  "note": "Aim assist supports projectiles starting in 1.21.110.",
   "fields": [
     {
       "id": "format_version",

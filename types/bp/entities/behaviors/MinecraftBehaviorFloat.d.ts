@@ -45,7 +45,9 @@ export default interface MinecraftBehaviorFloat {
 
   /**
    * @remarks
-   * The chance per tick to cause an upward impulse.
+   * Probability per tick (0-1) that the entity will attempt to
+   * float when in water. Lower values produce slower, more deliberate
+   * floating behavior.
    */
   chance_per_tick_to_float?: number;
 
@@ -74,8 +76,9 @@ export default interface MinecraftBehaviorFloat {
 
   /**
    * @remarks
-   * Time in seconds that a floating vehicles head can be underwater before
-   * it causes its passengers to dismount.
+   * Time in seconds the entity must spend with its head underwater before
+   * any passengers are dismounted. A value of 0 dismounts passengers as
+   * soon as the entity's head submerges.
    */
   time_under_water_to_dismount_passengers?: number;
 

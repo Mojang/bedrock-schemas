@@ -29,6 +29,8 @@ import * as jsoncommon from '../../../common';
  * Entity Stomp Attack Behavior 
  * (minecraft:behavior.stomp_attack)
  * Allows an entity to attack using stomp AoE damage behavior.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorStompAttack {
 

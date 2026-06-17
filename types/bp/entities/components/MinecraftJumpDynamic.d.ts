@@ -24,15 +24,19 @@ export default interface MinecraftJumpDynamic {
 
   /**
    * @remarks
-   * The jump data used for the fast skip.
+   * Jump data used while traveling quickly with skip movement. Object
+   * with the same shape as `regular_skip_data`.
    */
-  fast_skip_data?: string;
+  fast_skip_data?: MinecraftJumpDynamicFastSkipData;
 
   /**
    * @remarks
-   * The jump data used for the regular skip.
+   * Jump data used during normal skip movement. Object with optional
+   * `distance_scale` (horizontal velocity multiplier), `height` (vertical
+   * force), `jump_delay` (ticks between jumps), and
+   * `animation_duration` (jump animation length).
    */
-  regular_skip_data?: string;
+  regular_skip_data?: MinecraftJumpDynamicRegularSkipData;
 
 }
 

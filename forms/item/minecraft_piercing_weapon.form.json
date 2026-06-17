@@ -1,6 +1,7 @@
 {
   "$schema": "../../../schemas/dataform/form-definition.schema.json",
   "id": "minecraft:piercing_weapon",
+  "versionIntroduced": "1.21.130",
   "summarizer": {
     "phrases": [
       {
@@ -19,7 +20,7 @@
       "title": "Creative Reach",
       "description": "Defines the reach used when the user is in Creative Mode. Defaults to \"reach\" if unspecified.",
       "dataType": "object",
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "hitbox_margin",
@@ -37,7 +38,7 @@
         "max": 3,
         "min": 0
       },
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     }
   ],
   "description": "Allows an item to deal damage to all entities detected in a straight line along the user's view vector. Items with this component cannot destroy blocks, as the attack action always takes priority, regardless of what the user is looking at.",

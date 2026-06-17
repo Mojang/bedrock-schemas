@@ -28,6 +28,10 @@ import * as jsoncommon from '../../../common';
 /**
  * Buoyant (minecraft:buoyant)
  * Enables an entity to float on the specified liquid blocks.
+ * Note: In 1.26.10 the `simulate_waves` boolean was replaced with
+ * the `movement_type` string field (`waves` / `bobbing` /
+ * `none`). `big_wave_probability` and `big_wave_speed` only apply
+ * when `movement_type` is `waves`.
  */
 export default interface MinecraftBuoyant {
 
@@ -62,8 +66,8 @@ export default interface MinecraftBuoyant {
 
   /**
    * @remarks
-   * Whether the entity can move out of a liquid block to a
-   * neighboring solid block if pushed against it.
+   * Whether the entity can step out of a liquid block onto a
+   * neighboring solid block when pushed against it.
    */
   can_auto_step_from_liquid?: boolean;
 
@@ -87,12 +91,10 @@ export default interface MinecraftBuoyant {
 
   /**
    * @remarks
-   * Type of vertical movement applied to the entity:
-"waves", simulates
-   * wave movement based on the entity speed.
-"bobbing", simulates waves
-   * going through.
-"none", simulates waves going through.
+   * Type of vertical movement applied to the entity. `waves` simulates
+   * wave movement based on the entity's speed (default). `bobbing` moves
+   * the entity up and down at a constant pace. `none` disables wave
+   * movement. Replaces the previous `simulate_waves` boolean.
    */
   movement_type?: string;
 

@@ -63,6 +63,19 @@
       "isRequired": true
     }
   ],
-  "description": "Item definition includes the \"description\" and \"components\" sections.",
+  "$schema": "../../../schemas/dataform/form-definition.schema.json",
+  "summarizer": {
+    "phrases": [
+      {
+        "tokens": [
+          {
+            "type": "literal",
+            "text": "is a custom item"
+          }
+        ]
+      }
+    ]
+  },
+  "description": "Refers to the item definition, which includes the 'description' and 'components' sections of the file.",
   "title": "Item 26.0 Item v1"
 }

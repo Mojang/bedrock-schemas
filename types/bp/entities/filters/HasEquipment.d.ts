@@ -46,7 +46,7 @@ export default interface HasEquipment {
 
   /**
    * @remarks
-   * (Optional) The equipment location to test
+   * The equipment location to test.
    * 
    * Sample Values:
    * Pig: "hand"

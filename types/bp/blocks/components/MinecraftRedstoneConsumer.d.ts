@@ -15,12 +15,18 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Redstone Consumer (minecraft:redstone_consumer)
- * A component describing how a block can consume and potentially propogate
+ * Block Redstone Consumer (minecraft:redstone_consumer)
+ * A component describing how a block can consume and potentially propagate
  * a redstone signal. This component is not available for block
  * permutations.
-Experimental toggles required: Upcoming Creator
- * Features (in format versions before 1.26.0).
+ * Note: Lets a custom block consume and optionally propagate a
+ * redstone signal. Pairs with the
+ * `BlockComponentRedstoneUpdateEvent` script API for custom redstone
+ * behavior. Not available on block permutations.
+ * Note: Available without the Upcoming Creator Features experimental toggle
+ * for block format versions 1.26.0 or higher. In 1.26.0 the field
+ * was renamed from the original `propogates_power` spelling to
+ * `propagates_power`.
  */
 export default interface MinecraftRedstoneConsumer {
 

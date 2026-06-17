@@ -13,6 +13,7 @@
     ]
   },
   "id": "minecraft:behavior.place_block",
+  "versionIntroduced": "1.21.100",
   "fields": [
     {
       "id": "affected_by_griefing_rule",
@@ -209,7 +210,7 @@
         "max": 2,
         "min": -2
       },
-      "subFormId": "item_components/intrange"
+      "subFormId": "item/intrange"
     },
     {
       "id": "y_range",
@@ -220,7 +221,7 @@
         "max": 3,
         "min": 0
       },
-      "subFormId": "item_components/intrange"
+      "subFormId": "item/intrange"
     }
   ],
   "description": "AI goal that makes entities place blocks into the world, like Endermen placing their carried block or snow golems leaving snow trails. Configure which blocks can be placed, where they can be placed, and how often the entity attempts placement. Creates mobs that modify the environment.",

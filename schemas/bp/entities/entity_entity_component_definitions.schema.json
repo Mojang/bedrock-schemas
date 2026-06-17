@@ -28,10 +28,10 @@
       "$ref": "./entity_minecraft_admire_item.schema.json",
       "defaultSnippets": [
         {
-          "label": "Admire Item",
+          "label": "Entity Admire Item",
           "description": "Allows an entity to ignore attackable targets for a given duration",
           "body": {
-            "cooldown_after_being_attacked": 0,
+            "cooldown_after_being_attacked": 10,
             "duration": 10
           }
         }
@@ -145,9 +145,10 @@
           "body": {
             "damage_per_tick": 2,
             "damage_range": 0.2,
+            "use_self_as_damage_source": true,
             "damage_cooldown": 0,
-            "play_attack_sound": true,
-            "use_self_as_damage_source": true
+            "death_message_override": "",
+            "play_attack_sound": true
           }
         }
       ]
@@ -161,9 +162,9 @@
           "label": "Attack",
           "description": "Defines an entity's melee attack damage and any additional status effects applied on hit. Typical damage values range from 3 (zombie, creeper) to 7-21 (iron golem).",
           "body": {
+            "effect_amplifier": 0,
             "effect_duration": 0,
-            "effect_name": "",
-            "effect_amplifier": 0
+            "effect_name": ""
           }
         }
       ]
@@ -278,10 +279,16 @@
       "$ref": "./entity_minecraft_behavior_beg.schema.json",
       "defaultSnippets": [
         {
-          "label": "Beg Behavior",
+          "label": "Entity Beg Behavior",
           "description": "Allows this mob to look at and follow the player that holds food they like.",
           "body": {
+            "control_flags": [],
+            "items": [],
             "look_distance": 8,
+            "look_time": {
+              "max": 4,
+              "min": 2
+            },
             "priority": 0
           }
         }
@@ -449,11 +456,13 @@
       "$ref": "./entity_minecraft_behavior_drink_potion.schema.json",
       "defaultSnippets": [
         {
-          "label": "Drink Potion Behavior",
+          "label": "Entity Drink Potion Behavior",
           "description": "Allows the mob to drink potions based on specified environment conditions.",
           "body": {
-            "speed_modifier": 0,
-            "priority": 0
+            "control_flags": [],
+            "potions": [],
+            "priority": 0,
+            "speed_modifier": 0
           }
         }
       ]
@@ -583,11 +592,11 @@
           "label": "Entity Float Behavior",
           "description": "Allows the mob to stay afloat while swimming. Passengers will be kicked out the moment the mob's head goes underwater, which may not happen for tall mobs.",
           "body": {
-            "chance_per_tick_to_float": 0.800000011920929,
+            "chance_per_tick_to_float": 0.8,
+            "time_under_water_to_dismount_passengers": 0,
             "control_flags": [],
             "priority": 0,
-            "sink_with_passengers": false,
-            "time_under_water_to_dismount_passengers": 0
+            "sink_with_passengers": false
           }
         }
       ]
@@ -620,22 +629,27 @@
       "$ref": "./entity_minecraft_behavior_float_wander.schema.json",
       "defaultSnippets": [
         {
-          "label": "Float Wander Behavior",
+          "label": "Entity Float Wander Behavior",
           "description": "Allows the mob to float around like the Ghast.",
           "body": {
+            "float_duration": {
+              "max": 0,
+              "min": 0
+            },
             "additional_collision_buffer": false,
             "allow_navigating_through_liquids": false,
+            "control_flags": [],
             "float_wander_has_move_control": true,
             "must_reach": false,
             "navigate_around_surface": false,
+            "priority": 0,
             "random_reselect": false,
-            "surface_xz_dist": 0,
-            "surface_y_dist": 0,
+            "surface_xz_dist": 8,
+            "surface_y_dist": 8,
             "use_home_position_restriction": true,
             "xz_dist": 10,
             "y_dist": 7,
-            "y_offset": 0,
-            "priority": 0
+            "y_offset": 0
           }
         }
       ]
@@ -861,12 +875,12 @@
           "label": "Entity Lay Egg Behavior",
           "description": "Allows the mob to lay an egg block on certain types of blocks if the mob is pregnant.",
           "body": {
+            "lay_seconds": 10,
             "allow_laying_from_below": false,
             "control_flags": [],
             "egg_type": "minecraft:turtle_egg",
             "goal_radius": 0.5,
             "lay_egg_sound": "lay_egg",
-            "lay_seconds": 10,
             "on_lay": {
               "event": "",
               "filters": {
@@ -902,13 +916,14 @@
       "$ref": "./entity_minecraft_behavior_leap_at_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Leap At Target Behavior",
+          "label": "Entity Leap At Target Behavior",
           "description": "Allows monsters to jump at and attack their target. Can only be used by hostile mobs.",
           "body": {
+            "control_flags": [],
             "must_be_on_ground": true,
+            "priority": 0,
             "set_persistent": false,
-            "yd": 0,
-            "priority": 0
+            "yd": 0
           }
         }
       ]
@@ -1094,23 +1109,37 @@
       "$ref": "./entity_minecraft_behavior_move_to_block.schema.json",
       "defaultSnippets": [
         {
-          "label": "Move To Block Behavior",
+          "label": "Entity Move To Block Behavior",
           "description": "Allows mob to move towards a block.",
           "body": {
+            "control_flags": [],
             "goal_radius": 0.5,
+            "on_reach": [],
+            "on_stay_completed": [],
+            "priority": 0,
             "search_height": 1,
             "search_range": 0,
             "speed_multiplier": 1,
             "start_chance": 1,
             "stay_duration": 0,
+            "target_block_filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "target_blocks": [],
             "target_offset": [
               0,
               0,
               0
             ],
             "target_selection_method": "nearest",
-            "tick_interval": 20,
-            "priority": 0
+            "tick_interval": 20
           }
         }
       ]
@@ -1273,9 +1302,30 @@
       "$ref": "./entity_minecraft_behavior_nap.schema.json",
       "defaultSnippets": [
         {
-          "label": "Nap Behavior",
+          "label": "Entity Nap Behavior",
           "description": "Allows mobs to occassionally stop and take a nap under certain conditions.",
           "body": {
+            "can_nap_filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "wake_mob_exceptions": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "control_flags": [],
             "cooldown_max": 0,
             "cooldown_min": 0,
             "mob_detect_dist": 6,
@@ -1299,6 +1349,7 @@
               "min": 0
             },
             "entity_types": [],
+            "target_acquisition_probability": 1,
             "attack_owner": false,
             "control_flags": [],
             "must_reach": false,
@@ -1309,7 +1360,6 @@
             "reselect_targets": false,
             "scan_interval": 10,
             "set_persistent": false,
-            "target_acquisition_probability": 1,
             "target_invisible_multiplier": 0.699999988079071,
             "target_search_height": -1,
             "target_sneak_visibility_multiplier": 0.800000011920929,
@@ -1457,27 +1507,7 @@
           "description": "Allows the mob to pick up items on the ground.",
           "body": {
             "pickup_same_items_as_in_hand": false,
-            "can_pickup_any_item": false,
-            "can_pickup_to_hand_or_equipment": true,
-            "control_flags": [],
-            "cooldown_after_being_attacked": 0,
-            "excluded_items": [],
-            "goal_radius": 0.5,
-            "max_dist": 1,
-            "on_pickup_item_end": {
-              "event": "",
-              "filters": {
-                "AND": null,
-                "NOT": null,
-                "OR": null,
-                "all": null,
-                "all_of": null,
-                "any": null,
-                "any_of": null,
-                "none_of": null
-              },
-              "target": "self"
-            },
+            "stop_if_holding_item": false,
             "on_pickup_item_start": {
               "event": "",
               "filters": {
@@ -1492,6 +1522,27 @@
               },
               "target": "self"
             },
+            "on_pickup_item_end": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "can_pickup_any_item": false,
+            "can_pickup_to_hand_or_equipment": true,
+            "control_flags": [],
+            "cooldown_after_being_attacked": 0,
+            "excluded_items": [],
+            "goal_radius": 0.5,
+            "max_dist": 1,
             "pickup_based_on_chance": false,
             "priority": 0,
             "search_height": 1,
@@ -1878,9 +1929,10 @@
       "$ref": "./entity_minecraft_behavior_silverfish_wake_up_friends.schema.json",
       "defaultSnippets": [
         {
-          "label": "Silverfish Wake Up Friends Behavior",
+          "label": "Entity Silverfish Wake Up Friends Behavior",
           "description": "Allows the mob to alert mobs in nearby blocks to come out.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1931,13 +1983,15 @@
       "$ref": "./entity_minecraft_behavior_snacking.schema.json",
       "defaultSnippets": [
         {
-          "label": "Snacking Behavior",
+          "label": "Entity Snacking Behavior",
           "description": "Allows the mob to take a load off and snack on food that it found nearby.",
           "body": {
+            "control_flags": [],
+            "items": [],
+            "priority": 0,
             "snacking_cooldown": 7.5,
             "snacking_cooldown_min": 0.5,
-            "snacking_stop_chance": 0.0017,
-            "priority": 0
+            "snacking_stop_chance": 0.0016666667070239782
           }
         }
       ]
@@ -1972,9 +2026,10 @@
       "$ref": "./entity_minecraft_behavior_squid_dive.schema.json",
       "defaultSnippets": [
         {
-          "label": "Squid Dive Behavior",
+          "label": "Entity Squid Dive Behavior",
           "description": "Allows the squid to dive down in water.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -1986,9 +2041,10 @@
       "$ref": "./entity_minecraft_behavior_squid_flee.schema.json",
       "defaultSnippets": [
         {
-          "label": "Squid Flee Behavior",
+          "label": "Entity Squid Flee Behavior",
           "description": "Allows the squid to swim away.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2000,9 +2056,10 @@
       "$ref": "./entity_minecraft_behavior_squid_idle.schema.json",
       "defaultSnippets": [
         {
-          "label": "Squid Idle Behavior",
+          "label": "Entity Squid Idle Behavior",
           "description": "Allows the squid to swim in place idly.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2014,9 +2071,10 @@
       "$ref": "./entity_minecraft_behavior_squid_move_away_from_ground.schema.json",
       "defaultSnippets": [
         {
-          "label": "Squid Move Away From Ground Behavior",
+          "label": "Entity Squid Move Away From Ground Behavior",
           "description": "Allows the squid to move away from ground blocks and back to water.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2028,9 +2086,10 @@
       "$ref": "./entity_minecraft_behavior_squid_out_of_water.schema.json",
       "defaultSnippets": [
         {
-          "label": "Squid Out Of Water Behavior",
+          "label": "Entity Squid Out Of Water Behavior",
           "description": "Allows the squid to stick to the ground when outside water.",
           "body": {
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2042,19 +2101,31 @@
       "$ref": "./entity_minecraft_behavior_stalk_and_pounce_on_target.schema.json",
       "defaultSnippets": [
         {
-          "label": "Stalk And Pounce On Target Behavior",
+          "label": "Entity Stalk And Pounce On Target Behavior",
           "description": "Allows a mob to stalk a target, then once within range pounce onto a target, on success the target will be attacked dealing damage defined by the attack component. On failure, the mob will risk getting stuck",
           "body": {
+            "control_flags": [],
             "interest_time": 2,
-            "leap_distance": 0.8,
-            "leap_height": 0.9,
+            "leap_dist": 0.800000011920929,
+            "leap_height": 0.8999999761581421,
             "max_stalk_dist": 10,
             "pounce_max_dist": 5,
+            "priority": 0,
             "set_persistent": false,
-            "stalk_speed": 1.2,
+            "stalk_speed": 1.2000000476837158,
             "strike_dist": 2,
+            "stuck_blocks": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "stuck_time": 2,
-            "priority": 0
+            "leap_distance": 0.8
           }
         }
       ]
@@ -2121,9 +2192,11 @@
       "$ref": "./entity_minecraft_behavior_summon_entity.schema.json",
       "defaultSnippets": [
         {
-          "label": "Summon Entity Behavior",
+          "label": "Entity Summon Entity Behavior",
           "description": "Allows the mob to attack the player by summoning other entities.",
           "body": {
+            "summon_choices": [],
+            "control_flags": [],
             "priority": 0
           }
         }
@@ -2347,6 +2420,7 @@
             "breathes_water": false,
             "generates_bubbles": true,
             "inhale_time": 0,
+            "can_dehydrate": false,
             "suffocateTime": 0,
             "totalSupply": 0
           }
@@ -2366,6 +2440,7 @@
             "blend_attributes": true,
             "breed_cooldown": 60,
             "causes_pregnancy": false,
+            "combine_parent_colors": false,
             "extra_baby_chance": 0,
             "inherit_tamed": true,
             "require_full_health": false,
@@ -2401,13 +2476,13 @@
           "label": "Buoyant",
           "description": "Enables an entity to float on the specified liquid blocks.",
           "body": {
+            "movement_type": "waves",
+            "can_auto_step_from_liquid": false,
             "apply_gravity": true,
             "base_buoyancy": 1,
             "big_wave_probability": 0.03,
             "big_wave_speed": 10,
-            "can_auto_step_from_liquid": false,
-            "drag_down_on_buoyancy_removed": 0,
-            "movement_type": "waves"
+            "drag_down_on_buoyancy_removed": 0
           }
         }
       ]
@@ -2758,11 +2833,11 @@
           "label": "Exhaustion Values",
           "description": "Defines how much exhaustion each player action should take.",
           "body": {
+            "lunge": 4,
             "attack": 0.1,
             "damage": 0.1,
             "heal": 6,
             "jump": 0.05,
-            "lunge": 4,
             "mine": 0.005,
             "sprint": 0.01,
             "sprint_jump": 0.2,
@@ -2781,14 +2856,8 @@
           "label": "Entity Experience Reward",
           "description": ".",
           "body": {
-            "on_bred": {
-              "expression": "",
-              "version": -1
-            },
-            "on_death": {
-              "expression": "",
-              "version": -1
-            }
+            "on_bred": "",
+            "on_death": ""
           }
         }
       ]
@@ -2802,6 +2871,7 @@
           "label": "Explode",
           "description": "Defines how the entity explodes.",
           "body": {
+            "damage_scaling": 1,
             "toggles_blocks": false,
             "knockback_scaling": 1,
             "particle_effect": "explosion",
@@ -2810,7 +2880,6 @@
             "allow_underwater": false,
             "breaks_blocks": true,
             "causes_fire": false,
-            "damage_scaling": 1,
             "destroy_affected_by_griefing": false,
             "fire_affected_by_griefing": false,
             "fuse_lit": false,
@@ -3276,17 +3345,7 @@
     "minecraft:jump.dynamic": {
       "title": "Dynamic Minecraft Jump",
       "description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob. Requires `minecraft:movement.skip` to be used.",
-      "$ref": "./entity_minecraft_jump_dynamic.schema.json",
-      "defaultSnippets": [
-        {
-          "label": "Dynamic Jump",
-          "description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob. Requires `minecraft:movement.skip` to be used.",
-          "body": {
-            "fast_skip_data": "",
-            "regular_skip_data": ""
-          }
-        }
-      ]
+      "$ref": "./entity_minecraft_jump_dynamic.schema.json"
     },
     "minecraft:jump.static": {
       "title": "Static Minecraft Jump",
@@ -3340,13 +3399,13 @@
           "label": "Leashable",
           "description": "Describes how this mob can be leashed to other items",
           "body": {
+            "can_be_cut": true,
             "can_be_stolen": false,
             "hard_distance": 6,
             "soft_distance": 4,
             "max_distance": 0,
-            "can_be_cut": true,
-            "on_unleash_interact_only": false,
-            "unleash_on_removal": true
+            "unleash_on_removal": true,
+            "on_unleash_interact_only": false
           }
         }
       ]
@@ -3360,8 +3419,8 @@
           "label": "Leashable To",
           "description": "Allows players to leash entities to this entity, retrieve entities already leashed to it, or free them using shears. For the last interaction to work, the leashed entities must have \"can_be_cut\" set to true in their \"minecraft:leashable\" component.",
           "body": {
-            "can_retrieve_from": false,
-            "unleash_on_removal": true
+            "unleash_on_removal": true,
+            "can_retrieve_from": false
           }
         }
       ]
@@ -3858,10 +3917,20 @@
       "$ref": "./entity_minecraft_on_death.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Death",
+          "label": "Entity On Death",
           "description": "Adds a trigger to call on this entity's death.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3873,10 +3942,20 @@
       "$ref": "./entity_minecraft_on_friendly_anger.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Friendly Anger",
+          "label": "Entity On Friendly Anger",
           "description": "Adds a trigger that will run when a nearby entity of the same type as this entity becomes Angry.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3888,10 +3967,20 @@
       "$ref": "./entity_minecraft_on_hurt.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Hurt",
+          "label": "Entity On Hurt",
           "description": "Adds a trigger to call when this entity takes damage.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3903,10 +3992,20 @@
       "$ref": "./entity_minecraft_on_hurt_by_player.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Hurt By Player",
+          "label": "Entity On Hurt By Player",
           "description": "Adds a trigger to call when this entity is attacked by the player.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3918,10 +4017,20 @@
       "$ref": "./entity_minecraft_on_ignite.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Ignite",
+          "label": "Entity On Ignite",
           "description": "Adds a trigger to call when this entity is set on fire.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3933,10 +4042,20 @@
       "$ref": "./entity_minecraft_on_start_landing.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Start Landing",
+          "label": "Entity On Start Landing",
           "description": "Only usable by the Ender Dragon. Adds a trigger to call when this entity lands.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3948,10 +4067,20 @@
       "$ref": "./entity_minecraft_on_start_takeoff.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Start Takeoff",
+          "label": "Entity On Start Takeoff",
           "description": "Only usable by the Ender Dragon. Adds a trigger to call when this entity starts flying.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3963,10 +4092,20 @@
       "$ref": "./entity_minecraft_on_target_acquired.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Target Acquired",
+          "label": "Entity On Target Acquired",
           "description": "Adds a trigger to call when this entity finds a target.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -3978,10 +4117,20 @@
       "$ref": "./entity_minecraft_on_target_escape.schema.json",
       "defaultSnippets": [
         {
-          "label": "On Target Escape",
+          "label": "Entity On Target Escape",
           "description": "Adds a trigger to call when this entity loses the target it currently has.",
           "body": {
             "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "target": "self"
           }
         }
@@ -4123,6 +4272,8 @@
           "description": "Allows the entity to be a thrown entity.",
           "body": {
             "catch_fire": false,
+            "reflect_on_hurt": false,
+            "isolated_physics": true,
             "angle_offset": 0,
             "crit_particle_on_hurt": false,
             "destroy_on_hurt": false,
@@ -4134,7 +4285,6 @@
             "homing": false,
             "inertia": 0.99,
             "is_dangerous": false,
-            "isolated_physics": true,
             "knockback": true,
             "lightning": false,
             "liquid_inertia": 0.6,
@@ -4150,7 +4300,6 @@
             "potion_effect": -1,
             "power": 1.3,
             "reflect_immunity": 0,
-            "reflect_on_hurt": false,
             "semi_random_diff_damage": false,
             "shoot_sound": "",
             "shoot_target": true,
@@ -4366,10 +4515,10 @@
           "description": "Defines the entity's ranged attack behavior. The \"minecraft:behavior.ranged_attack\" goal uses this component to determine which projectiles to shoot.",
           "body": {
             "sound": "",
-            "aux_val": -1,
-            "def": "",
+            "power": 0,
             "magic": false,
-            "power": 0
+            "aux_val": -1,
+            "def": ""
           }
         }
       ]
@@ -4975,7 +5124,19 @@
     },
     "minecraft:behavior.charge_held_item": {
       "title": "Charge Held Item Minecraft Behavior",
-      "type": "object"
+      "description": "Allows an entity to charge and use their held item.",
+      "$ref": "./entity_minecraft_behavior_charge_held_item.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Charge Held Item Behavior",
+          "description": "Allows an entity to charge and use their held item.",
+          "body": {
+            "control_flags": [],
+            "items": "NA",
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.circle_around_anchor": {
       "title": "Circle Around Anchor Minecraft Behavior",
@@ -5338,7 +5499,35 @@
     },
     "minecraft:behavior.eat_block": {
       "title": "Eat Block Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the entity to consume a block, replace the eaten block with another block, and trigger an event as a result.",
+      "$ref": "./entity_minecraft_behavior_eat_block.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Eat Block Behavior",
+          "description": "Allows the entity to consume a block, replace the eaten block with another block, and trigger an event as a result.",
+          "body": {
+            "control_flags": [],
+            "eat_and_replace_block_pairs": [],
+            "on_eat": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0,
+            "success_chance": 0.019999999552965164,
+            "time_until_eat": 1.7999999523162842
+          }
+        }
+      ]
     },
     "minecraft:behavior.eat_mob": {
       "title": "Eat Mob Minecraft Behavior",
@@ -5744,7 +5933,60 @@
     },
     "minecraft:behavior.knockback_roar": {
       "title": "Knockback Roar Minecraft Behavior",
-      "type": "object"
+      "description": "Allows the mob to perform a damaging knockback that affects all nearby entities.",
+      "$ref": "./entity_minecraft_behavior_knockback_roar.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Knockback Roar Behavior",
+          "description": "Allows the mob to perform a damaging knockback that affects all nearby entities.",
+          "body": {
+            "on_roar_end": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "attack_time": 0.5,
+            "control_flags": [],
+            "cooldown_time": 0.10000000149011612,
+            "damage_filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "duration": 1,
+            "knockback_damage": 6,
+            "knockback_filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "knockback_height_cap": 0.4000000059604645,
+            "knockback_horizontal_strength": 4,
+            "knockback_range": 4,
+            "knockback_vertical_strength": 4,
+            "priority": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.melee_attack": {
       "title": "Melee Attack Minecraft Behavior",
@@ -6293,7 +6535,37 @@
     },
     "minecraft:behavior.ranged_attack": {
       "title": "Ranged Attack Minecraft Behavior",
-      "type": "object"
+      "description": "Allows an entity to attack by using ranged shots. \"charge_shoot_trigger\" must be greater than 0 to enable charged up burst-shot attacks. Requires minecraft:shooter to define projectile behaviour.",
+      "$ref": "./entity_minecraft_behavior_ranged_attack.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Ranged Attack Behavior",
+          "description": "Allows an entity to attack by using ranged shots. \"charge_shoot_trigger\" must be greater than 0 to enable charged up burst-shot attacks. Requires minecraft:shooter to define projectile behaviour.",
+          "body": {
+            "attack_interval": {
+              "max": -1,
+              "min": -1
+            },
+            "attack_radius": 0,
+            "attack_radius_min": 0,
+            "burst_interval": 0,
+            "burst_shots": 1,
+            "charge_charged_trigger": 0,
+            "charge_shoot_trigger": 0,
+            "control_flags": [],
+            "priority": 0,
+            "ranged_fov": 90,
+            "set_persistent": false,
+            "speed_multiplier": 1,
+            "swing": false,
+            "target_in_sight_time": 1,
+            "x_max_rotation": 30,
+            "y_max_head_rotation": 30,
+            "attack_interval_max": 0,
+            "attack_interval_min": 0
+          }
+        }
+      ]
     },
     "minecraft:behavior.roar": {
       "title": "Roar Minecraft Behavior",
@@ -7111,39 +7383,8 @@
       "title": "Follow Target Minecraft Memory Behavior",
       "type": "object"
     },
-    "minecraft:memory_behavior.move_to_position": {
-      "title": "Move To Position Minecraft Memory Behavior",
-      "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
-      "$ref": "./entity_minecraft_memory_behavior_move_to_position.schema.json",
-      "defaultSnippets": [
-        {
-          "label": "Entity Move To Position Memory Behavior",
-          "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
-          "body": {
-            "control_flags": [],
-            "priority": 0
-          }
-        }
-      ]
-    },
-    "minecraft:memory_sensor.find_nearest_block": {
-      "title": "Find Nearest Block Minecraft Memory Sensor",
-      "type": "object"
-    },
-    "minecraft:memory_sensor.find_nearest_entity": {
-      "title": "Find Nearest Entity Minecraft Memory Sensor",
-      "type": "object"
-    },
-    "minecraft:memory_sensor.find_nearest_entity_from": {
-      "title": "Find Nearest Entity From Minecraft Memory Sensor",
-      "type": "object"
-    },
     "minecraft:memory_sensor.find_nearest_poi": {
       "title": "Find Nearest Poi Minecraft Memory Sensor",
-      "type": "object"
-    },
-    "minecraft:memory_sensor.in_range_of_block": {
-      "title": "In Range Of Block Minecraft Memory Sensor",
       "type": "object"
     },
     "minecraft:memory_sensor.in_range_of_entity": {

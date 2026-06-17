@@ -41,6 +41,9 @@ import * as jsoncommon from '../../../common';
  * Determines an entity's resistance to knockback from melee attacks. A
  * value of 0.0 means no resistance, while 1.0 provides full
  * immunity to knockback (like iron golems).
+ * Note: In format version 1.26.20, `value` now accepts negative numbers
+ * down to a minimum of `-2`. Negative values amplify knockback applied
+ * to the entity instead of diminishing it.
  * NOTE: Alternate Simple Representations
 
  * This can also be represent as a simple `Decimal number`.

@@ -26,6 +26,9 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.dragonstrafeplayer)
  * Allows this entity to fly around looking for a player to shoot
  * fireballs at.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON.
+ * `target_zone` now only accepts an object with `min` and `max`
+ * values.
  */
 export default interface MinecraftBehaviorDragonstrafeplayer {
 
@@ -112,8 +115,12 @@ export enum MinecraftBehaviorDragonstrafeplayerControlFlags {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorDragonstrafeplayerTargetZone {
 

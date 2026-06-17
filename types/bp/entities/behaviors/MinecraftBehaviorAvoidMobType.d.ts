@@ -516,6 +516,8 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
   geyserEruptionActive = `geyser_eruption_active`,
   geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,
@@ -934,8 +936,12 @@ export enum MinecraftBehaviorAvoidMobTypeOnEscapeEventTarget {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorAvoidMobTypeSoundInterval {
 

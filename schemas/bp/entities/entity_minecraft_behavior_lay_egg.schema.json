@@ -4,6 +4,12 @@
   "title": "Entity Lay Egg Behavior",
   "description": "Allows the mob to lay an egg block on certain types of blocks if the mob is pregnant.",
   "properties": {
+    "lay_seconds": {
+      "title": "Lay Seconds",
+      "description": "Duration of the laying egg process in seconds.\n\nSample values:\n• frog: 2",
+      "type": "number",
+      "default": 10
+    },
     "allow_laying_from_below": {
       "title": "Allow Laying From Below",
       "description": "Allows the mob to lay its eggs from below the target if it can't get there. This is useful if the target block is water with air above, since mobs may not be able to get to the air block above water.\n\nSample values:\n• frog: true",
@@ -277,6 +283,8 @@
         "freeze",
         "fuse",
         "gallop",
+        "geyser_continuous_eruption_active",
+        "geyser_continuous_eruption_start",
         "geyser_eruption_active",
         "geyser_eruption_start",
         "glass",
@@ -607,12 +615,6 @@
         "wind_charge.burst"
       ],
       "default": "lay_egg"
-    },
-    "lay_seconds": {
-      "title": "Lay Seconds",
-      "description": "Duration of the laying egg process in seconds.\n\nSample values:\n• frog: 2",
-      "type": "number",
-      "default": 10
     },
     "on_lay": {
       "title": "Lay",

@@ -112,20 +112,18 @@
   },
   "fields": [
     {
-      "dataType": "version",
-      "id": "format_version",
-      "title": "Format Version",
-      "description": "The format version of this recipe file. Common versions include '1.12' and '1.20.10'.",
-      "isRequired": true
-    },
-    {
-      "dataType": "object",
       "id": "minecraft:recipe_shaped",
-      "title": "Shaped Recipe Definition",
-      "description": "The shaped recipe definition container.",
-      "isRequired": true,
       "subForm": {
         "fields": [
+          {
+            "id": "assume_symmetry",
+            "title": "Assume Symmetry",
+            "description": "When true, the shaped recipe's pattern may be mirrored horizontally, allowing both the pattern and its mirror image to produce the same result.",
+            "defaultValue": false,
+            "dataType": "boolean",
+            "versionIntroduced": "1.20.80",
+            "isRequired": false
+          },
           {
             "dataType": "object",
             "id": "description",
@@ -261,13 +259,6 @@
             "isRequired": false
           },
           {
-            "dataType": "boolean",
-            "id": "assume_symmetry",
-            "title": "Assume Symmetry",
-            "description": "If true, the recipe pattern can be mirrored horizontally.",
-            "isRequired": false
-          },
-          {
             "dataType": "objectArray",
             "id": "unlock",
             "title": "Unlock",
@@ -293,7 +284,18 @@
             }
           }
         ]
-      }
+      },
+      "dataType": "object",
+      "description": "The shaped recipe definition container.",
+      "title": "Shaped Recipe Definition",
+      "isRequired": true
+    },
+    {
+      "dataType": "version",
+      "id": "format_version",
+      "title": "Format Version",
+      "description": "The format version of this recipe file. Common versions include '1.12' and '1.20.10'.",
+      "isRequired": true
     }
   ],
   "samples": {
@@ -330,5 +332,6 @@
       }
     ]
   },
-  "note": "The 'data' field for items is deprecated in versions 1.20.0 and later. Use flattened item identifiers instead."
+  "note": "The 'data' field for items is deprecated in versions 1.20.0 and later. Use flattened item identifiers instead.",
+  "note2": "Starting in 1.19.40, pattern key entries may specify a 'tag' instead of an 'item', allowing the recipe to accept any item that belongs to the named item tag."
 }

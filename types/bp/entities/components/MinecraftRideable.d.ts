@@ -302,7 +302,13 @@ export enum MinecraftRideableDismountMode {
  */
 export interface MinecraftRideableSeats {
 
-  camera_relax_distance_smoothing?: string;
+  /**
+   * @remarks
+   * Adds springiness to camera movement when the camera moves back to
+   * its radius after being pushed closer to the player by an
+   * obstacle.
+   */
+  camera_relax_distance_smoothing?: number;
 
   /**
    * @remarks
@@ -318,6 +324,12 @@ export interface MinecraftRideableSeats {
    */
   rotate_rider_by?: string;
 
-  third_person_camera_radius?: string;
+  /**
+   * @remarks
+   * Camera radius to use for this seat when in third person or
+   * third person front camera. Overrides the default third-person camera
+   * distance for riders in this seat.
+   */
+  third_person_camera_radius?: number;
 
 }

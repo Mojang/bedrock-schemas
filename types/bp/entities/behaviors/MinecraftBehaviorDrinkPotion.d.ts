@@ -15,18 +15,21 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Drink Potion Behavior (minecraft:behavior.drink_potion)
+ * Entity Drink Potion Behavior 
+ * (minecraft:behavior.drink_potion)
  * Allows the mob to drink potions based on specified environment
  * conditions.
  */
 export default interface MinecraftBehaviorDrinkPotion {
+
+  control_flags?: string[];
 
   /**
    * @remarks
    * A list of potions that this entity can drink. Each potion entry
    * has the following parameters:
    */
-  potions?: MinecraftBehaviorDrinkPotionPotions[];
+  potions?: object[];
 
   /**
    * @remarks
@@ -47,30 +50,8 @@ export default interface MinecraftBehaviorDrinkPotion {
 }
 
 
-/**
- * A list of potions that this entity can drink. Each potion entry
- * has the following parameters:
- */
-export interface MinecraftBehaviorDrinkPotionPotions {
-
-  /**
-   * @remarks
-   * The percent chance (from 0.0 to 1.0) of this potion being selected
-   * when searching for a potion to use.
-   */
-  chance?: number;
-
-  /**
-   * @remarks
-   * The filters to use when determining if this potion can be
-   * selected.
-   */
-  filters?: jsoncommon.MinecraftFilter;
-
-  /**
-   * @remarks
-   * The registry ID of the potion to use
-   */
-  id?: number;
-
+export enum MinecraftBehaviorDrinkPotionControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

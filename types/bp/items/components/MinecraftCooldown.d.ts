@@ -10,39 +10,43 @@
  * Item Components Documentation - minecraft:cooldown
  * 
  * minecraft:cooldown Samples
+"minecraft:cooldown": {
+  "category": "attack",
+  "duration": 0.2
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Cooldown (minecraft:cooldown)
- * Adds a cooldown to the item so that, after performing an action of
- * the specified "type", all items with a "minecraft:cooldown" component
- * in the same "category" become unable to perform that same type of
- * action for the number of seconds defined in "duration".
+ * Adds a cooldown to an item, preventing it from being used again
+ * for a specified duration. Items sharing the same category will
+ * enter cooldown together when any one of them is used.
  */
 export default interface MinecraftCooldown {
 
   /**
    * @remarks
-   * All items sharing the same "category" are put on cooldown when an
-   * action of the specified "type" is performed.
+   * A string identifier that groups items together. When an item with
+   * a cooldown is used, all items sharing the same category also
+   * enter cooldown.
    */
   category: string;
 
   /**
    * @remarks
-   * Duration of the cooldown, in seconds, before the item can
-   * perform an action of the specified "type" again.
+   * The duration of time in seconds that items with the matching category
+   * will spend cooling down before becoming usable again.
    */
   duration: number;
 
   /**
    * @remarks
-   * The type of action the cooldown applies to. Options are mutually
-   * exclusive, so cooldown for one type of action does not affect the
-   * others. Values: "use" (when using an item), "attack" (when attack
-   * with an item).
+   * The type of action that triggers the cooldown. Use 'use' for
+   * items consumed on use, or 'attack' for weapons. Default is
+   * 'use'.
    */
   type?: string;
 

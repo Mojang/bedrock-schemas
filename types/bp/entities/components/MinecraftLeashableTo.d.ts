@@ -38,7 +38,7 @@ export default interface MinecraftLeashableTo {
   /**
    * @remarks
    * If true, all entities leashed to this entity are automatically unleashed
-   * when this component is removed.
+   * when this component is removed. Defaults to true.
    */
   unleash_on_removal?: boolean;
 

@@ -15,6 +15,13 @@ import * as jsoncommon from '../../../common';
 /**
  * Entity Spawn On Death (minecraft:spawn_on_death)
  * Component for spawning entities when an entity perishes.
+ * Note: Added in 1.26.20. Spawns one or more entities when the
+ * owning entity perishes. `entity_to_spawn` defaults to the owning
+ * entity, `spawn_method` defaults to `spawned` (also accepts `born`
+ * and `summoned`), `spawn_amount` defaults to 1,
+ * `inherit_parent_name` defaults to true, and
+ * `additional_spawn_range` adds optional random offset. `filters` gates
+ * whether the spawn is triggered at all.
  */
 export default interface MinecraftSpawnOnDeath {
 
@@ -61,8 +68,12 @@ export default interface MinecraftSpawnOnDeath {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftSpawnOnDeathAdditionalSpawnRange {
 

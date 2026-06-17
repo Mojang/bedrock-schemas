@@ -30,7 +30,7 @@
     },
     "items": {
       "title": "Items",
-      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...",
+      "description": "List of items or item tags that the entity wants to share. Items in-game will match to this list from top to bottom, meaning that the first occurance of a match, be it name or tag, will shadow those coming after.\n\nSample values:\n• bogged: [{\"item\":\"minecraft:netherite_sword\",\"priority\"...\n• drowned: [{\"item\":\"minecraft:trident\",\"priority\":0,\"surp...",
       "type": "array",
       "items": {
         "type": "object",

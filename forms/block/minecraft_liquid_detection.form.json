@@ -14,6 +14,15 @@
   },
   "fields": [
     {
+      "id": "detection_rules",
+      "title": "Detection Rules",
+      "dataType": "objectArray",
+      "minLength": 1,
+      "maxLength": 1,
+      "subFormId": "block/detection_rule",
+      "isRequired": true
+    },
+    {
       "id": "can_contain_liquid",
       "title": "Can Contain Liquid",
       "description": "Whether this block can contain the liquid. For example, if the liquid type is `water`, this means the block can be waterlogged.",
@@ -49,6 +58,7 @@
     }
   ],
   "versionIntroduced": "1.21.60",
+  "note": "In 1.26.10, defining `minecraft:liquid_detection` with an empty `detection_rules` array fails to load and produces a content error.",
   "samples": {
     "Block Fabricator": [
       {
@@ -77,7 +87,7 @@
       }
     ]
   },
-  "description": "The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.\nExperimental toggles required: Upcoming Creator Features (in format versions before 1.21.60)",
-  "title": "Liquid Detection",
-  "id": "minecraft:liquid_detection"
+  "description": "The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.",
+  "title": "Block Liquid Detection",
+  "id": "Liquid Detection"
 }

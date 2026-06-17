@@ -24,7 +24,9 @@ export { default as MinecraftNoiseGradient } from './components/MinecraftNoiseGr
 export { default as MinecraftOverworld } from './components/MinecraftOverworld';
 export { default as MinecraftOverworldGenerationRules } from './components/MinecraftOverworldGenerationRules';
 export { default as MinecraftOverworldHeight } from './components/MinecraftOverworldHeight';
+export { default as MinecraftPartiallyFrozen } from './components/MinecraftPartiallyFrozen';
 export { default as MinecraftReplaceBiomes } from './components/MinecraftReplaceBiomes';
+export { default as MinecraftSubsurfaceBuilder } from './components/MinecraftSubsurfaceBuilder';
 export { default as MinecraftSurfaceBuilder } from './components/MinecraftSurfaceBuilder';
 export { default as MinecraftSurfaceMaterialAdjustments } from './components/MinecraftSurfaceMaterialAdjustments';
 export { default as MinecraftSwamp } from './components/MinecraftSwamp';

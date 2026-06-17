@@ -45,16 +45,16 @@
             "content": 3
           }
         ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
+            "content": 3
+          }
+        ],
         "/vanilla/behavior_pack/entities/parched.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
             "content": 4
-          }
-        ],
-        "/vanilla/behavior_pack/entities/skeleton.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
-            "content": 3
           }
         ]
       },
@@ -65,6 +65,14 @@
   "title": "Entity Equip Item Behavior",
   "samples": {
     "/vanilla/behavior_pack/entities/bogged.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
+        "content": {
+          "priority": 3
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/drowned.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
         "content": {
@@ -89,14 +97,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/stray.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
-        "content": {
-          "priority": 3
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/wither_skeleton.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.equip_item/",
         "content": {

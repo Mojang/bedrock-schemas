@@ -71,6 +71,9 @@ import * as jsoncommon from '../../../common';
 /**
  * Healable (minecraft:healable)
  * How entities heal.
+ * Note: From 1.21.130, each entry in `items` accepts an optional
+ * `result_item` field. On a successful heal, the consumed item is
+ * replaced in the player's inventory with the specified item.
  */
 export default interface MinecraftHealable {
 

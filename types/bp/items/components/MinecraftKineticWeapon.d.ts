@@ -97,8 +97,12 @@ export default interface MinecraftKineticWeapon {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftKineticWeaponCreativeReach {
 
@@ -110,8 +114,8 @@ export interface MinecraftKineticWeaponCreativeReach {
 
 
 /**
- * Item Components Kinetic Weapon Kinetic Effect Conditions
- * (minecraft:kinetic_weapon kinetic_effect_conditions)
+ * Item Kinetic Weapon Kinetic Effect Conditions (minecraft:kinetic_weapon
+ * kinetic_effect_conditions)
  * Conditions that need to be satisfied for a specific effect of a
  * kinetic weapon to be applied.
  */
@@ -144,8 +148,8 @@ export interface MinecraftKineticWeaponDamageConditions {
 
 
 /**
- * Item Components Kinetic Weapon Kinetic Effect Conditions
- * (minecraft:kinetic_weapon kinetic_effect_conditions)
+ * Item Kinetic Weapon Kinetic Effect Conditions (minecraft:kinetic_weapon
+ * kinetic_effect_conditions)
  * Conditions that need to be satisfied for a specific effect of a
  * kinetic weapon to be applied.
  */
@@ -178,8 +182,8 @@ export interface MinecraftKineticWeaponDismountConditions {
 
 
 /**
- * Item Components Kinetic Weapon Kinetic Effect Conditions
- * (minecraft:kinetic_weapon kinetic_effect_conditions)
+ * Item Kinetic Weapon Kinetic Effect Conditions (minecraft:kinetic_weapon
+ * kinetic_effect_conditions)
  * Conditions that need to be satisfied for a specific effect of a
  * kinetic weapon to be applied.
  */
@@ -212,8 +216,12 @@ export interface MinecraftKineticWeaponKnockbackConditions {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftKineticWeaponReach {
 

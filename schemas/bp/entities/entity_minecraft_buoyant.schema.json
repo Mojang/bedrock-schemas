@@ -4,6 +4,18 @@
   "title": "Buoyant",
   "description": "Enables an entity to float on the specified liquid blocks.",
   "properties": {
+    "movement_type": {
+      "title": "Movement Type",
+      "description": "Type of vertical movement applied to the entity. `waves` simulates wave movement based on the entity's speed (default). `bobbing` moves the entity up and down at a constant pace. `none` disables wave movement. Replaces the previous `simulate_waves` boolean.\n\n*Introduced in version 1.26.10*",
+      "type": "string",
+      "default": "waves"
+    },
+    "can_auto_step_from_liquid": {
+      "title": "Can Auto Step From Liquid",
+      "description": "Whether the entity can step out of a liquid block onto a neighboring solid block when pushed against it.\n\n*Introduced in version 1.26.10*",
+      "type": "boolean",
+      "default": false
+    },
     "apply_gravity": {
       "title": "Apply Gravity",
       "description": "Applies gravity each tick. Causes \"movement_type\" to be more impactful, but also gravity to be applied more intensely outside liquids.",
@@ -28,12 +40,6 @@
       "type": "number",
       "default": 10
     },
-    "can_auto_step_from_liquid": {
-      "title": "Can Auto Step From Liquid",
-      "description": "Whether the entity can move out of a liquid block to a neighboring solid block if pushed against it.",
-      "type": "boolean",
-      "default": false
-    },
     "drag_down_on_buoyancy_removed": {
       "title": "Drag Down On Buoyancy Removed",
       "description": "How much an entity will be dragged down when the component is removed.",
@@ -47,12 +53,6 @@
       "items": {
         "type": "string"
       }
-    },
-    "movement_type": {
-      "title": "Movement Type",
-      "description": "Type of vertical movement applied to the entity:\n\"waves\", simulates wave movement based on the entity speed.\n\"bobbing\", simulates waves going through.\n\"none\", simulates waves going through.",
-      "type": "string",
-      "default": "waves"
     }
   }
 }

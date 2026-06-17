@@ -63,3 +63,13 @@ export enum MinecraftRedstoneProducerConnectedFaces {
   up = `up`,
   down = `down`
 }
+
+
+export enum MinecraftRedstoneProducerStronglyPoweredFace {
+  down = `down`,
+  east = `east`,
+  north = `north`,
+  south = `south`,
+  up = `up`,
+  west = `west`
+}

@@ -28,6 +28,8 @@ import * as jsoncommon from '../../../common';
  * their home position. 
 		If `restriction_radius` is set, entities will
  * be able to run this behavior only if outside of it.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorMoveTowardsHomeRestriction {
 

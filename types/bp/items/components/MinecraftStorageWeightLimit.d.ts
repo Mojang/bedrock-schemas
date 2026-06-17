@@ -25,6 +25,7 @@ import * as jsoncommon from '../../../common';
  * Item Storage Weight Limit (minecraft:storage_weight_limit)
  * Specifies the maximum weight limit that a storage item can 
  * hold.
+ * Note: Available without experimental toggle in 1.21.110.
  */
 export default interface MinecraftStorageWeightLimit {
 

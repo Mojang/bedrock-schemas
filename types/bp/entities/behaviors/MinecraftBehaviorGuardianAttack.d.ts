@@ -26,6 +26,8 @@ import * as jsoncommon from '../../../common';
  * (minecraft:behavior.guardian_attack)
  * Allows this entity to use a laser beam attack. Can only be used
  * by Guardians and Elder Guardians.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON
+ * for this behavior.
  */
 export default interface MinecraftBehaviorGuardianAttack {
 

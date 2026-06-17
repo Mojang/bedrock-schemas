@@ -65,7 +65,7 @@
           }
         }
       ],
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "admire_item_sound",
@@ -151,6 +151,7 @@
     }
   ],
   "description": "Enables the mob to admire items that have been configured as admirable.",
+  "note": "In format version 1.26.20, `sound_interval` must be specified as a Float Range object (an object with `range_min` / `range_max`). Legacy scalar or array forms no longer parse.",
   "title": "Entity Admire Item Behavior",
   "samples": {},
   "id": "minecraft:behavior.admire_item"

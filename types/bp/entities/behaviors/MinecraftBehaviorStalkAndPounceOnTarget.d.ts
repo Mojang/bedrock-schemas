@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Stalk And Pounce On Target Behavior
+ * Entity Stalk And Pounce On Target Behavior
  * (minecraft:behavior.stalk_and_pounce_on_target)
  * Allows a mob to stalk a target, then once within range pounce onto
  * a target, on success the target will be attacked dealing damage
@@ -24,12 +24,21 @@ import * as jsoncommon from '../../../common';
  */
 export default interface MinecraftBehaviorStalkAndPounceOnTarget {
 
+  control_flags?: string[];
+
   /**
    * @remarks
    * The amount of time the mob will be interested before pouncing. This
    * happens when the mob is within range of pouncing
    */
   interest_time?: number;
+
+  /**
+   * @remarks
+   * The distance in blocks the mob jumps in the direction of its
+   * target
+   */
+  leap_dist?: number;
 
   /**
    * @remarks
@@ -89,9 +98,60 @@ export default interface MinecraftBehaviorStalkAndPounceOnTarget {
 
   /**
    * @remarks
+   * Blocks that the mob can get stuck in after a pounce.
+   */
+  stuck_blocks?: MinecraftBehaviorStalkAndPounceOnTargetStuckBlocks;
+
+  /**
+   * @remarks
    * The amount of time the mob will be stuck if they fail and land on
    * a block they can be stuck on
    */
   stuck_time?: number;
+
+}
+
+
+export enum MinecraftBehaviorStalkAndPounceOnTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Stuck Blocks (stuck_blocks)
+ */
+export interface MinecraftBehaviorStalkAndPounceOnTargetStuckBlocks {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

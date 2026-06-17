@@ -13,6 +13,7 @@
     ]
   },
   "id": "minecraft:remove_in_peaceful",
+  "versionIntroduced": "1.21.90",
   "fields": [],
   "description": "Denotes entities that are not allowed to exist in \"Peaceful\" difficulty.",
   "title": "Remove In Peaceful",

@@ -16,9 +16,33 @@ Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
 "minecraft:pushable_by_entity": {
   "presets": [
     {
+      "filters": {
+        "all_of": [
+          {
+            "test": "is_family",
+            "subject": "other",
+            "value": "sulfur_cube"
+          },
+          {
+            "test": "enum_property",
+            "subject": "other",
+            "domain": "minecraft:sulfur_cube_archetype",
+            "operator": "not",
+            "value": "none"
+          },
+          {
+            "test": "is_controlling_passenger_family",
+            "subject": "self",
+            "value": "player"
+          }
+        ]
+      },
+      "push_mode": "none"
+    },
+    {
       "push_mode": "legacy_boat",
       "strength_multiplier": 0.1,
-      "min_distance": 0.3,
+      "min_distance": 0.55,
       "push_scale_self": 0.5,
       "push_scale_other": 0.25
     }
@@ -38,7 +62,7 @@ Chest Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior
     {
       "push_mode": "legacy_minecart",
       "strength_multiplier": 0.1,
-      "min_distance": 0.0001,
+      "min_distance": 0.01,
       "push_scale_self": 0.5,
       "push_scale_other": 0.25
     }
@@ -52,6 +76,14 @@ import * as jsoncommon from '../../../common';
 /**
  * Entity Pushable By Entity (minecraft:pushable_by_entity)
  * Allows an entity to be pushed by other entities.
+ * Note: Added in 1.26.10 as part of the split of
+ * `minecraft:pushable` into `minecraft:pushable_by_block` (pistons and
+ * Shulker Boxes) and `minecraft:pushable_by_entity` (other entities). The
+ * legacy `minecraft:pushable` component is no longer parsed.
+ * Note: Released out of beta in format version 1.26.30. The
+ * `presets` field replaces the previous flat property layout; the
+ * preset field `max_distance` was renamed from
+ * `kick_distance_threshold`.
  */
 export default interface MinecraftPushableByEntity {
 
@@ -62,7 +94,7 @@ export default interface MinecraftPushableByEntity {
    * none match, a default configuration is used instead.
    * 
    * Sample Values:
-   * Boat: [{"push_mode":"legacy_boat","strength_multiplier":0.1,"min_distance":0.3,"push_scale_self":0.5,"push_scale_other":0.25}]
+   * Boat: [{"filters":{"all_of":[{"test":"is_family","subject":"other","value":"sulfur_cube"},{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","operator":"not","value":"none"},{"test":"is_controlling_passenger_family","subject":"self","value":"player"}]},"push_mode":"none"},{"push_mode":"legacy_boat","strength_multiplier":0.1,"min_distance":0.55,"push_scale_self":0.5,"push_scale_other":0.25}]
    *
    *
    */

@@ -13,31 +13,47 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Connection Rule (minecraft:connection_rule)
+ * Block Connection Rule (minecraft:connection_rule)
  * Defines whether other blocks such as fences, walls, bars, and
  * glass panes are allowed to connect to this block.
-Experimental toggles
- * required: Upcoming Creator Features (in format versions before
- * 1.26.0).
+ * Note: Lets a custom block control whether other blocks with
+ * connection behavior (fences, walls, bars, glass panes) may
+ * visually connect to it. Released alongside the new
+ * `minecraft:has_fence_connections` VanillaBlockTag.
+ * Note: Available without the Upcoming Creator Features experimental toggle
+ * for block format versions 1.26.0 or higher.
  */
 export default interface MinecraftConnectionRule {
 
   /**
    * @remarks
-   * The type of block allowed to connect to this block. Currently, the
-   * options are: `all` (default), `only_fences`, and `none`. Note
-   * that the `only_fences` option allows connections from all
-   * Vanilla fences excluding NetherBrick.
+   * The type of block allowed to connect to this block. Note that the
+   * "only_fences" option allows connections from all Vanilla fences
+   * excluding NetherBrick.
    */
   accepts_connections_from?: string;
 
   /**
    * @remarks
-   * The cardinal directions that connection is enabled for: `north`,
-   * `south`, `east`, and `west`. All directions are enabled by
-   * default. Note that if `none` is specified for
-   * `accepts_connections_from`, this field will not be used.
+   * The cardinal directions that connection is enabled for. Note that
+   * if "none" is specified for "accepts_connections_from", this field
+   * will not be used.
    */
   enabled_directions?: string[];
 
+}
+
+
+export enum MinecraftConnectionRuleAcceptsConnectionsFrom {
+  all = `all`,
+  none = `none`,
+  onlyFences = `only_fences`
+}
+
+
+export enum MinecraftConnectionRuleEnabledDirections {
+  east = `east`,
+  north = `north`,
+  south = `south`,
+  west = `west`
 }

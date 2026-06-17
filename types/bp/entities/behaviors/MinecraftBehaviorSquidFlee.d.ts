@@ -15,10 +15,12 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Squid Flee Behavior (minecraft:behavior.squid_flee)
+ * Entity Squid Flee Behavior (minecraft:behavior.squid_flee)
  * Allows the squid to swim away.
  */
 export default interface MinecraftBehaviorSquidFlee {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -28,4 +30,11 @@ export default interface MinecraftBehaviorSquidFlee {
    */
   priority?: number;
 
+}
+
+
+export enum MinecraftBehaviorSquidFleeControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

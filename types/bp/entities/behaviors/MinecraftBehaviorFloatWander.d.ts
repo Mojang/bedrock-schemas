@@ -31,7 +31,8 @@ Bat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 import * as jsoncommon from '../../../common';
 
 /**
- * Float Wander Behavior (minecraft:behavior.float_wander)
+ * Entity Float Wander Behavior 
+ * (minecraft:behavior.float_wander)
  * Allows the mob to float around like the Ghast.
  */
 export default interface MinecraftBehaviorFloatWander {
@@ -50,6 +51,8 @@ export default interface MinecraftBehaviorFloatWander {
    * the target position.
    */
   allow_navigating_through_liquids?: boolean;
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -158,5 +161,29 @@ export default interface MinecraftBehaviorFloatWander {
    *
    */
   y_offset?: number;
+
+}
+
+
+export enum MinecraftBehaviorFloatWanderControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
+ */
+export interface MinecraftBehaviorFloatWanderFloatDuration {
+
+  max?: number;
+
+  min?: number;
 
 }

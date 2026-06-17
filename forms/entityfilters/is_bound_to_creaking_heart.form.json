@@ -128,6 +128,7 @@
     "conditional",
     "entityevent"
   ],
+  "versionIntroduced": "1.21.60",
   "description": "Tests that the Creaking Heart that spawned the subject Creaking still exists.",
   "title": "Is Bound To Creaking Heart",
   "samples": {

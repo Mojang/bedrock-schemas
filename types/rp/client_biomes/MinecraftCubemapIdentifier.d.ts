@@ -19,6 +19,9 @@ import * as jsoncommon from '../../common';
  * Identifiers must resolve to identifiers in valid Cubemap JSON
  * schemas under the "cubemaps" directory. Biomes without this
  * component will have default cubemap settings.
+ * Note: Added in 1.21.130 to apply a custom cubemap (defined in
+ * the resource pack's `cubemaps/` directory) for Vibrant Visuals
+ * skybox lighting on a client biome.
  */
 export default interface MinecraftCubemapIdentifier {
 

@@ -10,13 +10,19 @@
  * Item Components Documentation - minecraft:record
  * 
  * minecraft:record Samples
+"minecraft:record": {
+  "comparator_signal": 1,
+  "duration": 5,
+  "sound_event": "ambient.tame"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Record (minecraft:record)
- * Record Item Component. Used by record items to play music.
+ * Used by record items to play music.
  */
 export default interface MinecraftRecord {
 
@@ -281,6 +287,8 @@ export enum MinecraftRecordSoundEvent {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
   geyserEruptionActive = `geyser_eruption_active`,
   geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,

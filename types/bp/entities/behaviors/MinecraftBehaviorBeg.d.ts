@@ -15,17 +15,19 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Beg Behavior (minecraft:behavior.beg)
+ * Entity Beg Behavior (minecraft:behavior.beg)
  * Allows this mob to look at and follow the player that holds food
  * they like.
  */
 export default interface MinecraftBehaviorBeg {
 
+  control_flags?: string[];
+
   /**
    * @remarks
    * List of items that this mob likes
    */
-  items?: string[];
+  items?: string;
 
   /**
    * @remarks
@@ -38,7 +40,7 @@ export default interface MinecraftBehaviorBeg {
    * The range of time in seconds this mob will stare at the player
    * holding a food they like, begging for it
    */
-  look_time?: number[];
+  look_time?: MinecraftBehaviorBegLookTime;
 
   /**
    * @remarks
@@ -47,5 +49,29 @@ export default interface MinecraftBehaviorBeg {
    * goal.
    */
   priority?: number;
+
+}
+
+
+export enum MinecraftBehaviorBegControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
+ */
+export interface MinecraftBehaviorBegLookTime {
+
+  max?: number;
+
+  min?: number;
 
 }

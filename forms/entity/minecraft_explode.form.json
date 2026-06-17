@@ -154,6 +154,14 @@
   },
   "fields": [
     {
+      "id": "damage_scaling",
+      "versionIntroduced": "1.21.40",
+      "defaultValue": 1,
+      "dataType": "float",
+      "description": "A scale factor applied to the explosion's damage to entities. A value of 0 prevents the explosion from dealing any damage. Negative values cause the explosion to heal entities instead.",
+      "title": "Damage Scaling"
+    },
+    {
       "id": "toggles_blocks",
       "versionIntroduced": "1.21.40",
       "samples": {
@@ -300,13 +308,6 @@
           }
         ]
       }
-    },
-    {
-      "id": "damage_scaling",
-      "title": "Damage Scaling",
-      "description": "A scale factor applied to the explosion's damage to entities. A value of 0 prevents the explosion from dealing any damage. Negative values cause the explosion to heal entities instead.",
-      "defaultValue": 1,
-      "dataType": "float"
     },
     {
       "id": "destroy_affected_by_griefing",

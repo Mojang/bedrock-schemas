@@ -86,9 +86,9 @@ export default interface MinecraftDestructibleByExplosion {
    * @remarks
    * Sets the explosion resistance for the block. Greater values result
    * in greater resistance to explosions. The scale will be
-   * different for different explosion power levels. A negative value
-   * or 0 means it will easily explode; larger numbers increase level
-   * of resistance.
+   * different for different explosion power levels. A value of 0
+   * means it will easily explode; larger numbers increase level of
+   * resistance.
    */
   explosion_resistance?: number;
 

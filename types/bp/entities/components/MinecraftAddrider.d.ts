@@ -88,6 +88,11 @@ import * as jsoncommon from '../../../common';
 /**
  * Add Rider (minecraft:addrider)
  * Adds a rider to the entity.
+ * Note: From 1.21.130, this component accepts an array of riders via
+ * the `riders` field (each with mandatory `entity_type` and
+ * optional `spawn_event`). The legacy single `entity_type` /
+ * `spawn_event` form remains supported for backward 
+ * compatibility.
  */
 export default interface MinecraftAddrider {
 

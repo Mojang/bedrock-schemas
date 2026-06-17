@@ -44,12 +44,8 @@ export default interface MinecraftTick {
    * the values in the interval_range are the same, the block will
    * always be ticked after that number of ticks. The first value must
    * be lower or equal to the second value in the array.
-   * 
-   * Sample Values:
-   * Tick Every 1 To 3 Seconds: [20,60]
-   *
    */
-  interval_range?: number[];
+  interval_range: number[];
 
   /**
    * @remarks
@@ -58,10 +54,6 @@ export default interface MinecraftTick {
    * no further ticking will occur. If true, after the block ticks, a
    * new random value will be chosen from the interval_range for when
    * the block will tick again.
-   * 
-   * Sample Values:
-   * Tick Every 1 To 3 Seconds: true
-   *
    */
   looping?: boolean;
 

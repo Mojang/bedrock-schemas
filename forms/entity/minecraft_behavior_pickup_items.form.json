@@ -110,6 +110,58 @@
       "defaultValue": false
     },
     {
+      "id": "stop_if_holding_item",
+      "title": "Stop If Holding Item",
+      "description": "If true, the mob will not begin a pickup goal while it is already holding an item. Useful for mobs that should only hold one item at a time.",
+      "defaultValue": false,
+      "dataType": "boolean",
+      "versionIntroduced": "1.26.30"
+    },
+    {
+      "id": "on_pickup_item_start",
+      "title": "Pickup Item Start",
+      "description": "Event to run when this mob moves to pick up an item.",
+      "dataType": "minecraftEventTrigger",
+      "versionIntroduced": "1.26.20",
+      "defaultValue": {
+        "event": "",
+        "filters": {
+          "AND": null,
+          "NOT": null,
+          "OR": null,
+          "all": null,
+          "all_of": null,
+          "any": null,
+          "any_of": null,
+          "none_of": null
+        },
+        "target": "self"
+      },
+      "subFormId": "entity/actordefinitiontrigger"
+    },
+    {
+      "id": "on_pickup_item_end",
+      "title": "Pickup Item End",
+      "description": "Event to run when this mob either finishes or loses interest in picking up an item.",
+      "dataType": "minecraftEventTrigger",
+      "versionIntroduced": "1.26.20",
+      "defaultValue": {
+        "event": "",
+        "filters": {
+          "AND": null,
+          "NOT": null,
+          "OR": null,
+          "all": null,
+          "all_of": null,
+          "any": null,
+          "any_of": null,
+          "none_of": null
+        },
+        "target": "self"
+      },
+      "subFormId": "entity/actordefinitiontrigger"
+    },
+    {
       "id": "can_pickup_any_item",
       "title": "Can Pickup Any Item",
       "description": "If true, the mob can pick up any item",
@@ -122,7 +174,7 @@
             "content": true
           }
         ],
-        "/vanilla/behavior_pack/entities/parched.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": true
@@ -187,6 +239,17 @@
             ]
           }
         ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
+            "content": [
+              "minecraft:glow_ink_sac",
+              {
+                "tags": "q.all_tags('minecraft:is_spear')"
+              }
+            ]
+          }
+        ],
         "/vanilla/behavior_pack/entities/parched.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
@@ -218,7 +281,7 @@
             "content": 2
           }
         ],
-        "/vanilla/behavior_pack/entities/parched.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": 2
@@ -245,55 +308,13 @@
             "content": 3
           }
         ],
-        "/vanilla/behavior_pack/entities/parched.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": 3
           }
         ]
       }
-    },
-    {
-      "id": "on_pickup_item_end",
-      "title": "Pickup Item End",
-      "description": "Event to run when this mob either finishes or loses interest in picking up an item",
-      "dataType": "object",
-      "defaultValue": {
-        "event": "",
-        "filters": {
-          "AND": null,
-          "NOT": null,
-          "OR": null,
-          "all": null,
-          "all_of": null,
-          "any": null,
-          "any_of": null,
-          "none_of": null
-        },
-        "target": "self"
-      },
-      "subFormId": "entity/actordefinitiontrigger"
-    },
-    {
-      "id": "on_pickup_item_start",
-      "title": "Pickup Item Start",
-      "description": "Event to run when this mob moves to pick up an item",
-      "dataType": "object",
-      "defaultValue": {
-        "event": "",
-        "filters": {
-          "AND": null,
-          "NOT": null,
-          "OR": null,
-          "all": null,
-          "all_of": null,
-          "any": null,
-          "any_of": null,
-          "none_of": null
-        },
-        "target": "self"
-      },
-      "subFormId": "entity/actordefinitiontrigger"
     },
     {
       "id": "pickup_based_on_chance",
@@ -308,7 +329,7 @@
             "content": true
           }
         ],
-        "/vanilla/behavior_pack/entities/parched.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": true
@@ -332,6 +353,12 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": 5
+          }
+        ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
+            "content": 6
           }
         ],
         "/vanilla/behavior_pack/entities/parched.json": [
@@ -383,7 +410,7 @@
             "content": 1
           }
         ],
-        "/vanilla/behavior_pack/entities/parched.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": 1
@@ -436,6 +463,25 @@
         }
       }
     ],
+    "/vanilla/behavior_pack/entities/drowned.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
+        "content": {
+          "can_pickup_any_item": true,
+          "excluded_items": [
+            "minecraft:glow_ink_sac",
+            {
+              "tags": "q.all_tags('minecraft:is_spear')"
+            }
+          ],
+          "pickup_based_on_chance": true,
+          "goal_radius": 2,
+          "priority": 6,
+          "max_dist": 3,
+          "speed_multiplier": 1
+        }
+      }
+    ],
     "/vanilla/behavior_pack/entities/parched.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
@@ -455,24 +501,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/skeleton.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
-        "content": {
-          "can_pickup_any_item": true,
-          "excluded_items": [
-            {
-              "tags": "q.all_tags('minecraft:is_spear')"
-            }
-          ],
-          "pickup_based_on_chance": true,
-          "goal_radius": 2,
-          "priority": 5,
-          "max_dist": 3,
-          "speed_multiplier": 1
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/stray.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
         "content": {

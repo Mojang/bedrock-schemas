@@ -91,6 +91,8 @@
       "isRequired": true
     }
   ],
+  "versionIntroduced": "1.21.110",
+  "note": "Custom partial biome replacement is available without experimental toggle in 1.21.110.",
   "description": "Represents the replacement information used to determine the placement of the overriding biome.",
   "title": "Biome Replacement",
   "id": "Biome Replacement"

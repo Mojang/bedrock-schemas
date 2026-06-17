@@ -75,6 +75,10 @@ import * as jsoncommon from '../../../common';
  * Entity Jump Around Target Behavior
  * (minecraft:behavior.jump_around_target)
  * Allows an entity to jump around a target.
+ * Note: In format version 1.26.20, `valid_distance_to_target` and
+ * `landing_distance_from_target` must be specified as Float Range
+ * objects (objects with `range_min` / `range_max`). Legacy scalar or
+ * array forms no longer parse.
  */
 export default interface MinecraftBehaviorJumpAroundTarget {
 
@@ -309,8 +313,12 @@ export interface MinecraftBehaviorJumpAroundTargetFilters {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget {
 
@@ -322,8 +330,12 @@ export interface MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorJumpAroundTargetValidDistanceToTarget {
 

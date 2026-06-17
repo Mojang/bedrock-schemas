@@ -10,6 +10,16 @@
  * Item Components Documentation - minecraft:display_name
  * 
  * minecraft:display_name Samples
+ * At sample: 
+"minecraft:display_name": {
+  "value": "secret_weapon"
+}
+
+ * At sample with localication key: 
+"minecraft:display_name": {
+  "value": "item.snowball.name"
+}
+
 
 Apple - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/apple.json
 
@@ -51,8 +61,9 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Item Display Name (minecraft:display_name)
- * The display_name item component specifies the text shown whenever an
- * item's name is displayed, like in hover text.
+ * Sets the item display name within Minecraft: Bedrock Edition. This
+ * component may also be used to pull from the localization file by
+ * referencing a key from it.
  */
 export default interface MinecraftDisplayName {
 

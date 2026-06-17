@@ -42,6 +42,11 @@ import * as jsoncommon from '../../../common';
  * with the entity.
  * Note: Requires the ability to trade in order to work 
  * properly.
+ * Note: In 1.26.0 the schema is stricter and rejects invalid JSON.
+ * The `min_look_time` and `max_look_time` fields are deprecated and
+ * replaced by a single `look_time` range (with `min` and `max`).
+ * Existing uses of `min_look_time` / `max_look_time` are upgraded
+ * automatically.
  */
 export default interface MinecraftBehaviorLookAtTradingPlayer {
 
@@ -108,8 +113,12 @@ export enum MinecraftBehaviorLookAtTradingPlayerControlFlags {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftBehaviorLookAtTradingPlayerLookTime {
 

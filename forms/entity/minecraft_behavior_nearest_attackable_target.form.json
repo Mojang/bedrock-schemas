@@ -28,6 +28,7 @@
           "dataType": "int"
         }
       ],
+      "note": "From 1.21.130, `attack_interval` accepts an `[int, int]` range to randomize the time between target searches. A single integer remains supported and is treated as a fixed interval. In 1.26.0 the schema is stricter and `attack_interval` only accepts an object with `min` and `max` values; the single-number shorthand is no longer accepted in 1.26.0 and newer.",
       "samples": {
         "/vanilla/behavior_pack/entities/cave_spider.json": [
           {
@@ -44,21 +45,13 @@
               "max": 5
             }
           }
-        ],
-        "/vanilla/behavior_pack/entities/elder_guardian.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
-            "content": {
-              "max": 1
-            }
-          }
         ]
       },
       "defaultValue": {
         "max": 0,
         "min": 0
       },
-      "subFormId": "item_components/floatrange"
+      "subFormId": "item/floatrange"
     },
     {
       "id": "entity_types",
@@ -276,37 +269,106 @@
             ]
           }
         ],
-        "/vanilla/behavior_pack/entities/elder_guardian.json": [
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
             "content": [
               {
                 "filters": {
-                  "AND": [
+                  "all_of": [
                     {
-                      "OR": [
+                      "any_of": [
                         {
                           "test": "is_family",
-                          "subject": 1,
-                          "operator": 0,
+                          "subject": "other",
                           "value": "player"
                         },
                         {
                           "test": "is_family",
-                          "subject": 1,
-                          "operator": 0,
-                          "value": "squid"
+                          "subject": "other",
+                          "value": "snowgolem"
                         },
                         {
                           "test": "is_family",
-                          "subject": 1,
-                          "operator": 0,
+                          "subject": "other",
+                          "value": "irongolem"
+                        },
+                        {
+                          "test": "is_family",
+                          "subject": "other",
                           "value": "axolotl"
+                        }
+                      ]
+                    },
+                    {
+                      "any_of": [
+                        {
+                          "test": "in_water",
+                          "subject": "other",
+                          "value": true
+                        },
+                        {
+                          "test": "is_daytime",
+                          "value": false
                         }
                       ]
                     }
                   ]
-                }
+                },
+                "max_dist": 20
+              },
+              {
+                "filters": {
+                  "all_of": [
+                    {
+                      "any_of": [
+                        {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "villager"
+                        },
+                        {
+                          "test": "is_family",
+                          "subject": "other",
+                          "value": "wandering_trader"
+                        }
+                      ]
+                    },
+                    {
+                      "any_of": [
+                        {
+                          "test": "in_water",
+                          "subject": "other",
+                          "value": true
+                        },
+                        {
+                          "test": "is_daytime",
+                          "value": false
+                        }
+                      ]
+                    }
+                  ]
+                },
+                "max_dist": 20,
+                "must_see": false
+              },
+              {
+                "filters": {
+                  "all_of": [
+                    {
+                      "test": "is_family",
+                      "subject": "other",
+                      "value": "baby_turtle"
+                    },
+                    {
+                      "test": "in_water",
+                      "subject": "other",
+                      "operator": "!=",
+                      "value": true
+                    }
+                  ]
+                },
+                "max_dist": 20
               }
             ]
           }
@@ -461,6 +523,14 @@
       ]
     },
     {
+      "id": "target_acquisition_probability",
+      "title": "Target Acquisition Probability",
+      "description": "Probability (0-1) that the goal will succeed when a candidate target passes all filters. Lower values cause the mob to acquire targets less reliably; the default of 1 always acquires.",
+      "dataType": "float",
+      "defaultValue": 1,
+      "versionIntroduced": "1.21.130"
+    },
+    {
       "id": "attack_owner",
       "title": "Attack Owner",
       "description": "If true, this entity can attack its owner.",
@@ -520,14 +590,30 @@
       "title": "Must See Forget Duration",
       "description": "Time (in seconds) the target must not be seen by this entity to become invalid. Used only if \"must_see\" is true.",
       "dataType": "float",
-      "defaultValue": 3
+      "defaultValue": 3,
+      "samples": {
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
+            "content": 17
+          }
+        ]
+      }
     },
     {
       "id": "persist_time",
       "title": "Persist Time",
       "description": "Time (in seconds) this entity can continue attacking the target after the target is no longer valid.",
       "dataType": "float",
-      "defaultValue": 0
+      "defaultValue": 0,
+      "samples": {
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
+            "content": 0.5
+          }
+        ]
+      }
     },
     {
       "id": "priority",
@@ -552,12 +638,6 @@
             "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
             "content": 1
           }
-        ],
-        "/vanilla/behavior_pack/entities/elder_guardian.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
-            "content": 1
-          }
         ]
       },
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal."
@@ -570,6 +650,12 @@
       "defaultValue": false,
       "samples": {
         "/vanilla/behavior_pack/entities/bogged.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
+            "content": true
+          }
+        ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
             "content": true
@@ -596,13 +682,6 @@
       "description": "Allows the actor to be set to persist upon targeting a player",
       "dataType": "boolean",
       "defaultValue": false
-    },
-    {
-      "id": "target_acquisition_probability",
-      "title": "Target Acquisition Probability",
-      "description": "Probability (0.0 to 1.0) that this entity will accept a found target. Checked each time a valid target is found during scanning.",
-      "dataType": "float",
-      "defaultValue": 1
     },
     {
       "id": "target_invisible_multiplier",
@@ -642,6 +721,12 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
             "content": 24
+          }
+        ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
+            "content": 12
           }
         ]
       }
@@ -825,45 +910,115 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/elder_guardian.json": [
+    "/vanilla/behavior_pack/entities/drowned.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/",
         "content": {
-          "attack_interval": {
-            "max": 1
-          },
+          "reselect_targets": true,
           "must_see": true,
+          "within_radius": 12,
+          "must_see_forget_duration": 17,
+          "persist_time": 0.5,
           "entity_types": [
             {
               "filters": {
-                "AND": [
+                "all_of": [
                   {
-                    "OR": [
+                    "any_of": [
                       {
                         "test": "is_family",
-                        "subject": 1,
-                        "operator": 0,
+                        "subject": "other",
                         "value": "player"
                       },
                       {
                         "test": "is_family",
-                        "subject": 1,
-                        "operator": 0,
-                        "value": "squid"
+                        "subject": "other",
+                        "value": "snowgolem"
                       },
                       {
                         "test": "is_family",
-                        "subject": 1,
-                        "operator": 0,
+                        "subject": "other",
+                        "value": "irongolem"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
                         "value": "axolotl"
+                      }
+                    ]
+                  },
+                  {
+                    "any_of": [
+                      {
+                        "test": "in_water",
+                        "subject": "other",
+                        "value": true
+                      },
+                      {
+                        "test": "is_daytime",
+                        "value": false
                       }
                     ]
                   }
                 ]
-              }
+              },
+              "max_dist": 20
+            },
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "any_of": [
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "villager"
+                      },
+                      {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "wandering_trader"
+                      }
+                    ]
+                  },
+                  {
+                    "any_of": [
+                      {
+                        "test": "in_water",
+                        "subject": "other",
+                        "value": true
+                      },
+                      {
+                        "test": "is_daytime",
+                        "value": false
+                      }
+                    ]
+                  }
+                ]
+              },
+              "max_dist": 20,
+              "must_see": false
+            },
+            {
+              "filters": {
+                "all_of": [
+                  {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "baby_turtle"
+                  },
+                  {
+                    "test": "in_water",
+                    "subject": "other",
+                    "operator": "!=",
+                    "value": true
+                  }
+                ]
+              },
+              "max_dist": 20
             }
           ],
-          "priority": 1
+          "priority": 2
         }
       }
     ]

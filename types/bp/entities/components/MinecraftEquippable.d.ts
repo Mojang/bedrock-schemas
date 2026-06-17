@@ -33,6 +33,9 @@ import * as jsoncommon from '../../../common';
  * Equippable (minecraft:equippable)
  * Defines an entity's behavior for having items equipped to 
  * it.
+ * Note: In 1.26.0, `on_equip` and `on_unequip` events on each slot
+ * no longer fire on world load; they now run only as a result of
+ * an in-game equip or unequip interaction.
  */
 export default interface MinecraftEquippable {
 

@@ -4,6 +4,12 @@
   "title": "Leashable",
   "description": "Describes how this mob can be leashed to other items",
   "properties": {
+    "can_be_cut": {
+      "title": "Can Be Cut",
+      "description": "If true, players can cut both incoming and outgoing leashes by using shears on the entity.\n\n*Introduced in version 1.21.90*",
+      "type": "boolean",
+      "default": true
+    },
     "can_be_stolen": {
       "title": "Can Be Stolen",
       "description": "If true, players can leash this entity even if it is already leashed to another entity.",
@@ -52,9 +58,9 @@
       "title": "Unleash Event",
       "description": "Event to call when this entity is unleashed. Can be an object with event and target properties, or a simple event string."
     },
-    "can_be_cut": {
-      "title": "Can Be Cut",
-      "description": "If true, players can cut both incoming and outgoing leashes by using shears on the entity.",
+    "unleash_on_removal": {
+      "title": "Unleash On Removal",
+      "description": "If true, the entity is unleashed when this component is removed. Defaults to true.\n\n*Introduced in version 1.26.30*",
       "type": "boolean",
       "default": true
     },
@@ -141,12 +147,6 @@
           }
         }
       }
-    },
-    "unleash_on_removal": {
-      "title": "Unleash On Removal",
-      "description": "If true, the entity is unleashed when the component is removed.",
-      "type": "boolean",
-      "default": true
     }
   }
 }

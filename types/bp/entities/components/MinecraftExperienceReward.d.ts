@@ -14,44 +14,29 @@
 Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/blaze.json
 
 "minecraft:experience_reward": {
-  "on_death": {
-    "expression": "query.last_hit_by_player ? 10 : 0",
-    "version": 12
-  }
+  "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 
 
 Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
 
 "minecraft:experience_reward": {
-  "on_death": {
-    "expression": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0",
-    "version": 13
-  }
+  "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 
 
 Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/breeze.json
 
 "minecraft:experience_reward": {
-  "on_bred": {
-    "expression": "Math.Random(1,7)",
-    "version": 12
-  },
-  "on_death": {
-    "expression": "query.last_hit_by_player ? 10 : 0",
-    "version": 12
-  }
+  "on_bred": "Math.Random(1,7)",
+  "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 
 
 Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/cave_spider.json
 
 "minecraft:experience_reward": {
-  "on_death": {
-    "expression": "query.last_hit_by_player ? 5 : 0",
-    "version": 13
-  }
+  "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 
 
@@ -78,9 +63,8 @@ export default interface MinecraftExperienceReward {
    * this entity is successfully bred.
    * 
    * Sample Values:
-   * Breeze: {"expression":"Math.Random(1,7)","version":12}
+   * Breeze: "Math.Random(1,7)"
    *
-   * Chicken: "Math.Random(1,7)"
    *
    */
   on_bred?: string;
@@ -91,12 +75,12 @@ export default interface MinecraftExperienceReward {
    * this entity dies.
    * 
    * Sample Values:
-   * Blaze: {"expression":"query.last_hit_by_player ? 10 : 0","version":12}
+   * Blaze: "query.last_hit_by_player ? 10 : 0"
    *
-   * Bogged: {"expression":"query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0","version":13}
+   * Bogged: "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
    *
    *
-   * Cave Spider: {"expression":"query.last_hit_by_player ? 5 : 0","version":13}
+   * Cave Spider: "query.last_hit_by_player ? 5 : 0"
    *
    */
   on_death?: string;

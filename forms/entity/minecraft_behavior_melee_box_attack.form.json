@@ -32,7 +32,15 @@
       "title": "Can Spread On Fire",
       "description": "Allows the mob, if on fire and empty handed, to ignite its target upon a successful attack.",
       "dataType": "boolean",
-      "defaultValue": false
+      "defaultValue": false,
+      "samples": {
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
+            "content": true
+          }
+        ]
+      }
     },
     {
       "id": "control_flags",
@@ -219,7 +227,15 @@
       "title": "Require Complete Path",
       "description": "Specifies whether a full navigation path from the mob to the target is required.",
       "dataType": "boolean",
-      "defaultValue": false
+      "defaultValue": false,
+      "samples": {
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
+            "content": true
+          }
+        ]
+      }
     },
     {
       "id": "speed_multiplier",
@@ -272,6 +288,7 @@
       "defaultValue": 30
     }
   ],
+  "note": "In 1.26.0 the schema is stricter and rejects invalid JSON for this behavior.",
   "description": "Allows an entity to deal damage through a melee attack with reach calculations based on bounding boxes.",
   "title": "Entity Melee Box Attack Behavior",
   "samples": {
@@ -319,11 +336,12 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/entities/endermite.json": [
+    "/vanilla/behavior_pack/entities/drowned.json": [
       {
-        "path": "/minecraft:entity/components/minecraft:behavior.melee_box_attack/",
+        "path": "/minecraft:entity/component_groups/minecraft:melee_mode/minecraft:behavior.melee_box_attack/",
         "content": {
-          "track_target": true,
+          "can_spread_on_fire": true,
+          "require_complete_path": true,
           "priority": 3
         }
       }

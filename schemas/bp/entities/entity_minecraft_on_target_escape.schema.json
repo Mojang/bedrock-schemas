@@ -1,56 +1,70 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "On Target Escape",
+  "title": "Entity On Target Escape",
   "description": "Adds a trigger to call when this entity loses the target it currently has.",
   "properties": {
     "event": {
       "title": "Event",
-      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• llama: minecraft:on_calm\n• magma_cube: minecraft:become_calm",
-      "type": "string"
+      "description": "The event to run when the conditions for this trigger are met.\n\nSample values:\n• drowned: minecraft:lost_target\n• llama: minecraft:on_calm\n• magma_cube: minecraft:become_calm",
+      "type": "string",
+      "default": ""
     },
     "filters": {
-      "title": "Filters",
-      "description": "The list of conditions for this trigger to execute.\n\nSample values:\n• llama: {\"all_of\":[{\"test\":\"is_family\",\"subject\":\"targe...",
       "anyOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
         {
           "type": "object",
           "properties": {
-            "all_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "domain": {
+              "title": "Domain",
+              "description": "The domain the test should be performed in.",
+              "type": "object"
             },
-            "any_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "operator": {
+              "title": "Operator",
+              "description": "The comparison to apply with 'value'.",
+              "type": "object"
             },
-            "none_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "subject": {
+              "title": "Subject",
+              "description": "The subject of this filter test.",
+              "type": "object"
+            },
+            "test": {
+              "title": "Test",
+              "description": "The name of the test to apply.",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "description": "The value being compared with the test.",
+              "type": "object"
             }
           }
+        },
+        {
+          "type": "object"
         }
-      ]
+      ],
+      "title": "Filters",
+      "description": "Filters allow data objects to specify test criteria which allows their use. Filters can be defined by a single object of type (Filter Test), an array of tests, collection groups, or a combination of these objects.\n\nSample values:\n• llama: {\"all_of\":[{\"test\":\"is_family\",\"subject\":\"targe..."
     },
     "target": {
-      "title": "Target",
+      "title": "FilterSubject",
       "description": "The target of the event.\n\nSample values:\n• dolphin: self",
       "type": "string",
+      "enum": [
+        "baby",
+        "block",
+        "damager",
+        "holder",
+        "item",
+        "other",
+        "parent",
+        "player",
+        "self",
+        "target"
+      ],
       "default": "self"
     }
   }

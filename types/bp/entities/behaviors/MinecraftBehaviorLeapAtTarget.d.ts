@@ -25,11 +25,14 @@ Cave Spider - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 import * as jsoncommon from '../../../common';
 
 /**
- * Leap At Target Behavior (minecraft:behavior.leap_at_target)
+ * Entity Leap At Target Behavior 
+ * (minecraft:behavior.leap_at_target)
  * Allows monsters to jump at and attack their target. Can only be
  * used by hostile mobs.
  */
 export default interface MinecraftBehaviorLeapAtTarget {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -69,4 +72,11 @@ export default interface MinecraftBehaviorLeapAtTarget {
    */
   yd?: number;
 
+}
+
+
+export enum MinecraftBehaviorLeapAtTargetControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
 }

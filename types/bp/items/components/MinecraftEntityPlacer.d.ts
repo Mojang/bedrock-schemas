@@ -10,14 +10,25 @@
  * Item Components Documentation - minecraft:entity_placer
  * 
  * minecraft:entity_placer Samples
+"minecraft:entity_placer": {
+  "entity": "minecraft:spider",
+  "dispense_on": [
+    "minecraft:web"
+  ],
+  "use_on": [
+    "minecraft:web"
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
  * Item Entity Placer (minecraft:entity_placer)
- * The entity_placer item component specifies the blocks that the
- * item can be placed on.
+ * Allows an item to place entities into the world. Additionally, in
+ * version 1.19.80 and above, the component allows the item to set
+ * the spawn type of a monster spawner.
  */
 export default interface MinecraftEntityPlacer {
 
