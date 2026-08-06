@@ -53,7 +53,8 @@
       "validity": [
         {
           "comparison": "pattern",
-          "value": "^(?:.)+:(?:.)+$"
+          "value": "^(?:.)+:(?:.)+$",
+          "patternFlags": "i"
         }
       ],
       "isRequired": true

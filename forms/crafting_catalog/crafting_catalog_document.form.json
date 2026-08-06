@@ -24,5 +24,6 @@
     }
   ],
   "description": "The root object for defining the crafting catalog",
-  "title": "Crafting Catalog Document"
+  "title": "Crafting Catalog Document",
+  "dataVersion": "1.21.60"
 }

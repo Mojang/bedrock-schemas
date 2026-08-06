@@ -40,7 +40,7 @@
               {
                 "id": "event",
                 "title": "Event",
-                "dataType": "object",
+                "dataType": "string",
                 "isRequired": true
               },
               {

@@ -34,14 +34,12 @@
       "dataType": "string",
       "choices": [
         {
-          "id": "constant",
-          "title": "Constant"
-        },
-        {
           "id": "uniform",
           "title": "Uniform"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "uniform",
       "isRequired": true
     }
   ],

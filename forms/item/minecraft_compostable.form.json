@@ -49,5 +49,6 @@
   "versionIntroduced": "1.21.60",
   "description": "Specifies that an item is compostable and provides the chance of creating a composting layer in the composter",
   "title": "Item Compostable",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.21.50"
 }

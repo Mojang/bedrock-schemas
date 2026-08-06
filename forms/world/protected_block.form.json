@@ -17,24 +17,13 @@
     {
       "id": "processor_type",
       "title": "Jigsaw Processor Type",
+      "defaultValue": "minecraft:protected_blocks",
       "dataType": "string",
       "isRequired": true,
       "choices": [
         {
-          "id": "minecraft:block_ignore",
-          "title": "Minecraft:block ignore"
-        },
-        {
-          "id": "minecraft:capped",
-          "title": "Minecraft:capped"
-        },
-        {
           "id": "minecraft:protected_blocks",
           "title": "Minecraft:protected blocks"
-        },
-        {
-          "id": "minecraft:rule",
-          "title": "Minecraft:rule"
         }
       ]
     },

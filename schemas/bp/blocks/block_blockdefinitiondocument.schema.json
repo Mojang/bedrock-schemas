@@ -27,7 +27,9 @@
             "minecraft:collision_box": true,
             "minecraft:destructible_by_explosion": true,
             "minecraft:destructible_by_mining": true,
+            "minecraft:display_name": "",
             "minecraft:flammable": true,
+            "minecraft:friction": 0,
             "minecraft:geometry": "",
             "minecraft:selection_box": true
           }

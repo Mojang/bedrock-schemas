@@ -43,12 +43,13 @@
       "id": "name",
       "title": "Name",
       "dataType": "string",
+      "minLength": 1,
       "isRequired": true
     },
     {
       "id": "pack_optimization_version",
       "title": "Pack Optimization Version",
-      "dataType": "object"
+      "dataType": "string"
     },
     {
       "id": "pack_scope",
@@ -63,7 +64,7 @@
     {
       "id": "uuid",
       "title": "Uuid",
-      "dataType": "object",
+      "dataType": "string",
       "validity": [
         {
           "comparison": "pattern",

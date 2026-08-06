@@ -32,5 +32,6 @@
       "isRequired": true
     }
   ],
-  "title": "Client Biome Definition"
+  "title": "Client Biome Definition",
+  "dataVersion": "1.21.90"
 }

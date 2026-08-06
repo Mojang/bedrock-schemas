@@ -124,5 +124,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.leap_at_target"
+  "id": "minecraft:behavior.leap_at_target",
+  "dataVersion": "1.26.40"
 }

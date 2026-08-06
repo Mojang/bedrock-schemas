@@ -22,12 +22,10 @@
         {
           "id": "constant",
           "title": "Constant"
-        },
-        {
-          "id": "uniform",
-          "title": "Uniform"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "constant",
       "isRequired": true
     },
     {

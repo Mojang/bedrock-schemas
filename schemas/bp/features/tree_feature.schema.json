@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "Tree Feature",
-  "description": "\n\nProperties:\n• acacia_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• cherry_trunk ({ branches, trunk_height })\n• fallen_trunk ({ trunk_decoration })\n• mangrove_trunk ({ trunk_decoration, trunk_width, trunk_height, ... })\n• mega_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• trunk ({ trunk_decoration, can_be_submerged })\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• ... and 17 more properties",
+  "description": "\n\nProperties:\n• acacia_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• cherry_trunk ({ branches, trunk_height })\n• fallen_trunk ({ trunk_decoration })\n• mangrove_trunk ({ trunk_decoration, trunk_width, trunk_height, ... })\n• mega_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• trunk ({ trunk_decoration, can_be_submerged })\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• ... and 19 more properties",
   "type": "object",
   "properties": {
     "acacia_trunk": {
@@ -339,6 +339,28 @@
         }
       ]
     },
+    "poplar_trunk": {
+      "title": "Poplar Trunk",
+      "description": "\n\nProperties:\n• trunk_decoration ({ decoration_blocks_sequence, num_steps, step_direction })",
+      "type": "object",
+      "properties": {
+        "trunk_decoration": {
+          "$ref": "./trunk_decoration_6.schema.json",
+          "title": "Trunk Decoration",
+          "description": "Configuration object for the trunk decoration.",
+          "defaultSnippets": [
+            {
+              "label": "Trunk Decoration",
+              "description": "Configuration object for the trunk decoration.",
+              "body": {
+                "num_steps": 0,
+                "step_direction\"<\"down\", \"up\", \"out\", \"away\"": ""
+              }
+            }
+          ]
+        }
+      }
+    },
     "acacia_canopy": {
       "title": "Acacia Canopy",
       "description": "\n\nProperties:\n• canopy_size (int)\n• simplify_canopy (boolean)",
@@ -474,6 +496,58 @@
           "description": "Create a Pine Canopy",
           "body": {
             "base_radius": 0
+          }
+        }
+      ]
+    },
+    "poplar_canopy": {
+      "title": "Poplar Canopy",
+      "description": "\n\nProperties:\n• radius\n• trunk_width (int)",
+      "type": "object",
+      "properties": {
+        "radius": {
+          "anyOf": [
+            {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "value": {
+                    "title": "Value",
+                    "description": "Radius of canopy.",
+                    "type": "integer"
+                  },
+                  "weight": {
+                    "title": "Weight",
+                    "description": "Weight for this entry.",
+                    "type": "integer"
+                  }
+                }
+              }
+            },
+            {
+              "title": "Radius",
+              "description": "Randomly selects a radius from this list based on their weighted value.",
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          ],
+          "description": "\n\nProperties:\n• value (int)\n• weight (int)"
+        },
+        "trunk_width": {
+          "title": "Trunk Width",
+          "description": "The width of the tree trunk.",
+          "type": "integer"
+        }
+      },
+      "defaultSnippets": [
+        {
+          "label": "Poplar Canopy",
+          "description": "Create a Poplar Canopy",
+          "body": {
+            "trunk_width": 0
           }
         }
       ]

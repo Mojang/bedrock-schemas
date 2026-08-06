@@ -10,6 +10,7 @@ export { default as MinecraftFossilFeature } from './MinecraftFossilFeature';
 export { default as MinecraftGeodeFeature } from './MinecraftGeodeFeature';
 export { default as MinecraftGrowingPlantFeature } from './MinecraftGrowingPlantFeature';
 export { default as MinecraftHeightDifferenceFilterFeature } from './MinecraftHeightDifferenceFilterFeature';
+export { default as MinecraftHorizontalTreeDecorationFeature } from './MinecraftHorizontalTreeDecorationFeature';
 export { default as MinecraftMultifaceFeature } from './MinecraftMultifaceFeature';
 export { default as MinecraftNetherCaveCarverFeature } from './MinecraftNetherCaveCarverFeature';
 export { default as MinecraftOreFeature } from './MinecraftOreFeature';

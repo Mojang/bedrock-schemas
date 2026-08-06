@@ -83,7 +83,7 @@
           {
             "id": "type",
             "title": "Type",
-            "dataType": "object",
+            "dataType": "string",
             "isRequired": true
           }
         ]
@@ -105,5 +105,6 @@
       "subFormId": "client_particles/particle_event_node"
     }
   ],
-  "id": "particle_effect"
+  "id": "particle_effect",
+  "dataVersion": "1.21.10"
 }

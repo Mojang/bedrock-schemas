@@ -45,6 +45,21 @@ Armor Stand - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 }
 
 
+Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
+
+"minecraft:hurt_on_condition": {
+  "damage_conditions": [
+    {
+      "cause": "lava",
+      "damage_per_tick": 4,
+      "filters": {
+        "test": "in_lava"
+      }
+    }
+  ]
+}
+
+
 Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/blaze.json
 
 "minecraft:hurt_on_condition": {

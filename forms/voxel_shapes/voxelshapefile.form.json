@@ -30,5 +30,6 @@
     }
   ],
   "description": "Defines a complete voxel shape file.",
-  "title": "Voxel Shapes VoxelShapeFile"
+  "title": "Voxel Shapes VoxelShapeFile",
+  "dataVersion": "1.21.110"
 }

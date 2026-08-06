@@ -16,7 +16,7 @@
     {
       "id": "effect",
       "title": "Effect",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     },
     {
@@ -58,6 +58,7 @@
           "title": "Particle with velocity"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

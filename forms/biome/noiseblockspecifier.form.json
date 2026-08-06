@@ -53,7 +53,8 @@
       "validity": [
         {
           "comparison": "pattern",
-          "value": "^\\S+$"
+          "value": "^\\S+$",
+          "patternFlags": "i"
         }
       ]
     },

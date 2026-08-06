@@ -29,7 +29,7 @@ export default interface MinecraftBehaviorDrinkPotion {
    * A list of potions that this entity can drink. Each potion entry
    * has the following parameters:
    */
-  potions?: object[];
+  potions?: MinecraftBehaviorDrinkPotionPotions[];
 
   /**
    * @remarks
@@ -54,4 +54,71 @@ export enum MinecraftBehaviorDrinkPotionControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Entity DrinkPotionGoalDefinition PotionData
+ * (DrinkPotionGoalDefinition_PotionData)
+ */
+export interface MinecraftBehaviorDrinkPotionPotions {
+
+  /**
+   * @remarks
+   * The percent chance (from 0.0 to 1.0) of this potion being selected
+   * when searching for a potion to use.
+   */
+  chance?: number;
+
+  /**
+   * @remarks
+   * The filters to use when determining if this potion can be
+   * selected.
+   */
+  filters?: MinecraftBehaviorDrinkPotionPotionsFilters;
+
+  /**
+   * @remarks
+   * The registry ID of the potion to use
+   */
+  id?: number;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorDrinkPotionPotionsFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
 }

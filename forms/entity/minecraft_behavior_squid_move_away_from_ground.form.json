@@ -50,5 +50,6 @@
   "description": "Allows the squid to move away from ground blocks and back to water.",
   "title": "Entity Squid Move Away From Ground Behavior",
   "samples": {},
-  "id": "minecraft:behavior.squid_move_away_from_ground"
+  "id": "minecraft:behavior.squid_move_away_from_ground",
+  "dataVersion": "1.26.40"
 }

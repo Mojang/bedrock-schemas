@@ -466,14 +466,9 @@
       "description": "Controls the type of surface builder to use.",
       "type": "string",
       "enum": [
-        "minecraft:capped",
-        "minecraft:frozen_ocean",
-        "minecraft:mesa",
-        "minecraft:noise_gradient",
-        "minecraft:overworld",
-        "minecraft:swamp",
-        "minecraft:the_end"
-      ]
+        "minecraft:mesa"
+      ],
+      "default": "minecraft:mesa"
     }
   },
   "required": [

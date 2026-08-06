@@ -74,5 +74,6 @@
       }
     ]
   },
-  "title": "Item Cooldown"
+  "title": "Item Cooldown",
+  "dataVersion": "1.20.50"
 }

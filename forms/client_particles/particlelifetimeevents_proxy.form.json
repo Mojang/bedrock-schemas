@@ -17,7 +17,7 @@
     {
       "id": "creation_event",
       "title": "Creation Event",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": [],
       "alternates": [
         {
@@ -29,7 +29,7 @@
     {
       "id": "expiration_event",
       "title": "Expiration Event",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": [],
       "alternates": [
         {
@@ -41,7 +41,7 @@
     {
       "id": "timeline",
       "title": "Timeline",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "alternates": [
         {
           "id": "timeline",

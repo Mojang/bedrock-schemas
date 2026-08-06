@@ -43,7 +43,7 @@ export default interface MinecraftEntityPlacer {
    * @remarks
    * The entity to be placed in the world.
    */
-  entity?: object;
+  entity?: string;
 
   /**
    * @remarks

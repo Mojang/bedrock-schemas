@@ -116,13 +116,6 @@ export interface MinecraftPushableByEntityPresets {
 
   /**
    * @remarks
-   * Maximum horizontal distance at which another entity can kick this
-   * entity. Only used when push_mode is "ball".
-   */
-  kick_distance_threshold?: number;
-
-  /**
-   * @remarks
    * Multiplier applied to the pushing entity's movement speed to
    * determine kick force. Only used when push_mode is "ball".
    */
@@ -130,26 +123,43 @@ export interface MinecraftPushableByEntityPresets {
 
   /**
    * @remarks
-   * Maximum speed the ball can be kicked at, regardless of how fast
-   * the pushing entity is moving. Only used when push_mode is
+   * Maximum horizontal distance between the center of the pushed entity
+   * and the collision of the pushing entity for push forces to be
+   * applied. Entities further apart than this will not push each
+   * other.
+   */
+  max_distance?: number;
+
+  /**
+   * @remarks
+   * Maximum speed the entity can be pushed back at, regardless of
+   * how fast the pushing entity is moving. Only used when push_mode is
    * "ball".
    */
   max_kick_speed?: number;
 
   /**
    * @remarks
-   * Minimum distance between two entities for push forces to be
-   * applied. Entities closer than this will not push each other.
+   * Minimum horizontal distance between the centers of the two
+   * entities for push forces to be applied. Entities closer than this
+   * will not push each other.
    */
   min_distance?: number;
 
   /**
    * @remarks
-   * Minimum speed the ball will be kicked at, regardless of how
-   * slowly the pushing entity is moving. Only used when push_mode is
+   * Minimum speed the the entity will be pushed back at, regardless of
+   * how slowly the pushing entity is moving. Only used when push_mode is
    * "ball".
    */
   min_kick_speed?: number;
+
+  /**
+   * @remarks
+   * If the "pushed_by_player" sound should be played when the entity is
+   * pushed by any other entity (despite the sound name).
+   */
+  play_sound?: boolean;
 
   /**
    * @remarks
@@ -169,16 +179,18 @@ export interface MinecraftPushableByEntityPresets {
    * @remarks
    * Defines the type of push vector calculation applied to the
    * entity:
-- "default": Standard push calculation used by most
-   * entities.
-- "legacy_boat": Legacy push calculation historically used
-   * by boats. Includes dampened forces and sneak-based cancellation.
--
-   * "legacy_minecart": Legacy push calculation historically used by
-   * minecarts. Includes alignment-based collision handling and
-   * velocity averaging.- "ball": Push calculation for ball-like entities.
-   * The ball is kicked in the direction of the pushing entity's movement,
-   * with force based on their movement speed.
+- "none": The entity cannot be pushed.
+- "default": Standard
+   * push calculations used by most entities.
+- "legacy_boat": Legacy
+   * push calculations historically used by boats. Includes dampened
+   * forces and sneak-based cancellation.
+- "legacy_minecart": Legacy
+   * push calculations historically used by minecarts. Includes
+   * alignment-based collision handling and velocity averaging.- "ball":
+   * Push calculation resulting in a behavior similar to kicking a
+   * ball. The entity is propelled in the direction of the pusher’s
+   * movement, with force scaled by their speed.
    */
   push_mode?: string;
 
@@ -200,6 +212,13 @@ export interface MinecraftPushableByEntityPresets {
 
   /**
    * @remarks
+   * When true, entities will not push each other unless their
+   * collision boxes overlap.
+   */
+  require_collision_overlap?: boolean;
+
+  /**
+   * @remarks
    * Multiplier applied to the push strength. Higher values result in
    * stronger pushes.
    */
@@ -207,9 +226,9 @@ export interface MinecraftPushableByEntityPresets {
 
   /**
    * @remarks
-   * Multiplier for the upward force applied when the ball is kicked
-   * while on the ground. A value of 0 keeps the ball flat. Only used
-   * when push_mode is "ball".
+   * Multiplier for the upward force applied when the entity is
+   * pushed while on the ground. A value of 0 keeps the entity flat.
+   * Only used when push_mode is "ball".
    */
   vertical_kick_multiplier?: number;
 
@@ -258,5 +277,6 @@ export enum MinecraftPushableByEntityPresetsPushMode {
   ball = `ball`,
   default = `default`,
   legacyBoat = `legacy_boat`,
-  legacyMinecart = `legacy_minecart`
+  legacyMinecart = `legacy_minecart`,
+  none = `none`
 }

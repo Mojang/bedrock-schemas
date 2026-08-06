@@ -167,20 +167,10 @@ export interface LiquidDetectionDetectionRules {
 
   /**
    * @remarks
-   * Whether this block uses the encompassing collider to visually clip
-   * the liquid. The encompassing collider is the smallest single AABB
-   * that contains all of the block's colliders.
-A liquid's base
-   * visual shape is ALWAYS a quad, they do not have more
-   * subdivisions.
-When use_liquid_clipping is TRUE, the game will
-   * attempt to reduce the visible volume of water if the collision shape
-   * allows it. Eg. a wall will turn the water base shape into a
-   * rectangle on the side of the incoming water.
-When use_liquid_clipping is
-   * FALSE, the game will preserve the water base shape as a full
-   * square, no matter what the collision shape of the block they
-   * share space with is.
+   * If true, the block uses its collision box to visually clip the
+   * liquid (reducing the visible water volume to match the block's
+   * shape). If false, the liquid renders as a full square across the
+   * whole block regardless of the collision shape.
    */
   use_liquid_clipping?: boolean;
 

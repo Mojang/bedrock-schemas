@@ -121,7 +121,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: 2
    *
    */
-  owner_anchor?: object;
+  owner_anchor?: number;
 
   /**
    * @remarks
@@ -193,7 +193,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * @remarks
    * Entity anchor for projectile target.
    */
-  target_anchor?: object;
+  target_anchor?: number;
 
   /**
    * @remarks

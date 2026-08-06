@@ -160,6 +160,7 @@
           "title": "Zyx"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "xzy"
     },
     {
@@ -278,6 +279,7 @@
                     "title": "Uniform"
                   }
                 ],
+                "mustMatchChoices": true,
                 "isRequired": true
               },
               {
@@ -362,6 +364,7 @@
                     "title": "Uniform"
                   }
                 ],
+                "mustMatchChoices": true,
                 "isRequired": true
               },
               {
@@ -446,6 +449,7 @@
                     "title": "Uniform"
                   }
                 ],
+                "mustMatchChoices": true,
                 "isRequired": true
               },
               {
@@ -484,5 +488,6 @@
   ],
   "id": "Scatter Params",
   "description": "Controls the scatter distribution of a particular object.",
-  "title": "World Scatter Params"
+  "title": "World Scatter Params",
+  "dataVersion": "1.21.10"
 }

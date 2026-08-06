@@ -45,7 +45,7 @@ export default interface MinecraftBlockPlacer {
    * @remarks
    * Defines the block that will be placed.
    */
-  block: object;
+  block: string;
 
   /**
    * @remarks

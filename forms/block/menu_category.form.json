@@ -42,6 +42,7 @@
           "title": "None"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {
@@ -53,7 +54,8 @@
       "validity": [
         {
           "comparison": "pattern",
-          "value": "^\\S+$"
+          "value": "^\\S+$",
+          "patternFlags": "i"
         }
       ]
     },

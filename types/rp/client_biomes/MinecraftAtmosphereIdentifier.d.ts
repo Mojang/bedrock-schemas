@@ -26,6 +26,6 @@ export default interface MinecraftAtmosphereIdentifier {
    * @remarks
    * Identifier of atmosphere definition to use
    */
-  atmosphere_identifier: object;
+  atmosphere_identifier: string;
 
 }

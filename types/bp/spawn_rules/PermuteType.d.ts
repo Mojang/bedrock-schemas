@@ -26,7 +26,7 @@ export default interface PermuteType {
    * @remarks
    * Specifies the entity type to spawn when selected
    */
-  entity_type?: object;
+  entity_type?: string;
 
   /**
    * @remarks

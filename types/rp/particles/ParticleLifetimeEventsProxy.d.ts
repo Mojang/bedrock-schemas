@@ -20,10 +20,10 @@ import * as jsoncommon from '../../common';
  */
 export default interface ParticleLifetimeEventsProxy {
 
-  creation_event?: object[];
+  creation_event?: string[];
 
-  expiration_event?: object[];
+  expiration_event?: string[];
 
-  timeline?: object[];
+  timeline?: string[];
 
 }

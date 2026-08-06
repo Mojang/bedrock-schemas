@@ -52,6 +52,7 @@
           "title": "Derive from velocity"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

@@ -18,7 +18,7 @@
       "id": "water_identifier",
       "title": "Water Identifier",
       "description": "Identifier of water definition to use",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     }
   ],

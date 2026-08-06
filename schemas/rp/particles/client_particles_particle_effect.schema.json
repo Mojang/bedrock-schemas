@@ -10,7 +10,7 @@
       "$ref": "./client_particles_particle_effect_component.schema.json"
     },
     "curves": {
-      "description": "\n\nProperties:\n• horizontal_range = 1\n• input\n• nodes\n• type (object)",
+      "description": "\n\nProperties:\n• horizontal_range = 1\n• input\n• nodes\n• type (string)",
       "type": "object",
       "properties": {
         "horizontal_range": {
@@ -87,7 +87,7 @@
         },
         "type": {
           "title": "Type",
-          "type": "object"
+          "type": "string"
         }
       },
       "defaultSnippets": [

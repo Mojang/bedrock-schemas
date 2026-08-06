@@ -35,5 +35,6 @@
       "defaultValue": 1
     }
   ],
-  "title": "Entity BaseMoveToGoalDefinition"
+  "title": "Entity BaseMoveToGoalDefinition",
+  "dataVersion": "1.26.10"
 }

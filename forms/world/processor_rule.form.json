@@ -89,5 +89,6 @@
     }
   ],
   "description": "A block rule that is evaluated on all blocks of a Structure Template. All predicates must evaluate to true in order for a block to be replaced by the output_state.",
-  "title": "World Processor Rule"
+  "title": "World Processor Rule",
+  "dataVersion": "1.21.20"
 }

@@ -20,14 +20,12 @@
       "dataType": "string",
       "choices": [
         {
-          "id": "minecraft:append_loot",
-          "title": "Minecraft:append loot"
-        },
-        {
           "id": "minecraft:passthrough",
           "title": "Minecraft:passthrough"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "minecraft:passthrough",
       "isRequired": true
     }
   ],

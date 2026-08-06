@@ -43,6 +43,7 @@
           "title": "Rollable"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {

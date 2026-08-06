@@ -17,18 +17,18 @@
 
 Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
 
- * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/: 
+ * At /minecraft:entity/events/minecraft:entity_spawned/first_valid[0]/filters/all_of[0]/: 
 {
   "subject": "other",
   "test": "is_family",
   "value": "player"
 }
 
- * At /minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/: 
+ * At /minecraft:entity/events/minecraft:entity_spawned/first_valid[2]/filters/all_of[0]/: 
 {
   "subject": "other",
   "test": "is_family",
-  "value": "pillager"
+  "value": "mob"
 }
 
 
@@ -201,7 +201,7 @@ export default interface IsFamily {
    * (Required) The Family name to look for
    * 
    * Sample Values:
-   * Arrow: "player", "pillager"
+   * Arrow: "player", "mob"
    *
    * Bogged: "wolf", "breeze", "irongolem", "baby_turtle"
    *

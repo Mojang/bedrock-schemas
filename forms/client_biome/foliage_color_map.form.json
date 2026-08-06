@@ -45,6 +45,7 @@
           "title": "Swamp foliage"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

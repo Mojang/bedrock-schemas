@@ -36,7 +36,7 @@
       "id": "block",
       "title": "Block",
       "description": "Defines the block that will be placed.",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     },
     {
@@ -52,6 +52,7 @@
       "dataType": "objectArray",
       "defaultValue": [],
       "maxLength": 256,
+      "mustBeUnique": true,
       "subForm": {
         "id": "use_on",
         "title": "Use On",
@@ -89,7 +90,8 @@
       "alternates": [
         {
           "id": "use_on",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "use_on",
@@ -116,5 +118,6 @@
       }
     ]
   },
-  "title": "Item Block Placer"
+  "title": "Item Block Placer",
+  "dataVersion": "1.26.0"
 }

@@ -2375,6 +2375,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "lay_egg",
       "samples": {
         "/vanilla/behavior_pack/entities/frog.json": [

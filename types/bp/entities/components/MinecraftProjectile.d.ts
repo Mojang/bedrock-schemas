@@ -14,13 +14,24 @@ import * as jsoncommon from '../../../common';
 
 /**
  * Projectile (minecraft:projectile)
- * Allows the entity to be a thrown entity.
+ * Turns the entity into a projectile: a thrown or shot entity that
+ * flies along a ballistic arc and reacts when it impacts a
+ * block, a fluid, or another entity.
  */
 export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * Determines the angle at which the projectile is thrown.
+   * Reference point on the shooter used to position the projectile at
+   * spawn: `0` = origin (feet), `1` = eye height, `2` = middle of
+   * the bounding box.
+   */
+  anchor?: number;
+
+  /**
+   * @remarks
+   * Additional upwards pitch (in degrees) applied to the shooter's aim
+   * direction at launch. Negative values aim downward.
    */
   angle_offset?: number;
 
@@ -35,77 +46,75 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * If true, the projectile will produce additional particles when a
-   * critical hit happens.
+   * If `true`, critical-hit particles are spawned on the projectile when
+   * it is struck.
    */
   crit_particle_on_hurt?: boolean;
 
   /**
    * @remarks
-   * If true, this entity will be destroyed when hit.
+   * If `true`, the projectile is removed from the world when 
+   * struck.
    */
   destroy_on_hurt?: boolean;
 
   /**
    * @remarks
-   * Entity definitions listed here cannot be hurt by the 
-   * projectile.
-   */
-  filter?: string;
-
-  /**
-   * @remarks
-   * If true, whether the projectile causes fire is affected by the
-   * mob griefing game rule.
-   */
-  fire_affected_by_griefing?: boolean;
-
-  /**
-   * @remarks
-   * The gravity applied to this entity when thrown. The higher the
-   * value, the faster the entity falls.
+   * Downward acceleration (blocks per tick squared) applied each tick
+   * while in flight. Higher values make the projectile fall 
+   * faster.
    */
   gravity?: number;
 
   /**
    * @remarks
-   * If true, when hitting a vehicle, and there's at least one
-   * passenger in the vehicle, the damage will be dealt to the
-   * passenger closest to the projectile impact point. If there are
-   * no passengers, this setting does nothing.
+   * Identifier of the sound to play when the projectile hits a
+   * block. Defaults to `hit_sound` when empty.
+   */
+  hit_ground_sound?: string;
+
+  /**
+   * @remarks
+   * If `true`, when the projectile hits a vehicle with at least one
+   * passenger, the on-hit behavior is applied to the passenger closest
+   * to the impact point instead of the vehicle itself.
    */
   hit_nearest_passenger?: boolean;
 
   /**
    * @remarks
-   * The sound that plays when the projectile hits something.
+   * Identifier of the sound to play when the projectile hits an
+   * entity. Also used for block hits when `hit_ground_sound` is not
+   * specified.
    */
   hit_sound?: string;
 
   /**
    * @remarks
-   * If true, the projectile homes in on the nearest entity.
+   * If `true`, the projectile steers towards an active target while in
+   * flight.
    */
   homing?: boolean;
 
   /**
    * @remarks
-   * [EXPERIMENTAL] An array of strings defining the types of
-   * entities that this entity does not collide with.
+   * Array of entity identifiers that the projectile will pass through
+   * without registering a hit.
    */
   ignored_entities?: string[];
 
   /**
    * @remarks
-   * The fraction of the projectile's speed maintained every frame
-   * while traveling in air.
+   * Fraction of the projectile's velocity preserved each tick while
+   * traveling through air. Values below `1.0` cause it to slow down
+   * over time.
    */
   inertia?: number;
 
   /**
    * @remarks
-   * If true, the projectile will be treated as dangerous to the
-   * players.
+   * If `true`, the projectile is flagged as dangerous, affecting AI
+   * reactions and certain client-side behaviors.
    */
   is_dangerous?: boolean;
 
@@ -118,73 +127,85 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * If true, the projectile will knock back the entity it hits.
-   */
-  knockback?: boolean;
-
-  /**
-   * @remarks
-   * If true, the entity hit will be struck by lightning.
+   * If `true`, the projectile can channel a lightning bolt when it
+   * hits an entity during a thunderstorm.
    */
   lightning?: boolean;
 
   /**
    * @remarks
-   * The fraction of the projectile's speed maintained every frame
-   * while traveling in water.
+   * Fraction of the projectile's velocity preserved each tick while
+   * traveling through a fluid.
    */
   liquid_inertia?: number;
 
   /**
    * @remarks
-   * If true, the projectile can hit multiple entities per 
-   * flight.
+   * If `true`, the projectile can hit more than one entity over the
+   * course of its flight; if `false`, it stops at the first entity it
+   * hits.
    */
   multiple_targets?: boolean;
 
   /**
    * @remarks
-   * The offset from the entity's anchor where the projectile will
-   * spawn.
+   * Offset, relative to the `anchor`, at which the projectile is
+   * spawned when fired by the shooter.
    */
   offset?: number[];
 
   /**
    * @remarks
-   * Time in seconds that the entity hit will be on fire.
+   * Duration in seconds for which an entity set on fire by this
+   * projectile remains burning. Applied both by the legacy top-level
+   * `catch_fire` flag and by the `catch_fire` on-hit 
+   * subcomponent.
    */
   on_fire_time?: number;
 
   /**
    * @remarks
-   * Number of ticks after launch during which the projectile cannot hit
-   * its owner.
+   * Map of on-hit subcomponents that drive what happens when the
+   * projectile impacts a block, fluid, or entity. Each key is a
+   * subcomponent name and its value is that subcomponent's 
+   * configuration.
+   */
+  on_hit?: jsoncommon.MinecraftEventTrigger;
+
+  /**
+   * @remarks
+   * Number of ticks immediately after launch during which the
+   * projectile cannot hit its own shooter.
    */
   owner_launch_immunity_ticks?: number;
 
   /**
    * @remarks
-   * Particle to use upon collision.
+   * Particle effect emitted at the impact location when the
+   * projectile hits something.
    */
   particle?: string;
 
   /**
    * @remarks
-   * Defines the effect the arrow will apply to the entity it 
-   * hits.
+   * Default potion aux value associated with the projectile. Normally set
+   * programmatically by potion items; rarely useful at authoring time.
+   * A value matching the water potion is required for the
+   * `douse_fire` on-hit subcomponent to extinguish fires.
    */
   potion_effect?: number;
 
   /**
    * @remarks
-   * Determines the velocity of the projectile.
+   * Initial speed (in blocks per tick) at which the projectile is
+   * launched.
    */
   power?: number;
 
   /**
    * @remarks
-   * During the specified time, in seconds, the projectile cannot be
-   * reflected by hitting it.
+   * Duration in seconds after launch during which the projectile cannot
+   * be reflected by being struck.
    */
   reflect_immunity?: number;
 
@@ -197,55 +218,51 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * If true, damage will be randomized based on damage and 
-   * speed.
-   */
-  semi_random_diff_damage?: boolean;
-
-  /**
-   * @remarks
-   * The sound that plays when the projectile is shot.
+   * Identifier of the sound to play when the projectile is 
+   * fired.
    */
   shoot_sound?: string;
 
   /**
    * @remarks
-   * If true, the projectile will be shot towards the target of the
-   * entity firing it.
+   * If `true`, the projectile is aimed at the shooter's current target
+   * (when one exists) rather than straight ahead.
    */
   shoot_target?: boolean;
 
   /**
    * @remarks
-   * If true, the projectile will bounce upon hit.
+   * If `true`, the projectile bounces off surfaces and entities on
+   * impact instead of stopping.
    */
   should_bounce?: boolean;
 
   /**
    * @remarks
-   * If true, the projectile will be treated like a splash 
-   * potion.
-   */
-  splash_potion?: boolean;
-
-  /**
-   * @remarks
-   * Radius in blocks of the 'splash' effect.
+   * Splash radius (in blocks) used when applying potion effects via
+   * the splash/lingering potion code path.
    */
   splash_range?: number;
 
   /**
    * @remarks
-   * The base accuracy. Accuracy is determined by the formula
-   * uncertaintyBase - difficultyLevel * uncertaintyMultiplier.
+   * If `true`, the projectile has its velocity zeroed out when
+   * struck.
+   */
+  stop_on_hurt?: boolean;
+
+  /**
+   * @remarks
+   * Base inaccuracy added to the launch direction. The total
+   * inaccuracy is `uncertainty_base - difficultyLevel *
+   * uncertainty_multiplier`.
    */
   uncertainty_base?: number;
 
   /**
    * @remarks
-   * Determines how much difficulty affects accuracy. Accuracy is
-   * determined by the formula uncertaintyBase - difficultyLevel *
-   * uncertaintyMultiplier.
+   * Per-difficulty-level reduction in inaccuracy. See
+   * `uncertainty_base` for the full formula.
    */
   uncertainty_multiplier?: number;
 

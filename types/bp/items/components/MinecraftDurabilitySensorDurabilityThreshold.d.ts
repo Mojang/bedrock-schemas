@@ -99,12 +99,14 @@ export enum MinecraftDurabilitySensorDurabilityThresholdParticleType {
   none = `none`,
   note = `note`,
   obsidiantear = `obsidiantear`,
+  orangepoplarleaves = `orangepoplarleaves`,
   paleoakleaves = `paleoakleaves`,
   pausemobgrowth = `pausemobgrowth`,
   portal = `portal`,
   portalreverse = `portalreverse`,
   rainsplash = `rainsplash`,
   reddust = `reddust`,
+  redpoplarleaves = `redpoplarleaves`,
   resetmobgrowth = `resetmobgrowth`,
   risingborderdust = `risingborderdust`,
   sculksoul = `sculksoul`,
@@ -136,7 +138,8 @@ export enum MinecraftDurabilitySensorDurabilityThresholdParticleType {
   whitesmoke = `whitesmoke`,
   windexplosion = `windexplosion`,
   witchspell = `witchspell`,
-  wolfarmorcrack = `wolfarmorcrack`
+  wolfarmorcrack = `wolfarmorcrack`,
+  yellowpoplarleaves = `yellowpoplarleaves`
 }
 
 

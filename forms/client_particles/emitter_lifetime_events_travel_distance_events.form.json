@@ -22,7 +22,7 @@
     {
       "id": "effects",
       "title": "Effects",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "alternates": [
         {
           "id": "effects",

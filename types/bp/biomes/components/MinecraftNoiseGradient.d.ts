@@ -89,8 +89,12 @@ export interface MinecraftNoiseGradientNoiseBlockSpecifiers {
 
 
 /**
- * Item Components FloatRange (FloatRange)
- * Has minimum and maximum float values.
+ * Item FloatRange (FloatRange)
+ * Specifies a numeric range between minimum and maximum values for
+ * randomized item properties. Used for variable durability, damage
+ * ranges, or timing intervals. The game picks a random value within
+ * the range when the property is evaluated, adding natural variation to
+ * item behavior.
  */
 export interface MinecraftNoiseGradientNoiseBlockSpecifiersRange {
 
@@ -131,11 +135,5 @@ export interface MinecraftNoiseGradientNoiseDescriptor {
 
 
 export enum MinecraftNoiseGradientType {
-  minecraftCapped = `minecraft:capped`,
-  minecraftFrozenOcean = `minecraft:frozen_ocean`,
-  minecraftMesa = `minecraft:mesa`,
-  minecraftNoiseGradient = `minecraft:noise_gradient`,
-  minecraftOverworld = `minecraft:overworld`,
-  minecraftSwamp = `minecraft:swamp`,
-  minecraftTheEnd = `minecraft:the_end`
+  minecraftNoiseGradient = `minecraft:noise_gradient`
 }

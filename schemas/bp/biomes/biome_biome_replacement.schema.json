@@ -28,7 +28,7 @@
       "description": "Biomes that are going to be replaced by the overriding biome. Target biomes must not contain namespaces.",
       "type": "array",
       "items": {
-        "type": "object"
+        "type": "string"
       },
       "minLength": 1
     }

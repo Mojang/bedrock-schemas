@@ -42,6 +42,7 @@
           "title": "Stair"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

@@ -51,6 +51,7 @@
           "title": "Water"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "none"
     }
   ],

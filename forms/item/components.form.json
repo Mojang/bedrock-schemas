@@ -295,7 +295,7 @@
                 "id": "textures",
                 "title": "Textures",
                 "description": "This map contains the different textures that can be used for the item's icon. Default will contain the actual icon texture. Armor trim textures and palettes and bundle open textures can be specified here too. The icon textures are the keys from the resource_pack/textures/item_texture.json 'texture_data' object associated with the texture file.",
-                "dataType": "object",
+                "dataType": "string",
                 "defaultValue": {}
               }
             ]
@@ -573,6 +573,7 @@
                     "title": "Spyglass"
                   }
                 ],
+                "mustMatchChoices": true,
                 "defaultValue": "none"
               }
             ]
@@ -596,5 +597,6 @@
     }
   ],
   "description": "List of all components used in this item.",
-  "title": "Item 21.80 Components v1"
+  "title": "Item 21.80 Components v1",
+  "dataVersion": "1.21.80"
 }

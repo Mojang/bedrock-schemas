@@ -18,7 +18,7 @@
       "id": "identifier",
       "title": "Identifier",
       "description": "Identifier of the Processor List. This is referenced by Template Pools when pairing processors with Structure Templates.",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     }
   ],

@@ -448,7 +448,8 @@
       "alternates": [
         {
           "id": "target_blocks",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "target_blocks",

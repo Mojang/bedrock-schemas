@@ -206,5 +206,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.float_wander"
+  "id": "minecraft:behavior.float_wander",
+  "dataVersion": "1.26.40"
 }

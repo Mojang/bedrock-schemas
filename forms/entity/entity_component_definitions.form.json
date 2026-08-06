@@ -2752,15 +2752,19 @@
       "dataType": "object"
     },
     {
-      "id": "minecraft:memory_sensor.find_nearest_poi",
-      "title": "Find Nearest Poi Minecraft Memory Sensor",
-      "description": "Dynamic value",
+      "id": "minecraft:memory_sensor.game_event",
+      "title": "Game Event Minecraft Memory Sensor",
       "dataType": "object"
     },
     {
       "id": "minecraft:memory_sensor.in_range_of_entity",
       "title": "In Range Of Entity Minecraft Memory Sensor",
       "description": "Dynamic value",
+      "dataType": "object"
+    },
+    {
+      "id": "minecraft:not_pickable_from_inside",
+      "title": "Minecraft Not Pickable From Inside",
       "dataType": "object"
     },
     {
@@ -2831,5 +2835,6 @@
     }
   ],
   "description": "Registry of all available entity components that define mob capabilities. Components cover health, movement, combat, AI goals, interactions, physics, sensing, and rendering. Entities combine components to create unique creatures—adding minecraft:health for durability, minecraft:behavior.melee_attack for combat, or minecraft:rideable for mounts.",
-  "title": "Entity Component Definitions"
+  "title": "Entity Component Definitions",
+  "dataVersion": "1.26.40"
 }

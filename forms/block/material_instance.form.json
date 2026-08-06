@@ -89,13 +89,14 @@
           "title": "Opaque"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "opaque"
     },
     {
       "id": "texture",
       "title": "Texture",
       "description": "Texture name for the material.",
-      "dataType": "object",
+      "dataType": "string",
       "defaultValue": ""
     },
     {
@@ -133,6 +134,7 @@
           "title": "Water"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "none"
     }
   ],

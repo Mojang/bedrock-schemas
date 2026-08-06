@@ -126,5 +126,6 @@
       }
     ]
   },
-  "title": "Item Display Name"
+  "title": "Item Display Name",
+  "dataVersion": "1.20.50"
 }

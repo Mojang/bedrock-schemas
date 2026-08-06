@@ -39,5 +39,6 @@
     }
   ],
   "description": "Is a block definition with description, components, and permutations.",
-  "title": "BlockDefinitionDocument"
+  "title": "BlockDefinitionDocument",
+  "dataVersion": "1.26.20"
 }

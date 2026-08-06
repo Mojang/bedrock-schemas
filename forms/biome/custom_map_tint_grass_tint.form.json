@@ -50,14 +50,12 @@
       "dataType": "string",
       "choices": [
         {
-          "id": "noise",
-          "title": "Noise"
-        },
-        {
           "id": "tint",
           "title": "Tint"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "tint",
       "isRequired": true
     }
   ],

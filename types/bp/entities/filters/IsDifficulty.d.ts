@@ -15,15 +15,13 @@
  * At Short (using Defaults)..: 
 { "test": "is_difficulty", "value": "normal" }
 
-Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
+Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
 
+ * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:environment_sensor/triggers[2]/filters/: 
 {
   "test": "is_difficulty",
   "value": "hard"
 }
-
-
-Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
 
  * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:environment_sensor/triggers[2]/filters/: 
 {
@@ -77,8 +75,7 @@ export default interface IsDifficulty {
    * @remarks
    * 
    * Sample Values:
-   * Arrow: "is_difficulty"
-   *
+   * Bogged: "is_difficulty"
    *
    */
   test?: string;
@@ -88,8 +85,7 @@ export default interface IsDifficulty {
    * (Required) The game's difficulty level to test
    * 
    * Sample Values:
-   * Arrow: "hard"
-   *
+   * Bogged: "hard"
    *
    * Cave Spider: "easy", "normal"
    *

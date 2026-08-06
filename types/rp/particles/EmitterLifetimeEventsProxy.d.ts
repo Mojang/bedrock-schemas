@@ -20,15 +20,15 @@ import * as jsoncommon from '../../common';
  */
 export default interface EmitterLifetimeEventsProxy {
 
-  creation_event?: object[];
+  creation_event?: string[];
 
-  expiration_event?: object[];
+  expiration_event?: string[];
 
   looping_travel_distance_events?: EmitterLifetimeEventsProxyLoopingTravelDistanceEvents[];
 
-  timeline?: object[];
+  timeline?: string[];
 
-  travel_distance_events?: object[];
+  travel_distance_events?: string[];
 
 }
 

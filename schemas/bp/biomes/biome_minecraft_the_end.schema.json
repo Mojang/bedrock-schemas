@@ -9,14 +9,9 @@
       "description": "Use default Minecraft End terrain generation.",
       "type": "string",
       "enum": [
-        "minecraft:capped",
-        "minecraft:frozen_ocean",
-        "minecraft:mesa",
-        "minecraft:noise_gradient",
-        "minecraft:overworld",
-        "minecraft:swamp",
         "minecraft:the_end"
-      ]
+      ],
+      "default": "minecraft:the_end"
     }
   },
   "required": [

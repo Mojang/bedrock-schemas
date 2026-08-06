@@ -23,6 +23,7 @@
           "title": "Reapply default"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "reapply_default"
     },
     {
@@ -105,6 +106,7 @@
           "title": "Relative horizontal"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "relative_horizontal"
     },
     {

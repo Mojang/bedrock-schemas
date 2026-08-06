@@ -75,5 +75,6 @@
   "description": "Allows this mob to look at and follow the player that holds food they like.",
   "title": "Entity Beg Behavior",
   "samples": {},
-  "id": "minecraft:behavior.beg"
+  "id": "minecraft:behavior.beg",
+  "dataVersion": "1.26.40"
 }

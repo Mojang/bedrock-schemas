@@ -47,5 +47,6 @@
     }
   ],
   "description": "Controls materials used for terrain generation.",
-  "title": "Biome Surface Builder"
+  "title": "Biome Surface Builder",
+  "dataVersion": "1.26.30"
 }

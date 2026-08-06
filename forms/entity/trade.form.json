@@ -88,7 +88,7 @@
           {
             "id": "item",
             "title": "Item",
-            "dataType": "object",
+            "dataType": "string",
             "isRequired": true
           },
           {
@@ -258,7 +258,7 @@
           {
             "id": "item",
             "title": "Item",
-            "dataType": "object",
+            "dataType": "string",
             "isRequired": true
           },
           {

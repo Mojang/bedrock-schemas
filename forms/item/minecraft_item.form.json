@@ -77,5 +77,6 @@
     ]
   },
   "description": "Refers to the item definition, which includes the 'description' and 'components' sections of the file.",
-  "title": "Item 26.0 Item v1"
+  "title": "Item 26.0 Item v1",
+  "dataVersion": "1.26.0"
 }

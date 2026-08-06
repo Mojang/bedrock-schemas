@@ -2529,6 +2529,10 @@
           "title": "Obsidiantear"
         },
         {
+          "id": "orangepoplarleaves",
+          "title": "Orangepoplarleaves"
+        },
+        {
           "id": "paleoakleaves",
           "title": "Paleoakleaves"
         },
@@ -2551,6 +2555,10 @@
         {
           "id": "reddust",
           "title": "Reddust"
+        },
+        {
+          "id": "redpoplarleaves",
+          "title": "Redpoplarleaves"
         },
         {
           "id": "resetmobgrowth",
@@ -2679,11 +2687,17 @@
         {
           "id": "wolfarmorcrack",
           "title": "Wolfarmorcrack"
+        },
+        {
+          "id": "yellowpoplarleaves",
+          "title": "Yellowpoplarleaves"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "none"
     }
   ],
   "description": "Defines both the durability threshold, and the effects emitted when that threshold is met.",
-  "title": "Item Durability Sensor Durability Threshold"
+  "title": "Item Durability Sensor Durability Threshold",
+  "dataVersion": "1.21.10"
 }

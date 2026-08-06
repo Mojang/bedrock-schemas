@@ -140,11 +140,11 @@
       "samples": {
         "/vanilla/behavior_pack/entities/arrow.json": [
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[0]/filters/all_of[0]/",
             "content": "other"
           },
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[1]/filters/",
             "content": "other"
           }
         ],
@@ -172,12 +172,20 @@
       "samples": {
         "/vanilla/behavior_pack/entities/arrow.json": [
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[0]/filters/all_of[0]/",
             "content": "player"
           },
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
-            "content": "pillager"
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[1]/filters/",
+            "content": "player"
+          },
+          {
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[2]/filters/all_of[0]/",
+            "content": "mob"
+          },
+          {
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[3]/filters/",
+            "content": "mob"
           }
         ],
         "/vanilla/behavior_pack/entities/bogged.json": [
@@ -188,10 +196,6 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.hurt_by_target/entity_types[0]/filters/",
             "content": "breeze"
-          },
-          {
-            "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/entity_types[0]/filters/",
-            "content": "player"
           },
           {
             "path": "/minecraft:entity/components/minecraft:behavior.nearest_attackable_target/entity_types[1]/filters/",
@@ -277,11 +281,11 @@
       "samples": {
         "/vanilla/behavior_pack/entities/arrow.json": [
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[0]/filters/all_of[0]/",
             "content": "is_family"
           },
           {
-            "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
+            "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[1]/filters/",
             "content": "is_family"
           }
         ]
@@ -307,7 +311,7 @@
     ],
     "/vanilla/behavior_pack/entities/arrow.json": [
       {
-        "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/",
+        "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[0]/filters/all_of[0]/",
         "content": {
           "subject": "other",
           "test": "is_family",
@@ -315,11 +319,27 @@
         }
       },
       {
-        "path": "/minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/",
+        "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[1]/filters/",
         "content": {
           "subject": "other",
           "test": "is_family",
-          "value": "pillager"
+          "value": "player"
+        }
+      },
+      {
+        "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[2]/filters/all_of[0]/",
+        "content": {
+          "subject": "other",
+          "test": "is_family",
+          "value": "mob"
+        }
+      },
+      {
+        "path": "/minecraft:entity/events/minecraft:entity_spawned/first_valid[3]/filters/",
+        "content": {
+          "subject": "other",
+          "test": "is_family",
+          "value": "mob"
         }
       }
     ],

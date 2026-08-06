@@ -19,6 +19,13 @@
       "description": "Jump data used during normal skip movement. Object with optional `distance_scale` (horizontal velocity multiplier), `height` (vertical force), `jump_delay` (ticks between jumps), and `animation_duration` (jump animation length).",
       "dataType": "object",
       "versionIntroduced": "1.26.0",
+      "defaultValue": {
+        "animation_duration": 1,
+        "distance_scale": 1,
+        "height": 0.10000000149011612,
+        "jump_delay": 30
+      },
+      "subFormId": "entity/jumpdatadefinition",
       "choices": [
         {
           "id": "animation_duration",
@@ -48,6 +55,13 @@
       "description": "Jump data used while traveling quickly with skip movement. Object with the same shape as `regular_skip_data`.",
       "dataType": "object",
       "versionIntroduced": "1.26.0",
+      "defaultValue": {
+        "animation_duration": 1,
+        "distance_scale": 1,
+        "height": 0.10000000149011612,
+        "jump_delay": 30
+      },
+      "subFormId": "entity/jumpdatadefinition",
       "choices": [
         {
           "id": "animation_duration",
@@ -72,8 +86,9 @@
       ]
     }
   ],
-  "description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob. Requires `minecraft:movement.skip` to be used.",
-  "title": "Dynamic Jump",
+  "description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob.Requires `minecraft:movement.skip` to be used.",
+  "title": "Entity Dynamic Jump",
   "samples": {},
-  "id": "minecraft:jump.dynamic"
+  "id": "minecraft:jump.dynamic",
+  "dataVersion": "1.26.40"
 }

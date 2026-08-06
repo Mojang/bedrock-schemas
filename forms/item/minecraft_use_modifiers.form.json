@@ -2343,7 +2343,8 @@
           "id": "wind_charge.burst",
           "title": "Wind charge.burst"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "use_duration",
@@ -2374,5 +2375,6 @@
         }
       }
     ]
-  }
+  },
+  "dataVersion": "1.26.30"
 }

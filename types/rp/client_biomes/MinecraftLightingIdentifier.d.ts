@@ -26,6 +26,6 @@ export default interface MinecraftLightingIdentifier {
    * @remarks
    * Identifier of lighting definition to use
    */
-  lighting_identifier: object;
+  lighting_identifier: string;
 
 }

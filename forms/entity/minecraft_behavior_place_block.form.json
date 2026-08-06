@@ -177,7 +177,8 @@
       "alternates": [
         {
           "id": "placeable_carried_blocks",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "placeable_carried_blocks",

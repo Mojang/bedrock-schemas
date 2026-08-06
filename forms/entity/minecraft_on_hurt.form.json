@@ -139,6 +139,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/blaze.json": [
@@ -179,5 +180,6 @@
       }
     ]
   },
-  "id": "minecraft:on_hurt"
+  "id": "minecraft:on_hurt",
+  "dataVersion": "1.26.40"
 }

@@ -42,6 +42,7 @@
           "title": "Toggle"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

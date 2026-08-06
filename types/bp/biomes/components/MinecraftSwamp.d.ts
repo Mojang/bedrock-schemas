@@ -78,11 +78,5 @@ export default interface MinecraftSwamp {
 
 
 export enum MinecraftSwampType {
-  minecraftCapped = `minecraft:capped`,
-  minecraftFrozenOcean = `minecraft:frozen_ocean`,
-  minecraftMesa = `minecraft:mesa`,
-  minecraftNoiseGradient = `minecraft:noise_gradient`,
-  minecraftOverworld = `minecraft:overworld`,
-  minecraftSwamp = `minecraft:swamp`,
-  minecraftTheEnd = `minecraft:the_end`
+  minecraftSwamp = `minecraft:swamp`
 }

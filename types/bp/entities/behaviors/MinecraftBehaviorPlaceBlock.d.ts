@@ -74,7 +74,7 @@ export default interface MinecraftBehaviorPlaceBlock {
    * placed, if empty the entity will try to place its carried block
    * from placeable_carried_blocks.
    */
-  randomly_placeable_blocks?: object[];
+  randomly_placeable_blocks?: MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocks[];
 
   /**
    * @remarks
@@ -225,6 +225,86 @@ export interface MinecraftBehaviorPlaceBlockPlaceableCarriedBlocks {
   states?: number;
 
   tags?: string;
+
+}
+
+
+/**
+ * Entity PlaceBlockGoalWeightedBlockDescriptor 
+ * (PlaceBlockGoalWeightedBlockDescriptor)
+ */
+export interface MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocks {
+
+  /**
+   * @remarks
+   * Block descriptor for this entry.
+   */
+  block?: MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksBlock;
+
+  /**
+   * @remarks
+   * Filter for if this entry should be randomly selected from. Self,
+   * Target, and Block are set.
+   */
+  filter?: MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksFilter;
+
+  /**
+   * @remarks
+   * Weight for this entry.
+   */
+  weight?: number;
+
+}
+
+
+/**
+ * Block (block)
+ */
+export interface MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksBlock {
+
+  name?: string;
+
+  states?: number;
+
+  tags?: string;
+
+}
+
+
+/**
+ * Filter (filter)
+ */
+export interface MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksFilter {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }
 

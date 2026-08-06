@@ -54,7 +54,8 @@
           "id": "west",
           "title": "West"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     }
   ],
   "description": "Specifies a geometry part for culling.",

@@ -168,5 +168,6 @@
       }
     ]
   },
-  "title": "Item Food"
+  "title": "Item Food",
+  "dataVersion": "1.20.50"
 }

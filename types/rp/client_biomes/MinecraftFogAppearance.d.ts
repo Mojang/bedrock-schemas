@@ -23,6 +23,6 @@ export default interface MinecraftFogAppearance {
    * @remarks
    * Identifier of fog definition to use
    */
-  fog_identifier: object;
+  fog_identifier: string;
 
 }

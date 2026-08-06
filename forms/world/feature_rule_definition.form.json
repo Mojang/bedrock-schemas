@@ -39,5 +39,6 @@
   ],
   "description": "Defines a feature rule with conditions, description, and distribution parameters.",
   "title": "World Feature Rule Definition",
-  "id": "Feature Rule Definition"
+  "id": "Feature Rule Definition",
+  "dataVersion": "1.21.20"
 }

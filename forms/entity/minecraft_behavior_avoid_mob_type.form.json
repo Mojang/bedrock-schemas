@@ -2289,6 +2289,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "undefined"
     },
     {

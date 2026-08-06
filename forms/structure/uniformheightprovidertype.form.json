@@ -34,17 +34,16 @@
       "dataType": "string",
       "choices": [
         {
-          "id": "constant",
-          "title": "Constant"
-        },
-        {
           "id": "uniform",
           "title": "Uniform"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "uniform",
       "isRequired": true
     }
   ],
   "description": "Uniform distribution of possible anchor points",
-  "title": "Structure UniformHeightProviderType"
+  "title": "Structure UniformHeightProviderType",
+  "dataVersion": "1.21.20"
 }

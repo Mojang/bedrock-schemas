@@ -184,6 +184,10 @@ export default interface MinecraftTreeFeature {
 
   pine_canopy?: MinecraftTreeFeaturePineCanopy;
 
+  poplar_canopy?: MinecraftTreeFeaturePoplarCanopy;
+
+  poplar_trunk?: MinecraftTreeFeaturePoplarTrunk;
+
   random_spread_canopy?: { [key: string]: MinecraftTreeFeatureRandomSpreadCanopy };
 
   roofed_canopy?: MinecraftTreeFeatureRoofedCanopy;
@@ -2021,6 +2025,82 @@ export interface MinecraftTreeFeaturePineCanopy {
    * Radius of the canopy.
    */
   base_radius: number;
+
+}
+
+
+/**
+ */
+export interface MinecraftTreeFeaturePoplarCanopy {
+
+  radius?: MinecraftTreeFeaturePoplarCanopyRadius[];
+
+  /**
+   * @remarks
+   * The width of the tree trunk.
+   */
+  trunk_width?: number;
+
+}
+
+
+/**
+ */
+export interface MinecraftTreeFeaturePoplarCanopyRadius {
+
+  /**
+   * @remarks
+   * Radius of canopy.
+   */
+  value?: number;
+
+  /**
+   * @remarks
+   * Weight for this entry.
+   */
+  weight?: number;
+
+}
+
+
+/**
+ */
+export interface MinecraftTreeFeaturePoplarTrunk {
+
+  /**
+   * @remarks
+   * Configuration object for the trunk decoration.
+   */
+  trunk_decoration?: MinecraftTreeFeaturePoplarTrunkTrunkDecoration;
+
+}
+
+
+/**
+ */
+export interface MinecraftTreeFeaturePoplarTrunkTrunkDecoration {
+
+  decoration_blocks_sequence?: MinecraftTreeFeaturePoplarTrunkTrunkDecorationDecorationBlocksSequence[];
+
+  /**
+   * @remarks
+   * Number of decoration blocks to place. (Will not be used if
+   * "decoration_blocks_sequence" given)
+   */
+  num_steps?: number;
+
+  /**
+   * @remarks
+   * Directions to spread decoration blocks.
+   */
+  step_directionLessThandownupoutaway?: string;
+
+}
+
+
+/**
+ */
+export interface MinecraftTreeFeaturePoplarTrunkTrunkDecorationDecorationBlocksSequence {
 
 }
 

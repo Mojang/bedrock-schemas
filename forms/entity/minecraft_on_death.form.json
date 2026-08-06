@@ -125,6 +125,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "description": "The target of the event."
     }
@@ -132,5 +133,6 @@
   "description": "Adds a trigger to call on this entity's death.",
   "title": "Entity On Death",
   "samples": {},
-  "id": "minecraft:on_death"
+  "id": "minecraft:on_death",
+  "dataVersion": "1.26.40"
 }

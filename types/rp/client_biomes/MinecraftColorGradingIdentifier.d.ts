@@ -26,6 +26,6 @@ export default interface MinecraftColorGradingIdentifier {
    * @remarks
    * Identifier of color_grading definition to use
    */
-  color_grading_identifier: object;
+  color_grading_identifier: string;
 
 }

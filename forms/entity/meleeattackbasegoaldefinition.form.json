@@ -197,5 +197,6 @@
     }
   ],
   "description": "Allows a mob to deal damage through a melee attack.",
-  "title": "Entity MeleeAttackBaseGoalDefinition"
+  "title": "Entity MeleeAttackBaseGoalDefinition",
+  "dataVersion": "1.21.120"
 }

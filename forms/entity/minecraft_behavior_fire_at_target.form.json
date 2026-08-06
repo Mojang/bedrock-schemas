@@ -162,7 +162,7 @@
       "id": "owner_anchor",
       "title": "Owner Anchor",
       "description": "Entity anchor for the projectile spawn location.",
-      "dataType": "object",
+      "dataType": "int",
       "defaultValue": 2,
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
@@ -305,7 +305,7 @@
       "id": "target_anchor",
       "title": "Target Anchor",
       "description": "Entity anchor for projectile target.",
-      "dataType": "object",
+      "dataType": "int",
       "defaultValue": 2
     },
     {

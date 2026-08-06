@@ -18,6 +18,7 @@
       "id": "default",
       "title": "Default",
       "dataType": "string",
+      "minLength": 1,
       "isRequired": true
     },
     {
@@ -27,7 +28,8 @@
       "validity": [
         {
           "comparison": "pattern",
-          "value": "^(?:(?!^(minecraft):).)+:(?:.)+$"
+          "value": "^(?:(?!^(minecraft):).)+:(?:.)+$",
+          "patternFlags": "i"
         }
       ],
       "isRequired": true
@@ -69,6 +71,7 @@
           "title": "Toggle"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

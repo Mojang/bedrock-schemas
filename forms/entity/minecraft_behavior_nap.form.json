@@ -190,5 +190,6 @@
   "description": "Allows mobs to occassionally stop and take a nap under certain conditions.",
   "title": "Entity Nap Behavior",
   "samples": {},
-  "id": "minecraft:behavior.nap"
+  "id": "minecraft:behavior.nap",
+  "dataVersion": "1.26.40"
 }

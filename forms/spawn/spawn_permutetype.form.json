@@ -37,7 +37,7 @@
       "id": "entity_type",
       "title": "Entity Type",
       "description": "Permutation to spawn when selected",
-      "dataType": "object",
+      "dataType": "string",
       "defaultValue": ""
     },
     {

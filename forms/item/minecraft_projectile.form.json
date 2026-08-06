@@ -30,6 +30,7 @@
       "dataType": "string",
       "description": "Which entity is to be fired as a projectile.",
       "title": "Projectile Entity",
+      "minLength": 0,
       "isRequired": true,
       "validity": [
         {
@@ -58,5 +59,6 @@
       }
     ]
   },
-  "title": "Item Projectile"
+  "title": "Item Projectile",
+  "dataVersion": "1.20.50"
 }

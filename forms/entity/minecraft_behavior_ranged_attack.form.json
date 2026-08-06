@@ -577,5 +577,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.ranged_attack"
+  "id": "minecraft:behavior.ranged_attack",
+  "dataVersion": "1.26.40"
 }

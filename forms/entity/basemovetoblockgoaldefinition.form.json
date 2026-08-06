@@ -42,5 +42,6 @@
       "defaultValue": 1
     }
   ],
-  "title": "Entity BaseMoveToBlockGoalDefinition"
+  "title": "Entity BaseMoveToBlockGoalDefinition",
+  "dataVersion": "1.26.10"
 }

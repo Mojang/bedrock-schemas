@@ -99,7 +99,8 @@
       "alternates": [
         {
           "id": "dispense_on",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "dispense_on",
@@ -111,8 +112,9 @@
       "id": "entity",
       "title": "Entity",
       "description": "The entity to be placed in the world.",
-      "dataType": "object",
+      "dataType": "string",
       "defaultValue": "",
+      "minLength": 0,
       "validity": [
         {
           "comparison": "pattern",
@@ -162,7 +164,8 @@
       "alternates": [
         {
           "id": "use_on",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "use_on",
@@ -188,5 +191,6 @@
       }
     ]
   },
-  "title": "Item Entity Placer"
+  "title": "Item Entity Placer",
+  "dataVersion": "1.20.50"
 }

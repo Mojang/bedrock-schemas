@@ -124,6 +124,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self"
     }
   ],

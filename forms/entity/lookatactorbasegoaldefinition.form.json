@@ -86,5 +86,6 @@
     }
   ],
   "description": "Causes the entity to look at nearby actors that match the specified filter criteria.",
-  "title": "Entity LookAtActorBaseGoalDefinition"
+  "title": "Entity LookAtActorBaseGoalDefinition",
+  "dataVersion": "1.26.0"
 }

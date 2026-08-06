@@ -96,7 +96,7 @@
     "owner_anchor": {
       "title": "Owner Anchor",
       "description": "Entity anchor for the projectile spawn location.\n\nSample values:\n• breeze: 2",
-      "type": "object",
+      "type": "integer",
       "default": 2
     },
     "owner_offset": {
@@ -187,7 +187,7 @@
     "target_anchor": {
       "title": "Target Anchor",
       "description": "Entity anchor for projectile target.",
-      "type": "object",
+      "type": "integer",
       "default": 2
     },
     "target_offset": {

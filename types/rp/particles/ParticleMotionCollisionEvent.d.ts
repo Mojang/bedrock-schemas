@@ -24,7 +24,7 @@ import * as jsoncommon from '../../common';
  */
 export default interface ParticleMotionCollisionEvent {
 
-  event: object;
+  event: string;
 
   min_speed?: number;
 

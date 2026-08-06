@@ -183,6 +183,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/drowned.json": [
@@ -271,5 +272,6 @@
       }
     ]
   },
-  "id": "minecraft:on_target_acquired"
+  "id": "minecraft:on_target_acquired",
+  "dataVersion": "1.26.40"
 }

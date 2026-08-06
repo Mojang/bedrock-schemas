@@ -24,7 +24,7 @@ import * as jsoncommon from '../../common';
  */
 export default interface ParticleVisualEffectEvent {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 

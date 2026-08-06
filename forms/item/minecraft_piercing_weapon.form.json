@@ -43,5 +43,6 @@
   ],
   "description": "Allows an item to deal damage to all entities detected in a straight line along the user's view vector. Items with this component cannot destroy blocks, as the attack action always takes priority, regardless of what the user is looking at.",
   "title": "Item Piercing Weapon",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.21.90"
 }

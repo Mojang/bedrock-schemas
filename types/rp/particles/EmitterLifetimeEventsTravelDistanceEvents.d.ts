@@ -25,6 +25,6 @@ export default interface EmitterLifetimeEventsTravelDistanceEvents {
 
   distance: number;
 
-  effects: object[];
+  effects: string[];
 
 }

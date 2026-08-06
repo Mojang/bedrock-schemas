@@ -6,7 +6,8 @@
   "properties": {
     "identifier": {
       "title": "Identifier",
-      "type": "object"
+      "type": "string",
+      "maxLength": 256
     }
   },
   "required": [

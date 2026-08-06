@@ -23,12 +23,10 @@
         {
           "id": "noise",
           "title": "Noise"
-        },
-        {
-          "id": "tint",
-          "title": "Tint"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "noise",
       "isRequired": true
     }
   ],

@@ -21,32 +21,26 @@
       "dataType": "string",
       "choices": [
         {
-          "id": "minecraft:empty_pool_element",
-          "title": "Minecraft:empty pool element"
-        },
-        {
-          "id": "minecraft:feature_pool_element",
-          "title": "Minecraft:feature pool element"
-        },
-        {
           "id": "minecraft:single_pool_element",
           "title": "Minecraft:single pool element"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "minecraft:single_pool_element",
       "isRequired": true
     },
     {
       "id": "location",
       "title": "Location",
       "description": "The path of the structure file. This path is relative to the behavior pack's structures folder.",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     },
     {
       "id": "processors",
       "title": "Processors",
       "description": "The identifier of the processor list to use when placing the structure.",
-      "dataType": "object",
+      "dataType": "string",
       "defaultValue": ""
     },
     {
@@ -64,6 +58,7 @@
           "title": "Terrain matching"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "rigid"
     }
   ],

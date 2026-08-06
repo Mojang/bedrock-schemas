@@ -288,17 +288,23 @@ export interface MinecraftApplyKnockbackRulesPresets {
 
   /**
    * @remarks
+   * Defines the approach for combining extra knockback from
+   * enchantments or sprinting:
+- "reapply_default": Reapplies knockback
+   * again with default knockback parameters, i.e. values not defined by
+   * this component.
+- "multiply_reduced": Multiplies the extra
+   * knockback with the base knockback and a reduction factor, and
+   * adds it to the base knockback.
+   */
+  extra_knockback_approach?: string;
+
+  /**
+   * @remarks
    * Filter for the entity type that will be affected by these
    * knockback rules.
    */
   filter?: MinecraftApplyKnockbackRulesPresetsFilter;
-
-  /**
-   * @remarks
-   * Scaling factor to angle the knockback horizontally based on the
-   * attacker's aim direction.
-   */
-  horizontal_hit_angle_scale?: number;
 
   /**
    * @remarks
@@ -308,10 +314,16 @@ export interface MinecraftApplyKnockbackRulesPresets {
 
   /**
    * @remarks
-   * Scaling factor to apply to the target's velocity before applying
-   * knockback.
+   * Defines how knockback is applied to the target:
+-
+   * "relative_horizontal": Applies knockback along the horizontal direction
+   * from the attacker to the target.
+- "hit_direction": Applies
+   * knockback based on the hit direction and the point of impact (e.g.
+   * hits to the bottom of the entity or from below push it upward, hits
+   * on the left side of the entity push it to the right).
    */
-  scale_previous_velocity?: number;
+  knockback_mode?: string;
 
   /**
    * @remarks
@@ -322,18 +334,10 @@ export interface MinecraftApplyKnockbackRulesPresets {
 
   /**
    * @remarks
-   * Scaling factor to angle the knockback vertically based on the
-   * attacker's aim direction.
+   * Scaling factor to apply to the target's velocity before applying
+   * knockback.
    */
-  vertical_hit_angle_scale?: number;
-
-  /**
-   * @remarks
-   * Scaling factor to angle the knockback vertically based on the
-   * difference in the attacker's feet position to the target's feet
-   * position.
-   */
-  vertical_position_angle_scale?: number;
+  slowdown_scale?: number;
 
   /**
    * @remarks
@@ -348,6 +352,12 @@ export interface MinecraftApplyKnockbackRulesPresets {
    */
   vertical_velocity_cap?: number;
 
+}
+
+
+export enum MinecraftApplyKnockbackRulesPresetsExtraKnockbackApproach {
+  multiplyReduced = `multiply_reduced`,
+  reapplyDefault = `reapply_default`
 }
 
 
@@ -386,4 +396,10 @@ export interface MinecraftApplyKnockbackRulesPresetsFilter {
    */
   value?: object;
 
+}
+
+
+export enum MinecraftApplyKnockbackRulesPresetsKnockbackMode {
+  hitDirection = `hit_direction`,
+  relativeHorizontal = `relative_horizontal`
 }

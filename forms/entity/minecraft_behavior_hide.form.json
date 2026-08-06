@@ -59,6 +59,7 @@
           "title": "Meeting area"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": null
     },
     {

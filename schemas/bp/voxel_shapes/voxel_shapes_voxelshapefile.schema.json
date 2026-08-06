@@ -6,7 +6,7 @@
   "properties": {
     "description": {
       "title": "Description",
-      "description": "\n\nProperties:\n• identifier (object)",
+      "description": "\n\nProperties:\n• identifier (string) [maxLen: 256]",
       "$ref": "./voxel_shapes_description.schema.json",
       "defaultSnippets": [
         {

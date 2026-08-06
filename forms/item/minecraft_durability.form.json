@@ -139,5 +139,6 @@
       }
     ]
   },
-  "title": "Item Durability"
+  "title": "Item Durability",
+  "dataVersion": "1.20.50"
 }

@@ -15,9 +15,9 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Dynamic Jump (minecraft:jump.dynamic)
+ * Entity Dynamic Jump (minecraft:jump.dynamic)
  * Defines a dynamic type jump control that will change jump
- * properties based on the speed modifier of the mob. Requires
+ * properties based on the speed modifier of the mob.Requires
  * `minecraft:movement.skip` to be used.
  */
 export default interface MinecraftJumpDynamic {

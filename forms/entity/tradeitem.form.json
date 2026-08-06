@@ -80,7 +80,7 @@
     {
       "id": "item",
       "title": "Item",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     },
     {

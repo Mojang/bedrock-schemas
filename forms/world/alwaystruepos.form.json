@@ -22,12 +22,10 @@
         {
           "id": "minecraft:always_true",
           "title": "Minecraft:always true"
-        },
-        {
-          "id": "minecraft:axis_aligned_linear_pos",
-          "title": "Minecraft:axis aligned linear pos"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "minecraft:always_true",
       "isRequired": true
     }
   ],

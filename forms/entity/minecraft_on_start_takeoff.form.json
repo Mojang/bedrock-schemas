@@ -133,6 +133,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/ender_dragon.json": [
@@ -158,5 +159,6 @@
       }
     ]
   },
-  "id": "minecraft:on_start_takeoff"
+  "id": "minecraft:on_start_takeoff",
+  "dataVersion": "1.26.40"
 }

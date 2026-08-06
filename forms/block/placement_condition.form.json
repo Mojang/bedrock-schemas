@@ -58,7 +58,8 @@
       "alternates": [
         {
           "id": "block_filter",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "block_filter",

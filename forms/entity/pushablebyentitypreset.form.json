@@ -142,6 +142,7 @@
           "title": "None"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "default"
     },
     {

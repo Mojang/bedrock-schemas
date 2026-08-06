@@ -758,7 +758,7 @@ export interface ParticleEffectCurves {
 
   nodes: { [key: string]: string };
 
-  type: object;
+  type: string;
 
 }
 

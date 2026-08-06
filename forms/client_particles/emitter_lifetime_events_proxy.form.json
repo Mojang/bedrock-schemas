@@ -16,7 +16,7 @@
     {
       "id": "creation_event",
       "title": "Creation Event",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": [],
       "alternates": [
         {
@@ -28,7 +28,7 @@
     {
       "id": "expiration_event",
       "title": "Expiration Event",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": [],
       "alternates": [
         {
@@ -47,7 +47,7 @@
     {
       "id": "timeline",
       "title": "Timeline",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": {},
       "alternates": [
         {
@@ -59,7 +59,7 @@
     {
       "id": "travel_distance_events",
       "title": "Travel Distance Events",
-      "dataType": "objectArray",
+      "dataType": "stringArray",
       "defaultValue": {},
       "alternates": [
         {

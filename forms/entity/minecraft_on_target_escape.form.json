@@ -173,6 +173,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/dolphin.json": [
@@ -254,5 +255,6 @@
       }
     ]
   },
-  "id": "minecraft:on_target_escape"
+  "id": "minecraft:on_target_escape",
+  "dataVersion": "1.26.40"
 }

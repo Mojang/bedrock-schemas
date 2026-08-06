@@ -55,5 +55,6 @@
     }
   ],
   "description": "Represents a group of items. A group can be collapsible if it is provided with a group identifier, or added a set of loose items without an icon.",
-  "title": "Crafting Catalog Group"
+  "title": "Crafting Catalog Group",
+  "dataVersion": "1.21.60"
 }

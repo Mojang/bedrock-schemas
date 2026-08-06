@@ -29,6 +29,7 @@
           "title": "Swamp grass"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],

@@ -53,5 +53,6 @@
   ],
   "title": "Entity Admire Item",
   "samples": {},
-  "id": "minecraft:admire_item"
+  "id": "minecraft:admire_item",
+  "dataVersion": "1.26.40"
 }

@@ -23,14 +23,14 @@ export default interface MinecraftAmbientSounds {
    * @remarks
    * Named sound that occasionally plays at the listener position
    */
-  addition?: object;
+  addition?: string;
 
   /**
    * @remarks
    * Named sound that loops while the listener position is inside the
    * biome
    */
-  loop?: object;
+  loop?: string;
 
   /**
    * @remarks
@@ -38,6 +38,6 @@ export default interface MinecraftAmbientSounds {
    * the light level is low. Biomes without an ambient mood sound will
    * use the 'ambient.cave' sound.
    */
-  mood?: object;
+  mood?: string;
 
 }

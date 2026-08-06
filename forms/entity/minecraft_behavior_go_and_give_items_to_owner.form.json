@@ -2373,6 +2373,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "charge",
       "samples": {
         "/vanilla/behavior_pack/entities/allay.json": [

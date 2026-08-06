@@ -60,5 +60,6 @@
       "defaultValue": 0.699999988079071
     }
   ],
-  "title": "Entity DragonBaseGoalDefinition"
+  "title": "Entity DragonBaseGoalDefinition",
+  "dataVersion": "1.26.0"
 }

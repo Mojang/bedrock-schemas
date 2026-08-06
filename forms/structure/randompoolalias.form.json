@@ -31,5 +31,6 @@
     }
   ],
   "description": "Pool alias for a Random list of targets",
-  "title": "Structure RandomPoolAlias"
+  "title": "Structure RandomPoolAlias",
+  "dataVersion": "1.21.20"
 }

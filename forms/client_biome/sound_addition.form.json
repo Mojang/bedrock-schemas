@@ -18,7 +18,8 @@
       "id": "asset",
       "title": "Asset",
       "description": "Name of the sound asset to play",
-      "dataType": "object",
+      "dataType": "string",
+      "minLength": 1,
       "isRequired": true
     },
     {

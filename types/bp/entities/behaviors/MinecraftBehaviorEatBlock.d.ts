@@ -64,7 +64,7 @@ export default interface MinecraftBehaviorEatBlock {
    * Sheep: [{"eat_block":"grass","replace_block":"dirt"},{"eat_block":"tallgrass","replace_block":"air"},{"eat_block":"short_dry_grass","replace_block":"air"},{"eat_block":"tall_dry_grass","replace_block":"air"}]
    *
    */
-  eat_and_replace_block_pairs?: object[];
+  eat_and_replace_block_pairs?: MinecraftBehaviorEatBlockEatAndReplaceBlockPairs[];
 
   /**
    * @remarks
@@ -118,6 +118,26 @@ export enum MinecraftBehaviorEatBlockControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Entity EatAndReplaceBlockPair (EatAndReplaceBlockPair)
+ */
+export interface MinecraftBehaviorEatBlockEatAndReplaceBlockPairs {
+
+  /**
+   * @remarks
+   * The block the entity should eat.
+   */
+  eat_block?: string;
+
+  /**
+   * @remarks
+   * The block that should replace the eaten block.
+   */
+  replace_block?: string;
+
 }
 
 

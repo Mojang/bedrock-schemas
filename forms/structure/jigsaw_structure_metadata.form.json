@@ -31,5 +31,6 @@
     }
   ],
   "description": "Defines jigsaw structure markers and bounding size.",
-  "title": "Structure Jigsaw Structure Metadata"
+  "title": "Structure Jigsaw Structure Metadata",
+  "dataVersion": "1.21.80"
 }

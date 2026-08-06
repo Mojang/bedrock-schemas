@@ -139,6 +139,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/polar_bear.json": [
@@ -179,5 +180,6 @@
       }
     ]
   },
-  "id": "minecraft:on_friendly_anger"
+  "id": "minecraft:on_friendly_anger",
+  "dataVersion": "1.26.40"
 }

@@ -24,5 +24,6 @@
   ],
   "description": "Determines whether the item is immune to burning when dropped in fire or lava.",
   "title": "Item Fire Resistant",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.21.90"
 }

@@ -28,6 +28,7 @@
           "title": "Water"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "water"
     },
     {
@@ -53,6 +54,7 @@
           "title": "Popped"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "blocking"
     },
     {

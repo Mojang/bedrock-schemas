@@ -115,7 +115,8 @@
           "id": "taiga",
           "title": "Taiga"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     }
   ],
   "note": "This is a pre-Caves and Cliffs component. It does not change overworld height, and currently only affects map item rendering",

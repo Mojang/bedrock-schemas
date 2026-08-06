@@ -36,6 +36,7 @@
           "title": "Only fences"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "all"
     },
     {
@@ -49,6 +50,7 @@
         "east",
         "west"
       ],
+      "mustBeUnique": true,
       "choices": [
         {
           "id": "east",

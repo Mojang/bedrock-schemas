@@ -7,18 +7,21 @@
       "title": "X",
       "description": "Block state name that controls visual rotation around the x axis.",
       "type": "string",
+      "maxLength": 256,
       "default": ""
     },
     "y": {
       "title": "Y",
       "description": "Block state name that controls visual rotation around the y axis.",
       "type": "string",
+      "maxLength": 256,
       "default": ""
     },
     "z": {
       "title": "Z",
       "description": "Block state name that controls visual rotation around the z axis.",
       "type": "string",
+      "maxLength": 256,
       "default": ""
     }
   }

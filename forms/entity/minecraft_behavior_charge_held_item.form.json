@@ -59,5 +59,6 @@
   "description": "Allows an entity to charge and use their held item.",
   "title": "Entity Charge Held Item Behavior",
   "samples": {},
-  "id": "minecraft:behavior.charge_held_item"
+  "id": "minecraft:behavior.charge_held_item",
+  "dataVersion": "1.26.40"
 }

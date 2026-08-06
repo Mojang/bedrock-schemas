@@ -75,6 +75,7 @@
           "title": "Water"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "any",
       "samples": {
         "/vanilla/behavior_pack/entities/strider.json": [

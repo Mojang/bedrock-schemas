@@ -333,7 +333,7 @@ This component can also be used instead of the
 
 
 /**
- * Item Components Block Placer (minecraft:block_placer)
+ * Item Block Placer (minecraft:block_placer)
  * Sets the item as a placer item component for blocks. Items with
  * this component will place a block when used.
  * Note: This component can also be used instead of the
@@ -344,18 +344,15 @@ export interface MinecraftItemV12190ComponentsMinecraftBlockPlacer {
 
   /**
    * @remarks
-   * If true, block placement through this item will be aligned while
-   * holding the interaction button down. Defaults to false.
+   * When true, block placement through this item is aligned while the
+   * interaction button is held down. Supported from `format_version` 1.26.0
+   * onward.
    */
   aligned_placement?: boolean;
 
   /**
    * @remarks
    * Defines the block that will be placed.
-   * 
-   * Sample Values:
-   * My Sword Singing: "minecraft:dirt"
-   *
    */
   block: object;
 
@@ -373,10 +370,6 @@ export interface MinecraftItemV12190ComponentsMinecraftBlockPlacer {
    * @remarks
    * List of block descriptors of the blocks that this item can be
    * used on. If left empty, all blocks will be allowed.
-   * 
-   * Sample Values:
-   * My Sword Singing: ["dirt","grass","anvil"]
-   *
    */
   use_on?: MinecraftItemV12190ComponentsMinecraftBlockPlacerUseOn[];
 
@@ -398,8 +391,7 @@ export interface MinecraftItemV12190ComponentsMinecraftBlockPlacerUseOn {
 
 
 /**
- * Item Components Bundle Interaction 
- * (minecraft:bundle_interaction)
+ * Item Bundle Interaction (minecraft:bundle_interaction)
  * Enables the bundle-specific interaction scheme and tooltip for
  * an item.
  * Note: To use this component, the item must have a
@@ -412,6 +404,7 @@ export interface MinecraftItemV12190ComponentsMinecraftBlockPlacerUseOn {
  * my_custom_bundle.png, my_custom_bundle_open_front.png, my_custom_bundle_open_back.png. Note
  * that it's important that the filenames are the item name, plus
  * `_open_front` and `_open_back` respectively.
+ * Note: Available without experimental toggle in 1.21.110.
  */
 export interface MinecraftItemV12190ComponentsMinecraftBundleInteraction {
 
@@ -431,7 +424,7 @@ export interface MinecraftItemV12190ComponentsMinecraftBundleInteraction {
 
 
 /**
- * Item Components Compostable (minecraft:compostable)
+ * Item Compostable (minecraft:compostable)
  * Specifies that an item is compostable and provides the chance of
  * creating a composting layer in the composter.
  */
@@ -448,7 +441,7 @@ export interface MinecraftItemV12190ComponentsMinecraftCompostable {
 
 
 /**
- * Item Components Cooldown (minecraft:cooldown)
+ * Item Cooldown (minecraft:cooldown)
  * Adds a cooldown to an item, preventing it from being used again
  * for a specified duration. Items sharing the same category will
  * enter cooldown together when any one of them is used.
@@ -460,10 +453,6 @@ export interface MinecraftItemV12190ComponentsMinecraftCooldown {
    * A string identifier that groups items together. When an item with
    * a cooldown is used, all items sharing the same category also
    * enter cooldown.
-   * 
-   * Sample Values:
-   * Wind Charge: "wind_charge"
-   *
    */
   category: string;
 
@@ -471,10 +460,6 @@ export interface MinecraftItemV12190ComponentsMinecraftCooldown {
    * @remarks
    * The duration of time in seconds that items with the matching category
    * will spend cooling down before becoming usable again.
-   * 
-   * Sample Values:
-   * Wind Charge: 0.5
-   *
    */
   duration: number;
 
@@ -496,8 +481,7 @@ export enum MinecraftItemV12190ComponentsMinecraftCooldownType {
 
 
 /**
- * Item Components Damage Absorption 
- * (minecraft:damage_absorption)
+ * Item Damage Absorption (minecraft:damage_absorption)
  * It allows an item to absorb damage that would otherwise be
  * dealt to its wearer. For this to happen, the item needs to be
  * equipped in an armor slot. The absorbed damage reduces the
@@ -518,7 +502,7 @@ export interface MinecraftItemV12190ComponentsMinecraftDamageAbsorption {
 
 
 /**
- * Item Components Digger (minecraft:digger)
+ * Item Digger (minecraft:digger)
  * Configures an item as a digging tool, allowing it to break
  * specific blocks faster than normal. Define which blocks are
  * affected and the speed multiplier for each.
@@ -544,8 +528,12 @@ export interface MinecraftItemV12190ComponentsMinecraftDigger {
 
 
 /**
- * Item Components BlockInfo (BlockInfo)
- * Has block and digging speed configuration.
+ * Item BlockInfo (BlockInfo)
+ * Associates a block type with a custom digging speed multiplier for
+ * the minecraft:digger component. Map blocks to speed values so
+ * pickaxes mine stone quickly, axes chop wood faster, and custom
+ * tools excel at specific materials. Enables tool specialization matching
+ * vanilla Minecraft conventions.
  */
 export interface MinecraftItemV12190ComponentsMinecraftDiggerDestroySpeeds {
 
@@ -579,7 +567,7 @@ export interface MinecraftItemV12190ComponentsMinecraftDiggerDestroySpeedsBlock 
 
 
 /**
- * Item Components Display Name (minecraft:display_name)
+ * Item Display Name (minecraft:display_name)
  * Sets the item display name within Minecraft: Bedrock Edition. This
  * component may also be used to pull from the localization file by
  * referencing a key from it.
@@ -604,7 +592,7 @@ export interface MinecraftItemV12190ComponentsMinecraftDisplayName {
 
 
 /**
- * Item Components Durability (minecraft:durability)
+ * Item Durability (minecraft:durability)
  * Sets how much damage the item can take before breaking, and
  * allows the item to be combined at an anvil, grindstone, or
  * crafting table.
@@ -616,15 +604,6 @@ export interface MinecraftItemV12190ComponentsMinecraftDurability {
    * Specifies the percentage chance of this item losing durability. Default
    * is set to 100. Defined as an int range with min and max 
    * value.
-   * 
-   * Sample Values:
-   * My Sword Chuck: {"min":10,"max":50}
-   *
-   *
-   * My Sword Singing: {"min":0,"max":0}
-   *
-   * My Sword Weak: {"min":100,"max":100}
-   *
    */
   damage_chance?: MinecraftItemV12190ComponentsMinecraftDurabilityDamageChance;
 
@@ -633,16 +612,6 @@ export interface MinecraftItemV12190ComponentsMinecraftDurability {
    * Max durability is the amount of damage that this item can take
    * before breaking. This is a required parameter and has a
    * minimum of 0.
-   * 
-   * Sample Values:
-   * Chestplate: 200
-   *
-   *
-   * My Sword Chuck: 10
-   *
-   *
-   * My Sword Singing: 1000
-   *
    */
   max_durability: number;
 
@@ -650,8 +619,12 @@ export interface MinecraftItemV12190ComponentsMinecraftDurability {
 
 
 /**
- * Item Components IntRange (IntRange)
- * Has minimum and maximum integer values.
+ * Item IntRange (IntRange)
+ * Specifies an integer range between minimum and maximum values for
+ * item properties requiring whole numbers. Used for stack count
+ * variations, discrete charge levels, or quantity ranges in loot
+ * tables. Ensures values stay within valid bounds for countable item
+ * properties.
  */
 export interface MinecraftItemV12190ComponentsMinecraftDurabilityDamageChance {
 
@@ -663,20 +636,12 @@ export interface MinecraftItemV12190ComponentsMinecraftDurabilityDamageChance {
 
 
 /**
- * Item Components Durability Sensor 
- * (minecraft:durability_sensor)
+ * Item Durability Sensor (minecraft:durability_sensor)
  * Enables an item to emit effects when it receives damage. Because of
  * this, the item also needs a `minecraft:durability` 
  * component.
  */
 export interface MinecraftItemV12190ComponentsMinecraftDurabilitySensor {
-
-  /**
-   * @remarks
-   * The effects are emitted when the item durability value is less
-   * than or equal to this value.
-   */
-  durability?: number;
 
   /**
    * @remarks
@@ -689,12 +654,6 @@ export interface MinecraftItemV12190ComponentsMinecraftDurabilitySensor {
 
   /**
    * @remarks
-   * Particle effect to emit when the threshold is met.
-   */
-  particle_type?: string;
-
-  /**
-   * @remarks
    * Sound effect to emit when the threshold is met.
    */
   sound_event?: string;
@@ -703,7 +662,7 @@ export interface MinecraftItemV12190ComponentsMinecraftDurabilitySensor {
 
 
 /**
- * Item Components Durability Sensor Durability Threshold
+ * Item Durability Sensor Durability Threshold
  * (minecraft:durability_sensor durability_threshold)
  * Defines both the durability threshold, and the effects emitted when
  * that threshold is met.
@@ -968,10 +927,12 @@ export enum MinecraftItemV12190ComponentsMinecraftDurabilitySensorDurabilityThre
   bubbleUp = `bubble.up`,
   bubbleUpinside = `bubble.upinside`,
   bucketEmptyFish = `bucket.empty.fish`,
+  bucketEmptyLandAnimal = `bucket.empty.land_animal`,
   bucketEmptyLava = `bucket.empty.lava`,
   bucketEmptyPowderSnow = `bucket.empty.powder_snow`,
   bucketEmptyWater = `bucket.empty.water`,
   bucketFillFish = `bucket.fill.fish`,
+  bucketFillLandAnimal = `bucket.fill.land_animal`,
   bucketFillLava = `bucket.fill.lava`,
   bucketFillPowderSnow = `bucket.fill.powder_snow`,
   bucketFillWater = `bucket.fill.water`,
@@ -1066,6 +1027,10 @@ export enum MinecraftItemV12190ComponentsMinecraftDurabilitySensorDurabilityThre
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
+  geyserEruptionActive = `geyser_eruption_active`,
+  geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,
   glowSquidInkSquirt = `glow_squid.ink_squirt`,
   glowstickUse = `glowstick.use`,
@@ -1286,6 +1251,7 @@ export enum MinecraftItemV12190ComponentsMinecraftDurabilitySensorDurabilityThre
   record13 = `record.13`,
   record5 = `record.5`,
   recordBlocks = `record.blocks`,
+  recordBounce = `record.bounce`,
   recordCat = `record.cat`,
   recordChirp = `record.chirp`,
   recordCreator = `record.creator`,
@@ -1294,6 +1260,7 @@ export enum MinecraftItemV12190ComponentsMinecraftDurabilitySensorDurabilityThre
   recordLavaChicken = `record.lava_chicken`,
   recordMall = `record.mall`,
   recordMellohi = `record.mellohi`,
+  recordNull = `record.null`,
   recordOtherside = `record.otherside`,
   recordPigstep = `record.pigstep`,
   recordPrecipice = `record.precipice`,
@@ -1394,24 +1361,22 @@ export enum MinecraftItemV12190ComponentsMinecraftDurabilitySensorDurabilityThre
 
 
 /**
- * Item Components Dyeable (minecraft:dyeable)
- * Enables custom items to be dyed in cauldrons. To use the dyeable
- * component, the format version on the item and the attachable needs
- * to have a format_version of 1.21.30 or greater.
+ * Item Dyeable (minecraft:dyeable)
+ * Enables players to dye this item using dyes in a crafting grid,
+ * like leather armor. Configure the default color when undyed. The
+ * item stores its color in NBT data and renders with the
+ * player-chosen tint, enabling customizable cosmetic appearances for
+ * armor and equipment.
  */
 export interface MinecraftItemV12190ComponentsMinecraftDyeable {
 
-  /**
-   * @remarks
-   * default_color
-   */
   default_color?: string;
 
 }
 
 
 /**
- * Item Components Enchantable (minecraft:enchantable)
+ * Item Enchantable (minecraft:enchantable)
  * Determines what enchantments can be applied to the item. Not all
  * enchantments will have an effect on all item components.
  * Note: The following enchantment slot types that can be set for
@@ -1425,25 +1390,12 @@ export interface MinecraftItemV12190ComponentsMinecraftEnchantable {
    * Specifies which types of enchantments can be applied. For
    * example, `bow` would allow this item to be enchanted as if it
    * were a bow.
-   * 
-   * Sample Values:
-   * Chestplate: "armor_torso"
-   *
-   * My Boots: "armor_feet"
-   *
-   * My Helm: "armor_head"
-   *
    */
   slot: string;
 
   /**
    * @remarks
    * Specifies the value of the enchantment (minimum of 0).
-   * 
-   * Sample Values:
-   * Chestplate: 10
-   *
-   *
    */
   value: number;
 
@@ -1451,7 +1403,7 @@ export interface MinecraftItemV12190ComponentsMinecraftEnchantable {
 
 
 /**
- * Item Components Entity Placer (minecraft:entity_placer)
+ * Item Entity Placer (minecraft:entity_placer)
  * Allows an item to place entities into the world. Additionally, in
  * version 1.19.80 and above, the component allows the item to set
  * the spawn type of a monster spawner.
@@ -1468,10 +1420,6 @@ export interface MinecraftItemV12190ComponentsMinecraftEntityPlacer {
   /**
    * @remarks
    * The entity to be placed in the world.
-   * 
-   * Sample Values:
-   * My Sword Turtle: "minecraft:turtle"
-   *
    */
   entity?: object;
 
@@ -1479,10 +1427,6 @@ export interface MinecraftItemV12190ComponentsMinecraftEntityPlacer {
    * @remarks
    * List of block descriptors of the blocks that this item can be
    * used on. If left empty, all blocks will be allowed.
-   * 
-   * Sample Values:
-   * My Sword Turtle: ["minecraft:sand"]
-   *
    */
   use_on?: MinecraftItemV12190ComponentsMinecraftEntityPlacerUseOn[];
 
@@ -1518,7 +1462,7 @@ export interface MinecraftItemV12190ComponentsMinecraftEntityPlacerUseOn {
 
 
 /**
- * Item Components Food (minecraft:food)
+ * Item Food (minecraft:food)
  * Sets the item as a food component, allowing it to be edible to
  * the player.
  */
@@ -1528,50 +1472,15 @@ export interface MinecraftItemV12190ComponentsMinecraftFood {
    * @remarks
    * If true you can always eat this item (even when not hungry). Default
    * is set to false.
-   * 
-   * Sample Values:
-   * AppleEnchanted: true
-   *
-   *
    */
   can_always_eat?: boolean;
-
-  cooldown_time?: number;
-
-  cooldown_type?: string;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * AppleEnchanted: [{"name":"regeneration","chance":1,"duration":30,"amplifier":1},{"name":"absorption","chance":1,"duration":120,"amplifier":3},{"name":"resistance","chance":1,"duration":300,"amplifier":0},{"name":"fire_resistance","chance":1,"duration":300,"amplifier":0}]
-   *
-   * Chicken: [{"name":"hunger","chance":0.3,"duration":30,"amplifier":0}]
-   *
-   */
-  effects?: MinecraftItemV12190ComponentsMinecraftFoodEffects[];
-
-  is_meat?: string;
 
   /**
    * @remarks
    * Value that is added to the entity's nutrition when the item is
    * used. Default is set to 0.
-   * 
-   * Sample Values:
-   * Apple: 4
-   *
-   *
-   * Baked Potato: 5
-   *
-   * Beef: 3
-   *
    */
   nutrition?: number;
-
-  on_use_action?: jsoncommon.MinecraftEventTrigger;
-
-  on_use_range?: jsoncommon.MinecraftEventTrigger;
 
   /**
    * @remarks
@@ -1586,14 +1495,6 @@ export interface MinecraftItemV12190ComponentsMinecraftFood {
    * saturation_modifier is used in this formula: (nutrition *
    * saturation_modifier * 2) when applying the saturation buff.
    * Default is set to 0.6.
-   * 
-   * Sample Values:
-   * Apple: 0.3
-   *
-   * AppleEnchanted: "supernatural"
-   *
-   * Baked Potato: "normal"
-   *
    */
   saturation_modifier?: number;
 
@@ -1601,13 +1502,6 @@ export interface MinecraftItemV12190ComponentsMinecraftFood {
    * @remarks
    * When used, converts to the item specified by the string in this
    * field. Default does not convert item.
-   * 
-   * Sample Values:
-   * Beetroot Soup: "bowl"
-   *
-   * Honey Bottle: "glass_bottle"
-   *
-   *
    */
   using_converts_to?: string;
 
@@ -1615,60 +1509,7 @@ export interface MinecraftItemV12190ComponentsMinecraftFood {
 
 
 /**
- * Effects (effects)
- */
-export interface MinecraftItemV12190ComponentsMinecraftFoodEffects {
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * AppleEnchanted: 1
-   *
-   */
-  amplifier?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * AppleEnchanted: 1
-   *
-   */
-  chance?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * AppleEnchanted: 30
-   *
-   */
-  duration?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * AppleEnchanted: "regeneration"
-   *
-   */
-  name?: string;
-
-}
-
-
-/**
- * Using Converts To
- * Using Converts To.
- */
-export interface MinecraftItemV12190ComponentsMinecraftFoodUsingConvertsTo {
-
-}
-
-
-/**
- * Item Components Projectile (minecraft:projectile)
+ * Item Projectile (minecraft:projectile)
  * Defines an item as a projectile that can be shot from dispensers or
  * used as ammunition with minecraft:shooter. When combined with
  * minecraft:throwable, this component specifies which entity is
@@ -1680,24 +1521,12 @@ export interface MinecraftItemV12190ComponentsMinecraftProjectile {
    * @remarks
    * Specifies how long a player must charge a projectile for it to
    * critically hit.
-   * 
-   * Sample Values:
-   * My Sword Chuck: 1.25
-   *
-   *
    */
   minimum_critical_power?: number;
 
   /**
    * @remarks
    * Which entity is to be fired as a projectile.
-   * 
-   * Sample Values:
-   * Wind Charge: "wind_charge_projectile"
-   *
-   * My Sword Chuck: "minecraft:snowball"
-   *
-   *
    */
   projectile_entity: string;
 
@@ -1705,7 +1534,7 @@ export interface MinecraftItemV12190ComponentsMinecraftProjectile {
 
 
 /**
- * Item Components Record (minecraft:record)
+ * Item Record (minecraft:record)
  * Used by record items to play music.
  */
 export interface MinecraftItemV12190ComponentsMinecraftRecord {
@@ -1714,20 +1543,12 @@ export interface MinecraftItemV12190ComponentsMinecraftRecord {
    * @remarks
    * Specifies signal strength for comparator blocks to use, from 1
    * - 13.
-   * 
-   * Sample Values:
-   * My Sword Singing: 1
-   *
    */
   comparator_signal?: number;
 
   /**
    * @remarks
    * Specifies duration of sound event in seconds, float value.
-   * 
-   * Sample Values:
-   * My Sword Singing: 5
-   *
    */
   duration?: number;
 
@@ -1735,10 +1556,6 @@ export interface MinecraftItemV12190ComponentsMinecraftRecord {
    * @remarks
    * Sound event type: 13, cat, blocks, chirp, far, mall, mellohi, stal,
    * strad, ward, 11, wait, pigstep, otherside, 5, relic.
-   * 
-   * Sample Values:
-   * My Sword Singing: "pre_ram.screamer"
-   *
    */
   sound_event?: string;
 
@@ -1883,10 +1700,12 @@ export enum MinecraftItemV12190ComponentsMinecraftRecordSoundEvent {
   bubbleUp = `bubble.up`,
   bubbleUpinside = `bubble.upinside`,
   bucketEmptyFish = `bucket.empty.fish`,
+  bucketEmptyLandAnimal = `bucket.empty.land_animal`,
   bucketEmptyLava = `bucket.empty.lava`,
   bucketEmptyPowderSnow = `bucket.empty.powder_snow`,
   bucketEmptyWater = `bucket.empty.water`,
   bucketFillFish = `bucket.fill.fish`,
+  bucketFillLandAnimal = `bucket.fill.land_animal`,
   bucketFillLava = `bucket.fill.lava`,
   bucketFillPowderSnow = `bucket.fill.powder_snow`,
   bucketFillWater = `bucket.fill.water`,
@@ -1981,6 +1800,10 @@ export enum MinecraftItemV12190ComponentsMinecraftRecordSoundEvent {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
+  geyserEruptionActive = `geyser_eruption_active`,
+  geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,
   glowSquidInkSquirt = `glow_squid.ink_squirt`,
   glowstickUse = `glowstick.use`,
@@ -2201,6 +2024,7 @@ export enum MinecraftItemV12190ComponentsMinecraftRecordSoundEvent {
   record13 = `record.13`,
   record5 = `record.5`,
   recordBlocks = `record.blocks`,
+  recordBounce = `record.bounce`,
   recordCat = `record.cat`,
   recordChirp = `record.chirp`,
   recordCreator = `record.creator`,
@@ -2209,6 +2033,7 @@ export enum MinecraftItemV12190ComponentsMinecraftRecordSoundEvent {
   recordLavaChicken = `record.lava_chicken`,
   recordMall = `record.mall`,
   recordMellohi = `record.mellohi`,
+  recordNull = `record.null`,
   recordOtherside = `record.otherside`,
   recordPigstep = `record.pigstep`,
   recordPrecipice = `record.precipice`,
@@ -2309,7 +2134,7 @@ export enum MinecraftItemV12190ComponentsMinecraftRecordSoundEvent {
 
 
 /**
- * Item Components Repairable (minecraft:repairable)
+ * Item Repairable (minecraft:repairable)
  * Defines the items that can be used to repair a defined item, and
  * the amount of durability each item restores upon repair. Each
  * entry needs to define a list of strings for 'items' that can be
@@ -2323,14 +2148,6 @@ export interface MinecraftItemV12190ComponentsMinecraftRepairable {
    * List of repair item entries. Each entry needs to define a list of
    * strings for `items` that can be used for the repair and an
    * optional `repair_amount` for how much durability is gained.
-   * 
-   * Sample Values:
-   * Chestplate: [{"items":["minecraft:stick"],"repair_amount":"context.other->query.remaining_durability + 0.05 * context.other->query.max_durability"}]
-   *
-   *
-   * My Sword Chuck: [{"items":["minecraft:diamond"],"repair_amount":"query.max_durability * 0.25"}]
-   *
-   *
    */
   repair_items?: string;
 
@@ -2338,7 +2155,7 @@ export interface MinecraftItemV12190ComponentsMinecraftRepairable {
 
 
 /**
- * Item Components Shooter (minecraft:shooter)
+ * Item Shooter (minecraft:shooter)
  * Compels an item to shoot projectiles, similarly to a bow or
  * crossbow. Must have the minecraft:use_modifiers component in
  * order to function properly.
@@ -2357,10 +2174,6 @@ export interface MinecraftItemV12190ComponentsMinecraftShooter {
    * used as projectiles for this shooter. Each entry specifies the
    * item, whether to search the offhand, inventory, and whether to
    * use in creative mode.
-   * 
-   * Sample Values:
-   * My Sword Shoot: [{"item":"minecraft:snowball","use_offhand":true,"search_inventory":true,"use_in_creative":true}]
-   *
    */
   ammunition?: MinecraftItemV12190ComponentsMinecraftShooterAmmunition[];
 
@@ -2376,10 +2189,6 @@ export interface MinecraftItemV12190ComponentsMinecraftShooter {
    * The maximum time in seconds that a player can draw the shooter
    * before it automatically fires or reaches maximum power. Default is
    * 0.
-   * 
-   * Sample Values:
-   * My Sword Shoot: 1
-   *
    */
   max_draw_duration: number;
 
@@ -2388,10 +2197,6 @@ export interface MinecraftItemV12190ComponentsMinecraftShooter {
    * When true, the projectile's launch power increases based on how
    * long the player holds the use button before releasing. Default is
    * false.
-   * 
-   * Sample Values:
-   * My Sword Shoot: true
-   *
    */
   scale_power_by_draw_duration: boolean;
 
@@ -2399,8 +2204,12 @@ export interface MinecraftItemV12190ComponentsMinecraftShooter {
 
 
 /**
- * Item Components Ammunition (Ammunition)
- * Is ammunition for a shooter item.
+ * Item Ammunition (Ammunition)
+ * Configures this item as ammunition consumed by ranged weapons like
+ * bows and crossbows. Reference compatible shooter items and
+ * specify search behavior for inventory slots. When players use
+ * the associated weapon, this item is consumed and its projectile is
+ * launched.
  */
 export interface MinecraftItemV12190ComponentsMinecraftShooterAmmunition {
 
@@ -2432,7 +2241,7 @@ export interface MinecraftItemV12190ComponentsMinecraftShooterAmmunition {
 
 
 /**
- * Item Components Storage Item (minecraft:storage_item)
+ * Item Storage Item (minecraft:storage_item)
  * Enables an item to store data of the dynamic container associated with
  * it. A dynamic container is a container for storing items that is
  * linked to an item instead of a block or an entity.
@@ -2440,6 +2249,9 @@ export interface MinecraftItemV12190ComponentsMinecraftShooterAmmunition {
  * able to interact with the item's storage container the item must
  * have a `minecraft:bundle_interaction` item component 
  * defined.
+ * Note: Available without experimental toggle in 1.21.110.
+ * Note: In 1.26.0, equipping an item with this component into an
+ * armor or hand slot no longer deletes the storage contents.
  */
 export interface MinecraftItemV12190ComponentsMinecraftStorageItem {
 
@@ -2485,8 +2297,21 @@ export interface MinecraftItemV12190ComponentsMinecraftStorageItem {
    */
   max_slots?: number;
 
+}
+
+
+/**
+ * Item Storage Weight Limit (minecraft:storage_weight_limit)
+ * Specifies the maximum weight limit that a storage item can 
+ * hold.
+ * Note: Available without experimental toggle in 1.21.110.
+ */
+export interface MinecraftItemV12190ComponentsMinecraftStorageWeightLimit {
+
   /**
    * @remarks
+   * The maximum allowed weight of the sum of all contained items.
+   * Maximum is 64. Default is 64.
    * 
    * Sample Values:
    * Black Bundle: 64
@@ -2495,8 +2320,22 @@ export interface MinecraftItemV12190ComponentsMinecraftStorageItem {
    */
   max_weight_limit?: number;
 
+}
+
+
+/**
+ * Item Storage Weight Modifier 
+ * (minecraft:storage_weight_modifier)
+ * Specifies the maximum weight limit that a storage item can 
+ * hold.
+ * Note: Available without experimental toggle in 1.21.110.
+ */
+export interface MinecraftItemV12190ComponentsMinecraftStorageWeightModifier {
+
   /**
    * @remarks
+   * The weight of this item when inside another Storage Item. Default is
+   * 4. 0 means item is not allowed in another Storage Item.
    * 
    * Sample Values:
    * Black Bundle: 4
@@ -2509,43 +2348,7 @@ export interface MinecraftItemV12190ComponentsMinecraftStorageItem {
 
 
 /**
- * Item Components Storage Weight Limit
- * (minecraft:storage_weight_limit)
- * Specifies the maximum weight limit that a storage item can 
- * hold.
- */
-export interface MinecraftItemV12190ComponentsMinecraftStorageWeightLimit {
-
-  /**
-   * @remarks
-   * The maximum allowed weight of the sum of all contained items.
-   * Maximum is 64. Default is 64.
-   */
-  max_weight_limit?: number;
-
-}
-
-
-/**
- * Item Components Storage Weight Modifier
- * (minecraft:storage_weight_modifier)
- * Specifies the maximum weight limit that a storage item can 
- * hold.
- */
-export interface MinecraftItemV12190ComponentsMinecraftStorageWeightModifier {
-
-  /**
-   * @remarks
-   * The weight of this item when inside another Storage Item. Default is
-   * 4. 0 means item is not allowed in another Storage Item.
-   */
-  weight_in_storage_item?: number;
-
-}
-
-
-/**
- * Item Components Tags (minecraft:tags)
+ * Item Tags (minecraft:tags)
  * Determines which tags are included on a given item.
  */
 export interface MinecraftItemV12190ComponentsMinecraftTags {
@@ -2564,7 +2367,7 @@ export interface MinecraftItemV12190ComponentsMinecraftTags {
 
 
 /**
- * Item Components Throwable (minecraft:throwable)
+ * Item Throwable (minecraft:throwable)
  * Makes an item throwable by the player, similar to a snowball or
  * ender pearl. Use with minecraft:projectile to specify which entity
  * is spawned when thrown.
@@ -2583,7 +2386,6 @@ export interface MinecraftItemV12190ComponentsMinecraftThrowable {
    * Sample Values:
    * Wind Charge: true
    *
-   *
    */
   do_swing_animation?: boolean;
 
@@ -2594,8 +2396,6 @@ export interface MinecraftItemV12190ComponentsMinecraftThrowable {
    * 
    * Sample Values:
    * Wind Charge: 1.5
-   *
-   * My Sword Chuck: 1
    *
    */
   launch_power_scale?: number;
@@ -2614,8 +2414,6 @@ export interface MinecraftItemV12190ComponentsMinecraftThrowable {
    * 
    * Sample Values:
    * Wind Charge: 1.5
-   *
-   * My Sword Chuck: 1
    *
    */
   max_launch_power?: number;
@@ -2638,9 +2436,11 @@ export interface MinecraftItemV12190ComponentsMinecraftThrowable {
 
 
 /**
- * Item Components Use Modifiers (minecraft:use_modifiers)
+ * Item Use Modifiers (minecraft:use_modifiers)
  * Determines how long an item takes to use in combination with
  * components such as Shooter, Throwable, or Food.
+ * Note: Renamed from `chargeable` in 1.20.50 and available without an
+ * experimental toggle.
  */
 export interface MinecraftItemV12190ComponentsMinecraftUseModifiers {
 
@@ -2670,9 +2470,14 @@ export interface MinecraftItemV12190ComponentsMinecraftUseModifiers {
 
   /**
    * @remarks
-   * Controls how using the item triggers start using behavior. "if_first"
-   * only starts if no other component has started using yet; "always"
-   * always restarts using. Defaults to "if_first".
+   * When the player begins using the item. Use `always` to start as
+   * soon as the use action is triggered (default), or `on_attack` to
+   * start using only when an attack input is received while the item
+   * is selected.
+   * 
+   * Sample Values:
+   * Apple: "always"
+   *
    */
   start_using?: string;
 
@@ -2827,10 +2632,12 @@ export enum MinecraftItemV12190ComponentsMinecraftUseModifiersStartSound {
   bubbleUp = `bubble.up`,
   bubbleUpinside = `bubble.upinside`,
   bucketEmptyFish = `bucket.empty.fish`,
+  bucketEmptyLandAnimal = `bucket.empty.land_animal`,
   bucketEmptyLava = `bucket.empty.lava`,
   bucketEmptyPowderSnow = `bucket.empty.powder_snow`,
   bucketEmptyWater = `bucket.empty.water`,
   bucketFillFish = `bucket.fill.fish`,
+  bucketFillLandAnimal = `bucket.fill.land_animal`,
   bucketFillLava = `bucket.fill.lava`,
   bucketFillPowderSnow = `bucket.fill.powder_snow`,
   bucketFillWater = `bucket.fill.water`,
@@ -2925,6 +2732,10 @@ export enum MinecraftItemV12190ComponentsMinecraftUseModifiersStartSound {
   freeze = `freeze`,
   fuse = `fuse`,
   gallop = `gallop`,
+  geyserContinuousEruptionActive = `geyser_continuous_eruption_active`,
+  geyserContinuousEruptionStart = `geyser_continuous_eruption_start`,
+  geyserEruptionActive = `geyser_eruption_active`,
+  geyserEruptionStart = `geyser_eruption_start`,
   glass = `glass`,
   glowSquidInkSquirt = `glow_squid.ink_squirt`,
   glowstickUse = `glowstick.use`,
@@ -3145,6 +2956,7 @@ export enum MinecraftItemV12190ComponentsMinecraftUseModifiersStartSound {
   record13 = `record.13`,
   record5 = `record.5`,
   recordBlocks = `record.blocks`,
+  recordBounce = `record.bounce`,
   recordCat = `record.cat`,
   recordChirp = `record.chirp`,
   recordCreator = `record.creator`,
@@ -3153,6 +2965,7 @@ export enum MinecraftItemV12190ComponentsMinecraftUseModifiersStartSound {
   recordLavaChicken = `record.lava_chicken`,
   recordMall = `record.mall`,
   recordMellohi = `record.mellohi`,
+  recordNull = `record.null`,
   recordOtherside = `record.otherside`,
   recordPigstep = `record.pigstep`,
   recordPrecipice = `record.precipice`,
@@ -3259,24 +3072,21 @@ export enum MinecraftItemV12190ComponentsMinecraftUseModifiersStartUsing {
 
 
 /**
- * Item Components Wearable (minecraft:wearable)
+ * Item Wearable (minecraft:wearable)
  * Sets the wearable item component, which allows an item to be
  * worn by a player in a specified equipment slot.
  * Note: Valid equipment slots are: slot.armor.head, slot.armor.chest,
  * slot.armor.legs, slot.armor.feet, slot.armor.body, and
  * slot.weapon.offhand. When a non-hand armor slot is used, the max
  * stack size is automatically set to 1.
+ * Note: Fixed in format version 1.26.30: when a non-hand slot is
+ * selected, `minecraft:wearable` no longer silently overrides an
+ * explicit `minecraft:max_stack_size` of 1. Custom items can again
+ * declare their own stack size alongside an armor slot without
+ * producing inconsistent behavior.
  */
 export interface MinecraftItemV12190ComponentsMinecraftWearable {
 
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Chestplate: true
-   *
-   *
-   */
   dispensable?: boolean;
 
   /**
@@ -3298,14 +3108,6 @@ export interface MinecraftItemV12190ComponentsMinecraftWearable {
    * @remarks
    * Specifies where the item can be worn. If any non-hand slot is
    * chosen, the max stack size is set to 1.
-   * 
-   * Sample Values:
-   * Chestplate: "slot.armor.chest"
-   *
-   * Crown: "slot.armor.head"
-   *
-   * My Boots: "slot.armor.feet"
-   *
    */
   slot: string;
 

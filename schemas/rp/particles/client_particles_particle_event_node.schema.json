@@ -35,7 +35,7 @@
     },
     "particle_effect": {
       "title": "Particle Effect",
-      "description": "\n\nProperties:\n• effect (object)\n• pre_effect_expression = 0\n• type (string)",
+      "description": "\n\nProperties:\n• effect (string)\n• pre_effect_expression = 0\n• type (string)",
       "$ref": "./client_particles_particle_visual_effect_event.schema.json",
       "defaultSnippets": [
         {

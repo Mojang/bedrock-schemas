@@ -29,6 +29,6 @@ export default interface MinecraftCubemapIdentifier {
    * @remarks
    * Identifier of cubemap definition to use
    */
-  cubemap_identifier: object;
+  cubemap_identifier: string;
 
 }

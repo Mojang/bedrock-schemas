@@ -30,6 +30,6 @@ export default interface ParticleCurveLinear {
 
   nodes: { [key: string]: string };
 
-  type: object;
+  type: string;
 
 }

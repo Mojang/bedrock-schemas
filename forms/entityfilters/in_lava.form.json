@@ -78,7 +78,7 @@
             "content": "=="
           }
         ],
-        "/vanilla/behavior_pack/entities/arrow.json": [
+        "/vanilla/behavior_pack/entities/bat.json": [
           {
             "path": "/minecraft:entity/components/minecraft:hurt_on_condition/damage_conditions[0]/filters/",
             "content": "=="
@@ -157,7 +157,7 @@
             "content": true
           }
         ],
-        "/vanilla/behavior_pack/entities/arrow.json": [
+        "/vanilla/behavior_pack/entities/bat.json": [
           {
             "path": "/minecraft:entity/components/minecraft:hurt_on_condition/damage_conditions[0]/filters/",
             "content": true
@@ -228,10 +228,7 @@
       {
         "path": "/minecraft:entity/components/minecraft:hurt_on_condition/damage_conditions[0]/filters/",
         "content": {
-          "operator": "==",
-          "test": "in_lava",
-          "subject": "self",
-          "value": true
+          "test": "in_lava"
         }
       }
     ],

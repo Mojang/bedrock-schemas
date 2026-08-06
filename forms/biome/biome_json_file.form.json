@@ -31,5 +31,6 @@
   ],
   "description": "Contains a format version and a biome definition",
   "title": "Biome JSON File",
-  "id": "Biome JSON File"
+  "id": "Biome JSON File",
+  "dataVersion": "1.26.30"
 }

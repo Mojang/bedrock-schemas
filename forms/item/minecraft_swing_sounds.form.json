@@ -2289,7 +2289,8 @@
           "id": "wind_charge.burst",
           "title": "Wind charge.burst"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "attack_hit",
@@ -4565,7 +4566,8 @@
           "id": "wind_charge.burst",
           "title": "Wind charge.burst"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "attack_miss",
@@ -6841,10 +6843,12 @@
           "id": "wind_charge.burst",
           "title": "Wind charge.burst"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     }
   ],
   "description": "Overrides the swing sounds emitted by the user.",
   "title": "Item Swing Sounds",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.21.90"
 }

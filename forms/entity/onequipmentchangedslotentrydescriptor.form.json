@@ -50,6 +50,7 @@
           "title": "Slot.weapon.offhand"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "slot.weapon.mainhand"
     }
   ],

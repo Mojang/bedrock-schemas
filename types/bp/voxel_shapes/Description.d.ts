@@ -18,6 +18,6 @@ import * as jsoncommon from '../../common';
  */
 export default interface Description {
 
-  identifier: object;
+  identifier: string;
 
 }

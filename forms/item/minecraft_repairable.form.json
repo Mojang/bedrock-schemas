@@ -101,5 +101,6 @@
       }
     ]
   },
-  "title": "Item Repairable"
+  "title": "Item Repairable",
+  "dataVersion": "1.20.50"
 }

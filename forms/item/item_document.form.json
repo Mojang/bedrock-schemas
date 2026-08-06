@@ -6,6 +6,7 @@
       "title": "Components",
       "description": "List of all components used in this item.",
       "dataType": "object",
+      "minLength": 1,
       "subFormId": "item/item_components",
       "isRequired": true
     },
@@ -18,5 +19,6 @@
       "isRequired": true
     }
   ],
-  "title": "Item Document"
+  "title": "Item Document",
+  "dataVersion": "1.26.30"
 }

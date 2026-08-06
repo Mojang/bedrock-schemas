@@ -50,5 +50,6 @@
   "description": "Allows the squid to swim away.",
   "title": "Entity Squid Flee Behavior",
   "samples": {},
-  "id": "minecraft:behavior.squid_flee"
+  "id": "minecraft:behavior.squid_flee",
+  "dataVersion": "1.26.40"
 }

@@ -125,11 +125,13 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self",
       "description": "The target of the event."
     }
   ],
   "description": "Adds a trigger to call when this entity is set on fire.",
   "title": "Entity On Ignite",
-  "id": "minecraft:on_ignite"
+  "id": "minecraft:on_ignite",
+  "dataVersion": "1.26.40"
 }

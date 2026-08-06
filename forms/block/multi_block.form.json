@@ -36,6 +36,7 @@
           "title": "West"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {

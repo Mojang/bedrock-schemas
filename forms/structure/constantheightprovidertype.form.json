@@ -22,12 +22,10 @@
         {
           "id": "constant",
           "title": "Constant"
-        },
-        {
-          "id": "uniform",
-          "title": "Uniform"
         }
       ],
+      "mustMatchChoices": true,
+      "defaultValue": "constant",
       "isRequired": true
     },
     {
@@ -39,5 +37,6 @@
     }
   ],
   "description": "Constant anchor point",
-  "title": "Structure ConstantHeightProviderType"
+  "title": "Structure ConstantHeightProviderType",
+  "dataVersion": "1.21.20"
 }

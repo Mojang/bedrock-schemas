@@ -50,5 +50,6 @@
   "description": "Allows the squid to stick to the ground when outside water.",
   "title": "Entity Squid Out Of Water Behavior",
   "samples": {},
-  "id": "minecraft:behavior.squid_out_of_water"
+  "id": "minecraft:behavior.squid_out_of_water",
+  "dataVersion": "1.26.40"
 }

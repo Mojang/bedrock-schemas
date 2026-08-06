@@ -55,7 +55,8 @@
       "alternates": [
         {
           "id": "block",
-          "dataType": "string"
+          "dataType": "string",
+          "minLength": 1
         },
         {
           "id": "block",

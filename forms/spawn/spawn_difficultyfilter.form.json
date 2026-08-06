@@ -50,6 +50,7 @@
           "title": "Peaceful"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "hard"
     },
     {
@@ -74,6 +75,7 @@
           "title": "Peaceful"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "peaceful"
     }
   ]

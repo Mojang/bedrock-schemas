@@ -50,5 +50,6 @@
   "description": "Allows the squid to dive down in water.",
   "title": "Entity Squid Dive Behavior",
   "samples": {},
-  "id": "minecraft:behavior.squid_dive"
+  "id": "minecraft:behavior.squid_dive",
+  "dataVersion": "1.26.40"
 }

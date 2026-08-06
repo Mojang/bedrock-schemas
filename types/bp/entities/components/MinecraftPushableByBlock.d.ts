@@ -11,7 +11,7 @@
  * 
  * minecraft:pushable_by_block Samples
 
-Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/boat.json
+Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
 
 "minecraft:pushable_by_block": {}
 

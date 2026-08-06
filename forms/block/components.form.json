@@ -361,7 +361,7 @@
       "id": "minecraft:display_name",
       "title": "Minecraft Display Name",
       "description": "Specifies the language file key that maps to what text will be displayed when you hover over the block in your inventory and hotbar. If the string given can not be resolved as a loc string, the raw string given will be displayed. If this component is omitted, the name of the block will be used as the display name.",
-      "dataType": "object"
+      "dataType": "string"
     },
     {
       "id": "minecraft:embedded_visual",
@@ -420,6 +420,7 @@
                     "title": "Never"
                   }
                 ],
+                "mustMatchChoices": true,
                 "defaultValue": "never"
               }
             ]
@@ -437,7 +438,7 @@
       "id": "minecraft:friction",
       "title": "Minecraft Friction",
       "description": "Describes the friction for this block in a range of (0.0-0.9). Friction affects an entity's movement speed when it travels on the block. Greater value results in more friction.",
-      "dataType": "object"
+      "dataType": "number"
     },
     {
       "id": "minecraft:geometry",
@@ -458,6 +459,7 @@
                 "description": "A JSON object that contains a list of key/value pairs that map from bone name in the specified geometry file (key) to a Molang expression that tells whether the bone should be visible or not (value). The expression is limited to using the \"query.block_state()\" query. When using \"bone_visibility\" in geometry components in the \"permutations\" section, you must also have a default version of the geometry component with \"bone_visibility\" in the \"components\" section.",
                 "dataType": "keyedStringCollection",
                 "defaultValue": {},
+                "maxLength": 64,
                 "alternates": [
                   {
                     "id": "bone_visibility",
@@ -475,17 +477,21 @@
                 "title": "Culling",
                 "description": "Which block_culling .json file to use when rendering this block.",
                 "dataType": "string",
-                "defaultValue": ""
+                "defaultValue": "",
+                "maxLength": 256
               },
               {
                 "id": "culling_layer",
                 "title": "Culling Layer",
                 "description": "A string that allows culling rule to group multiple blocks together when comparing them. When using the minecraft namespace, the only allowed culling layer identifiers are : \"minecraft:culling_layer.undefined\" or \"minecraft:culling_layer.leaves\". When using no namespaces or a custom one, the names must start and end with an alpha-numeric character.",
                 "dataType": "string",
+                "minLength": 1,
+                "maxLength": 256,
                 "validity": [
                   {
                     "comparison": "pattern",
-                    "value": "^(?:minecraft:culling_layer.undefined|minecraft:culling_layer.leaves|(?!minecraft:)[a-z0-9].*[a-z0-9])$"
+                    "value": "^(?:minecraft:culling_layer.undefined|minecraft:culling_layer.leaves|(?!minecraft:)[a-z0-9].*[a-z0-9])$",
+                    "patternFlags": "i"
                   }
                 ]
               },
@@ -495,10 +501,12 @@
                 "description": "Currently only available with the VoxelShape experiment on. The voxel shape used for culling adjacent block faces. Voxel shapes work together with culling rules and will not function if there is no culling rule defined for the block. Only adjacent blocks with voxel shapes will occlude using this shape. Blocks using \\\"minecraft:geometry.full_block\\\" always use the unit cube shape and will ignore custom shapes if specified. When using the minecraft namespace, the only currently available culling shape identifiers are : \\\"minecraft:empty\\\" or \\\"minecraft:unit_cube\\\". When using no namespaces or a custom one, the names must start and end with an alpha-numeric character.",
                 "dataType": "string",
                 "defaultValue": "",
+                "maxLength": 256,
                 "validity": [
                   {
                     "comparison": "pattern",
-                    "value": "^(?:minecraft:empty|minecraft:unit_cube|(?!minecraft:)[a-z0-9].*[a-z0-9])$"
+                    "value": "^(?:minecraft:empty|minecraft:unit_cube|(?!minecraft:)[a-z0-9].*[a-z0-9])$",
+                    "patternFlags": "i"
                   }
                 ]
               },
@@ -507,6 +515,7 @@
                 "title": "Identifier",
                 "description": "The description identifier of the geometry to use to render this block. This identifier must either match an existing geometry identifier in any of the loaded resource packs or be one of the currently supported Vanilla identifiers: \"minecraft:geometry.full_block\" or \"minecraft:geometry.cross\".",
                 "dataType": "string",
+                "maxLength": 256,
                 "isRequired": true
               },
               {
@@ -532,7 +541,9 @@
       "id": "minecraft:instrument_sound",
       "title": "Minecraft Instrument Sound",
       "description": "This defines what sound will play based on above or below relative position to a note block.\nAn instrument can be assigned to the \"up\" and \"down\" faces where at least one face needs to be defined for the component to be valid.\nIf either face is undefined, or the component is omitted, it will use its default values: \"up\" = \"note.harp\" and \"down\" = \"note.none\".\n\"note.none\" can be used to specify no sound for a face.",
-      "dataType": "object"
+      "dataType": "object",
+      "maxLength": 2,
+      "minLength": 1
     },
     {
       "id": "minecraft:item_visual",
@@ -565,7 +576,8 @@
       "id": "minecraft:material_instances",
       "title": "Minecraft Material Instances",
       "description": "The material instances for a block.\nMaps face or material_instance names in a geometry file to an actual material instance. Material instance can either be a full material instance or a name to another already defined instance.\nLimited to 64 instances.",
-      "dataType": "object"
+      "dataType": "object",
+      "maxLength": 64
     },
     {
       "id": "minecraft:movable",
@@ -811,5 +823,6 @@
     }
   ],
   "description": "Container for all components that define custom block behavior and properties. Components control collision, selection boxes, destruction time, light emission, flammability, placement rules, crafting table functionality, and more. Combine components to create unique blocks with specific gameplay characteristics.",
-  "title": "Block Components"
+  "title": "Block Components",
+  "dataVersion": "1.26.20"
 }

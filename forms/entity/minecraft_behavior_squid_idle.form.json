@@ -50,5 +50,6 @@
   "description": "Allows the squid to swim in place idly.",
   "title": "Entity Squid Idle Behavior",
   "samples": {},
-  "id": "minecraft:behavior.squid_idle"
+  "id": "minecraft:behavior.squid_idle",
+  "dataVersion": "1.26.40"
 }

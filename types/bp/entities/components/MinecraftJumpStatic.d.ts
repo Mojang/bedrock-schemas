@@ -20,7 +20,7 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Static Jump (minecraft:jump.static)
+ * Entity Static Jump (minecraft:jump.static)
  * Gives the entity the ability to jump.
  */
 export default interface MinecraftJumpStatic {

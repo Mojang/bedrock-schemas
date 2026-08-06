@@ -17,7 +17,7 @@
     {
       "id": "uuid",
       "title": "Uuid",
-      "dataType": "object",
+      "dataType": "string",
       "validity": [
         {
           "comparison": "pattern",

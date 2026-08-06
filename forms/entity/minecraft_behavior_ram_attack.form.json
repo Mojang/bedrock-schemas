@@ -2565,6 +2565,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "undefined",
       "samples": {
         "/vanilla/behavior_pack/entities/goat.json": [
@@ -4892,6 +4893,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "undefined",
       "samples": {
         "/vanilla/behavior_pack/entities/goat.json": [

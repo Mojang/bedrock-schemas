@@ -67,7 +67,7 @@
     {
       "id": "type",
       "title": "Type",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     }
   ],

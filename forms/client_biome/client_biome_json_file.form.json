@@ -31,5 +31,6 @@
     }
   ],
   "description": "Contains a format version and a Client Biome definition",
-  "title": "Client Biome JSON File"
+  "title": "Client Biome JSON File",
+  "dataVersion": "1.21.90"
 }

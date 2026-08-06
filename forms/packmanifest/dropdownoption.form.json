@@ -18,12 +18,14 @@
       "id": "name",
       "title": "Name",
       "dataType": "string",
+      "minLength": 1,
       "isRequired": true
     },
     {
       "id": "text",
       "title": "Text",
       "dataType": "string",
+      "minLength": 1,
       "isRequired": true
     }
   ],

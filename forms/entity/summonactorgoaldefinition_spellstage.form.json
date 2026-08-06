@@ -51,6 +51,7 @@
           "title": "Line"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "line"
     },
     {
@@ -2335,6 +2336,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "undefined"
     },
     {
@@ -2372,6 +2374,7 @@
           "title": "Target"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "self"
     }
   ],

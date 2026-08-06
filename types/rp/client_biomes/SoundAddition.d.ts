@@ -22,7 +22,7 @@ export default interface SoundAddition {
    * @remarks
    * Name of the sound asset to play
    */
-  asset: object;
+  asset: string;
 
   /**
    * @remarks

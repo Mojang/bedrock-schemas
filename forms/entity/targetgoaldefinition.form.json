@@ -237,5 +237,6 @@
     }
   ],
   "description": "Configures conditions for AI targeting goals like nearest_attackable_target or hurt_by_target. Defines filters that potential targets must pass, reselection timing, and target persistence. Controls which entities the mob will aggro on, how long it remembers targets, and when it switches to new threats.",
-  "title": "Entity TargetGoalDefinition"
+  "title": "Entity TargetGoalDefinition",
+  "dataVersion": "1.26.0"
 }

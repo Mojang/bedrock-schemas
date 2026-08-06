@@ -21,7 +21,8 @@
       "title": "Group",
       "description": "The Creative Group that this item belongs to. Group name is limited to 256 characters. The name also must start with a namespace.",
       "type": "string",
-      "pattern": "^(?:.)+:(?:.)+$"
+      "pattern": "^(?:.)+:(?:.)+$",
+      "maxLength": 256
     },
     "is_hidden_in_commands": {
       "title": "Is Hidden In Commands",

@@ -32,6 +32,13 @@ Armor Stand - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
   "value": true
 }
 
+
+Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
+
+{
+  "test": "in_lava"
+}
+
  */
 
 import * as jsoncommon from '../../../common';

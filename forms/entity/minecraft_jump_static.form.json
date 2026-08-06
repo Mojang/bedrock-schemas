@@ -93,12 +93,12 @@
       "id": "jump_power",
       "title": "Jump Power",
       "description": "The initial vertical velocity for the jump.",
-      "defaultValue": 0.42,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 0.41999998688697815
     }
   ],
   "description": "Gives the entity the ability to jump.",
-  "title": "Static Jump",
+  "title": "Entity Static Jump",
   "samples": {
     "/vanilla/behavior_pack/entities/allay.json": [
       {
@@ -131,5 +131,6 @@
       }
     ]
   },
-  "id": "minecraft:jump.static"
+  "id": "minecraft:jump.static",
+  "dataVersion": "1.26.40"
 }

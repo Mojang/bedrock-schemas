@@ -267,7 +267,7 @@ export interface BiomeDefinitionComponentsMinecraftCreatureSpawnProbability {
 
   /**
    * @remarks
-   * Probabiltity between [0.0, 0.75] of creatures spawning within the
+   * Probability between [0.0, 0.75] of creatures spawning within the
    * biome on chunk generation.
    */
   probability?: number;
@@ -603,6 +603,8 @@ export interface BiomeDefinitionComponentsMinecraftReplaceBiomes {
  * Biome Replacement (Biome Replacement)
  * Represents the replacement information used to determine the
  * placement of the overriding biome.
+ * Note: Custom partial biome replacement is available without
+ * experimental toggle in 1.21.110.
  */
 export interface BiomeDefinitionComponentsMinecraftReplaceBiomesReplacements {
 
@@ -642,8 +644,14 @@ export interface BiomeDefinitionComponentsMinecraftReplaceBiomesReplacements {
 
 
 /**
- * Biome Surface Builder (minecraft:surface_builder)
- * Controls materials used for terrain generation.
+ * Subsurface Builder (minecraft:subsurface_builder)
+ * Sub Surface Builders allow specifying a
+ * `minecraft:surface_builder` to be applied to biomes located
+ * underneath regular terrain surface. Note, however, that
+ * pre-existing surface builder types' processing have not been
+ * updated to accommodate the ability to specify them for
+ * sub-terrain height ranges, which may lead to unexpected results when
+ * using them.
  */
 export interface BiomeDefinitionComponentsMinecraftSubsurfaceBuilder {
 
@@ -652,75 +660,8 @@ export interface BiomeDefinitionComponentsMinecraftSubsurfaceBuilder {
    * Controls block types and strategy used for terrain 
    * generation.
    */
-  builder: BiomeDefinitionComponentsMinecraftSubsurfaceBuilderBuilder;
+  builder: object;
 
-}
-
-
-/**
- * Biome Overworld (minecraft:overworld)
- * Controls the blocks used for the default Minecraft Overworld terrain
- * generation.
- */
-export interface BiomeDefinitionComponentsMinecraftSubsurfaceBuilderBuilder {
-
-  /**
-   * @remarks
-   * Controls the block type used deep underground in this biome.
-   */
-  foundation_material: string;
-
-  /**
-   * @remarks
-   * Controls the block type used in a layer below the surface of
-   * this biome.
-   */
-  mid_material: string;
-
-  /**
-   * @remarks
-   * Controls how deep below the world water level the floor should
-   * occur.
-   */
-  sea_floor_depth: number;
-
-  /**
-   * @remarks
-   * Controls the block type used as a floor for bodies of water in
-   * this biome.
-   */
-  sea_floor_material: string;
-
-  /**
-   * @remarks
-   * Controls the block type used for the bodies of water in this
-   * biome.
-   */
-  sea_material: string;
-
-  /**
-   * @remarks
-   * Controls the block type used for the surface of this biome.
-   */
-  top_material: string;
-
-  /**
-   * @remarks
-   * Controls the type of surface builder to use.
-   */
-  type: string;
-
-}
-
-
-export enum BiomeDefinitionComponentsMinecraftSubsurfaceBuilderBuilderType {
-  minecraftCapped = `minecraft:capped`,
-  minecraftFrozenOcean = `minecraft:frozen_ocean`,
-  minecraftMesa = `minecraft:mesa`,
-  minecraftNoiseGradient = `minecraft:noise_gradient`,
-  minecraftOverworld = `minecraft:overworld`,
-  minecraftSwamp = `minecraft:swamp`,
-  minecraftTheEnd = `minecraft:the_end`
 }
 
 
@@ -1001,6 +942,9 @@ export interface BiomeDefinitionComponentsMinecraftTags {
 /**
  * Biome Village Type (minecraft:village_type)
  * Determines the type of village for the Biome.
+ * Note: Biome component added in 1.26.0 that determines the type of
+ * village (default, desert, ice, savanna, or taiga) that generates in
+ * this biome.
  */
 export interface BiomeDefinitionComponentsMinecraftVillageType {
 

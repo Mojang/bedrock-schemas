@@ -32,5 +32,6 @@
   ],
   "description": "Contains a description and components to define a Biome.",
   "title": "Biome Definition",
-  "id": "Biome Definition"
+  "id": "Biome Definition",
+  "dataVersion": "1.26.30"
 }

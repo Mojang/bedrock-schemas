@@ -239,6 +239,7 @@
           "title": "World surface"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "none"
     },
     {
@@ -256,6 +257,7 @@
           "title": "Ignore waterlogging"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "apply_waterlogging"
     },
     {
@@ -349,7 +351,7 @@
       "id": "start_pool",
       "title": "Start Pool",
       "description": "The first Template Pool to use when generating the Jigsaw Structure.",
-      "dataType": "object",
+      "dataType": "string",
       "isRequired": true
     },
     {
@@ -403,6 +405,7 @@
           "title": "Vegetal decoration"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {
@@ -432,10 +435,12 @@
           "title": "None"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "none"
     }
   ],
   "description": "A Jigsaw Structure is a group of Structure Templates that make up a larger structure. Jigsaw Structures are placed during world generation.",
   "title": "World JigsawStructure",
-  "id": "JigsawStructure"
+  "id": "JigsawStructure",
+  "dataVersion": "1.21.20"
 }

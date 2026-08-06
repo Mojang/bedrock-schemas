@@ -23,5 +23,6 @@
     }
   ],
   "description": "Registers jigsaw structure metadata by location.",
-  "title": "Structure Jigsaw Structure Metadata Registry"
+  "title": "Structure Jigsaw Structure Metadata Registry",
+  "dataVersion": "1.21.80"
 }

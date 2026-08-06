@@ -92,5 +92,6 @@
       "defaultValue": 0
     }
   ],
-  "title": "Entity TimerActorFlagBaseGoalDefinition"
+  "title": "Entity TimerActorFlagBaseGoalDefinition",
+  "dataVersion": "1.26.0"
 }

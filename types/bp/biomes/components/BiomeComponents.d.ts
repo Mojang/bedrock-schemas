@@ -99,7 +99,7 @@ export default interface BiomeComponents {
    * sub-terrain height ranges, which may lead to unexpected results when
    * using them.
    */
-  "minecraft:subsurface_builder"?: object;
+  "minecraft:subsurface_builder"?: BiomeComponentsMinecraftSubsurfaceBuilder;
 
   /**
    * @remarks
@@ -246,7 +246,7 @@ export interface BiomeComponentsMinecraftCreatureSpawnProbability {
 
   /**
    * @remarks
-   * Probabiltity between [0.0, 0.75] of creatures spawning within the
+   * Probability between [0.0, 0.75] of creatures spawning within the
    * biome on chunk generation.
    */
   probability?: number;
@@ -582,6 +582,8 @@ export interface BiomeComponentsMinecraftReplaceBiomes {
  * Biome Replacement (Biome Replacement)
  * Represents the replacement information used to determine the
  * placement of the overriding biome.
+ * Note: Custom partial biome replacement is available without
+ * experimental toggle in 1.21.110.
  */
 export interface BiomeComponentsMinecraftReplaceBiomesReplacements {
 
@@ -616,6 +618,28 @@ export interface BiomeComponentsMinecraftReplaceBiomesReplacements {
    * Target biomes must not contain namespaces.
    */
   targets: object[];
+
+}
+
+
+/**
+ * Subsurface Builder (minecraft:subsurface_builder)
+ * Sub Surface Builders allow specifying a
+ * `minecraft:surface_builder` to be applied to biomes located
+ * underneath regular terrain surface. Note, however, that
+ * pre-existing surface builder types' processing have not been
+ * updated to accommodate the ability to specify them for
+ * sub-terrain height ranges, which may lead to unexpected results when
+ * using them.
+ */
+export interface BiomeComponentsMinecraftSubsurfaceBuilder {
+
+  /**
+   * @remarks
+   * Controls block types and strategy used for terrain 
+   * generation.
+   */
+  builder: object;
 
 }
 
@@ -897,6 +921,9 @@ export interface BiomeComponentsMinecraftTags {
 /**
  * Biome Village Type (minecraft:village_type)
  * Determines the type of village for the Biome.
+ * Note: Biome component added in 1.26.0 that determines the type of
+ * village (default, desert, ice, savanna, or taiga) that generates in
+ * this biome.
  */
 export interface BiomeComponentsMinecraftVillageType {
 

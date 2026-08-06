@@ -35,6 +35,8 @@ export default interface MinecraftReplaceBiomes {
  * Biome Replacement (Biome Replacement)
  * Represents the replacement information used to determine the
  * placement of the overriding biome.
+ * Note: Custom partial biome replacement is available without
+ * experimental toggle in 1.21.110.
  */
 export interface MinecraftReplaceBiomesReplacements {
 

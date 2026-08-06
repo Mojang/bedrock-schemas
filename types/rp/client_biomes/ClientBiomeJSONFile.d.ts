@@ -227,8 +227,8 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftBiome
 
   /**
    * @remarks
-   * Multiplier temporarily and gradually applied to music volume when
-   * within this biome. Must be a value between 0 and 1, 
+   * Multiplier gradually applied to music volume when the audio
+   * listener is inside this biome. Must be between 0 and 1,
    * inclusive.
    */
   volume_multiplier?: number;

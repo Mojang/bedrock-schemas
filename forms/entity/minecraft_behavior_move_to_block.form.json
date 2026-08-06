@@ -225,6 +225,7 @@
           "title": "Random"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "nearest"
     },
     {
@@ -238,5 +239,6 @@
   "description": "Allows mob to move towards a block.",
   "title": "Entity Move To Block Behavior",
   "samples": {},
-  "id": "minecraft:behavior.move_to_block"
+  "id": "minecraft:behavior.move_to_block",
+  "dataVersion": "1.26.40"
 }

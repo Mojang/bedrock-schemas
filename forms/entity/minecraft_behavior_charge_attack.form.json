@@ -2336,6 +2336,7 @@
           "title": "Wind charge.burst"
         }
       ],
+      "mustMatchChoices": true,
       "defaultValue": "charge"
     },
     {

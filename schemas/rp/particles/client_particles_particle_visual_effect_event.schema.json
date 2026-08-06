@@ -6,7 +6,7 @@
   "properties": {
     "effect": {
       "title": "Effect",
-      "type": "object"
+      "type": "string"
     },
     "pre_effect_expression": {
       "anyOf": [
