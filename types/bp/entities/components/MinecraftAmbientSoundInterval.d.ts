@@ -30,22 +30,63 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 }
 
 
-Warden - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/warden.json
+Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/breeze.json
 
 "minecraft:ambient_sound_interval": {
   "event_name": "ambient",
   "event_names": [
     {
-      "condition": "query.anger_level(this) >= 80",
-      "event_name": "angry"
-    },
-    {
-      "condition": "query.anger_level(this) >= 40",
-      "event_name": "agitated"
+      "condition": "!query.is_on_ground",
+      "event_name": "ambient.in.air"
     }
   ],
-  "range": 4,
-  "value": 2
+  "range": 16,
+  "value": 8
+}
+
+
+Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/chicken.json
+
+"minecraft:ambient_sound_interval": {
+  "event_name": "ambient",
+  "event_names": [
+    {
+      "condition": "query.is_baby",
+      "event_name": "ambient.baby"
+    }
+  ],
+  "range": 16,
+  "value": 6
+}
+
+
+Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/dolphin.json
+
+"minecraft:ambient_sound_interval": {
+  "event_name": "ambient",
+  "event_names": [
+    {
+      "condition": "query.head_is_in_water",
+      "event_name": "ambient.in.water"
+    }
+  ],
+  "range": 16,
+  "value": 6
+}
+
+
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+"minecraft:ambient_sound_interval": {
+  "event_name": "ambient",
+  "event_names": [
+    {
+      "condition": "query.head_is_in_water",
+      "event_name": "ambient.in.water"
+    }
+  ],
+  "range": 16,
+  "value": 8
 }
 
  */
@@ -78,7 +119,7 @@ export default interface MinecraftAmbientSoundInterval {
    * Sample Values:
    * Allay: [{"condition":"query.is_using_item","event_name":"ambient.tame"},{"condition":"!query.is_using_item","event_name":"ambient"}]
    *
-   * Warden: [{"condition":"query.anger_level(this) >= 80","event_name":"angry"},{"condition":"query.anger_level(this) >= 40","event_name":"agitated"}]
+   * Breeze: [{"condition":"!query.is_on_ground","event_name":"ambient.in.air"}]
    *
    */
   event_names?: MinecraftAmbientSoundIntervalEventNames[];
@@ -87,12 +128,6 @@ export default interface MinecraftAmbientSoundInterval {
    * @remarks
    * Maximum time in seconds to randomly add to the ambient sound delay
    * time.
-   * 
-   * Sample Values:
-   * Allay: 5
-   *
-   * Warden: 4
-   *
    */
   range?: number;
 
@@ -100,12 +135,6 @@ export default interface MinecraftAmbientSoundInterval {
    * @remarks
    * Minimum time in seconds before the entity plays its ambient sound
    * again.
-   * 
-   * Sample Values:
-   * Allay: 5
-   *
-   * Warden: 2
-   *
    */
   value?: number;
 

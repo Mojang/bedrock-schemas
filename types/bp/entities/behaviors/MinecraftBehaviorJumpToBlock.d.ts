@@ -14,20 +14,26 @@
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
 "minecraft:behavior.jump_to_block": {
-  "cooldown_range": [
-    5,
-    7
-  ],
+  "cooldown_range": {
+    "min": 5,
+    "max": 7
+  },
   "priority": 10,
   "max_velocity": 1,
   "forbidden_blocks": [
-    "minecraft:water"
+    {
+      "name": "minecraft:water"
+    }
   ],
   "minimum_distance": 1,
   "minimum_path_length": 2,
   "preferred_blocks": [
-    "minecraft:waterlily",
-    "minecraft:big_dripleaf"
+    {
+      "name": "minecraft:waterlily"
+    },
+    {
+      "name": "minecraft:big_dripleaf"
+    }
   ],
   "preferred_blocks_chance": 0.5,
   "scale_factor": 0.6,
@@ -73,7 +79,7 @@ export default interface MinecraftBehaviorJumpToBlock {
    * between each attempted jump.
    * 
    * Sample Values:
-   * Frog: [5,7]
+   * Frog: {"min":5,"max":7}
    *
    * Goat: [30,60]
    *
@@ -85,7 +91,7 @@ export default interface MinecraftBehaviorJumpToBlock {
    * Blocks that the mob can't jump to.
    * 
    * Sample Values:
-   * Frog: ["minecraft:water"]
+   * Frog: [{"name":"minecraft:water"}]
    *
    */
   forbidden_blocks?: string;
@@ -130,7 +136,7 @@ export default interface MinecraftBehaviorJumpToBlock {
    * Blocks that the mob prefers jumping to.
    * 
    * Sample Values:
-   * Frog: ["minecraft:waterlily","minecraft:big_dripleaf"]
+   * Frog: [{"name":"minecraft:waterlily"},{"name":"minecraft:big_dripleaf"}]
    *
    */
   preferred_blocks?: string;

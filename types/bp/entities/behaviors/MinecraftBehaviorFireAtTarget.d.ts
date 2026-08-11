@@ -16,10 +16,10 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 "minecraft:behavior.fire_at_target": {
   "post_shoot_delay": 0.2,
   "attack_cooldown": 0.5,
-  "attack_range": [
-    0,
-    16
-  ],
+  "attack_range": {
+    "min": 0,
+    "max": 16
+  },
   "filters": {
     "all_of": [
       {
@@ -82,7 +82,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * happen.
    * 
    * Sample Values:
-   * Breeze: [0,16]
+   * Breeze: {"min":0,"max":16}
    *
    */
   attack_range?: MinecraftBehaviorFireAtTargetAttackRange;

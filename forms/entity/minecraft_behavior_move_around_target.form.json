@@ -62,10 +62,10 @@
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.move_around_target/",
-            "content": [
-              4,
-              8
-            ]
+            "content": {
+              "min": 4,
+              "max": 8
+            }
           }
         ]
       }
@@ -212,10 +212,10 @@
         "path": "/minecraft:entity/components/minecraft:behavior.move_around_target/",
         "content": {
           "destination_pos_spread_degrees": 360,
-          "destination_position_range": [
-            4,
-            8
-          ],
+          "destination_position_range": {
+            "min": 4,
+            "max": 8
+          },
           "priority": 3,
           "filters": {
             "all_of": [
@@ -231,6 +231,7 @@
               }
             ]
           },
+          "height_difference_limit": 0,
           "movement_speed": 1.2
         }
       }

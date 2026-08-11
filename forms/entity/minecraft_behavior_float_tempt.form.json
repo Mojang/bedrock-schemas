@@ -84,6 +84,5 @@
     }
   ],
   "description": "Allows a mob to be tempted by a player holding a specific item. Uses point-to-point movement. Designed for mobs that are floating (e.g. use the \"minecraft:navigation.float\" component).",
-  "title": "Float Tempt Behavior",
-  "samples": {}
+  "title": "Float Tempt Behavior"
 }

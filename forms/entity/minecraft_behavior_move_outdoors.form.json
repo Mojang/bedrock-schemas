@@ -85,6 +85,5 @@
   ],
   "description": "Allows this entity to move outdoors.",
   "title": "Entity Move Outdoors Behavior",
-  "samples": {},
   "id": "minecraft:behavior.move_outdoors"
 }

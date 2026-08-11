@@ -43,6 +43,5 @@
   ],
   "description": "Allows the mob to stay indoors during night time.",
   "title": "Entity Restrict Open Door Behavior",
-  "samples": {},
   "id": "minecraft:behavior.restrict_open_door"
 }

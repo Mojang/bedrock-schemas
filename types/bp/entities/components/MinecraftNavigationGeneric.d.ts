@@ -31,7 +31,8 @@ Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   "can_sink": false,
   "can_swim": true,
   "can_walk": true,
-  "is_amphibious": true
+  "is_amphibious": true,
+  "using_door_annotation": true
 }
 
  */

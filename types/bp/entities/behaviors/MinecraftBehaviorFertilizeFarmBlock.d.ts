@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.fertilize_farm_block
- * 
- * minecraft:behavior.fertilize_farm_block Samples
  */
 
 import * as jsoncommon from '../../../common';

@@ -336,6 +336,5 @@
     }
   ],
   "description": "A behavior that enables a mob to transport items from and to containers.",
-  "title": "Entity Transport Items Behavior",
-  "samples": {}
+  "title": "Entity Transport Items Behavior"
 }

@@ -48,6 +48,5 @@
   ],
   "description": "Defines sets of items that can be used to trigger events when used on this entity. The item will also be taken and placed in the entity's inventory.",
   "title": "Giveable",
-  "samples": {},
   "id": "minecraft:giveable"
 }

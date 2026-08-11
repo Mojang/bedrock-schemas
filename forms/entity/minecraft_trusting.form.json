@@ -48,6 +48,5 @@
   ],
   "description": "Defines the rules for a mob to trust players.",
   "title": "Trusting",
-  "samples": {},
   "id": "minecraft:trusting"
 }

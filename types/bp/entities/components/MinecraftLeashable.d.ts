@@ -37,6 +37,13 @@ Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   ]
 }
 
+
+Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/chicken.json
+
+"minecraft:leashable": {
+  "unleash_on_removal": false
+}
+
  */
 
 import * as jsoncommon from '../../../common';

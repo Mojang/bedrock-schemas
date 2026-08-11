@@ -52,7 +52,6 @@
   "versionIntroduced": "1.21.50",
   "description": "Allows the mob to attack the player by summoning other entities.",
   "title": "Entity Summon Entity Behavior",
-  "samples": {},
   "id": "minecraft:behavior.summon_entity",
   "dataVersion": "1.26.40"
 }

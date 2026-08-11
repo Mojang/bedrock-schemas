@@ -32,6 +32,16 @@ Armor Stand - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pa
 }
 
 
+Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
+
+"minecraft:type_family": {
+  "family": [
+    "projectile",
+    "arrow"
+  ]
+}
+
+
 Bat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bat.json
 
 "minecraft:type_family": {
@@ -49,16 +59,6 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
     "blaze",
     "monster",
     "mob"
-  ]
-}
-
-
-Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/boat.json
-
-"minecraft:type_family": {
-  "family": [
-    "boat",
-    "inanimate"
   ]
 }
 
@@ -86,7 +86,7 @@ export default interface MinecraftTypeFamily {
    *
    * Armor Stand: ["armor_stand","inanimate","mob"]
    *
-   * Bat: ["bat","mob"]
+   * Arrow: ["projectile","arrow"]
    *
    */
   family?: string[];

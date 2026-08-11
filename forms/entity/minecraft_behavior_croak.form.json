@@ -48,7 +48,10 @@
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.croak/",
-            "content": 4.5
+            "content": {
+              "min": 4.5,
+              "max": 4.5
+            }
           }
         ]
       }
@@ -146,10 +149,10 @@
         "/vanilla/behavior_pack/entities/frog.json": [
           {
             "path": "/minecraft:entity/components/minecraft:behavior.croak/",
-            "content": [
-              10,
-              20
-            ]
+            "content": {
+              "min": 10,
+              "max": 20
+            }
           }
         ]
       }
@@ -177,7 +180,10 @@
       {
         "path": "/minecraft:entity/components/minecraft:behavior.croak/",
         "content": {
-          "duration": 4.5,
+          "duration": {
+            "min": 4.5,
+            "max": 4.5
+          },
           "filters": {
             "all_of": [
               {
@@ -190,10 +196,10 @@
               }
             ]
           },
-          "interval": [
-            10,
-            20
-          ],
+          "interval": {
+            "min": 10,
+            "max": 20
+          },
           "priority": 9
         }
       }

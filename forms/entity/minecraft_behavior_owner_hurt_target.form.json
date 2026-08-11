@@ -263,6 +263,5 @@
   ],
   "description": "Allows the mob to target a mob that is hurt by their owner.",
   "title": "Entity Owner Hurt Target Behavior",
-  "samples": {},
   "id": "minecraft:behavior.owner_hurt_target"
 }

@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.work_composter
- * 
- * minecraft:behavior.work_composter Samples
  */
 
 import * as jsoncommon from '../../../common';

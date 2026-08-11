@@ -34,7 +34,7 @@
             "properties": {
               "condition": {
                 "title": "Condition",
-                "description": "Condition for placing associated Feature",
+                "description": "Condition for placing associated Feature. If omitted, always places.",
                 "oneOf": [
                   {
                     "type": "string"
@@ -49,7 +49,7 @@
         },
         {
           "title": "Conditional Features",
-          "description": "Array of Features, and their associated Conditions, for attempted placement. These features will be evaluated as ordered.",
+          "description": "Array of features, and their associated conditions, for attempted placement. These features will be evaluated as ordered.",
           "type": "array",
           "items": {
             "type": "string"
@@ -59,8 +59,8 @@
       "description": "\n\nProperties:\n• condition"
     },
     "early_out_scheme": {
-      "title": "Early Out Scheme\"<\"condition Success\", \"placement Success\"",
-      "description": "Denote whether placement should end on first successful placement or first passed condition.",
+      "title": "Early Out Scheme\"<\"condition Success\", \"placement Success\", \"none\"",
+      "description": "Denote whether placement should end on first successful placement ('placement_success'), first passed condition ('condition_success'), or evaluate all features ('none'). Defaults to 'none'.",
       "type": "string"
     }
   },
@@ -70,7 +70,7 @@
       "description": "Create a Conditional List",
       "body": {
         "description": "",
-        "early_out_scheme\"<\"condition_success\", \"placement_success\"": ""
+        "early_out_scheme\"<\"condition_success\", \"placement_success\", \"none\"": ""
       }
     }
   ]

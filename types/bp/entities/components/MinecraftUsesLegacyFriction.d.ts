@@ -8,6 +8,13 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:uses_legacy_friction
+ * 
+ * minecraft:uses_legacy_friction Samples
+
+Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/breeze.json
+
+"minecraft:uses_legacy_friction": {}
+
  */
 
 import * as jsoncommon from '../../../common';

@@ -6,7 +6,7 @@
   "properties": {
     "attack_interval": {
       "title": "Attack Interval",
-      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• bogged: 3.5\n• bogged: 2.5",
+      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• bogged: 3.5\n• bogged: 2.5\n• drowned: {\"min\":1,\"max\":3}",
       "anyOf": [
         {
           "type": "number"
@@ -27,7 +27,7 @@
     },
     "attack_radius": {
       "title": "Attack Radius",
-      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• blaze: 48\n• bogged: 15\n• drowned: 10",
+      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• blaze: 48\n• bogged: 15\n• llama: 64",
       "type": "number",
       "exclusiveMinimum": 0,
       "default": 0
@@ -130,15 +130,42 @@
     },
     "attack_interval_max": {
       "title": "Attack Interval Max",
-      "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 5\n• drowned: 3",
+      "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 5",
       "type": "number",
       "default": 0
     },
     "attack_interval_min": {
       "title": "Attack Interval Min",
-      "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 3\n• drowned: 1",
+      "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 3",
       "type": "number",
       "default": 0
+    },
+    "attack_range": {
+      "title": "Attack Range",
+      "description": "\n\nProperties:\n• min (number)\n• max (number)\n\nSample values:\n• drowned: {\"min\":0,\"max\":10}",
+      "type": "object",
+      "properties": {
+        "min": {
+          "title": "Min",
+          "description": "\n\nSample values:\n• drowned: 0",
+          "type": "number"
+        },
+        "max": {
+          "title": "Max",
+          "description": "\n\nSample values:\n• drowned: 10",
+          "type": "number"
+        }
+      },
+      "defaultSnippets": [
+        {
+          "label": "Attack range",
+          "description": "Create a Attack range",
+          "body": {
+            "min": 0,
+            "max": 0
+          }
+        }
+      ]
     }
   }
 }

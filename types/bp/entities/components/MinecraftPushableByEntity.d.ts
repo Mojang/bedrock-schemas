@@ -54,21 +54,6 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 
 "minecraft:pushable_by_entity": {}
 
-
-Chest Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/chest_minecart.json
-
-"minecraft:pushable_by_entity": {
-  "presets": [
-    {
-      "push_mode": "legacy_minecart",
-      "strength_multiplier": 0.1,
-      "min_distance": 0.01,
-      "push_scale_self": 0.5,
-      "push_scale_other": 0.25
-    }
-  ]
-}
-
  */
 
 import * as jsoncommon from '../../../common';

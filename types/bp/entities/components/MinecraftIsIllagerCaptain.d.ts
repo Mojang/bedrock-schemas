@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:is_illager_captain
- * 
- * minecraft:is_illager_captain Samples
  */
 
 import * as jsoncommon from '../../../common';

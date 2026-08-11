@@ -51,20 +51,20 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
     80
   ],
   "jump_cooldown_when_hurt_duration": 0.1,
-  "landing_distance_from_target": [
-    4,
-    8
-  ],
+  "landing_distance_from_target": {
+    "min": 4,
+    "max": 8
+  },
   "last_hurt_duration": 2,
   "line_of_sight_obstruction_height_ignore": 4,
   "max_jump_velocity": 1.4,
   "prepare_jump_duration": 0.5,
   "priority": 5,
   "snap_to_surface_block_range": 10,
-  "valid_distance_to_target": [
-    4,
-    20
-  ]
+  "valid_distance_to_target": {
+    "min": 4,
+    "max": 20
+  }
 }
 
  */
@@ -155,7 +155,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * the landing position can be when jumping.
    * 
    * Sample Values:
-   * Breeze: [4,8]
+   * Breeze: {"min":4,"max":8}
    *
    */
   landing_distance_from_target?: MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget;
@@ -259,7 +259,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * Target needs to be within this range for the jump to happen.
    * 
    * Sample Values:
-   * Breeze: [4,20]
+   * Breeze: {"min":4,"max":20}
    *
    */
   valid_distance_to_target?: MinecraftBehaviorJumpAroundTargetValidDistanceToTarget;

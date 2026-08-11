@@ -71,6 +71,5 @@
   ],
   "description": "Allows the mob to move into a random location within a village.",
   "title": "Entity Move To Village Behavior",
-  "samples": {},
   "id": "minecraft:behavior.move_to_village"
 }

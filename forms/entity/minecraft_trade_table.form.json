@@ -119,6 +119,5 @@
   ],
   "description": "Defines this entity's ability to trade with players.",
   "title": "Trade Table",
-  "samples": {},
   "id": "minecraft:trade_table"
 }

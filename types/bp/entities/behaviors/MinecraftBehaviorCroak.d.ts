@@ -14,7 +14,10 @@
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
 "minecraft:behavior.croak": {
-  "duration": 4.5,
+  "duration": {
+    "min": 4.5,
+    "max": 4.5
+  },
   "filters": {
     "all_of": [
       {
@@ -27,10 +30,10 @@ Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
       }
     ]
   },
-  "interval": [
-    10,
-    20
-  ],
+  "interval": {
+    "min": 10,
+    "max": 20
+  },
   "priority": 9
 }
 
@@ -53,7 +56,7 @@ export default interface MinecraftBehaviorCroak {
    * be a constant.
    * 
    * Sample Values:
-   * Frog: 4.5
+   * Frog: {"min":4.5,"max":4.5}
    *
    */
   duration?: MinecraftBehaviorCroakDuration;
@@ -75,7 +78,7 @@ export default interface MinecraftBehaviorCroak {
    * be a constant.
    * 
    * Sample Values:
-   * Frog: [10,20]
+   * Frog: {"min":10,"max":20}
    *
    */
   interval?: MinecraftBehaviorCroakInterval;

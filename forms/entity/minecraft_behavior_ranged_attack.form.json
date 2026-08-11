@@ -153,6 +153,15 @@
             "content": 2.5
           }
         ],
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
+            "content": {
+              "min": 1,
+              "max": 3
+            }
+          }
+        ],
         "/vanilla/behavior_pack/entities/parched.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
@@ -192,12 +201,6 @@
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
             "content": 15
-          }
-        ],
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
-            "content": 10
           }
         ],
         "/vanilla/behavior_pack/entities/llama.json": [
@@ -457,12 +460,6 @@
             "path": "/minecraft:entity/component_groups/ranged_mode/minecraft:behavior.ranged_attack/",
             "content": 5
           }
-        ],
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
-            "content": 3
-          }
         ]
       },
       "defaultValue": 0,
@@ -478,16 +475,58 @@
             "path": "/minecraft:entity/component_groups/ranged_mode/minecraft:behavior.ranged_attack/",
             "content": 3
           }
-        ],
-        "/vanilla/behavior_pack/entities/drowned.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
-            "content": 1
-          }
         ]
       },
       "defaultValue": 0,
       "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance."
+    },
+    {
+      "id": "attack_range",
+      "title": "Attack Range",
+      "dataType": "object",
+      "subForm": {
+        "id": "attack_range",
+        "title": "Attack range",
+        "fields": [
+          {
+            "id": "min",
+            "title": "Min",
+            "dataType": "number",
+            "samples": {
+              "/vanilla/behavior_pack/entities/drowned.json": [
+                {
+                  "path": "min",
+                  "content": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "max",
+            "title": "Max",
+            "dataType": "number",
+            "samples": {
+              "/vanilla/behavior_pack/entities/drowned.json": [
+                {
+                  "path": "max",
+                  "content": 10
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "samples": {
+        "/vanilla/behavior_pack/entities/drowned.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
+            "content": {
+              "min": 0,
+              "max": 10
+            }
+          }
+        ]
+      }
     }
   ],
   "description": "Allows an entity to attack by using ranged shots. \"charge_shoot_trigger\" must be greater than 0 to enable charged up burst-shot attacks. Requires minecraft:shooter to define projectile behaviour.",
@@ -530,9 +569,14 @@
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_mode/minecraft:behavior.ranged_attack/",
         "content": {
-          "attack_interval_max": 3,
-          "attack_interval_min": 1,
-          "attack_radius": 10,
+          "attack_interval": {
+            "min": 1,
+            "max": 3
+          },
+          "attack_range": {
+            "min": 0,
+            "max": 10
+          },
           "priority": 3,
           "swing": true
         }

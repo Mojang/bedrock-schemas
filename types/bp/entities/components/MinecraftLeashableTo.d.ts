@@ -15,6 +15,13 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 "minecraft:leashable_to": {}
 
+
+Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/chicken.json
+
+"minecraft:leashable_to": {
+  "unleash_on_removal": false
+}
+
  */
 
 import * as jsoncommon from '../../../common';

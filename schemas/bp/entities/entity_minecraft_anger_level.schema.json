@@ -176,28 +176,28 @@
     },
     "angry_boost": {
       "title": "Angry Boost",
-      "description": "Anger boost applied to angry threshold when mob gets angry\n\nSample values:\n• warden: 20",
+      "description": "Anger boost applied to angry threshold when mob gets angry.\n\nSample values:\n• warden: 20",
       "type": "integer",
       "minimum": 0,
       "default": 20
     },
     "angry_threshold": {
       "title": "Angry Threshold",
-      "description": "Threshold that define when the mob is considered angry at a nuisance\n\nSample values:\n• warden: 80",
+      "description": "Threshold that define when the mob is considered angry at a nuisance.\n\nSample values:\n• warden: 80",
       "type": "integer",
       "minimum": 0,
       "default": 80
     },
     "max_anger": {
       "title": "Max Anger",
-      "description": "The maximum anger level that can be reached. Applies to any nuisance\n\nSample values:\n• warden: 150",
+      "description": "The maximum anger level that can be reached. Applies to any nuisance.\n\nSample values:\n• warden: 150",
       "type": "integer",
       "minimum": 0,
       "default": 100
     },
     "nuisance_filter": {
       "title": "Nuisance Filter",
-      "description": "Filter that is applied to determine if a mob can be a nuisance\n\nSample values:\n• warden: {\"all_of\":[{\"operator\":\"not\",\"test\":\"is_family\"...",
+      "description": "Filter that is applied to determine if a mob can be a nuisance.\n\nSample values:\n• warden: {\"all_of\":[{\"operator\":\"not\",\"test\":\"is_family\"...",
       "anyOf": [
         {
           "type": "object"
@@ -235,9 +235,9 @@
     },
     "remove_targets_below_angry_threshold": {
       "title": "Remove Targets Below Angry Threshold",
-      "description": "Defines if the mob should remove target if it falls below 'angry' threshold\n\nSample values:\n• warden: true",
+      "description": "Defines if the mob should remove target if it falls below 'angry' threshold.\n\nSample values:\n• warden: true",
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "default_projectile_annoyingness": {
       "title": "Default Projectile Annoyingness",

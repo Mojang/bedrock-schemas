@@ -22,6 +22,12 @@
   "description": "Sets that this entity doesn't take damage from fire.",
   "title": "Fire Immune",
   "samples": {
+    "/vanilla/behavior_pack/entities/agent.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:fire_immune/",
+        "content": {}
+      }
+    ],
     "/vanilla/behavior_pack/entities/blaze.json": [
       {
         "path": "/minecraft:entity/components/minecraft:fire_immune/",
@@ -41,12 +47,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/magma_cube.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:fire_immune/",
-        "content": {}
-      }
-    ],
-    "/vanilla/behavior_pack/entities/npc.json": [
       {
         "path": "/minecraft:entity/components/minecraft:fire_immune/",
         "content": {}

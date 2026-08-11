@@ -43,7 +43,7 @@
       "description": "Duration, in seconds, for which mob won't barter items if it was hurt.",
       "dataType": "intRange",
       "maxValue": 60,
-      "defaultValue": 0,
+      "defaultValue": 10,
       "title": "Cooldown After Being Attacked"
     }
   ],

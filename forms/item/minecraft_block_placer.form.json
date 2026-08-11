@@ -37,14 +37,42 @@
       "title": "Block",
       "description": "Defines the block that will be placed.",
       "dataType": "string",
-      "isRequired": true
+      "isRequired": true,
+      "samples": {
+        "/vanilla/behavior_pack/items/red_shrub.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:block_placer/",
+            "content": "minecraft:red_shrub"
+          }
+        ],
+        "/vanilla/behavior_pack/items/shelf_mushroom.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:block_placer/",
+            "content": "minecraft:shelf_mushroom"
+          }
+        ]
+      }
     },
     {
       "id": "replace_block_item",
       "title": "Replace Block Item",
       "description": "If true, the item will be registered as the item for this block. This item will be returned by default when the block is broken/picked. Note: the identifier for this item must match the block's identifier for this field to be valid. Defaults to false.",
       "dataType": "boolean",
-      "defaultValue": false
+      "defaultValue": false,
+      "samples": {
+        "/vanilla/behavior_pack/items/red_shrub.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:block_placer/",
+            "content": true
+          }
+        ],
+        "/vanilla/behavior_pack/items/shelf_mushroom.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:block_placer/",
+            "content": true
+          }
+        ]
+      }
     },
     {
       "id": "use_on",
@@ -113,6 +141,24 @@
             "dirt",
             "grass"
           ],
+          "replace_block_item": true
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/items/red_shrub.json": [
+      {
+        "path": "/minecraft:item/components/minecraft:block_placer/",
+        "content": {
+          "block": "minecraft:red_shrub",
+          "replace_block_item": true
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/items/shelf_mushroom.json": [
+      {
+        "path": "/minecraft:item/components/minecraft:block_placer/",
+        "content": {
+          "block": "minecraft:shelf_mushroom",
           "replace_block_item": true
         }
       }

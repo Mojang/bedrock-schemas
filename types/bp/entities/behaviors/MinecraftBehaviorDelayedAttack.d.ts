@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.delayed_attack
- * 
- * minecraft:behavior.delayed_attack Samples
  */
 
 import * as jsoncommon from '../../../common';

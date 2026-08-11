@@ -11,7 +11,7 @@
  * 
  * minecraft:pushable_by_block Samples
 
-Arrow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/arrow.json
+Armor Stand - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/armor_stand.json
 
 "minecraft:pushable_by_block": {}
 

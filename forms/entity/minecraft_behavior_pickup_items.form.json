@@ -243,7 +243,9 @@
           {
             "path": "/minecraft:entity/components/minecraft:behavior.pickup_items/",
             "content": [
-              "minecraft:glow_ink_sac",
+              {
+                "name": "minecraft:glow_ink_sac"
+              },
               {
                 "tags": "q.all_tags('minecraft:is_spear')"
               }
@@ -469,7 +471,9 @@
         "content": {
           "can_pickup_any_item": true,
           "excluded_items": [
-            "minecraft:glow_ink_sac",
+            {
+              "name": "minecraft:glow_ink_sac"
+            },
             {
               "tags": "q.all_tags('minecraft:is_spear')"
             }

@@ -50,6 +50,14 @@ export default interface MinecraftSnapToSurfaceFeature {
 
   /**
    * @remarks
+   * Determines whether the feature can snap through non air blocks.
+   * Defaults to false, is only used if the snap is started in a
+   * block that is not water or air.
+   */
+  allow_non_air_placement?: boolean;
+
+  /**
+   * @remarks
    * Determines whether the feature can snap through water blocks.
    * Defaults to false.
    */
@@ -76,18 +84,18 @@ export default interface MinecraftSnapToSurfaceFeature {
 
   /**
    * @remarks
-   * Defines the surface that the y-value of the placement position will
-   * be snapped to. Valid values: 'ceiling', 'floor' and
-   * 'random_horizontal'
+   * Range to search for a valid snapping position for the 
+   * feature.
    */
-  surface?: string;
+  search_range: number;
 
   /**
    * @remarks
-   * Range to search for a floor or ceiling for snaping the 
-   * feature.
+   * Defines the surface that the y-value of the placement position will
+   * be snapped to. Valid values: 'ceiling', 'floor', 'random_horizontal' and
+   * `wall`
    */
-  vertical_search_range: number;
+  surface?: string;
 
 }
 

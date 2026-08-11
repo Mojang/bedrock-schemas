@@ -28,6 +28,15 @@ Apple - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ite
   ]
 }
 
+
+Shelf Mushroom - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/shelf_mushroom.json
+
+"minecraft:tags": {
+  "tags": [
+    "minecraft:mushrooms_for_stew"
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -44,6 +53,8 @@ export default interface MinecraftTags {
    * 
    * Sample Values:
    * Apple: ["minecraft:is_food"]
+   *
+   * Shelf Mushroom: ["minecraft:mushrooms_for_stew"]
    *
    */
   tags?: string[];

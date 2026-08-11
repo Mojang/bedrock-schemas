@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.float_tempt
- * 
- * minecraft:behavior.float_tempt Samples
  */
 
 import * as jsoncommon from '../../../common';

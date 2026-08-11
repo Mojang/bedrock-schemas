@@ -73,7 +73,7 @@ export default interface MinecraftAngerLevel {
 
   /**
    * @remarks
-   * Anger boost applied to angry threshold when mob gets angry
+   * Anger boost applied to angry threshold when mob gets angry.
    * 
    * Sample Values:
    * Warden: 20
@@ -84,7 +84,7 @@ export default interface MinecraftAngerLevel {
   /**
    * @remarks
    * Threshold that define when the mob is considered angry at a
-   * nuisance
+   * nuisance.
    * 
    * Sample Values:
    * Warden: 80
@@ -174,7 +174,7 @@ export default interface MinecraftAngerLevel {
   /**
    * @remarks
    * The maximum anger level that can be reached. Applies to any
-   * nuisance
+   * nuisance.
    * 
    * Sample Values:
    * Warden: 150
@@ -184,8 +184,8 @@ export default interface MinecraftAngerLevel {
 
   /**
    * @remarks
-   * Filter that is applied to determine if a mob can be a 
-   * nuisance
+   * Filter that is applied to determine if a mob can be a
+   * nuisance.
    * 
    * Sample Values:
    * Warden: {"all_of":[{"operator":"not","test":"is_family","subject":"other","value":"warden"},{"operator":"not","test":"is_family","subject":"other","value":"inanimate"}]}
@@ -207,7 +207,7 @@ export default interface MinecraftAngerLevel {
   /**
    * @remarks
    * Defines if the mob should remove target if it falls below 'angry'
-   * threshold
+   * threshold.
    * 
    * Sample Values:
    * Warden: true

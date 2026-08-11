@@ -15,10 +15,10 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 
 "minecraft:behavior.move_around_target": {
   "destination_pos_spread_degrees": 360,
-  "destination_position_range": [
-    4,
-    8
-  ],
+  "destination_position_range": {
+    "min": 4,
+    "max": 8
+  },
   "priority": 3,
   "filters": {
     "all_of": [
@@ -34,6 +34,7 @@ Breeze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
       }
     ]
   },
+  "height_difference_limit": 0,
   "movement_speed": 1.2
 }
 
@@ -81,7 +82,7 @@ export default interface MinecraftBehaviorMoveAroundTarget {
    * goal should look for a position to move the owner entity to.
    * 
    * Sample Values:
-   * Breeze: [4,8]
+   * Breeze: {"min":4,"max":8}
    *
    */
   destination_position_range?: MinecraftBehaviorMoveAroundTargetDestinationPositionRange;

@@ -61,6 +61,23 @@ Cow - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 }
 
 
+Cushion - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/cushion.json
+
+"minecraft:rideable": {
+  "seat_count": 1,
+  "interact_text": "action.interact.ride.cushion",
+  "dismount_mode": "on_top_center",
+  "seats": {
+    "position": [
+      0,
+      0.1875,
+      0
+    ],
+    "rotate_rider_by": -90
+  }
+}
+
+
 Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/llama.json
 
  * At /minecraft:entity/component_groups/minecraft:llama_wild/minecraft:rideable/: 
@@ -112,40 +129,6 @@ Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/
   }
 }
 
-
-Pig - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/pig.json
-
- * At /minecraft:entity/component_groups/minecraft:pig_unsaddled/minecraft:rideable/: 
-"minecraft:rideable": {
-  "seat_count": 1,
-  "family_types": [
-    "baby_undead"
-  ],
-  "seats": {
-    "position": [
-      0,
-      0.7,
-      0
-    ]
-  }
-}
-
- * At /minecraft:entity/component_groups/minecraft:pig_saddled/minecraft:rideable/: 
-"minecraft:rideable": {
-  "seat_count": 1,
-  "interact_text": "action.interact.ride.horse",
-  "family_types": [
-    "player"
-  ],
-  "seats": {
-    "position": [
-      0,
-      0.63,
-      0
-    ]
-  }
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -184,6 +167,10 @@ export default interface MinecraftRideable {
    * found.
 - "on_top_center", riders are placed at the center of
    * the top of the entity's collision box.
+   * 
+   * Sample Values:
+   * Cushion: "on_top_center"
+   *
    */
   dismount_mode?: string;
 
@@ -206,9 +193,9 @@ export default interface MinecraftRideable {
    * when playing with touch-screen controls.
    * 
    * Sample Values:
-   * Llama: "action.interact.mount", "action.interact.ride.horse"
+   * Cushion: "action.interact.ride.cushion"
    *
-   * Minecart: "action.interact.ride.minecart"
+   * Llama: "action.interact.mount", "action.interact.ride.horse"
    *
    */
   interact_text?: string;

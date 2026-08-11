@@ -115,6 +115,12 @@
       "id": "height",
       "description": "Height of the collision box in blocks. A negative value will be assumed to be 0.",
       "samples": {
+        "/vanilla/behavior_pack/entities/agent.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:collision_box/",
+            "content": 0.93
+          }
+        ],
         "/vanilla/behavior_pack/entities/allay.json": [
           {
             "path": "/minecraft:entity/components/minecraft:collision_box/",
@@ -138,12 +144,6 @@
             "path": "/minecraft:entity/components/minecraft:collision_box/",
             "content": 0.9
           }
-        ],
-        "/vanilla/behavior_pack/entities/blaze.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:collision_box/",
-            "content": 1.8
-          }
         ]
       },
       "defaultValue": 1,
@@ -157,6 +157,12 @@
       "defaultValue": 1,
       "dataType": "float",
       "samples": {
+        "/vanilla/behavior_pack/entities/agent.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:collision_box/",
+            "content": 0.6
+          }
+        ],
         "/vanilla/behavior_pack/entities/allay.json": [
           {
             "path": "/minecraft:entity/components/minecraft:collision_box/",
@@ -187,6 +193,15 @@
   "description": "Sets the width and height of the Entity's collision box.",
   "title": "Collision Box",
   "samples": {
+    "/vanilla/behavior_pack/entities/agent.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:collision_box/",
+        "content": {
+          "height": 0.93,
+          "width": 0.6
+        }
+      }
+    ],
     "/vanilla/behavior_pack/entities/allay.json": [
       {
         "path": "/minecraft:entity/components/minecraft:collision_box/",
@@ -219,15 +234,6 @@
         "path": "/minecraft:entity/components/minecraft:collision_box/",
         "content": {
           "height": 0.9,
-          "width": 0.5
-        }
-      }
-    ],
-    "/vanilla/behavior_pack/entities/blaze.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:collision_box/",
-        "content": {
-          "height": 1.8,
           "width": 0.5
         }
       }

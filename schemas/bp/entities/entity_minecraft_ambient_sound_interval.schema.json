@@ -12,7 +12,7 @@
     },
     "event_names": {
       "title": "Event Names",
-      "description": "List of dynamic level sound events, with conditions for choosing between them. Evaluated in order, first one wins. If none evaluate to true, 'event_name' will take precedence.\n\nSample values:\n• allay: [{\"condition\":\"query.is_using_item\",\"event_name...\n• warden: [{\"condition\":\"query.anger_level(this) >= 80\",\"...",
+      "description": "List of dynamic level sound events, with conditions for choosing between them. Evaluated in order, first one wins. If none evaluate to true, 'event_name' will take precedence.\n\nSample values:\n• allay: [{\"condition\":\"query.is_using_item\",\"event_name...\n• breeze: [{\"condition\":\"!query.is_on_ground\",\"event_name...",
       "type": "array",
       "items": {
         "type": "object",
@@ -32,13 +32,13 @@
     },
     "range": {
       "title": "Range",
-      "description": "Maximum time in seconds to randomly add to the ambient sound delay time.\n\nSample values:\n• allay: 5\n• warden: 4",
+      "description": "Maximum time in seconds to randomly add to the ambient sound delay time.",
       "type": "number",
       "default": 16
     },
     "value": {
       "title": "Value",
-      "description": "Minimum time in seconds before the entity plays its ambient sound again.\n\nSample values:\n• allay: 5\n• warden: 2",
+      "description": "Minimum time in seconds before the entity plays its ambient sound again.",
       "type": "number",
       "default": 8
     }

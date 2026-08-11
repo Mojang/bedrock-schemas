@@ -10,6 +10,20 @@
  * Item Components Documentation - minecraft:compostable
  * 
  * minecraft:compostable Samples
+
+Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/red_shrub.json
+
+"minecraft:compostable": {
+  "composting_chance": 30
+}
+
+
+Shelf Mushroom - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/shelf_mushroom.json
+
+"minecraft:compostable": {
+  "composting_chance": 65
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -25,6 +39,12 @@ export default interface MinecraftCompostable {
    * @remarks
    * The chance of this item to create a layer upon composting with
    * the composter. Valid value range is 1 - 100 inclusive
+   * 
+   * Sample Values:
+   * Red Shrub: 30
+   *
+   * Shelf Mushroom: 65
+   *
    */
   composting_chance: number;
 

@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:grows_crop
- * 
- * minecraft:grows_crop Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -22,7 +20,7 @@ export default interface MinecraftGrowsCrop {
 
   /**
    * @remarks
-   * Value between 0-1. Chance of success per tick.
+   * Value between 0-1. Chance of success per tick
    */
   chance?: number;
 

@@ -11,7 +11,7 @@
  * 
  * minecraft:conditional_bandwidth_optimization Samples
 
-Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/allay.json
+Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
 
 "minecraft:conditional_bandwidth_optimization": {}
 

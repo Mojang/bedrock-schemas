@@ -95,6 +95,12 @@
   "description": "Defines physics properties of an actor, including if it is affected by gravity or if it collides with objects.",
   "title": "Physics",
   "samples": {
+    "/vanilla/behavior_pack/entities/agent.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:physics/",
+        "content": {}
+      }
+    ],
     "/vanilla/behavior_pack/entities/allay.json": [
       {
         "path": "/minecraft:entity/components/minecraft:physics/",
@@ -118,12 +124,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/arrow.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:physics/",
-        "content": {}
-      }
-    ],
-    "/vanilla/behavior_pack/entities/bat.json": [
       {
         "path": "/minecraft:entity/components/minecraft:physics/",
         "content": {}

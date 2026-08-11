@@ -11,6 +11,16 @@
  * 
  * minecraft:damage_sensor Samples
 
+Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
+
+"minecraft:damage_sensor": {
+  "triggers": {
+    "cause": "all",
+    "deals_damage": "no"
+  }
+}
+
+
 Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/allay.json
 
 "minecraft:damage_sensor": {
@@ -93,12 +103,11 @@ export default interface MinecraftDamageSensor {
    * of damage.
    * 
    * Sample Values:
+   * Agent: {"cause":"all","deals_damage":"no"}
+   *
    * Allay: [{"deals_damage":"no","on_damage":{"filters":{"all_of":[{"subject":"other","test":"is_family","value":"player"},{"subject":"other","test":"is_owner"}]}}}]
    *
    * Bat: {"cause":"fall","deals_damage":"no"}
-   *
-   *
-   * Breeze: [{"cause":"fall","deals_damage":"no"},{"cause":"projectile","on_damage":{"filters":{"operator":"!=","test":"is_family","subject":"damager","value":"wind_charge"}},"deals_damage":"no"}]
    *
    */
   triggers?: jsoncommon.MinecraftEventTrigger[];

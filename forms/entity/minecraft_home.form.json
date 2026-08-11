@@ -25,7 +25,7 @@
     {
       "id": "home_block_list",
       "title": "Home Block List",
-      "description": "Optional list of blocks that can be considered a valid home. If no such block longer exists at that position,\n\t\t\t\t\t\t\t\t\t\t\tthe home restriction is removed. Example syntax: minecraft:sand. Not supported: minecraft:sand:1.",
+      "description": "Optional list of blocks that can be considered a valid home. If no such block longer exists at that position, the home restriction is removed. Example syntax: minecraft:sand. Not supported: minecraft:sand:1.",
       "dataType": "stringArray"
     },
     {

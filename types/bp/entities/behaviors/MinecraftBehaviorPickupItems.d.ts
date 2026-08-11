@@ -48,7 +48,9 @@ Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 "minecraft:behavior.pickup_items": {
   "can_pickup_any_item": true,
   "excluded_items": [
-    "minecraft:glow_ink_sac",
+    {
+      "name": "minecraft:glow_ink_sac"
+    },
     {
       "tags": "q.all_tags('minecraft:is_spear')"
     }
@@ -122,7 +124,7 @@ export default interface MinecraftBehaviorPickupItems {
    * Sample Values:
    * Bogged: [{"tags":"q.all_tags('minecraft:is_spear')"}]
    *
-   * Drowned: ["minecraft:glow_ink_sac",{"tags":"q.all_tags('minecraft:is_spear')"}]
+   * Drowned: [{"name":"minecraft:glow_ink_sac"},{"tags":"q.all_tags('minecraft:is_spear')"}]
    *
    *
    */

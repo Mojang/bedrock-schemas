@@ -232,7 +232,7 @@
     {
       "id": "angry_boost",
       "title": "Angry Boost",
-      "description": "Anger boost applied to angry threshold when mob gets angry",
+      "description": "Anger boost applied to angry threshold when mob gets angry.",
       "defaultValue": 20,
       "dataType": "int",
       "validity": [
@@ -253,7 +253,7 @@
     {
       "id": "angry_threshold",
       "title": "Angry Threshold",
-      "description": "Threshold that define when the mob is considered angry at a nuisance",
+      "description": "Threshold that define when the mob is considered angry at a nuisance.",
       "defaultValue": 80,
       "dataType": "int",
       "validity": [
@@ -274,7 +274,7 @@
     {
       "id": "max_anger",
       "title": "Max Anger",
-      "description": "The maximum anger level that can be reached. Applies to any nuisance",
+      "description": "The maximum anger level that can be reached. Applies to any nuisance.",
       "defaultValue": 100,
       "dataType": "int",
       "validity": [
@@ -295,7 +295,7 @@
     {
       "id": "nuisance_filter",
       "title": "Nuisance Filter",
-      "description": "Filter that is applied to determine if a mob can be a nuisance",
+      "description": "Filter that is applied to determine if a mob can be a nuisance.",
       "dataType": "minecraftFilter",
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
@@ -324,8 +324,8 @@
     {
       "id": "remove_targets_below_angry_threshold",
       "title": "Remove Targets Below Angry Threshold",
-      "description": "Defines if the mob should remove target if it falls below 'angry' threshold",
-      "defaultValue": true,
+      "description": "Defines if the mob should remove target if it falls below 'angry' threshold.",
+      "defaultValue": false,
       "dataType": "boolean",
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [

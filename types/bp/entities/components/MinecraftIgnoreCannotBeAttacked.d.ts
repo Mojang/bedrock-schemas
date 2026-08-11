@@ -15,9 +15,9 @@ import * as jsoncommon from '../../../common';
 /**
  * Ignore Cannot Be Attacked 
  * (minecraft:ignore_cannot_be_attacked)
- * When set, blocks entities from attacking the owner entity unless
- * they have the "minecraft:ignore_cannot_be_attacked" 
- * component.
+ * Allows the owner entity to ignore the
+ * "minecraft:cannot_be_attacked" component on entities that fulfill
+ * the filter.
  */
 export default interface MinecraftIgnoreCannotBeAttacked {
 

@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.transport_items
- * 
- * minecraft:behavior.transport_items Samples
  */
 
 import * as jsoncommon from '../../../common';

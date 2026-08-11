@@ -18,7 +18,7 @@
     },
     "duration": {
       "title": "Duration",
-      "description": "Random range in seconds after which the croaking stops. Can also be a constant.\n\nSample values:\n• frog: 4.5",
+      "description": "Random range in seconds after which the croaking stops. Can also be a constant.\n\nSample values:\n• frog: {\"min\":4.5,\"max\":4.5}",
       "anyOf": [
         {
           "type": "number"
@@ -78,7 +78,7 @@
     },
     "interval": {
       "title": "Interval",
-      "description": "Random range in seconds between runs of this behavior. Can also be a constant.\n\nSample values:\n• frog: [10,20]",
+      "description": "Random range in seconds between runs of this behavior. Can also be a constant.\n\nSample values:\n• frog: {\"min\":10,\"max\":20}",
       "anyOf": [
         {
           "type": "number"

@@ -24,6 +24,5 @@
   "note": "Only works on vanilla entities that have a second predefined color values (tropical fish).",
   "description": "Defines the entity's second texture color.",
   "title": "Color2",
-  "samples": {},
   "id": "minecraft:color2"
 }

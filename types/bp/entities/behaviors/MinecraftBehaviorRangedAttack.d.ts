@@ -45,9 +45,14 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval_max": 3,
-  "attack_interval_min": 1,
-  "attack_radius": 10,
+  "attack_interval": {
+    "min": 1,
+    "max": 3
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 10
+  },
   "priority": 3,
   "swing": true
 }
@@ -102,6 +107,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Bogged: 3.5, 2.5
    *
+   * Drowned: {"min":1,"max":3}
    *
    */
   attack_interval?: MinecraftBehaviorRangedAttackAttackInterval;
@@ -114,8 +120,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: 5
    *
-   * Drowned: 3
-   *
    */
   attack_interval_max?: number;
 
@@ -126,8 +130,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * 
    * Sample Values:
    * Blaze: 3
-   *
-   * Drowned: 1
    *
    */
   attack_interval_min?: number;
@@ -142,7 +144,7 @@ export default interface MinecraftBehaviorRangedAttack {
    *
    * Bogged: 15
    *
-   * Drowned: 10
+   * Llama: 64
    *
    */
   attack_radius?: number;
@@ -153,6 +155,15 @@ export default interface MinecraftBehaviorRangedAttack {
    * target is closer, this mob will move first before firing
    */
   attack_radius_min?: number;
+
+  /**
+   * @remarks
+   * 
+   * Sample Values:
+   * Drowned: {"min":0,"max":10}
+   *
+   */
+  attack_range?: MinecraftBehaviorRangedAttackAttackRange;
 
   /**
    * @remarks
@@ -290,6 +301,32 @@ export interface MinecraftBehaviorRangedAttackAttackInterval {
 
   max?: number;
 
+  min?: number;
+
+}
+
+
+/**
+ * Attack range (attack_range)
+ */
+export interface MinecraftBehaviorRangedAttackAttackRange {
+
+  /**
+   * @remarks
+   * 
+   * Sample Values:
+   * Drowned: 10
+   *
+   */
+  max?: number;
+
+  /**
+   * @remarks
+   * 
+   * Sample Values:
+   * Drowned: 0
+   *
+   */
   min?: number;
 
 }

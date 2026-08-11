@@ -18,7 +18,7 @@
     },
     "cooldown_range": {
       "title": "Cooldown Range",
-      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted jump.\n\nSample values:\n• frog: [5,7]\n• goat: [30,60]",
+      "description": "Minimum and maximum cooldown time-range (positive, in seconds) between each attempted jump.\n\nSample values:\n• frog: {\"min\":5,\"max\":7}\n• goat: [30,60]",
       "anyOf": [
         {
           "type": "number"
@@ -50,7 +50,7 @@
         }
       ],
       "title": "Forbidden Blocks",
-      "description": "Blocks that the mob can't jump to.\n\nSample values:\n• frog: [\"minecraft:water\"]",
+      "description": "Blocks that the mob can't jump to.\n\nSample values:\n• frog: [{\"name\":\"minecraft:water\"}]",
       "defaultSnippets": [
         {
           "label": "Forbidden Blocks (default)",
@@ -90,7 +90,7 @@
         }
       ],
       "title": "Preferred Blocks",
-      "description": "Blocks that the mob prefers jumping to.\n\nSample values:\n• frog: [\"minecraft:waterlily\",\"minecraft:big_dripleaf\"]",
+      "description": "Blocks that the mob prefers jumping to.\n\nSample values:\n• frog: [{\"name\":\"minecraft:waterlily\"},{\"name\":\"minecr...",
       "defaultSnippets": [
         {
           "label": "Preferred Blocks (default)",

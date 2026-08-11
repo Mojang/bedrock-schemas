@@ -154,6 +154,5 @@
   ],
   "description": "Allows the NPC to use the composter POI to convert excess seeds into bone meal.",
   "title": "Entity Work Composter Behavior",
-  "samples": {},
   "id": "minecraft:behavior.work_composter"
 }

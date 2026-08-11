@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:can_join_raid
- * 
- * minecraft:can_join_raid Samples
  */
 
 import * as jsoncommon from '../../../common';

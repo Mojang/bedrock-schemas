@@ -2373,6 +2373,5 @@
   ],
   "description": "Allows this entity to celebrate surviving a raid by making celebration sounds and jumping.",
   "title": "Entity Celebrate Behavior",
-  "samples": {},
   "id": "minecraft:behavior.celebrate"
 }

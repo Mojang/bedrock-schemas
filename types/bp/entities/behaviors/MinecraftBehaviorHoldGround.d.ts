@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.hold_ground
- * 
- * minecraft:behavior.hold_ground Samples
  */
 
 import * as jsoncommon from '../../../common';

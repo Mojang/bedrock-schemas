@@ -25,8 +25,7 @@ export default interface MinecraftHome {
   /**
    * @remarks
    * Optional list of blocks that can be considered a valid home. If
-   * no such block longer exists at that position,
-											the home
+   * no such block longer exists at that position, the home
    * restriction is removed. Example syntax: minecraft:sand. Not
    * supported: minecraft:sand:1.
    */

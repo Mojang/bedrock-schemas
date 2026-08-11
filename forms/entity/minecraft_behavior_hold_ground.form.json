@@ -91,6 +91,5 @@
   ],
   "description": "Compels an entity to stop at their current location, turn to face a mob they are targeting, and react with an event.",
   "title": "Entity Hold Ground Behavior",
-  "samples": {},
   "id": "minecraft:behavior.hold_ground"
 }

@@ -46,7 +46,8 @@ Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 
 "minecraft:navigation.walk": {
   "can_path_over_water": true,
-  "avoid_damage_blocks": true
+  "avoid_damage_blocks": true,
+  "using_door_annotation": true
 }
 
 

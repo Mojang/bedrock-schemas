@@ -239,6 +239,22 @@
   "note": "In 1.26.0 the schema is stricter and rejects invalid JSON. The `min_look_time` and `max_look_time` fields are deprecated and replaced by a single `look_time` range (with `min` and `max`). Existing uses of `min_look_time` / `max_look_time` are upgraded automatically.",
   "title": "Entity Look At Entity Behavior",
   "samples": {
+    "/vanilla/behavior_pack/entities/agent.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:behavior.look_at_entity/",
+        "content": {
+          "angle_of_view_vertical": 135,
+          "angle_of_view_horizontal": 170,
+          "look_time": {
+            "min": 1,
+            "max": 2
+          },
+          "look_distance": 6,
+          "probability": 1,
+          "priority": 2
+        }
+      }
+    ],
     "/vanilla/behavior_pack/entities/vex.json": [
       {
         "path": "/minecraft:entity/components/minecraft:behavior.look_at_entity/",

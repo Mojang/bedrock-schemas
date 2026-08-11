@@ -19,6 +19,22 @@
   "replace_block_item": true
 }
 
+
+Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/red_shrub.json
+
+"minecraft:block_placer": {
+  "block": "minecraft:red_shrub",
+  "replace_block_item": true
+}
+
+
+Shelf Mushroom - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/shelf_mushroom.json
+
+"minecraft:block_placer": {
+  "block": "minecraft:shelf_mushroom",
+  "replace_block_item": true
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -44,6 +60,12 @@ export default interface MinecraftBlockPlacer {
   /**
    * @remarks
    * Defines the block that will be placed.
+   * 
+   * Sample Values:
+   * Red Shrub: "minecraft:red_shrub"
+   *
+   * Shelf Mushroom: "minecraft:shelf_mushroom"
+   *
    */
   block: string;
 
@@ -54,6 +76,11 @@ export default interface MinecraftBlockPlacer {
    * broken/picked. Note: the identifier for this item must match the
    * block's identifier for this field to be valid. Defaults to
    * false.
+   * 
+   * Sample Values:
+   * Red Shrub: true
+   *
+   *
    */
   replace_block_item?: boolean;
 

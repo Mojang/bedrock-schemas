@@ -22,6 +22,6 @@
       }
     ]
   },
-  "description": "Returns the height of the block immediately above the highest solid block at the input (x,z) position",
+  "description": "Returns the height of the block immediately above the highest solid block at the input (x,z) position.",
   "title": "Above Top Solid"
 }

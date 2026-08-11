@@ -12,6 +12,8 @@ export { default as MinecraftGrowingPlantFeature } from './MinecraftGrowingPlant
 export { default as MinecraftHeightDifferenceFilterFeature } from './MinecraftHeightDifferenceFilterFeature';
 export { default as MinecraftHorizontalTreeDecorationFeature } from './MinecraftHorizontalTreeDecorationFeature';
 export { default as MinecraftMultifaceFeature } from './MinecraftMultifaceFeature';
+export { default as MinecraftMultipartBlockColumnFeature } from './MinecraftMultipartBlockColumnFeature';
+export { default as MinecraftMultiBlockFeature } from './MinecraftMultiBlockFeature';
 export { default as MinecraftNetherCaveCarverFeature } from './MinecraftNetherCaveCarverFeature';
 export { default as MinecraftOreFeature } from './MinecraftOreFeature';
 export { default as MinecraftPartiallyExposedBlobFeature } from './MinecraftPartiallyExposedBlobFeature';

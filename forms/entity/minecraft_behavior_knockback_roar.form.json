@@ -250,7 +250,6 @@
   ],
   "description": "Allows the mob to perform a damaging knockback that affects all nearby entities.",
   "title": "Entity Knockback Roar Behavior",
-  "samples": {},
   "id": "minecraft:behavior.knockback_roar",
   "dataVersion": "1.26.40"
 }

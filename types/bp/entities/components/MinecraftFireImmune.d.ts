@@ -11,7 +11,7 @@
  * 
  * minecraft:fire_immune Samples
 
-Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/blaze.json
+Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
 
 "minecraft:fire_immune": {}
 

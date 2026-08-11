@@ -303,6 +303,5 @@
   ],
   "description": "Allows the mob to offer a flower to another mob with the minecraft:take_flower behavior.",
   "title": "Entity Play Behavior",
-  "samples": {},
   "id": "minecraft:behavior.play"
 }

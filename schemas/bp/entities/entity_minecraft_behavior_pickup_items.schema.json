@@ -83,7 +83,7 @@
         }
       ],
       "title": "Excluded Items",
-      "description": "List of items this mob will not pick up\n\nSample values:\n• bogged: [{\"tags\":\"q.all_tags('minecraft:is_spear')\"}]\n• drowned: [\"minecraft:glow_ink_sac\",{\"tags\":\"q.all_tags('...",
+      "description": "List of items this mob will not pick up\n\nSample values:\n• bogged: [{\"tags\":\"q.all_tags('minecraft:is_spear')\"}]\n• drowned: [{\"name\":\"minecraft:glow_ink_sac\"},{\"tags\":\"q.a...",
       "defaultSnippets": [
         {
           "label": "Excluded Items (default)",

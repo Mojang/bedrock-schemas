@@ -64,6 +64,5 @@
   ],
   "description": "Allows mob to move towards a random block.",
   "title": "Entity Move To Random Block Behavior",
-  "samples": {},
   "id": "minecraft:behavior.move_to_random_block"
 }

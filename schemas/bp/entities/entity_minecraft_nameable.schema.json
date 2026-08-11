@@ -12,7 +12,7 @@
     },
     "always_show": {
       "title": "Always Show",
-      "description": "If true, the name will always be shown",
+      "description": "If true, the name will always be shown\n\nSample values:\n• agent: true",
       "type": "boolean",
       "default": false
     },

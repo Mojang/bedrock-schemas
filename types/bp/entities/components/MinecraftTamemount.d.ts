@@ -199,8 +199,8 @@ export interface MinecraftTamemountAutoRejectItems {
 
   /**
    * @remarks
-   * Name of the item this entity dislikes and will cause it to get
-   * angry if used while untamed.
+   * The list of items that, if carried while interacting with the
+   * entity, will anger it.
    */
   item?: string;
 

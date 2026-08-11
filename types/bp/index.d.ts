@@ -654,6 +654,8 @@ export { default as MinecraftGrowingPlantFeature } from './features/MinecraftGro
 export { default as MinecraftHeightDifferenceFilterFeature } from './features/MinecraftHeightDifferenceFilterFeature';
 export { default as MinecraftHorizontalTreeDecorationFeature } from './features/MinecraftHorizontalTreeDecorationFeature';
 export { default as MinecraftMultifaceFeature } from './features/MinecraftMultifaceFeature';
+export { default as MinecraftMultipartBlockColumnFeature } from './features/MinecraftMultipartBlockColumnFeature';
+export { default as MinecraftMultiBlockFeature } from './features/MinecraftMultiBlockFeature';
 export { default as MinecraftNetherCaveCarverFeature } from './features/MinecraftNetherCaveCarverFeature';
 export { default as MinecraftOreFeature } from './features/MinecraftOreFeature';
 export { default as MinecraftPartiallyExposedBlobFeature } from './features/MinecraftPartiallyExposedBlobFeature';

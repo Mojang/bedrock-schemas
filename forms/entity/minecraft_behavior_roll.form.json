@@ -50,6 +50,5 @@
   ],
   "description": "This allows the mob to roll forward.",
   "title": "Entity Roll Behavior",
-  "samples": {},
   "id": "minecraft:behavior.roll"
 }

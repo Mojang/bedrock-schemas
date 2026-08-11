@@ -82,6 +82,5 @@
   ],
   "description": "Allows the player to trade with this mob. When the goal starts, it will stop the mob's navigation.",
   "title": "Entity Celebrate Survive Behavior",
-  "samples": {},
   "id": "minecraft:behavior.celebrate_survive"
 }

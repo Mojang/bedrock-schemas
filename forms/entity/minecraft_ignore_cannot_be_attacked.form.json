@@ -21,7 +21,7 @@
     }
   ],
   "versionIntroduced": "1.21.50",
-  "description": "When set, blocks entities from attacking the owner entity unless they have the \"minecraft:ignore_cannot_be_attacked\" component.",
+  "description": "Allows the owner entity to ignore the \"minecraft:cannot_be_attacked\" component on entities that fulfill the filter.",
   "title": "Ignore Cannot Be Attacked",
   "id": "minecraft:ignore_cannot_be_attacked"
 }

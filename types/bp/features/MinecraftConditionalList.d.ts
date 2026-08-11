@@ -32,10 +32,11 @@ export default interface MinecraftConditionalList {
 
   /**
    * @remarks
-   * Denote whether placement should end on first successful placement or
-   * first passed condition.
+   * Denote whether placement should end on first successful placement
+   * ('placement_success'), first passed condition ('condition_success'), or
+   * evaluate all features ('none'). Defaults to 'none'.
    */
-  early_out_schemeLessThancondition_successplacement_success?: string;
+  early_out_schemeLessThancondition_successplacement_successnone?: string;
 
   format_version?: string;
 
@@ -48,9 +49,10 @@ export interface MinecraftConditionalListConditionalFeatures {
 
   /**
    * @remarks
-   * Condition for placing associated Feature
+   * Condition for placing associated Feature. If omitted, always
+   * places.
    */
-  condition: string;
+  condition?: string;
 
 }
 

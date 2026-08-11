@@ -15,6 +15,5 @@
   "fields": [],
   "description": "Specifies if an entity can join a raid.",
   "title": "Can Join Raid",
-  "samples": {},
   "id": "minecraft:can_join_raid"
 }

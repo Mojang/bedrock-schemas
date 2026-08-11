@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.open_door
- * 
- * minecraft:behavior.open_door Samples
  */
 
 import * as jsoncommon from '../../../common';

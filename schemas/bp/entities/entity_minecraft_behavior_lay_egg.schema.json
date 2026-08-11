@@ -669,7 +669,7 @@
     },
     "target_blocks": {
       "title": "Target Blocks",
-      "description": "Blocks that the mob can lay its eggs on top of.\n\nSample values:\n• frog: [\"minecraft:water\"]",
+      "description": "Blocks that the mob can lay its eggs on top of.\n\nSample values:\n• frog: [\"minecraft:sand\",\"minecraft:water\"]",
       "type": "array",
       "items": {
         "type": "string"
@@ -677,7 +677,7 @@
     },
     "target_materials_above_block": {
       "title": "Target Materials Above Block",
-      "description": "Types of materials that can exist above the target block. Valid types are Air, Water, and Lava.\n\nSample values:\n• frog: [\"Air\"]",
+      "description": "Types of materials that can exist above the target block. Valid types are Air, Water, and Lava.\n\nSample values:\n• frog: [\"air\",\"air\"]",
       "type": "array",
       "items": {
         "type": "string"

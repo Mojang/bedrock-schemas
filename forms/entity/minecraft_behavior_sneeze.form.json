@@ -314,6 +314,5 @@
   ],
   "description": "Allows the mob to sneeze, causing it to drop items and affect nearby mobs.",
   "title": "Entity Sneeze Behavior",
-  "samples": {},
   "id": "minecraft:behavior.sneeze"
 }

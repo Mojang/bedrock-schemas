@@ -29,10 +29,12 @@ Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   "use_default_animation": false,
   "speed_multiplier": 1,
   "target_blocks": [
+    "minecraft:sand",
     "minecraft:water"
   ],
   "target_materials_above_block": [
-    "Air"
+    "air",
+    "air"
   ]
 }
 
@@ -165,7 +167,7 @@ export default interface MinecraftBehaviorLayEgg {
    * Blocks that the mob can lay its eggs on top of.
    * 
    * Sample Values:
-   * Frog: ["minecraft:water"]
+   * Frog: ["minecraft:sand","minecraft:water"]
    *
    */
   target_blocks?: string[];
@@ -176,7 +178,7 @@ export default interface MinecraftBehaviorLayEgg {
    * types are Air, Water, and Lava.
    * 
    * Sample Values:
-   * Frog: ["Air"]
+   * Frog: ["air","air"]
    *
    */
   target_materials_above_block?: string[];

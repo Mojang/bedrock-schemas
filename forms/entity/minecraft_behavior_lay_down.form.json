@@ -57,6 +57,5 @@
   ],
   "description": "Allows mobs to lay down at times",
   "title": "Entity Lay Down Behavior",
-  "samples": {},
   "id": "minecraft:behavior.lay_down"
 }

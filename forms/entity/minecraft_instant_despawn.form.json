@@ -23,6 +23,5 @@
   ],
   "description": "Despawns the Actor immediately.",
   "title": "Instant Despawn",
-  "samples": {},
   "id": "minecraft:instant_despawn"
 }

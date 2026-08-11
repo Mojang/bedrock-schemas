@@ -8,8 +8,6 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:is_stunned
- * 
- * minecraft:is_stunned Samples
  */
 
 import * as jsoncommon from '../../../common';

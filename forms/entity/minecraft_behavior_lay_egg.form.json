@@ -2503,6 +2503,7 @@
           {
             "path": "/minecraft:entity/component_groups/pregnant/minecraft:behavior.lay_egg/",
             "content": [
+              "minecraft:sand",
               "minecraft:water"
             ]
           }
@@ -2522,7 +2523,8 @@
           {
             "path": "/minecraft:entity/component_groups/pregnant/minecraft:behavior.lay_egg/",
             "content": [
-              "Air"
+              "air",
+              "air"
             ]
           }
         ]
@@ -2558,10 +2560,12 @@
           "use_default_animation": false,
           "speed_multiplier": 1,
           "target_blocks": [
+            "minecraft:sand",
             "minecraft:water"
           ],
           "target_materials_above_block": [
-            "Air"
+            "air",
+            "air"
           ]
         }
       }

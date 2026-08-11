@@ -48,6 +48,14 @@ export default interface MinecraftTeleport {
 
   /**
    * @remarks
+   * Conditions that determine which projectiles cause the entity to
+   * attempt to teleport. If omitted, all projectiles cause a
+   * teleport attempt
+   */
+  projectile_filter?: jsoncommon.MinecraftFilter;
+
+  /**
+   * @remarks
    * Entity will teleport to a random position within the area defined by
    * this cube
    */
@@ -72,5 +80,12 @@ export default interface MinecraftTeleport {
    * means 100%
    */
   target_teleport_chance?: number;
+
+  /**
+   * @remarks
+   * If true, the entity will attempt to teleport away from
+   * projectiles about to hit it
+   */
+  teleports_on_projectile_hit?: boolean;
 
 }

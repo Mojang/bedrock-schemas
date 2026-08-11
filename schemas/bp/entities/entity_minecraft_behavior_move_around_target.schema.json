@@ -24,7 +24,7 @@
     },
     "destination_position_range": {
       "title": "Destination Position Range",
-      "description": "The range of distances from the target entity within which the goal should look for a position to move the owner entity to.\n\nSample values:\n• breeze: [4,8]",
+      "description": "The range of distances from the target entity within which the goal should look for a position to move the owner entity to.\n\nSample values:\n• breeze: {\"min\":4,\"max\":8}",
       "anyOf": [
         {
           "type": "number"

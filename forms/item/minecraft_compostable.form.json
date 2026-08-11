@@ -43,12 +43,43 @@
           "value": 100
         }
       ],
-      "isRequired": true
+      "isRequired": true,
+      "samples": {
+        "/vanilla/behavior_pack/items/red_shrub.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:compostable/",
+            "content": 30
+          }
+        ],
+        "/vanilla/behavior_pack/items/shelf_mushroom.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:compostable/",
+            "content": 65
+          }
+        ]
+      }
     }
   ],
   "versionIntroduced": "1.21.60",
   "description": "Specifies that an item is compostable and provides the chance of creating a composting layer in the composter",
   "title": "Item Compostable",
-  "samples": {},
+  "samples": {
+    "/vanilla/behavior_pack/items/red_shrub.json": [
+      {
+        "path": "/minecraft:item/components/minecraft:compostable/",
+        "content": {
+          "composting_chance": 30
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/items/shelf_mushroom.json": [
+      {
+        "path": "/minecraft:item/components/minecraft:compostable/",
+        "content": {
+          "composting_chance": 65
+        }
+      }
+    ]
+  },
   "dataVersion": "1.21.50"
 }

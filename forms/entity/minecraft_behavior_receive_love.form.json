@@ -43,6 +43,5 @@
   ],
   "description": "Allows the villager to stop so another villager can breed with it. Can only be used by a Villager.",
   "title": "Entity Receive Love Behavior",
-  "samples": {},
   "id": "minecraft:behavior.receive_love"
 }

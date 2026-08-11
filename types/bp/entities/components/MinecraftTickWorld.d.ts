@@ -8,6 +8,13 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:tick_world
+ * 
+ * minecraft:tick_world Samples
+
+Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
+
+"minecraft:tick_world": {}
+
  */
 
 import * as jsoncommon from '../../../common';
