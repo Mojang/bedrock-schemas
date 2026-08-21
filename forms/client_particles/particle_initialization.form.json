@@ -22,7 +22,7 @@
         {
           "id": "per_render_expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "per_render_expression",
@@ -39,7 +39,7 @@
         {
           "id": "per_update_expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "per_update_expression",
@@ -50,5 +50,6 @@
   ],
   "description": "Runs Molang expressions when each individual particle spawns to initialize per-particle variables. Unlike emitter_initialization which runs once per emitter, this executes for every particle—enabling randomized properties, unique trajectories, or per-particle state that persists through the particle's lifetime.",
   "title": "Client Particles Particle Initialization",
-  "id": "particle_initialization"
+  "id": "particle_initialization",
+  "dataVersion": "1.21.10"
 }

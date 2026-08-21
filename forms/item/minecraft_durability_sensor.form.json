@@ -33,5 +33,5 @@
   ],
   "description": "Enables an item to emit effects when it receives damage. Because of this, the item also needs a `minecraft:durability` component.",
   "title": "Item Durability Sensor",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.30"
 }

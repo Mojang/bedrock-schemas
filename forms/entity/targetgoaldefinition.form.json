@@ -39,7 +39,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "entity_types",
@@ -118,7 +119,8 @@
                       "description": "The value being compared with the test.",
                       "dataType": "object"
                     }
-                  ]
+                  ],
+                  "dataVersion": "1.21.20"
                 },
                 "alternates": [
                   {
@@ -189,7 +191,8 @@
                 "dataType": "float",
                 "defaultValue": 1
               }
-            ]
+            ],
+            "dataVersion": "1.21.120"
           }
         }
       ]

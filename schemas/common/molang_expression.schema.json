@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "item/molang_expression",
-  "title": "Item Molang Expression",
+  "$id": "legacy/molang_expression",
+  "title": "Legacy Molang Expression",
   "type": "object",
   "properties": {
     "expression": {

@@ -25,7 +25,7 @@
         {
           "id": "creation_expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "creation_expression",
@@ -43,7 +43,7 @@
         {
           "id": "per_update_expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "per_update_expression",
@@ -52,5 +52,6 @@
       ]
     }
   ],
-  "id": "emitter_initialization"
+  "id": "emitter_initialization",
+  "dataVersion": "1.21.10"
 }

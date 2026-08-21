@@ -18,9 +18,21 @@
       "id": "processor_type",
       "title": "Jigsaw Processor Type",
       "defaultValue": "minecraft:rule",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "isRequired": true,
       "choices": [
+        {
+          "id": "minecraft:block_ignore",
+          "title": "Minecraft:block ignore"
+        },
+        {
+          "id": "minecraft:capped",
+          "title": "Minecraft:capped"
+        },
+        {
+          "id": "minecraft:protected_blocks",
+          "title": "Minecraft:protected blocks"
+        },
         {
           "id": "minecraft:rule",
           "title": "Minecraft:rule"
@@ -37,5 +49,6 @@
     }
   ],
   "description": "Replaces and modifies blocks based on a series of rules",
-  "title": "World BlockRules"
+  "title": "World BlockRules",
+  "dataVersion": "1.21.20"
 }

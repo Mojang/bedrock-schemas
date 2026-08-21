@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -43,5 +44,7 @@
   ],
   "description": "Allows the mob to stay indoors during night time.",
   "title": "Entity Restrict Open Door Behavior",
-  "id": "minecraft:behavior.restrict_open_door"
+  "samples": {},
+  "id": "minecraft:behavior.restrict_open_door",
+  "dataVersion": "1.26.30"
 }

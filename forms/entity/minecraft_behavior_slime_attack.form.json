@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "grow_tired_cooldown_time",
@@ -134,5 +135,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.slime_attack"
+  "id": "minecraft:behavior.slime_attack",
+  "dataVersion": "1.21.110"
 }

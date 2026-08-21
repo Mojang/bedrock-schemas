@@ -45,7 +45,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_cooldown",
@@ -120,5 +121,6 @@
   "description": "Allows the NPC to use the POI",
   "title": "Entity Work Behavior",
   "samples": {},
-  "id": "minecraft:behavior.work"
+  "id": "minecraft:behavior.work",
+  "dataVersion": "1.26.10"
 }

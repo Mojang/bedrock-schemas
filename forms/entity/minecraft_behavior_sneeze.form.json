@@ -39,7 +39,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -132,7 +133,8 @@
                       "description": "The value being compared with the test.",
                       "dataType": "object"
                     }
-                  ]
+                  ],
+                  "dataVersion": "1.21.20"
                 },
                 "alternates": [
                   {
@@ -203,7 +205,8 @@
                 "dataType": "float",
                 "defaultValue": 1
               }
-            ]
+            ],
+            "dataVersion": "1.21.120"
           }
         }
       ],
@@ -314,5 +317,7 @@
   ],
   "description": "Allows the mob to sneeze, causing it to drop items and affect nearby mobs.",
   "title": "Entity Sneeze Behavior",
-  "id": "minecraft:behavior.sneeze"
+  "samples": {},
+  "id": "minecraft:behavior.sneeze",
+  "dataVersion": "1.26.30"
 }

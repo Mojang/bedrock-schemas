@@ -12,7 +12,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "entity_to_spawn",
@@ -70,7 +70,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -108,5 +109,6 @@
     }
   ],
   "description": "Component for spawning entities when an entity perishes.",
-  "title": "Entity Spawn On Death"
+  "title": "Entity Spawn On Death",
+  "dataVersion": "1.26.20"
 }

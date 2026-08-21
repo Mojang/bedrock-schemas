@@ -47,6 +47,5 @@
     }
   ],
   "description": "Defines a common filter test with domain, operator, subject, and value comparisons.",
-  "title": "World Common Filter Test",
-  "dataVersion": "1.21.20"
+  "title": "World Common Filter Test"
 }

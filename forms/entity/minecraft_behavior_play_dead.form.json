@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "damage_sources",
@@ -195,7 +196,8 @@
           "id": "wither",
           "title": "Wither"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "duration",
@@ -253,7 +255,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -286,7 +289,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "random_start_chance",
@@ -299,5 +302,6 @@
   "description": "Allows this entity to pretend to be dead to avoid being targeted by attackers.",
   "title": "Entity Play Dead Behavior",
   "samples": {},
-  "id": "minecraft:behavior.play_dead"
+  "id": "minecraft:behavior.play_dead",
+  "dataVersion": "1.26.10"
 }

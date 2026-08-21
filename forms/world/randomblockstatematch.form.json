@@ -59,12 +59,32 @@
     },
     {
       "id": "predicate_type",
-      "title": "BlockType",
-      "dataType": "string",
+      "title": "Predicate Type",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:always_true",
+          "title": "Minecraft:always true"
+        },
+        {
+          "id": "minecraft:block_match",
+          "title": "Minecraft:block match"
+        },
+        {
+          "id": "minecraft:blockstate_match",
+          "title": "Minecraft:blockstate match"
+        },
+        {
+          "id": "minecraft:random_block_match",
+          "title": "Minecraft:random block match"
+        },
         {
           "id": "minecraft:random_blockstate_match",
           "title": "Minecraft:random blockstate match"
+        },
+        {
+          "id": "minecraft:tag_match",
+          "title": "Minecraft:tag match"
         }
       ],
       "mustMatchChoices": true,
@@ -86,5 +106,6 @@
     }
   ],
   "description": "Predicate that evaluates to true with a given probability if the block at the specified location matches the specified block.",
-  "title": "World RandomBlockStateMatch"
+  "title": "World RandomBlockStateMatch",
+  "dataVersion": "1.21.20"
 }

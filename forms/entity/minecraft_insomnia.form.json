@@ -17,8 +17,8 @@
       "id": "days_until_insomnia",
       "title": "Days Until Insomnia",
       "description": "Number of days the mob has to stay up until the insomnia effect begins.",
-      "defaultValue": 3,
       "dataType": "float",
+      "defaultValue": 3,
       "samples": {
         "/vanilla/behavior_pack/entities/player.json": [
           {
@@ -30,7 +30,7 @@
     }
   ],
   "description": "Adds a timer since last rested to see if phantoms should spawn.",
-  "title": "Insomnia",
+  "title": "Entity Insomnia",
   "samples": {
     "/vanilla/behavior_pack/entities/player.json": [
       {
@@ -41,5 +41,6 @@
       }
     ]
   },
-  "id": "minecraft:insomnia"
+  "id": "minecraft:insomnia",
+  "dataVersion": "1.26.50"
 }

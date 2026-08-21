@@ -120,5 +120,6 @@
     }
   ],
   "description": "Any components that this Biome uses",
-  "title": "Biome Components"
+  "title": "Biome Components",
+  "dataVersion": "1.26.30"
 }

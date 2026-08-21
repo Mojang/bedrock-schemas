@@ -46,5 +46,6 @@
     }
   ],
   "description": "Allows a block to have a lead tied to it.",
-  "title": "Block Leashable"
+  "title": "Block Leashable",
+  "dataVersion": "1.26.20"
 }

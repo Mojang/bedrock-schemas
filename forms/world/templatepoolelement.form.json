@@ -40,5 +40,6 @@
     }
   ],
   "description": "Defines a weighted template pool element with structure and processor references.",
-  "title": "World TemplatePoolElement"
+  "title": "World TemplatePoolElement",
+  "dataVersion": "1.21.20"
 }

@@ -19,6 +19,7 @@ export { default as AttackDamage } from './AttackDamage';
 export { default as Balloonable } from './Balloonable';
 export { default as MinecraftBarter } from './MinecraftBarter';
 export { default as MinecraftBlockClimber } from './MinecraftBlockClimber';
+export { default as MinecraftBlockMovementSlowdownImmunity } from './MinecraftBlockMovementSlowdownImmunity';
 export { default as MinecraftBlockSensor } from './MinecraftBlockSensor';
 export { default as MinecraftBodyRotationAlwaysFollowsHead } from './MinecraftBodyRotationAlwaysFollowsHead';
 export { default as MinecraftBodyRotationAxisAligned } from './MinecraftBodyRotationAxisAligned';

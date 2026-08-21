@@ -8,6 +8,15 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:support
+ * 
+ * minecraft:support Samples
+
+Block Black Concrete Stairs - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_stairs.block.json
+
+"minecraft:support": {
+  "shape": "stair"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -35,8 +44,13 @@ export default interface MinecraftSupport {
   /**
    * @remarks
    * Required field. The type of support shape for this block.
+   * 
+   * Sample Values:
+   * Block Black Concrete Stairs: "stair"
+   *
+   *
    */
-  shape: string;
+  shape: MinecraftSupportShape;
 
 }
 

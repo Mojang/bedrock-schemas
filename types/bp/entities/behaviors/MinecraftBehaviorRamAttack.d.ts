@@ -87,7 +87,7 @@ export default interface MinecraftBehaviorRamAttack {
    * Goat: {"min":30,"max":300}, {"min":5,"max":15}
    *
    */
-  cooldown_range?: MinecraftBehaviorRamAttackCooldownRange;
+  cooldown_range?: object;
 
   /**
    * @remarks
@@ -139,7 +139,7 @@ export default interface MinecraftBehaviorRamAttack {
    * Goat: "pre_ram", "pre_ram.screamer"
    *
    */
-  pre_ram_sound?: string;
+  pre_ram_sound?: MinecraftBehaviorRamAttackPreRamSound;
 
   /**
    * @remarks
@@ -172,7 +172,7 @@ export default interface MinecraftBehaviorRamAttack {
    * Goat: "ram_impact", "ram_impact.screamer"
    *
    */
-  ram_impact_sound?: string;
+  ram_impact_sound?: MinecraftBehaviorRamAttackRamImpactSound;
 
   /**
    * @remarks
@@ -201,23 +201,6 @@ export enum MinecraftBehaviorRamAttackControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorRamAttackCooldownRange {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 
@@ -507,6 +490,7 @@ export enum MinecraftBehaviorRamAttackPreRamSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -707,6 +691,7 @@ export enum MinecraftBehaviorRamAttackPreRamSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -824,6 +809,7 @@ export enum MinecraftBehaviorRamAttackPreRamSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -1078,6 +1064,7 @@ export enum MinecraftBehaviorRamAttackRamImpactSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -1278,6 +1265,7 @@ export enum MinecraftBehaviorRamAttackRamImpactSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -1395,6 +1383,7 @@ export enum MinecraftBehaviorRamAttackRamImpactSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

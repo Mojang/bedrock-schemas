@@ -40,6 +40,13 @@ Instrument Defined With No Sound For Up Face - Instrument defined with no sound 
   "down": "note.banjo"
 }
 
+
+Block Black Concrete Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_double_slab.block.json
+
+"minecraft:instrument_sound": {
+  "up": "note.bassattack"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -71,6 +78,11 @@ export default interface MinecraftInstrumentSound {
    * The instrument sound that plays when the note block is below this
    * block (the block's up face is exposed to the note block). Use
    * "note.none" to specify no sound for this face.
+   * 
+   * Sample Values:
+   * Block Black Concrete Double Slab: "note.bassattack"
+   *
+   *
    */
   up?: string;
 

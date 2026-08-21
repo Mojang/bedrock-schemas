@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "ignore_vibration",
@@ -175,5 +176,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.follow_owner"
+  "id": "minecraft:behavior.follow_owner",
+  "dataVersion": "1.26.20"
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Interact",
+  "title": "Entity Interact",
   "description": "Defines interactions with this entity.",
   "properties": {
     "interactions": {
@@ -9,155 +9,14 @@
         {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "particle_on_start": {
-                "title": "Particle On Start",
-                "description": "\n\nProperties:\n• particle_type (string)",
-                "type": "object",
-                "properties": {
-                  "particle_type": {
-                    "title": "Particle_type",
-                    "description": "\n\nSample values:\n• bee: food",
-                    "type": "string"
-                  }
-                },
-                "defaultSnippets": [
-                  {
-                    "label": "Particle_on_start",
-                    "description": "Create a Particle_on_start",
-                    "body": {
-                      "particle_type": ""
-                    }
-                  }
-                ]
-              },
-              "play_sounds": {
-                "title": "Play Sounds",
-                "type": "string"
-              },
-              "repair_entity_item": {
-                "title": "Repair Entity Item",
-                "description": "Allows to repair one of the entity's items.",
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "amount": {
-                      "title": "Amount",
-                      "description": "How much of the item durability should be restored upon interaction.",
-                      "type": "integer"
-                    },
-                    "slot": {
-                      "title": "Slot",
-                      "description": "The entity's slot containing the item to be repaired. Inventory slots are denoted by positive numbers. Armor slots are denoted by 'slot.armor.head', 'slot.armor.chest', 'slot.armor.legs', 'slot.armor.feet' and 'slot.armor.body'.",
-                      "type": "integer"
-                    }
-                  }
-                }
-              },
-              "spawn_entities": {
-                "title": "Spawn Entities",
-                "description": "List of entities to spawn when the interaction occurs.",
-                "type": "string"
-              },
-              "spawn_items": {
-                "title": "Spawn Items",
-                "description": "\n\nProperties:\n• table (string)",
-                "type": "object",
-                "properties": {
-                  "table": {
-                    "title": "Table",
-                    "description": "\n\nSample values:\n• armadillo: loot_tables/entities/armadillo_brush.json",
-                    "type": "string"
-                  }
-                },
-                "defaultSnippets": [
-                  {
-                    "label": "Spawn_items",
-                    "description": "Create a Spawn_items",
-                    "body": {
-                      "table": ""
-                    }
-                  }
-                ]
-              },
-              "swing": {
-                "title": "Swing",
-                "description": "If true, the player will do the 'swing' animation when interacting with this entity.",
-                "type": "boolean",
-                "default": false
-              },
-              "transform_to_item": {
-                "title": "Transform To Item",
-                "description": "The item used will transform to this item upon successful interaction. Format: itemName:auxValue",
-                "type": "string"
-              },
-              "use_item": {
-                "title": "Use Item",
-                "description": "If true, the interaction will use an item.",
-                "type": "boolean",
-                "default": false
-              },
-              "vibration": {
-                "title": "Vibration",
-                "description": "Vibration to emit when the interaction occurs. Admitted values are none (no vibration emitted), shear, entity_die, entity_act, entity_interact.",
-                "type": "string",
-                "default": "entity_interact"
-              },
-              "on_interact": {
-                "title": "On Interact",
-                "description": "Event to fire when the interaction occurs. Can be a string event name or an object with filters.\n\nSample values:\n• allay: {\"filters\":{\"all_of\":[{\"test\":\"is_family\",\"subj...",
-                "oneOf": [
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "object",
-                    "properties": {
-                      "event": {
-                        "type": "string"
-                      },
-                      "target": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                ]
-              },
-              "give_item": {
-                "title": "Give Item",
-                "description": "If true, the player can give items to the entity during interaction.\n\nSample values:\n• allay: true",
-                "type": "boolean",
-                "default": false
-              },
-              "take_item": {
-                "title": "Take Item",
-                "description": "If true, the player can take items from the entity during interaction.\n\nSample values:\n• allay: true",
-                "type": "boolean",
-                "default": false
-              },
-              "interact_text": {
-                "title": "Interact_text",
-                "description": "\n\nSample values:\n• allay: action.interact.allay",
-                "type": "string"
-              },
-              "hurt_item": {
-                "title": "Hurt Item",
-                "type": "number"
-              },
-              "equip_item_slot": {
-                "title": "Equip Item Slot",
-                "description": "If set, an item held by the player is equipped to this slot upon successful interaction. Any existing item in the slot is moved to the player's inventory; in non-Creative mode the equipped item is removed from the player's inventory.\n\n*Introduced in version 1.19.60*",
-                "type": "string"
-              }
-            }
+            "$ref": "./entity_interactiondata.schema.json"
           }
         },
         {
           "type": "object"
         }
       ],
+      "title": "Interactions",
       "description": "The list of interactions for this entity."
     },
     "cooldown": {

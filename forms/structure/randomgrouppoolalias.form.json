@@ -24,6 +24,5 @@
     }
   ],
   "description": "Pool alias for a RandomGroup of aliases",
-  "title": "Structure RandomGroupPoolAlias",
-  "dataVersion": "1.21.20"
+  "title": "Structure RandomGroupPoolAlias"
 }

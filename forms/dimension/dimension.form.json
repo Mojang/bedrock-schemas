@@ -30,5 +30,6 @@
     }
   ],
   "description": "Defines a custom dimension with its description and components.",
-  "title": "Dimension"
+  "title": "Dimension",
+  "dataVersion": "1.26.50"
 }

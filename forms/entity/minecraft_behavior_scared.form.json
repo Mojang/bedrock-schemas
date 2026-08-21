@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -57,5 +58,7 @@
   ],
   "description": "Allows the mob to become scared when the weather outside is thundering.",
   "title": "Entity Scared Behavior",
-  "id": "minecraft:behavior.scared"
+  "samples": {},
+  "id": "minecraft:behavior.scared",
+  "dataVersion": "1.26.30"
 }

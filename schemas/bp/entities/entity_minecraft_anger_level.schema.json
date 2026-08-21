@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Anger Level",
+  "title": "Entity Anger Level",
   "description": "Compels the entity to track anger towards a set of nuisances.",
   "properties": {
     "anger_decrement_interval": {
@@ -14,7 +14,7 @@
       "title": "Default Annoyingness",
       "description": "The default amount of annoyingness for any given nuisance. Specifies how much to raise anger level on each provocation.\n\nSample values:\n• warden: 35",
       "type": "integer",
-      "default": "0"
+      "default": 0
     },
     "sound_interval": {
       "description": "Anger boost applied to angry threshold when the entity gets angry.",
@@ -159,19 +159,7 @@
       "description": "Sounds to play when the entity is getting provoked. Evaluated in order. First matching condition wins\n\nSample values:\n• warden: [{\"condition\":\"query.anger_level(this) >= 40\",\"...",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "condition": {
-            "title": "Condition",
-            "description": "A Molang expression describing under which conditions to play this sound, given that the entity was provoked",
-            "type": "string"
-          },
-          "sound": {
-            "title": "Sound",
-            "description": "The sound to play",
-            "type": "string"
-          }
-        }
+        "$ref": "./entity_sounddefinition.schema.json"
       }
     },
     "angry_boost": {
@@ -188,6 +176,12 @@
       "minimum": 0,
       "default": 80
     },
+    "default_projectile_annoyingness": {
+      "title": "Default Projectile Annoyingness",
+      "description": "The default amount of annoyingness for any given nuisance that is a projectile. Specifies how much to raise anger level on each provocation.\n\nSample values:\n• warden: 10",
+      "type": "integer",
+      "default": 0
+    },
     "max_anger": {
       "title": "Max Anger",
       "description": "The maximum anger level that can be reached. Applies to any nuisance.\n\nSample values:\n• warden: 150",
@@ -196,53 +190,49 @@
       "default": 100
     },
     "nuisance_filter": {
-      "title": "Nuisance Filter",
-      "description": "Filter that is applied to determine if a mob can be a nuisance.\n\nSample values:\n• warden: {\"all_of\":[{\"operator\":\"not\",\"test\":\"is_family\"...",
       "anyOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
         {
           "type": "object",
           "properties": {
-            "all_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "domain": {
+              "title": "Domain",
+              "description": "The domain the test should be performed in.",
+              "type": "object"
             },
-            "any_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "operator": {
+              "title": "Operator",
+              "description": "The comparison to apply with 'value'.",
+              "type": "object"
             },
-            "none_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "subject": {
+              "title": "Subject",
+              "description": "The subject of this filter test.",
+              "type": "object"
+            },
+            "test": {
+              "title": "Test",
+              "description": "The name of the test to apply.",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "description": "The value being compared with the test.",
+              "type": "object"
             }
           }
+        },
+        {
+          "type": "object"
         }
-      ]
+      ],
+      "title": "Nuisance Filter",
+      "description": "Filter that is applied to determine if a mob can be a nuisance.\n\nSample values:\n• warden: {\"all_of\":[{\"operator\":\"not\",\"test\":\"is_family\"..."
     },
     "remove_targets_below_angry_threshold": {
       "title": "Remove Targets Below Angry Threshold",
       "description": "Defines if the mob should remove target if it falls below 'angry' threshold.\n\nSample values:\n• warden: true",
       "type": "boolean",
-      "default": false
-    },
-    "default_projectile_annoyingness": {
-      "title": "Default Projectile Annoyingness",
-      "description": "\n\nSample values:\n• warden: 10",
-      "type": "number"
+      "default": true
     }
   }
 }

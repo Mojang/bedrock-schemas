@@ -1,51 +1,71 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Follow Mob Behavior",
+  "title": "Entity Follow Mob Behavior",
   "description": "Allows the mob to follow other mobs.",
   "properties": {
+    "control_flags": {
+      "title": "Control Flags",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "jump",
+          "look",
+          "move"
+        ]
+      }
+    },
     "filters": {
-      "title": "Filters",
-      "description": "If non-empty, provides criteria for filtering which nearby Mobs can be followed. If empty default criteria will be used, which will exclude Players, Squid variants, Fish variants, Tadpoles, Dolphins, and mobs of the same type as the owner of the Goal.",
       "anyOf": [
-        {
-          "type": "object"
-        },
-        {
-          "type": "array",
-          "items": {
-            "type": "object"
-          }
-        },
         {
           "type": "object",
           "properties": {
-            "all_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "domain": {
+              "title": "Domain",
+              "description": "The domain the test should be performed in.",
+              "type": "object"
             },
-            "any_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "operator": {
+              "title": "Operator",
+              "description": "The comparison to apply with 'value'.",
+              "type": "object"
             },
-            "none_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "subject": {
+              "title": "Subject",
+              "description": "The subject of this filter test.",
+              "type": "object"
+            },
+            "test": {
+              "title": "Test",
+              "description": "The name of the test to apply.",
+              "type": "string"
+            },
+            "value": {
+              "title": "Value",
+              "description": "The value being compared with the test.",
+              "type": "object"
             }
           }
+        },
+        {
+          "type": "object"
         }
-      ]
+      ],
+      "title": "Filters",
+      "description": "If non-empty, provides criteria for filtering which nearby Mobs can be followed. If empty default criteria will be used, which will exclude Players, Squid variants, Fish variants, Tadpoles, Dolphins, and mobs of the same type as the owner of the Goal."
     },
     "preferred_actor_type": {
       "title": "Preferred Actor Type",
       "description": "The type of actor to prefer following. If left unspecified, a random actor among those in range will be chosen.",
-      "type": "string"
+      "type": "string",
+      "default": ""
+    },
+    "priority": {
+      "title": "Priority",
+      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• parrot: 4",
+      "type": "integer",
+      "default": 0
     },
     "search_range": {
       "title": "Search Range",
@@ -69,12 +89,7 @@
       "title": "Use Home Position Restriction",
       "description": "If true, the mob will respect the 'minecraft:home' component's 'restriction_radius' field when choosing a target to follow. If false, it will choose target position without considering home restrictions.",
       "type": "boolean",
-      "default": true
-    },
-    "priority": {
-      "title": "Priority",
-      "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.",
-      "type": "integer"
+      "default": false
     }
   }
 }

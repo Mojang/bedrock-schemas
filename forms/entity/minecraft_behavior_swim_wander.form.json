@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "interval",
@@ -72,5 +73,6 @@
   "description": "Allows the entity to wander around while swimming, when not path-finding.",
   "title": "Entity Swim Wander Behavior",
   "samples": {},
-  "id": "minecraft:behavior.swim_wander"
+  "id": "minecraft:behavior.swim_wander",
+  "dataVersion": "1.21.110"
 }

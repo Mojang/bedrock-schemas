@@ -38,5 +38,6 @@
     }
   ],
   "title": "Minecraft Ambient Sounds",
-  "description": "Sets the ambient sounds for the biome. These sounds must be in the 'individual_named_sounds' in a 'sounds.json' file."
+  "description": "Sets the ambient sounds for the biome. These sounds must be in the 'individual_named_sounds' in a 'sounds.json' file.",
+  "dataVersion": "1.21.40"
 }

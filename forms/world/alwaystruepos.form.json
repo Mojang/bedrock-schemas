@@ -16,12 +16,16 @@
   "fields": [
     {
       "id": "predicate_type",
-      "title": "PosType",
-      "dataType": "string",
+      "title": "Predicate Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "minecraft:always_true",
           "title": "Minecraft:always true"
+        },
+        {
+          "id": "minecraft:axis_aligned_linear_pos",
+          "title": "Minecraft:axis aligned linear pos"
         }
       ],
       "mustMatchChoices": true,
@@ -30,5 +34,6 @@
     }
   ],
   "description": "Predicate that always evaluates to true. This is the default predicate if no other predicate is specified.",
-  "title": "World AlwaysTruePos"
+  "title": "World AlwaysTruePos",
+  "dataVersion": "1.21.20"
 }

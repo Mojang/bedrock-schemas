@@ -10,6 +10,13 @@
  * Block Components Documentation - minecraft:movable
  * 
  * minecraft:movable Samples
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:movable": {
+  "movement_type": "popped"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -31,8 +38,13 @@ export default interface MinecraftMovable {
    * - The block will only be pulled by a piston and will ignore a
    * sticky piston. "popped" - The block is destroyed when moved by
    * a piston. "immovable" - The block is unaffected by a piston.
+   * 
+   * Sample Values:
+   * Block Red Shrub: "popped"
+   *
+   *
    */
-  movement_type: string;
+  movement_type: MinecraftMovableMovementType;
 
   /**
    * @remarks
@@ -43,7 +55,7 @@ export default interface MinecraftMovable {
    * work with the movement_type: "push_pull". "none" - The default and
    * will not move adjacent blocks.
    */
-  sticky?: string;
+  sticky?: MinecraftMovableSticky;
 
 }
 

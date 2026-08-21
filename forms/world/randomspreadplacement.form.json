@@ -43,9 +43,10 @@
     },
     {
       "id": "spread_type",
-      "title": "SpreadType",
+      "title": "Spread Type",
       "description": "Randomness algorithm used when placing structures.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "linear",
       "choices": [
         {
           "id": "linear",
@@ -56,14 +57,13 @@
           "title": "Triangular"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "linear"
+      "mustMatchChoices": true
     },
     {
       "id": "type",
-      "title": "PlacementType",
+      "title": "Type",
       "description": "Type of placement for the Jigsaw Structure Set.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "minecraft:random_spread",
@@ -75,5 +75,6 @@
     }
   ],
   "description": "Defines random spread placement parameters for structure generation.",
-  "title": "World RandomSpreadPlacement"
+  "title": "World RandomSpreadPlacement",
+  "dataVersion": "1.21.20"
 }

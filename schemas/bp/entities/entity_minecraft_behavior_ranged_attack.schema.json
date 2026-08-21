@@ -6,7 +6,7 @@
   "properties": {
     "attack_interval": {
       "title": "Attack Interval",
-      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• bogged: 3.5\n• bogged: 2.5\n• drowned: {\"min\":1,\"max\":3}",
+      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: {\"min\":3,\"max\":5}\n• bogged: 3.5\n• bogged: 2.5",
       "anyOf": [
         {
           "type": "number"
@@ -25,19 +25,26 @@
       ],
       "x-runtime-constraint-description": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected"
     },
-    "attack_radius": {
-      "title": "Attack Radius",
-      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• blaze: 48\n• bogged: 15\n• llama: 64",
-      "type": "number",
-      "exclusiveMinimum": 0,
-      "default": 0
-    },
-    "attack_radius_min": {
-      "title": "Attack Radius Min",
-      "description": "Minimum distance the target can be for this mob to fire. If the target is closer, this mob will move first before firing",
-      "type": "number",
-      "exclusiveMinimum": 0,
-      "default": 0
+    "attack_range": {
+      "title": "Attack Range",
+      "description": "Range of distances from the target within which the entity can perform a ranged attack.\n\nSample values:\n• blaze: {\"min\":0,\"max\":48}\n• drowned: {\"min\":0,\"max\":10}",
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        {
+          "$ref": "../../common/floatrange.schema.json"
+        }
+      ],
+      "x-runtime-constraint-description": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected"
     },
     "burst_interval": {
       "title": "Burst Interval",
@@ -77,6 +84,16 @@
           "move"
         ]
       }
+    },
+    "in_range_movement_mode": {
+      "title": "In Range Movement Mode",
+      "description": "Controls how the entity moves while its target is within the configured attack range. \"hold_position\" makes the entity stop and hold its position while facing and attacking the target. \"follow_target\" makes the entity continue moving toward the target while attacking, stopping just outside the minimum attack range.",
+      "type": "string",
+      "enum": [
+        "follow_target",
+        "hold_position"
+      ],
+      "default": "hold_position"
     },
     "priority": {
       "title": "Priority",
@@ -128,44 +145,29 @@
       "type": "number",
       "default": 30
     },
+    "attack_radius": {
+      "title": "Attack Radius",
+      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• bogged: 15\n• llama: 64",
+      "type": "number",
+      "default": 0
+    },
     "attack_interval_max": {
       "title": "Attack Interval Max",
-      "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 5",
+      "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
       "type": "number",
       "default": 0
     },
     "attack_interval_min": {
       "title": "Attack Interval Min",
-      "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: 3",
+      "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
       "type": "number",
       "default": 0
     },
-    "attack_range": {
-      "title": "Attack Range",
-      "description": "\n\nProperties:\n• min (number)\n• max (number)\n\nSample values:\n• drowned: {\"min\":0,\"max\":10}",
-      "type": "object",
-      "properties": {
-        "min": {
-          "title": "Min",
-          "description": "\n\nSample values:\n• drowned: 0",
-          "type": "number"
-        },
-        "max": {
-          "title": "Max",
-          "description": "\n\nSample values:\n• drowned: 10",
-          "type": "number"
-        }
-      },
-      "defaultSnippets": [
-        {
-          "label": "Attack range",
-          "description": "Create a Attack range",
-          "body": {
-            "min": 0,
-            "max": 0
-          }
-        }
-      ]
+    "attack_radius_min": {
+      "title": "Attack Radius Min",
+      "description": "Minimum distance the target can be for this mob to fire. If the target is closer, this mob will move first before firing",
+      "type": "number",
+      "default": 0
     }
   }
 }

@@ -30,5 +30,6 @@
     }
   ],
   "description": "Specifies the padding for the top and bottom of the world",
-  "title": "World DimensionPaddingRange"
+  "title": "World DimensionPaddingRange",
+  "dataVersion": "1.21.20"
 }

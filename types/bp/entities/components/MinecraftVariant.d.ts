@@ -11,6 +11,13 @@
  * 
  * minecraft:variant Samples
 
+Cushion - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/cushion.json
+
+"minecraft:variant": {
+  "value": 15
+}
+
+
 Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
 
  * At /minecraft:entity/component_groups/cold_frog/minecraft:variant/: 
@@ -64,10 +71,9 @@ export default interface MinecraftVariant {
    * entity/default appearance.
    * 
    * Sample Values:
+   * Cushion: 15
+   *
    * Frog: 1, 2
-   *
-   *
-   * Llama: 3
    *
    */
   value?: number;

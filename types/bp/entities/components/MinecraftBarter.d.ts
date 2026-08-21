@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Barter (minecraft:barter)
+ * Entity Barter (minecraft:barter)
  * Enables the component to drop an item as a barter exchange.
  */
 export default interface MinecraftBarter {

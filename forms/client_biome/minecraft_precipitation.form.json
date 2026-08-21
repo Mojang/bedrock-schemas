@@ -40,5 +40,6 @@
     }
   ],
   "description": "Describes the visuals for a biome's precipitation. Biomes without this component will have default values. At most one precipitation type can be set for a biome.",
-  "title": "Client Biome Precipitation"
+  "title": "Client Biome Precipitation",
+  "dataVersion": "1.21.110"
 }

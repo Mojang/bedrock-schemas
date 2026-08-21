@@ -57,7 +57,7 @@ export default interface MinecraftOnStartLanding {
    * Ender Dragon: "self"
    *
    */
-  target?: string;
+  target?: MinecraftOnStartLandingTarget;
 
 }
 

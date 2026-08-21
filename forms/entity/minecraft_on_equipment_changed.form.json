@@ -13,5 +13,7 @@
     }
   ],
   "description": "Allows to specify events to execute when equipment is set in the entity's default equipment slots. Doesn't apply to \"minecraft:inventory\", use \"minecraft:equippable\" instead.",
-  "title": "Entity On Equipment Changed"
+  "title": "Entity On Equipment Changed",
+  "samples": {},
+  "dataVersion": "1.26.20"
 }

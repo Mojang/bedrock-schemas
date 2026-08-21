@@ -17,8 +17,8 @@
       "id": "emit_flap",
       "title": "Emit Flap",
       "description": "If true, the `flap` game event will be emitted when the entity moves through air.",
-      "defaultValue": false,
       "dataType": "boolean",
+      "defaultValue": false,
       "samples": {
         "/vanilla/behavior_pack/entities/allay.json": [
           {
@@ -38,19 +38,19 @@
       "id": "emit_move",
       "title": "Emit Move",
       "description": "If true, the `entityMove` game event will be emitted when the entity moves on ground or through a solid.",
-      "defaultValue": true,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": true
     },
     {
       "id": "emit_swim",
       "title": "Emit Swim",
       "description": "If true, the `swim` game event will be emitted when the entity moves through a liquid.",
-      "defaultValue": true,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": true
     }
   ],
   "description": "Allows an entity to emit `entityMove`, `swim` and `flap` game events, depending on the block the entity is moving through. It is added by default to every mob. Add it again to override its behavior.",
-  "title": "Game Event Movement Tracking",
+  "title": "Entity Game Event Movement Tracking",
   "samples": {
     "/vanilla/behavior_pack/entities/allay.json": [
       {
@@ -93,5 +93,6 @@
       }
     ]
   },
-  "id": "minecraft:game_event_movement_tracking"
+  "id": "minecraft:game_event_movement_tracking",
+  "dataVersion": "1.26.50"
 }

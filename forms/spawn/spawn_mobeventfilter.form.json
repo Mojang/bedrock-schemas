@@ -36,5 +36,6 @@
       "dataType": "string",
       "defaultValue": ""
     }
-  ]
+  ],
+  "dataVersion": "1.21.50"
 }

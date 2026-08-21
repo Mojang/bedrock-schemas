@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -99,5 +100,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.move_towards_target"
+  "id": "minecraft:behavior.move_towards_target",
+  "dataVersion": "1.26.20"
 }

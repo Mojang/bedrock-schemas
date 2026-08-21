@@ -88,7 +88,7 @@ export default interface MinecraftBehaviorDragonstrafeplayer {
    * Minimum and maximum distance, from the target, this entity can
    * use this behavior.
    */
-  target_zone?: MinecraftBehaviorDragonstrafeplayerTargetZone;
+  target_zone?: object;
 
   /**
    * @remarks
@@ -111,21 +111,4 @@ export enum MinecraftBehaviorDragonstrafeplayerControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorDragonstrafeplayerTargetZone {
-
-  max?: number;
-
-  min?: number;
-
 }

@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -89,5 +90,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.move_towards_home_restriction"
+  "id": "minecraft:behavior.move_towards_home_restriction",
+  "dataVersion": "1.26.0"
 }

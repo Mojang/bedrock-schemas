@@ -39,7 +39,21 @@
         "note.witherskeleton",
         "note.piglin",
         "note.none"
-      ]
+      ],
+      "samples": {
+        "/vanilla/behavior_pack/blocks/black_concrete_double_slab.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:instrument_sound/",
+            "content": "note.bassattack"
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:instrument_sound/",
+            "content": "note.bassattack"
+          }
+        ]
+      }
     },
     {
       "id": "down",
@@ -113,7 +127,48 @@
           "down": "note.banjo"
         }
       }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_double_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:instrument_sound/",
+        "content": {
+          "up": "note.bassattack"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:instrument_sound/",
+        "content": {
+          "up": "note.bassattack"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:instrument_sound/",
+        "content": {
+          "up": "note.bassattack"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_concrete_double_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:instrument_sound/",
+        "content": {
+          "up": "note.bassattack"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:instrument_sound/",
+        "content": {
+          "up": "note.bassattack"
+        }
+      }
     ]
   },
-  "title": "Instrument Sound"
+  "title": "Instrument Sound",
+  "dataVersion": "1.26.20"
 }

@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Insomnia",
+  "title": "Entity Insomnia",
   "description": "Adds a timer since last rested to see if phantoms should spawn.",
   "properties": {
     "days_until_insomnia": {

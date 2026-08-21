@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "digs_in_daylight",
@@ -173,5 +174,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.dig"
+  "id": "minecraft:behavior.dig",
+  "dataVersion": "1.21.120"
 }

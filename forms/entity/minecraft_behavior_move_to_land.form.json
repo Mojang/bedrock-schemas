@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -150,5 +151,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.move_to_land"
+  "id": "minecraft:behavior.move_to_land",
+  "dataVersion": "1.26.10"
 }

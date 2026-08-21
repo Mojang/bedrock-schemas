@@ -43,6 +43,10 @@ Block Leaf Pile - Block Leaf Pile
   ]
 }
 
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:collision_box": false
  */
 
 import * as jsoncommon from '../../../common';

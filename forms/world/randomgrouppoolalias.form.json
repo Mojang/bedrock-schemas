@@ -24,5 +24,6 @@
     }
   ],
   "description": "Pool alias for a RandomGroup of aliases",
-  "title": "World RandomGroupPoolAlias"
+  "title": "World RandomGroupPoolAlias",
+  "dataVersion": "1.21.20"
 }

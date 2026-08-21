@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "destination_pos_spread_degrees",
@@ -57,7 +58,7 @@
         "max": 8,
         "min": 4
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
@@ -119,7 +120,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -237,5 +239,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.move_around_target"
+  "id": "minecraft:behavior.move_around_target",
+  "dataVersion": "1.26.20"
 }

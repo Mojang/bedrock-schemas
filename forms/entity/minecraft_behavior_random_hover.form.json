@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "hover_height",
@@ -42,7 +43,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/intrange",
+      "subFormId": "block/intrange",
       "samples": {
         "/vanilla/behavior_pack/entities/allay.json": [
           {
@@ -159,5 +160,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.random_hover"
+  "id": "minecraft:behavior.random_hover",
+  "dataVersion": "1.26.20"
 }

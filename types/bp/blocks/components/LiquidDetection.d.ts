@@ -34,6 +34,19 @@ Block Leaf Pile - Block Leaf Pile
   ]
 }
 
+
+Block Black Concrete Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_slab.block.json
+
+"minecraft:liquid_detection": {
+  "detection_rules": [
+    {
+      "liquid_type": "water",
+      "can_contain_liquid": true,
+      "on_liquid_touches": "blocking"
+    }
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -58,6 +71,14 @@ export default interface LiquidDetection {
    */
   can_contain_liquid?: boolean;
 
+  /**
+   * @remarks
+   * 
+   * Sample Values:
+   * Block Black Concrete Slab: [{"liquid_type":"water","can_contain_liquid":true,"on_liquid_touches":"blocking"}]
+   *
+   *
+   */
   detection_rules: LiquidDetectionDetectionRules[];
 
   /**

@@ -88,5 +88,6 @@
     }
   ],
   "description": "Defines a bounding box with min and max coordinates.",
-  "title": "Voxel Shapes Box"
+  "title": "Voxel Shapes Box",
+  "dataVersion": "1.21.110"
 }

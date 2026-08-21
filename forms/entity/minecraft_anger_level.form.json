@@ -131,7 +131,7 @@
           }
         ]
       },
-      "defaultValue": "0"
+      "defaultValue": 0
     },
     {
       "id": "sound_interval",
@@ -193,24 +193,6 @@
       "title": "On Increase Sounds",
       "description": "Sounds to play when the entity is getting provoked. Evaluated in order. First matching condition wins",
       "dataType": "objectArray",
-      "subForm": {
-        "description": "Sounds to play when the entity is getting provoked. Evaluated in order. First matching condition wins",
-        "fields": [
-          {
-            "id": "condition",
-            "title": "Condition",
-            "description": "A Molang expression describing under which conditions to play this sound, given that the entity was provoked",
-            "dataType": "string"
-          },
-          {
-            "id": "sound",
-            "title": "Sound",
-            "description": "The sound to play",
-            "lookupId": "soundDefinition",
-            "dataType": "string"
-          }
-        ]
-      },
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -227,20 +209,16 @@
             ]
           }
         ]
-      }
+      },
+      "defaultValue": [],
+      "subFormId": "entity/sounddefinition"
     },
     {
       "id": "angry_boost",
       "title": "Angry Boost",
       "description": "Anger boost applied to angry threshold when mob gets angry.",
-      "defaultValue": 20,
       "dataType": "int",
-      "validity": [
-        {
-          "comparison": ">=",
-          "value": 0
-        }
-      ],
+      "defaultValue": 20,
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -248,25 +226,46 @@
             "content": 20
           }
         ]
-      }
-    },
-    {
-      "id": "angry_threshold",
-      "title": "Angry Threshold",
-      "description": "Threshold that define when the mob is considered angry at a nuisance.",
-      "defaultValue": 80,
-      "dataType": "int",
+      },
       "validity": [
         {
           "comparison": ">=",
           "value": 0
         }
-      ],
+      ]
+    },
+    {
+      "id": "angry_threshold",
+      "title": "Angry Threshold",
+      "description": "Threshold that define when the mob is considered angry at a nuisance.",
+      "dataType": "int",
+      "defaultValue": 80,
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
             "path": "/minecraft:entity/components/minecraft:anger_level/",
             "content": 80
+          }
+        ]
+      },
+      "validity": [
+        {
+          "comparison": ">=",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "id": "default_projectile_annoyingness",
+      "title": "Default Projectile Annoyingness",
+      "description": "The default amount of annoyingness for any given nuisance that is a projectile. Specifies how much to raise anger level on each provocation.",
+      "dataType": "int",
+      "defaultValue": 0,
+      "samples": {
+        "/vanilla/behavior_pack/entities/warden.json": [
+          {
+            "path": "/minecraft:entity/components/minecraft:anger_level/",
+            "content": 10
           }
         ]
       }
@@ -275,14 +274,8 @@
       "id": "max_anger",
       "title": "Max Anger",
       "description": "The maximum anger level that can be reached. Applies to any nuisance.",
-      "defaultValue": 100,
       "dataType": "int",
-      "validity": [
-        {
-          "comparison": ">=",
-          "value": 0
-        }
-      ],
+      "defaultValue": 100,
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -290,13 +283,72 @@
             "content": 150
           }
         ]
-      }
+      },
+      "validity": [
+        {
+          "comparison": ">=",
+          "value": 0
+        }
+      ]
     },
     {
       "id": "nuisance_filter",
-      "title": "Nuisance Filter",
       "description": "Filter that is applied to determine if a mob can be a nuisance.",
-      "dataType": "minecraftFilter",
+      "dataType": "object",
+      "defaultValue": {
+        "AND": null,
+        "NOT": null,
+        "OR": null,
+        "all": null,
+        "all_of": null,
+        "any": null,
+        "any_of": null,
+        "none_of": null
+      },
+      "subForm": {
+        "id": "nuisance_filter",
+        "title": "Nuisance Filter",
+        "fields": [
+          {
+            "id": "domain",
+            "title": "Domain",
+            "description": "The domain the test should be performed in.",
+            "dataType": "object"
+          },
+          {
+            "id": "operator",
+            "title": "Operator",
+            "description": "The comparison to apply with 'value'.",
+            "dataType": "object"
+          },
+          {
+            "id": "subject",
+            "title": "Subject",
+            "description": "The subject of this filter test.",
+            "dataType": "object"
+          },
+          {
+            "id": "test",
+            "title": "Test",
+            "description": "The name of the test to apply.",
+            "dataType": "string",
+            "isRequired": true
+          },
+          {
+            "id": "value",
+            "title": "Value",
+            "description": "The value being compared with the test.",
+            "dataType": "object"
+          }
+        ],
+        "dataVersion": "1.21.20"
+      },
+      "alternates": [
+        {
+          "id": "nuisance_filter",
+          "dataType": "object"
+        }
+      ],
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -319,14 +371,15 @@
             }
           }
         ]
-      }
+      },
+      "title": "Nuisance Filter"
     },
     {
       "id": "remove_targets_below_angry_threshold",
       "title": "Remove Targets Below Angry Threshold",
       "description": "Defines if the mob should remove target if it falls below 'angry' threshold.",
-      "defaultValue": false,
       "dataType": "boolean",
+      "defaultValue": true,
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -335,22 +388,9 @@
           }
         ]
       }
-    },
-    {
-      "id": "default_projectile_annoyingness",
-      "title": "Default Projectile Annoyingness",
-      "dataType": "number",
-      "samples": {
-        "/vanilla/behavior_pack/entities/warden.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:anger_level/",
-            "content": 10
-          }
-        ]
-      }
     }
   ],
-  "title": "Anger Level",
+  "title": "Entity Anger Level",
   "samples": {
     "/vanilla/behavior_pack/entities/warden.json": [
       {
@@ -393,5 +433,6 @@
       }
     ]
   },
-  "id": "minecraft:anger_level"
+  "id": "minecraft:anger_level",
+  "dataVersion": "1.26.50"
 }

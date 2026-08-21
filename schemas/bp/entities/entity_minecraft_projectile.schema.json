@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Projectile",
+  "title": "Entity Projectile",
   "description": "Turns the entity into a projectile: a thrown or shot entity that flies along a ballistic arc and reacts when it impacts a block, a fluid, or another entity.",
   "properties": {
     "catch_fire": {
@@ -25,8 +25,13 @@
     "anchor": {
       "title": "Anchor",
       "description": "Reference point on the shooter used to position the projectile at spawn: `0` = origin (feet), `1` = eye height, `2` = middle of the bounding box.",
-      "type": "integer",
-      "default": 0
+      "type": "string",
+      "enum": [
+        "eye_height",
+        "middle",
+        "origin"
+      ],
+      "default": "origin"
     },
     "angle_offset": {
       "title": "Angle Offset",
@@ -50,12 +55,13 @@
       "title": "Gravity",
       "description": "Downward acceleration (blocks per tick squared) applied each tick while in flight. Higher values make the projectile fall faster.",
       "type": "number",
-      "default": 0.05
+      "default": 0.05000000074505806
     },
     "hit_ground_sound": {
       "title": "Hit Ground Sound",
       "description": "Identifier of the sound to play when the projectile hits a block. Defaults to `hit_sound` when empty.",
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "hit_nearest_passenger": {
       "title": "Hit Nearest Passenger",
@@ -66,7 +72,14 @@
     "hit_sound": {
       "title": "Hit Sound",
       "description": "Identifier of the sound to play when the projectile hits an entity. Also used for block hits when `hit_ground_sound` is not specified.",
-      "type": "string"
+      "type": "string",
+      "default": ""
+    },
+    "hit_water": {
+      "title": "Hit Water",
+      "description": "If `true`, the projectile treats water as a hit surface and stops on contact.",
+      "type": "boolean",
+      "default": false
     },
     "homing": {
       "title": "Homing",
@@ -86,7 +99,7 @@
       "title": "Inertia",
       "description": "Fraction of the projectile's velocity preserved each tick while traveling through air. Values below `1.0` cause it to slow down over time.",
       "type": "number",
-      "default": 0.99
+      "default": 0.9900000095367432
     },
     "is_dangerous": {
       "title": "Is Dangerous",
@@ -104,24 +117,68 @@
       "title": "Liquid Inertia",
       "description": "Fraction of the projectile's velocity preserved each tick while traveling through a fluid.",
       "type": "number",
-      "default": 0.6
+      "default": 0.6000000238418579
     },
     "multiple_targets": {
       "title": "Multiple Targets",
-      "description": "If `true`, the projectile can hit more than one entity over the course of its flight; if `false`, it stops at the first entity it hits.",
+      "description": "If `true`, the projectile can hit more than one entity over the course of its flight; if `false`, it stops at the first entity it hits. Projectiles launched with the Piercing enchantment have this value set to `true`.",
       "type": "boolean",
-      "default": true
+      "default": false
     },
     "offset": {
+      "anyOf": [
+        {
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
+        },
+        {
+          "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
+          "type": "object",
+          "properties": {
+            "x": {
+              "title": "X",
+              "type": "number",
+              "default": 0
+            },
+            "y": {
+              "title": "Y",
+              "type": "number",
+              "default": 0
+            },
+            "z": {
+              "title": "Z",
+              "type": "number",
+              "default": 0
+            }
+          },
+          "defaultSnippets": [
+            {
+              "label": "Offset (object)",
+              "description": "Use Offset as an object",
+              "body": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
+        }
+      ],
       "title": "Offset",
       "description": "Offset, relative to the `anchor`, at which the projectile is spawned when fired by the shooter.",
-      "type": "array",
-      "items": {
-        "type": "number"
-      },
-      "minItems": 3,
-      "maxItems": 3,
-      "default": "Vec3(0,0,0)"
+      "defaultSnippets": [
+        {
+          "label": "Offset (object)",
+          "description": "Use Offset as an object",
+          "body": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
     },
     "on_fire_time": {
       "title": "Fire Time",
@@ -132,33 +189,111 @@
     "on_hit": {
       "title": "Hit",
       "description": "Map of on-hit subcomponents that drive what happens when the projectile impacts a block, fluid, or entity. Each key is a subcomponent name and its value is that subcomponent's configuration.",
-      "oneOf": [
-        {
-          "type": "string"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "event": {
-              "type": "string"
-            },
-            "target": {
-              "type": "string"
-            }
-          }
-        }
-      ]
-    },
-    "owner_launch_immunity_ticks": {
-      "title": "Owner Launch Immunity Ticks",
-      "description": "Number of ticks immediately after launch during which the projectile cannot hit its own shooter.",
-      "type": "integer",
-      "default": 5
+      "$ref": "./entity_onhitcommandsstorage.schema.json"
     },
     "particle": {
       "title": "Particle",
       "description": "Particle effect emitted at the impact location when the projectile hits something.",
       "type": "string",
+      "enum": [
+        "balloongas",
+        "bleach",
+        "blockforcefield",
+        "blueflame",
+        "breezewindexplosion",
+        "bubble",
+        "bubblecolumndown",
+        "bubblecolumnup",
+        "bubblemanual",
+        "campfiresmoke",
+        "campfiresmoketall",
+        "candleflame",
+        "carrotboost",
+        "coloredflame",
+        "conduit",
+        "creakingcrumble",
+        "crit",
+        "dragonbreath",
+        "dragonbreathfire",
+        "dragonbreathtrail",
+        "dragondestroyblock",
+        "driphoney",
+        "driplava",
+        "dripwater",
+        "dustplume",
+        "electricspark",
+        "enchantingtable",
+        "endrod",
+        "evaporation",
+        "explode",
+        "eyeblossomclose",
+        "eyeblossomopen",
+        "fallingborderdust",
+        "fallingdust",
+        "fireworks",
+        "fireworksoverlay",
+        "fireworksstarter",
+        "flame",
+        "food",
+        "greenflame",
+        "heart",
+        "hugeexplosion",
+        "iconcrack",
+        "ink",
+        "largeexplode",
+        "largesmoke",
+        "lava",
+        "mobappearance",
+        "mobflame",
+        "mobspell",
+        "mobspellambient",
+        "mobspellinstantaneous",
+        "myceliumdust",
+        "none",
+        "note",
+        "obsidiantear",
+        "orangepoplarleaves",
+        "paleoakleaves",
+        "pausemobgrowth",
+        "portal",
+        "portalreverse",
+        "rainsplash",
+        "reddust",
+        "redpoplarleaves",
+        "resetmobgrowth",
+        "risingborderdust",
+        "sculksoul",
+        "shriek",
+        "shulkerbullet",
+        "slime",
+        "smoke",
+        "sneeze",
+        "snowballpoof",
+        "snowflake",
+        "sonicexplosion",
+        "soul",
+        "sparkler",
+        "spit",
+        "stalactitedriplava",
+        "stalactitedripwater",
+        "sulfurcube",
+        "terrain",
+        "totem",
+        "townaura",
+        "trackingemitter",
+        "vaultconnection",
+        "villagerangry",
+        "villagerhappy",
+        "watersplash",
+        "watersplashmanual",
+        "waterwake",
+        "wax",
+        "whitesmoke",
+        "windexplosion",
+        "witchspell",
+        "wolfarmorcrack",
+        "yellowpoplarleaves"
+      ],
       "default": "iconcrack"
     },
     "potion_effect": {
@@ -171,7 +306,7 @@
       "title": "Power",
       "description": "Initial speed (in blocks per tick) at which the projectile is launched.",
       "type": "number",
-      "default": 1.3
+      "default": 1.2999999523162842
     },
     "reflect_immunity": {
       "title": "Reflect Immunity",
@@ -182,7 +317,8 @@
     "shoot_sound": {
       "title": "Shoot Sound",
       "description": "Identifier of the sound to play when the projectile is fired.",
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "shoot_target": {
       "title": "Shoot Target",
@@ -192,9 +328,14 @@
     },
     "should_bounce": {
       "title": "Should Bounce",
-      "description": "If `true`, the projectile bounces off surfaces and entities on impact instead of stopping.",
-      "type": "boolean",
-      "default": false
+      "description": "Controls whether the projectile bounces off entities on impact. `no` disables bouncing, `if_invulnerable` bounces only off invulnerable entities, and `if_no_damage_dealt` bounces whenever no damage is dealt to the target.",
+      "type": "string",
+      "enum": [
+        "if_invulnerable",
+        "if_no_damage_dealt",
+        "no"
+      ],
+      "default": "no"
     },
     "splash_range": {
       "title": "Splash Range",
@@ -219,6 +360,12 @@
       "description": "Per-difficulty-level reduction in inaccuracy. See `uncertainty_base` for the full formula.",
       "type": "number",
       "default": 0
+    },
+    "owner_launch_immunity_ticks": {
+      "title": "Owner Launch Immunity Ticks",
+      "description": "Number of ticks immediately after launch during which the projectile cannot hit its own shooter.",
+      "type": "integer",
+      "default": 5
     }
   }
 }

@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -92,5 +93,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.slime_keep_on_jumping"
+  "id": "minecraft:behavior.slime_keep_on_jumping",
+  "dataVersion": "1.21.110"
 }

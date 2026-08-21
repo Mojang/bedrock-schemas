@@ -15,7 +15,7 @@
   "fields": [
     {
       "id": "category",
-      "title": "CreativeItemCategory",
+      "title": "Category",
       "description": "Creative category where this item belongs. Defaults to \"none\".",
       "dataType": "string",
       "choices": [
@@ -66,5 +66,6 @@
   ],
   "description": "menu_category contains the creative group name and category for this item.",
   "title": "Item Menu Category",
-  "id": "menu_category"
+  "id": "menu_category",
+  "dataVersion": "1.26.30"
 }

@@ -82,7 +82,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       }
     },
     {
@@ -153,7 +154,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       }
     },
     {
@@ -194,7 +196,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "disallowed_items",
@@ -336,5 +339,7 @@
     }
   ],
   "description": "A behavior that enables a mob to transport items from and to containers.",
-  "title": "Entity Transport Items Behavior"
+  "title": "Entity Transport Items Behavior",
+  "samples": {},
+  "dataVersion": "1.21.100"
 }

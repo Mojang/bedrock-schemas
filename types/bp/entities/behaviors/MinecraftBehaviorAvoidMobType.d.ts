@@ -147,7 +147,7 @@ export default interface MinecraftBehaviorAvoidMobType {
    * The sound event to play when the mob is avoiding another 
    * mob.
    */
-  avoid_mob_sound?: string;
+  avoid_mob_sound?: MinecraftBehaviorAvoidMobTypeAvoidMobSound;
 
   /**
    * @remarks
@@ -252,7 +252,7 @@ export default interface MinecraftBehaviorAvoidMobType {
    * The range of time in seconds to randomly wait before playing the
    * sound again.
    */
-  sound_interval?: MinecraftBehaviorAvoidMobTypeSoundInterval;
+  sound_interval?: object;
 
   /**
    * @remarks
@@ -485,6 +485,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -685,6 +686,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -802,6 +804,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -932,21 +935,4 @@ export enum MinecraftBehaviorAvoidMobTypeOnEscapeEventTarget {
   player = `player`,
   self = `self`,
   target = `target`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorAvoidMobTypeSoundInterval {
-
-  max?: number;
-
-  min?: number;
-
 }

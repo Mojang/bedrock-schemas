@@ -38,7 +38,7 @@
               {
                 "id": "horizontal_range",
                 "dataType": "keyedObjectCollection",
-                "subFormId": "item/molang_expression"
+                "subFormId": "legacy/molang_expression"
               },
               {
                 "id": "horizontal_range",
@@ -54,7 +54,7 @@
               {
                 "id": "input",
                 "dataType": "keyedObjectCollection",
-                "subFormId": "item/molang_expression"
+                "subFormId": "legacy/molang_expression"
               },
               {
                 "id": "input",
@@ -71,7 +71,7 @@
               {
                 "id": "nodes",
                 "dataType": "keyedObjectCollection",
-                "subFormId": "item/molang_expression"
+                "subFormId": "legacy/molang_expression"
               },
               {
                 "id": "nodes",
@@ -86,7 +86,8 @@
             "dataType": "string",
             "isRequired": true
           }
-        ]
+        ],
+        "dataVersion": "1.21.10"
       },
       "alternates": []
     },

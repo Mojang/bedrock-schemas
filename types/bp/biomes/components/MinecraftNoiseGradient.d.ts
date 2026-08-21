@@ -47,7 +47,7 @@ export default interface MinecraftNoiseGradient {
    */
   non_replaceable_blocks?: string;
 
-  type: string;
+  type: MinecraftNoiseGradientType;
 
 }
 
@@ -135,5 +135,11 @@ export interface MinecraftNoiseGradientNoiseDescriptor {
 
 
 export enum MinecraftNoiseGradientType {
-  minecraftNoiseGradient = `minecraft:noise_gradient`
+  minecraftCapped = `minecraft:capped`,
+  minecraftFrozenOcean = `minecraft:frozen_ocean`,
+  minecraftMesa = `minecraft:mesa`,
+  minecraftNoiseGradient = `minecraft:noise_gradient`,
+  minecraftOverworld = `minecraft:overworld`,
+  minecraftSwamp = `minecraft:swamp`,
+  minecraftTheEnd = `minecraft:the_end`
 }

@@ -65,7 +65,7 @@
           }
         }
       ],
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "admire_item_sound",
@@ -92,7 +92,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "on_admire_item_start",
@@ -154,5 +155,6 @@
   "note": "In format version 1.26.20, `sound_interval` must be specified as a Float Range object (an object with `range_min` / `range_max`). Legacy scalar or array forms no longer parse.",
   "title": "Entity Admire Item Behavior",
   "samples": {},
-  "id": "minecraft:behavior.admire_item"
+  "id": "minecraft:behavior.admire_item",
+  "dataVersion": "1.26.20"
 }

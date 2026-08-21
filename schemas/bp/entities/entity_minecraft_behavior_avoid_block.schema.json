@@ -20,7 +20,7 @@
       }
     },
     "avoid_block_sound": {
-      "title": "LevelSoundEvent",
+      "title": "Avoid Block Sound",
       "description": "The sound event to play when the mob is avoiding a block.",
       "type": "string",
       "enum": [
@@ -230,6 +230,7 @@
         "deny",
         "detach",
         "disappeared",
+        "dismount",
         "door.close",
         "door.open",
         "drink",
@@ -430,6 +431,7 @@
         "mob.player.hurt_on_fire",
         "mob.warning",
         "mob.warning.baby",
+        "mount",
         "multi_swap",
         "nearby_close",
         "nearby_closer",
@@ -547,6 +549,7 @@
         "step.baby",
         "step_lava",
         "step_sand",
+        "straw_bed.break_leave",
         "stun",
         "swim",
         "swoop",

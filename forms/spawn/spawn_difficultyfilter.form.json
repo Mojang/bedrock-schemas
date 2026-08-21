@@ -30,8 +30,9 @@
   "fields": [
     {
       "id": "max",
-      "title": "SpawnDifficulty Legacy",
-      "dataType": "string",
+      "title": "Max",
+      "dataType": "stringEnum",
+      "defaultValue": "hard",
       "choices": [
         {
           "id": "easy",
@@ -50,13 +51,13 @@
           "title": "Peaceful"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "hard"
+      "mustMatchChoices": true
     },
     {
       "id": "min",
-      "title": "SpawnDifficulty Legacy",
-      "dataType": "string",
+      "title": "Min",
+      "dataType": "stringEnum",
+      "defaultValue": "peaceful",
       "choices": [
         {
           "id": "easy",
@@ -75,8 +76,8 @@
           "title": "Peaceful"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "peaceful"
+      "mustMatchChoices": true
     }
-  ]
+  ],
+  "dataVersion": "1.21.50"
 }

@@ -14,6 +14,22 @@
 Block Fabricator - Block Fabricator
 
 "minecraft:selection_box": true
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:selection_box": {
+  "origin": [
+    -8,
+    0,
+    -8
+  ],
+  "size": [
+    16,
+    16,
+    16
+  ]
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -37,6 +53,10 @@ export default interface MinecraftSelectionBox {
    * Minimal position of the bounds of the selection box. "origin" is
    * specified as [x, y, z] and must be in the range (-8, 0, -8) to
    * (8, 16, 8), inclusive.
+   * 
+   * Sample Values:
+   * Block Red Shrub: [-8,0,-8]
+   *
    */
   origin?: number[];
 
@@ -45,6 +65,10 @@ export default interface MinecraftSelectionBox {
    * Size of each side of the selection box. Size is specified as
    * [x, y, z]. "origin" + "size" must be in the range (-8, 0, -8) to
    * (8, 16, 8), inclusive.
+   * 
+   * Sample Values:
+   * Block Red Shrub: [16,16,16]
+   *
    */
   size?: number[];
 

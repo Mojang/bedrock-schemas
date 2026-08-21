@@ -17,11 +17,13 @@
       "id": "remove_child_entities",
       "title": "Remove Child Entities",
       "description": "If true, all entities linked to this entity in a child relationship (eg. leashed) will also be despawned.",
-      "defaultValue": false,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": false
     }
   ],
   "description": "Despawns the Actor immediately.",
-  "title": "Instant Despawn",
-  "id": "minecraft:instant_despawn"
+  "title": "Entity Instant Despawn",
+  "samples": {},
+  "id": "minecraft:instant_despawn",
+  "dataVersion": "1.26.50"
 }

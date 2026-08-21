@@ -30,7 +30,7 @@ export default interface MinecraftSpawnOnDeath {
    * Additional random range of entities to spawn, defaults to 0, 0
    * when not set
    */
-  additional_spawn_range?: MinecraftSpawnOnDeathAdditionalSpawnRange;
+  additional_spawn_range?: object;
 
   /**
    * @remarks
@@ -63,23 +63,6 @@ export default interface MinecraftSpawnOnDeath {
    * not set
    */
   spawn_method?: string;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftSpawnOnDeathAdditionalSpawnRange {
-
-  max?: number;
-
-  min?: number;
 
 }
 

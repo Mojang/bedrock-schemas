@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "fractional_rotation",
@@ -115,5 +116,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.controlled_by_player"
+  "id": "minecraft:behavior.controlled_by_player",
+  "dataVersion": "1.21.100"
 }

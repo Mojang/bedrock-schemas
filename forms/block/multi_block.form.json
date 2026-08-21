@@ -7,9 +7,9 @@
   "fields": [
     {
       "id": "direction",
-      "title": "Facing",
+      "title": "Direction",
       "description": "The direction the block parts are placed starting from 'minecraft:multi_block_part' permutation '0' to permutation 'parts'. Default value is 'up'.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "down",
@@ -51,6 +51,7 @@
           "title": "Minecraft:multi block part"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {
@@ -72,5 +73,6 @@
     }
   ],
   "description": "Adds the \"minecraft:multi_block_part\" state and multi block functionality to the block.",
-  "title": "Block Multi Block"
+  "title": "Block Multi Block",
+  "dataVersion": "1.26.20"
 }

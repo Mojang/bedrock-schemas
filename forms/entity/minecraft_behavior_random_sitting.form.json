@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown",
@@ -78,5 +79,6 @@
   ],
   "description": "Allows the mob to randomly sit for a duration.",
   "title": "Entity Random Sitting Behavior",
-  "id": "minecraft:behavior.random_sitting"
+  "id": "minecraft:behavior.random_sitting",
+  "dataVersion": "1.26.20"
 }

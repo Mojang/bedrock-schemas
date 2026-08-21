@@ -30,9 +30,13 @@
     },
     {
       "id": "type",
-      "title": "HeightProviderType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "constant",
+          "title": "Constant"
+        },
         {
           "id": "uniform",
           "title": "Uniform"
@@ -44,5 +48,6 @@
     }
   ],
   "description": "Uniform distribution of possible anchor points",
-  "title": "World UniformHeightProviderType"
+  "title": "World UniformHeightProviderType",
+  "dataVersion": "1.21.20"
 }

@@ -29,5 +29,6 @@
     }
   ],
   "description": "Contains non-component settings for a Client Biome.",
-  "title": "Client Biome Description"
+  "title": "Client Biome Description",
+  "dataVersion": "1.21.90"
 }

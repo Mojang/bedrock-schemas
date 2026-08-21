@@ -22,7 +22,7 @@ Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 import * as jsoncommon from '../../../common';
 
 /**
- * Game Event Movement Tracking 
+ * Entity Game Event Movement Tracking
  * (minecraft:game_event_movement_tracking)
  * Allows an entity to emit `entityMove`, `swim` and `flap` game
  * events, depending on the block the entity is moving through. It

@@ -5,8 +5,8 @@
   "description": "Defines whether other blocks such as fences, walls, bars, and glass panes are allowed to connect to this block.",
   "properties": {
     "accepts_connections_from": {
-      "title": "Connection Type",
-      "description": "The type of block allowed to connect to this block. Note that the \"only_fences\" option allows connections from all Vanilla fences excluding NetherBrick.",
+      "title": "Accepts Connections From",
+      "description": "The type of block allowed to connect to this block. Note that the \"only_fences\" option allows connections from all Vanilla fences excluding NetherBrick.\n\nSample values:\n• red_shrub.block: none",
       "type": "string",
       "enum": [
         "all",

@@ -92,7 +92,7 @@ export default interface MinecraftBehaviorRandomSearchAndDig {
    * Sniffer: {"min":0,"max":0}
    *
    */
-  cooldown_range?: MinecraftBehaviorRandomSearchAndDigCooldownRange;
+  cooldown_range?: object;
 
   /**
    * @remarks
@@ -102,7 +102,7 @@ export default interface MinecraftBehaviorRandomSearchAndDig {
    * Sniffer: {"min":8,"max":10}
    *
    */
-  digging_duration_range?: MinecraftBehaviorRandomSearchAndDigDiggingDurationRange;
+  digging_duration_range?: object;
 
   /**
    * @remarks
@@ -288,40 +288,6 @@ export enum MinecraftBehaviorRandomSearchAndDigControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorRandomSearchAndDigCooldownRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorRandomSearchAndDigDiggingDurationRange {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 

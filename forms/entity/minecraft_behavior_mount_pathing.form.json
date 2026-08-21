@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -193,5 +194,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.mount_pathing"
+  "id": "minecraft:behavior.mount_pathing",
+  "dataVersion": "1.26.20"
 }

@@ -186,7 +186,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -364,5 +365,6 @@
   "description": "Allows an entity to deal damage through a melee attack.",
   "title": "Entity Melee Attack Behavior",
   "samples": {},
-  "id": "minecraft:behavior.melee_attack"
+  "id": "minecraft:behavior.melee_attack",
+  "dataVersion": "1.26.40"
 }

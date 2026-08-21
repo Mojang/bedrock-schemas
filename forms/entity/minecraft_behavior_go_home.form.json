@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -88,5 +89,6 @@
   "description": "Allows the mob to move back to the position they were spawned.",
   "title": "Entity Go Home Behavior",
   "samples": {},
-  "id": "minecraft:behavior.go_home"
+  "id": "minecraft:behavior.go_home",
+  "dataVersion": "1.26.20"
 }

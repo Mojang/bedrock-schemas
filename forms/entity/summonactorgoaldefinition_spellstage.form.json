@@ -38,9 +38,10 @@
     },
     {
       "id": "shape",
-      "title": "SummonShape",
+      "title": "Shape",
       "description": "The base shape of this step. Valid values are circle and line",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "line",
       "choices": [
         {
           "id": "circle",
@@ -51,8 +52,7 @@
           "title": "Line"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "line"
+      "mustMatchChoices": true
     },
     {
       "id": "size",
@@ -63,9 +63,10 @@
     },
     {
       "id": "sound_event",
-      "title": "LevelSoundEvent",
+      "title": "Sound Event",
       "description": "The sound event to play for this step",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "undefined",
       "choices": [
         {
           "id": "absorb_block",
@@ -892,6 +893,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1692,6 +1697,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2160,6 +2169,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2336,8 +2349,7 @@
           "title": "Wind charge.burst"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "undefined"
+      "mustMatchChoices": true
     },
     {
       "id": "summon_cap",
@@ -2361,9 +2373,10 @@
     },
     {
       "id": "target",
-      "title": "SummonTarget",
+      "title": "Target",
       "description": "The target of the spell. This is where the spell will start (line will start here, circle will be centered here)",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "self",
       "choices": [
         {
           "id": "self",
@@ -2374,9 +2387,9 @@
           "title": "Target"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "self"
+      "mustMatchChoices": true
     }
   ],
-  "title": "Entity SummonActorGoalDefinition SpellStage"
+  "title": "Entity SummonActorGoalDefinition SpellStage",
+  "dataVersion": "1.26.40"
 }

@@ -54,5 +54,6 @@
     }
   ],
   "description": "Placement rule defintions",
-  "title": "Spawn Placement"
+  "title": "Spawn Placement",
+  "dataVersion": "1.21.60"
 }

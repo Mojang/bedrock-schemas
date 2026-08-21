@@ -60,7 +60,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -347,5 +348,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.melee_box_attack"
+  "id": "minecraft:behavior.melee_box_attack",
+  "dataVersion": "1.26.40"
 }

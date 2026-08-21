@@ -57,7 +57,7 @@ export default interface MinecraftOnStartTakeoff {
    * Ender Dragon: "self"
    *
    */
-  target?: string;
+  target?: MinecraftOnStartTakeoffTarget;
 
 }
 

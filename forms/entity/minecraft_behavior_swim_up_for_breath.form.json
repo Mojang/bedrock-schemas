@@ -32,7 +32,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "material_type",
@@ -90,5 +91,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.swim_up_for_breath"
+  "id": "minecraft:behavior.swim_up_for_breath",
+  "dataVersion": "1.21.110"
 }

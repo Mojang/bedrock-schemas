@@ -23,5 +23,6 @@
     }
   ],
   "description": "Specifies the vertical anchor",
-  "title": "World AnchorFromSea"
+  "title": "World AnchorFromSea",
+  "dataVersion": "1.21.20"
 }

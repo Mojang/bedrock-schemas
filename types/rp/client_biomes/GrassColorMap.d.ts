@@ -24,7 +24,7 @@ export default interface GrassColorMap {
    * Color map from textures/colormap to determine color of 
    * grass.
    */
-  color_map: string;
+  color_map: GrassColorMapColorMap;
 
 }
 

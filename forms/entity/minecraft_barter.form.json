@@ -36,6 +36,7 @@
       "description": "Loot table that's used to drop a random item.",
       "dataType": "stringLookup",
       "lookupId": "lootTable",
+      "defaultValue": "",
       "title": "Barter Table"
     },
     {
@@ -48,7 +49,8 @@
     }
   ],
   "description": "Enables the component to drop an item as a barter exchange.",
-  "title": "Barter",
+  "title": "Entity Barter",
   "samples": {},
-  "id": "minecraft:barter"
+  "id": "minecraft:barter",
+  "dataVersion": "1.26.50"
 }

@@ -158,5 +158,6 @@
   ],
   "description": "Allows the mob to send an event to another mob.",
   "title": "Send Event Behavior",
+  "samples": {},
   "id": "minecraft:behavior.send_event"
 }

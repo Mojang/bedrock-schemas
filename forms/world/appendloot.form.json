@@ -23,12 +23,16 @@
     },
     {
       "id": "type",
-      "title": "BlockEntityModifierType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "minecraft:append_loot",
           "title": "Minecraft:append loot"
+        },
+        {
+          "id": "minecraft:passthrough",
+          "title": "Minecraft:passthrough"
         }
       ],
       "mustMatchChoices": true,
@@ -37,5 +41,6 @@
     }
   ],
   "description": "Modifier will attempt to add loot to a block entity.",
-  "title": "World AppendLoot"
+  "title": "World AppendLoot",
+  "dataVersion": "1.21.20"
 }

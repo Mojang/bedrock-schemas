@@ -8,6 +8,15 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:destruction_particles
+ * 
+ * minecraft:destruction_particles Samples
+
+Block Black Concrete Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_slab.block.json
+
+"minecraft:destruction_particles": {
+  "particle_count": 48
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -25,6 +34,11 @@ export default interface DestructionParticles {
   /**
    * @remarks
    * Sets number of particles to spawn on block destruction.
+   * 
+   * Sample Values:
+   * Block Black Concrete Slab: 48
+   *
+   *
    */
   particle_count?: number;
 

@@ -30,5 +30,6 @@
     }
   ],
   "description": "List of riders to be added to the entity. Must have no more riders than \"minecraft:rideable\" has \"seat_count\".",
-  "title": "Entity Rider Data"
+  "title": "Entity Rider Data",
+  "dataVersion": "1.21.130"
 }

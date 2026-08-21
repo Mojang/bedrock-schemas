@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.celebrate_survive
+ * 
+ * minecraft:behavior.celebrate_survive Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -33,7 +35,7 @@ export default interface MinecraftBehaviorCelebrateSurvive {
    * Minimum and maximum time between firework (positive, in
    * seconds).
    */
-  fireworks_interval?: MinecraftBehaviorCelebrateSurviveFireworksInterval;
+  fireworks_interval?: object;
 
   /**
    * @remarks
@@ -56,23 +58,6 @@ export enum MinecraftBehaviorCelebrateSurviveControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCelebrateSurviveFireworksInterval {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 

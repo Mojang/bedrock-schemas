@@ -23,5 +23,6 @@
     }
   ],
   "description": "Defines voxel shape identifier.",
-  "title": "Voxel Shapes Description"
+  "title": "Voxel Shapes Description",
+  "dataVersion": "1.21.110"
 }

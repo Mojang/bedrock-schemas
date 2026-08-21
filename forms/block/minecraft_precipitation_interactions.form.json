@@ -21,7 +21,7 @@
       "id": "precipitation_behavior",
       "title": "Precipitation Behavior",
       "description": "What behavior should the block have. Possible values: obrain, obstruct_rain_accumulate_snow, snowlogging, and none",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "none",
@@ -42,9 +42,42 @@
       ],
       "mustMatchChoices": true,
       "isRequired": true,
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:precipitation_interactions/",
+            "content": "snowlogging"
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/shelf_mushroom_block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:precipitation_interactions/",
+            "content": "none"
+          }
+        ]
+      },
       "defaultValue": "accumulate snow"
     }
   ],
   "description": "Determines interactions the block will have with different precipitations. Three possible values: obrain, obstruct_rain_accumulate_snow and none",
-  "title": "Block Precipitation Interactions"
+  "title": "Block Precipitation Interactions",
+  "samples": {
+    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:precipitation_interactions/",
+        "content": {
+          "precipitation_behavior": "snowlogging"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/shelf_mushroom_block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:precipitation_interactions/",
+        "content": {
+          "precipitation_behavior": "none"
+        }
+      }
+    ]
+  },
+  "dataVersion": "1.26.20"
 }

@@ -71,7 +71,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -112,7 +113,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "on_place",
@@ -172,7 +174,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -211,7 +214,7 @@
         "max": 2,
         "min": -2
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "y_range",
@@ -222,10 +225,11 @@
         "max": 3,
         "min": 0
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     }
   ],
   "description": "AI goal that makes entities place blocks into the world, like Endermen placing their carried block or snow golems leaving snow trails. Configure which blocks can be placed, where they can be placed, and how often the entity attempts placement. Creates mobs that modify the environment.",
   "title": "Entity Place Block Behavior",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.26.30"
 }

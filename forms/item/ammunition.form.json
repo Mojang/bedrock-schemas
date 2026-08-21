@@ -50,5 +50,6 @@
     }
   ],
   "description": "Configures this item as ammunition consumed by ranged weapons like bows and crossbows. Reference compatible shooter items and specify search behavior for inventory slots. When players use the associated weapon, this item is consumed and its projectile is launched.",
-  "title": "Item Ammunition"
+  "title": "Item Ammunition",
+  "dataVersion": "1.20.50"
 }

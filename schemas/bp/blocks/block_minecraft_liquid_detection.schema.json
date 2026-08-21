@@ -6,7 +6,7 @@
   "properties": {
     "detection_rules": {
       "title": "Detection Rules",
-      "description": "\n\nProperties:\n• use_liquid_clipping (boolean) = false\n• can_contain_liquid (boolean) = false\n• liquid_type (string) = water\n• on_liquid_touches (string) = blocking\n• stops_liquid_flowing_from_direction (object) = []",
+      "description": "\n\nProperties:\n• use_liquid_clipping (boolean) = false\n• can_contain_liquid (boolean) = false\n• liquid_type (enum) = water\n• on_liquid_touches (enum) = blocking\n• stops_liquid_flowing_from_direction (object) = []\n\nSample values:\n• black_concrete_slab.block: [{\"liquid_type\":\"water\",\"can_contain_liquid\":tr...",
       "type": "array",
       "items": {
         "$ref": "./block_detection_rule.schema.json"

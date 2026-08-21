@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "fireball_range",
@@ -110,7 +111,7 @@
         "max": 150,
         "min": 10
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "turn_speed",
@@ -152,5 +153,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.dragonstrafeplayer"
+  "id": "minecraft:behavior.dragonstrafeplayer",
+  "dataVersion": "1.26.0"
 }

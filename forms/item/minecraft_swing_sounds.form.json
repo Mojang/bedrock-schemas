@@ -17,9 +17,9 @@
   "fields": [
     {
       "id": "attack_critical_hit",
-      "title": "LevelSoundEvent",
+      "title": "Attack Critical Hit",
       "description": "Sound played when an attack hits and deals critical damage.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "absorb_block",
@@ -846,6 +846,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1646,6 +1650,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2112,6 +2120,10 @@
         {
           "id": "step_sand",
           "title": "Step sand"
+        },
+        {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
         },
         {
           "id": "stun",
@@ -2294,9 +2306,9 @@
     },
     {
       "id": "attack_hit",
-      "title": "LevelSoundEvent",
+      "title": "Attack Hit",
       "description": "Sound played when an attack hits.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "absorb_block",
@@ -3123,6 +3135,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -3923,6 +3939,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -4389,6 +4409,10 @@
         {
           "id": "step_sand",
           "title": "Step sand"
+        },
+        {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
         },
         {
           "id": "stun",
@@ -4571,9 +4595,9 @@
     },
     {
       "id": "attack_miss",
-      "title": "LevelSoundEvent",
+      "title": "Attack Miss",
       "description": "Sound played when an attack misses or deals no damage due to invulnerability.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "absorb_block",
@@ -5400,6 +5424,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -6200,6 +6228,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -6666,6 +6698,10 @@
         {
           "id": "step_sand",
           "title": "Step sand"
+        },
+        {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
         },
         {
           "id": "stun",
@@ -6850,5 +6886,5 @@
   "description": "Overrides the swing sounds emitted by the user.",
   "title": "Item Swing Sounds",
   "samples": {},
-  "dataVersion": "1.21.90"
+  "dataVersion": "1.26.30"
 }

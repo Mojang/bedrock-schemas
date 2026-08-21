@@ -16,7 +16,7 @@
       "default": ""
     },
     "slot": {
-      "title": "EquipmentSlot",
+      "title": "Slot",
       "description": "The equipment slot to monitor for changes.",
       "type": "string",
       "enum": [

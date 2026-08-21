@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "idle_time",
@@ -58,5 +59,6 @@
   "description": "Allows the entity go idle, if swimming. Entity must be in water.",
   "title": "Entity Swim Idle Behavior",
   "samples": {},
-  "id": "minecraft:behavior.swim_idle"
+  "id": "minecraft:behavior.swim_idle",
+  "dataVersion": "1.21.110"
 }

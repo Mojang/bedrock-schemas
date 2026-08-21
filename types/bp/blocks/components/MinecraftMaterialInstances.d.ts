@@ -99,6 +99,17 @@ Blue Bubble Fish - Blue Bubble Fish
   }
 }
 
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "red_shrub",
+    "render_method": "alpha_test_single_sided",
+    "ambient_occlusion": 0
+  }
+}
+
  */
 
 import * as jsoncommon from '../../../common';

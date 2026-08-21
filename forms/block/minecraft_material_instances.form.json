@@ -144,7 +144,19 @@
         {
           "dataType": "string"
         }
-      ]
+      ],
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:material_instances/",
+            "content": {
+              "texture": "red_shrub",
+              "render_method": "alpha_test_single_sided",
+              "ambient_occlusion": 0
+            }
+          }
+        ]
+      }
     },
     {
       "id": "north",
@@ -310,9 +322,22 @@
           }
         }
       }
+    ],
+    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:material_instances/",
+        "content": {
+          "*": {
+            "texture": "red_shrub",
+            "render_method": "alpha_test_single_sided",
+            "ambient_occlusion": 0
+          }
+        }
+      }
     ]
   },
   "id": "minecraft:material_instances",
   "description": "The material instances for a block.\nMaps face or material_instance names in a geometry file to an actual material instance. Material instance can either be a full material instance or a name to another already defined instance.\nLimited to 64 instances.",
-  "title": "Material Instances"
+  "title": "Material Instances",
+  "dataVersion": "1.26.20"
 }

@@ -36,7 +36,7 @@ export default interface MinecraftDurability {
    * is set to 100. Defined as an int range with min and max 
    * value.
    */
-  damage_chance?: MinecraftDurabilityDamageChance;
+  damage_chance?: object;
 
   /**
    * @remarks
@@ -45,22 +45,5 @@ export default interface MinecraftDurability {
    * minimum of 0.
    */
   max_durability: number;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftDurabilityDamageChance {
-
-  max?: number;
-
-  min?: number;
 
 }

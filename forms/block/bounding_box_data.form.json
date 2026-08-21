@@ -100,5 +100,6 @@
     }
   ],
   "description": "Information for the collision box.",
-  "title": "Block Bounding Box Data"
+  "title": "Block Bounding Box Data",
+  "dataVersion": "1.26.20"
 }

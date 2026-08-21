@@ -30,5 +30,6 @@
     }
   ],
   "description": "Weighted Random Item",
-  "title": "World RandomGroupBindings"
+  "title": "World RandomGroupBindings",
+  "dataVersion": "1.21.20"
 }

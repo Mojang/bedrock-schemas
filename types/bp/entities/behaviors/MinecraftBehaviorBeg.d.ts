@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.beg
+ * 
+ * minecraft:behavior.beg Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -38,7 +40,7 @@ export default interface MinecraftBehaviorBeg {
    * The range of time in seconds this mob will stare at the player
    * holding a food they like, begging for it
    */
-  look_time?: MinecraftBehaviorBegLookTime;
+  look_time?: object;
 
   /**
    * @remarks
@@ -55,21 +57,4 @@ export enum MinecraftBehaviorBegControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorBegLookTime {
-
-  max?: number;
-
-  min?: number;
-
 }

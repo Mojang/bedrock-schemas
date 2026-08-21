@@ -23,5 +23,6 @@
     }
   ],
   "description": "Defines the identifier for a Processor List referenced by Template Pools.",
-  "title": "World Processor List Description"
+  "title": "World Processor List Description",
+  "dataVersion": "1.21.20"
 }

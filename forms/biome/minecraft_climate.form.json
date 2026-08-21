@@ -82,5 +82,6 @@
     }
   ],
   "title": "Biome Climate",
-  "id": "minecraft:climate"
+  "id": "minecraft:climate",
+  "dataVersion": "1.21.110"
 }

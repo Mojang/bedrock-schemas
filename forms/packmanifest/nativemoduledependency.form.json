@@ -34,5 +34,6 @@
     }
   ],
   "description": "Declares a dependency on a built-in Script API module such as '@minecraft/server', '@minecraft/server-ui', or '@minecraft/server-gametest'. The version string determines which API surface is available to your scripts.",
-  "title": "Packmanifest NativeModuleDependency"
+  "title": "Packmanifest NativeModuleDependency",
+  "dataVersion": "3.0.0"
 }

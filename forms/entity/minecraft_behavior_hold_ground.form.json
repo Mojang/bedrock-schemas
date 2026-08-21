@@ -66,7 +66,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "min_radius",
@@ -91,5 +92,7 @@
   ],
   "description": "Compels an entity to stop at their current location, turn to face a mob they are targeting, and react with an event.",
   "title": "Entity Hold Ground Behavior",
-  "id": "minecraft:behavior.hold_ground"
+  "samples": {},
+  "id": "minecraft:behavior.hold_ground",
+  "dataVersion": "1.26.20"
 }

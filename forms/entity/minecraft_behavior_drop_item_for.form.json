@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown",
@@ -130,7 +131,8 @@
                       "description": "The value being compared with the test.",
                       "dataType": "object"
                     }
-                  ]
+                  ],
+                  "dataVersion": "1.21.20"
                 },
                 "alternates": [
                   {
@@ -201,7 +203,8 @@
                 "dataType": "float",
                 "defaultValue": 1
               }
-            ]
+            ],
+            "dataVersion": "1.21.120"
           }
         }
       ]
@@ -413,7 +416,7 @@
         "max": 1,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     }
   ],
   "requires": [
@@ -425,5 +428,6 @@
   "description": "Allows the entity to move toward a target, and drop an item near the target.",
   "title": "Entity Drop Item For Behavior",
   "samples": {},
-  "id": "minecraft:behavior.drop_item_for"
+  "id": "minecraft:behavior.drop_item_for",
+  "dataVersion": "1.26.10"
 }

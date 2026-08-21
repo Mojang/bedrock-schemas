@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.owner_hurt_target
+ * 
+ * minecraft:behavior.owner_hurt_target Samples
  */
 
 import * as jsoncommon from '../../../common';

@@ -31,5 +31,6 @@
     }
   ],
   "description": "Set the dry foliage color used during rendering. Biomes without this component will have default dry foliage color behavior.",
-  "title": "Client Biome Dry Foliage Color"
+  "title": "Client Biome Dry Foliage Color",
+  "dataVersion": "1.21.70"
 }

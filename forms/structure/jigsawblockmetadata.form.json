@@ -30,9 +30,9 @@
     },
     {
       "id": "joint_type",
-      "title": "Jigsaw Joint Type",
+      "title": "Joint Type",
       "description": "The type of Jigsaw joint made with 'target'.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "aligned",
@@ -90,5 +90,6 @@
     }
   ],
   "description": "Defines jigsaw block properties for structure connections.",
-  "title": "Structure JigsawBlockMetadata"
+  "title": "Structure JigsawBlockMetadata",
+  "dataVersion": "1.21.50"
 }

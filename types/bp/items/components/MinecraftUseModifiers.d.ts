@@ -54,7 +54,7 @@ export default interface MinecraftUseModifiers {
    * @remarks
    * Sound played when the item starts being used.
    */
-  start_sound?: string;
+  start_sound?: MinecraftUseModifiersStartSound;
 
   /**
    * @remarks
@@ -289,6 +289,7 @@ export enum MinecraftUseModifiersStartSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -489,6 +490,7 @@ export enum MinecraftUseModifiersStartSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -606,6 +608,7 @@ export enum MinecraftUseModifiersStartSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

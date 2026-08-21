@@ -17,7 +17,7 @@
       }
     },
     "poi_type": {
-      "title": "POIType",
+      "title": "Poi Type",
       "description": "Tells the goal what POI type it should be looking for",
       "type": "string",
       "enum": [

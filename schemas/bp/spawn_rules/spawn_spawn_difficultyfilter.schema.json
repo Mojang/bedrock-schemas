@@ -5,7 +5,7 @@
   "description": "Restricts mob spawning to specific difficulty levels (Peaceful, Easy, Normal, Hard). For example, hostile mobs don't spawn on Peaceful, and some dangerous variants only appear on Hard difficulty.",
   "properties": {
     "max": {
-      "title": "SpawnDifficulty Legacy",
+      "title": "Max",
       "type": "string",
       "enum": [
         "easy",
@@ -16,7 +16,7 @@
       "default": "hard"
     },
     "min": {
-      "title": "SpawnDifficulty Legacy",
+      "title": "Min",
       "type": "string",
       "enum": [
         "easy",

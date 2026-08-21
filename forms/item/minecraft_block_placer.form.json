@@ -113,7 +113,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -165,5 +166,5 @@
     ]
   },
   "title": "Item Block Placer",
-  "dataVersion": "1.26.0"
+  "dataVersion": "1.26.30"
 }

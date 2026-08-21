@@ -160,20 +160,6 @@
       "title": "Preferred Path Blocks",
       "description": "A list of block types with their associated pathfinding costs. Each entry specifies blocks and their cost value.",
       "dataType": "objectArray",
-      "subForm": {
-        "fields": [
-          {
-            "id": "cost",
-            "dataType": "int",
-            "description": "The cost value for these blocks during pathfinding. Lower costs make paths more preferred."
-          },
-          {
-            "id": "blocks",
-            "dataType": "stringArray",
-            "description": "Array of block identifiers that share this cost value."
-          }
-        ]
-      },
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -351,14 +337,16 @@
             ]
           }
         ]
-      }
+      },
+      "defaultValue": [],
+      "subFormId": "entity/preferredpath_blockset"
     },
     {
       "id": "default_block_cost",
       "title": "Default Block Cost",
-      "description": "Cost for non-preferred blocks",
-      "defaultValue": 0,
+      "description": "Cost for non - preferred blocks",
       "dataType": "float",
+      "defaultValue": 0,
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -372,8 +360,8 @@
       "id": "jump_cost",
       "title": "Jump Cost",
       "description": "Added cost for jumping up a node",
+      "dataType": "float",
       "defaultValue": 0,
-      "dataType": "int",
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -387,8 +375,8 @@
       "id": "max_fall_blocks",
       "title": "Max Fall Blocks",
       "description": "Distance mob can fall without taking damage",
-      "defaultValue": 3,
       "dataType": "int",
+      "defaultValue": 3,
       "samples": {
         "/vanilla/behavior_pack/entities/iron_golem.json": [
           {
@@ -406,7 +394,7 @@
     }
   ],
   "description": "Specifies costing information for mobs that prefer to walk on preferred paths.",
-  "title": "Preferred Path",
+  "title": "Entity Preferred Path",
   "samples": {
     "/vanilla/behavior_pack/entities/iron_golem.json": [
       {
@@ -598,5 +586,6 @@
       }
     ]
   },
-  "id": "minecraft:preferred_path"
+  "id": "minecraft:preferred_path",
+  "dataVersion": "1.26.50"
 }

@@ -30,5 +30,6 @@
     }
   ],
   "description": "A single option within a dropdown setting. Contains a unique identifier used by scripts and localized display text shown to players. Options are presented in the order defined.",
-  "title": "Packmanifest DropdownOption"
+  "title": "Packmanifest DropdownOption",
+  "dataVersion": "3.0.0"
 }

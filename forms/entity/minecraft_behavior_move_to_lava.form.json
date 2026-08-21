@@ -36,7 +36,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -99,5 +100,6 @@
       "defaultValue": 1
     }
   ],
-  "title": "Entity Move To Lava Behavior"
+  "title": "Entity Move To Lava Behavior",
+  "dataVersion": "1.26.10"
 }

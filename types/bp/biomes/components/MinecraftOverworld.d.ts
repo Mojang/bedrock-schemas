@@ -63,11 +63,17 @@ export default interface MinecraftOverworld {
    * @remarks
    * Controls the type of surface builder to use.
    */
-  type: string;
+  type: MinecraftOverworldType;
 
 }
 
 
 export enum MinecraftOverworldType {
-  minecraftOverworld = `minecraft:overworld`
+  minecraftCapped = `minecraft:capped`,
+  minecraftFrozenOcean = `minecraft:frozen_ocean`,
+  minecraftMesa = `minecraft:mesa`,
+  minecraftNoiseGradient = `minecraft:noise_gradient`,
+  minecraftOverworld = `minecraft:overworld`,
+  minecraftSwamp = `minecraft:swamp`,
+  minecraftTheEnd = `minecraft:the_end`
 }

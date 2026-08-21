@@ -89,7 +89,8 @@
             "description": "Enable for west-facing slopes",
             "dataType": "boolean"
           }
-        ]
+        ],
+        "dataVersion": "1.21.110"
       }
     },
     {
@@ -109,7 +110,8 @@
             "dataType": "boolean",
             "isRequired": true
           }
-        ]
+        ],
+        "dataVersion": "1.21.110"
       }
     },
     {
@@ -150,5 +152,6 @@
   ],
   "description": "Noise parameters used to drive mountain terrain generation in Overworld.",
   "title": "Biome Mountain Parameters",
-  "id": "minecraft:mountain_parameters"
+  "id": "minecraft:mountain_parameters",
+  "dataVersion": "1.21.110"
 }

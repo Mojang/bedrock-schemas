@@ -68,7 +68,7 @@ export default interface MinecraftOnFriendlyAnger {
    *
    *
    */
-  target?: string;
+  target?: MinecraftOnFriendlyAngerTarget;
 
 }
 

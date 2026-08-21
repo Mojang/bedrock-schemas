@@ -11,14 +11,6 @@
  * 
  * minecraft:nameable Samples
 
-Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
-
-"minecraft:nameable": {
-  "allow_name_tag_renaming": false,
-  "always_show": true
-}
-
-
 Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/allay.json
 
 "minecraft:nameable": {}
@@ -42,10 +34,6 @@ export default interface MinecraftNameable {
   /**
    * @remarks
    * If true, the name will always be shown
-   * 
-   * Sample Values:
-   * Agent: true
-   *
    */
   always_show?: boolean;
 

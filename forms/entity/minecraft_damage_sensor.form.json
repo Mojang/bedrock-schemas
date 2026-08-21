@@ -295,15 +295,6 @@
         }
       ],
       "samples": {
-        "/vanilla/behavior_pack/entities/agent.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:damage_sensor/",
-            "content": {
-              "cause": "all",
-              "deals_damage": "no"
-            }
-          }
-        ],
         "/vanilla/behavior_pack/entities/allay.json": [
           {
             "path": "/minecraft:entity/components/minecraft:damage_sensor/",
@@ -376,17 +367,6 @@
   "description": "Defines what events to call when this entity is damaged by specific entities or items.",
   "title": "Damage Sensor",
   "samples": {
-    "/vanilla/behavior_pack/entities/agent.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:damage_sensor/",
-        "content": {
-          "triggers": {
-            "cause": "all",
-            "deals_damage": "no"
-          }
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/allay.json": [
       {
         "path": "/minecraft:entity/components/minecraft:damage_sensor/",
@@ -458,6 +438,17 @@
               "deals_damage": "no"
             }
           ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/entities/chicken.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:damage_sensor/",
+        "content": {
+          "triggers": {
+            "cause": "fall",
+            "deals_damage": "no"
+          }
         }
       }
     ]

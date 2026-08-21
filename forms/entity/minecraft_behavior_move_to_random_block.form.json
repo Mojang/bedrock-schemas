@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -64,5 +65,7 @@
   ],
   "description": "Allows mob to move towards a random block.",
   "title": "Entity Move To Random Block Behavior",
-  "id": "minecraft:behavior.move_to_random_block"
+  "samples": {},
+  "id": "minecraft:behavior.move_to_random_block",
+  "dataVersion": "1.26.20"
 }

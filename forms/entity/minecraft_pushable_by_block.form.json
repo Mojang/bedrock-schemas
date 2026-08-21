@@ -18,6 +18,12 @@
         "content": {}
       }
     ],
+    "/vanilla/behavior_pack/entities/blaze.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:pushable_by_block/",
+        "content": {}
+      }
+    ],
     "/vanilla/behavior_pack/entities/boat.json": [
       {
         "path": "/minecraft:entity/components/minecraft:pushable_by_block/",
@@ -25,12 +31,6 @@
       }
     ],
     "/vanilla/behavior_pack/entities/bogged.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:pushable_by_block/",
-        "content": {}
-      }
-    ],
-    "/vanilla/behavior_pack/entities/breeze.json": [
       {
         "path": "/minecraft:entity/components/minecraft:pushable_by_block/",
         "content": {}

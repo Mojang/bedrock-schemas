@@ -51,5 +51,6 @@
     }
   ],
   "description": "Controls particle lifetime events like creation and expiration.",
-  "title": "Client Particles ParticleLifetimeEvents Proxy"
+  "title": "Client Particles ParticleLifetimeEvents Proxy",
+  "dataVersion": "1.21.10"
 }

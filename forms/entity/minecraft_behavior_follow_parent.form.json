@@ -113,7 +113,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -244,5 +245,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.follow_parent"
+  "id": "minecraft:behavior.follow_parent",
+  "dataVersion": "1.26.20"
 }

@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:vertical_movement_action
+ * 
+ * minecraft:vertical_movement_action Samples
  */
 
 import * as jsoncommon from '../../../common';

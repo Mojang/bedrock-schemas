@@ -59,7 +59,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: {"min":4.5,"max":4.5}
    *
    */
-  duration?: MinecraftBehaviorCroakDuration;
+  duration?: object;
 
   /**
    * @remarks
@@ -81,7 +81,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: {"min":10,"max":20}
    *
    */
-  interval?: MinecraftBehaviorCroakInterval;
+  interval?: object;
 
   /**
    * @remarks
@@ -102,23 +102,6 @@ export enum MinecraftBehaviorCroakControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCroakDuration {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 
@@ -156,22 +139,5 @@ export interface MinecraftBehaviorCroakFilters {
    * The value being compared with the test.
    */
   value?: object;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCroakInterval {
-
-  max?: number;
-
-  min?: number;
 
 }

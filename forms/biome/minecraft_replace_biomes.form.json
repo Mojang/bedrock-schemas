@@ -25,5 +25,6 @@
     }
   ],
   "description": "Replaces a specified portion of one or more Minecraft biomes.",
-  "title": "Biome Replace Biomes"
+  "title": "Biome Replace Biomes",
+  "dataVersion": "1.26.0"
 }

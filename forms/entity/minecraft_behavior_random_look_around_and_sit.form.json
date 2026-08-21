@@ -45,7 +45,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "max_angle_of_view_horizontal",
@@ -114,5 +115,6 @@
   "description": "Allows the mob to randomly sit and look around for a duration. Note: Must have a sitting animation set up to use this.",
   "title": "Entity Random Look Around And Sit Behavior",
   "samples": {},
-  "id": "minecraft:behavior.random_look_around_and_sit"
+  "id": "minecraft:behavior.random_look_around_and_sit",
+  "dataVersion": "1.26.30"
 }

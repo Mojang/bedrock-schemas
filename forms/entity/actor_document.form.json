@@ -41,9 +41,15 @@
       "title": "Events",
       "description": "Named events that can add/remove component groups and trigger actions. Events are invoked by component logic or spawning.",
       "dataType": "keyedObjectCollection"
+    },
+    {
+      "id": "upgrades",
+      "title": "Upgrades",
+      "description": "Dynamic value",
+      "dataType": "object"
     }
   ],
   "description": "The root structure for entity behavior definitions in behavior packs. Contains the entity's unique identifier, components that define its capabilities, component groups for state variations, and events that trigger state changes. Every custom mob, NPC, or creature requires an actor document defining its AI, health, movement, and interactions.",
   "title": "Entity Actor Document",
-  "dataVersion": "1.21.90"
+  "dataVersion": "1.26.50"
 }

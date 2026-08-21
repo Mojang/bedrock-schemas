@@ -63,12 +63,36 @@
     },
     {
       "id": "type",
-      "title": "SurfaceBuilderType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:capped",
+          "title": "Minecraft:capped"
+        },
+        {
+          "id": "minecraft:frozen_ocean",
+          "title": "Minecraft:frozen ocean"
+        },
+        {
+          "id": "minecraft:mesa",
+          "title": "Minecraft:mesa"
+        },
         {
           "id": "minecraft:noise_gradient",
           "title": "Minecraft:noise gradient"
+        },
+        {
+          "id": "minecraft:overworld",
+          "title": "Minecraft:overworld"
+        },
+        {
+          "id": "minecraft:swamp",
+          "title": "Minecraft:swamp"
+        },
+        {
+          "id": "minecraft:the_end",
+          "title": "Minecraft:the end"
         }
       ],
       "mustMatchChoices": true,
@@ -77,5 +101,6 @@
     }
   ],
   "description": "Places continuous bands of blocks according to a noise distribution. This surface builder's processing has been implemented with sub-terrain height ranges in mind.",
-  "title": "Biome Noise Gradient"
+  "title": "Biome Noise Gradient",
+  "dataVersion": "1.26.30"
 }

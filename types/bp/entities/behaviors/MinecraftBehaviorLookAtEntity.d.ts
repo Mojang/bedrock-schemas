@@ -11,21 +11,6 @@
  * 
  * minecraft:behavior.look_at_entity Samples
 
-Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
-
-"minecraft:behavior.look_at_entity": {
-  "angle_of_view_vertical": 135,
-  "angle_of_view_horizontal": 170,
-  "look_time": {
-    "min": 1,
-    "max": 2
-  },
-  "look_distance": 6,
-  "probability": 1,
-  "priority": 2
-}
-
-
 Vex - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/vex.json
 
 "minecraft:behavior.look_at_entity": {
@@ -133,7 +118,7 @@ export default interface MinecraftBehaviorLookAtEntity {
    * @remarks
    * Time range to look at the nearest entity.
    */
-  look_time?: MinecraftBehaviorLookAtEntityLookTime;
+  look_time?: object;
 
   /**
    * @remarks
@@ -205,22 +190,5 @@ export interface MinecraftBehaviorLookAtEntityFilters {
    * The value being compared with the test.
    */
   value?: object;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorLookAtEntityLookTime {
-
-  max?: number;
-
-  min?: number;
 
 }

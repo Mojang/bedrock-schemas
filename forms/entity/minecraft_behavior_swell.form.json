@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -58,5 +59,6 @@
   "description": "Allows the creeper to swell up when a player is nearby. It can only be used by Creepers.",
   "title": "Entity Swell Behavior",
   "samples": {},
-  "id": "minecraft:behavior.swell"
+  "id": "minecraft:behavior.swell",
+  "dataVersion": "1.26.30"
 }

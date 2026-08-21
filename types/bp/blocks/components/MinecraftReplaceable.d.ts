@@ -8,6 +8,13 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:replaceable
+ * 
+ * minecraft:replaceable Samples
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:replaceable": {}
+
  */
 
 import * as jsoncommon from '../../../common';

@@ -6,7 +6,7 @@
   "properties": {
     "precipitation_behavior": {
       "title": "Precipitation Behavior",
-      "description": "What behavior should the block have. Possible values: obrain, obstruct_rain_accumulate_snow, snowlogging, and none",
+      "description": "What behavior should the block have. Possible values: obrain, obstruct_rain_accumulate_snow, snowlogging, and none\n\nSample values:\n• red_shrub.block: snowlogging\n• shelf_mushroom_block: none",
       "type": "string",
       "enum": [
         "none",

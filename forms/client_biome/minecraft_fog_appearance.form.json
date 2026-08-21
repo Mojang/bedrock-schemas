@@ -23,5 +23,6 @@
     }
   ],
   "title": "Minecraft Fog Appearance",
-  "description": "Sets the fog settings used during rendering. Biomes without this component will have default fog settings."
+  "description": "Sets the fog settings used during rendering. Biomes without this component will have default fog settings.",
+  "dataVersion": "1.21.40"
 }

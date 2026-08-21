@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -147,7 +148,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -214,7 +216,8 @@
       "id": "target_selection_method",
       "title": "Target Selection Method",
       "description": "Kind of block to find fitting the specification. Valid values are \"random\" and \"nearest\".",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "nearest",
       "choices": [
         {
           "id": "nearest",
@@ -225,8 +228,7 @@
           "title": "Random"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "nearest"
+      "mustMatchChoices": true
     },
     {
       "id": "tick_interval",
@@ -238,6 +240,7 @@
   ],
   "description": "Allows mob to move towards a block.",
   "title": "Entity Move To Block Behavior",
+  "samples": {},
   "id": "minecraft:behavior.move_to_block",
   "dataVersion": "1.26.40"
 }

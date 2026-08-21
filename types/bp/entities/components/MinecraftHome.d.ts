@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Home (minecraft:home)
+ * Entity Home (minecraft:home)
  * Saves a home position for when the entity is spawned. This
  * component allows entities like bees to remember and return to a
  * specific location such as a hive or nest.
@@ -46,6 +46,13 @@ export default interface MinecraftHome {
    * movement to be near home, though entities can always move closer to
    * home if they are too far away).
    */
-  restriction_type?: string;
+  restriction_type?: MinecraftHomeRestrictionType| string;
 
+}
+
+
+export enum MinecraftHomeRestrictionType {
+  allMovement = `all_movement`,
+  none = `none`,
+  randomMovement = `random_movement`
 }

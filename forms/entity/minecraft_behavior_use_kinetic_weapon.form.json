@@ -62,7 +62,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_distance",
@@ -73,7 +74,7 @@
         "max": 8,
         "min": 8
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "cooldown_speed_multiplier",
@@ -216,7 +217,7 @@
         "max": 2,
         "min": 2
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "reposition_speed_multiplier",
@@ -277,5 +278,6 @@
   ],
   "description": "Enables a mob to use kinetic weaponry by intermittently charging at its target and repositioning afterward.",
   "title": "Entity Use Kinetic Weapon Behavior",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.26.40"
 }

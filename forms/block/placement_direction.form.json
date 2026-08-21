@@ -56,7 +56,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -94,6 +95,7 @@
           "title": "Minecraft:sixteen way rotation"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     },
     {
@@ -110,5 +112,6 @@
     }
   ],
   "description": "Adds the \"minecraft:cardinal_direction\", \"minecraft:facing_direction\", \"minecraft:corner_and_cardinal_direction\" and/or \"minecraft:sixteen_way_rotation\" states and setter function to the block.",
-  "title": "Block Placement Direction"
+  "title": "Block Placement Direction",
+  "dataVersion": "1.26.20"
 }

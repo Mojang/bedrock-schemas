@@ -32,7 +32,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -62,5 +63,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.stay_while_sitting"
+  "id": "minecraft:behavior.stay_while_sitting",
+  "dataVersion": "1.26.30"
 }

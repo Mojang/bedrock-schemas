@@ -121,40 +121,6 @@ export enum MinecraftBehaviorTimerFlag2ControlFlags {
 
 
 /**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorTimerFlag2CooldownRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorTimerFlag2DurationRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity

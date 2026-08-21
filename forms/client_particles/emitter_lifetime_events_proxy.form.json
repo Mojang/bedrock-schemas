@@ -71,5 +71,6 @@
   ],
   "description": "Controls emitter lifetime events like creation and expiration.",
   "title": "Client Particles Emitter Lifetime Events Proxy",
-  "id": "emitter_lifetime_events proxy"
+  "id": "emitter_lifetime_events proxy",
+  "dataVersion": "1.21.10"
 }

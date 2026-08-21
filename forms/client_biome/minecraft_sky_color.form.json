@@ -31,5 +31,6 @@
     }
   ],
   "title": "Minecraft Sky Color",
-  "description": "Sets the sky color used during rendering. Biomes without this component will have default sky color behavior."
+  "description": "Sets the sky color used during rendering. Biomes without this component will have default sky color behavior.",
+  "dataVersion": "1.21.40"
 }

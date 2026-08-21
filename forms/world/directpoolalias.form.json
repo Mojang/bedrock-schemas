@@ -30,5 +30,6 @@
     }
   ],
   "description": "Pool alias for a Direct target.",
-  "title": "World DirectPoolAlias"
+  "title": "World DirectPoolAlias",
+  "dataVersion": "1.21.20"
 }

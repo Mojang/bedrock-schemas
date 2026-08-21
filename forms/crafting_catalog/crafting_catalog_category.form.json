@@ -16,9 +16,9 @@
   "fields": [
     {
       "id": "category_name",
-      "title": "CraftingCatalogItemCategory",
+      "title": "Category Name",
       "description": "The category that the items will go to. This is restricted to construction, nature, equipment, or items.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "construction",
@@ -50,5 +50,6 @@
     }
   ],
   "description": "Represents a collection of groups of items in a category..",
-  "title": "Crafting Catalog Category"
+  "title": "Crafting Catalog Category",
+  "dataVersion": "1.21.60"
 }

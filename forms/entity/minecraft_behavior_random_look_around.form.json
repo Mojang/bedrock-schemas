@@ -59,7 +59,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "look_time",
@@ -70,7 +71,7 @@
         "max": 40,
         "min": 20
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "max_angle_of_view_horizontal",
@@ -171,5 +172,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.random_look_around"
+  "id": "minecraft:behavior.random_look_around",
+  "dataVersion": "1.26.30"
 }

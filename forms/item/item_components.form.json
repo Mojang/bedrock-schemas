@@ -550,7 +550,6 @@
     },
     {
       "id": "minecraft:use_animation",
-      "title": "Animation",
       "description": "Use_animation specifies which animation is played when the player uses the item.",
       "dataType": "string",
       "alternates": [
@@ -563,52 +562,9 @@
             "fields": [
               {
                 "id": "value",
-                "title": "Animation",
+                "title": "Value",
                 "description": "Specifies which animation to play when the the item is used.",
-                "dataType": "string",
-                "choices": [
-                  {
-                    "id": "block",
-                    "title": "Block"
-                  },
-                  {
-                    "id": "bow",
-                    "title": "Bow"
-                  },
-                  {
-                    "id": "brush",
-                    "title": "Brush"
-                  },
-                  {
-                    "id": "camera",
-                    "title": "Camera"
-                  },
-                  {
-                    "id": "crossbow",
-                    "title": "Crossbow"
-                  },
-                  {
-                    "id": "drink",
-                    "title": "Drink"
-                  },
-                  {
-                    "id": "eat",
-                    "title": "Eat"
-                  },
-                  {
-                    "id": "none",
-                    "title": "None"
-                  },
-                  {
-                    "id": "spear",
-                    "title": "Spear"
-                  },
-                  {
-                    "id": "spyglass",
-                    "title": "Spyglass"
-                  }
-                ],
-                "mustMatchChoices": true,
+                "dataType": "object",
                 "defaultValue": "none"
               }
             ]
@@ -632,5 +588,6 @@
     }
   ],
   "description": "List of all components used in this item.",
-  "title": "Item Components"
+  "title": "Item Components",
+  "dataVersion": "1.26.30"
 }

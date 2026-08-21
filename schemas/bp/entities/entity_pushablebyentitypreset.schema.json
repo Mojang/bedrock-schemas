@@ -90,7 +90,7 @@
       "default": 0.20000000298023224
     },
     "push_mode": {
-      "title": "PushMode",
+      "title": "Push Mode",
       "description": "Defines the type of push vector calculation applied to the entity:\n- \"none\": The entity cannot be pushed.\n- \"default\": Standard push calculations used by most entities.\n- \"legacy_boat\": Legacy push calculations historically used by boats. Includes dampened forces and sneak-based cancellation.\n- \"legacy_minecart\": Legacy push calculations historically used by minecarts. Includes alignment-based collision handling and velocity averaging.- \"ball\": Push calculation resulting in a behavior similar to kicking a ball. The entity is propelled in the direction of the pusher’s movement, with force scaled by their speed.",
       "type": "string",
       "enum": [

@@ -17,9 +17,10 @@
     },
     {
       "id": "slot",
-      "title": "EquipmentSlot",
+      "title": "Slot",
       "description": "The equipment slot to monitor for changes.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "slot.weapon.mainhand",
       "choices": [
         {
           "id": "slot.armor.body",
@@ -50,9 +51,9 @@
           "title": "Slot.weapon.offhand"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "slot.weapon.mainhand"
+      "mustMatchChoices": true
     }
   ],
-  "title": "Entity OnEquipmentChangedSlotEntryDescriptor"
+  "title": "Entity OnEquipmentChangedSlotEntryDescriptor",
+  "dataVersion": "1.26.20"
 }

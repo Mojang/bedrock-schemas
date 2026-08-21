@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -99,5 +100,6 @@
   "description": "Allows mobs that own a bed to in a village to move to and sleep in it.",
   "title": "Entity Sleep Behavior",
   "samples": {},
-  "id": "minecraft:behavior.sleep"
+  "id": "minecraft:behavior.sleep",
+  "dataVersion": "1.26.20"
 }

@@ -73,21 +73,32 @@
       "$ref": "./entity_minecraft_anger_level.schema.json",
       "defaultSnippets": [
         {
-          "label": "Anger Level",
+          "label": "Entity Anger Level",
           "description": "Compels the entity to track anger towards a set of nuisances.",
           "body": {
             "anger_decrement_interval": 1,
-            "default_annoyingness": "0",
+            "default_annoyingness": 0,
             "duration": 0,
             "duration_delta": 0,
             "broadcast_anger": false,
             "broadcast_anger_on_attack": false,
             "broadcast_range": 20,
+            "on_increase_sounds": [],
             "angry_boost": 20,
             "angry_threshold": 80,
+            "default_projectile_annoyingness": 0,
             "max_anger": 100,
-            "remove_targets_below_angry_threshold": false,
-            "default_projectile_annoyingness": 0
+            "nuisance_filter": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "remove_targets_below_angry_threshold": true
           }
         }
       ]
@@ -205,9 +216,10 @@
       "$ref": "./entity_minecraft_barter.schema.json",
       "defaultSnippets": [
         {
-          "label": "Barter",
+          "label": "Entity Barter",
           "description": "Enables the component to drop an item as a barter exchange.",
           "body": {
+            "barter_table": "",
             "cooldown_after_being_attacked": 10
           }
         }
@@ -678,15 +690,26 @@
       "$ref": "./entity_minecraft_behavior_follow_mob.schema.json",
       "defaultSnippets": [
         {
-          "label": "Follow Mob Behavior",
+          "label": "Entity Follow Mob Behavior",
           "description": "Allows the mob to follow other mobs.",
           "body": {
+            "control_flags": [],
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "preferred_actor_type": "",
+            "priority": 0,
             "search_range": 0,
             "speed_multiplier": 1,
             "stop_distance": 2,
-            "use_home_position_restriction": true,
-            "priority": 0
+            "use_home_position_restriction": false
           }
         }
       ]
@@ -2388,7 +2411,7 @@
       "$ref": "./entity_minecraft_boss.schema.json",
       "defaultSnippets": [
         {
-          "label": "Boss",
+          "label": "Entity Boss",
           "description": "Defines the current state of the boss for updating the boss HUD.",
           "body": {
             "hud_range": 55,
@@ -2550,11 +2573,11 @@
       "$ref": "./entity_minecraft_collision_box.schema.json",
       "defaultSnippets": [
         {
-          "label": "Collision Box",
+          "label": "Entity Collision Box",
           "description": "Sets the width and height of the Entity's collision box.",
           "body": {
-            "height": 1,
-            "width": 1
+            "height": 1.7999999523162842,
+            "width": 0.6000000238418579
           }
         }
       ]
@@ -2619,7 +2642,7 @@
       "$ref": "./entity_minecraft_damage_over_time.schema.json",
       "defaultSnippets": [
         {
-          "label": "Damage Over Time",
+          "label": "Entity Damage Over Time",
           "description": "Applies defined amount of damage to the entity at specified intervals.",
           "body": {
             "damage_per_hurt": 1,
@@ -2830,18 +2853,18 @@
       "$ref": "./entity_minecraft_exhaustion_values.schema.json",
       "defaultSnippets": [
         {
-          "label": "Exhaustion Values",
+          "label": "Entity Exhaustion Values",
           "description": "Defines how much exhaustion each player action should take.",
           "body": {
             "lunge": 4,
-            "attack": 0.1,
-            "damage": 0.1,
+            "attack": 0.10000000149011612,
+            "damage": 0.10000000149011612,
             "heal": 6,
-            "jump": 0.05,
-            "mine": 0.005,
-            "sprint": 0.01,
-            "sprint_jump": 0.2,
-            "swim": 0.01,
+            "jump": 0.05000000074505806,
+            "mine": 0.004999999888241291,
+            "sprint": 0.009999999776482582,
+            "sprint_jump": 0.20000000298023224,
+            "swim": 0.009999999776482582,
             "walk": 0
           }
         }
@@ -2912,7 +2935,7 @@
       "$ref": "./entity_minecraft_flocking.schema.json",
       "defaultSnippets": [
         {
-          "label": "Flocking",
+          "label": "Entity Flocking",
           "description": "Allows entities to flock in groups in water or not.",
           "body": {
             "block_distance": 0,
@@ -2986,7 +3009,7 @@
       "$ref": "./entity_minecraft_game_event_movement_tracking.schema.json",
       "defaultSnippets": [
         {
-          "label": "Game Event Movement Tracking",
+          "label": "Entity Game Event Movement Tracking",
           "description": "Allows an entity to emit `entityMove`, `swim` and `flap` game events, depending on the block the entity is moving through. It is added by default to every mob. Add it again to override its behavior.",
           "body": {
             "emit_flap": false,
@@ -3058,7 +3081,7 @@
       "$ref": "./entity_minecraft_grows_crop.schema.json",
       "defaultSnippets": [
         {
-          "label": "Grows Crop",
+          "label": "Entity Grows Crop",
           "description": "Could increase crop growth when entity walks over crop",
           "body": {
             "chance": 0,
@@ -3122,10 +3145,11 @@
       "$ref": "./entity_minecraft_home.schema.json",
       "defaultSnippets": [
         {
-          "label": "Home",
+          "label": "Entity Home",
           "description": "Saves a home position for when the entity is spawned. This component allows entities like bees to remember and return to a specific location such as a hive or nest.",
           "body": {
             "restriction_type": "none",
+            "home_block_list": [],
             "restriction_radius": 0
           }
         }
@@ -3144,7 +3168,25 @@
     "minecraft:ignore_cannot_be_attacked": {
       "title": "Minecraft Ignore Cannot Be Attacked",
       "description": "Allows the owner entity to ignore the \"minecraft:cannot_be_attacked\" component on entities that fulfill the filter.",
-      "$ref": "./entity_minecraft_ignore_cannot_be_attacked.schema.json"
+      "$ref": "./entity_minecraft_ignore_cannot_be_attacked.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Ignore Cannot Be Attacked",
+          "description": "Allows the owner entity to ignore the \"minecraft:cannot_be_attacked\" component on entities that fulfill the filter.",
+          "body": {
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            }
+          }
+        }
+      ]
     },
     "minecraft:input_air_controlled": {
       "title": "Minecraft Input Air Controlled",
@@ -3177,7 +3219,7 @@
       "$ref": "./entity_minecraft_insomnia.schema.json",
       "defaultSnippets": [
         {
-          "label": "Insomnia",
+          "label": "Entity Insomnia",
           "description": "Adds a timer since last rested to see if phantoms should spawn.",
           "body": {
             "days_until_insomnia": 3
@@ -3191,7 +3233,7 @@
       "$ref": "./entity_minecraft_instant_despawn.schema.json",
       "defaultSnippets": [
         {
-          "label": "Instant Despawn",
+          "label": "Entity Instant Despawn",
           "description": "Despawns the Actor immediately.",
           "body": {
             "remove_child_entities": false
@@ -3205,9 +3247,10 @@
       "$ref": "./entity_minecraft_interact.schema.json",
       "defaultSnippets": [
         {
-          "label": "Interact",
+          "label": "Entity Interact",
           "description": "Defines interactions with this entity.",
           "body": {
+            "interactions": [],
             "cooldown": 0,
             "cooldown_after_being_attacked": 0,
             "drop_item_slot": "",
@@ -4192,7 +4235,7 @@
       "$ref": "./entity_minecraft_physics.schema.json",
       "defaultSnippets": [
         {
-          "label": "Physics",
+          "label": "Entity Physics",
           "description": "Defines physics properties of an actor, including if it is affected by gravity or if it collides with objects.",
           "body": {
             "has_collision": true,
@@ -4272,9 +4315,10 @@
       "$ref": "./entity_minecraft_preferred_path.schema.json",
       "defaultSnippets": [
         {
-          "label": "Preferred Path",
+          "label": "Entity Preferred Path",
           "description": "Specifies costing information for mobs that prefer to walk on preferred paths.",
           "body": {
+            "preferred_path_blocks": [],
             "default_block_cost": 0,
             "jump_cost": 0,
             "max_fall_blocks": 3
@@ -4288,40 +4332,46 @@
       "$ref": "./entity_minecraft_projectile.schema.json",
       "defaultSnippets": [
         {
-          "label": "Projectile",
+          "label": "Entity Projectile",
           "description": "Turns the entity into a projectile: a thrown or shot entity that flies along a ballistic arc and reacts when it impacts a block, a fluid, or another entity.",
           "body": {
             "catch_fire": false,
             "reflect_on_hurt": false,
             "isolated_physics": true,
-            "anchor": 0,
+            "anchor": "origin",
             "angle_offset": 0,
             "crit_particle_on_hurt": false,
             "destroy_on_hurt": false,
-            "gravity": 0.05,
+            "gravity": 0.05000000074505806,
             "hit_ground_sound": "",
             "hit_nearest_passenger": false,
             "hit_sound": "",
+            "hit_water": false,
             "homing": false,
-            "inertia": 0.99,
+            "ignored_entities": [],
+            "inertia": 0.9900000095367432,
             "is_dangerous": false,
             "lightning": false,
-            "liquid_inertia": 0.6,
-            "multiple_targets": true,
-            "offset": "Vec3(0,0,0)",
+            "liquid_inertia": 0.6000000238418579,
+            "multiple_targets": false,
+            "offset": [
+              0,
+              0,
+              0
+            ],
             "on_fire_time": 5,
-            "owner_launch_immunity_ticks": 5,
             "particle": "iconcrack",
             "potion_effect": -1,
-            "power": 1.3,
+            "power": 1.2999999523162842,
             "reflect_immunity": 0,
             "shoot_sound": "",
             "shoot_target": true,
-            "should_bounce": false,
+            "should_bounce": "no",
             "splash_range": 4,
             "stop_on_hurt": false,
             "uncertainty_base": 0,
-            "uncertainty_multiplier": 0
+            "uncertainty_multiplier": 0,
+            "owner_launch_immunity_ticks": 5
           }
         }
       ]
@@ -4643,18 +4693,34 @@
     },
     "minecraft:tamemount": {
       "title": "Minecraft Tamemount",
-      "description": "Allows the Entity to be tamed by mounting it.",
+      "description": "Allows entities to flock in groups in water or not.",
       "$ref": "./entity_minecraft_tamemount.schema.json",
       "defaultSnippets": [
         {
-          "label": "Tamemount",
-          "description": "Allows the Entity to be tamed by mounting it.",
+          "label": "Entity Tamemount",
+          "description": "Allows entities to flock in groups in water or not.",
           "body": {
             "attempt_temper_mod": 5,
+            "auto_reject_items": [],
+            "feed_items": [],
             "feed_text": "",
             "max_temper": 100,
             "min_temper": 0,
-            "ride_text": ""
+            "ride_text": "",
+            "tame_event": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            }
           }
         }
       ]
@@ -4744,7 +4810,7 @@
       "$ref": "./entity_minecraft_trade_table.schema.json",
       "defaultSnippets": [
         {
-          "label": "Trade Table",
+          "label": "Entity Trade Table",
           "description": "Defines this entity's ability to trade with players.",
           "body": {
             "convert_trades_economy": false,
@@ -6574,13 +6640,16 @@
               "max": -1,
               "min": -1
             },
-            "attack_radius": 0,
-            "attack_radius_min": 0,
+            "attack_range": {
+              "max": 0,
+              "min": 0
+            },
             "burst_interval": 0,
             "burst_shots": 1,
             "charge_charged_trigger": 0,
             "charge_shoot_trigger": 0,
             "control_flags": [],
+            "in_range_movement_mode": "hold_position",
             "priority": 0,
             "ranged_fov": 90,
             "set_persistent": false,
@@ -6589,8 +6658,10 @@
             "target_in_sight_time": 1,
             "x_max_rotation": 30,
             "y_max_head_rotation": 30,
+            "attack_radius": 0,
             "attack_interval_max": 0,
-            "attack_interval_min": 0
+            "attack_interval_min": 0,
+            "attack_radius_min": 0
           }
         }
       ]
@@ -7391,8 +7462,27 @@
         }
       ]
     },
+    "minecraft:block_movement_slowdown_immunity": {
+      "title": "Minecraft Block Movement Slowdown Immunity",
+      "description": "Prevents specified blocks from contributing to this entity's block movement slowdown. It does not cause other blocks to apply slowdown.",
+      "$ref": "./entity_minecraft_block_movement_slowdown_immunity.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Block Movement Slowdown Immunity",
+          "description": "Prevents specified blocks from contributing to this entity's block movement slowdown. It does not cause other blocks to apply slowdown.",
+          "body": {
+            "blocks": []
+          }
+        }
+      ]
+    },
     "minecraft:bounciness": {
       "title": "Minecraft Bounciness",
+      "type": "object"
+    },
+    "minecraft:can_stand_on_powder_snow": {
+      "title": "Minecraft Can Stand On Powder Snow",
+      "description": "Defines whether an entity can stand on powder snow without sinking.",
       "type": "object"
     },
     "minecraft:dash_action": {
@@ -7401,6 +7491,16 @@
     },
     "minecraft:free_camera_controlled": {
       "title": "Minecraft Free Camera Controlled",
+      "type": "object"
+    },
+    "minecraft:freezing_immune": {
+      "title": "Minecraft Freezing Immune",
+      "description": "Defines whether an entity should be affected by freezing.",
+      "type": "object"
+    },
+    "minecraft:freezing_vulnerable": {
+      "title": "Minecraft Freezing Vulnerable",
+      "description": "Defines whether an entity should take increased damage from freezing.",
       "type": "object"
     },
     "minecraft:memory_behavior.flee_threat": {
@@ -7501,6 +7601,12 @@
     "minecraft:underwater_mount_breathing": {
       "title": "Minecraft Underwater Mount Breathing",
       "type": "object"
+    },
+    "minecraft:uses_legacy_ambient_sounds": {
+      "title": "Minecraft Uses Legacy Ambient Sounds",
+      "description": "[DEPRECATED] Allows the entity to automatically determine which ambient sound to play:\n\t\t\\n - `ambient.in.air` when not on the ground\n\t\t\\n - `ambient.in.water` when its head is in water\n\t\t\\n - `ambient.baby` if it is a baby\n\t\t\\n - `ambient` otherwise\n\n*⚠️ Deprecated*",
+      "type": "object",
+      "deprecated": true
     },
     "minecraft:uses_legacy_friction": {
       "title": "Minecraft Uses Legacy Friction",

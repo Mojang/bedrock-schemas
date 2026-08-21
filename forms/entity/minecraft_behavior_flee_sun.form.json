@@ -32,7 +32,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -132,5 +133,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.flee_sun"
+  "id": "minecraft:behavior.flee_sun",
+  "dataVersion": "1.26.20"
 }

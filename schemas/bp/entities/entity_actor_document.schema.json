@@ -29,6 +29,10 @@
       "additionalProperties": {
         "type": "object"
       }
+    },
+    "upgrades": {
+      "title": "Upgrades",
+      "type": "object"
     }
   },
   "required": [

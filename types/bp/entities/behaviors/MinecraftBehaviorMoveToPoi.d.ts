@@ -24,7 +24,7 @@ export default interface MinecraftBehaviorMoveToPoi {
    * @remarks
    * Tells the goal what POI type it should be looking for
    */
-  poi_type?: string;
+  poi_type?: MinecraftBehaviorMoveToPoiPoiType;
 
   /**
    * @remarks

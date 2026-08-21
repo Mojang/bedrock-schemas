@@ -19,7 +19,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -29,5 +30,6 @@
     }
   ],
   "description": "Allows the mob to move to a target position. Using memories, the mob will try to stick to the original target position it chose until that position is removed. Requires a FindBlockSensor.",
-  "title": "Entity Move To Position Memory Behavior"
+  "title": "Entity Move To Position Memory Behavior",
+  "dataVersion": "1.26.20"
 }

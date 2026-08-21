@@ -32,8 +32,8 @@
   "fields": [
     {
       "id": "type",
-      "title": "VillageType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "default",
@@ -61,5 +61,6 @@
     }
   ],
   "description": "Determines the type of village for the Biome",
-  "title": "Biome Village Type"
+  "title": "Biome Village Type",
+  "dataVersion": "1.26.0"
 }

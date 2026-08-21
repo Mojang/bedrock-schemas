@@ -42,7 +42,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -105,7 +106,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -122,5 +124,6 @@
       "defaultValue": 1
     }
   ],
-  "title": "Entity PlaceBlockGoalWeightedBlockDescriptor"
+  "title": "Entity PlaceBlockGoalWeightedBlockDescriptor",
+  "dataVersion": "1.26.30"
 }

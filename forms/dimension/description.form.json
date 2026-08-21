@@ -22,5 +22,6 @@
     }
   ],
   "description": "Declares the unique identifier for a custom dimension that players can travel to. The identifier must use namespace:name format (like 'mypack:custom_dimension') and is used by commands, portals, and scripts to reference this dimension. Every custom dimension requires a description with a valid identifier.",
-  "title": "Dimension Description"
+  "title": "Dimension Description",
+  "dataVersion": "1.21.60"
 }

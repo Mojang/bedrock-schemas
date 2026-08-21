@@ -67,7 +67,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "threshold",
@@ -77,5 +77,6 @@
       "defaultValue": 0
     }
   ],
-  "title": "Biome NoiseBlockSpecifier"
+  "title": "Biome NoiseBlockSpecifier",
+  "dataVersion": "1.26.30"
 }

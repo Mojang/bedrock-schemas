@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:movement.jump
+ * 
+ * minecraft:movement.jump Samples
  */
 
 import * as jsoncommon from '../../../common';

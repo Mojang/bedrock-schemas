@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.lay_down
+ * 
+ * minecraft:behavior.lay_down Samples
  */
 
 import * as jsoncommon from '../../../common';

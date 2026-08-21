@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "entity_bounding_box_scale",
@@ -104,7 +105,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -211,7 +213,7 @@
         "max": 8,
         "min": 4
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
@@ -353,7 +355,7 @@
         "max": 20,
         "min": 4
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
@@ -431,5 +433,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.jump_around_target"
+  "id": "minecraft:behavior.jump_around_target",
+  "dataVersion": "1.26.20"
 }

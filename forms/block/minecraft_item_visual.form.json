@@ -37,7 +37,7 @@
                   {
                     "id": "bone_visibility",
                     "dataType": "keyedObjectCollection",
-                    "subFormId": "item/molang_expression"
+                    "subFormId": "legacy/molang_expression"
                   },
                   {
                     "id": "bone_visibility",
@@ -105,7 +105,8 @@
                 "dataType": "object",
                 "defaultValue": false
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ],
@@ -173,5 +174,6 @@
     ]
   },
   "title": "Block Item Visual",
-  "id": "Item Visual"
+  "id": "Item Visual",
+  "dataVersion": "1.26.20"
 }

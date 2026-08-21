@@ -33,7 +33,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_range",
@@ -44,7 +45,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/sniffer.json": [
           {
@@ -66,7 +67,7 @@
         "max": 10,
         "min": 8
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/sniffer.json": [
           {
@@ -443,7 +444,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -546,5 +548,6 @@
         }
       }
     ]
-  }
+  },
+  "dataVersion": "1.26.10"
 }

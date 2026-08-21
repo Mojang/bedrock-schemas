@@ -29,7 +29,7 @@
         {
           "id": "direction",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "direction",
@@ -53,7 +53,7 @@
         {
           "id": "offset",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "offset",
@@ -64,5 +64,6 @@
   ],
   "description": "Emits particles from positions calculated by custom Molang expressions. Unlike preset shapes, this gives complete control over spawn locations using math expressions that can create rings, spirals, waves, or any procedural pattern. Use the offset expressions to define X, Y, Z coordinates relative to the emitter for complex artistic effects.",
   "title": "Client Particles Emitter Shape Custom",
-  "id": "emitter_shape_custom"
+  "id": "emitter_shape_custom",
+  "dataVersion": "1.21.10"
 }

@@ -73,7 +73,7 @@ export default interface MinecraftBehaviorPlayDead {
    * to start. Damage taken above the max will always cause the goal
    * to start.
    */
-  random_damage_range?: MinecraftBehaviorPlayDeadRandomDamageRange;
+  random_damage_range?: object;
 
   /**
    * @remarks
@@ -166,22 +166,5 @@ export interface MinecraftBehaviorPlayDeadFilters {
    * The value being compared with the test.
    */
   value?: object;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorPlayDeadRandomDamageRange {
-
-  max?: number;
-
-  min?: number;
 
 }

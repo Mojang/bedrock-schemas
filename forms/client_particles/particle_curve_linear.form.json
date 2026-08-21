@@ -22,7 +22,7 @@
         {
           "id": "horizontal_range",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "horizontal_range",
@@ -38,7 +38,7 @@
         {
           "id": "input",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "input",
@@ -55,7 +55,7 @@
         {
           "id": "nodes",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "nodes",
@@ -73,5 +73,6 @@
   ],
   "description": "Creates animation curves using linear interpolation between keyframe values. Define input range and corresponding output values; the curve linearly blends between adjacent keyframes. Simpler than bezier curves but effective for straightforward animations like size growing, alpha fading, or color shifting over particle lifetime.",
   "title": "Client Particles Particle Curve Linear",
-  "id": "particle_curve_linear"
+  "id": "particle_curve_linear",
+  "dataVersion": "1.21.10"
 }

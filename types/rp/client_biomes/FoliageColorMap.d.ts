@@ -24,7 +24,7 @@ export default interface FoliageColorMap {
    * Color map from textures/colormap to determine color of 
    * foliage.
    */
-  color_map: string;
+  color_map: FoliageColorMapColorMap;
 
 }
 

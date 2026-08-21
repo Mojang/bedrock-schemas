@@ -8,12 +8,14 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:trade_table
+ * 
+ * minecraft:trade_table Samples
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * Trade Table (minecraft:trade_table)
+ * Entity Trade Table (minecraft:trade_table)
  * Defines this entity's ability to trade with players.
  */
 export default interface MinecraftTradeTable {

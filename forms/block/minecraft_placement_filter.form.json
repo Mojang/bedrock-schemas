@@ -27,5 +27,6 @@
     }
   ],
   "title": "Block Placement Filter",
-  "id": "Placement Filter"
+  "id": "Placement Filter",
+  "dataVersion": "1.26.20"
 }

@@ -33,7 +33,7 @@ export default interface MinecraftKineticWeapon {
    * Defines the reach used when the user is in Creative Mode. Defaults to
    * "reach" if unspecified.
    */
-  creative_reach?: MinecraftKineticWeaponCreativeReach;
+  creative_reach?: object;
 
   /**
    * @remarks
@@ -91,24 +91,7 @@ export default interface MinecraftKineticWeapon {
    * considered. Block collisions between the user and target block
    * damage and its effects.
    */
-  reach?: MinecraftKineticWeaponReach;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftKineticWeaponCreativeReach {
-
-  max?: number;
-
-  min?: number;
+  reach?: object;
 
 }
 
@@ -211,22 +194,5 @@ export interface MinecraftKineticWeaponKnockbackConditions {
    * product) required for the effect to be applied.
    */
   min_speed?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftKineticWeaponReach {
-
-  max?: number;
-
-  min?: number;
 
 }

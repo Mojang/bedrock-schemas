@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.sneeze
+ * 
+ * minecraft:behavior.sneeze Samples
  */
 
 import * as jsoncommon from '../../../common';

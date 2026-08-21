@@ -31,13 +31,15 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "poi_type",
-      "title": "POIType",
+      "title": "Poi Type",
       "description": "Tells the goal what POI type it should be looking for",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": null,
       "choices": [
         {
           "id": "bed",
@@ -52,8 +54,7 @@
           "title": "Meeting area"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": null
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -72,5 +73,6 @@
   ],
   "description": "Allows the mob to move to a POI if able to",
   "title": "Entity Move To Poi Behavior",
-  "id": "minecraft:behavior.move_to_poi"
+  "id": "minecraft:behavior.move_to_poi",
+  "dataVersion": "1.26.20"
 }

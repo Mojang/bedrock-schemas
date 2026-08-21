@@ -14,7 +14,7 @@
     },
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 40 more properties",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 41 more properties",
       "$ref": "./block_components.schema.json",
       "defaultSnippets": [
         {
@@ -35,7 +35,7 @@
           }
         }
       ],
-      "x-runtime-constraint-description": "Block cannot have both \"minecraft:redstone_producer\" and \"minecraft:redstone_consumer\" components."
+      "x-runtime-constraint-description": "Block cannot have both a \"container\" in \"minecraft:block_entity\" and a \"minecraft:crafting_table\" component."
     },
     "description": {
       "title": "Description",
@@ -49,27 +49,15 @@
             "identifier": "",
             "menu_category": {
               "category": "none",
-              "group": "",
+              "group": null,
               "is_hidden_in_commands": false
             },
             "states": {},
             "traits": {
-              "minecraft:connection": {
-                "enabled_states": []
-              },
-              "minecraft:multi_block": {
-                "direction": "up",
-                "enabled_states": [],
-                "parts": 2
-              },
-              "minecraft:placement_direction": {
-                "blocks_to_corner_with": [],
-                "enabled_states": [],
-                "y_rotation_offset": null
-              },
-              "minecraft:placement_position": {
-                "enabled_states": []
-              }
+              "minecraft:connection": null,
+              "minecraft:multi_block": null,
+              "minecraft:placement_direction": null,
+              "minecraft:placement_position": null
             }
           }
         }

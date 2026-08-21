@@ -38,7 +38,7 @@ export default interface MinecraftOnIgnite {
    * @remarks
    * The target of the event.
    */
-  target?: string;
+  target?: MinecraftOnIgniteTarget;
 
 }
 

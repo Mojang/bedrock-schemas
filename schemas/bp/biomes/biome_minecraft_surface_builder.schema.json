@@ -10,7 +10,7 @@
           "$ref": "./biome_minecraft_overworld.schema.json"
         },
         {
-          "description": "\n\nProperties:\n• foundation_material (string)\n• mid_material (string)\n• sea_floor_depth (int)\n• sea_floor_material (string)\n• sea_material (string)\n• top_material (string)\n• type (string) = minecraft:frozen_ocean",
+          "description": "\n\nProperties:\n• foundation_material (string)\n• mid_material (string)\n• sea_floor_depth (int)\n• sea_floor_material (string)\n• sea_material (string)\n• top_material (string)\n• type (enum) = minecraft:frozen_ocean",
           "$ref": "./biome_minecraft_frozen_ocean.schema.json",
           "defaultSnippets": [
             {
@@ -52,7 +52,7 @@
           ]
         },
         {
-          "description": "\n\nProperties:\n• foundation_material (string)\n• max_puddle_depth_below_sea_level (int)\n• mid_material (string)\n• sea_floor_depth (int)\n• sea_floor_material (string)\n• sea_material (string)\n• top_material (string)\n• type (string) = minecraft:swamp",
+          "description": "\n\nProperties:\n• foundation_material (string)\n• max_puddle_depth_below_sea_level (int)\n• mid_material (string)\n• sea_floor_depth (int)\n• sea_floor_material (string)\n• sea_material (string)\n• top_material (string)\n• type (enum) = minecraft:swamp",
           "$ref": "./biome_minecraft_swamp.schema.json",
           "defaultSnippets": [
             {
@@ -72,7 +72,7 @@
           ]
         },
         {
-          "description": "\n\nProperties:\n• beach_material (string)\n• ceiling_materials (string)\n• floor_materials (string)\n• foundation_material (string)\n• sea_material (string)\n• type (string) = minecraft:capped",
+          "description": "\n\nProperties:\n• beach_material (string)\n• ceiling_materials (string)\n• floor_materials (string)\n• foundation_material (string)\n• sea_material (string)\n• type (enum) = minecraft:capped",
           "$ref": "./biome_minecraft_capped.schema.json",
           "defaultSnippets": [
             {
@@ -90,7 +90,7 @@
           ]
         },
         {
-          "description": "\n\nProperties:\n• type (string) = minecraft:the_end",
+          "description": "\n\nProperties:\n• type (enum) = minecraft:the_end",
           "$ref": "./biome_minecraft_the_end.schema.json",
           "defaultSnippets": [
             {

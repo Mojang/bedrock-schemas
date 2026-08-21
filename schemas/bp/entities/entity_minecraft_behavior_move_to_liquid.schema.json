@@ -24,7 +24,7 @@
       "default": 0.5
     },
     "material_type": {
-      "title": "Liquid Material Type",
+      "title": "Material Type",
       "description": "The material type of the liquid block to find. Valid values are \"Any\", \"Water\", and \"Lava\".\n\nSample values:\n• strider: Lava",
       "type": "string",
       "enum": [

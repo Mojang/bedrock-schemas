@@ -25,7 +25,7 @@
         {
           "id": "bone_visibility",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "bone_visibility",
@@ -95,5 +95,6 @@
     }
   ],
   "description": "References custom block geometry with advanced rendering options. Specify the geometry identifier from models in the resource pack, configure bone visibility for multi-part models, and set up block culling rules to hide faces when adjacent to other blocks. Enables complex shapes like stairs, fences, and decorative blocks.",
-  "title": "Block Detailed Geometry"
+  "title": "Block Detailed Geometry",
+  "dataVersion": "1.26.20"
 }

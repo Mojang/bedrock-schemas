@@ -70,7 +70,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Phantom: {"min":20,"max":40}
    *
    */
-  height_above_target_range?: MinecraftBehaviorCircleAroundAnchorHeightAboveTargetRange;
+  height_above_target_range?: object;
 
   /**
    * @remarks
@@ -90,7 +90,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Phantom: {"min":-4,"max":5}
    *
    */
-  height_offset_range?: MinecraftBehaviorCircleAroundAnchorHeightOffsetRange;
+  height_offset_range?: object;
 
   /**
    * @remarks
@@ -128,7 +128,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Horizontal distance from the anchor point this entity must stay
    * within upon a successful radius adjustment.
    */
-  radius_range?: MinecraftBehaviorCircleAroundAnchorRadiusRange;
+  radius_range?: object;
 
   /**
    * @remarks
@@ -144,55 +144,4 @@ export enum MinecraftBehaviorCircleAroundAnchorControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCircleAroundAnchorHeightAboveTargetRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCircleAroundAnchorHeightOffsetRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCircleAroundAnchorRadiusRange {
-
-  max?: number;
-
-  min?: number;
-
 }

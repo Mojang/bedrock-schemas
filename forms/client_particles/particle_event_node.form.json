@@ -22,7 +22,7 @@
         {
           "id": "expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "expression",
@@ -68,5 +68,6 @@
   ],
   "description": "Defines actions triggered by particle events like spawning, collision, or expiration. Event nodes can run Molang expressions to modify variables, spawn nested particle effects, play sounds, or control emitter state. Chain multiple effects together for complex reactions like explosions spawning secondary debris particles.",
   "title": "Client Particles Particle Event Node",
-  "id": "particle_event_node"
+  "id": "particle_event_node",
+  "dataVersion": "1.21.10"
 }

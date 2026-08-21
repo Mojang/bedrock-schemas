@@ -38,5 +38,6 @@
     }
   ],
   "description": "Defines jigsaw structure metadata including markers and size.",
-  "title": "Structure JigsawStructureMetadata"
+  "title": "Structure JigsawStructureMetadata",
+  "dataVersion": "1.21.50"
 }

@@ -11,11 +11,6 @@
  * 
  * minecraft:physics Samples
 
-Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
-
-"minecraft:physics": {}
-
-
 Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/allay.json
 
 "minecraft:physics": {
@@ -29,12 +24,17 @@ Area Effect Cloud - https://github.com/Mojang/bedrock-samples/tree/preview/behav
   "has_collision": false
 }
 
+
+Armor Stand - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/armor_stand.json
+
+"minecraft:physics": {}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * Physics (minecraft:physics)
+ * Entity Physics (minecraft:physics)
  * Defines physics properties of an actor, including if it is
  * affected by gravity or if it collides with objects.
  */

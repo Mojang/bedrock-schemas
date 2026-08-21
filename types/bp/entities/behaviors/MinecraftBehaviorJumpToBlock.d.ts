@@ -84,7 +84,7 @@ export default interface MinecraftBehaviorJumpToBlock {
    * Goat: [30,60]
    *
    */
-  cooldown_range?: MinecraftBehaviorJumpToBlockCooldownRange;
+  cooldown_range?: object;
 
   /**
    * @remarks
@@ -212,21 +212,4 @@ export enum MinecraftBehaviorJumpToBlockControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorJumpToBlockCooldownRange {
-
-  max?: number;
-
-  min?: number;
-
 }

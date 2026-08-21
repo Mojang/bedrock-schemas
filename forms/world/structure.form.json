@@ -40,5 +40,6 @@
     }
   ],
   "description": "Defines a weighted structure reference for Jigsaw Structure sets.",
-  "title": "World Structure"
+  "title": "World Structure",
+  "dataVersion": "1.21.20"
 }

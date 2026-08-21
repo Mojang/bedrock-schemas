@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown",
@@ -79,5 +80,6 @@
   "description": "Allows the mob to look at a player that is holding a tradable item.",
   "title": "Entity Trade Interest Behavior",
   "samples": {},
-  "id": "minecraft:behavior.trade_interest"
+  "id": "minecraft:behavior.trade_interest",
+  "dataVersion": "1.26.30"
 }

@@ -52,7 +52,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -292,5 +293,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.stomp_attack"
+  "id": "minecraft:behavior.stomp_attack",
+  "dataVersion": "1.26.40"
 }

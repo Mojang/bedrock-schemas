@@ -99,7 +99,7 @@ export default interface MinecraftBehaviorGoAndGiveItemsToNoteblock {
    * Allay: "item_thrown"
    *
    */
-  throw_sound?: string;
+  throw_sound?: MinecraftBehaviorGoAndGiveItemsToNoteblockThrowSound;
 
   /**
    * @remarks
@@ -404,6 +404,7 @@ export enum MinecraftBehaviorGoAndGiveItemsToNoteblockThrowSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -604,6 +605,7 @@ export enum MinecraftBehaviorGoAndGiveItemsToNoteblockThrowSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -721,6 +723,7 @@ export enum MinecraftBehaviorGoAndGiveItemsToNoteblockThrowSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

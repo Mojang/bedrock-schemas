@@ -75,51 +75,25 @@
       "id": "attempt_temper_mod",
       "title": "Attempt Temper Mod",
       "description": "The amount the entity's temper will increase when mounted.",
-      "defaultValue": 5,
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 5
     },
     {
-      "id": "autoRejectItems",
-      "title": "AutoRejectItems",
+      "id": "auto_reject_items",
+      "title": "Auto Reject Items",
       "description": "The list of items that, if carried while interacting with the entity, will anger it.",
       "dataType": "objectArray",
-      "subForm": {
-        "id": "",
-        "description": "The list of items that, if carried while interacting with the entity, will anger it.",
-        "fields": [
-          {
-            "id": "item",
-            "title": "Item",
-            "description": "The list of items that, if carried while interacting with the entity, will anger it.",
-            "dataType": "string"
-          }
-        ]
-      }
+      "defaultValue": [],
+      "subFormId": "entity/mounttamingcomponentrejectitem",
+      "samples": {}
     },
     {
       "id": "feed_items",
       "title": "Feed Items",
       "description": "The list of items that can be used to increase the entity's temper and speed up the taming process.",
       "dataType": "objectArray",
-      "subForm": {
-        "id": "",
-        "description": "The list of items that can be used to increase the entity's temper and speed up the taming process.",
-        "fields": [
-          {
-            "id": "item",
-            "title": "Item",
-            "description": "Name of the item this entity likes and can be used to increase this entity's temper.",
-            "dataType": "string"
-          },
-          {
-            "id": "temper_mod",
-            "title": "Temper Mod",
-            "description": "The amount of temper this entity gains when fed this item.",
-            "defaultValue": 0,
-            "dataType": "int"
-          }
-        ]
-      },
+      "defaultValue": [],
+      "subFormId": "entity/mounttamingcomponentfeeditem",
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -158,6 +132,7 @@
       "title": "Feed Text",
       "description": "The text that shows in the feeding interact button.",
       "dataType": "string",
+      "defaultValue": "",
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -177,8 +152,8 @@
       "id": "max_temper",
       "title": "Max Temper",
       "description": "The maximum value for the entity's random starting temper.",
-      "defaultValue": 100,
       "dataType": "int",
+      "defaultValue": 100,
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -198,14 +173,15 @@
       "id": "min_temper",
       "title": "Min Temper",
       "description": "The minimum value for the entity's random starting temper.",
-      "defaultValue": 0,
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 0
     },
     {
       "id": "ride_text",
       "title": "Ride Text",
       "description": "The text that shows in the riding interact button.",
       "dataType": "string",
+      "defaultValue": "",
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -225,7 +201,22 @@
       "id": "tame_event",
       "title": "Tame Event",
       "description": "Event that triggers when the entity becomes tamed.",
-      "dataType": "minecraftEventTrigger",
+      "dataType": "object",
+      "defaultValue": {
+        "event": "",
+        "filters": {
+          "AND": null,
+          "NOT": null,
+          "OR": null,
+          "all": null,
+          "all_of": null,
+          "any": null,
+          "any_of": null,
+          "none_of": null
+        },
+        "target": "self"
+      },
+      "subFormId": "entity/actordefinitiontrigger",
       "samples": {
         "/vanilla/behavior_pack/entities/llama.json": [
           {
@@ -248,33 +239,26 @@
       }
     },
     {
-      "id": "auto_reject_items",
-      "title": "Auto Reject Items",
+      "id": "autoRejectItems",
+      "title": "AutoRejectItems",
+      "description": "The list of items that, if carried while interacting with the entity, will anger it.",
       "dataType": "objectArray",
       "subForm": {
-        "id": "auto_reject_items",
-        "title": "Auto reject items",
+        "id": "",
+        "description": "The list of items that, if carried while interacting with the entity, will anger it.",
         "fields": [
           {
             "id": "item",
             "title": "Item",
-            "dataType": "string",
-            "samples": {
-              "/vanilla/behavior_pack/entities/trader_llama.json": [
-                {
-                  "path": "item",
-                  "content": "horsearmorleather"
-                }
-              ]
-            }
+            "description": "The list of items that, if carried while interacting with the entity, will anger it.",
+            "dataType": "string"
           }
         ]
-      },
-      "samples": {}
+      }
     }
   ],
-  "description": "Allows the Entity to be tamed by mounting it.",
-  "title": "Tamemount",
+  "description": "Allows entities to flock in groups in water or not.",
+  "title": "Entity Tamemount",
   "samples": {
     "/vanilla/behavior_pack/entities/llama.json": [
       {
@@ -350,5 +334,6 @@
       }
     ]
   },
-  "id": "minecraft:tamemount"
+  "id": "minecraft:tamemount",
+  "dataVersion": "1.26.50"
 }

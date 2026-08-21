@@ -15,13 +15,17 @@ Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
 
 "minecraft:behavior.ranged_attack": {
   "charge_shoot_trigger": 4,
-  "attack_interval_max": 5,
-  "attack_interval_min": 3,
-  "attack_radius": 48,
+  "attack_interval": {
+    "min": 3,
+    "max": 5
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 48
+  },
   "burst_interval": 0.3,
   "burst_shots": 3,
-  "priority": 3,
-  "charge_charged_trigger": 0
+  "priority": 3
 }
 
 
@@ -105,21 +109,17 @@ export default interface MinecraftBehaviorRangedAttack {
    * Reload-time range scales with target-distance.
    * 
    * Sample Values:
+   * Blaze: {"min":3,"max":5}
+   *
    * Bogged: 3.5, 2.5
    *
-   * Drowned: {"min":1,"max":3}
-   *
    */
-  attack_interval?: MinecraftBehaviorRangedAttackAttackInterval;
+  attack_interval?: object;
 
   /**
    * @remarks
    * Maximum bound for reload-time range (in seconds), when not using a
    * charged shot. Reload-time range scales with target-distance.
-   * 
-   * Sample Values:
-   * Blaze: 5
-   *
    */
   attack_interval_max?: number;
 
@@ -127,10 +127,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * @remarks
    * Minimum bound for reload-time range (in seconds), when not using a
    * charged shot. Reload-time range scales with target-distance.
-   * 
-   * Sample Values:
-   * Blaze: 3
-   *
    */
   attack_interval_min?: number;
 
@@ -140,8 +136,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * shoot.
    * 
    * Sample Values:
-   * Blaze: 48
-   *
    * Bogged: 15
    *
    * Llama: 64
@@ -158,12 +152,16 @@ export default interface MinecraftBehaviorRangedAttack {
 
   /**
    * @remarks
+   * Range of distances from the target within which the entity can
+   * perform a ranged attack.
    * 
    * Sample Values:
+   * Blaze: {"min":0,"max":48}
+   *
    * Drowned: {"min":0,"max":10}
    *
    */
-  attack_range?: MinecraftBehaviorRangedAttackAttackRange;
+  attack_range?: object;
 
   /**
    * @remarks
@@ -214,6 +212,17 @@ export default interface MinecraftBehaviorRangedAttack {
   charge_shoot_trigger?: number;
 
   control_flags?: string[];
+
+  /**
+   * @remarks
+   * Controls how the entity moves while its target is within the
+   * configured attack range. "hold_position" makes the entity stop
+   * and hold its position while facing and attacking the target.
+   * "follow_target" makes the entity continue moving toward the
+   * target while attacking, stopping just outside the minimum attack
+   * range.
+   */
+  in_range_movement_mode?: MinecraftBehaviorRangedAttackInRangeMovementMode;
 
   /**
    * @remarks
@@ -289,51 +298,14 @@ export default interface MinecraftBehaviorRangedAttack {
 }
 
 
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorRangedAttackAttackInterval {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Attack range (attack_range)
- */
-export interface MinecraftBehaviorRangedAttackAttackRange {
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Drowned: 10
-   *
-   */
-  max?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Drowned: 0
-   *
-   */
-  min?: number;
-
-}
-
-
 export enum MinecraftBehaviorRangedAttackControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+export enum MinecraftBehaviorRangedAttackInRangeMovementMode {
+  followTarget = `follow_target`,
+  holdPosition = `hold_position`
 }

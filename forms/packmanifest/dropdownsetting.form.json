@@ -51,8 +51,8 @@
     },
     {
       "id": "type",
-      "title": "SettingType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "dropdown",
@@ -61,6 +61,10 @@
         {
           "id": "label",
           "title": "Label"
+        },
+        {
+          "id": "multiselect",
+          "title": "Multiselect"
         },
         {
           "id": "slider",
@@ -76,5 +80,6 @@
     }
   ],
   "description": "A dropdown selection setting that appears in the pack's world settings UI. Players choose from predefined options like game modes or difficulty presets. Each option has an internal ID and display text.",
-  "title": "Packmanifest DropdownSetting"
+  "title": "Packmanifest DropdownSetting",
+  "dataVersion": "3.0.0"
 }

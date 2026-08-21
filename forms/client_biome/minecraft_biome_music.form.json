@@ -30,5 +30,6 @@
     }
   ],
   "title": "Minecraft Biome Music",
-  "description": "Affects how music plays within the biome"
+  "description": "Affects how music plays within the biome",
+  "dataVersion": "1.21.70"
 }

@@ -102,7 +102,8 @@
                       "description": "The value being compared with the test.",
                       "dataType": "object"
                     }
-                  ]
+                  ],
+                  "dataVersion": "1.21.20"
                 },
                 "alternates": [
                   {
@@ -173,7 +174,8 @@
                 "dataType": "float",
                 "defaultValue": 1
               }
-            ]
+            ],
+            "dataVersion": "1.21.120"
           }
         }
       ]
@@ -196,7 +198,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -214,5 +217,7 @@
   ],
   "description": "Allows the mob to target another mob that hurts their owner.",
   "title": "Entity Owner Hurt By Target Behavior",
-  "id": "minecraft:behavior.owner_hurt_by_target"
+  "samples": {},
+  "id": "minecraft:behavior.owner_hurt_by_target",
+  "dataVersion": "1.26.30"
 }

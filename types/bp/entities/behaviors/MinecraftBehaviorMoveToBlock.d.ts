@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.move_to_block
+ * 
+ * minecraft:behavior.move_to_block Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -106,7 +108,7 @@ export default interface MinecraftBehaviorMoveToBlock {
    * Kind of block to find fitting the specification. Valid values are
    * "random" and "nearest".
    */
-  target_selection_method?: string;
+  target_selection_method?: MinecraftBehaviorMoveToBlockTargetSelectionMethod;
 
   /**
    * @remarks

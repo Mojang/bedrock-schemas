@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "eat_delay",
@@ -125,5 +126,6 @@
   "description": "Allows the mob to eat/raid crops out of farms until they are full.",
   "title": "Entity Raid Garden Behavior",
   "samples": {},
-  "id": "minecraft:behavior.raid_garden"
+  "id": "minecraft:behavior.raid_garden",
+  "dataVersion": "1.26.10"
 }

@@ -113,6 +113,14 @@
       "technicalDescription": "This identifier must match an existing geometry identifier in any of the currently loaded resource packs.",
       "note": "The reserved identifier `minecraft:geometry.full_cube` was added in 1.20.60 to provide the most efficient rendering path for 1x1x1 blocks.",
       "humanifyValues": "none",
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:geometry/",
+            "content": "minecraft:geometry.cross"
+          }
+        ]
+      },
       "dataType": "string",
       "title": "Identifier"
     },
@@ -226,6 +234,14 @@
       {
         "path": "https://github.com/microsoft/minecraft-samples/tree/main/custom_blocks/behavior_packs/custom_blocks/blocks/california_roll.json",
         "content": "geometry.sushi"
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:geometry/",
+        "content": {
+          "identifier": "minecraft:geometry.cross"
+        }
       }
     ]
   },

@@ -19,7 +19,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_range",
@@ -30,7 +31,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "duration_range",
@@ -41,7 +42,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "on_end",

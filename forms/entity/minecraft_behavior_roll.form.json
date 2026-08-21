@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -50,5 +51,7 @@
   ],
   "description": "This allows the mob to roll forward.",
   "title": "Entity Roll Behavior",
-  "id": "minecraft:behavior.roll"
+  "samples": {},
+  "id": "minecraft:behavior.roll",
+  "dataVersion": "1.26.30"
 }

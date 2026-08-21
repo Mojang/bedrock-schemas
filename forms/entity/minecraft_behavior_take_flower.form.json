@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "filters",
@@ -82,7 +83,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -231,5 +233,6 @@
   "description": "Allows the mob to accept flowers from another mob with the minecraft:offer_flower behavior.",
   "title": "Entity Take Flower Behavior",
   "samples": {},
-  "id": "minecraft:behavior.take_flower"
+  "id": "minecraft:behavior.take_flower",
+  "dataVersion": "1.26.10"
 }

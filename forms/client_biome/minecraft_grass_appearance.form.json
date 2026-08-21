@@ -22,5 +22,6 @@
     }
   ],
   "description": "Set the grass color or color map used during rendering. Biomes without this component will have default grass appearance.",
-  "title": "Client Biome Grass Appearance"
+  "title": "Client Biome Grass Appearance",
+  "dataVersion": "1.21.40"
 }

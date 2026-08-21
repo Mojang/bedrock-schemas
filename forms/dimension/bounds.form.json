@@ -48,5 +48,6 @@
   ],
   "description": "Defines the minimum and maximum vertical bounds for a dimension.",
   "title": "Dimension Bounds",
-  "id": "Bounds"
+  "id": "Bounds",
+  "dataVersion": "1.21.60"
 }

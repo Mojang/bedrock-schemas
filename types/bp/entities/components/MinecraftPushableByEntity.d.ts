@@ -11,6 +11,11 @@
  * 
  * minecraft:pushable_by_entity Samples
 
+Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/blaze.json
+
+"minecraft:pushable_by_entity": {}
+
+
 Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/boat.json
 
 "minecraft:pushable_by_entity": {
@@ -49,11 +54,6 @@ Boat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
   ]
 }
 
-
-Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/bogged.json
-
-"minecraft:pushable_by_entity": {}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -80,7 +80,6 @@ export default interface MinecraftPushableByEntity {
    * 
    * Sample Values:
    * Boat: [{"filters":{"all_of":[{"test":"is_family","subject":"other","value":"sulfur_cube"},{"test":"enum_property","subject":"other","domain":"minecraft:sulfur_cube_archetype","operator":"not","value":"none"},{"test":"is_controlling_passenger_family","subject":"self","value":"player"}]},"push_mode":"none"},{"push_mode":"legacy_boat","strength_multiplier":0.1,"min_distance":0.55,"push_scale_self":0.5,"push_scale_other":0.25}]
-   *
    *
    */
   presets?: MinecraftPushableByEntityPresets[];

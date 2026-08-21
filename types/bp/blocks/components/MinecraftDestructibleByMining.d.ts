@@ -105,6 +105,20 @@ Luckyblock - Luckyblock
   "item_specific_speeds": []
 }
 
+
+Block Black Concrete Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_double_slab.block.json
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 1.8
+}
+
+
+Block Black Wool Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_wool_double_slab.block.json
+
+"minecraft:destructible_by_mining": {
+  "seconds_to_destroy": 0.8
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -141,6 +155,14 @@ export default interface MinecraftDestructibleByMining {
    * Sets the number of seconds it takes to destroy the block with
    * base equipment. Greater numbers result in greater mining 
    * times.
+   * 
+   * Sample Values:
+   * Block Black Concrete Double Slab: 1.8
+   *
+   *
+   * Block Black Wool Double Slab: 0.8
+   *
+   *
    */
   seconds_to_destroy?: number;
 

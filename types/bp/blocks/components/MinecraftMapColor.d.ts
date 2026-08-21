@@ -46,6 +46,14 @@ Block Orange Ore - Block Orange Ore
 Apple Block - Apple Block
 
 "minecraft:map_color": "#f30000
+
+Block Black Concrete Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_double_slab.block.json
+
+"minecraft:map_color": "#191919
+
+Block Black Wool Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_wool_double_slab.block.json
+
+"minecraft:map_color": "#1D1D21
  */
 
 import * as jsoncommon from '../../../common';

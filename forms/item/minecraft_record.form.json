@@ -847,6 +847,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1647,6 +1651,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2113,6 +2121,10 @@
         {
           "id": "step_sand",
           "title": "Step sand"
+        },
+        {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
         },
         {
           "id": "stun",

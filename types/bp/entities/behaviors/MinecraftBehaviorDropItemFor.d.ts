@@ -152,7 +152,7 @@ export default interface MinecraftBehaviorDropItemFor {
    * reference: noon is 0.0, sunset is 0.25, midnight is 0.5, and
    * sunrise is 0.75, and back to noon for 1.0.
    */
-  time_of_day_range?: MinecraftBehaviorDropItemForTimeOfDayRange;
+  time_of_day_range?: object;
 
 }
 
@@ -240,21 +240,4 @@ export enum MinecraftBehaviorDropItemForOnDropAttemptTarget {
   player = `player`,
   self = `self`,
   target = `target`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorDropItemForTimeOfDayRange {
-
-  max?: number;
-
-  min?: number;
-
 }

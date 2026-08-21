@@ -45,13 +45,13 @@
           "title": "Same culling layer"
         }
       ],
-      "dataType": "string",
-      "title": "Rule Condition"
+      "dataType": "stringEnum",
+      "title": "Condition"
     },
     {
       "id": "direction",
-      "title": "Facing",
-      "dataType": "string",
+      "title": "Direction",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "down",
@@ -90,5 +90,6 @@
     }
   ],
   "description": "Specifies a culling rule for block face visibility.",
-  "title": "Client Block Rule"
+  "title": "Client Block Rule",
+  "dataVersion": "1.21.80"
 }

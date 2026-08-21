@@ -71,5 +71,6 @@
   "note": "This is a pre-Caves and Cliffs component and is unused for custom biomes.",
   "description": "Controls how this biome is instantiated (and then potentially modified) during world generation of the overworld.",
   "title": "Biome Overworld Generation Rules",
-  "id": "minecraft:overworld_generation_rules"
+  "id": "minecraft:overworld_generation_rules",
+  "dataVersion": "1.21.110"
 }

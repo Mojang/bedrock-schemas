@@ -366,13 +366,37 @@
     },
     {
       "id": "type",
-      "title": "SurfaceBuilderType",
+      "title": "Type",
       "description": "Controls the type of surface builder to use.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:capped",
+          "title": "Minecraft:capped"
+        },
+        {
+          "id": "minecraft:frozen_ocean",
+          "title": "Minecraft:frozen ocean"
+        },
+        {
+          "id": "minecraft:mesa",
+          "title": "Minecraft:mesa"
+        },
+        {
+          "id": "minecraft:noise_gradient",
+          "title": "Minecraft:noise gradient"
+        },
+        {
+          "id": "minecraft:overworld",
+          "title": "Minecraft:overworld"
+        },
         {
           "id": "minecraft:swamp",
           "title": "Minecraft:swamp"
+        },
+        {
+          "id": "minecraft:the_end",
+          "title": "Minecraft:the end"
         }
       ],
       "mustMatchChoices": true,
@@ -381,5 +405,6 @@
     }
   ],
   "description": "Used to add decoration to the surface of swamp biomes such as water lilies.",
-  "title": "Biome Swamp"
+  "title": "Biome Swamp",
+  "dataVersion": "1.21.110"
 }

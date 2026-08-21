@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.delayed_attack
+ * 
+ * minecraft:behavior.delayed_attack Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -157,7 +159,7 @@ export default interface MinecraftBehaviorDelayedAttack {
    */
   require_complete_path?: boolean;
 
-  sound_event?: string;
+  sound_event?: MinecraftBehaviorDelayedAttackSoundEvent;
 
   /**
    * @remarks
@@ -562,6 +564,7 @@ export enum MinecraftBehaviorDelayedAttackSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -762,6 +765,7 @@ export enum MinecraftBehaviorDelayedAttackSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -879,6 +883,7 @@ export enum MinecraftBehaviorDelayedAttackSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

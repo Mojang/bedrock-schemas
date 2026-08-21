@@ -33,7 +33,7 @@
       "title": "Pre Effect Expression"
     },
     "type": {
-      "title": "Particle Visual Effect Event Effect Type",
+      "title": "Type",
       "type": "string",
       "enum": [
         "emitter",

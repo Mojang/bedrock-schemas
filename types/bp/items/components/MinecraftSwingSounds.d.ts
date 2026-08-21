@@ -24,20 +24,20 @@ export default interface MinecraftSwingSounds {
    * @remarks
    * Sound played when an attack hits and deals critical damage.
    */
-  attack_critical_hit?: string;
+  attack_critical_hit?: MinecraftSwingSoundsAttackCriticalHit;
 
   /**
    * @remarks
    * Sound played when an attack hits.
    */
-  attack_hit?: string;
+  attack_hit?: MinecraftSwingSoundsAttackHit;
 
   /**
    * @remarks
    * Sound played when an attack misses or deals no damage due to
    * invulnerability.
    */
-  attack_miss?: string;
+  attack_miss?: MinecraftSwingSoundsAttackMiss;
 
 }
 
@@ -249,6 +249,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -449,6 +450,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -566,6 +568,7 @@ export enum MinecraftSwingSoundsAttackCriticalHit {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -820,6 +823,7 @@ export enum MinecraftSwingSoundsAttackHit {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -1020,6 +1024,7 @@ export enum MinecraftSwingSoundsAttackHit {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -1137,6 +1142,7 @@ export enum MinecraftSwingSoundsAttackHit {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -1391,6 +1397,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -1591,6 +1598,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -1708,6 +1716,7 @@ export enum MinecraftSwingSoundsAttackMiss {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -90,5 +91,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.investigate_suspicious_location"
+  "id": "minecraft:behavior.investigate_suspicious_location",
+  "dataVersion": "1.21.130"
 }

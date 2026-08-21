@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -44,5 +45,6 @@
   "note": "Not currently used by any entities within Minecraft: Bedrock Edition. In its place, the parameter `can_break_doors` has been added to the `minecraft:navigation` component to allow entities to break down doors.",
   "description": "Allows this mob to break doors.",
   "title": "Entity Break Door Behavior",
-  "id": "minecraft:behavior.break_door"
+  "id": "minecraft:behavior.break_door",
+  "dataVersion": "1.26.30"
 }

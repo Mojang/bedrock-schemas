@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "dist_from_boundary",
@@ -165,5 +166,6 @@
   "description": "Allows the entity to first travel to a random point on the outskirts of the village, and then explore random points within a small distance.",
   "title": "Entity Explore Outskirts Behavior",
   "samples": {},
-  "id": "minecraft:behavior.explore_outskirts"
+  "id": "minecraft:behavior.explore_outskirts",
+  "dataVersion": "1.21.130"
 }

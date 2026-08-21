@@ -73,7 +73,7 @@
                   {
                     "id": "repair_amount",
                     "dataType": "keyedObjectCollection",
-                    "subFormId": "item/molang_expression"
+                    "subFormId": "legacy/molang_expression"
                   },
                   {
                     "id": "repair_amount",

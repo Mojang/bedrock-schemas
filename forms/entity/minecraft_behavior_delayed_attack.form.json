@@ -59,7 +59,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "hit_delay_pct",
@@ -202,8 +203,9 @@
     },
     {
       "id": "sound_event",
-      "title": "LevelSoundEvent",
-      "dataType": "string",
+      "title": "Sound Event",
+      "dataType": "stringEnum",
+      "defaultValue": "attack.strong",
       "choices": [
         {
           "id": "absorb_block",
@@ -1030,6 +1032,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1830,6 +1836,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2298,6 +2308,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2474,8 +2488,7 @@
           "title": "Wind charge.burst"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "attack.strong"
+      "mustMatchChoices": true
     },
     {
       "id": "speed_multiplier",
@@ -2509,5 +2522,7 @@
   "note": "In 1.26.0 the schema is stricter and rejects invalid JSON for this behavior.",
   "description": "Allows an entity to attack, while also delaying the damage-dealt until a specific time in the attack animation.",
   "title": "Entity Delayed Attack Behavior",
-  "id": "minecraft:behavior.delayed_attack"
+  "samples": {},
+  "id": "minecraft:behavior.delayed_attack",
+  "dataVersion": "1.26.40"
 }

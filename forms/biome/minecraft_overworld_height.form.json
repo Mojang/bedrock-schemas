@@ -53,7 +53,7 @@
       "id": "noise_type",
       "title": "Noise Type",
       "description": "Specifies a preset based on a built-in setting rather than manually using noise_params",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "beach",
@@ -122,5 +122,6 @@
   "note": "This is a pre-Caves and Cliffs component. It does not change overworld height, and currently only affects map item rendering",
   "description": "Noise parameters used to drive terrain height in the Overworld.",
   "title": "Biome Overworld Height",
-  "id": "minecraft:overworld_height"
+  "id": "minecraft:overworld_height",
+  "dataVersion": "1.21.110"
 }

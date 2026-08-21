@@ -44,7 +44,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "filters",
@@ -95,7 +96,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -215,5 +217,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.offer_flower"
+  "id": "minecraft:behavior.offer_flower",
+  "dataVersion": "1.26.10"
 }

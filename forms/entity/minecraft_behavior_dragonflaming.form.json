@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -113,5 +114,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.dragonflaming"
+  "id": "minecraft:behavior.dragonflaming",
+  "dataVersion": "1.21.100"
 }

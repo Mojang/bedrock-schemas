@@ -22,7 +22,7 @@
         {
           "id": "max_particles",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "max_particles",
@@ -34,5 +34,6 @@
   ],
   "description": "Allows manual control over particle emission through events rather than automatic spawning. Particles are only created when explicitly triggered via Molang or particle events, up to the max_particles limit. Useful for effects that should only spawn under specific conditions, like damage indicators, pickup sparkles, or script-controlled visual feedback.",
   "title": "Client Particles Emitter Rate Manual",
-  "id": "emitter_rate_manual"
+  "id": "emitter_rate_manual",
+  "dataVersion": "1.21.10"
 }

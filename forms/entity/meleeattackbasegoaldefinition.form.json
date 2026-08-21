@@ -40,7 +40,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -196,7 +197,6 @@
       "defaultValue": 30
     }
   ],
-  "description": "Allows a mob to deal damage through a melee attack.",
   "title": "Entity MeleeAttackBaseGoalDefinition",
-  "dataVersion": "1.21.120"
+  "dataVersion": "1.26.40"
 }

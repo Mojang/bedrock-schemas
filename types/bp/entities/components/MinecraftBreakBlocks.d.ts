@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:break_blocks
+ * 
+ * minecraft:break_blocks Samples
  */
 
 import * as jsoncommon from '../../../common';

@@ -25,5 +25,6 @@
     }
   ],
   "description": "Defines a voxel shape with boxes.",
-  "title": "Voxel Shapes Shape"
+  "title": "Voxel Shapes Shape",
+  "dataVersion": "1.21.110"
 }

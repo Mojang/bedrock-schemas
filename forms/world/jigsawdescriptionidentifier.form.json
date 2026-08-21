@@ -22,5 +22,6 @@
     }
   ],
   "description": "Identifier of the Jigsaw Structure.",
-  "title": "World JigsawDescriptionIdentifier"
+  "title": "World JigsawDescriptionIdentifier",
+  "dataVersion": "1.21.20"
 }

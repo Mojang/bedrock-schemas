@@ -23,5 +23,6 @@
     }
   ],
   "description": "When configured as a rideable entity, the entity will move upwards or downwards when the player uses the jump action.",
-  "title": "Vertical Movement Action"
+  "title": "Vertical Movement Action",
+  "samples": {}
 }

@@ -28,7 +28,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "follow_distance",
@@ -86,7 +87,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -126,5 +128,6 @@
     }
   ],
   "description": "Allows mob to move towards its target leader.",
-  "title": "Entity Follow Target Leader Behavior"
+  "title": "Entity Follow Target Leader Behavior",
+  "dataVersion": "1.26.30"
 }

@@ -34,5 +34,6 @@
     }
   ],
   "description": "References another add-on pack that must be present for this pack to work. Commonly used to link a behavior pack to its companion resource pack, or to depend on shared library packs. Uses UUID and version matching.",
-  "title": "Packmanifest PackDependency"
+  "title": "Packmanifest PackDependency",
+  "dataVersion": "3.0.0"
 }

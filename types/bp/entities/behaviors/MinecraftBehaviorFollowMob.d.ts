@@ -25,10 +25,12 @@ Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Follow Mob Behavior (minecraft:behavior.follow_mob)
+ * Entity Follow Mob Behavior (minecraft:behavior.follow_mob)
  * Allows the mob to follow other mobs.
  */
 export default interface MinecraftBehaviorFollowMob {
+
+  control_flags?: string[];
 
   /**
    * @remarks
@@ -38,7 +40,7 @@ export default interface MinecraftBehaviorFollowMob {
    * Dolphins, and mobs of the same type as the owner of the 
    * Goal.
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftBehaviorFollowMobFilters;
 
   /**
    * @remarks
@@ -98,5 +100,50 @@ export default interface MinecraftBehaviorFollowMob {
    * restrictions.
    */
   use_home_position_restriction?: boolean;
+
+}
+
+
+export enum MinecraftBehaviorFollowMobControlFlags {
+  jump = `jump`,
+  look = `look`,
+  move = `move`
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftBehaviorFollowMobFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

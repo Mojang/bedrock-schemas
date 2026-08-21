@@ -54,7 +54,7 @@ Warden - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Anger Level (minecraft:anger_level)
+ * Entity Anger Level (minecraft:anger_level)
  * Compels the entity to track anger towards a set of 
  * nuisances.
  */
@@ -145,6 +145,9 @@ export default interface MinecraftAngerLevel {
 
   /**
    * @remarks
+   * The default amount of annoyingness for any given nuisance that is
+   * a projectile. Specifies how much to raise anger level on each
+   * provocation.
    * 
    * Sample Values:
    * Warden: 10
@@ -191,7 +194,7 @@ export default interface MinecraftAngerLevel {
    * Warden: {"all_of":[{"operator":"not","test":"is_family","subject":"other","value":"warden"},{"operator":"not","test":"is_family","subject":"other","value":"inanimate"}]}
    *
    */
-  nuisance_filter?: jsoncommon.MinecraftFilter;
+  nuisance_filter?: MinecraftAngerLevelNuisanceFilter;
 
   /**
    * @remarks
@@ -202,7 +205,7 @@ export default interface MinecraftAngerLevel {
    * Warden: [{"condition":"query.anger_level(this) >= 40","sound":"listening_angry"},{"condition":"query.anger_level(this) >= 0","sound":"listening"}]
    *
    */
-  on_increase_sounds?: MinecraftAngerLevelOnIncreaseSounds[];
+  on_increase_sounds?: object[];
 
   /**
    * @remarks
@@ -226,22 +229,38 @@ export default interface MinecraftAngerLevel {
 
 
 /**
- * Sounds to play when the entity is getting provoked. Evaluated in
- * order. First matching condition wins.
+ * Nuisance Filter (nuisance_filter)
  */
-export interface MinecraftAngerLevelOnIncreaseSounds {
+export interface MinecraftAngerLevelNuisanceFilter {
 
   /**
    * @remarks
-   * A Molang expression describing under which conditions to play
-   * this sound, given that the entity was provoked
+   * The domain the test should be performed in.
    */
-  condition?: string;
+  domain?: object;
 
   /**
    * @remarks
-   * The sound to play
+   * The comparison to apply with 'value'.
    */
-  sound?: string;
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

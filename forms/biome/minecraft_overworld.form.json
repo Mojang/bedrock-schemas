@@ -280,13 +280,37 @@
     },
     {
       "id": "type",
-      "title": "SurfaceBuilderType",
+      "title": "Type",
       "description": "Controls the type of surface builder to use.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:capped",
+          "title": "Minecraft:capped"
+        },
+        {
+          "id": "minecraft:frozen_ocean",
+          "title": "Minecraft:frozen ocean"
+        },
+        {
+          "id": "minecraft:mesa",
+          "title": "Minecraft:mesa"
+        },
+        {
+          "id": "minecraft:noise_gradient",
+          "title": "Minecraft:noise gradient"
+        },
         {
           "id": "minecraft:overworld",
           "title": "Minecraft:overworld"
+        },
+        {
+          "id": "minecraft:swamp",
+          "title": "Minecraft:swamp"
+        },
+        {
+          "id": "minecraft:the_end",
+          "title": "Minecraft:the end"
         }
       ],
       "mustMatchChoices": true,
@@ -295,5 +319,6 @@
     }
   ],
   "description": "Controls the blocks used for the default Minecraft Overworld terrain generation.",
-  "title": "Biome Overworld"
+  "title": "Biome Overworld",
+  "dataVersion": "1.21.110"
 }

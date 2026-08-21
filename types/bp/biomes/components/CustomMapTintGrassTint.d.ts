@@ -30,11 +30,12 @@ export default interface CustomMapTintGrassTint {
    * @remarks
    * Controls the type of grass tint to use.
    */
-  type: string;
+  type: CustomMapTintGrassTintType;
 
 }
 
 
 export enum CustomMapTintGrassTintType {
+  noise = `noise`,
   tint = `tint`
 }

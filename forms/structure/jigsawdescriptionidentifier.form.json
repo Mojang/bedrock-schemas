@@ -17,11 +17,10 @@
     {
       "id": "identifier",
       "title": "Identifier",
-      "dataType": "string",
+      "dataType": "object",
       "isRequired": true
     }
   ],
   "description": "Identifier of the Jigsaw Structure.",
-  "title": "Structure JigsawDescriptionIdentifier",
-  "dataVersion": "1.21.20"
+  "title": "Structure JigsawDescriptionIdentifier"
 }

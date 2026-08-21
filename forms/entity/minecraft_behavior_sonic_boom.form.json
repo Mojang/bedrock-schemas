@@ -105,7 +105,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "duration",
@@ -226,5 +227,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.sonic_boom"
+  "id": "minecraft:behavior.sonic_boom",
+  "dataVersion": "1.21.110"
 }

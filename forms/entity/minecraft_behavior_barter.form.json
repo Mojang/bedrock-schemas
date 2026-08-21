@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -55,5 +56,6 @@
   "description": "Enables the mob to barter for items that have been configured as barter currency. Must be used in combination with the barter component",
   "title": "Entity Barter Behavior",
   "samples": {},
-  "id": "minecraft:behavior.barter"
+  "id": "minecraft:behavior.barter",
+  "dataVersion": "1.26.20"
 }

@@ -27,5 +27,6 @@
   ],
   "description": "A component describing how a block can consume and potentially propagate a redstone signal. This component is not available for block permutations.",
   "title": "Block Redstone Consumer",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.26.20"
 }

@@ -20,7 +20,33 @@
       "minLength": 1,
       "maxLength": 1,
       "subFormId": "block/detection_rule",
-      "isRequired": true
+      "isRequired": true,
+      "samples": {
+        "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:liquid_detection/",
+            "content": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "on_liquid_touches": "blocking"
+              }
+            ]
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:liquid_detection/",
+            "content": [
+              {
+                "liquid_type": "water",
+                "can_contain_liquid": true,
+                "on_liquid_touches": "blocking"
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "can_contain_liquid",
@@ -85,9 +111,80 @@
           ]
         }
       }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:liquid_detection/",
+        "content": {
+          "detection_rules": [
+            {
+              "liquid_type": "water",
+              "can_contain_liquid": true,
+              "on_liquid_touches": "blocking"
+            }
+          ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:liquid_detection/",
+        "content": {
+          "detection_rules": [
+            {
+              "liquid_type": "water",
+              "can_contain_liquid": true,
+              "on_liquid_touches": "blocking"
+            }
+          ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_wool_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:liquid_detection/",
+        "content": {
+          "detection_rules": [
+            {
+              "liquid_type": "water",
+              "can_contain_liquid": true,
+              "on_liquid_touches": "blocking"
+            }
+          ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_wool_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:liquid_detection/",
+        "content": {
+          "detection_rules": [
+            {
+              "liquid_type": "water",
+              "can_contain_liquid": true,
+              "on_liquid_touches": "blocking"
+            }
+          ]
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:liquid_detection/",
+        "content": {
+          "detection_rules": [
+            {
+              "liquid_type": "water",
+              "can_contain_liquid": true,
+              "on_liquid_touches": "blocking"
+            }
+          ]
+        }
+      }
     ]
   },
   "description": "The definitions for how a block behaves when detecting liquid. Only one rule definition is allowed per liquid type - if multiple are specified, the first will be used and the rest will be ignored.",
   "title": "Block Liquid Detection",
-  "id": "Liquid Detection"
+  "id": "Liquid Detection",
+  "dataVersion": "1.26.20"
 }

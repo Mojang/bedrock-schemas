@@ -23,9 +23,10 @@
     },
     {
       "id": "avoid_block_sound",
-      "title": "LevelSoundEvent",
+      "title": "Avoid Block Sound",
       "description": "The sound event to play when the mob is avoiding a block.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "undefined",
       "choices": [
         {
           "id": "absorb_block",
@@ -852,6 +853,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1652,6 +1657,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2120,6 +2129,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2296,8 +2309,7 @@
           "title": "Wind charge.burst"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "undefined"
+      "mustMatchChoices": true
     },
     {
       "id": "control_flags",
@@ -2317,7 +2329,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -2349,7 +2362,7 @@
         "max": 8,
         "min": 3
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "sprint_speed_modifier",
@@ -2396,5 +2409,6 @@
   "description": "Allows this entity to avoid certain blocks.",
   "title": "Entity Avoid Block Behavior",
   "samples": {},
-  "id": "minecraft:behavior.avoid_block"
+  "id": "minecraft:behavior.avoid_block",
+  "dataVersion": "1.21.120"
 }

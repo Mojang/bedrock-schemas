@@ -63,6 +63,20 @@ Apple Block - Apple Block
   "explosion_resistance": 2.9
 }
 
+
+Block Black Concrete Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_double_slab.block.json
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 1.8
+}
+
+
+Block Black Wool Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_wool_double_slab.block.json
+
+"minecraft:destructible_by_explosion": {
+  "explosion_resistance": 0.8
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -89,6 +103,14 @@ export default interface MinecraftDestructibleByExplosion {
    * different for different explosion power levels. A value of 0
    * means it will easily explode; larger numbers increase level of
    * resistance.
+   * 
+   * Sample Values:
+   * Block Black Concrete Double Slab: 1.8
+   *
+   *
+   * Block Black Wool Double Slab: 0.8
+   *
+   *
    */
   explosion_resistance?: number;
 

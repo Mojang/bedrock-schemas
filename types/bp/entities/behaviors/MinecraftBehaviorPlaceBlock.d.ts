@@ -80,13 +80,13 @@ export default interface MinecraftBehaviorPlaceBlock {
    * @remarks
    * XZ range from which the entity will try and place blocks in.
    */
-  xz_range?: MinecraftBehaviorPlaceBlockXzRange;
+  xz_range?: object;
 
   /**
    * @remarks
    * Y range from which the entity will try and place blocks in.
    */
-  y_range?: MinecraftBehaviorPlaceBlockYRange;
+  y_range?: object;
 
 }
 
@@ -305,39 +305,5 @@ export interface MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksFilter {
    * The value being compared with the test.
    */
   value?: object;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorPlaceBlockXzRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorPlaceBlockYRange {
-
-  max?: number;
-
-  min?: number;
 
 }

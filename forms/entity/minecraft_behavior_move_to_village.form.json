@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -71,5 +72,7 @@
   ],
   "description": "Allows the mob to move into a random location within a village.",
   "title": "Entity Move To Village Behavior",
-  "id": "minecraft:behavior.move_to_village"
+  "samples": {},
+  "id": "minecraft:behavior.move_to_village",
+  "dataVersion": "1.26.20"
 }

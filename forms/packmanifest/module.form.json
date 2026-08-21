@@ -55,5 +55,6 @@
     }
   ],
   "description": "Declares a module within the pack. Modules define what the pack contains: 'data' for behavior packs, 'resources' for resource packs, or 'script' for packs with JavaScript/TypeScript code. Script modules require an entry point file path.",
-  "title": "Packmanifest Module"
+  "title": "Packmanifest Module",
+  "dataVersion": "3.0.0"
 }

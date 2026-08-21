@@ -16,8 +16,9 @@
   "fields": [
     {
       "id": "axis",
-      "title": "PositionalBlockRuleAxis",
-      "dataType": "string",
+      "title": "Axis",
+      "dataType": "stringEnum",
+      "defaultValue": "y",
       "choices": [
         {
           "id": "x",
@@ -32,8 +33,7 @@
           "title": "Z"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "y"
+      "mustMatchChoices": true
     },
     {
       "id": "max_chance",
@@ -73,9 +73,13 @@
     },
     {
       "id": "predicate_type",
-      "title": "PosType",
-      "dataType": "string",
+      "title": "Predicate Type",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:always_true",
+          "title": "Minecraft:always true"
+        },
         {
           "id": "minecraft:axis_aligned_linear_pos",
           "title": "Minecraft:axis aligned linear pos"
@@ -87,5 +91,6 @@
     }
   ],
   "description": "Predicate that evaluates to true if the block is within the distance range along the provided axis and a random number is generated between the chance range.",
-  "title": "World AxisAlignedLinear"
+  "title": "World AxisAlignedLinear",
+  "dataVersion": "1.21.20"
 }

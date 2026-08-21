@@ -31,7 +31,7 @@ export default interface MinecraftDurabilitySensorDurabilityThreshold {
    * @remarks
    * Particle effect to emit when the threshold is met.
    */
-  particle_type?: string;
+  particle_type?: MinecraftDurabilitySensorDurabilityThresholdParticleType;
 
   /**
    * @remarks
@@ -350,6 +350,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -550,6 +551,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -667,6 +669,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

@@ -24,11 +24,17 @@ export default interface MinecraftTheEnd {
    * @remarks
    * Use default Minecraft End terrain generation.
    */
-  type: string;
+  type: MinecraftTheEndType;
 
 }
 
 
 export enum MinecraftTheEndType {
+  minecraftCapped = `minecraft:capped`,
+  minecraftFrozenOcean = `minecraft:frozen_ocean`,
+  minecraftMesa = `minecraft:mesa`,
+  minecraftNoiseGradient = `minecraft:noise_gradient`,
+  minecraftOverworld = `minecraft:overworld`,
+  minecraftSwamp = `minecraft:swamp`,
   minecraftTheEnd = `minecraft:the_end`
 }

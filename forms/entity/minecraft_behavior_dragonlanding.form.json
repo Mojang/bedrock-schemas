@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -59,5 +60,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.dragonlanding"
+  "id": "minecraft:behavior.dragonlanding",
+  "dataVersion": "1.26.30"
 }

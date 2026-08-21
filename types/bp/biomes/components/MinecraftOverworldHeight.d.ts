@@ -35,7 +35,7 @@ export default interface MinecraftOverworldHeight {
    * Specifies a preset based on a built-in setting rather than
    * manually using noise_params
    */
-  noise_type?: string;
+  noise_type?: MinecraftOverworldHeightNoiseType;
 
 }
 

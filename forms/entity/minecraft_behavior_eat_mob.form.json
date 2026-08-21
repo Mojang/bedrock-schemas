@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "eat_animation_time",
@@ -157,5 +158,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.eat_mob"
+  "id": "minecraft:behavior.eat_mob",
+  "dataVersion": "1.21.100"
 }

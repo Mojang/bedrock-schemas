@@ -152,7 +152,7 @@
     {
       "id": "minecraft:block_entity",
       "title": "Minecraft Block Entity",
-      "description": "Requires Upcoming-Creator-Features enabled. Adds per-instance metadata for this block.",
+      "description": "Adds per-instance metadata for this block.",
       "dataType": "object",
       "subFormId": "block/minecraft_block_entity"
     },
@@ -267,7 +267,8 @@
                   }
                 ]
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         },
         {
@@ -312,7 +313,8 @@
                 "dataType": "float",
                 "isRequired": true
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ]
@@ -345,7 +347,8 @@
                 "dataType": "float",
                 "isRequired": true
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ]
@@ -409,7 +412,8 @@
                 "id": "lava_flammable",
                 "title": "Lava Flammable",
                 "description": "Determines lava fire consideration. \"always\" includes this block when lava attempts to spread fire\"\n\t\t\t\t\t\" (triggered by adjacent block changes), but normal fire-placement rules still apply. \"never\" excludes\"\n\t\t\t\t\t\" this block from that check.",
-                "dataType": "string",
+                "dataType": "stringEnum",
+                "defaultValue": "never",
                 "choices": [
                   {
                     "id": "always",
@@ -420,10 +424,10 @@
                     "title": "Never"
                   }
                 ],
-                "mustMatchChoices": true,
-                "defaultValue": "never"
+                "mustMatchChoices": true
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ]
@@ -464,7 +468,7 @@
                   {
                     "id": "bone_visibility",
                     "dataType": "keyedObjectCollection",
-                    "subFormId": "item/molang_expression"
+                    "subFormId": "legacy/molang_expression"
                   },
                   {
                     "id": "bone_visibility",
@@ -532,7 +536,8 @@
                 "dataType": "object",
                 "defaultValue": false
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ]
@@ -785,10 +790,18 @@
                   }
                 ]
               }
-            ]
+            ],
+            "dataVersion": "1.26.20"
           }
         }
       ]
+    },
+    {
+      "id": "minecraft:sound",
+      "title": "Minecraft Sound",
+      "description": "Defines a sound type for the block.",
+      "dataType": "object",
+      "subFormId": "block/sound_block_component"
     },
     {
       "id": "minecraft:support",

@@ -8,6 +8,15 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:connection_rule
+ * 
+ * minecraft:connection_rule Samples
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:connection_rule": {
+  "accepts_connections_from": "none"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -30,8 +39,13 @@ export default interface MinecraftConnectionRule {
    * The type of block allowed to connect to this block. Note that the
    * "only_fences" option allows connections from all Vanilla fences
    * excluding NetherBrick.
+   * 
+   * Sample Values:
+   * Block Red Shrub: "none"
+   *
+   *
    */
-  accepts_connections_from?: string;
+  accepts_connections_from?: MinecraftConnectionRuleAcceptsConnectionsFrom;
 
   /**
    * @remarks

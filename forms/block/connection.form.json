@@ -16,9 +16,11 @@
           "title": "Minecraft:cardinal connections"
         }
       ],
+      "mustMatchChoices": true,
       "isRequired": true
     }
   ],
   "description": "Adds connection states to the block. The values of these states are updated when the block or neighboring blocks change.",
-  "title": "Block Connection"
+  "title": "Block Connection",
+  "dataVersion": "1.26.20"
 }

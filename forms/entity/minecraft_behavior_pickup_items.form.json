@@ -207,7 +207,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_after_being_attacked",
@@ -523,5 +524,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.pickup_items"
+  "id": "minecraft:behavior.pickup_items",
+  "dataVersion": "1.26.30"
 }

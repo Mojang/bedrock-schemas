@@ -83,15 +83,7 @@
       "title": "Always Show",
       "description": "If true, the name will always be shown",
       "defaultValue": false,
-      "dataType": "boolean",
-      "samples": {
-        "/vanilla/behavior_pack/entities/agent.json": [
-          {
-            "path": "/minecraft:entity/components/minecraft:nameable/",
-            "content": true
-          }
-        ]
-      }
+      "dataType": "boolean"
     },
     {
       "id": "default_trigger",
@@ -127,15 +119,6 @@
   "description": "Allows this entity to be named (e.g. using a name tag).",
   "title": "Nameable",
   "samples": {
-    "/vanilla/behavior_pack/entities/agent.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:nameable/",
-        "content": {
-          "allow_name_tag_renaming": false,
-          "always_show": true
-        }
-      }
-    ],
     "/vanilla/behavior_pack/entities/allay.json": [
       {
         "path": "/minecraft:entity/components/minecraft:nameable/",
@@ -155,6 +138,12 @@
       }
     ],
     "/vanilla/behavior_pack/entities/blaze.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:nameable/",
+        "content": {}
+      }
+    ],
+    "/vanilla/behavior_pack/entities/bogged.json": [
       {
         "path": "/minecraft:entity/components/minecraft:nameable/",
         "content": {}

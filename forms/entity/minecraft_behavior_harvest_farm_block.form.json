@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "goal_radius",
@@ -146,5 +147,6 @@
   "description": "Allows the entity to search within an area for farmland with air above it. If found, the entity will replace the air block by planting a seed item from its inventory on the farmland block. This goal will not execute if the entity does not have an item in its inventory.",
   "title": "Entity Harvest Farm Block Behavior",
   "samples": {},
-  "id": "minecraft:behavior.harvest_farm_block"
+  "id": "minecraft:behavior.harvest_farm_block",
+  "dataVersion": "1.26.10"
 }

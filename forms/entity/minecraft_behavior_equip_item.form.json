@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -105,5 +106,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.equip_item"
+  "id": "minecraft:behavior.equip_item",
+  "dataVersion": "1.26.20"
 }

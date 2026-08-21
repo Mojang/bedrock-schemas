@@ -26,7 +26,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "flight_speed",
@@ -50,7 +51,7 @@
         "max": 150,
         "min": 10
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "turn_speed",

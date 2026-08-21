@@ -37,7 +37,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "description": "Range of time in seconds the mob will float around before landing and choosing to do something else",
       "title": "Float Duration"
     },
@@ -73,7 +73,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "float_wander_has_move_control",

@@ -34,31 +34,7 @@
     "traits": {
       "title": "Traits",
       "description": "Change the connection, multiblock state, placement position and/or direction behaviors of a block",
-      "$ref": "./block_traits.schema.json",
-      "defaultSnippets": [
-        {
-          "label": "Block Traits",
-          "description": "Change the connection, multiblock state, placement position and/or direction behaviors of a block",
-          "body": {
-            "minecraft:connection": {
-              "enabled_states": []
-            },
-            "minecraft:multi_block": {
-              "direction": "up",
-              "enabled_states": [],
-              "parts": 2
-            },
-            "minecraft:placement_direction": {
-              "blocks_to_corner_with": [],
-              "enabled_states": [],
-              "y_rotation_offset": null
-            },
-            "minecraft:placement_position": {
-              "enabled_states": []
-            }
-          }
-        }
-      ]
+      "$ref": "./block_traits.schema.json"
     }
   },
   "required": [

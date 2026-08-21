@@ -164,7 +164,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "interval",
@@ -291,5 +292,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.random_stroll"
+  "id": "minecraft:behavior.random_stroll",
+  "dataVersion": "1.26.20"
 }

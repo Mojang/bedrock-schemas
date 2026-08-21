@@ -23,7 +23,7 @@
         {
           "id": "expiration_expression",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "expiration_expression",
@@ -40,7 +40,7 @@
         {
           "id": "max_lifetime",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "max_lifetime",
@@ -51,5 +51,6 @@
   ],
   "description": "Controls individual particle lifetimes using Molang expressions. The max_lifetime sets the absolute duration limit, while expiration_expression can terminate particles early when conditions are met (like leaving a certain area). Enables dynamic particle populations that respond to game state beyond simple time-based expiration.",
   "title": "Client Particles Particle Lifetime Expression",
-  "id": "particle_lifetime_expression"
+  "id": "particle_lifetime_expression",
+  "dataVersion": "1.21.10"
 }

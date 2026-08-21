@@ -60,7 +60,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -146,5 +147,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.random_fly"
+  "id": "minecraft:behavior.random_fly",
+  "dataVersion": "1.26.30"
 }

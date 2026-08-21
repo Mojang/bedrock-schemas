@@ -86,5 +86,6 @@
       }
     ]
   },
-  "id": "minecraft:burns_in_daylight"
+  "id": "minecraft:burns_in_daylight",
+  "dataVersion": "1.21.130"
 }

@@ -56,7 +56,7 @@ export default interface MinecraftBehaviorMoveToLiquid {
    * Strider: "Lava"
    *
    */
-  material_type?: string;
+  material_type?: MinecraftBehaviorMoveToLiquidMaterialType;
 
   /**
    * @remarks

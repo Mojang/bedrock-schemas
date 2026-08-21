@@ -65,8 +65,8 @@
     },
     {
       "id": "type",
-      "title": "SettingType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "dropdown",
@@ -75,6 +75,10 @@
         {
           "id": "label",
           "title": "Label"
+        },
+        {
+          "id": "multiselect",
+          "title": "Multiselect"
         },
         {
           "id": "slider",
@@ -90,5 +94,6 @@
     }
   ],
   "description": "A numeric slider setting that appears in the pack's world settings UI. Allows players to adjust values like 'Difficulty Multiplier' or 'Spawn Rate' within defined min/max bounds. Scripts can read the chosen value at runtime.",
-  "title": "Packmanifest SliderSetting"
+  "title": "Packmanifest SliderSetting",
+  "dataVersion": "3.0.0"
 }

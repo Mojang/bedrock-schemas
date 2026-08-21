@@ -16,5 +16,6 @@
       "defaultValue": ""
     }
   ],
-  "title": "Entity EatAndReplaceBlockPair"
+  "title": "Entity EatAndReplaceBlockPair",
+  "dataVersion": "1.26.40"
 }

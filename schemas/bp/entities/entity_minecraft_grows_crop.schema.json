@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Grows Crop",
+  "title": "Entity Grows Crop",
   "description": "Could increase crop growth when entity walks over crop",
   "properties": {
     "chance": {

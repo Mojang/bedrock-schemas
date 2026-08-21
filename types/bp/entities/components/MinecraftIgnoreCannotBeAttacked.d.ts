@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Ignore Cannot Be Attacked 
+ * Entity Ignore Cannot Be Attacked
  * (minecraft:ignore_cannot_be_attacked)
  * Allows the owner entity to ignore the
  * "minecraft:cannot_be_attacked" component on entities that fulfill
@@ -28,6 +28,44 @@ export default interface MinecraftIgnoreCannotBeAttacked {
    * subject "other". If this is not specified then all attacks by
    * the owner are allowed.
    */
-  filters?: jsoncommon.MinecraftFilter;
+  filters?: MinecraftIgnoreCannotBeAttackedFilters;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftIgnoreCannotBeAttackedFilters {
+
+  /**
+   * @remarks
+   * The domain the test should be performed in.
+   */
+  domain?: object;
+
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
 
 }

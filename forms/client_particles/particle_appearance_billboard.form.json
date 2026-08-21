@@ -76,7 +76,7 @@
         {
           "id": "size",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "size",
@@ -98,5 +98,6 @@
   ],
   "description": "Controls how particle sprites render and orient toward the camera. The facing_camera_mode determines billboard behavior: 'lookat_xyz' always faces the camera (classic sprites), 'rotate_y' only rotates vertically (tall flames), and direction modes align with particle velocity (arrows, sparks). Size controls particle dimensions using Molang for dynamic scaling.",
   "title": "Client Particles Particle Appearance Billboard",
-  "id": "particle_appearance_billboard"
+  "id": "particle_appearance_billboard",
+  "dataVersion": "1.21.10"
 }

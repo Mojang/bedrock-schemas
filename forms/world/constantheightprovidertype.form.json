@@ -16,12 +16,16 @@
   "fields": [
     {
       "id": "type",
-      "title": "HeightProviderType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "constant",
           "title": "Constant"
+        },
+        {
+          "id": "uniform",
+          "title": "Uniform"
         }
       ],
       "mustMatchChoices": true,
@@ -37,5 +41,6 @@
     }
   ],
   "description": "Constant anchor point",
-  "title": "World ConstantHeightProviderType"
+  "title": "World ConstantHeightProviderType",
+  "dataVersion": "1.21.20"
 }

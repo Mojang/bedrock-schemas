@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "duration",
@@ -83,5 +84,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.roar"
+  "id": "minecraft:behavior.roar",
+  "dataVersion": "1.21.110"
 }

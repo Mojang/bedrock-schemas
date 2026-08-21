@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -98,5 +99,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.run_around_like_crazy"
+  "id": "minecraft:behavior.run_around_like_crazy",
+  "dataVersion": "1.26.30"
 }

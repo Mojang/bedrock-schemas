@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Exhaustion Values",
+  "title": "Entity Exhaustion Values",
   "description": "Defines how much exhaustion each player action should take.",
   "properties": {
     "lunge": {
@@ -14,13 +14,13 @@
       "title": "Attack",
       "description": "Amount of exhaustion applied when attacking.\n\nSample values:\n• player: 0.1",
       "type": "number",
-      "default": 0.1
+      "default": 0.10000000149011612
     },
     "damage": {
       "title": "Damage",
       "description": "Amount of exhaustion applied when taking damage.\n\nSample values:\n• player: 0.1",
       "type": "number",
-      "default": 0.1
+      "default": 0.10000000149011612
     },
     "heal": {
       "title": "Heal",
@@ -32,31 +32,31 @@
       "title": "Jump",
       "description": "Amount of exhaustion applied when jumping.\n\nSample values:\n• player: 0.05",
       "type": "number",
-      "default": 0.05
+      "default": 0.05000000074505806
     },
     "mine": {
       "title": "Mine",
       "description": "Amount of exhaustion applied when mining.\n\nSample values:\n• player: 0.005",
       "type": "number",
-      "default": 0.005
+      "default": 0.004999999888241291
     },
     "sprint": {
       "title": "Sprint",
       "description": "Amount of exhaustion applied when sprinting.\n\nSample values:\n• player: 0.1",
       "type": "number",
-      "default": 0.01
+      "default": 0.009999999776482582
     },
     "sprint_jump": {
       "title": "Sprint Jump",
       "description": "Amount of exhaustion applied when sprint jumping.\n\nSample values:\n• player: 0.2",
       "type": "number",
-      "default": 0.2
+      "default": 0.20000000298023224
     },
     "swim": {
       "title": "Swim",
       "description": "Amount of exhaustion applied when swimming.\n\nSample values:\n• player: 0.01",
       "type": "number",
-      "default": 0.01
+      "default": 0.009999999776482582
     },
     "walk": {
       "title": "Walk",

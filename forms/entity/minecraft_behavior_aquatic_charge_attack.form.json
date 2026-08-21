@@ -31,7 +31,7 @@
         "min": 2
       },
       "technicalDescription": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected",
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "charge_overshoot_distance",
@@ -71,7 +71,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "knockback_force",
@@ -96,5 +97,6 @@
   ],
   "description": "Enables an aquatic mob to dash at its target with knockback; includes overshoot and cooldown settings.",
   "title": "Entity Aquatic Charge Attack Behavior",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.26.0"
 }

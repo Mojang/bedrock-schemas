@@ -77,7 +77,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -89,8 +90,9 @@
     },
     {
       "id": "target",
-      "title": "FilterSubject",
-      "dataType": "string",
+      "title": "Target",
+      "dataType": "stringEnum",
+      "defaultValue": "self",
       "choices": [
         {
           "id": "baby",
@@ -134,7 +136,6 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "self",
       "samples": {
         "/vanilla/behavior_pack/entities/blaze.json": [
           {

@@ -98,7 +98,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -215,5 +216,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.breed"
+  "id": "minecraft:behavior.breed",
+  "dataVersion": "1.21.90"
 }

@@ -15,5 +15,6 @@
   "fields": [],
   "description": "Sets that this entity is an Illager Captain.",
   "title": "Is Illager Captain",
+  "samples": {},
   "id": "minecraft:is_illager_captain"
 }

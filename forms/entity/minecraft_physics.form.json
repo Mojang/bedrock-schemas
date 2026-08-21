@@ -74,33 +74,27 @@
       "id": "has_collision",
       "title": "Has Collision",
       "description": "Whether or not the entity collides with things.",
-      "defaultValue": true,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": true
     },
     {
       "id": "has_gravity",
       "title": "Has Gravity",
       "description": "Whether or not the entity is affected by gravity.",
-      "defaultValue": true,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": true
     },
     {
       "id": "push_towards_closest_space",
       "title": "Push Towards Closest Space",
       "description": "Whether or not the entity should be pushed towards the nearest open area when stuck inside a block.",
-      "defaultValue": false,
-      "dataType": "boolean"
+      "dataType": "boolean",
+      "defaultValue": false
     }
   ],
   "description": "Defines physics properties of an actor, including if it is affected by gravity or if it collides with objects.",
-  "title": "Physics",
+  "title": "Entity Physics",
   "samples": {
-    "/vanilla/behavior_pack/entities/agent.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:physics/",
-        "content": {}
-      }
-    ],
     "/vanilla/behavior_pack/entities/allay.json": [
       {
         "path": "/minecraft:entity/components/minecraft:physics/",
@@ -128,7 +122,14 @@
         "path": "/minecraft:entity/components/minecraft:physics/",
         "content": {}
       }
+    ],
+    "/vanilla/behavior_pack/entities/bat.json": [
+      {
+        "path": "/minecraft:entity/components/minecraft:physics/",
+        "content": {}
+      }
     ]
   },
-  "id": "minecraft:physics"
+  "id": "minecraft:physics",
+  "dataVersion": "1.26.50"
 }

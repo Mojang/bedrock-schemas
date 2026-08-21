@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -109,5 +110,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.find_underwater_treasure"
+  "id": "minecraft:behavior.find_underwater_treasure",
+  "dataVersion": "1.26.20"
 }

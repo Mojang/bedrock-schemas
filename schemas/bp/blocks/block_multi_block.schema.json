@@ -5,7 +5,7 @@
   "description": "Adds the \"minecraft:multi_block_part\" state and multi block functionality to the block.",
   "properties": {
     "direction": {
-      "title": "Facing",
+      "title": "Direction",
       "description": "The direction the block parts are placed starting from 'minecraft:multi_block_part' permutation '0' to permutation 'parts'. Default value is 'up'.",
       "type": "string",
       "enum": [

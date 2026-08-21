@@ -81,5 +81,6 @@
     }
   ],
   "description": "The header section of manifest.json containing the pack's identity: its name shown in the UI, description, unique UUID, and version. The min_engine_version field specifies the minimum Minecraft version required to load the pack.",
-  "title": "Packmanifest Header"
+  "title": "Packmanifest Header",
+  "dataVersion": "3.0.0"
 }

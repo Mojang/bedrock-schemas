@@ -99,7 +99,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -174,5 +175,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.float"
+  "id": "minecraft:behavior.float",
+  "dataVersion": "1.26.20"
 }

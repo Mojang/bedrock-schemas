@@ -30,5 +30,6 @@
     }
   ],
   "description": "Groups related trade offers that may be randomly selected from within a tier. When an entity unlocks a tier, trades are chosen from groups within that tier. Configure how many trades to select from the group. Enables variety in merchant inventories so not every villager of the same profession offers identical goods.",
-  "title": "Entity TradeGroup"
+  "title": "Entity TradeGroup",
+  "dataVersion": "1.21.30"
 }

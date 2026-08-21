@@ -8,6 +8,15 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:chest_obstruction
+ * 
+ * minecraft:chest_obstruction Samples
+
+Block Black Concrete Stairs - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_stairs.block.json
+
+"minecraft:chest_obstruction": {
+  "obstruction_rule": "never"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -37,8 +46,13 @@ export default interface MinecraftChestObstruction {
 "shape" - Will use the Blocks AABB shape to determine if
    * the chest is obstructed from opening when directly above it;
    * this is the default value if no rule is provided.
+   * 
+   * Sample Values:
+   * Block Black Concrete Stairs: "never"
+   *
+   *
    */
-  obstruction_rule?: string;
+  obstruction_rule?: MinecraftChestObstructionObstructionRule;
 
 }
 

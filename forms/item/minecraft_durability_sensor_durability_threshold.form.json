@@ -846,6 +846,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1646,6 +1650,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2114,6 +2122,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2300,9 +2312,10 @@
     },
     {
       "id": "particle_type",
-      "title": "ParticleType",
+      "title": "Particle Type",
       "description": "Particle effect to emit when the threshold is met.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "none",
       "choices": [
         {
           "id": "balloongas",
@@ -2693,11 +2706,10 @@
           "title": "Yellowpoplarleaves"
         }
       ],
-      "mustMatchChoices": true,
-      "defaultValue": "none"
+      "mustMatchChoices": true
     }
   ],
   "description": "Defines both the durability threshold, and the effects emitted when that threshold is met.",
   "title": "Item Durability Sensor Durability Threshold",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.30"
 }

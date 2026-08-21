@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Triggers Documentation - minecraft:on_equipment_changed
+ * 
+ * minecraft:on_equipment_changed Samples
  */
 
 import * as jsoncommon from '../../../common';

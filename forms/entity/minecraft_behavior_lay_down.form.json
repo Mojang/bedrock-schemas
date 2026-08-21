@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "interval",
@@ -57,5 +58,7 @@
   ],
   "description": "Allows mobs to lay down at times",
   "title": "Entity Lay Down Behavior",
-  "id": "minecraft:behavior.lay_down"
+  "samples": {},
+  "id": "minecraft:behavior.lay_down",
+  "dataVersion": "1.26.20"
 }

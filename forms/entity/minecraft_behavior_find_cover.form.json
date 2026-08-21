@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -58,5 +59,6 @@
   "description": "Allows the mob to seek shade.",
   "title": "Entity Find Cover Behavior",
   "samples": {},
-  "id": "minecraft:behavior.find_cover"
+  "id": "minecraft:behavior.find_cover",
+  "dataVersion": "1.26.20"
 }

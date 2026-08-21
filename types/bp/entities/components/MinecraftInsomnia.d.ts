@@ -22,7 +22,7 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Insomnia (minecraft:insomnia)
+ * Entity Insomnia (minecraft:insomnia)
  * Adds a timer since last rested to see if phantoms should 
  * spawn.
  */

@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -58,5 +59,6 @@
   "description": "Allows this entity to move indoors.",
   "title": "Entity Move Indoors Behavior",
   "samples": {},
-  "id": "minecraft:behavior.move_indoors"
+  "id": "minecraft:behavior.move_indoors",
+  "dataVersion": "1.26.20"
 }

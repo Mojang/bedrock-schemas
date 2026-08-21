@@ -39,7 +39,7 @@ Dolphin - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Flocking (minecraft:flocking)
+ * Entity Flocking (minecraft:flocking)
  * Allows entities to flock in groups in water or not.
  */
 export default interface MinecraftFlocking {

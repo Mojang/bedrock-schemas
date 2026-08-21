@@ -123,5 +123,6 @@
     }
   ],
   "description": "Biome specific rules for spawning",
-  "title": "Spawn BiomeConditions"
+  "title": "Spawn BiomeConditions",
+  "dataVersion": "1.21.60"
 }

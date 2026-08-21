@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -67,5 +68,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.wither_random_attack_pos_goal"
+  "id": "minecraft:behavior.wither_random_attack_pos_goal",
+  "dataVersion": "1.26.30"
 }

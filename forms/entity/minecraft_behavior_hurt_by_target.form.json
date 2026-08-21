@@ -221,7 +221,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "hurt_owner",
@@ -359,5 +360,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.hurt_by_target"
+  "id": "minecraft:behavior.hurt_by_target",
+  "dataVersion": "1.26.30"
 }

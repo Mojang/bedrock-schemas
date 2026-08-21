@@ -6,13 +6,13 @@
   "properties": {
     "allows_wire_to_step_down": {
       "title": "Allows Wire To Step Down",
-      "description": "Specifies if redstone wire can stair-step downward on the block.",
+      "description": "Specifies if redstone wire can stair-step downward on the block.\n\nSample values:\n• black_concrete_stairs.block: true",
       "type": "boolean",
       "default": true
     },
     "redstone_conductor": {
       "title": "Redstone Conductor",
-      "description": "Specifies if the block can be powered by redstone.",
+      "description": "Specifies if the block can be powered by redstone.\n\nSample values:\n• black_concrete_double_slab.block: true",
       "type": "boolean",
       "default": false
     }

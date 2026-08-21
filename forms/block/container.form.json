@@ -1,0 +1,24 @@
+{
+  "id": "container",
+  "fields": [
+    {
+      "id": "slot_count",
+      "title": "Slot Count",
+      "description": "Sets the number of slots in the container.",
+      "dataType": "int",
+      "validity": [
+        {
+          "comparison": ">=",
+          "value": 1
+        },
+        {
+          "comparison": "<=",
+          "value": 54
+        }
+      ],
+      "isRequired": true
+    }
+  ],
+  "title": "Block Container",
+  "dataVersion": "1.26.20"
+}

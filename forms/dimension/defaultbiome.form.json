@@ -1,0 +1,13 @@
+{
+  "id": "DefaultBiome",
+  "fields": [
+    {
+      "id": "biome",
+      "title": "Biome",
+      "dataType": "string",
+      "isRequired": true
+    }
+  ],
+  "title": "Dimension DefaultBiome",
+  "dataVersion": "1.26.50"
+}

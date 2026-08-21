@@ -23,5 +23,6 @@
     }
   ],
   "description": "Associates structure locations with jigsaw metadata.",
-  "title": "Structure JigsawStructureMetadataRegistry"
+  "title": "Structure JigsawStructureMetadataRegistry",
+  "dataVersion": "1.21.50"
 }

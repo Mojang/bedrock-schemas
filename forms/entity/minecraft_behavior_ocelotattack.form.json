@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -174,5 +175,6 @@
   "description": "Controls specific attack behavior for Ocelots.",
   "title": "Entity Ocelotattack Behavior",
   "samples": {},
-  "id": "minecraft:behavior.ocelotattack"
+  "id": "minecraft:behavior.ocelotattack",
+  "dataVersion": "1.26.10"
 }

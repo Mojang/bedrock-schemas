@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_range",
@@ -42,7 +43,7 @@
         "max": 10,
         "min": 3
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/warden.json": [
           {
@@ -163,5 +164,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.sniff"
+  "id": "minecraft:behavior.sniff",
+  "dataVersion": "1.21.110"
 }

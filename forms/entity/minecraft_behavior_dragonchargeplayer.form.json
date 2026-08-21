@@ -51,7 +51,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "flight_speed",
@@ -84,7 +85,7 @@
         "max": 150,
         "min": 10
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "turn_speed",
@@ -119,5 +120,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.dragonchargeplayer"
+  "id": "minecraft:behavior.dragonchargeplayer",
+  "dataVersion": "1.26.0"
 }

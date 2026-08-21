@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -79,5 +80,6 @@
   "description": "Allows the mob to move into a random location within a village within the search range.",
   "title": "Entity Stroll Towards Village Behavior",
   "samples": {},
-  "id": "minecraft:behavior.stroll_towards_village"
+  "id": "minecraft:behavior.stroll_towards_village",
+  "dataVersion": "1.26.20"
 }

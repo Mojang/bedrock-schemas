@@ -101,5 +101,6 @@
     }
   ],
   "description": "Any components that this Client Biome uses",
-  "title": "Client Biome Components"
+  "title": "Client Biome Components",
+  "dataVersion": "1.21.70"
 }

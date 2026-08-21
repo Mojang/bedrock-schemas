@@ -28,7 +28,7 @@ export default interface ParticleVisualEffectEvent {
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleVisualEffectEventType;
 
 }
 

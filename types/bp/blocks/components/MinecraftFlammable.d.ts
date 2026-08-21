@@ -26,6 +26,15 @@ Block Leaf Pile - Block Leaf Pile
   "catch_chance_modifier": 100
 }
 
+
+Block Black Wool Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_wool_double_slab.block.json
+
+"minecraft:flammable": {
+  "catch_chance_modifier": 30,
+  "destroy_chance_modifier": 60,
+  "lava_flammable": "always"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -58,6 +67,11 @@ export default interface MinecraftFlammable {
    * it will have a chance to be destroyed if
    * "destroy_chance_modifier" is greater than 0). The default value of
    * 5 is the same as that of Planks.
+   * 
+   * Sample Values:
+   * Block Black Wool Double Slab: 30
+   *
+   *
    */
   catch_chance_modifier?: number;
 
@@ -70,6 +84,11 @@ export default interface MinecraftFlammable {
    * block will never be destroyed by fire, and the fire will burn
    * forever if the "catch_chance_modifier" is greater than 0. The
    * default value of 20 is the same as that of Planks.
+   * 
+   * Sample Values:
+   * Block Black Wool Double Slab: 60
+   *
+   *
    */
   destroy_chance_modifier?: number;
 
@@ -79,6 +98,11 @@ export default interface MinecraftFlammable {
    * false for backwards compatibility; set to true to allow lava to
    * set the block on fire the way it does Planks and other vanilla
    * flammable blocks.
+   * 
+   * Sample Values:
+   * Block Black Wool Double Slab: "always"
+   *
+   *
    */
   lava_flammable?: boolean;
 

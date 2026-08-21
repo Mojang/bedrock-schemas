@@ -1,13 +1,14 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Barter",
+  "title": "Entity Barter",
   "description": "Enables the component to drop an item as a barter exchange.",
   "properties": {
     "barter_table": {
       "title": "Barter Table",
       "description": "Loot table that's used to drop a random item.",
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "cooldown_after_being_attacked": {
       "title": "Cooldown After Being Attacked",

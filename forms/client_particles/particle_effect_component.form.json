@@ -196,5 +196,6 @@
   ],
   "description": "Container for all particle effect components that define behavior and appearance. Components control every aspect of particle effects: emitter shape and rate, particle lifetime and motion, visual appearance and colors, collision responses, and event triggers. Combine components to build complex effects from reusable, modular pieces.",
   "title": "Client Particles Particle Effect Component",
-  "id": "particle_effect component"
+  "id": "particle_effect component",
+  "dataVersion": "1.21.10"
 }

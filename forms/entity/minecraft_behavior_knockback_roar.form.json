@@ -65,7 +65,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -123,7 +124,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -196,7 +198,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -250,6 +253,7 @@
   ],
   "description": "Allows the mob to perform a damaging knockback that affects all nearby entities.",
   "title": "Entity Knockback Roar Behavior",
+  "samples": {},
   "id": "minecraft:behavior.knockback_roar",
   "dataVersion": "1.26.40"
 }

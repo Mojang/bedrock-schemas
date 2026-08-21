@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "damage_reach",
@@ -49,7 +50,7 @@
         "max": 20,
         "min": 10
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "priority",
@@ -86,5 +87,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.swoop_attack"
+  "id": "minecraft:behavior.swoop_attack",
+  "dataVersion": "1.21.110"
 }

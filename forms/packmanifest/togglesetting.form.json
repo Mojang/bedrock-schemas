@@ -41,8 +41,8 @@
     },
     {
       "id": "type",
-      "title": "SettingType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "dropdown",
@@ -51,6 +51,10 @@
         {
           "id": "label",
           "title": "Label"
+        },
+        {
+          "id": "multiselect",
+          "title": "Multiselect"
         },
         {
           "id": "slider",
@@ -66,5 +70,6 @@
     }
   ],
   "description": "A boolean on/off setting that appears in the pack's world settings UI. Players can toggle features like 'Enable Hard Mode' or 'Show Tutorials' before entering a world. Scripts can read these values at runtime.",
-  "title": "Packmanifest ToggleSetting"
+  "title": "Packmanifest ToggleSetting",
+  "dataVersion": "3.0.0"
 }

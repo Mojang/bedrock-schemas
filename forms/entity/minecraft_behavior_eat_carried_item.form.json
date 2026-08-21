@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "delay_before_eating",
@@ -52,5 +53,6 @@
   "description": "If the mob is carrying a food item, the mob will eat it and the effects will be applied to the mob.",
   "title": "Entity Eat Carried Item Behavior",
   "samples": {},
-  "id": "minecraft:behavior.eat_carried_item"
+  "id": "minecraft:behavior.eat_carried_item",
+  "dataVersion": "1.26.20"
 }

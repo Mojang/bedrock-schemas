@@ -53,7 +53,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -68,5 +69,6 @@
       ]
     }
   ],
-  "title": "Block Placement Condition"
+  "title": "Block Placement Condition",
+  "dataVersion": "1.26.20"
 }

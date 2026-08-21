@@ -54,7 +54,19 @@
         0,
         -8
       ],
-      "dataType": "point3"
+      "dataType": "point3",
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:selection_box/",
+            "content": [
+              -8,
+              0,
+              -8
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "size",
@@ -65,7 +77,19 @@
         16,
         16
       ],
-      "dataType": "point3"
+      "dataType": "point3",
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:selection_box/",
+            "content": [
+              16,
+              16,
+              16
+            ]
+          }
+        ]
+      }
     }
   ],
   "scalarField": {
@@ -81,6 +105,23 @@
       {
         "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
         "content": true
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:selection_box/",
+        "content": {
+          "origin": [
+            -8,
+            0,
+            -8
+          ],
+          "size": [
+            16,
+            16,
+            16
+          ]
+        }
       }
     ]
   },

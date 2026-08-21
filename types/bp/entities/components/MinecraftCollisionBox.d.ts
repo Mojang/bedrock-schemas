@@ -11,14 +11,6 @@
  * 
  * minecraft:collision_box Samples
 
-Agent - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/agent.json
-
-"minecraft:collision_box": {
-  "height": 0.93,
-  "width": 0.6
-}
-
-
 Allay - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/allay.json
 
 "minecraft:collision_box": {
@@ -50,12 +42,20 @@ Bat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
   "width": 0.5
 }
 
+
+Blaze - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/blaze.json
+
+"minecraft:collision_box": {
+  "height": 1.8,
+  "width": 0.5
+}
+
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * Collision Box (minecraft:collision_box)
+ * Entity Collision Box (minecraft:collision_box)
  * Sets the width and height of the Entity's collision box.
  */
 export default interface MinecraftCollisionBox {
@@ -66,27 +66,26 @@ export default interface MinecraftCollisionBox {
    * assumed to be 0.
    * 
    * Sample Values:
-   * Agent: 0.93
-   *
    * Allay: 0.6
    *
    * Armor Stand: 1.975
+   *
+   * Arrow: 0.25
    *
    */
   height?: number;
 
   /**
    * @remarks
-   * Width of the collision box in blocks. A negative value will be
-   * assumed to be 0. Min value is -100000000.000000 Max value is
-   * 100000000.000000
+   * Width and Depth of the collision box in blocks. A negative value
+   * will be assumed to be 0.
    * 
    * Sample Values:
-   * Agent: 0.6
-   *
    * Allay: 0.35
    *
    * Armor Stand: 0.5
+   *
+   * Arrow: 0.25
    *
    */
   width?: number;

@@ -52,7 +52,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -71,5 +72,6 @@
   ],
   "description": "Defines conditions for feature placement including biome filters and placement pass.",
   "title": "World Feature Rule Conditions",
-  "id": "Feature Rule Conditions"
+  "id": "Feature Rule Conditions",
+  "dataVersion": "1.21.20"
 }

@@ -32,7 +32,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown",
@@ -90,7 +91,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -151,5 +153,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.teleport_to_owner"
+  "id": "minecraft:behavior.teleport_to_owner",
+  "dataVersion": "1.26.10"
 }

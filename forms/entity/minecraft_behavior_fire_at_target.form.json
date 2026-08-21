@@ -37,7 +37,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/breeze.json": [
           {
@@ -68,7 +68,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "filters",
@@ -119,7 +120,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -406,5 +408,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.fire_at_target"
+  "id": "minecraft:behavior.fire_at_target",
+  "dataVersion": "1.26.30"
 }

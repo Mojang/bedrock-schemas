@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Projectile (minecraft:projectile)
+ * Entity Projectile (minecraft:projectile)
  * Turns the entity into a projectile: a thrown or shot entity that
  * flies along a ballistic arc and reacts when it impacts a
  * block, a fluid, or another entity.
@@ -26,7 +26,7 @@ export default interface MinecraftProjectile {
    * spawn: `0` = origin (feet), `1` = eye height, `2` = middle of
    * the bounding box.
    */
-  anchor?: number;
+  anchor?: MinecraftProjectileAnchor;
 
   /**
    * @remarks
@@ -91,6 +91,13 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
+   * If `true`, the projectile treats water as a hit surface and
+   * stops on contact.
+   */
+  hit_water?: boolean;
+
+  /**
+   * @remarks
    * If `true`, the projectile steers towards an active target while in
    * flight.
    */
@@ -143,7 +150,8 @@ export default interface MinecraftProjectile {
    * @remarks
    * If `true`, the projectile can hit more than one entity over the
    * course of its flight; if `false`, it stops at the first entity it
-   * hits.
+   * hits. Projectiles launched with the Piercing enchantment have
+   * this value set to `true`.
    */
   multiple_targets?: boolean;
 
@@ -170,7 +178,7 @@ export default interface MinecraftProjectile {
    * subcomponent name and its value is that subcomponent's 
    * configuration.
    */
-  on_hit?: jsoncommon.MinecraftEventTrigger;
+  on_hit?: object;
 
   /**
    * @remarks
@@ -184,7 +192,7 @@ export default interface MinecraftProjectile {
    * Particle effect emitted at the impact location when the
    * projectile hits something.
    */
-  particle?: string;
+  particle?: MinecraftProjectileParticle;
 
   /**
    * @remarks
@@ -232,10 +240,12 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
-   * If `true`, the projectile bounces off surfaces and entities on
-   * impact instead of stopping.
+   * Controls whether the projectile bounces off entities on impact. `no`
+   * disables bouncing, `if_invulnerable` bounces only off
+   * invulnerable entities, and `if_no_damage_dealt` bounces whenever no
+   * damage is dealt to the target.
    */
-  should_bounce?: boolean;
+  should_bounce?: MinecraftProjectileShouldBounce;
 
   /**
    * @remarks
@@ -266,4 +276,119 @@ export default interface MinecraftProjectile {
    */
   uncertainty_multiplier?: number;
 
+}
+
+
+export enum MinecraftProjectileAnchor {
+  eyeHeight = `eye_height`,
+  middle = `middle`,
+  origin = `origin`
+}
+
+
+export enum MinecraftProjectileParticle {
+  balloongas = `balloongas`,
+  bleach = `bleach`,
+  blockforcefield = `blockforcefield`,
+  blueflame = `blueflame`,
+  breezewindexplosion = `breezewindexplosion`,
+  bubble = `bubble`,
+  bubblecolumndown = `bubblecolumndown`,
+  bubblecolumnup = `bubblecolumnup`,
+  bubblemanual = `bubblemanual`,
+  campfiresmoke = `campfiresmoke`,
+  campfiresmoketall = `campfiresmoketall`,
+  candleflame = `candleflame`,
+  carrotboost = `carrotboost`,
+  coloredflame = `coloredflame`,
+  conduit = `conduit`,
+  creakingcrumble = `creakingcrumble`,
+  crit = `crit`,
+  dragonbreath = `dragonbreath`,
+  dragonbreathfire = `dragonbreathfire`,
+  dragonbreathtrail = `dragonbreathtrail`,
+  dragondestroyblock = `dragondestroyblock`,
+  driphoney = `driphoney`,
+  driplava = `driplava`,
+  dripwater = `dripwater`,
+  dustplume = `dustplume`,
+  electricspark = `electricspark`,
+  enchantingtable = `enchantingtable`,
+  endrod = `endrod`,
+  evaporation = `evaporation`,
+  explode = `explode`,
+  eyeblossomclose = `eyeblossomclose`,
+  eyeblossomopen = `eyeblossomopen`,
+  fallingborderdust = `fallingborderdust`,
+  fallingdust = `fallingdust`,
+  fireworks = `fireworks`,
+  fireworksoverlay = `fireworksoverlay`,
+  fireworksstarter = `fireworksstarter`,
+  flame = `flame`,
+  food = `food`,
+  greenflame = `greenflame`,
+  heart = `heart`,
+  hugeexplosion = `hugeexplosion`,
+  iconcrack = `iconcrack`,
+  ink = `ink`,
+  largeexplode = `largeexplode`,
+  largesmoke = `largesmoke`,
+  lava = `lava`,
+  mobappearance = `mobappearance`,
+  mobflame = `mobflame`,
+  mobspell = `mobspell`,
+  mobspellambient = `mobspellambient`,
+  mobspellinstantaneous = `mobspellinstantaneous`,
+  myceliumdust = `myceliumdust`,
+  none = `none`,
+  note = `note`,
+  obsidiantear = `obsidiantear`,
+  orangepoplarleaves = `orangepoplarleaves`,
+  paleoakleaves = `paleoakleaves`,
+  pausemobgrowth = `pausemobgrowth`,
+  portal = `portal`,
+  portalreverse = `portalreverse`,
+  rainsplash = `rainsplash`,
+  reddust = `reddust`,
+  redpoplarleaves = `redpoplarleaves`,
+  resetmobgrowth = `resetmobgrowth`,
+  risingborderdust = `risingborderdust`,
+  sculksoul = `sculksoul`,
+  shriek = `shriek`,
+  shulkerbullet = `shulkerbullet`,
+  slime = `slime`,
+  smoke = `smoke`,
+  sneeze = `sneeze`,
+  snowballpoof = `snowballpoof`,
+  snowflake = `snowflake`,
+  sonicexplosion = `sonicexplosion`,
+  soul = `soul`,
+  sparkler = `sparkler`,
+  spit = `spit`,
+  stalactitedriplava = `stalactitedriplava`,
+  stalactitedripwater = `stalactitedripwater`,
+  sulfurcube = `sulfurcube`,
+  terrain = `terrain`,
+  totem = `totem`,
+  townaura = `townaura`,
+  trackingemitter = `trackingemitter`,
+  vaultconnection = `vaultconnection`,
+  villagerangry = `villagerangry`,
+  villagerhappy = `villagerhappy`,
+  watersplash = `watersplash`,
+  watersplashmanual = `watersplashmanual`,
+  waterwake = `waterwake`,
+  wax = `wax`,
+  whitesmoke = `whitesmoke`,
+  windexplosion = `windexplosion`,
+  witchspell = `witchspell`,
+  wolfarmorcrack = `wolfarmorcrack`,
+  yellowpoplarleaves = `yellowpoplarleaves`
+}
+
+
+export enum MinecraftProjectileShouldBounce {
+  ifInvulnerable = `if_invulnerable`,
+  ifNoDamageDealt = `if_no_damage_dealt`,
+  no = `no`
 }

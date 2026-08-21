@@ -22,5 +22,6 @@
     }
   ],
   "description": "Must be assigned an array or a \"range\"",
-  "title": "Block Values"
+  "title": "Block Values",
+  "dataVersion": "1.26.20"
 }

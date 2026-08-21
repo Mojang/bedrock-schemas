@@ -393,5 +393,6 @@
       "dataType": "object",
       "subFormId": "spawn/spawn_worldagefilter"
     }
-  ]
+  ],
+  "dataVersion": "1.21.50"
 }

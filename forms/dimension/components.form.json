@@ -15,14 +15,16 @@
   },
   "fields": [
     {
-      "id": "minecraft:dimension_bounds",
-      "title": "Minecraft Dimension Bounds",
+      "id": "minecraft:default_biome",
+      "title": "Minecraft Default Biome",
       "dataType": "object",
-      "defaultValue": {
-        "max": 0,
-        "min": 0
-      },
-      "subFormId": "dimension/bounds"
+      "subFormId": "dimension/defaultbiome"
+    },
+    {
+      "id": "minecraft:dimension_height",
+      "title": "Minecraft Dimension Height",
+      "dataType": "object",
+      "subFormId": "dimension/dimensionheight"
     },
     {
       "id": "minecraft:generation",
@@ -33,5 +35,6 @@
     }
   ],
   "description": "Specifies the components that define dimension properties such as bounds and generation.",
-  "title": "Dimension Components"
+  "title": "Dimension Components",
+  "dataVersion": "1.26.50"
 }

@@ -59,7 +59,8 @@
             "dataType": "string",
             "defaultValue": ""
           }
-        ]
+        ],
+        "dataVersion": "1.20.50"
       },
       "alternates": [
         {
@@ -123,7 +124,8 @@
             "description": "The value being compared with the test.",
             "dataType": "object"
           }
-        ]
+        ],
+        "dataVersion": "1.21.20"
       },
       "alternates": [
         {
@@ -164,7 +166,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "on_take",
@@ -210,7 +213,7 @@
         "max": 2,
         "min": -2
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "y_range",
@@ -221,10 +224,11 @@
         "max": 3,
         "min": 0
       },
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     }
   ],
   "description": "AI goal that makes entities pick up blocks from the world, like Endermen grabbing blocks to carry. Configure which blocks the entity can take and the search radius. Works with place_block behavior to create entities that relocate blocks or harvest materials from the environment.",
   "title": "Entity Take Block Behavior",
-  "samples": {}
+  "samples": {},
+  "dataVersion": "1.26.30"
 }

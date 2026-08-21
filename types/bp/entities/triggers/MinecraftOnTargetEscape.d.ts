@@ -104,7 +104,7 @@ export default interface MinecraftOnTargetEscape {
    *
    *
    */
-  target?: string;
+  target?: MinecraftOnTargetEscapeTarget;
 
 }
 

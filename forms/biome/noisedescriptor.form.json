@@ -25,5 +25,6 @@
       "isRequired": true
     }
   ],
-  "title": "Biome NoiseDescriptor"
+  "title": "Biome NoiseDescriptor",
+  "dataVersion": "1.26.30"
 }

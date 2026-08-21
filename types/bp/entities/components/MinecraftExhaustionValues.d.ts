@@ -31,7 +31,7 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Exhaustion Values (minecraft:exhaustion_values)
+ * Entity Exhaustion Values (minecraft:exhaustion_values)
  * Defines how much exhaustion each player action should take.
  */
 export default interface MinecraftExhaustionValues {

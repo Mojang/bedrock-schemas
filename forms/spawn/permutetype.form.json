@@ -56,5 +56,6 @@
     }
   ],
   "description": "Defines a weighted spawn variant that may be selected when the spawn rule triggers. Configure the entity to spawn and its weight relative to other permutations—higher weights mean that variant spawns more frequently. Enables mob variety like zombie villagers occasionally replacing regular zombies.",
-  "title": "Spawn PermuteType"
+  "title": "Spawn PermuteType",
+  "dataVersion": "1.21.60"
 }

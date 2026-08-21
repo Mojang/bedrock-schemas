@@ -31,5 +31,6 @@
     }
   ],
   "description": "Pool alias for a Random list of targets",
-  "title": "World RandomPoolAlias"
+  "title": "World RandomPoolAlias",
+  "dataVersion": "1.21.20"
 }

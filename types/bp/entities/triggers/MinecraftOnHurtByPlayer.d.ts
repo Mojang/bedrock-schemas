@@ -57,7 +57,7 @@ export default interface MinecraftOnHurtByPlayer {
    * Blaze: "self"
    *
    */
-  target?: string;
+  target?: MinecraftOnHurtByPlayerTarget;
 
 }
 

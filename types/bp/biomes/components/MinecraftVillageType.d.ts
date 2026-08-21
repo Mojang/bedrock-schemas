@@ -21,7 +21,7 @@ import * as jsoncommon from '../../../common';
  */
 export default interface MinecraftVillageType {
 
-  type: string;
+  type: MinecraftVillageTypeType;
 
 }
 

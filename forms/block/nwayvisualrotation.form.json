@@ -26,5 +26,6 @@
       "maxLength": 256
     }
   ],
-  "title": "Block NWayVisualRotation"
+  "title": "Block NWayVisualRotation",
+  "dataVersion": "1.26.20"
 }

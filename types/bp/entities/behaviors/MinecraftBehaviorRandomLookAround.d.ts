@@ -49,7 +49,7 @@ export default interface MinecraftBehaviorRandomLookAround {
    * The range of time in seconds the mob will stay looking in a
    * random direction before looking elsewhere
    */
-  look_time?: MinecraftBehaviorRandomLookAroundLookTime;
+  look_time?: object;
 
   /**
    * @remarks
@@ -95,21 +95,4 @@ export enum MinecraftBehaviorRandomLookAroundControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorRandomLookAroundLookTime {
-
-  max?: number;
-
-  min?: number;
-
 }

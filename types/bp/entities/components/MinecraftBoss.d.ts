@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Boss (minecraft:boss)
+ * Entity Boss (minecraft:boss)
  * Defines the current state of the boss for updating the boss 
  * HUD.
  */

@@ -53,13 +53,6 @@
   ],
   "description": "Defines if the entity ticks the world and the radius around it to tick.",
   "title": "Entity Tick World",
-  "samples": {
-    "/vanilla/behavior_pack/entities/agent.json": [
-      {
-        "path": "/minecraft:entity/components/minecraft:tick_world/",
-        "content": {}
-      }
-    ]
-  },
-  "id": "minecraft:tick_world"
+  "id": "minecraft:tick_world",
+  "dataVersion": "1.21.100"
 }

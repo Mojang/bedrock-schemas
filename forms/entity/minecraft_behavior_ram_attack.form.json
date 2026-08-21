@@ -201,7 +201,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_range",
@@ -213,7 +214,7 @@
         "min": 10
       },
       "technicalDescription": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected",
-      "subFormId": "item/floatrange",
+      "subFormId": "legacy/floatrange",
       "samples": {
         "/vanilla/behavior_pack/entities/goat.json": [
           {
@@ -292,9 +293,10 @@
     },
     {
       "id": "pre_ram_sound",
-      "title": "LevelSoundEvent",
+      "title": "Pre Ram Sound",
       "description": "The sound to play when an entity is about to perform a ram attack.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "undefined",
       "choices": [
         {
           "id": "absorb_block",
@@ -1121,6 +1123,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1921,6 +1927,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2389,6 +2399,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2566,7 +2580,6 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "undefined",
       "samples": {
         "/vanilla/behavior_pack/entities/goat.json": [
           {
@@ -2620,9 +2633,10 @@
     },
     {
       "id": "ram_impact_sound",
-      "title": "LevelSoundEvent",
+      "title": "Ram Impact Sound",
       "description": "The sound to play when an entity is impacting on a ram attack.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "undefined",
       "choices": [
         {
           "id": "absorb_block",
@@ -3449,6 +3463,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -4249,6 +4267,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -4717,6 +4739,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -4894,7 +4920,6 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "undefined",
       "samples": {
         "/vanilla/behavior_pack/entities/goat.json": [
           {
@@ -5001,5 +5026,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.ram_attack"
+  "id": "minecraft:behavior.ram_attack",
+  "dataVersion": "1.26.10"
 }

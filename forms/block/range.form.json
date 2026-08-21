@@ -28,5 +28,6 @@
     }
   ],
   "description": "Define a range of integer value using a \"min\" and \"max\" limit and must be assigned to \"values\"",
-  "title": "Block Range"
+  "title": "Block Range",
+  "dataVersion": "1.26.20"
 }

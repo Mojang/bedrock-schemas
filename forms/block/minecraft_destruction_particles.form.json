@@ -62,7 +62,21 @@
           "comparison": "<=",
           "value": 255
         }
-      ]
+      ],
+      "samples": {
+        "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:destruction_particles/",
+            "content": 48
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:destruction_particles/",
+            "content": 48
+          }
+        ]
+      }
     },
     {
       "id": "texture",
@@ -76,5 +90,48 @@
   "note": "Available without experimental toggle in 1.21.100. The particle_count field controls how many particles spawn when the block is broken.",
   "description": "Sets the particles that will be used when block is destroyed.",
   "title": "Block Destruction Particles",
-  "id": "Destruction Particles"
+  "samples": {
+    "/vanilla/behavior_pack/blocks/black_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:destruction_particles/",
+        "content": {
+          "particle_count": 48
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:destruction_particles/",
+        "content": {
+          "particle_count": 48
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_wool_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:destruction_particles/",
+        "content": {
+          "particle_count": 48
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_wool_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:destruction_particles/",
+        "content": {
+          "particle_count": 48
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_concrete_slab.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:destruction_particles/",
+        "content": {
+          "particle_count": 48
+        }
+      }
+    ]
+  },
+  "id": "Destruction Particles",
+  "dataVersion": "1.26.20"
 }

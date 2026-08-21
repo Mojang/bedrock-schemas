@@ -85,7 +85,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: {"min":0,"max":16}
    *
    */
-  attack_range?: MinecraftBehaviorFireAtTargetAttackRange;
+  attack_range?: object;
 
   control_flags?: string[];
 
@@ -204,23 +204,6 @@ export default interface MinecraftBehaviorFireAtTarget {
    *
    */
   target_offset?: number[];
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorFireAtTargetAttackRange {
-
-  max?: number;
-
-  min?: number;
 
 }
 

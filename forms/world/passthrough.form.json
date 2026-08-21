@@ -16,9 +16,13 @@
   "fields": [
     {
       "id": "type",
-      "title": "BlockEntityModifierType",
-      "dataType": "string",
+      "title": "Type",
+      "dataType": "stringEnum",
       "choices": [
+        {
+          "id": "minecraft:append_loot",
+          "title": "Minecraft:append loot"
+        },
         {
           "id": "minecraft:passthrough",
           "title": "Minecraft:passthrough"
@@ -30,5 +34,6 @@
     }
   ],
   "description": "Modifier that leaves the state unchanged. This is the default block modifier if no other block modifier is specified.",
-  "title": "World Passthrough"
+  "title": "World Passthrough",
+  "dataVersion": "1.21.20"
 }

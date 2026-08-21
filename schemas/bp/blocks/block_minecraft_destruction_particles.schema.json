@@ -21,7 +21,7 @@
     },
     "particle_count": {
       "title": "Particle Count",
-      "description": "Sets number of particles to spawn on block destruction.",
+      "description": "Sets number of particles to spawn on block destruction.\n\nSample values:\n• black_concrete_slab.block: 48",
       "type": "integer",
       "maximum": 255,
       "default": 100

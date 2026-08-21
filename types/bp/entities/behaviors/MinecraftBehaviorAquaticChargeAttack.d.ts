@@ -34,7 +34,7 @@ export default interface MinecraftBehaviorAquaticChargeAttack {
    * Range of time in seconds to wait before starting another 
    * charge.
    */
-  charge_cooldown_time?: MinecraftBehaviorAquaticChargeAttackChargeCooldownTime;
+  charge_cooldown_time?: object;
 
   /**
    * @remarks
@@ -63,23 +63,6 @@ export default interface MinecraftBehaviorAquaticChargeAttack {
   max_charge_distance?: number;
 
   priority?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorAquaticChargeAttackChargeCooldownTime {
-
-  max?: number;
-
-  min?: number;
 
 }
 

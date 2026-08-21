@@ -40,7 +40,7 @@ export default interface MinecraftOnDeath {
    * @remarks
    * The target of the event.
    */
-  target?: string;
+  target?: MinecraftOnDeathTarget;
 
 }
 

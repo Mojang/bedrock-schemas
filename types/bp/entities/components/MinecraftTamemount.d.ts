@@ -86,8 +86,8 @@ Trader Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_p
 import * as jsoncommon from '../../../common';
 
 /**
- * Tamemount (minecraft:tamemount)
- * Allows the Entity to be tamed by mounting it.
+ * Entity Tamemount (minecraft:tamemount)
+ * Allows entities to flock in groups in water or not.
  */
 export default interface MinecraftTamemount {
 
@@ -99,8 +99,10 @@ export default interface MinecraftTamemount {
 
   /**
    * @remarks
+   * The list of items that, if carried while interacting with the
+   * entity, will anger it.
    */
-  auto_reject_items?: MinecraftTamemountAutoRejectItems[];
+  auto_reject_items?: object[];
 
   /**
    * @remarks
@@ -119,7 +121,7 @@ export default interface MinecraftTamemount {
    *
    *
    */
-  feed_items?: MinecraftTamemountFeedItems[];
+  feed_items?: object[];
 
   /**
    * @remarks
@@ -169,24 +171,7 @@ export default interface MinecraftTamemount {
    *
    *
    */
-  tame_event?: jsoncommon.MinecraftEventTrigger;
-
-}
-
-
-/**
- * Auto reject items (auto_reject_items)
- */
-export interface MinecraftTamemountAutoRejectItems {
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Trader Llama: "horsearmorleather"
-   *
-   */
-  item?: string;
+  tame_event?: MinecraftTamemountTameEvent;
 
 }
 
@@ -208,22 +193,79 @@ export interface MinecraftTamemountAutoRejectItems {
 
 
 /**
- * The list of items that can be used to increase the entity's temper
- * and speed up the taming process.
+ * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
+ * Triggers an entity event when specified conditions are met.
+ * Events activate component groups that change entity
+ * behavior—transforming villagers into zombie villagers, switching mobs
+ * to aggressive mode, or triggering growth stages. Combine with
+ * filters to create conditional state machines that respond to
+ * gameplay.
  */
-export interface MinecraftTamemountFeedItems {
+export interface MinecraftTamemountTameEvent {
+
+  event?: string;
 
   /**
    * @remarks
-   * Name of the item this entity likes and can be used to increase this
-   * entity's temper.
+   * Filters allow data objects to specify test criteria which allows
+   * their use. Filters can be defined by a single object of type
+   * (Filter Test), an array of tests, collection groups, or a
+   * combination of these objects.
    */
-  item?: string;
+  filters?: MinecraftTamemountTameEventFilters;
+
+  target?: string;
+
+}
+
+
+/**
+ * Filters (filters)
+ */
+export interface MinecraftTamemountTameEventFilters {
 
   /**
    * @remarks
-   * The amount of temper this entity gains when fed this item.
+   * The domain the test should be performed in.
    */
-  temper_mod?: number;
+  domain?: object;
 
+  /**
+   * @remarks
+   * The comparison to apply with 'value'.
+   */
+  operator?: object;
+
+  /**
+   * @remarks
+   * The subject of this filter test.
+   */
+  subject?: object;
+
+  /**
+   * @remarks
+   * The name of the test to apply.
+   */
+  test: string;
+
+  /**
+   * @remarks
+   * The value being compared with the test.
+   */
+  value?: object;
+
+}
+
+
+export enum MinecraftTamemountTameEventTarget {
+  baby = `baby`,
+  block = `block`,
+  damager = `damager`,
+  holder = `holder`,
+  item = `item`,
+  other = `other`,
+  parent = `parent`,
+  player = `player`,
+  self = `self`,
+  target = `target`
 }

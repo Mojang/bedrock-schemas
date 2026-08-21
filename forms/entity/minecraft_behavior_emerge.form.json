@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "cooldown_time",
@@ -111,5 +112,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.emerge"
+  "id": "minecraft:behavior.emerge",
+  "dataVersion": "1.26.30"
 }

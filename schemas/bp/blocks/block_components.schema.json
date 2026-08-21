@@ -36,12 +36,12 @@
     },
     "minecraft:block_entity": {
       "title": "Minecraft Block Entity",
-      "description": "Requires Upcoming-Creator-Features enabled. Adds per-instance metadata for this block.",
+      "description": "Adds per-instance metadata for this block.",
       "$ref": "./block_minecraft_block_entity.schema.json",
       "defaultSnippets": [
         {
           "label": "Block Entity",
-          "description": "Requires Upcoming-Creator-Features enabled. Adds per-instance metadata for this block.",
+          "description": "Adds per-instance metadata for this block.",
           "body": {
             "dynamic_properties": false
           }
@@ -442,7 +442,7 @@
           "type": "boolean"
         },
         {
-          "description": "\n\nProperties:\n• catch_chance_modifier (int) = 5\n• destroy_chance_modifier (int) = 20\n• lava_flammable (string) = never",
+          "description": "\n\nProperties:\n• catch_chance_modifier (int) = 5\n• destroy_chance_modifier (int) = 20\n• lava_flammable (enum) = never",
           "type": "object",
           "properties": {
             "catch_chance_modifier": {
@@ -1061,6 +1061,20 @@
           "label": "Minecraft Selection Box: false (disable)",
           "description": "Defines the area of the block that is selected by the player's cursor. If set to true, default values are used. If set to false, this block is not selectable by the player's cursor. If this component is omitted, default values are used.",
           "body": false
+        }
+      ]
+    },
+    "minecraft:sound": {
+      "title": "Minecraft Sound",
+      "description": "Defines a sound type for the block.",
+      "$ref": "./block_sound_block_component.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Sound Block Component",
+          "description": "Defines a sound type for the block.",
+          "body": {
+            "sound": ""
+          }
         }
       ]
     },

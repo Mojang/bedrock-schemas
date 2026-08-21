@@ -38,7 +38,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "interval",
@@ -161,5 +162,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.random_swim"
+  "id": "minecraft:behavior.random_swim",
+  "dataVersion": "1.26.30"
 }

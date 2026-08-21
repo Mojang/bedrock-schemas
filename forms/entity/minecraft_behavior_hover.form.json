@@ -19,7 +19,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -29,5 +30,6 @@
     }
   ],
   "description": "Allows the mob to hover in place.",
-  "title": "Entity Hover Behavior"
+  "title": "Entity Hover Behavior",
+  "dataVersion": "1.26.20"
 }

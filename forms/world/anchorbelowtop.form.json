@@ -23,5 +23,6 @@
     }
   ],
   "description": "Specifies the vertical anchor",
-  "title": "World AnchorBelowTop"
+  "title": "World AnchorBelowTop",
+  "dataVersion": "1.21.20"
 }

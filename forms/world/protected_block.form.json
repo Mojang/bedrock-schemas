@@ -18,12 +18,24 @@
       "id": "processor_type",
       "title": "Jigsaw Processor Type",
       "defaultValue": "minecraft:protected_blocks",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "isRequired": true,
       "choices": [
         {
+          "id": "minecraft:block_ignore",
+          "title": "Minecraft:block ignore"
+        },
+        {
+          "id": "minecraft:capped",
+          "title": "Minecraft:capped"
+        },
+        {
           "id": "minecraft:protected_blocks",
           "title": "Minecraft:protected blocks"
+        },
+        {
+          "id": "minecraft:rule",
+          "title": "Minecraft:rule"
         }
       ]
     },
@@ -36,5 +48,6 @@
     }
   ],
   "description": "Protect blocks from this structure's placement in the world. Ensuring that it does not replace matching blocks in the world",
-  "title": "World Protected Block"
+  "title": "World Protected Block",
+  "dataVersion": "1.21.20"
 }

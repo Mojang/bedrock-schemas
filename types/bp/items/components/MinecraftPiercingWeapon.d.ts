@@ -28,7 +28,7 @@ export default interface MinecraftPiercingWeapon {
    * Defines the reach used when the user is in Creative Mode. Defaults to
    * "reach" if unspecified.
    */
-  creative_reach?: MinecraftPiercingWeaponCreativeReach;
+  creative_reach?: object;
 
   /**
    * @remarks
@@ -44,40 +44,6 @@ export default interface MinecraftPiercingWeapon {
    * considered. Block collisions between the user and target block
    * damage and its effects.
    */
-  reach?: MinecraftPiercingWeaponReach;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftPiercingWeaponCreativeReach {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftPiercingWeaponReach {
-
-  max?: number;
-
-  min?: number;
+  reach?: object;
 
 }

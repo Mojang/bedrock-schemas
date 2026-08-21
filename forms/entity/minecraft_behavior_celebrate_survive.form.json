@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "duration",
@@ -49,7 +50,7 @@
         "max": 20,
         "min": 10
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "on_celebration_end_event",
@@ -82,5 +83,7 @@
   ],
   "description": "Allows the player to trade with this mob. When the goal starts, it will stop the mob's navigation.",
   "title": "Entity Celebrate Survive Behavior",
-  "id": "minecraft:behavior.celebrate_survive"
+  "samples": {},
+  "id": "minecraft:behavior.celebrate_survive",
+  "dataVersion": "1.26.10"
 }

@@ -19,9 +19,10 @@
   "fields": [
     {
       "id": "accepts_connections_from",
-      "title": "Connection Type",
+      "title": "Accepts Connections From",
       "description": "The type of block allowed to connect to this block. Note that the \"only_fences\" option allows connections from all Vanilla fences excluding NetherBrick.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "all",
       "choices": [
         {
           "id": "all",
@@ -37,7 +38,20 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "all"
+      "samples": {
+        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:connection_rule/",
+            "content": "none"
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/shelf_mushroom_block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:connection_rule/",
+            "content": "none"
+          }
+        ]
+      }
     },
     {
       "id": "enabled_directions",
@@ -68,9 +82,29 @@
           "id": "west",
           "title": "West"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     }
   ],
   "description": "Defines whether other blocks such as fences, walls, bars, and glass panes are allowed to connect to this block.",
-  "title": "Block Connection Rule"
+  "title": "Block Connection Rule",
+  "samples": {
+    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:connection_rule/",
+        "content": {
+          "accepts_connections_from": "none"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/shelf_mushroom_block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:connection_rule/",
+        "content": {
+          "accepts_connections_from": "none"
+        }
+      }
+    ]
+  },
+  "dataVersion": "1.26.20"
 }

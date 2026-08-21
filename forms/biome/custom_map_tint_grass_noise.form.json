@@ -16,13 +16,17 @@
   "fields": [
     {
       "id": "type",
-      "title": "GrassType",
+      "title": "Type",
       "description": "Controls the type of grass tint to use.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "noise",
           "title": "Noise"
+        },
+        {
+          "id": "tint",
+          "title": "Tint"
         }
       ],
       "mustMatchChoices": true,
@@ -31,5 +35,6 @@
     }
   ],
   "description": "Makes grass use the noise based colors for tinting in this biome on the map.",
-  "title": "Biome Custom Map Tint Grass Noise"
+  "title": "Biome Custom Map Tint Grass Noise",
+  "dataVersion": "1.21.110"
 }

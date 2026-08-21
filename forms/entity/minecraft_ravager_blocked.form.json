@@ -30,5 +30,6 @@
   ],
   "description": "Defines the ravager's response to their melee attack being blocked.",
   "title": "Ravager Blocked",
+  "samples": {},
   "id": "minecraft:ravager_blocked"
 }

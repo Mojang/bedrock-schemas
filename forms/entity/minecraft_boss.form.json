@@ -51,7 +51,8 @@
       "title": "Should Darken Sky"
     }
   ],
-  "title": "Boss",
+  "title": "Entity Boss",
   "samples": {},
-  "id": "minecraft:boss"
+  "id": "minecraft:boss",
+  "dataVersion": "1.26.50"
 }

@@ -158,7 +158,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * Breeze: {"min":4,"max":8}
    *
    */
-  landing_distance_from_target?: MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget;
+  landing_distance_from_target?: object;
 
   /**
    * @remarks
@@ -262,7 +262,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * Breeze: {"min":4,"max":20}
    *
    */
-  valid_distance_to_target?: MinecraftBehaviorJumpAroundTargetValidDistanceToTarget;
+  valid_distance_to_target?: object;
 
 }
 
@@ -308,39 +308,5 @@ export interface MinecraftBehaviorJumpAroundTargetFilters {
    * The value being compared with the test.
    */
   value?: object;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorJumpAroundTargetValidDistanceToTarget {
-
-  max?: number;
-
-  min?: number;
 
 }

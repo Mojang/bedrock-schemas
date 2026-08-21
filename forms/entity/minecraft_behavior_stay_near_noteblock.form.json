@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "listen_time",
@@ -116,5 +117,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.stay_near_noteblock"
+  "id": "minecraft:behavior.stay_near_noteblock",
+  "dataVersion": "1.21.110"
 }

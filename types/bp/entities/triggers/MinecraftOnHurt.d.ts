@@ -67,7 +67,7 @@ export default interface MinecraftOnHurt {
    *
    *
    */
-  target?: string;
+  target?: MinecraftOnHurtTarget;
 
 }
 

@@ -30,5 +30,6 @@
     }
   ],
   "description": "Weighted Random Item",
-  "title": "World JigsawTemplatePool"
+  "title": "World JigsawTemplatePool",
+  "dataVersion": "1.21.20"
 }

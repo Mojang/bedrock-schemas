@@ -53,6 +53,13 @@ Blue Bubble Fish - Blue Bubble Fish
 California Roll - California Roll
 
 "minecraft:geometry": "geometry.sushi
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:geometry": {
+  "identifier": "minecraft:geometry.cross"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -128,6 +135,10 @@ export default interface MinecraftGeometry {
    * @remarks
    * Specifies the geometry description identifier to use to render this
    * block.
+   * 
+   * Sample Values:
+   * Block Red Shrub: "minecraft:geometry.cross"
+   *
    */
   identifier?: string;
 

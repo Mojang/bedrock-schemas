@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -51,5 +52,6 @@
   "description": "Allows to mob to be able to sit in place like the ocelot.",
   "title": "Entity Ocelot Sit On Block Behavior",
   "samples": {},
-  "id": "minecraft:behavior.ocelot_sit_on_block"
+  "id": "minecraft:behavior.ocelot_sit_on_block",
+  "dataVersion": "1.26.10"
 }

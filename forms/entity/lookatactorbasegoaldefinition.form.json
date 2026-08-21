@@ -45,7 +45,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "look_distance",
@@ -63,7 +64,7 @@
         "max": 4,
         "min": 2
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "priority",

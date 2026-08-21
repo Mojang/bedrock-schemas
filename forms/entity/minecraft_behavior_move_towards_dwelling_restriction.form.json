@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -75,5 +76,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.move_towards_dwelling_restriction"
+  "id": "minecraft:behavior.move_towards_dwelling_restriction",
+  "dataVersion": "1.26.0"
 }

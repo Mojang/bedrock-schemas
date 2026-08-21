@@ -35,5 +35,6 @@
   ],
   "description": "Contains the required identifier for the item. May contain optional fields like menu_category.",
   "title": "Item Description",
-  "id": "description"
+  "id": "description",
+  "dataVersion": "1.26.30"
 }

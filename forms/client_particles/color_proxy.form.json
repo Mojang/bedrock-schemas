@@ -29,7 +29,7 @@
         {
           "id": "interpolant",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "interpolant",
@@ -40,5 +40,6 @@
     }
   ],
   "description": "Defines color gradients with smooth interpolation for particle effects. Use this to create particles that change color over their lifetime—from bright flames fading to smoke, magical auras shifting hues, or explosion flashes dimming over time. The gradient maps time points to colors, while the interpolant expression controls which color to sample.",
-  "title": "Client Particles Color Proxy"
+  "title": "Client Particles Color Proxy",
+  "dataVersion": "1.21.10"
 }

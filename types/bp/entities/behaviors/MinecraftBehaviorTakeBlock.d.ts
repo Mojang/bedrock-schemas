@@ -80,13 +80,13 @@ export default interface MinecraftBehaviorTakeBlock {
    * XZ range from which the entity will try and take blocks 
    * from.
    */
-  xz_range?: MinecraftBehaviorTakeBlockXzRange;
+  xz_range?: object;
 
   /**
    * @remarks
    * Y range from which the entity will try and take blocks from.
    */
-  y_range?: MinecraftBehaviorTakeBlockYRange;
+  y_range?: object;
 
 }
 
@@ -226,38 +226,4 @@ export enum MinecraftBehaviorTakeBlockOnTakeTarget {
   player = `player`,
   self = `self`,
   target = `target`
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorTakeBlockXzRange {
-
-  max?: number;
-
-  min?: number;
-
-}
-
-
-/**
- * Item IntRange (IntRange)
- * Specifies an integer range between minimum and maximum values for
- * item properties requiring whole numbers. Used for stack count
- * variations, discrete charge levels, or quantity ranges in loot
- * tables. Ensures values stay within valid bounds for countable item
- * properties.
- */
-export interface MinecraftBehaviorTakeBlockYRange {
-
-  max?: number;
-
-  min?: number;
-
 }

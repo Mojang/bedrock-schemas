@@ -76,5 +76,6 @@
     }
   ],
   "description": "Configures group spawning behavior, including minimum and maximum herd size. Mobs like wolves, chickens, and zombies spawn in groups rather than individually. Also allows running events on the first N spawns or after M spawns.",
-  "title": "Spawn Herd"
+  "title": "Spawn Herd",
+  "dataVersion": "1.21.50"
 }

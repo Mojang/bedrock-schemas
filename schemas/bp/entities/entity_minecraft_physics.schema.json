@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Physics",
+  "title": "Entity Physics",
   "description": "Defines physics properties of an actor, including if it is affected by gravity or if it collides with objects.",
   "properties": {
     "has_collision": {

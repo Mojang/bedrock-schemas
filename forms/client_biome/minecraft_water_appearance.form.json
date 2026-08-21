@@ -36,5 +36,6 @@
     }
   ],
   "description": "Set the water surface color used during rendering. Biomes without this component will have default water surface color behavior.",
-  "title": "Client Biome Water Appearance"
+  "title": "Client Biome Water Appearance",
+  "dataVersion": "1.21.40"
 }

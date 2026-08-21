@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "duration",
@@ -76,5 +77,6 @@
   "description": "Allows Equine mobs to be Horse Traps and be triggered like them, spawning a lightning bolt and a bunch of horses when a player is nearby. Can only be used by Horses, Mules, Donkeys and Skeleton Horses.",
   "title": "Entity Skeleton Horse Trap Behavior",
   "samples": {},
-  "id": "minecraft:behavior.skeleton_horse_trap"
+  "id": "minecraft:behavior.skeleton_horse_trap",
+  "dataVersion": "1.26.30"
 }

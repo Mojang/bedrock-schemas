@@ -17,9 +17,9 @@
   "fields": [
     {
       "id": "category",
-      "title": "CreativeItemCategory",
+      "title": "Category",
       "description": "The creative inventory or recipe book tab that the block is placed into. Default to \"none\".",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "construction",
@@ -50,7 +50,6 @@
       "title": "Group",
       "description": "The expandable group that the block is a part of. Must be a namespace and can use vanilla ones",
       "dataType": "string",
-      "defaultValue": "",
       "validity": [
         {
           "comparison": "pattern",
@@ -68,5 +67,6 @@
     }
   ],
   "description": "Configures the block behavior in inventory and menu category",
-  "title": "Block Menu Category"
+  "title": "Block Menu Category",
+  "dataVersion": "1.26.20"
 }

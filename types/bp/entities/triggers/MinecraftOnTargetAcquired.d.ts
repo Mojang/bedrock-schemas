@@ -118,7 +118,7 @@ export default interface MinecraftOnTargetAcquired {
    *
    *
    */
-  target?: string;
+  target?: MinecraftOnTargetAcquiredTarget;
 
 }
 

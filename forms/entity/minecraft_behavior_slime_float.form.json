@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "jump_chance_percentage",
@@ -99,5 +100,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.slime_float"
+  "id": "minecraft:behavior.slime_float",
+  "dataVersion": "1.21.110"
 }

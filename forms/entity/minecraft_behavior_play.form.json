@@ -44,7 +44,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "follow_distance",
@@ -171,7 +172,8 @@
                       "description": "The value being compared with the test.",
                       "dataType": "object"
                     }
-                  ]
+                  ],
+                  "dataVersion": "1.21.20"
                 },
                 "alternates": [
                   {
@@ -242,7 +244,8 @@
                 "dataType": "float",
                 "defaultValue": 1
               }
-            ]
+            ],
+            "dataVersion": "1.21.120"
           }
         }
       ]
@@ -303,5 +306,7 @@
   ],
   "description": "Allows the mob to offer a flower to another mob with the minecraft:take_flower behavior.",
   "title": "Entity Play Behavior",
-  "id": "minecraft:behavior.play"
+  "samples": {},
+  "id": "minecraft:behavior.play",
+  "dataVersion": "1.26.10"
 }

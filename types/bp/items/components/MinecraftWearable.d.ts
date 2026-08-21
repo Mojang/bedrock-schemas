@@ -52,7 +52,7 @@ export default interface MinecraftWearable {
    * Specifies where the item can be worn. If any non-hand slot is
    * chosen, the max stack size is set to 1.
    */
-  slot: string;
+  slot: MinecraftWearableSlot| string;
 
 }
 

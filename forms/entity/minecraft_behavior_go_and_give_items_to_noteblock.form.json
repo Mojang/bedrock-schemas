@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "listen_time",
@@ -107,9 +108,10 @@
     },
     {
       "id": "throw_sound",
-      "title": "LevelSoundEvent",
+      "title": "Throw Sound",
       "description": "Sound to play when this mob throws an item.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "charge",
       "choices": [
         {
           "id": "absorb_block",
@@ -936,6 +938,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1736,6 +1742,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2204,6 +2214,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2381,7 +2395,6 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "charge",
       "samples": {
         "/vanilla/behavior_pack/entities/allay.json": [
           {
@@ -2419,5 +2432,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.go_and_give_items_to_noteblock"
+  "id": "minecraft:behavior.go_and_give_items_to_noteblock",
+  "dataVersion": "1.26.20"
 }

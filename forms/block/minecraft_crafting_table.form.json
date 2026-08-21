@@ -59,5 +59,6 @@
     ]
   },
   "description": "Makes your block into a custom crafting table which enables the crafting table UI and the ability to craft recipes.",
-  "title": "Block Crafting Table"
+  "title": "Block Crafting Table",
+  "dataVersion": "1.26.20"
 }

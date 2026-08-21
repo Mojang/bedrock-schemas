@@ -42,7 +42,7 @@
         {
           "id": "uv",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "uv",
@@ -60,7 +60,7 @@
         {
           "id": "uv_size",
           "dataType": "keyedObjectCollection",
-          "subFormId": "item/molang_expression"
+          "subFormId": "legacy/molang_expression"
         },
         {
           "id": "uv_size",
@@ -70,5 +70,6 @@
     }
   ],
   "description": "Controls UV texture mapping and flipbook animation for particles.",
-  "title": "Client Particles UV Proxy"
+  "title": "Client Particles UV Proxy",
+  "dataVersion": "1.21.10"
 }

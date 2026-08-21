@@ -62,7 +62,7 @@ export default interface MinecraftBehaviorUseKineticWeapon {
    * elapsed, the mob will approach again. This value is added to
    * the reach midpoint.
    */
-  cooldown_distance?: MinecraftBehaviorUseKineticWeaponCooldownDistance;
+  cooldown_distance?: object;
 
   /**
    * @remarks
@@ -173,7 +173,7 @@ export default interface MinecraftBehaviorUseKineticWeapon {
    * mob will charge again. This value is added to the reach 
    * midpoint.
    */
-  reposition_distance?: MinecraftBehaviorUseKineticWeaponRepositionDistance;
+  reposition_distance?: object;
 
   /**
    * @remarks
@@ -238,23 +238,6 @@ export enum MinecraftBehaviorUseKineticWeaponControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorUseKineticWeaponCooldownDistance {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 
@@ -413,21 +396,4 @@ export enum MinecraftBehaviorUseKineticWeaponOnKillTarget {
   player = `player`,
   self = `self`,
   target = `target`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorUseKineticWeaponRepositionDistance {
-
-  max?: number;
-
-  min?: number;
-
 }

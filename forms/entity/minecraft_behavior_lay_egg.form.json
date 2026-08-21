@@ -62,7 +62,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "egg_type",
@@ -102,9 +103,10 @@
     },
     {
       "id": "lay_egg_sound",
-      "title": "LevelSoundEvent",
+      "title": "Lay Egg Sound",
       "description": "Name of the sound event played when laying the egg. Defaults to lay_egg, which is used for Turtles.",
-      "dataType": "string",
+      "dataType": "stringEnum",
+      "defaultValue": "lay_egg",
       "choices": [
         {
           "id": "absorb_block",
@@ -931,6 +933,10 @@
           "title": "Disappeared"
         },
         {
+          "id": "dismount",
+          "title": "Dismount"
+        },
+        {
           "id": "door.close",
           "title": "Door.close"
         },
@@ -1731,6 +1737,10 @@
           "title": "Mob.warning.baby"
         },
         {
+          "id": "mount",
+          "title": "Mount"
+        },
+        {
           "id": "multi_swap",
           "title": "Multi swap"
         },
@@ -2199,6 +2209,10 @@
           "title": "Step sand"
         },
         {
+          "id": "straw_bed.break_leave",
+          "title": "Straw bed.break leave"
+        },
+        {
           "id": "stun",
           "title": "Stun"
         },
@@ -2376,7 +2390,6 @@
         }
       ],
       "mustMatchChoices": true,
-      "defaultValue": "lay_egg",
       "samples": {
         "/vanilla/behavior_pack/entities/frog.json": [
           {
@@ -2571,5 +2584,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.lay_egg"
+  "id": "minecraft:behavior.lay_egg",
+  "dataVersion": "1.26.10"
 }

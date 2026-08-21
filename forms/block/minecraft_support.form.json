@@ -29,9 +29,9 @@
   "fields": [
     {
       "id": "shape",
-      "title": "Support Shape",
+      "title": "Shape",
       "description": "Required field. The type of support shape for this block.",
-      "dataType": "string",
+      "dataType": "stringEnum",
       "choices": [
         {
           "id": "fence",
@@ -43,9 +43,66 @@
         }
       ],
       "mustMatchChoices": true,
-      "isRequired": true
+      "isRequired": true,
+      "samples": {
+        "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:support/",
+            "content": "stair"
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/black_wool_stairs.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:support/",
+            "content": "stair"
+          }
+        ]
+      }
     }
   ],
   "description": "Defines the support shape of the block. Currently only allows for blocks to have the same shape as a Vanilla fence and Vanilla stair. To work with custom stairs, requires the use of \"minecraft:vertical_half\" and \"minecraft:cardinal_direction\" or \"minecraft:facing_direction\" which can be set through the \"minecraft:placement_direction\" block trait. Custom blocks without this component will default to unit cube support. The type of support shape for this block. Currently, the options are: \"fence\" and \"stair\".",
-  "title": "Block Support"
+  "title": "Block Support",
+  "samples": {
+    "/vanilla/behavior_pack/blocks/black_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:support/",
+        "content": {
+          "shape": "stair"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/black_wool_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:support/",
+        "content": {
+          "shape": "stair"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:support/",
+        "content": {
+          "shape": "stair"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/blue_wool_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:support/",
+        "content": {
+          "shape": "stair"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/brown_concrete_stairs.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:support/",
+        "content": {
+          "shape": "stair"
+        }
+      }
+    ]
+  },
+  "dataVersion": "1.26.20"
 }

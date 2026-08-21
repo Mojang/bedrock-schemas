@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -43,5 +44,6 @@
   ],
   "description": "Allows the mob to automatically start avoiding the sun when its a clear day out.",
   "title": "Entity Restrict Sun Behavior",
-  "id": "minecraft:behavior.restrict_sun"
+  "id": "minecraft:behavior.restrict_sun",
+  "dataVersion": "1.26.30"
 }

@@ -8,6 +8,22 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:precipitation_interactions
+ * 
+ * minecraft:precipitation_interactions Samples
+
+Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
+
+"minecraft:precipitation_interactions": {
+  "precipitation_behavior": "snowlogging"
+}
+
+
+Shelf Mushroom Block - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/shelf_mushroom_block.json
+
+"minecraft:precipitation_interactions": {
+  "precipitation_behavior": "none"
+}
+
  */
 
 import * as jsoncommon from '../../../common';
@@ -33,8 +49,14 @@ export default interface MinecraftPrecipitationInteractions {
    * @remarks
    * What behavior should the block have. Possible values: obrain,
    * obstruct_rain_accumulate_snow, snowlogging, and none
+   * 
+   * Sample Values:
+   * Block Red Shrub: "snowlogging"
+   *
+   * Shelf Mushroom Block: "none"
+   *
    */
-  precipitation_behavior: string;
+  precipitation_behavior: MinecraftPrecipitationInteractionsPrecipitationBehavior;
 
 }
 

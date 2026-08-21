@@ -28,7 +28,7 @@ export default interface DirectionSettingsProxy {
 
   min_speed_threshold?: number;
 
-  mode: string;
+  mode: DirectionSettingsProxyMode;
 
 }
 

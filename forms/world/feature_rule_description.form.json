@@ -30,5 +30,6 @@
   ],
   "description": "Defines the identifier and feature reference for a feature rule.",
   "title": "World Feature Rule Description",
-  "id": "Feature Rule Description"
+  "id": "Feature Rule Description",
+  "dataVersion": "1.21.20"
 }

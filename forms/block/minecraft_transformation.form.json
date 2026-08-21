@@ -229,5 +229,6 @@
   "note2": "Added rotation_pivot and scale_pivot attributes in 1.21.0 to support pivoted rotation and scale operations.",
   "description": "The block's translation, rotation and scale with respect to the center of its world position",
   "title": "Block Transformation",
-  "id": "Transformation"
+  "id": "Transformation",
+  "dataVersion": "1.26.20"
 }

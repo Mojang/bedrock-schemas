@@ -85,7 +85,7 @@ export default interface MinecraftBehaviorMoveAroundTarget {
    * Breeze: {"min":4,"max":8}
    *
    */
-  destination_position_range?: MinecraftBehaviorMoveAroundTargetDestinationPositionRange;
+  destination_position_range?: object;
 
   /**
    * @remarks
@@ -151,23 +151,6 @@ export enum MinecraftBehaviorMoveAroundTargetControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorMoveAroundTargetDestinationPositionRange {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 

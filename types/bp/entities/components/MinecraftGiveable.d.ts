@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:giveable
+ * 
+ * minecraft:giveable Samples
  */
 
 import * as jsoncommon from '../../../common';

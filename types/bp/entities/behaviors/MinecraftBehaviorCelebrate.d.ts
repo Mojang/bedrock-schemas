@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.celebrate
+ * 
+ * minecraft:behavior.celebrate Samples
  */
 
 import * as jsoncommon from '../../../common';
@@ -23,7 +25,7 @@ export default interface MinecraftBehaviorCelebrate {
    * @remarks
    * The sound event to trigger during the celebration.
    */
-  celebration_sound?: string;
+  celebration_sound?: MinecraftBehaviorCelebrateCelebrationSound;
 
   control_flags?: string[];
 
@@ -38,7 +40,7 @@ export default interface MinecraftBehaviorCelebrate {
    * Minimum and maximum time between jumping (positive, in
    * seconds).
    */
-  jump_interval?: MinecraftBehaviorCelebrateJumpInterval;
+  jump_interval?: object;
 
   /**
    * @remarks
@@ -59,7 +61,7 @@ export default interface MinecraftBehaviorCelebrate {
    * Minimum and maximum time between sound events (positive, in
    * seconds).
    */
-  sound_interval?: MinecraftBehaviorCelebrateSoundInterval;
+  sound_interval?: object;
 
 }
 
@@ -271,6 +273,7 @@ export enum MinecraftBehaviorCelebrateCelebrationSound {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -471,6 +474,7 @@ export enum MinecraftBehaviorCelebrateCelebrationSound {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -588,6 +592,7 @@ export enum MinecraftBehaviorCelebrateCelebrationSound {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -639,23 +644,6 @@ export enum MinecraftBehaviorCelebrateControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCelebrateJumpInterval {
-
-  max?: number;
-
-  min?: number;
-
 }
 
 
@@ -735,21 +723,4 @@ export enum MinecraftBehaviorCelebrateOnCelebrationEndEventTarget {
   player = `player`,
   self = `self`,
   target = `target`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorCelebrateSoundInterval {
-
-  max?: number;
-
-  min?: number;
-
 }

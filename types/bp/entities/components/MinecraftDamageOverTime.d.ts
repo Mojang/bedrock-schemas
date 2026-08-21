@@ -31,7 +31,7 @@ Vex - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 import * as jsoncommon from '../../../common';
 
 /**
- * Damage Over Time (minecraft:damage_over_time)
+ * Entity Damage Over Time (minecraft:damage_over_time)
  * Applies defined amount of damage to the entity at specified 
  * intervals.
  */

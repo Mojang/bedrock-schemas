@@ -8,12 +8,14 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Components Documentation - minecraft:grows_crop
+ * 
+ * minecraft:grows_crop Samples
  */
 
 import * as jsoncommon from '../../../common';
 
 /**
- * Grows Crop (minecraft:grows_crop)
+ * Entity Grows Crop (minecraft:grows_crop)
  * Could increase crop growth when entity walks over crop.
  */
 export default interface MinecraftGrowsCrop {

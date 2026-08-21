@@ -57,7 +57,7 @@ export default interface MinecraftBehaviorChargeAttack {
    */
   priority?: number;
 
-  sound_event?: string;
+  sound_event?: MinecraftBehaviorChargeAttackSoundEvent;
 
   /**
    * @remarks
@@ -289,6 +289,7 @@ export enum MinecraftBehaviorChargeAttackSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -489,6 +490,7 @@ export enum MinecraftBehaviorChargeAttackSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -606,6 +608,7 @@ export enum MinecraftBehaviorChargeAttackSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

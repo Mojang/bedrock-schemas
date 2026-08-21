@@ -21,9 +21,9 @@ import * as jsoncommon from '../../common';
  */
 export default interface SpawnDifficultyFilter {
 
-  max?: string;
+  max?: SpawnDifficultyFilterMax;
 
-  min?: string;
+  min?: SpawnDifficultyFilterMin;
 
 }
 

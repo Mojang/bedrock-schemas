@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "priority",
@@ -49,5 +50,7 @@
   ],
   "description": "Allows the villager to look for a mate to spawn other villagers with.",
   "title": "Entity Make Love Behavior",
-  "id": "minecraft:behavior.make_love"
+  "samples": {},
+  "id": "minecraft:behavior.make_love",
+  "dataVersion": "1.26.30"
 }

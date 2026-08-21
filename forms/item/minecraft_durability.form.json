@@ -114,7 +114,7 @@
         "min": 100
       },
       "technicalDescription": "Check that the limits imposed on the range (minimum, maximum and maximum distance between values) are respected",
-      "subFormId": "item/intrange"
+      "subFormId": "block/intrange"
     },
     {
       "id": "max_durability",

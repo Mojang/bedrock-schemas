@@ -77,7 +77,7 @@ export default interface MinecraftBehaviorLookAtTradingPlayer {
    * @remarks
    * Time range to look at the nearest entity.
    */
-  look_time?: MinecraftBehaviorLookAtTradingPlayerLookTime;
+  look_time?: object;
 
   /**
    * @remarks
@@ -109,21 +109,4 @@ export enum MinecraftBehaviorLookAtTradingPlayerControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
-}
-
-
-/**
- * Item FloatRange (FloatRange)
- * Specifies a numeric range between minimum and maximum values for
- * randomized item properties. Used for variable durability, damage
- * ranges, or timing intervals. The game picks a random value within
- * the range when the property is evaluated, adding natural variation to
- * item behavior.
- */
-export interface MinecraftBehaviorLookAtTradingPlayerLookTime {
-
-  max?: number;
-
-  min?: number;
-
 }

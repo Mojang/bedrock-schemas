@@ -42,7 +42,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "duration_range",
@@ -70,7 +70,7 @@
         "max": 0,
         "min": 0
       },
-      "subFormId": "item/floatrange"
+      "subFormId": "legacy/floatrange"
     },
     {
       "id": "control_flags",
@@ -91,6 +91,7 @@
           "title": "Move"
         }
       ],
+      "mustMatchChoices": true,
       "samples": {
         "/vanilla/behavior_pack/entities/sniffer.json": [
           {
@@ -197,5 +198,6 @@
         }
       }
     ]
-  }
+  },
+  "dataVersion": "1.26.0"
 }

@@ -15,5 +15,6 @@
   "fields": [],
   "description": "Sets that this entity is currently stunned.",
   "title": "Is Stunned",
+  "samples": {},
   "id": "minecraft:is_stunned"
 }

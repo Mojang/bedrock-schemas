@@ -38,5 +38,6 @@
   ],
   "description": "Probability that creatures will spawn within the biome when a chunk is generated.",
   "title": "Biome Creature Spawn Probability",
-  "id": "minecraft:creature_spawn_probability"
+  "id": "minecraft:creature_spawn_probability",
+  "dataVersion": "1.21.110"
 }

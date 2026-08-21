@@ -31,7 +31,8 @@
           "id": "move",
           "title": "Move"
         }
-      ]
+      ],
+      "mustMatchChoices": true
     },
     {
       "id": "elder_extra_magic_damage",
@@ -147,5 +148,6 @@
       }
     ]
   },
-  "id": "minecraft:behavior.guardian_attack"
+  "id": "minecraft:behavior.guardian_attack",
+  "dataVersion": "1.26.0"
 }

@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Tamemount",
-  "description": "Allows the Entity to be tamed by mounting it.",
+  "title": "Entity Tamemount",
+  "description": "Allows entities to flock in groups in water or not.",
   "properties": {
     "attempt_temper_mod": {
       "title": "Attempt Temper Mod",
@@ -10,19 +10,12 @@
       "type": "integer",
       "default": 5
     },
-    "autoRejectItems": {
-      "title": "AutoRejectItems",
+    "auto_reject_items": {
+      "title": "Auto Reject Items",
       "description": "The list of items that, if carried while interacting with the entity, will anger it.",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "title": "Item",
-            "description": "The list of items that, if carried while interacting with the entity, will anger it.",
-            "type": "string"
-          }
-        }
+        "$ref": "./entity_mounttamingcomponentrejectitem.schema.json"
       }
     },
     "feed_items": {
@@ -30,26 +23,14 @@
       "description": "The list of items that can be used to increase the entity's temper and speed up the taming process.\n\nSample values:\n• llama: [{\"item\":\"wheat\",\"temper_mod\":3},{\"item\":\"hay_b...",
       "type": "array",
       "items": {
-        "type": "object",
-        "properties": {
-          "item": {
-            "title": "Item",
-            "description": "Name of the item this entity likes and can be used to increase this entity's temper.",
-            "type": "string"
-          },
-          "temper_mod": {
-            "title": "Temper Mod",
-            "description": "The amount of temper this entity gains when fed this item.",
-            "type": "integer",
-            "default": 0
-          }
-        }
+        "$ref": "./entity_mounttamingcomponentfeeditem.schema.json"
       }
     },
     "feed_text": {
       "title": "Feed Text",
       "description": "The text that shows in the feeding interact button.\n\nSample values:\n• llama: action.interact.feed",
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "max_temper": {
       "title": "Max Temper",
@@ -66,38 +47,44 @@
     "ride_text": {
       "title": "Ride Text",
       "description": "The text that shows in the riding interact button.\n\nSample values:\n• llama: action.interact.mount",
-      "type": "string"
+      "type": "string",
+      "default": ""
     },
     "tame_event": {
       "title": "Tame Event",
       "description": "Event that triggers when the entity becomes tamed.\n\nSample values:\n• llama: {\"event\":\"minecraft:on_tame\",\"target\":\"self\"}",
-      "oneOf": [
+      "$ref": "./entity_actordefinitiontrigger.schema.json",
+      "defaultSnippets": [
         {
-          "type": "string"
-        },
-        {
-          "type": "object",
-          "properties": {
-            "event": {
-              "type": "string"
+          "label": "Entity ActorDefinitionTrigger",
+          "description": "Triggers an entity event when specified conditions are met. Events activate component groups that change entity behavior—transforming villagers into zombie villagers, switching mobs to aggressive mode, or triggering growth stages. Combine with filters to create conditional state machines that respond to gameplay.",
+          "body": {
+            "event": "",
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
             },
-            "target": {
-              "type": "string"
-            }
+            "target": "self"
           }
         }
       ]
     },
-    "auto_reject_items": {
-      "title": "Auto Reject Items",
-      "description": "\n\nProperties:\n• item (string)",
+    "autoRejectItems": {
+      "title": "AutoRejectItems",
+      "description": "The list of items that, if carried while interacting with the entity, will anger it.",
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
           "item": {
             "title": "Item",
-            "description": "\n\nSample values:\n• trader_llama: horsearmorleather",
+            "description": "The list of items that, if carried while interacting with the entity, will anger it.",
             "type": "string"
           }
         }

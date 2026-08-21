@@ -234,5 +234,6 @@
       }
     ]
   },
-  "id": "minecraft:addrider"
+  "id": "minecraft:addrider",
+  "dataVersion": "1.21.130"
 }
