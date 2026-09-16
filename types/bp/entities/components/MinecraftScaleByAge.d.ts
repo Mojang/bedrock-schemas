@@ -13,7 +13,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Scale By Age (minecraft:scale_by_age)
+ * Entity Scale By Age (minecraft:scale_by_age)
  * Defines the entity's size interpolation based on the entity's 
  * age.
  */

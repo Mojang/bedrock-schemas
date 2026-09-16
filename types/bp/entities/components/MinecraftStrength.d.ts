@@ -15,8 +15,8 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Strength (minecraft:strength)
- * Defines the entity's strength to carry items.
+ * Entity Strength (minecraft:strength)
+ * Defines the strength of this entity.
  */
 export default interface MinecraftStrength {
 

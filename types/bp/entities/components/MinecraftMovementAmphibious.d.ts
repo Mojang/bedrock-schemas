@@ -20,7 +20,7 @@ Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/enti
 import * as jsoncommon from '../../../common';
 
 /**
- * Amphibious Movement (minecraft:movement.amphibious)
+ * Entity Amphibious Movement (minecraft:movement.amphibious)
  * This move control allows the mob to swim in water and walk on
  * land.
  */

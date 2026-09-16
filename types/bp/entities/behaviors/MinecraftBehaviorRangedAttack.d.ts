@@ -67,7 +67,9 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
  * At /minecraft:entity/component_groups/minecraft:llama_angry/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
   "priority": 2,
-  "attack_radius": 64,
+  "attack_range": {
+    "max": 64
+  },
   "charge_shoot_trigger": 2,
   "charge_charged_trigger": 1
 }
@@ -138,8 +140,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Bogged: 15
    *
-   * Llama: 64
-   *
    */
   attack_radius?: number;
 
@@ -159,6 +159,8 @@ export default interface MinecraftBehaviorRangedAttack {
    * Blaze: {"min":0,"max":48}
    *
    * Drowned: {"min":0,"max":10}
+   *
+   * Llama: {"max":64}
    *
    */
   attack_range?: object;

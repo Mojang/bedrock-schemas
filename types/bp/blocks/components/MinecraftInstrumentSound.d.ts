@@ -44,7 +44,14 @@ Instrument Defined With No Sound For Up Face - Instrument defined with no sound 
 Block Black Concrete Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_concrete_double_slab.block.json
 
 "minecraft:instrument_sound": {
-  "up": "note.bassattack"
+  "up": "note.bd"
+}
+
+
+Block Black Wool Double Slab - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/black_wool_double_slab.block.json
+
+"minecraft:instrument_sound": {
+  "up": "note.guitar"
 }
 
  */
@@ -80,7 +87,10 @@ export default interface MinecraftInstrumentSound {
    * "note.none" to specify no sound for this face.
    * 
    * Sample Values:
-   * Block Black Concrete Double Slab: "note.bassattack"
+   * Block Black Concrete Double Slab: "note.bd"
+   *
+   *
+   * Block Black Wool Double Slab: "note.guitar"
    *
    *
    */

@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Attack (minecraft:attack)
+ * Entity Attack (minecraft:attack)
  * Defines an entity's melee attack damage and any additional status
  * effects applied on hit. Typical damage values range from 3
  * (zombie, creeper) to 7-21 (iron golem).

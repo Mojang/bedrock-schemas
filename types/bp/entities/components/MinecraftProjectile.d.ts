@@ -256,6 +256,13 @@ export default interface MinecraftProjectile {
 
   /**
    * @remarks
+   * If `true`, when hitting an entity and the projectile is on
+   * fire, spread the fire to the entity.
+   */
+  spread_fire?: boolean;
+
+  /**
+   * @remarks
    * If `true`, the projectile has its velocity zeroed out when
    * struck.
    */

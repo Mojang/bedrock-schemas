@@ -17,12 +17,12 @@
       "id": "max_turn",
       "title": "Max Turn",
       "description": "The maximum number in degrees the mob can turn per tick.",
-      "defaultValue": 30,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 30
     }
   ],
   "description": "This move control causes the mob to hover.",
-  "title": "Hover Movement",
+  "title": "Entity Hover Movement",
   "samples": {
     "/vanilla/behavior_pack/entities/allay.json": [
       {
@@ -31,5 +31,6 @@
       }
     ]
   },
-  "id": "minecraft:movement.hover"
+  "id": "minecraft:movement.hover",
+  "dataVersion": "1.26.60"
 }

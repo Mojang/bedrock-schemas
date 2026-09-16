@@ -1,0 +1,23 @@
+{
+  "id": "Clouds",
+  "fields": [
+    {
+      "id": "height",
+      "title": "Height",
+      "dataType": "int",
+      "validity": [
+        {
+          "comparison": ">=",
+          "value": -64
+        },
+        {
+          "comparison": "<=",
+          "value": 320
+        }
+      ],
+      "isRequired": true
+    }
+  ],
+  "title": "Dimension Clouds",
+  "dataVersion": "1.26.50"
+}

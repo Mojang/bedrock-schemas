@@ -20,7 +20,7 @@ Bat - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entit
 import * as jsoncommon from '../../../common';
 
 /**
- * Basic Movement (minecraft:movement.basic)
+ * Entity Basic Movement (minecraft:movement.basic)
  * This component accents the movement of an entity.
  */
 export default interface MinecraftMovementBasic {

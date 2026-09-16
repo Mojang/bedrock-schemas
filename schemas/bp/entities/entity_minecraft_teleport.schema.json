@@ -1,20 +1,20 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Teleport",
+  "title": "Entity Teleport",
   "description": "Defines an entity's teleporting behavior.",
   "properties": {
     "dark_teleport_chance": {
       "title": "Dark Teleport Chance",
       "description": "Modifies the chance that the entity will teleport if the entity is in darkness",
       "type": "number",
-      "default": 0.01
+      "default": 0.009999999776482582
     },
     "light_teleport_chance": {
       "title": "Light Teleport Chance",
       "description": "Modifies the chance that the entity will teleport if the entity is in daylight",
       "type": "number",
-      "default": 0.01
+      "default": 0.009999999776482582
     },
     "max_random_teleport_time": {
       "title": "Max Random Teleport Time",
@@ -31,50 +31,62 @@
     "projectile_filter": {
       "title": "Projectile Filter",
       "description": "Conditions that determine which projectiles cause the entity to attempt to teleport. If omitted, all projectiles cause a teleport attempt",
+      "type": "object"
+    },
+    "random_teleport_cube": {
       "anyOf": [
-        {
-          "type": "object"
-        },
         {
           "type": "array",
           "items": {
-            "type": "object"
+            "type": "number"
           }
         },
         {
+          "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
           "type": "object",
           "properties": {
-            "all_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "x": {
+              "title": "X",
+              "type": "number",
+              "default": 0
             },
-            "any_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
-              }
+            "y": {
+              "title": "Y",
+              "type": "number",
+              "default": 0
             },
-            "none_of": {
-              "type": "array",
-              "items": {
-                "type": "object"
+            "z": {
+              "title": "Z",
+              "type": "number",
+              "default": 0
+            }
+          },
+          "defaultSnippets": [
+            {
+              "label": "Random Teleport Cube (object)",
+              "description": "Use Random Teleport Cube as an object",
+              "body": {
+                "x": 0,
+                "y": 0,
+                "z": 0
               }
             }
+          ]
+        }
+      ],
+      "title": "Random Teleport Cube",
+      "description": "Entity will teleport to a random position within the area defined by this cube",
+      "defaultSnippets": [
+        {
+          "label": "Random Teleport Cube (object)",
+          "description": "Use Random Teleport Cube as an object",
+          "body": {
+            "x": 0,
+            "y": 0,
+            "z": 0
           }
         }
       ]
-    },
-    "random_teleport_cube": {
-      "title": "Random Teleport Cube",
-      "description": "Entity will teleport to a random position within the area defined by this cube",
-      "type": "array",
-      "items": {
-        "type": "number"
-      },
-      "minItems": 3,
-      "maxItems": 3
     },
     "random_teleports": {
       "title": "Random Teleports",

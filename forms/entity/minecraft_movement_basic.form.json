@@ -59,12 +59,12 @@
       "id": "max_turn",
       "title": "Max Turn",
       "description": "The maximum number in degrees the mob can turn per tick.",
-      "defaultValue": 30,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 30
     }
   ],
   "description": "This component accents the movement of an entity.",
-  "title": "Basic Movement",
+  "title": "Entity Basic Movement",
   "samples": {
     "/vanilla/behavior_pack/entities/bat.json": [
       {
@@ -97,5 +97,6 @@
       }
     ]
   },
-  "id": "minecraft:movement.basic"
+  "id": "minecraft:movement.basic",
+  "dataVersion": "1.26.60"
 }

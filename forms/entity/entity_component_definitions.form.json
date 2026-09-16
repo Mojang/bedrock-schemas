@@ -2743,8 +2743,9 @@
     {
       "id": "minecraft:dash_action",
       "title": "Minecraft Dash Action",
-      "description": "Dynamic value",
-      "dataType": "object"
+      "description": "Ability for a rideable entity to dash.",
+      "dataType": "object",
+      "subFormId": "entity/minecraft_dash_action"
     },
     {
       "id": "minecraft:free_camera_controlled",
@@ -2808,7 +2809,7 @@
     {
       "id": "minecraft:pushable_by_block",
       "title": "Minecraft Pushable By Block",
-      "description": "Dynamic value",
+      "description": "Allows the entity to be pushed by certain blocks, like Shulker Boxes and Pistons.",
       "dataType": "object"
     },
     {
@@ -2868,5 +2869,5 @@
   ],
   "description": "Registry of all available entity components that define mob capabilities. Components cover health, movement, combat, AI goals, interactions, physics, sensing, and rendering. Entities combine components to create unique creatures—adding minecraft:health for durability, minecraft:behavior.melee_attack for combat, or minecraft:rideable for mounts.",
   "title": "Entity Component Definitions",
-  "dataVersion": "1.26.50"
+  "dataVersion": "1.26.60"
 }

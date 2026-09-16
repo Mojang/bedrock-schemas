@@ -26,8 +26,5 @@
       "description": "Controls whether the grass will use a custom tint color or a noise based tint color.",
       "type": "object"
     }
-  },
-  "required": [
-    "grass"
-  ]
+  }
 }

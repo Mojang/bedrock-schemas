@@ -39,6 +39,14 @@ export default interface MinecraftAnnotationBreakDoor {
    * The minimum difficulty that the world must be on for this entity to
    * break doors.
    */
-  min_difficulty?: string;
+  min_difficulty?: MinecraftAnnotationBreakDoorMinDifficulty| string;
 
+}
+
+
+export enum MinecraftAnnotationBreakDoorMinDifficulty {
+  easy = `easy`,
+  hard = `hard`,
+  normal = `normal`,
+  peaceful = `peaceful`
 }

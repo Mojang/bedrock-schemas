@@ -75,140 +75,10 @@
         },
         {
           "description": "\n\nProperties:\n• origin = [-8,0,-8]\n• size = [16,16,16]",
-          "type": "object",
-          "properties": {
-            "origin": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "number"
-                  }
-                },
-                {
-                  "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
-                  "type": "object",
-                  "properties": {
-                    "x": {
-                      "title": "X",
-                      "type": "number",
-                      "default": 0
-                    },
-                    "y": {
-                      "title": "Y",
-                      "type": "number",
-                      "default": 0
-                    },
-                    "z": {
-                      "title": "Z",
-                      "type": "number",
-                      "default": 0
-                    }
-                  },
-                  "defaultSnippets": [
-                    {
-                      "label": "Origin (object)",
-                      "description": "Use Origin as an object",
-                      "body": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                      }
-                    }
-                  ]
-                }
-              ],
-              "title": "Origin",
-              "description": "Minimal position of the bounds of the collision box.",
-              "defaultSnippets": [
-                {
-                  "label": "Origin (object)",
-                  "description": "Use Origin as an object",
-                  "body": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                  }
-                }
-              ]
-            },
-            "size": {
-              "anyOf": [
-                {
-                  "type": "array",
-                  "items": {
-                    "type": "number"
-                  }
-                },
-                {
-                  "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
-                  "type": "object",
-                  "properties": {
-                    "x": {
-                      "title": "X",
-                      "type": "number",
-                      "default": 0
-                    },
-                    "y": {
-                      "title": "Y",
-                      "type": "number",
-                      "default": 0
-                    },
-                    "z": {
-                      "title": "Z",
-                      "type": "number",
-                      "default": 0
-                    }
-                  },
-                  "defaultSnippets": [
-                    {
-                      "label": "Size (object)",
-                      "description": "Use Size as an object",
-                      "body": {
-                        "x": 0,
-                        "y": 0,
-                        "z": 0
-                      }
-                    }
-                  ]
-                }
-              ],
-              "title": "Size",
-              "description": "Size of each side of the collision box.",
-              "defaultSnippets": [
-                {
-                  "label": "Size (object)",
-                  "description": "Use Size as an object",
-                  "body": {
-                    "x": 0,
-                    "y": 0,
-                    "z": 0
-                  }
-                }
-              ]
-            }
+          "type": "array",
+          "items": {
+            "$ref": "./block_bounding_box_data.schema.json"
           },
-          "defaultSnippets": [
-            {
-              "label": "Collision Box (object)",
-              "description": "Information for the collision box.",
-              "body": {
-                "origin": [
-                  -8,
-                  0,
-                  -8
-                ],
-                "size": [
-                  16,
-                  16,
-                  16
-                ]
-              }
-            }
-          ]
-        },
-        {
-          "type": "object",
           "maxLength": 16,
           "x-runtime-constraint-description": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
         }
@@ -216,22 +86,6 @@
       "title": "Minecraft Collision Box",
       "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.",
       "defaultSnippets": [
-        {
-          "label": "Collision Box (object)",
-          "description": "Information for the collision box.",
-          "body": {
-            "origin": [
-              -8,
-              0,
-              -8
-            ],
-            "size": [
-              16,
-              16,
-              16
-            ]
-          }
-        },
         {
           "label": "Minecraft Collision Box: true (enable)",
           "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.",

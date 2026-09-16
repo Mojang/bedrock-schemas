@@ -33,7 +33,7 @@ Player - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Spell Effects (minecraft:spell_effects)
+ * Entity Spell Effects (minecraft:spell_effects)
  * Allows an entity to add or remove status effects from itself.
  * Similarly to `addrider`, this component performs a one-time operation
  * on the entity when added. Removing the component will not change
@@ -56,44 +56,17 @@ export default interface MinecraftSpellEffects {
    * Player: [{"display_on_screen_animation":true,"duration":30,"effect":"raid_omen"}]
    *
    */
-  add_effects?: MinecraftSpellEffectsAddEffects[];
+  add_effects?: object[];
 
   /**
    * @remarks
-   * List of identifiers of effects to be removed from this entity after
-   * adding this component
+   * The identifiers of effects to remove from the entity after adding
+   * this component.
    * 
    * Sample Values:
    * Player: "bad_omen"
    *
    */
-  remove_effects?: string;
-
-}
-
-
-/**
- * List of effects to add to this entity after adding this
- * component.
- */
-export interface MinecraftSpellEffectsAddEffects {
-
-  /**
-   * @remarks
-   * Whether to show a screen animation when this effect is 
-   * applied.
-   */
-  display_on_screen_animation?: boolean;
-
-  duration?: number;
-
-  /**
-   * @remarks
-   * Effect to add to this entity. Includes 'duration' in seconds,
-   * 'amplifier' level, 'ambient' if it is to be considered an
-   * ambient effect, and 'visible' if the effect should be 
-   * visible
-   */
-  effect?: string;
+  remove_effects?: string[];
 
 }

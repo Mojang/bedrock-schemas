@@ -69,7 +69,7 @@ Sniffer - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Healable (minecraft:healable)
+ * Entity Healable (minecraft:healable)
  * How entities heal.
  * Note: From 1.21.130, each entry in `items` accepts an optional
  * `result_item` field. On a successful heal, the consumed item is
@@ -109,72 +109,44 @@ export default interface MinecraftHealable {
    * Parrot: [{"effects":[{"amplifier":0,"chance":1,"duration":1000,"name":"fatal_poison"}],"heal_amount":0,"item":"cookie"}]
    *
    */
-  items?: MinecraftHealableItems[];
+  items?: object[];
 
 }
 
 
 /**
- * The array of items that can be used to heal this entity.
+ * Filters (filters)
  */
-export interface MinecraftHealableItems {
-
-  effects?: MinecraftHealableItemsEffects[];
+export interface MinecraftHealableFilters {
 
   /**
    * @remarks
-   * The amount of health this entity gains when fed this item.
+   * The domain the test should be performed in.
    */
-  heal_amount?: number;
+  domain?: object;
 
   /**
    * @remarks
-   * Item identifier that can be used to heal this entity.
+   * The comparison to apply with 'value'.
    */
-  item?: string;
-
-}
-
-
-/**
- * Effects (effects)
- */
-export interface MinecraftHealableItemsEffects {
+  operator?: object;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Parrot: 0
-   *
+   * The subject of this filter test.
    */
-  amplifier?: number;
+  subject?: object;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Parrot: 1
-   *
+   * The name of the test to apply.
    */
-  chance?: number;
+  test: string;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Parrot: 1000
-   *
+   * The value being compared with the test.
    */
-  duration?: number;
-
-  /**
-   * @remarks
-   * 
-   * Sample Values:
-   * Parrot: "fatal_poison"
-   *
-   */
-  name?: string;
+  value?: object;
 
 }

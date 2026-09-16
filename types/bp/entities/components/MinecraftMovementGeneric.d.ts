@@ -20,7 +20,7 @@ Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 import * as jsoncommon from '../../../common';
 
 /**
- * Generic Movement (minecraft:movement.generic)
+ * Entity Generic Movement (minecraft:movement.generic)
  * This move control allows a mob to fly, swim, climb, etc.
  */
 export default interface MinecraftMovementGeneric {

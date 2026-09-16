@@ -57,6 +57,34 @@
       "dataType": "floatRange",
       "minValue": -50,
       "maxValue": 50,
+      "defaultValue": {
+        "max": 0,
+        "min": 0
+      },
+      "alternates": [
+        {
+          "id": "damage",
+          "dataType": "object",
+          "subForm": {
+            "id": "damage",
+            "title": "Damage",
+            "fields": [
+              {
+                "id": "max",
+                "title": "Max",
+                "dataType": "float",
+                "defaultValue": 0
+              },
+              {
+                "id": "min",
+                "title": "Min",
+                "dataType": "float",
+                "defaultValue": 0
+              }
+            ]
+          }
+        }
+      ],
       "title": "Damage"
     },
     {
@@ -78,10 +106,12 @@
       "id": "effect_name",
       "description": "Identifier of the status ailment to apply to an entity attacked by this entity's melee attack.",
       "dataType": "string",
+      "defaultValue": "",
       "title": "Effect Name"
     }
   ],
-  "title": "Attack",
+  "title": "Entity Attack",
   "samples": {},
-  "id": "minecraft:attack"
+  "id": "minecraft:attack",
+  "dataVersion": "1.26.60"
 }

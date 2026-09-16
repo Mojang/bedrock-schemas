@@ -8,7 +8,7 @@
     "minecraft:tree_feature": {
       "$ref": "./tree_feature.schema.json",
       "title": "Tree Feature",
-      "description": "\n\nProperties:\n• acacia_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• cherry_trunk ({ branches, trunk_height })\n• fallen_trunk ({ trunk_decoration })\n• mangrove_trunk ({ trunk_decoration, trunk_width, trunk_height, ... })\n• mega_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• trunk ({ trunk_decoration, can_be_submerged })\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• ... and 19 more properties",
+      "description": "\n\nProperties:\n• acacia_trunk ({ branches, trunk_decoration, trunk_width, ... })\n• cherry_trunk ({ branches, trunk_height })\n• fallen_trunk ({ trunk_decoration })\n• mangrove_trunk ({ trunk_decoration, trunk_width, trunk_height, ... })\n• mega_trunk ({ branches, trunk_decoration, trunk_height })\n• trunk ({ trunk_decoration, can_be_submerged })\n• canopy ({ canopy_decoration, canopy_offset, min_width, ... })\n• mangrove_canopy\n• ... and 19 more properties",
       "defaultSnippets": [
         {
           "label": "Tree Feature",

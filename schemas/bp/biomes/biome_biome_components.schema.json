@@ -56,8 +56,7 @@
           "label": "Biome Map Tints",
           "description": "Sets the color grass and foliage will be tinted by in this biome on the map.",
           "body": {
-            "foliage": "",
-            "grass": ""
+            "foliage": ""
           }
         }
       ]

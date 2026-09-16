@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Skip Movement (minecraft:movement.skip)
+ * Entity Skip Movement (minecraft:movement.skip)
  * This move control causes the mob to hop as it moves.
  */
 export default interface MinecraftMovementSkip {

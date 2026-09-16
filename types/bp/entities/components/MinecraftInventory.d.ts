@@ -15,47 +15,48 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Inventory (minecraft:inventory)
+ * Entity Inventory (minecraft:inventory)
  * Defines this entity's inventory properties.
  */
 export default interface MinecraftInventory {
 
   /**
    * @remarks
-   * Number of slots that this entity can gain per extra strength
+   * Number of slots that this entity can gain per extra 
+   * strength.
    */
   additional_slots_per_strength?: number;
 
   /**
    * @remarks
    * If true, the contents of this inventory can be removed by a
-   * hopper
+   * hopper.
    */
   can_be_siphoned_from?: boolean;
 
   /**
    * @remarks
    * Type of container this entity has. Can be horse, minecart_chest, chest_boat,
-   * minecart_hopper, inventory, container or hopper
+   * minecart_hopper, inventory, container or hopper.
    */
   container_type?: string;
 
   /**
    * @remarks
-   * Number of slots the container has
+   * Number of slots the container has.
    */
   inventory_size?: number;
 
   /**
    * @remarks
-   * If true, the entity will not drop its inventory on death
+   * If true, the entity will not drop its inventory on death.
    */
   private?: boolean;
 
   /**
    * @remarks
    * If true, the entity's inventory can only be accessed by its
-   * owner or itself
+   * owner or itself.
    */
   restrict_to_owner?: boolean;
 

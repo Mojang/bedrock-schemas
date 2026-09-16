@@ -17,26 +17,26 @@
       "id": "max_turn",
       "title": "Max Turn",
       "description": "The maximum number in degrees the mob can turn per tick.",
-      "defaultValue": 30,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 30
     },
     {
       "id": "sway_amplitude",
       "title": "Sway Amplitude",
       "description": "Strength of the sway movement.",
-      "defaultValue": 0.05,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 0.05000000074505806
     },
     {
       "id": "sway_frequency",
       "title": "Sway Frequency",
       "description": "Multiplier for the frequency of the sway movement.",
-      "defaultValue": 0.5,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 0.5
     }
   ],
   "description": "This move control causes the mob to sway side to side giving the impression it is swimming.",
-  "title": "Sway Movement",
+  "title": "Entity Sway Movement",
   "samples": {
     "/vanilla/behavior_pack/entities/elder_guardian.json": [
       {
@@ -51,5 +51,6 @@
       }
     ]
   },
-  "id": "minecraft:movement.sway"
+  "id": "minecraft:movement.sway",
+  "dataVersion": "1.26.60"
 }

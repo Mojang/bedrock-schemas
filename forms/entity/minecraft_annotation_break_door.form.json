@@ -51,7 +51,25 @@
       "description": "The minimum difficulty that the world must be on for this entity to break doors.",
       "dataType": "stringLookup",
       "lookupId": "difficulty",
-      "defaultValue": "hard"
+      "defaultValue": "hard",
+      "choices": [
+        {
+          "id": "easy",
+          "title": "Easy"
+        },
+        {
+          "id": "hard",
+          "title": "Hard"
+        },
+        {
+          "id": "normal",
+          "title": "Normal"
+        },
+        {
+          "id": "peaceful",
+          "title": "Peaceful"
+        }
+      ]
     }
   ],
   "samples": {
@@ -62,5 +80,6 @@
       }
     ]
   },
-  "id": "minecraft:annotation.break_door"
+  "id": "minecraft:annotation.break_door",
+  "dataVersion": "1.26.60"
 }

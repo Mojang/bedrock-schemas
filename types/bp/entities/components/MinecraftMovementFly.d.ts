@@ -20,7 +20,7 @@ Parrot - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Fly Movement (minecraft:movement.fly)
+ * Entity Fly Movement (minecraft:movement.fly)
  * This move control causes the mob to fly.
  */
 export default interface MinecraftMovementFly {

@@ -67,14 +67,16 @@ Cushion - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "seat_count": 1,
   "interact_text": "action.interact.ride.cushion",
   "dismount_mode": "on_top_center",
-  "seats": {
-    "position": [
-      0,
-      0.1875,
-      0
-    ],
-    "rotate_rider_by": -90
-  }
+  "seats": [
+    {
+      "position": [
+        0,
+        0.0625,
+        0
+      ],
+      "rotate_rider_by": -90
+    }
+  ]
 }
 
 
@@ -87,13 +89,15 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
     "player"
   ],
   "interact_text": "action.interact.mount",
-  "seats": {
-    "position": [
-      0,
-      1.17,
-      -0.3
-    ]
-  }
+  "seats": [
+    {
+      "position": [
+        0,
+        1.17,
+        -0.3
+      ]
+    }
+  ]
 }
 
  * At /minecraft:entity/component_groups/minecraft:llama_tamed/minecraft:rideable/: 
@@ -104,13 +108,15 @@ Llama - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/ent
     "player"
   ],
   "interact_text": "action.interact.ride.horse",
-  "seats": {
-    "position": [
-      0,
-      1.17,
-      -0.3
-    ]
-  }
+  "seats": [
+    {
+      "position": [
+        0,
+        1.17,
+        -0.3
+      ]
+    }
+  ]
 }
 
 
@@ -134,7 +140,7 @@ Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/
 import * as jsoncommon from '../../../common';
 
 /**
- * Rideable (minecraft:rideable)
+ * Entity Rideable (minecraft:rideable)
  * This entity can be ridden.
  */
 export default interface MinecraftRideable {
@@ -172,7 +178,7 @@ export default interface MinecraftRideable {
    * Cushion: "on_top_center"
    *
    */
-  dismount_mode?: string;
+  dismount_mode?: MinecraftRideableDismountMode| string;
 
   /**
    * @remarks
@@ -274,7 +280,7 @@ export default interface MinecraftRideable {
    * Cow: {"position":[0,1,0]}, {"position":[0,1.15,0]}
    *
    */
-  seats?: MinecraftRideableSeats[];
+  seats?: object[];
 
 }
 
@@ -282,41 +288,4 @@ export default interface MinecraftRideable {
 export enum MinecraftRideableDismountMode {
   default = `default`,
   onTopCenter = `on_top_center`
-}
-
-
-/**
- */
-export interface MinecraftRideableSeats {
-
-  /**
-   * @remarks
-   * Adds springiness to camera movement when the camera moves back to
-   * its radius after being pushed closer to the player by an
-   * obstacle.
-   */
-  camera_relax_distance_smoothing?: number;
-
-  /**
-   * @remarks
-   * Angle in degrees to rotate the rider by. Can be a number or a
-   * Molang expression.
-   */
-  lock_rider_rotation?: string;
-
-  /**
-   * @remarks
-   * Offset to rotate riders by. Can be a number or a Molang 
-   * expression.
-   */
-  rotate_rider_by?: string;
-
-  /**
-   * @remarks
-   * Camera radius to use for this seat when in third person or
-   * third person front camera. Overrides the default third-person camera
-   * distance for riders in this seat.
-   */
-  third_person_camera_radius?: number;
-
 }

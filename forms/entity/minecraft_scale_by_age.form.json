@@ -17,18 +17,19 @@
       "id": "end_scale",
       "title": "End Scale",
       "description": "Ending scale of the entity when it's fully grown.",
-      "defaultValue": 1,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 1
     },
     {
       "id": "start_scale",
       "title": "Start Scale",
       "description": "Initial scale of the newborn entity.",
-      "defaultValue": 1,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 1
     }
   ],
   "description": "Defines the entity's size interpolation based on the entity's age.",
-  "title": "Scale By Age",
-  "id": "minecraft:scale_by_age"
+  "title": "Entity Scale By Age",
+  "id": "minecraft:scale_by_age",
+  "dataVersion": "1.26.60"
 }

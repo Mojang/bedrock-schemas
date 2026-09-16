@@ -36,7 +36,7 @@
     }
   ],
   "description": "This move control causes the mob to fly.",
-  "title": "Fly Movement",
+  "title": "Entity Fly Movement",
   "samples": {
     "/vanilla/behavior_pack/entities/parrot.json": [
       {
@@ -45,5 +45,6 @@
       }
     ]
   },
-  "id": "minecraft:movement.fly"
+  "id": "minecraft:movement.fly",
+  "dataVersion": "1.26.60"
 }

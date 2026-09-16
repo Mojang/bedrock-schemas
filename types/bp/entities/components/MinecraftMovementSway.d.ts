@@ -20,7 +20,7 @@ Elder Guardian - https://github.com/Mojang/bedrock-samples/tree/preview/behavior
 import * as jsoncommon from '../../../common';
 
 /**
- * Sway Movement (minecraft:movement.sway)
+ * Entity Sway Movement (minecraft:movement.sway)
  * This move control causes the mob to sway side to side giving the
  * impression it is swimming.
  */

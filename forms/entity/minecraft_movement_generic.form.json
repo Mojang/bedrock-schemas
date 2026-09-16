@@ -17,12 +17,12 @@
       "id": "max_turn",
       "title": "Max Turn",
       "description": "The maximum number in degrees the mob can turn per tick.",
-      "defaultValue": 30,
-      "dataType": "float"
+      "dataType": "float",
+      "defaultValue": 30
     }
   ],
   "description": "This move control allows a mob to fly, swim, climb, etc.",
-  "title": "Generic Movement",
+  "title": "Entity Generic Movement",
   "samples": {
     "/vanilla/behavior_pack/entities/drowned.json": [
       {
@@ -31,5 +31,6 @@
       }
     ]
   },
-  "id": "minecraft:movement.generic"
+  "id": "minecraft:movement.generic",
+  "dataVersion": "1.26.60"
 }

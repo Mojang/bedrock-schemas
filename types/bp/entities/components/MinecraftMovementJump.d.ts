@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Jump Movement (minecraft:movement.jump)
+ * Entity Jump Movement (minecraft:movement.jump)
  * Move control that causes the mob to jump as it moves with a
  * specified delay between jumps.
  * Note: In order to follow targets, this entity must have the

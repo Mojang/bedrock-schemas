@@ -127,7 +127,7 @@ export { default as MinecraftMovementBasic } from './MinecraftMovementBasic';
 export { default as DolphinMovement } from './DolphinMovement';
 export { default as MinecraftMovementFly } from './MinecraftMovementFly';
 export { default as MinecraftMovementGeneric } from './MinecraftMovementGeneric';
-export { default as GlideMovement } from './GlideMovement';
+export { default as MinecraftMovementGlide } from './MinecraftMovementGlide';
 export { default as MinecraftMovementHover } from './MinecraftMovementHover';
 export { default as MinecraftMovementJump } from './MinecraftMovementJump';
 export { default as MinecraftMovementSkip } from './MinecraftMovementSkip';

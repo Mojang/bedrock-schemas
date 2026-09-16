@@ -1,12 +1,10 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Attack",
+  "title": "Entity Attack",
   "description": "Defines an entity's melee attack damage and any additional status effects applied on hit. Typical damage values range from 3 (zombie, creeper) to 7-21 (iron golem).",
   "properties": {
     "damage": {
-      "title": "Damage",
-      "description": "Range of the random amount of damage the melee attack deals. A negative value can heal the entity instead of hurting it. Can be a number, an array [min, max], or an object with range_min and range_max properties.",
       "oneOf": [
         {
           "type": "number"
@@ -31,10 +29,46 @@
               "description": "Maximum value of the range"
             }
           }
+        },
+        {
+          "description": "\n\nProperties:\n• max (float) = 0\n• min (float) = 0",
+          "type": "object",
+          "properties": {
+            "max": {
+              "title": "Max",
+              "type": "number",
+              "default": 0
+            },
+            "min": {
+              "title": "Min",
+              "type": "number",
+              "default": 0
+            }
+          },
+          "defaultSnippets": [
+            {
+              "label": "Damage (object)",
+              "description": "Use Damage as an object",
+              "body": {
+                "max": 0,
+                "min": 0
+              }
+            }
+          ]
         }
       ],
-      "minimum": -50,
-      "maximum": 50
+      "title": "Damage",
+      "description": "Range of the random amount of damage the melee attack deals. A negative value can heal the entity instead of hurting it. Can be a number, an array [min, max], or an object with range_min and range_max properties.",
+      "defaultSnippets": [
+        {
+          "label": "Damage (object)",
+          "description": "Use Damage as an object",
+          "body": {
+            "max": 0,
+            "min": 0
+          }
+        }
+      ]
     },
     "effect_amplifier": {
       "title": "Effect Amplifier",
@@ -51,7 +85,8 @@
     "effect_name": {
       "title": "Effect Name",
       "description": "Identifier of the status ailment to apply to an entity attacked by this entity's melee attack.",
-      "type": "string"
+      "type": "string",
+      "default": ""
     }
   }
 }

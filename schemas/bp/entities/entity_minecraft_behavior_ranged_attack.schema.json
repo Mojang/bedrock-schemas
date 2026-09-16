@@ -27,7 +27,7 @@
     },
     "attack_range": {
       "title": "Attack Range",
-      "description": "Range of distances from the target within which the entity can perform a ranged attack.\n\nSample values:\n• blaze: {\"min\":0,\"max\":48}\n• drowned: {\"min\":0,\"max\":10}",
+      "description": "Range of distances from the target within which the entity can perform a ranged attack.\n\nSample values:\n• blaze: {\"min\":0,\"max\":48}\n• drowned: {\"min\":0,\"max\":10}\n• llama: {\"max\":64}",
       "anyOf": [
         {
           "type": "number"
@@ -147,7 +147,7 @@
     },
     "attack_radius": {
       "title": "Attack Radius",
-      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• bogged: 15\n• llama: 64",
+      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• bogged: 15",
       "type": "number",
       "default": 0
     },

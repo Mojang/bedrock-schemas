@@ -212,6 +212,20 @@
               "max": 10
             }
           }
+        ],
+        "/vanilla/behavior_pack/entities/llama.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_angry/minecraft:behavior.ranged_attack/",
+            "content": {
+              "max": 64
+            }
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:llama_angry_wolf/minecraft:behavior.ranged_attack/",
+            "content": {
+              "max": 64
+            }
+          }
         ]
       }
     },
@@ -470,16 +484,6 @@
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
             "content": 15
           }
-        ],
-        "/vanilla/behavior_pack/entities/llama.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:llama_angry/minecraft:behavior.ranged_attack/",
-            "content": 64
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:llama_angry_wolf/minecraft:behavior.ranged_attack/",
-            "content": 64
-          }
         ]
       },
       "defaultValue": 0,
@@ -569,7 +573,9 @@
         "path": "/minecraft:entity/component_groups/minecraft:llama_angry/minecraft:behavior.ranged_attack/",
         "content": {
           "priority": 2,
-          "attack_radius": 64,
+          "attack_range": {
+            "max": 64
+          },
           "charge_shoot_trigger": 2,
           "charge_charged_trigger": 1
         }
@@ -578,7 +584,9 @@
         "path": "/minecraft:entity/component_groups/minecraft:llama_angry_wolf/minecraft:behavior.ranged_attack/",
         "content": {
           "priority": 2,
-          "attack_radius": 64,
+          "attack_range": {
+            "max": 64
+          },
           "charge_shoot_trigger": 2,
           "charge_charged_trigger": 1
         }

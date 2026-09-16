@@ -20,7 +20,7 @@ Chest Minecart - https://github.com/Mojang/bedrock-samples/tree/preview/behavior
 import * as jsoncommon from '../../../common';
 
 /**
- * Rail Movement (minecraft:rail_movement)
+ * Entity Rail Movement (minecraft:rail_movement)
  * Defines the entity's movement on the rails. An entity with this
  * component is only allowed to move on the rail.
  */

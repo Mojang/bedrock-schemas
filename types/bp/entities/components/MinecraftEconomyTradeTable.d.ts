@@ -15,108 +15,88 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Economy Trade Table (minecraft:economy_trade_table)
+ * Entity Economy Trade Table (minecraft:economy_trade_table)
  * Defines this entity's ability to trade with players.
  */
 export default interface MinecraftEconomyTradeTable {
 
   /**
    * @remarks
-   * Determines when the mob transforms, if the trades should be
-   * converted when the new mob has a economy_trade_table. When the
-   * trades are converted, the mob will generate a new trade list with
-   * their new trade table, but then it will try to convert any of
-   * the same trades over to have the same enchantments and user data.
-   * For example, if the original has a Emerald to Enchanted Iron
-   * Sword (Sharpness 1), and the new trade also has an Emerald for
-   * Enchanted Iron Sword, then the enchantment will be Sharpness 
-   * 1.
+   * Whether legacy trade data is converted into economy trade 
+   * data.
    */
   convert_trades_economy?: boolean;
 
   /**
    * @remarks
-   * How much should the discount be modified by when the player has
-   * cured the Zombie Villager. Can be specified as a pair of
-   * numbers (When use_legacy_price_formula is true this is the
-   * low-tier trade discount and high-tier trade discount, otherwise it
-   * is the minor positive gossip and major positive gossip.)
+   * Range of cured villager discounts applied to trade prices.
    */
-  cured_discount?: number[];
+  cured_discount?: object;
 
   /**
    * @remarks
-   * Name to be displayed while trading with this entity
+   * The entity localization key used for the trading UI display 
+   * name.
    */
   display_name?: string;
 
   /**
    * @remarks
-   * Used in legacy prices to determine how much should Demand be
-   * modified by when the player has the Hero of the Village mob
-   * effect
+   * Additional demand discount applied while the player has Hero of
+   * the Village.
    */
   hero_demand_discount?: number;
 
   /**
    * @remarks
-   * The max the discount can be modified by when the player has
-   * cured the Zombie Villager. Can be specified as a pair of
-   * numbers (When use_legacy_price_formula is true this is the
-   * low-tier trade discount and high-tier trade discount, otherwise it
-   * is the minor positive gossip and major positive gossip.)
+   * Maximum allowed range for cured villager discounts.
    */
-  max_cured_discount?: number[];
+  max_cured_discount?: object;
 
   /**
    * @remarks
-   * The max the discount can be modified by when the player has
-   * cured a nearby Zombie Villager. Only used when
-   * use_legacy_price_formula is true, otherwise max_cured_discount (low)
-   * is used.
+   * Most negative nearby cured villager discount allowed by legacy
+   * pricing.
    */
   max_nearby_cured_discount?: number;
 
   /**
    * @remarks
-   * How much should the discount be modified by when the player has
-   * cured a nearby Zombie Villager
+   * Nearby cured villager discount step applied by legacy 
+   * pricing.
    */
   nearby_cured_discount?: number;
 
   /**
    * @remarks
-   * Used to determine if trading with entity opens the new trade
-   * screen
+   * Whether this trader uses the newer trade screen 
+   * implementation.
    */
   new_screen?: boolean;
 
   /**
    * @remarks
-   * Determines if the trades should persist when the mob transforms. This
-   * makes it so that the next time the mob is transformed to
-   * something with a trade_table or economy_trade_table, then it
-   * keeps their trades.
+   * Whether generated offers are persisted with the actor save 
+   * data.
    */
   persist_trades?: boolean;
 
   /**
    * @remarks
-   * Show an in game trade screen when interacting with the mob.
+   * Whether interacting with this trader opens the trade screen.
    */
   show_trade_screen?: boolean;
 
   /**
    * @remarks
-   * File path relative to the resource pack root for this entity's 
-   * trades
+   * Path to the trade table JSON that defines available offers.
    */
   table?: string;
 
   /**
    * @remarks
-   * Determines whether the legacy formula is used to determines the
-   * trade prices.
+   * Whether legacy price calculations are used instead of the newer
+   * pricing formula.
    */
   use_legacy_price_formula?: boolean;
 

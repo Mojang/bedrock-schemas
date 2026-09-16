@@ -26,7 +26,7 @@ Xp Orb - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 import * as jsoncommon from '../../../common';
 
 /**
- * Buoyant (minecraft:buoyant)
+ * Entity Buoyant (minecraft:buoyant)
  * Enables an entity to float on the specified liquid blocks.
  * Note: In 1.26.10 the `simulate_waves` boolean was replaced with
  * the `movement_type` string field (`waves` / `bobbing` /
@@ -87,7 +87,7 @@ export default interface MinecraftBuoyant {
    * Xp Orb: ["minecraft:flowing_water","minecraft:water"]
    *
    */
-  liquid_blocks?: string[];
+  liquid_blocks?: MinecraftBuoyantLiquidBlocks[];
 
   /**
    * @remarks
@@ -98,4 +98,25 @@ export default interface MinecraftBuoyant {
    */
   movement_type?: string;
 
+}
+
+
+/**
+ * Liquid Blocks (liquid_blocks)
+ */
+export interface MinecraftBuoyantLiquidBlocks {
+
+  name?: string;
+
+  states?: number;
+
+  tags?: string;
+
+}
+
+
+export enum MinecraftBuoyantMovementType {
+  bobbing = `bobbing`,
+  none = `none`,
+  waves = `waves`
 }

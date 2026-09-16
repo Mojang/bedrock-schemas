@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
-  "title": "Timer",
+  "title": "Entity Timer",
   "description": "Adds a timer after which an event will fire.",
   "properties": {
     "time": {
@@ -37,7 +37,7 @@
     "time_down_event": {
       "anyOf": [
         {
-          "type": "object"
+          "$ref": "./entity_actordefinitiontrigger.schema.json"
         },
         {
           "type": "string"
@@ -63,9 +63,8 @@
       "description": "This is a list of objects, representing one value in seconds that can be picked before firing the event and an optional weight. Incompatible with time.",
       "type": "array",
       "items": {
-        "type": "string"
-      },
-      "default": "[ ]"
+        "$ref": "./entity_timerweightchoiceentry.schema.json"
+      }
     }
   }
 }

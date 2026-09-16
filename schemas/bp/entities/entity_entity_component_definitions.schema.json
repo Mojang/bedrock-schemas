@@ -170,9 +170,13 @@
       "$ref": "./entity_minecraft_attack.schema.json",
       "defaultSnippets": [
         {
-          "label": "Attack",
+          "label": "Entity Attack",
           "description": "Defines an entity's melee attack damage and any additional status effects applied on hit. Typical damage values range from 3 (zombie, creeper) to 7-21 (iron golem).",
           "body": {
+            "damage": {
+              "max": 0,
+              "min": 0
+            },
             "effect_amplifier": 0,
             "effect_duration": 0,
             "effect_name": ""
@@ -619,18 +623,51 @@
       "$ref": "./entity_minecraft_behavior_float_tempt.schema.json",
       "defaultSnippets": [
         {
-          "label": "Float Tempt Behavior",
+          "label": "Entity Float Tempt Behavior",
           "description": "Allows a mob to be tempted by a player holding a specific item. Uses point-to-point movement. Designed for mobs that are floating (e.g. use the \"minecraft:navigation.float\" component).",
           "body": {
             "can_get_scared": false,
             "can_tempt_vertically": false,
             "can_tempt_while_ridden": false,
-            "items": "[]",
+            "control_flags": [],
+            "items": [],
+            "on_tempt_end": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "on_tempt_start": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0,
+            "sound_interval": {
+              "max": 0,
+              "min": 0
+            },
             "speed_multiplier": 1,
             "stop_distance": 1.5,
-            "tempt_sound": "",
-            "within_radius": 0,
-            "priority": 0
+            "tempt_sound": "undefined",
+            "within_radius": 0
           }
         }
       ]
@@ -1485,19 +1522,25 @@
     },
     "minecraft:behavior.panic": {
       "title": "Panic Minecraft Behavior",
-      "description": "Allows the mob to enter the panic state, which makes it run around and away from the damage source that made it enter this state.",
+      "description": "Allows a mob to panic when receiving damage, making it run around and away from the damage source that made it enter this state.",
       "$ref": "./entity_minecraft_behavior_panic.schema.json",
       "defaultSnippets": [
         {
-          "label": "Panic Behavior",
-          "description": "Allows the mob to enter the panic state, which makes it run around and away from the damage source that made it enter this state.",
+          "label": "Entity Panic Behavior",
+          "description": "Allows a mob to panic when receiving damage, making it run around and away from the damage source that made it enter this state.",
           "body": {
-            "damage_sources": "[campfire, fire, fire_tick, freezing, lava, lightning, magma, soul_campfire, temperature, entity_attack, entity_explosion, fireworks, magic, projectile, ram_attack, sonic_boom, wither, mace_smash]",
+            "control_flags": [],
+            "damage_sources": [],
             "force": false,
             "ignore_mob_damage": false,
+            "panic_sound": "undefined",
             "prefer_water": false,
-            "speed_multiplier": 1,
-            "priority": 0
+            "priority": 0,
+            "sound_interval": {
+              "max": 0,
+              "min": 0
+            },
+            "speed_multiplier": 1
           }
         }
       ]
@@ -1903,12 +1946,14 @@
       "$ref": "./entity_minecraft_behavior_send_event.schema.json",
       "defaultSnippets": [
         {
-          "label": "Send Event Behavior",
+          "label": "Entity Send Event Behavior",
           "description": "Allows the mob to send an event to another mob.",
           "body": {
+            "event_choices": [],
+            "control_flags": [],
+            "priority": 0,
             "cast_duration": 0,
-            "look_at_target": true,
-            "priority": 0
+            "look_at_target": true
           }
         }
       ]
@@ -2265,19 +2310,51 @@
       "$ref": "./entity_minecraft_behavior_tempt.schema.json",
       "defaultSnippets": [
         {
-          "label": "Tempt Behavior",
+          "label": "Entity Tempt Behavior",
           "description": "Allows a mob to be tempted by a player holding a specific item. Uses pathfinding for movement.",
           "body": {
-            "sound_interval": 0,
+            "sound_interval": {
+              "max": 0,
+              "min": 0
+            },
             "can_get_scared": false,
             "can_tempt_vertically": false,
             "can_tempt_while_ridden": false,
-            "items": "[]",
+            "control_flags": [],
+            "items": [],
+            "on_tempt_end": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "on_tempt_start": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
+            "priority": 0,
             "speed_multiplier": 1,
             "stop_distance": 1.5,
-            "tempt_sound": "",
-            "within_radius": 0,
-            "priority": 0
+            "tempt_sound": "undefined",
+            "within_radius": 0
           }
         }
       ]
@@ -2496,16 +2573,17 @@
       "$ref": "./entity_minecraft_buoyant.schema.json",
       "defaultSnippets": [
         {
-          "label": "Buoyant",
+          "label": "Entity Buoyant",
           "description": "Enables an entity to float on the specified liquid blocks.",
           "body": {
             "movement_type": "waves",
             "can_auto_step_from_liquid": false,
             "apply_gravity": true,
             "base_buoyancy": 1,
-            "big_wave_probability": 0.03,
+            "big_wave_probability": 0.029999999329447746,
             "big_wave_speed": 10,
-            "drag_down_on_buoyancy_removed": 0
+            "drag_down_on_buoyancy_removed": 0,
+            "liquid_blocks": []
           }
         }
       ]
@@ -2763,12 +2841,20 @@
       "$ref": "./entity_minecraft_economy_trade_table.schema.json",
       "defaultSnippets": [
         {
-          "label": "Economy Trade Table",
+          "label": "Entity Economy Trade Table",
           "description": "Defines this entity's ability to trade with players.",
           "body": {
             "convert_trades_economy": false,
+            "cured_discount": {
+              "max": -20,
+              "min": -25
+            },
             "display_name": "",
             "hero_demand_discount": -4,
+            "max_cured_discount": {
+              "max": -20,
+              "min": -25
+            },
             "max_nearby_cured_discount": -200,
             "nearby_cured_discount": -20,
             "new_screen": false,
@@ -3096,10 +3182,21 @@
       "$ref": "./entity_minecraft_healable.schema.json",
       "defaultSnippets": [
         {
-          "label": "Healable",
+          "label": "Entity Healable",
           "description": "How entities heal",
           "body": {
-            "force_use": false
+            "force_use": false,
+            "filters": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
+            "items": []
           }
         }
       ]
@@ -3269,7 +3366,7 @@
       "$ref": "./entity_minecraft_inventory.schema.json",
       "defaultSnippets": [
         {
-          "label": "Inventory",
+          "label": "Entity Inventory",
           "description": "Defines this entity's inventory properties.",
           "body": {
             "additional_slots_per_strength": 0,
@@ -3589,7 +3686,7 @@
       "$ref": "./entity_minecraft_movement_amphibious.schema.json",
       "defaultSnippets": [
         {
-          "label": "Amphibious Movement",
+          "label": "Entity Amphibious Movement",
           "description": "This move control allows the mob to swim in water and walk on land.",
           "body": {
             "max_turn": 30
@@ -3603,7 +3700,7 @@
       "$ref": "./entity_minecraft_movement_basic.schema.json",
       "defaultSnippets": [
         {
-          "label": "Basic Movement",
+          "label": "Entity Basic Movement",
           "description": "This component accents the movement of an entity.",
           "body": {
             "max_turn": 30
@@ -3622,7 +3719,7 @@
       "$ref": "./entity_minecraft_movement_fly.schema.json",
       "defaultSnippets": [
         {
-          "label": "Fly Movement",
+          "label": "Entity Fly Movement",
           "description": "This move control causes the mob to fly.",
           "body": {
             "max_turn": 30,
@@ -3638,7 +3735,7 @@
       "$ref": "./entity_minecraft_movement_generic.schema.json",
       "defaultSnippets": [
         {
-          "label": "Generic Movement",
+          "label": "Entity Generic Movement",
           "description": "This move control allows a mob to fly, swim, climb, etc.",
           "body": {
             "max_turn": 30
@@ -3648,15 +3745,16 @@
     },
     "minecraft:movement.glide": {
       "title": "Glide Minecraft Movement",
-      "description": "This move control causes the mob to glide.",
+      "description": "Move control for a flying mob that has a gliding movement",
       "$ref": "./entity_minecraft_movement_glide.schema.json",
       "defaultSnippets": [
         {
-          "label": "Glide Movement",
-          "description": "This move control causes the mob to glide.",
+          "label": "Entity Glide Movement",
+          "description": "Move control for a flying mob that has a gliding movement",
           "body": {
             "max_turn": 30,
-            "speed_when_turning": 0.2
+            "speed_when_turning": 0.2,
+            "start_speed": 0.10000000149011612
           }
         }
       ]
@@ -3667,7 +3765,7 @@
       "$ref": "./entity_minecraft_movement_hover.schema.json",
       "defaultSnippets": [
         {
-          "label": "Hover Movement",
+          "label": "Entity Hover Movement",
           "description": "This move control causes the mob to hover.",
           "body": {
             "max_turn": 30
@@ -3681,9 +3779,13 @@
       "$ref": "./entity_minecraft_movement_jump.schema.json",
       "defaultSnippets": [
         {
-          "label": "Jump Movement",
+          "label": "Entity Jump Movement",
           "description": "Move control that causes the mob to jump as it moves with a specified delay between jumps.",
           "body": {
+            "jump_delay": {
+              "max": 0,
+              "min": 0
+            },
             "max_turn": 30
           }
         }
@@ -3695,7 +3797,7 @@
       "$ref": "./entity_minecraft_movement_skip.schema.json",
       "defaultSnippets": [
         {
-          "label": "Skip Movement",
+          "label": "Entity Skip Movement",
           "description": "This move control causes the mob to hop as it moves.",
           "body": {
             "max_turn": 30
@@ -3709,11 +3811,11 @@
       "$ref": "./entity_minecraft_movement_sway.schema.json",
       "defaultSnippets": [
         {
-          "label": "Sway Movement",
+          "label": "Entity Sway Movement",
           "description": "This move control causes the mob to sway side to side giving the impression it is swimming.",
           "body": {
             "max_turn": 30,
-            "sway_amplitude": 0.05,
+            "sway_amplitude": 0.05000000074505806,
             "sway_frequency": 0.5
           }
         }
@@ -4368,6 +4470,7 @@
             "shoot_target": true,
             "should_bounce": "no",
             "splash_range": 4,
+            "spread_fire": true,
             "stop_on_hurt": false,
             "uncertainty_base": 0,
             "uncertainty_multiplier": 0,
@@ -4416,10 +4519,10 @@
       "$ref": "./entity_minecraft_rail_movement.schema.json",
       "defaultSnippets": [
         {
-          "label": "Rail Movement",
+          "label": "Entity Rail Movement",
           "description": "Defines the entity's movement on the rails. An entity with this component is only allowed to move on the rail.",
           "body": {
-            "max_speed": 0.4
+            "max_speed": 0.4000000059604645
           }
         }
       ]
@@ -4485,7 +4588,7 @@
       "$ref": "./entity_minecraft_rideable.schema.json",
       "defaultSnippets": [
         {
-          "label": "Rideable",
+          "label": "Entity Rideable",
           "description": "This entity can be ridden",
           "body": {
             "seat_count": 1,
@@ -4493,11 +4596,15 @@
             "controlling_seat": 0,
             "pulls_in_entities": true,
             "rider_can_interact": false,
+            "on_rider_enter_event": "",
+            "on_rider_exit_event": "",
             "dismount_mode": "default",
+            "seats": [],
+            "family_types": [],
             "interact_text": "",
             "passenger_max_width": 0,
-            "priority": 0,
-            "pull_in_entities": false
+            "pull_in_entities": false,
+            "priority": 0
           }
         }
       ]
@@ -4527,7 +4634,7 @@
       "$ref": "./entity_minecraft_scale_by_age.schema.json",
       "defaultSnippets": [
         {
-          "label": "Scale By Age",
+          "label": "Entity Scale By Age",
           "description": "Defines the entity's size interpolation based on the entity's age.",
           "body": {
             "end_scale": 1,
@@ -4557,13 +4664,14 @@
       "$ref": "./entity_minecraft_shareables.schema.json",
       "defaultSnippets": [
         {
-          "label": "Shareables",
+          "label": "Entity Shareables",
           "description": "Defines a list of items the mob wants to share or pick up. Items can be configured with optional parameters to control pickup, sharing, and inventory behavior.",
           "body": {
             "all_items": false,
             "all_items_max_amount": -1,
             "all_items_surplus_amount": -1,
             "all_items_want_amount": -1,
+            "items": [],
             "singular_pickup": false
           }
         }
@@ -4649,22 +4757,23 @@
       "$ref": "./entity_minecraft_spell_effects.schema.json",
       "defaultSnippets": [
         {
-          "label": "Spell Effects",
+          "label": "Entity Spell Effects",
           "description": "Allows an entity to add or remove status effects from itself. Similarly to `addrider`, this component performs a one-time operation on the entity when added. Removing the component will not change the entity's current effects. Adding different versions of the component multiple times will perform each one in turn. Once the component has been added, it will not provide any further functionality. There is one exception to this behavior: if this component is present on a player, its effects will be re-applied every time the player enters the world. To avoid this, remove the component shortly after adding it, or add an empty component to replace it.",
           "body": {
-            "remove_effects": ""
+            "add_effects": [],
+            "remove_effects": []
           }
         }
       ]
     },
     "minecraft:strength": {
       "title": "Minecraft Strength",
-      "description": "Defines the entity's strength to carry items.",
+      "description": "Defines the strength of this entity.",
       "$ref": "./entity_minecraft_strength.schema.json",
       "defaultSnippets": [
         {
-          "label": "Strength",
-          "description": "Defines the entity's strength to carry items.",
+          "label": "Entity Strength",
+          "description": "Defines the strength of this entity.",
           "body": {
             "max": 5,
             "value": 1
@@ -4747,11 +4856,11 @@
       "$ref": "./entity_minecraft_teleport.schema.json",
       "defaultSnippets": [
         {
-          "label": "Teleport",
+          "label": "Entity Teleport",
           "description": "Defines an entity's teleporting behavior.",
           "body": {
-            "dark_teleport_chance": 0.01,
-            "light_teleport_chance": 0.01,
+            "dark_teleport_chance": 0.009999999776482582,
+            "light_teleport_chance": 0.009999999776482582,
             "max_random_teleport_time": 20,
             "min_random_teleport_time": 0,
             "random_teleport_cube": [
@@ -4789,12 +4898,26 @@
       "$ref": "./entity_minecraft_timer.schema.json",
       "defaultSnippets": [
         {
-          "label": "Timer",
+          "label": "Entity Timer",
           "description": "Adds a timer after which an event will fire.",
           "body": {
+            "time_down_event": {
+              "event": "",
+              "filters": {
+                "AND": null,
+                "NOT": null,
+                "OR": null,
+                "all": null,
+                "all_of": null,
+                "any": null,
+                "any_of": null,
+                "none_of": null
+              },
+              "target": "self"
+            },
             "looping": true,
             "randomInterval": true,
-            "random_time_choices": "[ ]"
+            "random_time_choices": []
           }
         }
       ]
@@ -4824,14 +4947,27 @@
     },
     "minecraft:trail": {
       "title": "Minecraft Trail",
-      "description": "Causes an entity to leave a trail of blocks as it moves about the world.",
+      "description": "Causes an entity to leave a trail of blocks as it moves about the world. Obeys Mob Griefing rules.",
       "$ref": "./entity_minecraft_trail.schema.json",
       "defaultSnippets": [
         {
-          "label": "Trail",
-          "description": "Causes an entity to leave a trail of blocks as it moves about the world.",
+          "label": "Entity Trail",
+          "description": "Causes an entity to leave a trail of blocks as it moves about the world. Obeys Mob Griefing rules.",
           "body": {
             "block_type": "air",
+            "force_replace_matched_blocks": false,
+            "radius": -1,
+            "replaceable_blocks": [],
+            "spawn_filter": {
+              "AND": null,
+              "NOT": null,
+              "OR": null,
+              "all": null,
+              "all_of": null,
+              "any": null,
+              "any_of": null,
+              "none_of": null
+            },
             "spawn_offset": [
               0,
               0,
@@ -4847,17 +4983,30 @@
       "$ref": "./entity_minecraft_transformation.schema.json",
       "defaultSnippets": [
         {
-          "label": "Transformation",
+          "label": "Entity Transformation",
           "description": "Defines an entity's transformation from the current definition into another",
           "body": {
-            "begin_transform_sound": "",
+            "delay": {
+              "block_assist_chance": 0,
+              "block_chance": 0,
+              "block_max": 0,
+              "block_radius": 0,
+              "block_types": [],
+              "range_max": 0,
+              "range_min": 0,
+              "value": 0
+            },
+            "add": {
+              "component_groups": []
+            },
+            "begin_transform_sound": [],
             "drop_equipment": false,
             "drop_inventory": false,
             "into": "",
             "keep_level": false,
             "keep_owner": false,
             "preserve_equipment": false,
-            "transformation_sound": ""
+            "transformation_sound": []
           }
         }
       ]
@@ -7487,7 +7636,21 @@
     },
     "minecraft:dash_action": {
       "title": "Minecraft Dash Action",
-      "type": "object"
+      "description": "Ability for a rideable entity to dash.",
+      "$ref": "./entity_minecraft_dash_action.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Entity Dash Action",
+          "description": "Ability for a rideable entity to dash.",
+          "body": {
+            "can_dash_underwater": false,
+            "cooldown_time": 1,
+            "direction": "entity",
+            "horizontal_momentum": 1,
+            "vertical_momentum": 1
+          }
+        }
+      ]
     },
     "minecraft:free_camera_controlled": {
       "title": "Minecraft Free Camera Controlled",
@@ -7543,6 +7706,7 @@
     },
     "minecraft:pushable_by_block": {
       "title": "Minecraft Pushable By Block",
+      "description": "Allows the entity to be pushed by certain blocks, like Shulker Boxes and Pistons.",
       "type": "object"
     },
     "minecraft:pushable_by_entity": {

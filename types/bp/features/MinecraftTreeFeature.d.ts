@@ -1604,12 +1604,6 @@ export interface MinecraftTreeFeatureMegaTrunk {
    */
   trunk_height: MinecraftTreeFeatureMegaTrunkTrunkHeight;
 
-  /**
-   * @remarks
-   * The width of the tree trunk.
-   */
-  trunk_width: number;
-
 }
 
 

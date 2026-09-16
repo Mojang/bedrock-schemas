@@ -79,7 +79,7 @@
           "description": "Freezes nearby water blocks to ice in a configurable volume around the impact (Education Edition chemistry feature).",
           "body": {
             "shape": "cube",
-            "size": 0,
+            "size": 1,
             "snap_to_block": false
           }
         }

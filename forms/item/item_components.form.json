@@ -530,7 +530,7 @@
     {
       "id": "minecraft:swing_sounds",
       "title": "Minecraft Swing Sounds",
-      "description": "Overrides the swing sounds emitted by the user.",
+      "description": "Overrides the swing sounds emitted by the user. Each field accepts the name of any sound event defined in `sound_definitions.json`, including the built-in vanilla sound events.",
       "dataType": "object",
       "subFormId": "item/minecraft_swing_sounds"
     },
@@ -589,5 +589,5 @@
   ],
   "description": "List of all components used in this item.",
   "title": "Item Components",
-  "dataVersion": "1.26.30"
+  "dataVersion": "1.26.50"
 }

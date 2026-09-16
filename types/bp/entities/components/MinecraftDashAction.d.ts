@@ -15,21 +15,20 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Dash Action (minecraft:dash_action)
+ * Entity Dash Action (minecraft:dash_action)
  * Ability for a rideable entity to dash.
  */
 export default interface MinecraftDashAction {
 
   /**
    * @remarks
-   * Whether the entity can dash underwater. Default value is 
-   * false.
+   * Whether the entity can dash underwater
    */
   can_dash_underwater?: boolean;
 
   /**
    * @remarks
-   * The dash cooldown in seconds. Default value is 1.000000.
+   * The dash cooldown in seconds
    */
   cooldown_time?: number;
 
@@ -42,7 +41,7 @@ export default interface MinecraftDashAction {
    * be applied in the direction the controlling passenger is
    * looking, using the passenger's pitch and yaw.
    */
-  direction?: string;
+  direction?: MinecraftDashActionDirection;
 
   /**
    * @remarks
@@ -56,4 +55,10 @@ export default interface MinecraftDashAction {
    */
   vertical_momentum?: number;
 
+}
+
+
+export enum MinecraftDashActionDirection {
+  entity = `entity`,
+  passenger = `passenger`
 }

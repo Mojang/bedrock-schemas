@@ -17,19 +17,20 @@
       "id": "max",
       "title": "Max",
       "description": "The maximum strength of this entity",
-      "defaultValue": 5,
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 5
     },
     {
       "id": "value",
       "title": "Value",
       "description": "The initial value of the strength",
-      "defaultValue": 1,
-      "dataType": "int"
+      "dataType": "int",
+      "defaultValue": 1
     }
   ],
-  "description": "Defines the entity's strength to carry items.",
-  "title": "Strength",
+  "description": "Defines the strength of this entity.",
+  "title": "Entity Strength",
   "samples": {},
-  "id": "minecraft:strength"
+  "id": "minecraft:strength",
+  "dataVersion": "1.26.60"
 }

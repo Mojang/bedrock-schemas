@@ -15,7 +15,7 @@
 import * as jsoncommon from '../../../common';
 
 /**
- * Teleport (minecraft:teleport)
+ * Entity Teleport (minecraft:teleport)
  * Defines an entity's teleporting behavior.
  */
 export default interface MinecraftTeleport {
@@ -52,7 +52,7 @@ export default interface MinecraftTeleport {
    * attempt to teleport. If omitted, all projectiles cause a
    * teleport attempt
    */
-  projectile_filter?: jsoncommon.MinecraftFilter;
+  projectile_filter?: object;
 
   /**
    * @remarks
