@@ -80,6 +80,16 @@ Point any JSON Schema-aware tool at the schema files:
 
 For full Minecraft Bedrock Edition creator documentation, visit [learn.microsoft.com/minecraft/creator](https://learn.microsoft.com/minecraft/creator/).
 
+## Releases
+
+Retail and Preview releases share the package name `@minecraft/bedrock-schemas`.
+GitHub release tags and npm package versions use different formats:
+
+| Channel | GitHub release tag | npm version | npm tag |
+| --- | --- | --- | --- |
+| Retail release | `vX.Y.Z.W` | `X.Y.Z` | `latest` |
+| Preview prerelease | `vX.Y.Z.W-preview` | `X.Y.Z-beta.N` | `beta` |
+
 ## Contributing
 
 This package is automatically generated, so directly contributing to this GitHub repo is not generally possible. If you have questions or issues, please open an issue on [GitHub](https://github.com/Mojang/bedrock-schemas/issues).
