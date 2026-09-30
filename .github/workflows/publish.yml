@@ -3,37 +3,43 @@ name: Publish to npm
 on:
   release:
     types: [published]
-  workflow_dispatch:
 
 permissions:
   contents: read
   id-token: write
 
+concurrency:
+  group: npm-publish-${{ github.event.release.prerelease && 'beta' || 'latest' }}
+  cancel-in-progress: false
+
 jobs:
   publish:
+    if: github.event_name == 'release' && github.event.action == 'published' && github.event.release.draft == false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
 
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
           registry-url: https://registry.npmjs.org
+
+      - name: Check release and package channel
+        id: channel
+        run: node scripts/check-publish-channel.mjs
+
+      - name: Ensure npm supports trusted publishing
+        run: npm install --global npm@11.6.0
 
       - run: npm ci
 
+      - run: node --test scripts/check-publish-channel.test.mjs
+
       - run: npm run validate
 
-      - name: Determine npm tag
-        id: npm-tag
-        shell: bash
-        run: |
-          VERSION=$(node -p "require('./package.json').version")
-          if [[ "$VERSION" == *-* ]]; then
-            echo "tag=${VERSION#*-}" | sed 's/\..*//' >> "$GITHUB_OUTPUT"
-          else
-            echo "tag=latest" >> "$GITHUB_OUTPUT"
-          fi
+      - run: npm pack --dry-run --ignore-scripts
 
-      - run: npm publish --provenance --access public --tag ${{ steps.npm-tag.outputs.tag }}
+      - name: Publish the release channel
+        run: npm publish --provenance --access public --tag ${{ steps.channel.outputs.tag }}
