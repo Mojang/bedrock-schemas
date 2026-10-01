@@ -17,6 +17,7 @@
     {
       "id": "identifier",
       "title": "Identifier",
+      "description": "The namespaced identifier for the custom dimension.",
       "dataType": "string",
       "isRequired": true
     }

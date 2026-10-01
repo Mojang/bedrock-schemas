@@ -80,7 +80,7 @@
             "$ref": "./block_bounding_box_data.schema.json"
           },
           "maxLength": 16,
-          "x-runtime-constraint-description": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
+          "x-runtime-constraint-description": "The area covered by all boxes must be within Vec3(0,0,0) to Vec3(16,24,16)"
         }
       ],
       "title": "Minecraft Collision Box",
@@ -375,29 +375,19 @@
           "type": "string"
         },
         {
-          "description": "\n\nProperties:\n• bone_visibility = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
+          "description": "\n\nProperties:\n• bone_visibility (object) = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
           "type": "object",
           "properties": {
             "bone_visibility": {
               "anyOf": [
                 {
+                  "type": "object"
+                },
+                {
                   "type": "object",
                   "additionalProperties": {
-                    "type": "string"
+                    "type": "boolean"
                   }
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "description": "\n\nProperties:\n• expression (string)\n• version (int)",
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "../../common/expression.schema.json"
-                  }
-                },
-                {
-                  "type": "number"
                 }
               ],
               "title": "Bone Visibility",
@@ -1012,6 +1002,21 @@
       "description": "[DEPRECATED] \n\n*⚠️ Deprecated*",
       "type": "object",
       "deprecated": true
+    },
+    "minecraft:vibration_properties": {
+      "title": "Minecraft Vibration Properties",
+      "description": "\n\nProperties:\n• damper_vibrations (boolean) = false\n• occlude_vibrations (boolean) = false",
+      "$ref": "./block_vibration_properties.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Vibration Properties",
+          "description": "Create a Block Vibration Properties",
+          "body": {
+            "damper_vibrations": false,
+            "occlude_vibrations": false
+          }
+        }
+      ]
     }
   }
 }

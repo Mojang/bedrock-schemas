@@ -173,6 +173,9 @@ export default interface MinecraftRideable {
    * found.
 - "on_top_center", riders are placed at the center of
    * the top of the entity's collision box.
+- "look_direction", riders
+   * are placed at the center of the top neighboring block in the
+   * riders look direction on a block that is not lava.
    * 
    * Sample Values:
    * Cushion: "on_top_center"
@@ -287,5 +290,6 @@ export default interface MinecraftRideable {
 
 export enum MinecraftRideableDismountMode {
   default = `default`,
-  onTopCenter = `on_top_center`
+  onTopCenter = `on_top_center`,
+  lookDirection = `look_direction`
 }

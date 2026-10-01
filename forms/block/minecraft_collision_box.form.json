@@ -48,24 +48,24 @@
   "note2": "Supports an array of collision boxes (for multi-part collision shapes) and a maximum collision box height of 24 units (up from 16). Available without the Upcoming Creator Features experiment and without the format_version 1.21.130 requirement starting in 1.26.0.",
   "fields": [
     {
-      "id": "origin",
-      "title": "Origin",
-      "description": "Minimal position of the bounds of the collision box. \"origin\" is specified as [x, y, z] and must be in the range (-8, 0, -8) to (8, 24, 8), inclusive.",
-      "defaultValue": [
-        -8,
-        0,
-        -8
-      ],
-      "dataType": "point3"
-    },
-    {
-      "id": "size",
-      "title": "Size",
-      "description": "Size of each side of the collision box. Size is specified as [x, y, z]. \"origin\" + \"size\" must be in the range (-8, 0, -8) to (8, 24, 8), inclusive.",
+      "id": "max",
+      "title": "Max",
+      "description": "Maximum position of the bounds of the collision box. \"max\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive.",
       "defaultValue": [
         16,
         24,
         16
+      ],
+      "dataType": "point3"
+    },
+    {
+      "id": "min",
+      "title": "Min",
+      "description": "Minimal position of the bounds of the collision box. \"min\" is specified as [x, y, z] and must be in the range (0, 0, 0) to (16, 24, 16), inclusive.",
+      "defaultValue": [
+        0,
+        0,
+        0
       ],
       "dataType": "point3"
     }

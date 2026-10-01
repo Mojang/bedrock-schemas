@@ -17,6 +17,7 @@
     {
       "id": "components",
       "title": "Components",
+      "description": "Contains the components that configure the custom dimension.",
       "dataType": "object",
       "subFormId": "dimension/components",
       "isRequired": true
@@ -24,6 +25,7 @@
     {
       "id": "description",
       "title": "Description",
+      "description": "Contains identifying information for the custom dimension.",
       "dataType": "object",
       "subFormId": "dimension/description",
       "isRequired": true

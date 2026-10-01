@@ -75,18 +75,18 @@ export default interface MinecraftCollisionBox {
 
   /**
    * @remarks
-   * Minimal position of the bounds of the collision box. "origin" is
-   * specified as [x, y, z] and must be in the range (-8, 0, -8) to
-   * (8, 24, 8), inclusive.
+   * Maximum position of the bounds of the collision box. "max" is
+   * specified as [x, y, z] and must be in the range (0, 0, 0) to
+   * (16, 24, 16), inclusive.
    */
-  origin?: number[];
+  max?: number[];
 
   /**
    * @remarks
-   * Size of each side of the collision box. Size is specified as
-   * [x, y, z]. "origin" + "size" must be in the range (-8, 0, -8) to
-   * (8, 24, 8), inclusive.
+   * Minimal position of the bounds of the collision box. "min" is
+   * specified as [x, y, z] and must be in the range (0, 0, 0) to
+   * (16, 24, 16), inclusive.
    */
-  size?: number[];
+  min?: number[];
 
 }

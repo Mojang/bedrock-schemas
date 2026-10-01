@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "Block Vibration Properties",
+  "properties": {
+    "damper_vibrations": {
+      "title": "Damper Vibrations",
+      "type": "boolean",
+      "default": false
+    },
+    "occlude_vibrations": {
+      "title": "Occlude Vibrations",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

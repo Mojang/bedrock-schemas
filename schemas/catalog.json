@@ -18,7 +18,7 @@
       "packFolder": "blocks",
       "title": "Block Behavior",
       "description": "A behavior pack block definition document for Minecraft Bedrock Edition. This describes the complete JSON file structure including format_version and the minecraft:block wrapper.",
-      "componentCount": 38
+      "componentCount": 39
     },
     {
       "folder": "bp/items",
