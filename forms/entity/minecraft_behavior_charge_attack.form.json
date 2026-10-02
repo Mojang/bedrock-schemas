@@ -1138,6 +1138,10 @@
           "title": "Hurt.screamer"
         },
         {
+          "id": "ice_ball.break",
+          "title": "Ice ball.break"
+        },
+        {
           "id": "icebomb.hit",
           "title": "Icebomb.hit"
         },

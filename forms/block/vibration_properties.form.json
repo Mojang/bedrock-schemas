@@ -2,8 +2,8 @@
   "id": "Vibration Properties",
   "fields": [
     {
-      "id": "damper_vibrations",
-      "title": "Damper Vibrations",
+      "id": "dampen_vibrations",
+      "title": "Dampen Vibrations",
       "dataType": "boolean",
       "defaultValue": false
     },

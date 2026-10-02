@@ -275,6 +275,11 @@
         }
       ]
     },
+    "minecraft:enchantment_power_transmitter": {
+      "title": "Minecraft Enchantment Power Transmitter",
+      "description": "Describes the enchantment power transmission properties of this block. If set to true and this block is placed in the 1 block gap between an enchantment table and a bookshelf, the enchantment table will remain powered by the bookshelf.",
+      "type": "boolean"
+    },
     "minecraft:entity_fall_on": {
       "title": "Minecraft Entity Fall On",
       "description": "Configures the behavior of an entity falling on this block. The minimum distance in blocks that an actor needs to fall before events are triggered.",
@@ -558,6 +563,22 @@
           "body": {
             "movement_type": "push_pull",
             "sticky": "none"
+          }
+        }
+      ]
+    },
+    "minecraft:neighbor_change": {
+      "title": "Minecraft Neighbor Change",
+      "description": "Configures which neighboring block changes can trigger a block custom component event.",
+      "$ref": "./block_neighbor_change.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Neighbor Change",
+          "description": "Configures which neighboring block changes can trigger a block custom component event.",
+          "body": {
+            "neighbor_directions": [
+              "all"
+            ]
           }
         }
       ]
@@ -1005,14 +1026,14 @@
     },
     "minecraft:vibration_properties": {
       "title": "Minecraft Vibration Properties",
-      "description": "\n\nProperties:\n• damper_vibrations (boolean) = false\n• occlude_vibrations (boolean) = false",
+      "description": "\n\nProperties:\n• dampen_vibrations (boolean) = false\n• occlude_vibrations (boolean) = false",
       "$ref": "./block_vibration_properties.schema.json",
       "defaultSnippets": [
         {
           "label": "Block Vibration Properties",
           "description": "Create a Block Vibration Properties",
           "body": {
-            "damper_vibrations": false,
+            "dampen_vibrations": false,
             "occlude_vibrations": false
           }
         }

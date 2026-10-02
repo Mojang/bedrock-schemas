@@ -546,6 +546,7 @@ export enum MinecraftBehaviorAvoidMobTypeAvoidMobSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,

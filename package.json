@@ -1,6 +1,6 @@
 {
   "name": "@minecraft/bedrock-schemas",
-  "version": "1.26.60-beta.28",
+  "version": "1.26.60-beta.29",
   "description": "JSON Schemas and TypeScript types for Minecraft Bedrock Edition content files (entities, blocks, items, biomes, and more).",
   "license": "MIT",
   "types": "./types/index.d.ts",
@@ -24,13 +24,11 @@
     "LICENSE"
   ],
   "scripts": {
-    "validate": "node scripts/validate.mjs",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run typecheck"
   },
   "devDependencies": {
-    "ajv": "8.18.0",
-    "typescript": "5.9.3"
+    "typescript": "5.0.0"
   },
   "exports": {
     ".": {

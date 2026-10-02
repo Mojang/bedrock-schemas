@@ -85,6 +85,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdParticleType {
   greenflame = `greenflame`,
   heart = `heart`,
   hugeexplosion = `hugeexplosion`,
+  iceballbreak = `iceballbreak`,
   iconcrack = `iconcrack`,
   ink = `ink`,
   largeexplode = `largeexplode`,

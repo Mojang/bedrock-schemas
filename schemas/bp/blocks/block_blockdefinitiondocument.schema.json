@@ -14,7 +14,7 @@
     },
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 42 more properties",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 44 more properties",
       "$ref": "./block_components.schema.json",
       "defaultSnippets": [
         {
@@ -28,6 +28,7 @@
             "minecraft:destructible_by_explosion": true,
             "minecraft:destructible_by_mining": true,
             "minecraft:display_name": "",
+            "minecraft:enchantment_power_transmitter": true,
             "minecraft:flammable": true,
             "minecraft:friction": 0,
             "minecraft:geometry": "",

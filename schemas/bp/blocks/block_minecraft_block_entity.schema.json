@@ -13,7 +13,8 @@
           "label": "Block Container",
           "description": "Adds a container to this block.",
           "body": {
-            "slot_count": 0
+            "slot_count": 0,
+            "title": ""
           }
         }
       ]

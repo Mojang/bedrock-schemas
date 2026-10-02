@@ -3,8 +3,8 @@
   "type": "object",
   "title": "Block Vibration Properties",
   "properties": {
-    "damper_vibrations": {
-      "title": "Damper Vibrations",
+    "dampen_vibrations": {
+      "title": "Dampen Vibrations",
       "type": "boolean",
       "default": false
     },
