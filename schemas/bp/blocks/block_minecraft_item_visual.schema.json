@@ -10,29 +10,19 @@
           "type": "string"
         },
         {
-          "description": "\n\nProperties:\n• bone_visibility = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
+          "description": "\n\nProperties:\n• bone_visibility (object) = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
           "type": "object",
           "properties": {
             "bone_visibility": {
               "anyOf": [
                 {
+                  "type": "object"
+                },
+                {
                   "type": "object",
                   "additionalProperties": {
-                    "type": "string"
+                    "type": "boolean"
                   }
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "description": "\n\nProperties:\n• expression (string)\n• version (int)",
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "../../common/expression.schema.json"
-                  }
-                },
-                {
-                  "type": "number"
                 }
               ],
               "title": "Bone Visibility",

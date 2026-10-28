@@ -80,13 +80,13 @@ export default interface MinecraftBehaviorPlaceBlock {
    * @remarks
    * XZ range from which the entity will try and place blocks in.
    */
-  xz_range?: object;
+  xz_range?: MinecraftBehaviorPlaceBlockXzRange;
 
   /**
    * @remarks
    * Y range from which the entity will try and place blocks in.
    */
-  y_range?: object;
+  y_range?: MinecraftBehaviorPlaceBlockYRange;
 
 }
 
@@ -158,7 +158,7 @@ export interface MinecraftBehaviorPlaceBlockOnPlace {
    */
   filters?: MinecraftBehaviorPlaceBlockOnPlaceFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorPlaceBlockOnPlaceTarget;
 
 }
 
@@ -305,5 +305,29 @@ export interface MinecraftBehaviorPlaceBlockRandomlyPlaceableBlocksFilter {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorPlaceBlockXzRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorPlaceBlockYRange {
+
+  max?: number;
+
+  min?: number;
 
 }

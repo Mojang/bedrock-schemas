@@ -99,7 +99,7 @@ export default interface MinecraftBehaviorPanic {
    * Range of random ticks to wait between playing the panic 
    * sound.
    */
-  sound_interval?: object;
+  sound_interval?: MinecraftBehaviorPanicSoundInterval;
 
   /**
    * @remarks
@@ -345,10 +345,13 @@ export enum MinecraftBehaviorPanicPanicSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -434,6 +437,7 @@ export enum MinecraftBehaviorPanicPanicSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -737,4 +741,16 @@ export enum MinecraftBehaviorPanicPanicSound {
   water = `water`,
   whine = `whine`,
   windChargeBurst = `wind_charge.burst`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorPanicSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }

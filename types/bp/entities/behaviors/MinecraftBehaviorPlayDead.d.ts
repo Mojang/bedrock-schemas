@@ -73,7 +73,7 @@ export default interface MinecraftBehaviorPlayDead {
    * to start. Damage taken above the max will always cause the goal
    * to start.
    */
-  random_damage_range?: object;
+  random_damage_range?: MinecraftBehaviorPlayDeadRandomDamageRange;
 
   /**
    * @remarks
@@ -166,5 +166,17 @@ export interface MinecraftBehaviorPlayDeadFilters {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorPlayDeadRandomDamageRange {
+
+  max?: number;
+
+  min?: number;
 
 }

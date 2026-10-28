@@ -291,7 +291,7 @@ export interface MinecraftBehaviorMeleeBoxAttackOnAttack {
    */
   filters?: MinecraftBehaviorMeleeBoxAttackOnAttackFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorMeleeBoxAttackOnAttackTarget;
 
 }
 
@@ -370,7 +370,7 @@ export interface MinecraftBehaviorMeleeBoxAttackOnKill {
    */
   filters?: MinecraftBehaviorMeleeBoxAttackOnKillFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorMeleeBoxAttackOnKillTarget;
 
 }
 

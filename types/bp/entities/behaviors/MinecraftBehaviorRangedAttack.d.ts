@@ -116,7 +116,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Bogged: 3.5, 2.5
    *
    */
-  attack_interval?: object;
+  attack_interval?: MinecraftBehaviorRangedAttackAttackInterval;
 
   /**
    * @remarks
@@ -163,7 +163,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Llama: {"max":64}
    *
    */
-  attack_range?: object;
+  attack_range?: MinecraftBehaviorRangedAttackAttackRange;
 
   /**
    * @remarks
@@ -296,6 +296,30 @@ export default interface MinecraftBehaviorRangedAttack {
    * rotate its head while trying to look at the target.
    */
   y_max_head_rotation?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorRangedAttackAttackInterval {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorRangedAttackAttackRange {
+
+  max?: number;
+
+  min?: number;
 
 }
 

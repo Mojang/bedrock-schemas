@@ -34,7 +34,7 @@ export default interface MinecraftBehaviorAquaticChargeAttack {
    * Range of time in seconds to wait before starting another 
    * charge.
    */
-  charge_cooldown_time?: object;
+  charge_cooldown_time?: MinecraftBehaviorAquaticChargeAttackChargeCooldownTime;
 
   /**
    * @remarks
@@ -63,6 +63,18 @@ export default interface MinecraftBehaviorAquaticChargeAttack {
   max_charge_distance?: number;
 
   priority?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorAquaticChargeAttackChargeCooldownTime {
+
+  max?: number;
+
+  min?: number;
 
 }
 

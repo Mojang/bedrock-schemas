@@ -118,7 +118,7 @@ export default interface MinecraftBehaviorLookAtEntity {
    * @remarks
    * Time range to look at the nearest entity.
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorLookAtEntityLookTime;
 
   /**
    * @remarks
@@ -190,5 +190,17 @@ export interface MinecraftBehaviorLookAtEntityFilters {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorLookAtEntityLookTime {
+
+  max?: number;
+
+  min?: number;
 
 }

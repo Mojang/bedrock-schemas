@@ -40,7 +40,7 @@ export default interface MinecraftBehaviorCelebrate {
    * Minimum and maximum time between jumping (positive, in
    * seconds).
    */
-  jump_interval?: object;
+  jump_interval?: MinecraftBehaviorCelebrateJumpInterval;
 
   /**
    * @remarks
@@ -61,7 +61,7 @@ export default interface MinecraftBehaviorCelebrate {
    * Minimum and maximum time between sound events (positive, in
    * seconds).
    */
-  sound_interval?: object;
+  sound_interval?: MinecraftBehaviorCelebrateSoundInterval;
 
 }
 
@@ -245,10 +245,13 @@ export enum MinecraftBehaviorCelebrateCelebrationSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -334,6 +337,7 @@ export enum MinecraftBehaviorCelebrateCelebrationSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -648,6 +652,18 @@ export enum MinecraftBehaviorCelebrateControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCelebrateJumpInterval {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -669,7 +685,7 @@ export interface MinecraftBehaviorCelebrateOnCelebrationEndEvent {
    */
   filters?: MinecraftBehaviorCelebrateOnCelebrationEndEventFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorCelebrateOnCelebrationEndEventTarget;
 
 }
 
@@ -723,4 +739,16 @@ export enum MinecraftBehaviorCelebrateOnCelebrationEndEventTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCelebrateSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }

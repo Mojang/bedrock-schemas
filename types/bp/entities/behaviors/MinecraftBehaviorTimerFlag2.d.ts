@@ -121,6 +121,30 @@ export enum MinecraftBehaviorTimerFlag2ControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorTimerFlag2CooldownRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorTimerFlag2DurationRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -142,7 +166,7 @@ export interface MinecraftBehaviorTimerFlag2OnEnd {
    */
   filters?: MinecraftBehaviorTimerFlag2OnEndFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTimerFlag2OnEndTarget;
 
 }
 
@@ -221,7 +245,7 @@ export interface MinecraftBehaviorTimerFlag2OnStart {
    */
   filters?: MinecraftBehaviorTimerFlag2OnStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTimerFlag2OnStartTarget;
 
 }
 

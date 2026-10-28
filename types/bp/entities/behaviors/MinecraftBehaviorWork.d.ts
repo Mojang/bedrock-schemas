@@ -115,7 +115,7 @@ export interface MinecraftBehaviorWorkOnArrival {
    */
   filters?: MinecraftBehaviorWorkOnArrivalFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorWorkOnArrivalTarget;
 
 }
 

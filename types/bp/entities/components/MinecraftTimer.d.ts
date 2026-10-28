@@ -61,6 +61,18 @@ export default interface MinecraftTimer {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftTimerTime {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -82,7 +94,7 @@ export interface MinecraftTimerTimeDownEvent {
    */
   filters?: MinecraftTimerTimeDownEventFilters;
 
-  target?: string;
+  target?: MinecraftTimerTimeDownEventTarget;
 
 }
 

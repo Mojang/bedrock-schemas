@@ -179,7 +179,7 @@
           "id": "minecraft:collision_box",
           "dataType": "objectArray",
           "maxLength": 16,
-          "technicalDescription": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)",
+          "technicalDescription": "The area covered by all boxes must be within Vec3(0,0,0) to Vec3(16,24,16)",
           "subFormId": "block/bounding_box_data"
         }
       ]
@@ -279,6 +279,12 @@
       "subFormId": "block/minecraft_embedded_visual"
     },
     {
+      "id": "minecraft:enchantment_power_transmitter",
+      "title": "Minecraft Enchantment Power Transmitter",
+      "description": "Describes the enchantment power transmission properties of this block. If set to true and this block is placed in the 1 block gap between an enchantment table and a bookshelf, the enchantment table will remain powered by the bookshelf.",
+      "dataType": "boolean"
+    },
+    {
       "id": "minecraft:entity_fall_on",
       "title": "Minecraft Entity Fall On",
       "description": "Configures the behavior of an entity falling on this block. The minimum distance in blocks that an actor needs to fall before events are triggered.",
@@ -366,18 +372,13 @@
                 "id": "bone_visibility",
                 "title": "Bone Visibility",
                 "description": "A JSON object that contains a list of key/value pairs that map from bone name in the specified geometry file (key) to a Molang expression that tells whether the bone should be visible or not (value). The expression is limited to using the \"query.block_state()\" query. When using \"bone_visibility\" in geometry components in the \"permutations\" section, you must also have a default version of the geometry component with \"bone_visibility\" in the \"components\" section.",
-                "dataType": "keyedStringCollection",
+                "dataType": "object",
                 "defaultValue": {},
                 "maxLength": 64,
                 "alternates": [
                   {
                     "id": "bone_visibility",
-                    "dataType": "keyedObjectCollection",
-                    "subFormId": "legacy/molang_expression"
-                  },
-                  {
-                    "id": "bone_visibility",
-                    "dataType": "float"
+                    "dataType": "keyedBooleanCollection"
                   }
                 ]
               },
@@ -463,6 +464,12 @@
       "subFormId": "block/minecraft_item_visual"
     },
     {
+      "id": "minecraft:jukebox_playlist_source",
+      "title": "Minecraft Jukebox Playlist Source",
+      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.60 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
+      "dataType": "object"
+    },
+    {
       "id": "minecraft:leashable",
       "title": "Minecraft Leashable",
       "description": "Allows a block to have a lead tied to it.",
@@ -495,6 +502,13 @@
       "description": "This defines how a block reacts to being moved by another block like a piston.",
       "dataType": "object",
       "subFormId": "block/minecraft_movable"
+    },
+    {
+      "id": "minecraft:neighbor_change",
+      "title": "Minecraft Neighbor Change",
+      "description": "Configures which neighboring block changes can trigger a block custom component event.",
+      "dataType": "object",
+      "subFormId": "block/neighbor_change"
     },
     {
       "id": "minecraft:on_fall_on",
@@ -738,6 +752,12 @@
       "title": "Minecraft Unit Cube",
       "dataType": "object",
       "isDeprecated": true
+    },
+    {
+      "id": "minecraft:vibration_properties",
+      "title": "Minecraft Vibration Properties",
+      "dataType": "object",
+      "subFormId": "block/vibration_properties"
     }
   ],
   "description": "Container for all components that define custom block behavior and properties. Components control collision, selection boxes, destruction time, light emission, flammability, placement rules, crafting table functionality, and more. Combine components to create unique blocks with specific gameplay characteristics.",

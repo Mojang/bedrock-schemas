@@ -85,7 +85,7 @@ export default interface MinecraftBehaviorMoveAroundTarget {
    * Breeze: {"min":4,"max":8}
    *
    */
-  destination_position_range?: object;
+  destination_position_range?: MinecraftBehaviorMoveAroundTargetDestinationPositionRange;
 
   /**
    * @remarks
@@ -151,6 +151,18 @@ export enum MinecraftBehaviorMoveAroundTargetControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorMoveAroundTargetDestinationPositionRange {
+
+  max?: number;
+
+  min?: number;
+
 }
 
 

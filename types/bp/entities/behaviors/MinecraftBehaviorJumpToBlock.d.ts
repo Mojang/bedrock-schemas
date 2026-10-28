@@ -84,7 +84,7 @@ export default interface MinecraftBehaviorJumpToBlock {
    * Goat: [30,60]
    *
    */
-  cooldown_range?: object;
+  cooldown_range?: MinecraftBehaviorJumpToBlockCooldownRange;
 
   /**
    * @remarks
@@ -212,4 +212,16 @@ export enum MinecraftBehaviorJumpToBlockControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorJumpToBlockCooldownRange {
+
+  max?: number;
+
+  min?: number;
+
 }

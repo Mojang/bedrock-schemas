@@ -323,9 +323,9 @@ export interface SpawnBiomeConditionsMinecraftDensityLimit {
  */
 export interface SpawnBiomeConditionsMinecraftDifficultyFilter {
 
-  max?: string;
+  max?: SpawnBiomeConditionsMinecraftDifficultyFilterMax;
 
-  min?: string;
+  min?: SpawnBiomeConditionsMinecraftDifficultyFilterMin;
 
 }
 

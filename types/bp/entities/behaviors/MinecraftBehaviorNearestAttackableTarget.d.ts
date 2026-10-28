@@ -317,8 +317,6 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    */
   attack_interval?: number[];
 
-  attack_intervalattack_interval_min?: string;
-
   /**
    * @remarks
    * If true, this entity can attack its owner.
@@ -469,6 +467,18 @@ export default interface MinecraftBehaviorNearestAttackableTarget {
    *
    */
   within_radius?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorNearestAttackableTargetAttackInterval {
+
+  max?: number;
+
+  min?: number;
 
 }
 

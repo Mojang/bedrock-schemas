@@ -148,7 +148,7 @@ export interface MinecraftBehaviorMoveToBlockOnReach {
    */
   filters?: MinecraftBehaviorMoveToBlockOnReachFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorMoveToBlockOnReachTarget;
 
 }
 
@@ -227,7 +227,7 @@ export interface MinecraftBehaviorMoveToBlockOnStayCompleted {
    */
   filters?: MinecraftBehaviorMoveToBlockOnStayCompletedFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorMoveToBlockOnStayCompletedTarget;
 
 }
 

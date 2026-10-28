@@ -88,7 +88,7 @@ export default interface MinecraftBehaviorDragonstrafeplayer {
    * Minimum and maximum distance, from the target, this entity can
    * use this behavior.
    */
-  target_zone?: object;
+  target_zone?: MinecraftBehaviorDragonstrafeplayerTargetZone;
 
   /**
    * @remarks
@@ -111,4 +111,16 @@ export enum MinecraftBehaviorDragonstrafeplayerControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorDragonstrafeplayerTargetZone {
+
+  max?: number;
+
+  min?: number;
+
 }

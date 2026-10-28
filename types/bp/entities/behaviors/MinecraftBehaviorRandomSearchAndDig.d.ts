@@ -92,7 +92,7 @@ export default interface MinecraftBehaviorRandomSearchAndDig {
    * Sniffer: {"min":0,"max":0}
    *
    */
-  cooldown_range?: object;
+  cooldown_range?: MinecraftBehaviorRandomSearchAndDigCooldownRange;
 
   /**
    * @remarks
@@ -102,7 +102,7 @@ export default interface MinecraftBehaviorRandomSearchAndDig {
    * Sniffer: {"min":8,"max":10}
    *
    */
-  digging_duration_range?: object;
+  digging_duration_range?: MinecraftBehaviorRandomSearchAndDigDiggingDurationRange;
 
   /**
    * @remarks
@@ -292,6 +292,30 @@ export enum MinecraftBehaviorRandomSearchAndDigControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorRandomSearchAndDigCooldownRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorRandomSearchAndDigDiggingDurationRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -313,7 +337,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnDiggingStart {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnDiggingStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnDiggingStartTarget;
 
 }
 
@@ -392,7 +416,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnFailDuringDigging {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnFailDuringDiggingFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnFailDuringDiggingTarget;
 
 }
 
@@ -471,7 +495,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnFailDuringSearching {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnFailDuringSearchingFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnFailDuringSearchingTarget;
 
 }
 
@@ -550,7 +574,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnItemFound {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnItemFoundFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnItemFoundTarget;
 
 }
 
@@ -629,7 +653,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnSearchingStart {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnSearchingStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnSearchingStartTarget;
 
 }
 
@@ -708,7 +732,7 @@ export interface MinecraftBehaviorRandomSearchAndDigOnSuccess {
    */
   filters?: MinecraftBehaviorRandomSearchAndDigOnSuccessFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRandomSearchAndDigOnSuccessTarget;
 
 }
 

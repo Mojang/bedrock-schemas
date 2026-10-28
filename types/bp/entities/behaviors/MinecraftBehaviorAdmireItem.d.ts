@@ -92,7 +92,7 @@ export interface MinecraftBehaviorAdmireItemOnAdmireItemStart {
    */
   filters?: MinecraftBehaviorAdmireItemOnAdmireItemStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorAdmireItemOnAdmireItemStartTarget;
 
 }
 
@@ -171,7 +171,7 @@ export interface MinecraftBehaviorAdmireItemOnAdmireItemStop {
    */
   filters?: MinecraftBehaviorAdmireItemOnAdmireItemStopFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorAdmireItemOnAdmireItemStopTarget;
 
 }
 
@@ -225,4 +225,16 @@ export enum MinecraftBehaviorAdmireItemOnAdmireItemStopTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorAdmireItemSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }

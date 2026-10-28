@@ -39,3 +39,15 @@ export default interface MinecraftMovementJump {
   max_turn?: number;
 
 }
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftMovementJumpJumpDelay {
+
+  max?: number;
+
+  min?: number;
+
+}

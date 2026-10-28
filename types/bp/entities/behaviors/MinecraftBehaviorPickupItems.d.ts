@@ -280,7 +280,7 @@ export interface MinecraftBehaviorPickupItemsOnPickupItemEnd {
    */
   filters?: MinecraftBehaviorPickupItemsOnPickupItemEndFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorPickupItemsOnPickupItemEndTarget;
 
 }
 
@@ -359,7 +359,7 @@ export interface MinecraftBehaviorPickupItemsOnPickupItemStart {
    */
   filters?: MinecraftBehaviorPickupItemsOnPickupItemStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorPickupItemsOnPickupItemStartTarget;
 
 }
 

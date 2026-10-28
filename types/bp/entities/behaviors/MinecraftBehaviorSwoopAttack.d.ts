@@ -45,7 +45,7 @@ export default interface MinecraftBehaviorSwoopAttack {
    * Minimum and maximum cooldown time-range (in seconds) between each
    * attempted swoop attack.
    */
-  delay_range?: object;
+  delay_range?: MinecraftBehaviorSwoopAttackDelayRange;
 
   /**
    * @remarks
@@ -73,4 +73,16 @@ export enum MinecraftBehaviorSwoopAttackControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorSwoopAttackDelayRange {
+
+  max?: number;
+
+  min?: number;
+
 }

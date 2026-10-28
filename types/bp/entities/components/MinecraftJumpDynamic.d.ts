@@ -41,49 +41,65 @@ export default interface MinecraftJumpDynamic {
 }
 
 
-export enum MinecraftJumpDynamicFastSkipData {
+/**
+ * Entity JumpDataDefinition (JumpDataDefinition)
+ */
+export interface MinecraftJumpDynamicFastSkipData {
+
   /**
    * @remarks
    * Duration of the jump animation.
    */
-  animationDuration = `animation_duration`,
+  animation_duration?: number;
+
   /**
    * @remarks
    * The multiplier applied to horizontal velocity when jumping.
    */
-  distanceScale = `distance_scale`,
+  distance_scale?: number;
+
   /**
    * @remarks
    * The force applied vertically when jumping.
    */
-  height = `height`,
+  height?: number;
+
   /**
    * @remarks
    * Amount of ticks between sequential jumps.
    */
-  jumpDelay = `jump_delay`
+  jump_delay?: number;
+
 }
 
 
-export enum MinecraftJumpDynamicRegularSkipData {
+/**
+ * Entity JumpDataDefinition (JumpDataDefinition)
+ */
+export interface MinecraftJumpDynamicRegularSkipData {
+
   /**
    * @remarks
    * Duration of the jump animation.
    */
-  animationDuration = `animation_duration`,
+  animation_duration?: number;
+
   /**
    * @remarks
    * The multiplier applied to horizontal velocity when jumping.
    */
-  distanceScale = `distance_scale`,
+  distance_scale?: number;
+
   /**
    * @remarks
    * The force applied vertically when jumping.
    */
-  height = `height`,
+  height?: number;
+
   /**
    * @remarks
    * Amount of ticks between sequential jumps.
    */
-  jumpDelay = `jump_delay`
+  jump_delay?: number;
+
 }

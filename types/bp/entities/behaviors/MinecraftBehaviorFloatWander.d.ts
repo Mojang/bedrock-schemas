@@ -170,3 +170,15 @@ export enum MinecraftBehaviorFloatWanderControlFlags {
   look = `look`,
   move = `move`
 }
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorFloatWanderFloatDuration {
+
+  max?: number;
+
+  min?: number;
+
+}

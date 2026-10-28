@@ -227,7 +227,7 @@ export interface MinecraftBehaviorTemptOnTemptEnd {
    */
   filters?: MinecraftBehaviorTemptOnTemptEndFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTemptOnTemptEndTarget;
 
 }
 
@@ -306,7 +306,7 @@ export interface MinecraftBehaviorTemptOnTemptStart {
    */
   filters?: MinecraftBehaviorTemptOnTemptStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTemptOnTemptStartTarget;
 
 }
 
@@ -360,6 +360,18 @@ export enum MinecraftBehaviorTemptOnTemptStartTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorTemptSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }
 
 
@@ -542,10 +554,13 @@ export enum MinecraftBehaviorTemptTemptSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -631,6 +646,7 @@ export enum MinecraftBehaviorTemptTemptSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,

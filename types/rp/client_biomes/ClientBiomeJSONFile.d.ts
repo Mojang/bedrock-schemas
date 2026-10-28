@@ -172,14 +172,14 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftAmbie
    * @remarks
    * Named sound that occasionally plays at the listener position
    */
-  addition?: object;
+  addition?: string;
 
   /**
    * @remarks
    * Named sound that loops while the listener position is inside the
    * biome
    */
-  loop?: object;
+  loop?: string;
 
   /**
    * @remarks
@@ -187,7 +187,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftAmbie
    * the light level is low. Biomes without an ambient mood sound will
    * use the 'ambient.cave' sound.
    */
-  mood?: object;
+  mood?: string;
 
 }
 
@@ -206,7 +206,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftAtmos
    * @remarks
    * Identifier of atmosphere definition to use
    */
-  atmosphere_identifier: object;
+  atmosphere_identifier: string;
 
 }
 
@@ -223,7 +223,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftBiome
    * found the default music will be determined by the dimension. Empty
    * string will result in no music.
    */
-  music_definition?: object;
+  music_definition?: string;
 
   /**
    * @remarks
@@ -250,7 +250,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftColor
    * @remarks
    * Identifier of color_grading definition to use
    */
-  color_grading_identifier: object;
+  color_grading_identifier: string;
 
 }
 
@@ -282,7 +282,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftFogAp
    * @remarks
    * Identifier of fog definition to use
    */
-  fog_identifier: object;
+  fog_identifier: string;
 
 }
 
@@ -333,7 +333,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftLight
    * @remarks
    * Identifier of lighting definition to use
    */
-  lighting_identifier: object;
+  lighting_identifier: string;
 
 }
 
@@ -391,7 +391,7 @@ export interface ClientBiomeJSONFileMinecraftClientBiomeComponentsMinecraftWater
    * @remarks
    * Identifier of water definition to use
    */
-  water_identifier: object;
+  water_identifier: string;
 
 }
 

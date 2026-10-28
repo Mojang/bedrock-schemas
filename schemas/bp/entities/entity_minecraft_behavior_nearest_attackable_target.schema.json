@@ -4,9 +4,6 @@
   "title": "Entity Nearest Attackable Target Behavior",
   "description": "Allows an entity to attack the closest target within a given subset of specific target types.",
   "properties": {
-    "attack_interval|attack_interval_min": {
-      "type": "string"
-    },
     "attack_interval": {
       "oneOf": [
         {

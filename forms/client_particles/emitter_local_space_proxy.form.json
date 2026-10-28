@@ -35,5 +35,5 @@
   "description": "Controls whether particles inherit emitter position and rotation.",
   "title": "Client Particles Emitter Local Space Proxy",
   "id": "emitter_local_space proxy",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.70"
 }

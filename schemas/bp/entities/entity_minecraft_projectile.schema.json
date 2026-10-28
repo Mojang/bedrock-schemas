@@ -77,7 +77,7 @@
     },
     "hit_water": {
       "title": "Hit Water",
-      "description": "If `true`, the projectile treats water as a hit surface and stops on contact.",
+      "description": "If `true`, the projectile treats water as a hit surface and stops on contact. (Education Edition chemistry feature)",
       "type": "boolean",
       "default": false
     },
@@ -238,6 +238,7 @@
         "greenflame",
         "heart",
         "hugeexplosion",
+        "iceballbreak",
         "iconcrack",
         "ink",
         "largeexplode",

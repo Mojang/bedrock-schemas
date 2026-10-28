@@ -60,5 +60,5 @@
   "description": "Emits all particles from a single point in space, offset from the emitter origin. This is the simplest and most common emission shape—all particles spawn at the same location and spread outward based on their initial velocity. Used for torches, candles, sparks, magic projectile cores, and any effect with a focused emission source.",
   "title": "Client Particles Emitter Shape Point",
   "id": "emitter_shape_point",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.70"
 }

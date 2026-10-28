@@ -102,7 +102,7 @@ export default interface MinecraftTamemount {
    * The list of items that, if carried while interacting with the
    * entity, will anger it.
    */
-  auto_reject_items?: object[];
+  auto_reject_items?: MinecraftTamemountAutoRejectItems[];
 
   /**
    * @remarks
@@ -121,7 +121,7 @@ export default interface MinecraftTamemount {
    *
    *
    */
-  feed_items?: object[];
+  feed_items?: MinecraftTamemountFeedItems[];
 
   /**
    * @remarks
@@ -177,6 +177,22 @@ export default interface MinecraftTamemount {
 
 
 /**
+ * Entity MountTamingComponentRejectItem 
+ * (MountTamingComponentRejectItem)
+ */
+export interface MinecraftTamemountAutoRejectItems {
+
+  /**
+   * @remarks
+   * Name of the item this entity dislikes and will cause it to get
+   * angry if used while untamed.
+   */
+  item?: string;
+
+}
+
+
+/**
  * The list of items that, if carried while interacting with the
  * entity, will anger it.
  */
@@ -188,6 +204,28 @@ export interface MinecraftTamemountAutoRejectItems {
    * entity, will anger it.
    */
   item?: string;
+
+}
+
+
+/**
+ * Entity MountTamingComponentFeedItem 
+ * (MountTamingComponentFeedItem)
+ */
+export interface MinecraftTamemountFeedItems {
+
+  /**
+   * @remarks
+   * Name of the item this entity likes and can be used to increase this
+   * entity's temper.
+   */
+  item?: string;
+
+  /**
+   * @remarks
+   * The amount of temper this entity gains when fed this item.
+   */
+  temper_mod?: number;
 
 }
 
@@ -214,7 +252,7 @@ export interface MinecraftTamemountTameEvent {
    */
   filters?: MinecraftTamemountTameEventFilters;
 
-  target?: string;
+  target?: MinecraftTamemountTameEventTarget;
 
 }
 

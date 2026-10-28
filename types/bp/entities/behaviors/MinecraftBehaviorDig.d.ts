@@ -147,7 +147,7 @@ export interface MinecraftBehaviorDigOnStart {
    */
   filters?: MinecraftBehaviorDigOnStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorDigOnStartTarget;
 
 }
 

@@ -87,7 +87,7 @@ export default interface MinecraftBehaviorRamAttack {
    * Goat: {"min":30,"max":300}, {"min":5,"max":15}
    *
    */
-  cooldown_range?: object;
+  cooldown_range?: MinecraftBehaviorRamAttackCooldownRange;
 
   /**
    * @remarks
@@ -205,6 +205,18 @@ export enum MinecraftBehaviorRamAttackControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorRamAttackCooldownRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -226,7 +238,7 @@ export interface MinecraftBehaviorRamAttackOnStart {
    */
   filters?: MinecraftBehaviorRamAttackOnStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorRamAttackOnStartTarget;
 
 }
 
@@ -462,10 +474,13 @@ export enum MinecraftBehaviorRamAttackPreRamSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -551,6 +566,7 @@ export enum MinecraftBehaviorRamAttackPreRamSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -1036,10 +1052,13 @@ export enum MinecraftBehaviorRamAttackRamImpactSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -1125,6 +1144,7 @@ export enum MinecraftBehaviorRamAttackRamImpactSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,

@@ -556,7 +556,7 @@ export interface BiomeDefinitionComponentsMinecraftOverworldHeight {
    * Specifies a preset based on a built-in setting rather than
    * manually using noise_params
    */
-  noise_type?: string;
+  noise_type?: BiomeDefinitionComponentsMinecraftOverworldHeightNoiseType;
 
 }
 
@@ -638,7 +638,7 @@ export interface BiomeDefinitionComponentsMinecraftReplaceBiomesReplacements {
    * Biomes that are going to be replaced by the overriding biome.
    * Target biomes must not contain namespaces.
    */
-  targets: object[];
+  targets: string[];
 
 }
 
@@ -732,7 +732,7 @@ export interface BiomeDefinitionComponentsMinecraftSurfaceBuilderBuilder {
    * @remarks
    * Controls the type of surface builder to use.
    */
-  type: string;
+  type: BiomeDefinitionComponentsMinecraftSurfaceBuilderBuilderType;
 
 }
 
@@ -948,7 +948,7 @@ export interface BiomeDefinitionComponentsMinecraftTags {
  */
 export interface BiomeDefinitionComponentsMinecraftVillageType {
 
-  type: string;
+  type: BiomeDefinitionComponentsMinecraftVillageTypeType;
 
 }
 

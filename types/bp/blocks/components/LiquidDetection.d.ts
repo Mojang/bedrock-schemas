@@ -157,7 +157,7 @@ export interface LiquidDetectionDetectionRules {
    * the only supported liquid type. If this field is omitted, `water`
    * will be the liquid type by default.
    */
-  liquid_type?: string;
+  liquid_type?: LiquidDetectionDetectionRulesLiquidType;
 
   /**
    * @remarks
@@ -172,7 +172,7 @@ export interface LiquidDetectionDetectionRules {
 "no_reaction" - The block is unaffected; visually,
    * the liquid will flow through the block.
    */
-  on_liquid_touches?: string;
+  on_liquid_touches?: LiquidDetectionDetectionRulesOnLiquidTouches;
 
   /**
    * @remarks

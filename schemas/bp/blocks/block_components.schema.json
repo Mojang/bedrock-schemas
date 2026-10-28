@@ -80,7 +80,7 @@
             "$ref": "./block_bounding_box_data.schema.json"
           },
           "maxLength": 16,
-          "x-runtime-constraint-description": "The total of each \"origin\" + \"size\" pair, must be inside the following limit: Vec3(-8,0,-8) and Vec3(8,24,8)"
+          "x-runtime-constraint-description": "The area covered by all boxes must be within Vec3(0,0,0) to Vec3(16,24,16)"
         }
       ],
       "title": "Minecraft Collision Box",
@@ -275,6 +275,11 @@
         }
       ]
     },
+    "minecraft:enchantment_power_transmitter": {
+      "title": "Minecraft Enchantment Power Transmitter",
+      "description": "Describes the enchantment power transmission properties of this block. If set to true and this block is placed in the 1 block gap between an enchantment table and a bookshelf, the enchantment table will remain powered by the bookshelf.",
+      "type": "boolean"
+    },
     "minecraft:entity_fall_on": {
       "title": "Minecraft Entity Fall On",
       "description": "Configures the behavior of an entity falling on this block. The minimum distance in blocks that an actor needs to fall before events are triggered.",
@@ -375,29 +380,19 @@
           "type": "string"
         },
         {
-          "description": "\n\nProperties:\n• bone_visibility = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
+          "description": "\n\nProperties:\n• bone_visibility (object) = {} [maxLen: 64]\n• culling (string) =  [maxLen: 256]\n• culling_layer (string) [maxLen: 256]\n• culling_shape (string) =  [maxLen: 256]\n• identifier (string) [maxLen: 256]\n• n_way_visual_rotation (object)\n• uv_lock (object) = false",
           "type": "object",
           "properties": {
             "bone_visibility": {
               "anyOf": [
                 {
+                  "type": "object"
+                },
+                {
                   "type": "object",
                   "additionalProperties": {
-                    "type": "string"
+                    "type": "boolean"
                   }
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "description": "\n\nProperties:\n• expression (string)\n• version (int)",
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "../../common/expression.schema.json"
-                  }
-                },
-                {
-                  "type": "number"
                 }
               ],
               "title": "Bone Visibility",
@@ -510,6 +505,11 @@
         }
       ]
     },
+    "minecraft:jukebox_playlist_source": {
+      "title": "Minecraft Jukebox Playlist Source",
+      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.60 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
+      "type": "object"
+    },
     "minecraft:leashable": {
       "title": "Minecraft Leashable",
       "description": "Allows a block to have a lead tied to it.",
@@ -568,6 +568,22 @@
           "body": {
             "movement_type": "push_pull",
             "sticky": "none"
+          }
+        }
+      ]
+    },
+    "minecraft:neighbor_change": {
+      "title": "Minecraft Neighbor Change",
+      "description": "Configures which neighboring block changes can trigger a block custom component event.",
+      "$ref": "./block_neighbor_change.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Neighbor Change",
+          "description": "Configures which neighboring block changes can trigger a block custom component event.",
+          "body": {
+            "neighbor_directions": [
+              "all"
+            ]
           }
         }
       ]
@@ -1012,6 +1028,21 @@
       "description": "[DEPRECATED] \n\n*⚠️ Deprecated*",
       "type": "object",
       "deprecated": true
+    },
+    "minecraft:vibration_properties": {
+      "title": "Minecraft Vibration Properties",
+      "description": "\n\nProperties:\n• dampen_vibrations (boolean) = false\n• occlude_vibrations (boolean) = false",
+      "$ref": "./block_vibration_properties.schema.json",
+      "defaultSnippets": [
+        {
+          "label": "Block Vibration Properties",
+          "description": "Create a Block Vibration Properties",
+          "body": {
+            "dampen_vibrations": false,
+            "occlude_vibrations": false
+          }
+        }
+      ]
     }
   }
 }

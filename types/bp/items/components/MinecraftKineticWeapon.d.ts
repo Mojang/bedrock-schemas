@@ -33,7 +33,7 @@ export default interface MinecraftKineticWeapon {
    * Defines the reach used when the user is in Creative Mode. Defaults to
    * "reach" if unspecified.
    */
-  creative_reach?: object;
+  creative_reach?: MinecraftKineticWeaponCreativeReach;
 
   /**
    * @remarks
@@ -91,7 +91,19 @@ export default interface MinecraftKineticWeapon {
    * considered. Block collisions between the user and target block
    * damage and its effects.
    */
-  reach?: object;
+  reach?: MinecraftKineticWeaponReach;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftKineticWeaponCreativeReach {
+
+  max?: number;
+
+  min?: number;
 
 }
 
@@ -194,5 +206,17 @@ export interface MinecraftKineticWeaponKnockbackConditions {
    * product) required for the effect to be applied.
    */
   min_speed?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftKineticWeaponReach {
+
+  max?: number;
+
+  min?: number;
 
 }

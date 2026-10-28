@@ -76,7 +76,7 @@ export default interface MinecraftBehaviorFloatTempt {
    * @remarks
    * Range of random ticks to wait between tempt sounds.
    */
-  sound_interval?: object;
+  sound_interval?: MinecraftBehaviorFloatTemptSoundInterval;
 
   /**
    * @remarks
@@ -136,7 +136,7 @@ export interface MinecraftBehaviorFloatTemptOnTemptEnd {
    */
   filters?: MinecraftBehaviorFloatTemptOnTemptEndFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorFloatTemptOnTemptEndTarget;
 
 }
 
@@ -215,7 +215,7 @@ export interface MinecraftBehaviorFloatTemptOnTemptStart {
    */
   filters?: MinecraftBehaviorFloatTemptOnTemptStartFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorFloatTemptOnTemptStartTarget;
 
 }
 
@@ -269,6 +269,18 @@ export enum MinecraftBehaviorFloatTemptOnTemptStartTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorFloatTemptSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }
 
 
@@ -451,10 +463,13 @@ export enum MinecraftBehaviorFloatTemptTemptSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -540,6 +555,7 @@ export enum MinecraftBehaviorFloatTemptTemptSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,

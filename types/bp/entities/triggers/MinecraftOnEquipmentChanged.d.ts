@@ -61,7 +61,7 @@ export interface MinecraftOnEquipmentChangedSlots {
    * @remarks
    * The equipment slot to monitor for changes.
    */
-  slot?: string;
+  slot?: MinecraftOnEquipmentChangedSlotsSlot;
 
 }
 

@@ -101,7 +101,7 @@ export interface MinecraftBehaviorEmergeOnDone {
    */
   filters?: MinecraftBehaviorEmergeOnDoneFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorEmergeOnDoneTarget;
 
 }
 

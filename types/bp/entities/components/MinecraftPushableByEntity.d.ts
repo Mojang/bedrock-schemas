@@ -176,7 +176,7 @@ export interface MinecraftPushableByEntityPresets {
    * ball. The entity is propelled in the direction of the pusher’s
    * movement, with force scaled by their speed.
    */
-  push_mode?: string;
+  push_mode?: MinecraftPushableByEntityPresetsPushMode;
 
   /**
    * @remarks

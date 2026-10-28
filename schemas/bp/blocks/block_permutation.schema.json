@@ -6,7 +6,7 @@
   "properties": {
     "components": {
       "title": "Components",
-      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 41 more properties",
+      "description": "\n\nProperties:\n• minecraft:light_dampening (int)\n• minecraft:light_emission (int)\n• minecraft:map_color (string)\n• minecraft:block_entity (object)\n• minecraft:breathability (object)\n• minecraft:chest_obstruction (object)\n• minecraft:collision_box (boolean)\n• minecraft:connection_rule (object)\n• ... and 45 more properties",
       "$ref": "./block_components.schema.json",
       "defaultSnippets": [
         {
@@ -20,6 +20,7 @@
             "minecraft:destructible_by_explosion": true,
             "minecraft:destructible_by_mining": true,
             "minecraft:display_name": "",
+            "minecraft:enchantment_power_transmitter": true,
             "minecraft:flammable": true,
             "minecraft:friction": 0,
             "minecraft:geometry": "",
@@ -27,7 +28,7 @@
           }
         }
       ],
-      "x-runtime-constraint-description": "Blocks with precipitation interactions \"snowlogging\" must have collision box disabled"
+      "x-runtime-constraint-description": "The \"random_offset\" must not push the \"collision_box\" outside the unit block limit. Block with \"geometry\" set at \"minecraft:geometry.full_block\" cannot have a \"random_offset\". Blocks with precipitation interactions \"snowlogging\" must have collision box disabled."
     },
     "condition": {
       "anyOf": [

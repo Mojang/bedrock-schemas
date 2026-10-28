@@ -297,7 +297,7 @@ export interface MinecraftApplyKnockbackRulesPresets {
    * knockback with the base knockback and a reduction factor, and
    * adds it to the base knockback.
    */
-  extra_knockback_approach?: string;
+  extra_knockback_approach?: MinecraftApplyKnockbackRulesPresetsExtraKnockbackApproach;
 
   /**
    * @remarks
@@ -323,7 +323,7 @@ export interface MinecraftApplyKnockbackRulesPresets {
    * hits to the bottom of the entity or from below push it upward, hits
    * on the left side of the entity push it to the right).
    */
-  knockback_mode?: string;
+  knockback_mode?: MinecraftApplyKnockbackRulesPresetsKnockbackMode;
 
   /**
    * @remarks

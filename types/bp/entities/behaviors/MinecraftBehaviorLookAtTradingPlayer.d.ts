@@ -77,7 +77,7 @@ export default interface MinecraftBehaviorLookAtTradingPlayer {
    * @remarks
    * Time range to look at the nearest entity.
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorLookAtTradingPlayerLookTime;
 
   /**
    * @remarks
@@ -109,4 +109,16 @@ export enum MinecraftBehaviorLookAtTradingPlayerControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorLookAtTradingPlayerLookTime {
+
+  max?: number;
+
+  min?: number;
+
 }

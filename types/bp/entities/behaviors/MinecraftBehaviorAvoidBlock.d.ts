@@ -61,7 +61,7 @@ export default interface MinecraftBehaviorAvoidBlock {
    * The range of time in seconds to randomly wait before playing the
    * sound again.
    */
-  sound_interval?: object;
+  sound_interval?: MinecraftBehaviorAvoidBlockSoundInterval;
 
   /**
    * @remarks
@@ -277,10 +277,13 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   convertMooshroom = `convert_mooshroom`,
   convertToDrowned = `convert_to_drowned`,
   convertToFrog = `convert_to_frog`,
+  convertToFrostbite = `convert_to_frostbite`,
   convertToStray = `convert_to_stray`,
+  convertToZombie = `convert_to_zombie`,
   convertedToZombified = `converted_to_zombified`,
   copperWaxOff = `copper.wax.off`,
   copperWaxOn = `copper.wax.on`,
+  crack = `crack`,
   crafterCraft = `crafter.craft`,
   crafterDisableSlot = `crafter.disable_slot`,
   crafterFail = `crafter.fail`,
@@ -366,6 +369,7 @@ export enum MinecraftBehaviorAvoidBlockAvoidBlockSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallBreak = `ice_ball.break`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -701,7 +705,7 @@ export interface MinecraftBehaviorAvoidBlockOnEscape {
    */
   filters?: MinecraftBehaviorAvoidBlockOnEscapeFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorAvoidBlockOnEscapeTarget;
 
 }
 
@@ -755,4 +759,16 @@ export enum MinecraftBehaviorAvoidBlockOnEscapeTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorAvoidBlockSoundInterval {
+
+  max?: number;
+
+  min?: number;
+
 }

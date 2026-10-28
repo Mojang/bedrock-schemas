@@ -22,7 +22,7 @@ export default interface BlockEntity {
    * @remarks
    * Adds a container to this block.
    */
-  container?: object;
+  container?: BlockEntityContainer;
 
   /**
    * @remarks
@@ -32,5 +32,19 @@ export default interface BlockEntity {
    * https://learn.microsoft.com/en-us/minecraft/creator/scriptapi/minecraft/server/blockdynamicpropertiescomponent.
    */
   dynamic_properties?: boolean;
+
+}
+
+
+/**
+ * Block Container (container)
+ */
+export interface BlockEntityContainer {
+
+  /**
+   * @remarks
+   * Sets the number of slots in the container.
+   */
+  slot_count: number;
 
 }

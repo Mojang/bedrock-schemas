@@ -31,5 +31,5 @@
   "description": "The parameters MUST contain a material and texture.",
   "title": "Client Particles Particle Effect Basic Render Parameters",
   "id": "particle_effect basic_render_parameters",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.70"
 }
