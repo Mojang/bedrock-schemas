@@ -100,6 +100,26 @@ Blue Bubble Fish - Blue Bubble Fish
 }
 
 
+Block Chiseled Packed Ice - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/chiseled_packed_ice.block.json
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "chiseled_packed_ice",
+    "render_method": "opaque"
+  }
+}
+
+
+Block Chiseled Soulshale - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/chiseled_soulshale.block.json
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "chiseled_soulshale",
+    "render_method": "opaque"
+  }
+}
+
+
 Block Packed Ice Bricks - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/packed_ice_bricks.block.json
 
 "minecraft:material_instances": {
@@ -110,23 +130,12 @@ Block Packed Ice Bricks - https://github.com/Mojang/bedrock-samples/tree/preview
 }
 
 
-Block Packed Ice Bricks Chiseled - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/packed_ice_bricks_chiseled.block.json
+Block Polished Calcite - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/polished_calcite.block.json
 
 "minecraft:material_instances": {
   "*": {
-    "texture": "chiseled_packed_ice",
+    "texture": "polished_calcite",
     "render_method": "opaque"
-  }
-}
-
-
-Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
-
-"minecraft:material_instances": {
-  "*": {
-    "texture": "red_shrub",
-    "render_method": "alpha_test_single_sided",
-    "ambient_occlusion": 0
   }
 }
 

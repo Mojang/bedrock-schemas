@@ -8,6 +8,12 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Block Components Documentation - minecraft:light_dampening
+ * 
+ * minecraft:light_dampening Samples
+
+Block Chiseled Packed Ice - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/chiseled_packed_ice.block.json
+
+"minecraft:light_dampening": 15
  */
 
 import * as jsoncommon from '../../../common';

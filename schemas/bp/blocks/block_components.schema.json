@@ -82,19 +82,22 @@
           "minLength": 1,
           "maxLength": 32,
           "x-runtime-constraint-description": "The area covered by all boxes must be within Vec3(0,0,0) to Vec3(16,24,16)"
+        },
+        {
+          "type": "string"
         }
       ],
       "title": "Minecraft Collision Box",
-      "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.",
+      "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.Using a collision shape identifier requires the VoxelShape experiment. The available minecraft namespace shapes are \"minecraft:empty\" or \"minecraft:unit_cube\". Identifiers from a different namespace must start and end with an alphanumeric character.",
       "defaultSnippets": [
         {
           "label": "Minecraft Collision Box: true (enable)",
-          "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.",
+          "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.Using a collision shape identifier requires the VoxelShape experiment. The available minecraft namespace shapes are \"minecraft:empty\" or \"minecraft:unit_cube\". Identifiers from a different namespace must start and end with an alphanumeric character.",
           "body": true
         },
         {
           "label": "Minecraft Collision Box: false (disable)",
-          "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.",
+          "description": "Defines the area of the block that collides with entities. If set to true, default values are used. If set to false, the block's collision with entities is disabled. If this component is omitted, default values are used.Using a collision shape identifier requires the VoxelShape experiment. The available minecraft namespace shapes are \"minecraft:empty\" or \"minecraft:unit_cube\". Identifiers from a different namespace must start and end with an alphanumeric character.",
           "body": false
         }
       ]

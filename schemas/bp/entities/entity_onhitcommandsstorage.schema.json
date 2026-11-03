@@ -123,7 +123,7 @@
     },
     "impact_damage": {
       "title": "Impact Damage",
-      "description": "\n\nProperties:\n• apply_knockback_to_blocking_targets (boolean) = false\n• catch_fire (boolean) = false\n• ceil_pre_critical_damage (boolean) = false\n• channeling (boolean) = false\n• damage (object) = {\"max\":0,\"min\":0}\n• destroy_on_hit (boolean) = false\n• destroy_on_hit_requires_damage (boolean) = true\n• difficulty_randomization (enum) = none\n• ... and 7 more properties",
+      "description": "\n\nProperties:\n• apply_knockback_to_blocking_targets (boolean) = false\n• catch_fire (boolean) = false\n• ceil_pre_critical_damage (boolean) = false\n• channeling (boolean) = false\n• damage (object) = {\"max\":0,\"min\":0}\n• death_message_override (string)\n• destroy_on_hit (boolean) = false\n• destroy_on_hit_requires_damage (boolean) = true\n• ... and 8 more properties",
       "$ref": "./entity_impactdamagesubcomponentdefinition.schema.json",
       "defaultSnippets": [
         {
@@ -138,6 +138,7 @@
               "max": 0,
               "min": 0
             },
+            "death_message_override": "",
             "destroy_on_hit": false,
             "destroy_on_hit_requires_damage": true,
             "difficulty_randomization": "none",

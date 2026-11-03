@@ -47,6 +47,11 @@
         }
       ]
     },
+    "death_message_override": {
+      "title": "Death Message Override",
+      "description": "A localization key to use as the death message when the impact damage kills an entity. If omitted, the default death message for projectiles is used. `%1$s` is the name of the killed entity and `%2$s` is the name of the projectile's owner, or of the projectile itself if it has no owner.",
+      "type": "string"
+    },
     "destroy_on_hit": {
       "title": "Destroy On Hit",
       "description": "If `true`, the projectile is removed when it deals damage to an entity.",

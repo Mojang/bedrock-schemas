@@ -1217,6 +1217,10 @@
           "title": "Hurt.screamer"
         },
         {
+          "id": "ice_ball.throw",
+          "title": "Ice ball.throw"
+        },
+        {
           "id": "icebomb.hit",
           "title": "Icebomb.hit"
         },
@@ -1275,6 +1279,10 @@
         {
           "id": "imitate.evocation_illager",
           "title": "Imitate.evocation illager"
+        },
+        {
+          "id": "imitate.frostbite",
+          "title": "Imitate.frostbite"
         },
         {
           "id": "imitate.ghast",
@@ -2023,6 +2031,10 @@
         {
           "id": "record.far",
           "title": "Record.far"
+        },
+        {
+          "id": "record.flurry",
+          "title": "Record.flurry"
         },
         {
           "id": "record.lava_chicken",
@@ -3605,6 +3617,10 @@
           "title": "Hurt.screamer"
         },
         {
+          "id": "ice_ball.throw",
+          "title": "Ice ball.throw"
+        },
+        {
           "id": "icebomb.hit",
           "title": "Icebomb.hit"
         },
@@ -3663,6 +3679,10 @@
         {
           "id": "imitate.evocation_illager",
           "title": "Imitate.evocation illager"
+        },
+        {
+          "id": "imitate.frostbite",
+          "title": "Imitate.frostbite"
         },
         {
           "id": "imitate.ghast",
@@ -4413,6 +4433,10 @@
           "title": "Record.far"
         },
         {
+          "id": "record.flurry",
+          "title": "Record.flurry"
+        },
+        {
           "id": "record.lava_chicken",
           "title": "Record.lava chicken"
         },
@@ -4837,6 +4861,34 @@
   "description": "Defines an entity's transformation from the current definition into another",
   "title": "Entity Transformation",
   "samples": {
+    "/vanilla/behavior_pack/entities/drowned.json": [
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:convert_to_zombie/minecraft:transformation/",
+        "content": {
+          "delay": {
+            "value": 15
+          },
+          "preserve_equipment": true,
+          "into": "minecraft:zombie<minecraft:as_adult>",
+          "transformation_sound": [
+            "convert_to_zombie"
+          ]
+        }
+      },
+      {
+        "path": "/minecraft:entity/component_groups/minecraft:convert_to_baby_zombie/minecraft:transformation/",
+        "content": {
+          "delay": {
+            "value": 15
+          },
+          "preserve_equipment": true,
+          "into": "minecraft:zombie<minecraft:as_baby>",
+          "transformation_sound": [
+            "convert_to_zombie"
+          ]
+        }
+      }
+    ],
     "/vanilla/behavior_pack/entities/pig.json": [
       {
         "path": "/minecraft:entity/component_groups/minecraft:pig_transform/minecraft:transformation/",

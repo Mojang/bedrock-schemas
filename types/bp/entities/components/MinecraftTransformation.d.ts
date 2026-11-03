@@ -11,6 +11,33 @@
  * 
  * minecraft:transformation Samples
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+ * At /minecraft:entity/component_groups/minecraft:convert_to_zombie/minecraft:transformation/: 
+"minecraft:transformation": {
+  "delay": {
+    "value": 15
+  },
+  "preserve_equipment": true,
+  "into": "minecraft:zombie<minecraft:as_adult>",
+  "transformation_sound": [
+    "convert_to_zombie"
+  ]
+}
+
+ * At /minecraft:entity/component_groups/minecraft:convert_to_baby_zombie/minecraft:transformation/: 
+"minecraft:transformation": {
+  "delay": {
+    "value": 15
+  },
+  "preserve_equipment": true,
+  "into": "minecraft:zombie<minecraft:as_baby>",
+  "transformation_sound": [
+    "convert_to_zombie"
+  ]
+}
+
+
 Pig - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/pig.json
 
 "minecraft:transformation": {
@@ -420,6 +447,7 @@ export enum MinecraftTransformationBeginTransformSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallThrow = `ice_ball.throw`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -435,6 +463,7 @@ export enum MinecraftTransformationBeginTransformSound {
   imitateEnderman = `imitate.enderman`,
   imitateEndermite = `imitate.endermite`,
   imitateEvocationIllager = `imitate.evocation_illager`,
+  imitateFrostbite = `imitate.frostbite`,
   imitateGhast = `imitate.ghast`,
   imitateGuardian = `imitate.guardian`,
   imitateHappyGhast = `imitate.happy_ghast`,
@@ -622,6 +651,7 @@ export enum MinecraftTransformationBeginTransformSound {
   recordCreator = `record.creator`,
   recordCreatorMusicBox = `record.creator_music_box`,
   recordFar = `record.far`,
+  recordFlurry = `record.flurry`,
   recordLavaChicken = `record.lava_chicken`,
   recordMall = `record.mall`,
   recordMellohi = `record.mellohi`,
@@ -997,6 +1027,7 @@ export enum MinecraftTransformationTransformationSound {
   hurtInWater = `hurt.in.water`,
   hurtReduced = `hurt.reduced`,
   hurtScreamer = `hurt.screamer`,
+  iceBallThrow = `ice_ball.throw`,
   icebombHit = `icebomb.hit`,
   ignite = `ignite`,
   imitateBlaze = `imitate.blaze`,
@@ -1012,6 +1043,7 @@ export enum MinecraftTransformationTransformationSound {
   imitateEnderman = `imitate.enderman`,
   imitateEndermite = `imitate.endermite`,
   imitateEvocationIllager = `imitate.evocation_illager`,
+  imitateFrostbite = `imitate.frostbite`,
   imitateGhast = `imitate.ghast`,
   imitateGuardian = `imitate.guardian`,
   imitateHappyGhast = `imitate.happy_ghast`,
@@ -1199,6 +1231,7 @@ export enum MinecraftTransformationTransformationSound {
   recordCreator = `record.creator`,
   recordCreatorMusicBox = `record.creator_music_box`,
   recordFar = `record.far`,
+  recordFlurry = `record.flurry`,
   recordLavaChicken = `record.lava_chicken`,
   recordMall = `record.mall`,
   recordMellohi = `record.mellohi`,

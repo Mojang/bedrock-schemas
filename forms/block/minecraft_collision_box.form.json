@@ -48,6 +48,13 @@
   "note2": "Supports an array of collision boxes (for multi-part collision shapes) and a maximum collision box height of 24 units (up from 16). Available without the Upcoming Creator Features experiment and without the format_version 1.21.130 requirement starting in 1.26.0.",
   "fields": [
     {
+      "id": "Using a voxel shape",
+      "title": "Using a Voxel Shape",
+      "description": "Currently only available with the VoxelShape experiment on. When using the minecraft namespace, the only currently available collision shapes are: \"minecraft:empty\" or \"minecraft:unit_cube\". When using no namespaces or a custom one, the names must start and end with an alpha-numeric character.",
+      "defaultValue": "custom:shape_name",
+      "dataType": "string"
+    },
+    {
       "id": "Using custom boxes",
       "title": "Using Custom Boxes",
       "description": "An array of boxes that define the area of the block that collides with entities.",
@@ -96,37 +103,14 @@
       {
         "path": "JSON (object)",
         "content": {
-          "origin": [
-            -8,
+          "min": [
             0,
-            -8
+            0,
+            0
           ],
-          "size": [
+          "max": [
             16,
             16,
-            16
-          ]
-        }
-      }
-    ],
-    "Block Fabricator": [
-      {
-        "path": "https://github.com/microsoft/minecraft-samples/tree/main/casual_creator/gray_wave/behavior_packs/mikeamm_gwve/blocks/fabricator.block.json",
-        "content": true
-      }
-    ],
-    "Block Leaf Pile": [
-      {
-        "path": "https://github.com/microsoft/minecraft-samples/tree/main/creator_camp/behavior_packs/creator_camp/blocks/leaf_pile.block.json",
-        "content": {
-          "origin": [
-            -8,
-            2,
-            -8
-          ],
-          "size": [
-            16,
-            4,
             16
           ]
         }

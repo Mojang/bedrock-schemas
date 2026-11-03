@@ -11,8 +11,9 @@
  * 
  * minecraft:is_shaking Samples
 
-Skeleton - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/skeleton.json
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
 
+ * At /minecraft:entity/component_groups/minecraft:convert_to_zombie/minecraft:is_shaking/: 
 "minecraft:is_shaking": {}
 
  */

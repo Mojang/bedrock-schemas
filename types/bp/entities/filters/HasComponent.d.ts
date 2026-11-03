@@ -15,6 +15,22 @@
  * At Short (using Defaults)..: 
 { "test": "has_component", "value": "minecraft:explode" }
 
+Drowned - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/drowned.json
+
+ * At /minecraft:entity/events/minecraft:convert_to_zombie/sequence[0]/filters/: 
+{
+  "test": "has_component",
+  "operator": "not",
+  "value": "minecraft:is_baby"
+}
+
+ * At /minecraft:entity/events/minecraft:convert_to_zombie/sequence[1]/filters/: 
+{
+  "test": "has_component",
+  "value": "minecraft:is_baby"
+}
+
+
 Sheep - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/sheep.json
 
  * At /minecraft:entity/components/minecraft:interact/interactions[0]/on_interact/filters/all_of[2]/: 
@@ -64,6 +80,8 @@ export default interface HasComponent {
    * (Optional) The comparison to apply with 'value'.
    * 
    * Sample Values:
+   * Drowned: "not"
+   *
    * Sheep: "!="
    *
    */
@@ -84,7 +102,7 @@ export default interface HasComponent {
    * @remarks
    * 
    * Sample Values:
-   * Sheep: "has_component"
+   * Drowned: "has_component"
    *
    */
   test?: string;
@@ -94,7 +112,9 @@ export default interface HasComponent {
    * (Required) The component name to look for
    * 
    * Sample Values:
-   * Sheep: "minecraft:is_baby", "minecraft:is_dyeable"
+   * Drowned: "minecraft:is_baby"
+   *
+   * Sheep: "minecraft:is_dyeable"
    *
    */
   value?: string;

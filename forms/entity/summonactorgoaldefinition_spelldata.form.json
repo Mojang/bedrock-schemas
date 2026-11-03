@@ -1211,6 +1211,10 @@
           "title": "Hurt.screamer"
         },
         {
+          "id": "ice_ball.throw",
+          "title": "Ice ball.throw"
+        },
+        {
           "id": "icebomb.hit",
           "title": "Icebomb.hit"
         },
@@ -1269,6 +1273,10 @@
         {
           "id": "imitate.evocation_illager",
           "title": "Imitate.evocation illager"
+        },
+        {
+          "id": "imitate.frostbite",
+          "title": "Imitate.frostbite"
         },
         {
           "id": "imitate.ghast",
@@ -2017,6 +2025,10 @@
         {
           "id": "record.far",
           "title": "Record.far"
+        },
+        {
+          "id": "record.flurry",
+          "title": "Record.flurry"
         },
         {
           "id": "record.lava_chicken",

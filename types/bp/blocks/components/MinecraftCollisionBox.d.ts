@@ -11,34 +11,14 @@
  * 
  * minecraft:collision_box Samples
 "minecraft:collision_box": {
-  "origin": [
-    -8,
+  "min": [
     0,
-    -8
+    0,
+    0
   ],
-  "size": [
+  "max": [
     16,
     16,
-    16
-  ]
-}
-
-
-Block Fabricator - Block Fabricator
-
-"minecraft:collision_box": true
-
-Block Leaf Pile - Block Leaf Pile
-
-"minecraft:collision_box": {
-  "origin": [
-    -8,
-    2,
-    -8
-  ],
-  "size": [
-    16,
-    4,
     16
   ]
 }
@@ -72,6 +52,16 @@ import * as jsoncommon from '../../../common';
 
  */
 export default interface MinecraftCollisionBox {
+
+  /**
+   * @remarks
+   * Currently only available with the VoxelShape experiment on. When
+   * using the minecraft namespace, the only currently available collision
+   * shapes are: "minecraft:empty" or "minecraft:unit_cube". When
+   * using no namespaces or a custom one, the names must start and
+   * end with an alpha-numeric character.
+   */
+  Usingavoxelshape?: string;
 
   /**
    * @remarks

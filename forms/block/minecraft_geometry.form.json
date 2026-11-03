@@ -114,22 +114,16 @@
       "note": "The reserved identifier `minecraft:geometry.full_cube` was added in 1.20.60 to provide the most efficient rendering path for 1x1x1 blocks.",
       "humanifyValues": "none",
       "samples": {
-        "/vanilla/behavior_pack/blocks/packed_ice_bricks.block.json": [
+        "/vanilla/behavior_pack/blocks/chiseled_packed_ice.block.json": [
           {
             "path": "/minecraft:block/components/minecraft:geometry/",
             "content": "minecraft:geometry.full_block"
           }
         ],
-        "/vanilla/behavior_pack/blocks/packed_ice_bricks_chiseled.block.json": [
+        "/vanilla/behavior_pack/blocks/chiseled_soulshale.block.json": [
           {
             "path": "/minecraft:block/components/minecraft:geometry/",
             "content": "minecraft:geometry.full_block"
-          }
-        ],
-        "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
-          {
-            "path": "/minecraft:block/components/minecraft:geometry/",
-            "content": "minecraft:geometry.cross"
           }
         ]
       },
@@ -248,6 +242,22 @@
         "content": "geometry.sushi"
       }
     ],
+    "/vanilla/behavior_pack/blocks/chiseled_packed_ice.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:geometry/",
+        "content": {
+          "identifier": "minecraft:geometry.full_block"
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/chiseled_soulshale.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:geometry/",
+        "content": {
+          "identifier": "minecraft:geometry.full_block"
+        }
+      }
+    ],
     "/vanilla/behavior_pack/blocks/packed_ice_bricks.block.json": [
       {
         "path": "/minecraft:block/components/minecraft:geometry/",
@@ -264,11 +274,11 @@
         }
       }
     ],
-    "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
+    "/vanilla/behavior_pack/blocks/polished_calcite.block.json": [
       {
         "path": "/minecraft:block/components/minecraft:geometry/",
         "content": {
-          "identifier": "minecraft:geometry.cross"
+          "identifier": "minecraft:geometry.full_block"
         }
       }
     ]
