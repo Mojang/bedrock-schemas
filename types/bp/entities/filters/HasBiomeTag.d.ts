@@ -56,6 +56,51 @@ Chicken - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
   "value": "spawns_cold_variant_farm_animals"
 }
 
+
+Frog - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/frog.json
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[1]/: 
+{
+  "test": "has_biome_tag",
+  "value": "jungle"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[2]/: 
+{
+  "test": "has_biome_tag",
+  "value": "savanna"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[3]/: 
+{
+  "test": "has_biome_tag",
+  "value": "mesa"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[5]/all_of[0]/: 
+{
+  "test": "has_biome_tag",
+  "value": "warm"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[5]/all_of[1]/: 
+{
+  "test": "has_biome_tag",
+  "value": "ocean"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[1]/filters/any_of[6]/all_of[0]/: 
+{
+  "test": "has_biome_tag",
+  "value": "lukewarm"
+}
+
+ * At /minecraft:entity/events/minecraft:entity_spawned/sequence[2]/filters/: 
+{
+  "test": "has_biome_tag",
+  "value": "spawns_cold_variant_frogs"
+}
+
  */
 
 import * as jsoncommon from '../../../common';

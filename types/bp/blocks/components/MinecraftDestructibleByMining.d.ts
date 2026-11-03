@@ -139,13 +139,21 @@ export default interface MinecraftDestructibleByMining {
 
   /**
    * @remarks
+   * Sets the number of server simulation ticks it takes to mine the
+   * block with base equipment. Greater numbers result in greater mining
+   * times. A negative number means the block can't be mined.
+   */
+  base_time_to_destroy?: number;
+
+  /**
+   * @remarks
    * Optional array of objects to describe item specific block destroy
    * speeds, each object contains an 'item' ItemDescriptor and a
    * 'destroy_speed' float. This array currently requires UpcomingFeatures
    * experiment to be enabled.
    * 
    * Sample Values:
-   * Samples: "{<br> "minecraft:destructible_by_mining": {<br> "seconds_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": { "tags": "q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') " },<br> "destroy_speed": 5.0<br> }<br> ]<br> }<br>}", "{<br> "minecraft:destructible_by_mining": {<br> "seconds_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": "minecraft:iron_pickaxe",<br> "destroy_speed": 5.0<br> },<br> {<br> "item": "minecraft:diamond_pickaxe",<br> "destroy_speed": 2.0<br> }<br> ]<br> }<br>}"
+   * Samples: "{<br> "minecraft:destructible_by_mining": {<br> "base_time_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": { "tags": "q.any_tag('minecraft:is_pickaxe', 'minecraft:is_tool') " },<br> "destroy_speed": 5.0<br> }<br> ]<br> }<br>}", "{<br> "minecraft:destructible_by_mining": {<br> "base_time_to_destroy": 10,<br> "item_specific_speeds": [<br> {<br> "item": "minecraft:iron_pickaxe",<br> "destroy_speed": 5.0<br> },<br> {<br> "item": "minecraft:diamond_pickaxe",<br> "destroy_speed": 2.0<br> }<br> ]<br> }<br>}"
    *
    */
   item_specific_speeds?: MinecraftDestructibleByMiningItemSpecificSpeeds[];

@@ -100,6 +100,26 @@ Blue Bubble Fish - Blue Bubble Fish
 }
 
 
+Block Packed Ice Bricks - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/packed_ice_bricks.block.json
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "packed_ice_bricks",
+    "render_method": "opaque"
+  }
+}
+
+
+Block Packed Ice Bricks Chiseled - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/packed_ice_bricks_chiseled.block.json
+
+"minecraft:material_instances": {
+  "*": {
+    "texture": "chiseled_packed_ice",
+    "render_method": "opaque"
+  }
+}
+
+
 Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
 
 "minecraft:material_instances": {

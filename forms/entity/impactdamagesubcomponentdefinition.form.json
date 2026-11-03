@@ -112,6 +112,13 @@
       "defaultValue": 0
     },
     {
+      "id": "scale_damage_with_difficulty",
+      "title": "Scale Damage With Difficulty",
+      "description": "If `true`, scales impact damage with the world's difficulty.",
+      "dataType": "boolean",
+      "defaultValue": true
+    },
+    {
       "id": "set_last_hurt_requires_damage",
       "title": "Set Last Hurt Requires Damage",
       "description": "If `true`, the projectile only registers as the last hurt-by source on the target when at least one point of damage is actually dealt.",
@@ -119,7 +126,6 @@
       "defaultValue": true
     }
   ],
-  "description": "Deals damage to the entity that was hit and optionally applies knockback, fire, channeling, and critical-hit scaling.",
   "title": "Entity ImpactDamageSubcomponentDefinition",
-  "dataVersion": "1.26.50"
+  "dataVersion": "1.26.70"
 }

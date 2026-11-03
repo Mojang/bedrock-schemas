@@ -238,22 +238,22 @@
             "title": "Destructible By Mining",
             "fields": [
               {
+                "id": "base_time_to_destroy",
+                "title": "Base Time To Destroy",
+                "description": "Sets the number of server simulation ticks it takes to mine the block with base equipment. Greater numbers result in greater mining times. A negative number means the block can't be mined.",
+                "dataType": "float",
+                "isRequired": true
+              },
+              {
                 "id": "item_specific_speeds",
                 "title": "Item Specific Speeds",
                 "description": "Optional array with item specific mining speeds.",
                 "dataType": "objectArray",
                 "defaultValue": [],
                 "subFormId": "block/item_specific_speed"
-              },
-              {
-                "id": "seconds_to_destroy",
-                "title": "Seconds To Destroy",
-                "description": "Sets the number of seconds it takes to mine the block with base equipment. Greater numbers result in greater mining times. A negative number means the block can't be mined",
-                "dataType": "float",
-                "isRequired": true
               }
             ],
-            "dataVersion": "1.26.20"
+            "dataVersion": "1.26.70"
           }
         }
       ]
@@ -466,7 +466,7 @@
     {
       "id": "minecraft:jukebox_playlist_source",
       "title": "Minecraft Jukebox Playlist Source",
-      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.60 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
+      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.70 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
       "dataType": "object"
     },
     {
@@ -762,5 +762,5 @@
   ],
   "description": "Container for all components that define custom block behavior and properties. Components control collision, selection boxes, destruction time, light emission, flammability, placement rules, crafting table functionality, and more. Combine components to create unique blocks with specific gameplay characteristics.",
   "title": "Block Components",
-  "dataVersion": "1.26.60"
+  "dataVersion": "1.26.70"
 }

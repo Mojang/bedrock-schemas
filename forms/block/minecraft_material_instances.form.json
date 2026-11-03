@@ -146,6 +146,24 @@
         }
       ],
       "samples": {
+        "/vanilla/behavior_pack/blocks/packed_ice_bricks.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:material_instances/",
+            "content": {
+              "texture": "packed_ice_bricks",
+              "render_method": "opaque"
+            }
+          }
+        ],
+        "/vanilla/behavior_pack/blocks/packed_ice_bricks_chiseled.block.json": [
+          {
+            "path": "/minecraft:block/components/minecraft:material_instances/",
+            "content": {
+              "texture": "chiseled_packed_ice",
+              "render_method": "opaque"
+            }
+          }
+        ],
         "/vanilla/behavior_pack/blocks/red_shrub.block.json": [
           {
             "path": "/minecraft:block/components/minecraft:material_instances/",
@@ -319,6 +337,28 @@
             "render_method": "blend",
             "face_dimming": true,
             "ambient_occlusion": 1
+          }
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/packed_ice_bricks.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:material_instances/",
+        "content": {
+          "*": {
+            "texture": "packed_ice_bricks",
+            "render_method": "opaque"
+          }
+        }
+      }
+    ],
+    "/vanilla/behavior_pack/blocks/packed_ice_bricks_chiseled.block.json": [
+      {
+        "path": "/minecraft:block/components/minecraft:material_instances/",
+        "content": {
+          "*": {
+            "texture": "chiseled_packed_ice",
+            "render_method": "opaque"
           }
         }
       }

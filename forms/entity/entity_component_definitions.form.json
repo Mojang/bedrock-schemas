@@ -2762,7 +2762,7 @@
     {
       "id": "minecraft:freezing_immune",
       "title": "Minecraft Freezing Immune",
-      "description": "Defines whether an entity should be affected by freezing.",
+      "description": "Prevents freezing buildup from powder snow and the Freezing mob effect, but does not prevent the mob effect from being applied or displaying particles. Use minecraft:mob_effect_immunity to block the Freezing mob effect.",
       "dataType": "object"
     },
     {
@@ -2875,5 +2875,5 @@
   ],
   "description": "Registry of all available entity components that define mob capabilities. Components cover health, movement, combat, AI goals, interactions, physics, sensing, and rendering. Entities combine components to create unique creatures—adding minecraft:health for durability, minecraft:behavior.melee_attack for combat, or minecraft:rideable for mounts.",
   "title": "Entity Component Definitions",
-  "dataVersion": "1.26.60"
+  "dataVersion": "1.26.70"
 }

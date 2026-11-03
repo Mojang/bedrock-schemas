@@ -2,7 +2,6 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "title": "Entity ImpactDamageSubcomponentDefinition",
-  "description": "Deals damage to the entity that was hit and optionally applies knockback, fire, channeling, and critical-hit scaling.",
   "properties": {
     "apply_knockback_to_blocking_targets": {
       "title": "Apply Knockback To Blocking Targets",
@@ -100,6 +99,12 @@
       "description": "Multiplied by the projectile's velocity and added to the rolled `damage` to define the projectile's base damage, so it can be used on its own to scale damage by the projectile's velocity.",
       "type": "number",
       "default": 0
+    },
+    "scale_damage_with_difficulty": {
+      "title": "Scale Damage With Difficulty",
+      "description": "If `true`, scales impact damage with the world's difficulty.",
+      "type": "boolean",
+      "default": true
     },
     "set_last_hurt_requires_damage": {
       "title": "Set Last Hurt Requires Damage",

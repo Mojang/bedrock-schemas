@@ -187,9 +187,14 @@
           "type": "boolean"
         },
         {
-          "description": "\n\nProperties:\n• item_specific_speeds = []\n• seconds_to_destroy (float)",
+          "description": "\n\nProperties:\n• base_time_to_destroy (float)\n• item_specific_speeds = []",
           "type": "object",
           "properties": {
+            "base_time_to_destroy": {
+              "title": "Base Time To Destroy",
+              "description": "Sets the number of server simulation ticks it takes to mine the block with base equipment. Greater numbers result in greater mining times. A negative number means the block can't be mined.",
+              "type": "number"
+            },
             "item_specific_speeds": {
               "title": "Item Specific Speeds",
               "description": "Optional array with item specific mining speeds.",
@@ -197,11 +202,6 @@
               "items": {
                 "$ref": "./block_item_specific_speed.schema.json"
               }
-            },
-            "seconds_to_destroy": {
-              "title": "Seconds To Destroy",
-              "description": "Sets the number of seconds it takes to mine the block with base equipment. Greater numbers result in greater mining times. A negative number means the block can't be mined",
-              "type": "number"
             }
           },
           "defaultSnippets": [
@@ -209,8 +209,8 @@
               "label": "Destructible By Mining (object)",
               "description": "Use Destructible By Mining as an object",
               "body": {
-                "item_specific_speeds": [],
-                "seconds_to_destroy": 0
+                "base_time_to_destroy": 0,
+                "item_specific_speeds": []
               }
             }
           ]
@@ -223,8 +223,8 @@
           "label": "Destructible By Mining (object)",
           "description": "Use Destructible By Mining as an object",
           "body": {
-            "item_specific_speeds": [],
-            "seconds_to_destroy": 0
+            "base_time_to_destroy": 0,
+            "item_specific_speeds": []
           }
         },
         {
@@ -507,7 +507,7 @@
     },
     "minecraft:jukebox_playlist_source": {
       "title": "Minecraft Jukebox Playlist Source",
-      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.60 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
+      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.70 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
       "type": "object"
     },
     "minecraft:leashable": {

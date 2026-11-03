@@ -726,5 +726,5 @@
   "description": "Turns the entity into a projectile: a thrown or shot entity that flies along a ballistic arc and reacts when it impacts a block, a fluid, or another entity.",
   "title": "Entity Projectile",
   "id": "minecraft:projectile",
-  "dataVersion": "1.26.50"
+  "dataVersion": "1.26.70"
 }

@@ -54,6 +54,13 @@ California Roll - California Roll
 
 "minecraft:geometry": "geometry.sushi
 
+Block Packed Ice Bricks - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/packed_ice_bricks.block.json
+
+"minecraft:geometry": {
+  "identifier": "minecraft:geometry.full_block"
+}
+
+
 Block Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/blocks/red_shrub.block.json
 
 "minecraft:geometry": {
@@ -137,6 +144,9 @@ export default interface MinecraftGeometry {
    * block.
    * 
    * Sample Values:
+   * Block Packed Ice Bricks: "minecraft:geometry.full_block"
+   *
+   *
    * Block Red Shrub: "minecraft:geometry.cross"
    *
    */

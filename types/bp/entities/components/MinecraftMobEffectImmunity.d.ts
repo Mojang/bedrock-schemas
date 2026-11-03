@@ -20,6 +20,15 @@ Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 }
 
 
+Polar Bear - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/polar_bear.json
+
+"minecraft:mob_effect_immunity": {
+  "mob_effects": [
+    "freezing"
+  ]
+}
+
+
 Silverfish - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/silverfish.json
 
 "minecraft:mob_effect_immunity": {
@@ -55,9 +64,9 @@ export default interface MinecraftMobEffectImmunity {
    * Sample Values:
    * Parched: ["weakness"]
    *
-   * Silverfish: ["infested"]
+   * Polar Bear: ["freezing"]
    *
-   * Slime: ["oozing"]
+   * Silverfish: ["infested"]
    *
    */
   mob_effects?: string[];
