@@ -17,6 +17,12 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
   "excluded_items": [
     {
       "item": "minecraft:banner:15"
+    },
+    {
+      "item": "minecraft:wolf_armor"
+    },
+    {
+      "tags": "q.any_tag('minecraft:horse_armor', 'minecraft:nautilus_armor')"
     }
   ]
 }
@@ -43,7 +49,7 @@ export default interface MinecraftEquipItem {
    * List of items that the entity should not equip.
    * 
    * Sample Values:
-   * Bogged: [{"item":"minecraft:banner:15"}]
+   * Bogged: [{"item":"minecraft:banner:15"},{"item":"minecraft:wolf_armor"},{"tags":"q.any_tag('minecraft:horse_armor', 'minecraft:nautilus_armor')"}]
    *
    *
    */

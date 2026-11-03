@@ -11,6 +11,13 @@
  * 
  * minecraft:throwable Samples
 
+Ice Ball - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/ice_ball.json
+
+"minecraft:throwable": {
+  "do_swing_animation": true
+}
+
+
 Wind Charge - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/wind_charge.json
 
 "minecraft:throwable": {
@@ -41,7 +48,8 @@ export default interface MinecraftThrowable {
    * thrown. Default is set to false.
    * 
    * Sample Values:
-   * Wind Charge: true
+   * Ice Ball: true
+   *
    *
    */
   do_swing_animation?: boolean;

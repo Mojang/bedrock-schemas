@@ -6,7 +6,7 @@
   "properties": {
     "attack_interval": {
       "title": "Attack Interval",
-      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: {\"min\":3,\"max\":5}\n• bogged: 3.5\n• bogged: 2.5",
+      "description": "Reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.\n\nSample values:\n• blaze: {\"min\":3,\"max\":5}\n• bogged: {\"min\":3.5,\"max\":3.5}\n• bogged: {\"min\":2.5,\"max\":2.5}",
       "anyOf": [
         {
           "type": "number"
@@ -27,7 +27,7 @@
     },
     "attack_range": {
       "title": "Attack Range",
-      "description": "Range of distances from the target within which the entity can perform a ranged attack.\n\nSample values:\n• blaze: {\"min\":0,\"max\":48}\n• drowned: {\"min\":0,\"max\":10}\n• llama: {\"max\":64}",
+      "description": "Range of distances from the target within which the entity can perform a ranged attack.\n\nSample values:\n• blaze: {\"min\":0,\"max\":48}\n• bogged: {\"min\":0,\"max\":15}\n• drowned: {\"min\":0,\"max\":10}",
       "anyOf": [
         {
           "type": "number"
@@ -145,12 +145,6 @@
       "type": "number",
       "default": 30
     },
-    "attack_radius": {
-      "title": "Attack Radius",
-      "description": "Minimum distance to target before this entity will attempt to shoot.\n\nSample values:\n• bogged: 15",
-      "type": "number",
-      "default": 0
-    },
     "attack_interval_max": {
       "title": "Attack Interval Max",
       "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
@@ -160,6 +154,12 @@
     "attack_interval_min": {
       "title": "Attack Interval Min",
       "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
+      "type": "number",
+      "default": 0
+    },
+    "attack_radius": {
+      "title": "Attack Radius",
+      "description": "Minimum distance to target before this entity will attempt to shoot.",
       "type": "number",
       "default": 0
     },

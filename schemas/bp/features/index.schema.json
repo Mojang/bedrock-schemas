@@ -722,6 +722,23 @@
         }
       }
     },
+    "minecraft:crevasse_feature": {
+      "$ref": "./crevasse_feature.schema.json",
+      "title": "Crevasse Feature",
+      "description": "\n\nProperties:\n• description ({ identifier })\n• max_length (int)\n• max_width (int)\n• min_footprint (int)",
+      "defaultSnippets": [
+        {
+          "label": "Crevasse Feature",
+          "description": "Create a Crevasse Feature",
+          "body": {
+            "description": "",
+            "max_length": 0,
+            "max_width": 0,
+            "min_footprint": 0
+          }
+        }
+      ]
+    },
     "minecraft:multi_block_feature": {
       "$ref": "./multi_block_feature.schema.json",
       "title": "Multi Block Feature",

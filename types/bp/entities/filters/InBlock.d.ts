@@ -14,30 +14,6 @@
 { "test": "in_block", "subject": "self", "operator": "equals", "value": "" }
  * At Short (using Defaults)..: 
 { "test": "in_block" }
-
-Skeleton - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/entities/skeleton.json
-
- * At /minecraft:entity/components/minecraft:environment_sensor/triggers[2]/filters/: 
-{
-  "subject": "self",
-  "test": "in_block",
-  "value": "minecraft:powder_snow"
-}
-
- * At /minecraft:entity/component_groups/in_powder_snow/minecraft:environment_sensor/triggers[0]/filters/: 
-{
-  "operator": "not",
-  "test": "in_block",
-  "subject": "self",
-  "value": "minecraft:powder_snow"
-}
-
- * At /minecraft:entity/component_groups/minecraft:melee_attack/minecraft:environment_sensor/triggers[1]/filters/: 
-{
-  "test": "in_block",
-  "value": "minecraft:powder_snow"
-}
-
  */
 
 import * as jsoncommon from '../../../common';
@@ -54,39 +30,18 @@ export default interface InBlock {
   /**
    * @remarks
    * (Optional) The comparison to apply with 'value'.
-   * 
-   * Sample Values:
-   * Skeleton: "not"
-   *
    */
   operator?: string;
 
   /**
    * @remarks
    * (Optional) The subject of this filter test.
-   * 
-   * Sample Values:
-   * Skeleton: "self"
-   *
    */
   subject?: string;
 
   /**
    * @remarks
-   * 
-   * Sample Values:
-   * Skeleton: "in_block"
-   *
-   */
-  test?: string;
-
-  /**
-   * @remarks
    * (Optional) A string value.
-   * 
-   * Sample Values:
-   * Skeleton: "minecraft:powder_snow"
-   *
    */
   value?: string;
 

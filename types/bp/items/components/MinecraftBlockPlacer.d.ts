@@ -20,6 +20,22 @@
 }
 
 
+Ice Crystal - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/ice_crystal.json
+
+"minecraft:block_placer": {
+  "block": "minecraft:ice_crystal",
+  "replace_block_item": true
+}
+
+
+Icicle - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/icicle.json
+
+"minecraft:block_placer": {
+  "block": "minecraft:icicle",
+  "replace_block_item": true
+}
+
+
 Red Shrub - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/items/red_shrub.json
 
 "minecraft:block_placer": {
@@ -62,9 +78,11 @@ export default interface MinecraftBlockPlacer {
    * Defines the block that will be placed.
    * 
    * Sample Values:
-   * Red Shrub: "minecraft:red_shrub"
+   * Ice Crystal: "minecraft:ice_crystal"
    *
-   * Shelf Mushroom: "minecraft:shelf_mushroom"
+   * Icicle: "minecraft:icicle"
+   *
+   * Red Shrub: "minecraft:red_shrub"
    *
    */
   block: string;
@@ -78,7 +96,7 @@ export default interface MinecraftBlockPlacer {
    * false.
    * 
    * Sample Values:
-   * Red Shrub: true
+   * Ice Crystal: true
    *
    *
    */

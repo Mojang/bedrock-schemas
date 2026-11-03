@@ -129,5 +129,6 @@
   ],
   "description": "Allows mob to move towards its target leader.",
   "title": "Entity Follow Target Leader Behavior",
+  "samples": {},
   "dataVersion": "1.26.30"
 }

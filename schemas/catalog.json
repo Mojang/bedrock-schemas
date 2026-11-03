@@ -45,7 +45,7 @@
       "packFolder": "features",
       "title": "Feature",
       "description": "Defines a world generation feature document and its feature-specific properties.",
-      "componentCount": 65
+      "componentCount": 66
     },
     {
       "folder": "bp/feature_rules",

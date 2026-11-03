@@ -33,15 +33,27 @@ Bogged - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/en
 
  * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval": 3.5,
-  "attack_radius": 15,
+  "attack_interval": {
+    "min": 3.5,
+    "max": 3.5
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 15
+  },
   "priority": 0
 }
 
  * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval": 2.5,
-  "attack_radius": 15,
+  "attack_interval": {
+    "min": 2.5,
+    "max": 2.5
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 15
+  },
   "priority": 0
 }
 
@@ -79,15 +91,27 @@ Parched - https://github.com/Mojang/bedrock-samples/tree/preview/behavior_pack/e
 
  * At /minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval": 3.5,
-  "attack_radius": 15,
+  "attack_interval": {
+    "min": 3.5,
+    "max": 3.5
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 15
+  },
   "priority": 1
 }
 
  * At /minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/: 
 "minecraft:behavior.ranged_attack": {
-  "attack_interval": 2.5,
-  "attack_radius": 15,
+  "attack_interval": {
+    "min": 2.5,
+    "max": 2.5
+  },
+  "attack_range": {
+    "min": 0,
+    "max": 15
+  },
   "priority": 1
 }
 
@@ -113,7 +137,7 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: {"min":3,"max":5}
    *
-   * Bogged: 3.5, 2.5
+   * Bogged: {"min":3.5,"max":3.5}, {"min":2.5,"max":2.5}
    *
    */
   attack_interval?: MinecraftBehaviorRangedAttackAttackInterval;
@@ -136,10 +160,6 @@ export default interface MinecraftBehaviorRangedAttack {
    * @remarks
    * Minimum distance to target before this entity will attempt to
    * shoot.
-   * 
-   * Sample Values:
-   * Bogged: 15
-   *
    */
   attack_radius?: number;
 
@@ -158,9 +178,9 @@ export default interface MinecraftBehaviorRangedAttack {
    * Sample Values:
    * Blaze: {"min":0,"max":48}
    *
-   * Drowned: {"min":0,"max":10}
+   * Bogged: {"min":0,"max":15}
    *
-   * Llama: {"max":64}
+   * Drowned: {"min":0,"max":10}
    *
    */
   attack_range?: MinecraftBehaviorRangedAttackAttackRange;

@@ -8,6 +8,8 @@
  * Contains types for working with various Minecraft Bedrock Edition JSON schemas.
  * 
  * Entity Behaviors Documentation - minecraft:behavior.follow_target_leader
+ * 
+ * minecraft:behavior.follow_target_leader Samples
  */
 
 import * as jsoncommon from '../../../common';

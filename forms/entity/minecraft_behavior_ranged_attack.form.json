@@ -155,11 +155,17 @@
         "/vanilla/behavior_pack/entities/bogged.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
-            "content": 3.5
+            "content": {
+              "min": 3.5,
+              "max": 3.5
+            }
           },
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
-            "content": 2.5
+            "content": {
+              "min": 2.5,
+              "max": 2.5
+            }
           }
         ],
         "/vanilla/behavior_pack/entities/drowned.json": [
@@ -174,11 +180,17 @@
         "/vanilla/behavior_pack/entities/parched.json": [
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
-            "content": 3.5
+            "content": {
+              "min": 3.5,
+              "max": 3.5
+            }
           },
           {
             "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
-            "content": 2.5
+            "content": {
+              "min": 2.5,
+              "max": 2.5
+            }
           }
         ]
       }
@@ -201,6 +213,22 @@
             "content": {
               "min": 0,
               "max": 48
+            }
+          }
+        ],
+        "/vanilla/behavior_pack/entities/bogged.json": [
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
+            "content": {
+              "min": 0,
+              "max": 15
+            }
+          },
+          {
+            "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
+            "content": {
+              "min": 0,
+              "max": 15
             }
           }
         ],
@@ -471,25 +499,6 @@
       "defaultValue": 30
     },
     {
-      "id": "attack_radius",
-      "title": "Attack Radius",
-      "dataType": "number",
-      "samples": {
-        "/vanilla/behavior_pack/entities/bogged.json": [
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
-            "content": 15
-          },
-          {
-            "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
-            "content": 15
-          }
-        ]
-      },
-      "defaultValue": 0,
-      "description": "Minimum distance to target before this entity will attempt to shoot."
-    },
-    {
       "id": "attack_interval_max",
       "title": "Attack Interval Max",
       "description": "Maximum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
@@ -500,6 +509,13 @@
       "id": "attack_interval_min",
       "title": "Attack Interval Min",
       "description": "Minimum bound for reload-time range (in seconds), when not using a charged shot. Reload-time range scales with target-distance.",
+      "defaultValue": 0,
+      "dataType": "float"
+    },
+    {
+      "id": "attack_radius",
+      "title": "Attack Radius",
+      "description": "Minimum distance to target before this entity will attempt to shoot.",
       "defaultValue": 0,
       "dataType": "float"
     },
@@ -537,16 +553,28 @@
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
         "content": {
-          "attack_interval": 3.5,
-          "attack_radius": 15,
+          "attack_interval": {
+            "min": 3.5,
+            "max": 3.5
+          },
+          "attack_range": {
+            "min": 0,
+            "max": 15
+          },
           "priority": 0
         }
       },
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
         "content": {
-          "attack_interval": 2.5,
-          "attack_radius": 15,
+          "attack_interval": {
+            "min": 2.5,
+            "max": 2.5
+          },
+          "attack_range": {
+            "min": 0,
+            "max": 15
+          },
           "priority": 0
         }
       }
@@ -596,16 +624,28 @@
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack/minecraft:behavior.ranged_attack/",
         "content": {
-          "attack_interval": 3.5,
-          "attack_radius": 15,
+          "attack_interval": {
+            "min": 3.5,
+            "max": 3.5
+          },
+          "attack_range": {
+            "min": 0,
+            "max": 15
+          },
           "priority": 1
         }
       },
       {
         "path": "/minecraft:entity/component_groups/minecraft:ranged_attack_hard/minecraft:behavior.ranged_attack/",
         "content": {
-          "attack_interval": 2.5,
-          "attack_radius": 15,
+          "attack_interval": {
+            "min": 2.5,
+            "max": 2.5
+          },
+          "attack_range": {
+            "min": 0,
+            "max": 15
+          },
           "priority": 1
         }
       }

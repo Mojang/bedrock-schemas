@@ -37,6 +37,12 @@
       "dataType": "boolean",
       "defaultValue": false,
       "samples": {
+        "/vanilla/behavior_pack/items/ice_ball.json": [
+          {
+            "path": "/minecraft:item/components/minecraft:throwable/",
+            "content": true
+          }
+        ],
         "/vanilla/behavior_pack/items/wind_charge.json": [
           {
             "path": "/minecraft:item/components/minecraft:throwable/",
@@ -101,6 +107,14 @@
   "note": "Combine with minecraft:projectile to define the projectile entity. For charged throws (like tridents), set scale_power_by_draw_duration to true and configure min/max draw durations.",
   "title": "Item Throwable",
   "samples": {
+    "/vanilla/behavior_pack/items/ice_ball.json": [
+      {
+        "path": "/minecraft:item/components/minecraft:throwable/",
+        "content": {
+          "do_swing_animation": true
+        }
+      }
+    ],
     "/vanilla/behavior_pack/items/wind_charge.json": [
       {
         "path": "/minecraft:item/components/minecraft:throwable/",

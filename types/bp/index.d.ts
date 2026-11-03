@@ -649,6 +649,7 @@ export { default as MinecraftAggregateFeature } from './features/MinecraftAggreg
 export { default as MinecraftBeardsAndShavers } from './features/MinecraftBeardsAndShavers';
 export { default as MinecraftCaveCarverFeature } from './features/MinecraftCaveCarverFeature';
 export { default as MinecraftConditionalList } from './features/MinecraftConditionalList';
+export { default as MinecraftCrevasseFeature } from './features/MinecraftCrevasseFeature';
 export { default as MinecraftFossilFeature } from './features/MinecraftFossilFeature';
 export { default as MinecraftGeodeFeature } from './features/MinecraftGeodeFeature';
 export { default as MinecraftGrowingPlantFeature } from './features/MinecraftGrowingPlantFeature';

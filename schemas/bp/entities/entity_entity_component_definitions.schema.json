@@ -6807,9 +6807,9 @@
             "target_in_sight_time": 1,
             "x_max_rotation": 30,
             "y_max_head_rotation": 30,
-            "attack_radius": 0,
             "attack_interval_max": 0,
             "attack_interval_min": 0,
+            "attack_radius": 0,
             "attack_radius_min": 0
           }
         }
