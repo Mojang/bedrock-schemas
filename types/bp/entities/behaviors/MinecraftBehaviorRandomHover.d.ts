@@ -51,7 +51,7 @@ export default interface MinecraftBehaviorRandomHover {
    * Allay: [1,4]
    *
    */
-  hover_height?: object;
+  hover_height?: MinecraftBehaviorRandomHoverHoverHeight;
 
   /**
    * @remarks
@@ -121,4 +121,16 @@ export enum MinecraftBehaviorRandomHoverControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorRandomHoverHoverHeight {
+
+  max?: number;
+
+  min?: number;
+
 }

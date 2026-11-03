@@ -59,7 +59,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: {"min":4.5,"max":4.5}
    *
    */
-  duration?: object;
+  duration?: MinecraftBehaviorCroakDuration;
 
   /**
    * @remarks
@@ -81,7 +81,7 @@ export default interface MinecraftBehaviorCroak {
    * Frog: {"min":10,"max":20}
    *
    */
-  interval?: object;
+  interval?: MinecraftBehaviorCroakInterval;
 
   /**
    * @remarks
@@ -102,6 +102,18 @@ export enum MinecraftBehaviorCroakControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCroakDuration {
+
+  max?: number;
+
+  min?: number;
+
 }
 
 
@@ -139,5 +151,17 @@ export interface MinecraftBehaviorCroakFilters {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCroakInterval {
+
+  max?: number;
+
+  min?: number;
 
 }

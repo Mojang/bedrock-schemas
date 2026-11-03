@@ -30,7 +30,7 @@ export default interface MinecraftSpawnOnDeath {
    * Additional random range of entities to spawn, defaults to 0, 0
    * when not set
    */
-  additional_spawn_range?: object;
+  additional_spawn_range?: MinecraftSpawnOnDeathAdditionalSpawnRange;
 
   /**
    * @remarks
@@ -63,6 +63,18 @@ export default interface MinecraftSpawnOnDeath {
    * not set
    */
   spawn_method?: string;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftSpawnOnDeathAdditionalSpawnRange {
+
+  max?: number;
+
+  min?: number;
 
 }
 

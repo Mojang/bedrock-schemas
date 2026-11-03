@@ -35,7 +35,7 @@ export default interface MinecraftBehaviorCelebrateSurvive {
    * Minimum and maximum time between firework (positive, in
    * seconds).
    */
-  fireworks_interval?: object;
+  fireworks_interval?: MinecraftBehaviorCelebrateSurviveFireworksInterval;
 
   /**
    * @remarks
@@ -62,6 +62,18 @@ export enum MinecraftBehaviorCelebrateSurviveControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCelebrateSurviveFireworksInterval {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -83,7 +95,7 @@ export interface MinecraftBehaviorCelebrateSurviveOnCelebrationEndEvent {
    */
   filters?: MinecraftBehaviorCelebrateSurviveOnCelebrationEndEventFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorCelebrateSurviveOnCelebrationEndEventTarget;
 
 }
 

@@ -577,7 +577,7 @@ export interface BiomeJSONFileMinecraftBiomeComponentsMinecraftOverworldHeight {
    * Specifies a preset based on a built-in setting rather than
    * manually using noise_params
    */
-  noise_type?: string;
+  noise_type?: BiomeJSONFileMinecraftBiomeComponentsMinecraftOverworldHeightNoiseType;
 
 }
 
@@ -659,7 +659,7 @@ export interface BiomeJSONFileMinecraftBiomeComponentsMinecraftReplaceBiomesRepl
    * Biomes that are going to be replaced by the overriding biome.
    * Target biomes must not contain namespaces.
    */
-  targets: object[];
+  targets: string[];
 
 }
 
@@ -753,7 +753,7 @@ export interface BiomeJSONFileMinecraftBiomeComponentsMinecraftSurfaceBuilderBui
    * @remarks
    * Controls the type of surface builder to use.
    */
-  type: string;
+  type: BiomeJSONFileMinecraftBiomeComponentsMinecraftSurfaceBuilderBuilderType;
 
 }
 
@@ -969,7 +969,7 @@ export interface BiomeJSONFileMinecraftBiomeComponentsMinecraftTags {
  */
 export interface BiomeJSONFileMinecraftBiomeComponentsMinecraftVillageType {
 
-  type: string;
+  type: BiomeJSONFileMinecraftBiomeComponentsMinecraftVillageTypeType;
 
 }
 

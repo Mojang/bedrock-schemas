@@ -71,5 +71,5 @@
   ],
   "description": "Controls UV texture mapping and flipbook animation for particles.",
   "title": "Client Particles UV Proxy",
-  "dataVersion": "1.21.10"
+  "dataVersion": "1.26.70"
 }

@@ -126,7 +126,7 @@ export default interface MinecraftBehaviorLookAtTarget {
    *
    *
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorLookAtTargetLookTime;
 
   /**
    * @remarks
@@ -163,4 +163,16 @@ export enum MinecraftBehaviorLookAtTargetControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorLookAtTargetLookTime {
+
+  max?: number;
+
+  min?: number;
+
 }

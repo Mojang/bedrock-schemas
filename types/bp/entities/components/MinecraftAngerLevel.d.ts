@@ -205,7 +205,7 @@ export default interface MinecraftAngerLevel {
    * Warden: [{"condition":"query.anger_level(this) >= 40","sound":"listening_angry"},{"condition":"query.anger_level(this) >= 0","sound":"listening"}]
    *
    */
-  on_increase_sounds?: object[];
+  on_increase_sounds?: MinecraftAngerLevelOnIncreaseSounds[];
 
   /**
    * @remarks
@@ -262,5 +262,26 @@ export interface MinecraftAngerLevelNuisanceFilter {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Entity SoundDefinition (SoundDefinition)
+ */
+export interface MinecraftAngerLevelOnIncreaseSounds {
+
+  /**
+   * @remarks
+   * A Molang expression describing under which conditions to play
+   * this sound, given that the entity was provoked.
+   */
+  condition: { [key: string]: string };
+
+  /**
+   * @remarks
+   * The sound to play.
+   */
+  sound: string;
 
 }

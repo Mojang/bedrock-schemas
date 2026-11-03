@@ -28,7 +28,7 @@ export default interface MinecraftPiercingWeapon {
    * Defines the reach used when the user is in Creative Mode. Defaults to
    * "reach" if unspecified.
    */
-  creative_reach?: object;
+  creative_reach?: MinecraftPiercingWeaponCreativeReach;
 
   /**
    * @remarks
@@ -44,6 +44,30 @@ export default interface MinecraftPiercingWeapon {
    * considered. Block collisions between the user and target block
    * damage and its effects.
    */
-  reach?: object;
+  reach?: MinecraftPiercingWeaponReach;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftPiercingWeaponCreativeReach {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftPiercingWeaponReach {
+
+  max?: number;
+
+  min?: number;
 
 }

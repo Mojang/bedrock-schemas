@@ -80,13 +80,13 @@ export default interface MinecraftBehaviorTakeBlock {
    * XZ range from which the entity will try and take blocks 
    * from.
    */
-  xz_range?: object;
+  xz_range?: MinecraftBehaviorTakeBlockXzRange;
 
   /**
    * @remarks
    * Y range from which the entity will try and take blocks from.
    */
-  y_range?: object;
+  y_range?: MinecraftBehaviorTakeBlockYRange;
 
 }
 
@@ -172,7 +172,7 @@ export interface MinecraftBehaviorTakeBlockOnTake {
    */
   filters?: MinecraftBehaviorTakeBlockOnTakeFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTakeBlockOnTakeTarget;
 
 }
 
@@ -226,4 +226,28 @@ export enum MinecraftBehaviorTakeBlockOnTakeTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorTakeBlockXzRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorTakeBlockYRange {
+
+  max?: number;
+
+  min?: number;
+
 }

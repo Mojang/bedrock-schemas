@@ -90,7 +90,7 @@ export interface MinecraftBehaviorHoldGroundWithinRadiusEvent {
    */
   filters?: MinecraftBehaviorHoldGroundWithinRadiusEventFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorHoldGroundWithinRadiusEventTarget;
 
 }
 

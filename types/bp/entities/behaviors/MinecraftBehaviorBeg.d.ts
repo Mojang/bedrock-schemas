@@ -40,7 +40,7 @@ export default interface MinecraftBehaviorBeg {
    * The range of time in seconds this mob will stare at the player
    * holding a food they like, begging for it
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorBegLookTime;
 
   /**
    * @remarks
@@ -57,4 +57,16 @@ export enum MinecraftBehaviorBegControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorBegLookTime {
+
+  max?: number;
+
+  min?: number;
+
 }

@@ -249,7 +249,7 @@ export interface MinecraftBehaviorStompAttackOnAttack {
    */
   filters?: MinecraftBehaviorStompAttackOnAttackFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorStompAttackOnAttackTarget;
 
 }
 
@@ -328,7 +328,7 @@ export interface MinecraftBehaviorStompAttackOnKill {
    */
   filters?: MinecraftBehaviorStompAttackOnKillFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorStompAttackOnKillTarget;
 
 }
 

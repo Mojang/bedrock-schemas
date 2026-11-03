@@ -36,7 +36,7 @@ export default interface NoiseBlockSpecifier {
    * The range of sampled noise value associated with the provided 
    * Block.
    */
-  range?: object;
+  range?: NoiseBlockSpecifierRange;
 
   /**
    * @remarks
@@ -44,5 +44,17 @@ export default interface NoiseBlockSpecifier {
    * Block.
    */
   threshold?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface NoiseBlockSpecifierRange {
+
+  max?: number;
+
+  min?: number;
 
 }

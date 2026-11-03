@@ -105,7 +105,7 @@ export interface MinecraftBehaviorGoHomeOnFailed {
    */
   filters?: MinecraftBehaviorGoHomeOnFailedFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorGoHomeOnFailedTarget;
 
 }
 
@@ -184,7 +184,7 @@ export interface MinecraftBehaviorGoHomeOnHome {
    */
   filters?: MinecraftBehaviorGoHomeOnHomeFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorGoHomeOnHomeTarget;
 
 }
 

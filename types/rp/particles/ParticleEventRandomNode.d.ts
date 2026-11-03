@@ -53,11 +53,11 @@ export default interface ParticleEventRandomNode {
  */
 export interface ParticleEventRandomNodeParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleEventRandomNodeParticleEffectType;
 
 }
 
@@ -110,11 +110,11 @@ export interface ParticleEventRandomNodeSequence {
  */
 export interface ParticleEventRandomNodeSequenceParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleEventRandomNodeSequenceParticleEffectType;
 
 }
 

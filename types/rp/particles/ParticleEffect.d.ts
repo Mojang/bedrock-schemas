@@ -842,11 +842,11 @@ export interface ParticleEffectEvents {
  */
 export interface ParticleEffectEventsParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleEffectEventsParticleEffectType;
 
 }
 
@@ -900,11 +900,11 @@ export interface ParticleEffectEventsRandomize {
  */
 export interface ParticleEffectEventsRandomizeParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleEffectEventsRandomizeParticleEffectType;
 
 }
 

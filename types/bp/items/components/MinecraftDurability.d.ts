@@ -36,7 +36,7 @@ export default interface MinecraftDurability {
    * is set to 100. Defined as an int range with min and max 
    * value.
    */
-  damage_chance?: object;
+  damage_chance?: MinecraftDurabilityDamageChance;
 
   /**
    * @remarks
@@ -45,5 +45,17 @@ export default interface MinecraftDurability {
    * minimum of 0.
    */
   max_durability: number;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftDurabilityDamageChance {
+
+  max?: number;
+
+  min?: number;
 
 }

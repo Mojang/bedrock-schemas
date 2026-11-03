@@ -153,7 +153,7 @@ export interface MinecraftBehaviorWorkComposterOnArrival {
    */
   filters?: MinecraftBehaviorWorkComposterOnArrivalFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorWorkComposterOnArrivalTarget;
 
 }
 

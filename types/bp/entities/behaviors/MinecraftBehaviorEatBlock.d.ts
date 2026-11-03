@@ -163,7 +163,7 @@ export interface MinecraftBehaviorEatBlockOnEat {
    */
   filters?: MinecraftBehaviorEatBlockOnEatFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorEatBlockOnEatTarget;
 
 }
 

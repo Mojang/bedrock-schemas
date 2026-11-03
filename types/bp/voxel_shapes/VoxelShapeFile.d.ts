@@ -31,7 +31,7 @@ export default interface VoxelShapeFile {
  */
 export interface VoxelShapeFileDescription {
 
-  identifier: object;
+  identifier: string;
 
 }
 

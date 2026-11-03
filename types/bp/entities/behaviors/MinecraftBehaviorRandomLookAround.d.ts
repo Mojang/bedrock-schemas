@@ -49,7 +49,7 @@ export default interface MinecraftBehaviorRandomLookAround {
    * The range of time in seconds the mob will stay looking in a
    * random direction before looking elsewhere
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorRandomLookAroundLookTime;
 
   /**
    * @remarks
@@ -95,4 +95,16 @@ export enum MinecraftBehaviorRandomLookAroundControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftBehaviorRandomLookAroundLookTime {
+
+  max?: number;
+
+  min?: number;
+
 }

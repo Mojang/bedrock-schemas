@@ -31,7 +31,7 @@ export default interface MinecraftEconomyTradeTable {
    * @remarks
    * Range of cured villager discounts applied to trade prices.
    */
-  cured_discount?: object;
+  cured_discount?: MinecraftEconomyTradeTableCuredDiscount;
 
   /**
    * @remarks
@@ -51,7 +51,7 @@ export default interface MinecraftEconomyTradeTable {
    * @remarks
    * Maximum allowed range for cured villager discounts.
    */
-  max_cured_discount?: object;
+  max_cured_discount?: MinecraftEconomyTradeTableMaxCuredDiscount;
 
   /**
    * @remarks
@@ -99,5 +99,29 @@ export default interface MinecraftEconomyTradeTable {
    * pricing formula.
    */
   use_legacy_price_formula?: boolean;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftEconomyTradeTableCuredDiscount {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Block IntRange (IntRange)
+ */
+export interface MinecraftEconomyTradeTableMaxCuredDiscount {
+
+  max?: number;
+
+  min?: number;
 
 }

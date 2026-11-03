@@ -62,7 +62,7 @@ export default interface MinecraftBehaviorUseKineticWeapon {
    * elapsed, the mob will approach again. This value is added to
    * the reach midpoint.
    */
-  cooldown_distance?: object;
+  cooldown_distance?: MinecraftBehaviorUseKineticWeaponCooldownDistance;
 
   /**
    * @remarks
@@ -173,7 +173,7 @@ export default interface MinecraftBehaviorUseKineticWeapon {
    * mob will charge again. This value is added to the reach 
    * midpoint.
    */
-  reposition_distance?: object;
+  reposition_distance?: MinecraftBehaviorUseKineticWeaponRepositionDistance;
 
   /**
    * @remarks
@@ -242,6 +242,18 @@ export enum MinecraftBehaviorUseKineticWeaponControlFlags {
 
 
 /**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorUseKineticWeaponCooldownDistance {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
  * Entity ActorDefinitionTrigger (ActorDefinitionTrigger)
  * Triggers an entity event when specified conditions are met.
  * Events activate component groups that change entity
@@ -263,7 +275,7 @@ export interface MinecraftBehaviorUseKineticWeaponOnAttack {
    */
   filters?: MinecraftBehaviorUseKineticWeaponOnAttackFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorUseKineticWeaponOnAttackTarget;
 
 }
 
@@ -342,7 +354,7 @@ export interface MinecraftBehaviorUseKineticWeaponOnKill {
    */
   filters?: MinecraftBehaviorUseKineticWeaponOnKillFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorUseKineticWeaponOnKillTarget;
 
 }
 
@@ -396,4 +408,16 @@ export enum MinecraftBehaviorUseKineticWeaponOnKillTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorUseKineticWeaponRepositionDistance {
+
+  max?: number;
+
+  min?: number;
+
 }

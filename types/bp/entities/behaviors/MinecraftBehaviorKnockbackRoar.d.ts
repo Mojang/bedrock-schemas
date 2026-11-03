@@ -210,7 +210,7 @@ export interface MinecraftBehaviorKnockbackRoarOnRoarEnd {
    */
   filters?: MinecraftBehaviorKnockbackRoarOnRoarEndFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorKnockbackRoarOnRoarEndTarget;
 
 }
 

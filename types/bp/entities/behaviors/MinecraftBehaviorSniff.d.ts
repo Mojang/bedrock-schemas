@@ -47,7 +47,7 @@ export default interface MinecraftBehaviorSniff {
    * Warden: {"min":5,"max":10}
    *
    */
-  cooldown_range?: object;
+  cooldown_range?: MinecraftBehaviorSniffCooldownRange;
 
   /**
    * @remarks
@@ -112,4 +112,16 @@ export enum MinecraftBehaviorSniffControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorSniffCooldownRange {
+
+  max?: number;
+
+  min?: number;
+
 }

@@ -46,6 +46,6 @@ export interface EmitterLifetimeEventsProxyLoopingTravelDistanceEvents {
 
   distance: number;
 
-  effects: object[];
+  effects: string[];
 
 }

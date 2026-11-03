@@ -85,7 +85,7 @@ export default interface MinecraftBehaviorFireAtTarget {
    * Breeze: {"min":0,"max":16}
    *
    */
-  attack_range?: object;
+  attack_range?: MinecraftBehaviorFireAtTargetAttackRange;
 
   control_flags?: string[];
 
@@ -204,6 +204,18 @@ export default interface MinecraftBehaviorFireAtTarget {
    *
    */
   target_offset?: number[];
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorFireAtTargetAttackRange {
+
+  max?: number;
+
+  min?: number;
 
 }
 

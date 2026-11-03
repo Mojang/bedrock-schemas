@@ -79,7 +79,7 @@ export interface MinecraftSurfaceBuilderBuilder {
    * @remarks
    * Controls the type of surface builder to use.
    */
-  type: string;
+  type: MinecraftSurfaceBuilderBuilderType;
 
 }
 

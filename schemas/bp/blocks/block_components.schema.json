@@ -505,6 +505,11 @@
         }
       ]
     },
+    "minecraft:jukebox_playlist_source": {
+      "title": "Minecraft Jukebox Playlist Source",
+      "description": "Allows a jukebox directly below this block to use its existing container as a playlist source. This component is an empty object. It does not create a container and has no effect without one. Requires format_version 1.26.60 or later and the Upcoming Creator Features experiment. To enable it conditionally, define it only in the relevant permutations; omitting it from a permutation does not remove it from the base components.",
+      "type": "object"
+    },
     "minecraft:leashable": {
       "title": "Minecraft Leashable",
       "description": "Allows a block to have a lead tied to it.",

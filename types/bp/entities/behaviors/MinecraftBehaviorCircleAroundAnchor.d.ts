@@ -70,7 +70,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Phantom: {"min":20,"max":40}
    *
    */
-  height_above_target_range?: object;
+  height_above_target_range?: MinecraftBehaviorCircleAroundAnchorHeightAboveTargetRange;
 
   /**
    * @remarks
@@ -90,7 +90,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Phantom: {"min":-4,"max":5}
    *
    */
-  height_offset_range?: object;
+  height_offset_range?: MinecraftBehaviorCircleAroundAnchorHeightOffsetRange;
 
   /**
    * @remarks
@@ -128,7 +128,7 @@ export default interface MinecraftBehaviorCircleAroundAnchor {
    * Horizontal distance from the anchor point this entity must stay
    * within upon a successful radius adjustment.
    */
-  radius_range?: object;
+  radius_range?: MinecraftBehaviorCircleAroundAnchorRadiusRange;
 
   /**
    * @remarks
@@ -144,4 +144,40 @@ export enum MinecraftBehaviorCircleAroundAnchorControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCircleAroundAnchorHeightAboveTargetRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCircleAroundAnchorHeightOffsetRange {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorCircleAroundAnchorRadiusRange {
+
+  max?: number;
+
+  min?: number;
+
 }

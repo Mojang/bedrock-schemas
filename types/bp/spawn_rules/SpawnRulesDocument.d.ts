@@ -367,9 +367,9 @@ export interface SpawnRulesDocumentMinecraftSpawnRulesConditionsMinecraftDensity
  */
 export interface SpawnRulesDocumentMinecraftSpawnRulesConditionsMinecraftDifficultyFilter {
 
-  max?: string;
+  max?: SpawnRulesDocumentMinecraftSpawnRulesConditionsMinecraftDifficultyFilterMax;
 
-  min?: string;
+  min?: SpawnRulesDocumentMinecraftSpawnRulesConditionsMinecraftDifficultyFilterMin;
 
 }
 

@@ -786,7 +786,7 @@ export interface ParticleDocumentParticleEffectCurves {
 
   nodes: { [key: string]: string };
 
-  type: object;
+  type: string;
 
 }
 
@@ -870,11 +870,11 @@ export interface ParticleDocumentParticleEffectEvents {
  */
 export interface ParticleDocumentParticleEffectEventsParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleDocumentParticleEffectEventsParticleEffectType;
 
 }
 
@@ -928,11 +928,11 @@ export interface ParticleDocumentParticleEffectEventsRandomize {
  */
 export interface ParticleDocumentParticleEffectEventsRandomizeParticleEffect {
 
-  effect: object;
+  effect: string;
 
   pre_effect_expression?: { [key: string]: string };
 
-  type: string;
+  type: ParticleDocumentParticleEffectEventsRandomizeParticleEffectType;
 
 }
 

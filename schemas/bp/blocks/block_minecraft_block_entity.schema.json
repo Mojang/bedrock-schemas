@@ -13,6 +13,7 @@
           "label": "Block Container",
           "description": "Adds a container to this block.",
           "body": {
+            "show_ui_on_interaction": true,
             "slot_count": 0,
             "title": ""
           }

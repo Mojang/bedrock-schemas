@@ -2,6 +2,13 @@
   "id": "container",
   "fields": [
     {
+      "id": "show_ui_on_interaction",
+      "title": "Show Ui On Interaction",
+      "description": "Determines whether interacting with this block opens its container UI. Defaults to true. When false, normal block interaction events can run instead.",
+      "dataType": "boolean",
+      "defaultValue": true
+    },
+    {
       "id": "slot_count",
       "title": "Slot Count",
       "description": "Sets the number of slots in the container.",

@@ -176,7 +176,7 @@ export default interface MinecraftBehaviorLookAtPlayer {
    * Campghost: [0,100]
    *
    */
-  look_time?: object;
+  look_time?: MinecraftBehaviorLookAtPlayerLookTime;
 
   /**
    * @remarks
@@ -245,4 +245,16 @@ export enum MinecraftBehaviorLookAtPlayerControlFlags {
   jump = `jump`,
   look = `look`,
   move = `move`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorLookAtPlayerLookTime {
+
+  max?: number;
+
+  min?: number;
+
 }

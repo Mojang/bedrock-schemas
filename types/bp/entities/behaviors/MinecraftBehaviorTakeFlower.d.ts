@@ -163,7 +163,7 @@ export interface MinecraftBehaviorTakeFlowerOnTakeFlower {
    */
   filters?: MinecraftBehaviorTakeFlowerOnTakeFlowerFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorTakeFlowerOnTakeFlowerTarget;
 
 }
 

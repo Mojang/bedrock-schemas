@@ -56,7 +56,7 @@ export interface VoxelShapeDocumentMinecraftVoxelShape {
  */
 export interface VoxelShapeDocumentMinecraftVoxelShapeDescription {
 
-  identifier: object;
+  identifier: string;
 
 }
 

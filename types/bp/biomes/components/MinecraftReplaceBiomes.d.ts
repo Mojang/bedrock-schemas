@@ -70,6 +70,6 @@ export interface MinecraftReplaceBiomesReplacements {
    * Biomes that are going to be replaced by the overriding biome.
    * Target biomes must not contain namespaces.
    */
-  targets: object[];
+  targets: string[];
 
 }

@@ -114,7 +114,7 @@ export interface MinecraftBehaviorSummonEntitySummonChoices {
    * @remarks
    * The sound event to play when using this spell
    */
-  start_sound_event?: string;
+  start_sound_event?: MinecraftBehaviorSummonEntitySummonChoicesStartSoundEvent;
 
   /**
    * @remarks
@@ -208,7 +208,7 @@ export interface MinecraftBehaviorSummonEntitySummonChoicesSequence {
    * The base shape of this step. Valid values are circle and 
    * line
    */
-  shape?: string;
+  shape?: MinecraftBehaviorSummonEntitySummonChoicesSequenceShape;
 
   /**
    * @remarks
@@ -220,7 +220,7 @@ export interface MinecraftBehaviorSummonEntitySummonChoicesSequence {
    * @remarks
    * The sound event to play for this step
    */
-  sound_event?: string;
+  sound_event?: MinecraftBehaviorSummonEntitySummonChoicesSequenceSoundEvent;
 
   /**
    * @remarks
@@ -241,7 +241,7 @@ export interface MinecraftBehaviorSummonEntitySummonChoicesSequence {
    * The target of the spell. This is where the spell will start (line
    * will start here, circle will be centered here)
    */
-  target?: string;
+  target?: MinecraftBehaviorSummonEntitySummonChoicesSequenceTarget;
 
 }
 
@@ -459,6 +459,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesSequenceSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -659,6 +660,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesSequenceSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -776,6 +778,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesSequenceSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
@@ -1036,6 +1039,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesStartSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -1236,6 +1240,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesStartSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -1353,6 +1358,7 @@ export enum MinecraftBehaviorSummonEntitySummonChoicesStartSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,

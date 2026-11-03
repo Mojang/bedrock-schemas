@@ -7629,6 +7629,11 @@
       "title": "Minecraft Bounciness",
       "type": "object"
     },
+    "minecraft:can_stand_on_brittle_ice": {
+      "title": "Minecraft Can Stand On Brittle Ice",
+      "description": "Defines whether a mob can stand on brittle ice without it cracking.",
+      "type": "object"
+    },
     "minecraft:can_stand_on_powder_snow": {
       "title": "Minecraft Can Stand On Powder Snow",
       "description": "Defines whether an entity can stand on powder snow without sinking.",

@@ -152,7 +152,7 @@ export default interface MinecraftBehaviorDropItemFor {
    * reference: noon is 0.0, sunset is 0.25, midnight is 0.5, and
    * sunrise is 0.75, and back to noon for 1.0.
    */
-  time_of_day_range?: object;
+  time_of_day_range?: MinecraftBehaviorDropItemForTimeOfDayRange;
 
 }
 
@@ -186,7 +186,7 @@ export interface MinecraftBehaviorDropItemForOnDropAttempt {
    */
   filters?: MinecraftBehaviorDropItemForOnDropAttemptFilters;
 
-  target?: string;
+  target?: MinecraftBehaviorDropItemForOnDropAttemptTarget;
 
 }
 
@@ -240,4 +240,16 @@ export enum MinecraftBehaviorDropItemForOnDropAttemptTarget {
   player = `player`,
   self = `self`,
   target = `target`
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorDropItemForTimeOfDayRange {
+
+  max?: number;
+
+  min?: number;
+
 }

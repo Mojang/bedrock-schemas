@@ -158,7 +158,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * Breeze: {"min":4,"max":8}
    *
    */
-  landing_distance_from_target?: object;
+  landing_distance_from_target?: MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget;
 
   /**
    * @remarks
@@ -262,7 +262,7 @@ export default interface MinecraftBehaviorJumpAroundTarget {
    * Breeze: {"min":4,"max":20}
    *
    */
-  valid_distance_to_target?: object;
+  valid_distance_to_target?: MinecraftBehaviorJumpAroundTargetValidDistanceToTarget;
 
 }
 
@@ -308,5 +308,29 @@ export interface MinecraftBehaviorJumpAroundTargetFilters {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorJumpAroundTargetLandingDistanceFromTarget {
+
+  max?: number;
+
+  min?: number;
+
+}
+
+
+/**
+ * Legacy FloatRange (FloatRange)
+ */
+export interface MinecraftBehaviorJumpAroundTargetValidDistanceToTarget {
+
+  max?: number;
+
+  min?: number;
 
 }

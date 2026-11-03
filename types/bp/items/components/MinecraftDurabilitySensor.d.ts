@@ -57,7 +57,7 @@ export interface MinecraftDurabilitySensorDurabilityThresholds {
    * @remarks
    * Particle effect to emit when the threshold is met.
    */
-  particle_type?: string;
+  particle_type?: MinecraftDurabilitySensorDurabilityThresholdsParticleType;
 
   /**
    * @remarks
@@ -125,12 +125,14 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsParticleType {
   none = `none`,
   note = `note`,
   obsidiantear = `obsidiantear`,
+  orangepoplarleaves = `orangepoplarleaves`,
   paleoakleaves = `paleoakleaves`,
   pausemobgrowth = `pausemobgrowth`,
   portal = `portal`,
   portalreverse = `portalreverse`,
   rainsplash = `rainsplash`,
   reddust = `reddust`,
+  redpoplarleaves = `redpoplarleaves`,
   resetmobgrowth = `resetmobgrowth`,
   risingborderdust = `risingborderdust`,
   sculksoul = `sculksoul`,
@@ -162,7 +164,8 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsParticleType {
   whitesmoke = `whitesmoke`,
   windexplosion = `windexplosion`,
   witchspell = `witchspell`,
-  wolfarmorcrack = `wolfarmorcrack`
+  wolfarmorcrack = `wolfarmorcrack`,
+  yellowpoplarleaves = `yellowpoplarleaves`
 }
 
 
@@ -373,6 +376,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   deny = `deny`,
   detach = `detach`,
   disappeared = `disappeared`,
+  dismount = `dismount`,
   doorClose = `door.close`,
   doorOpen = `door.open`,
   drink = `drink`,
@@ -573,6 +577,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   mobPlayerHurtOnFire = `mob.player.hurt_on_fire`,
   mobWarning = `mob.warning`,
   mobWarningBaby = `mob.warning.baby`,
+  mount = `mount`,
   multiSwap = `multi_swap`,
   nearbyClose = `nearby_close`,
   nearbyCloser = `nearby_closer`,
@@ -690,6 +695,7 @@ export enum MinecraftDurabilitySensorDurabilityThresholdsSoundEvent {
   stepBaby = `step.baby`,
   stepLava = `step_lava`,
   stepSand = `step_sand`,
+  strawBedBreakLeave = `straw_bed.break_leave`,
   stun = `stun`,
   swim = `swim`,
   swoop = `swoop`,
