@@ -23,71 +23,100 @@ export default interface MinecraftTrail {
 
   /**
    * @remarks
-   * The type of block that is spawned as a trail behind the entity.
-   * Solid blocks cannot be spawned at an offset of (0, 0, 0).
+   * The type of block that is placed. Solid blocks cannot be placed at
+   * the entity's position when offset is [0, 0, 0].
    */
   block_type?: string;
 
   /**
    * @remarks
-   * When true, the trail will replace blocks that match the
-   * replaceable blocks list even if normal placement rules prevent 
-   * it.
+   * Maximum horizontal distance from the center at which blocks can
+   * be placed.
    */
-  force_replace_matched_blocks?: boolean;
+  extent?: number;
 
   /**
    * @remarks
-   * When provided, the trail spawns blocks across a (2 * radius +
-   * 1) by (2 * radius + 1) horizontal area centered on the spawn
-   * offset. Uses the legacy four-corner sampling when omitted.
+   * Offset from the entity's position used to determine where trail
+   * blocks are placed and placement checks are applied, capped at
+   * 16 blocks away. X and Z are relative to the entity's orientation and
+   * rotate to its nearest cardinal facing; Y is a vertical 
+   * offset.
    */
-  radius?: number;
+  offset?: number[];
 
   /**
    * @remarks
-   * A list of blocks that can be replaced by the trail block. If
-   * the block at the spawn offset is not in this list, the trail block
-   * will not spawn. If omitted it will default to only air 
-   * blocks.
+   * When true, trail blocks are only placed on ticks where the
+   * bottom of the entity moves into a different block position, or
+   * where the entity lands (goes from airborne to grounded). Standing
+   * still or moving within the same block does not place blocks.
+   * Defaults to false.
    */
-  replaceable_blocks?: MinecraftTrailReplaceableBlocks[];
+  place_only_on_block_position_change?: boolean;
+
+  /**
+   * @remarks
+   * Controls the checks applied at each trail block placement position
+   * before placing the trail block. 'none' applies no placement checks,
+   * 'block' applies block placement conditions, and 'standard' applies
+   * standard block placement rules, including clearance from entities
+   * that obblock placement.
+   */
+  placement_checks?: MinecraftTrailPlacementChecks;
+
+  /**
+   * @remarks
+   * Conditions that must all be satisfied relative to the trail block
+   * placement position. Block types within one condition are
+   * alternatives. When omitted, defaults to [{ "y_offset": 0,
+   * "block_types": ["minecraft:air"] }].
+   */
+  placement_conditions?: object[];
 
   /**
    * @remarks
    * One or more conditions that must be met in order to cause the
-   * chosen block type to spawn.
+   * chosen block type to be placed.
    */
-  spawn_filter?: MinecraftTrailSpawnFilter;
+  placement_filter?: MinecraftTrailPlacementFilter;
 
   /**
    * @remarks
-   * The offset from the entity's current position at which to spawn
-   * the block, capped at 16 blocks away.
+   * Controls the horizontal placement pattern. 'corners' places four
+   * corner blocks, 'square' fills a square, and 'circle' fills a
+   * circular disk. Defaults to 'corners'.
+   */
+  shape?: MinecraftTrailShape;
+
+  /**
+   * @remarks
+   * Conditions that must be met for the trail block to be 
+   * placed.
+   */
+  spawn_filter?: jsoncommon.MinecraftFilter;
+
+  /**
+   * @remarks
+   * Offset from the entity's position where the trail block is
+   * placed.
    */
   spawn_offset?: number[];
 
 }
 
 
-/**
- * Replaceable Blocks (replaceable_blocks)
- */
-export interface MinecraftTrailReplaceableBlocks {
-
-  name?: string;
-
-  states?: number;
-
-  tags?: string;
-
+export enum MinecraftTrailPlacementChecks {
+  block = `block`,
+  none = `none`,
+  standard = `standard`
 }
 
 
 /**
- * Spawn Filter (spawn_filter)
+ * Placement Filter (placement_filter)
  */
-export interface MinecraftTrailSpawnFilter {
+export interface MinecraftTrailPlacementFilter {
 
   /**
    * @remarks
@@ -119,4 +148,11 @@ export interface MinecraftTrailSpawnFilter {
    */
   value?: object;
 
+}
+
+
+export enum MinecraftTrailShape {
+  circle = `circle`,
+  corners = `corners`,
+  square = `square`
 }

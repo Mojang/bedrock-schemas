@@ -190,6 +190,7 @@ export { default as MinecraftTimer } from './entities/components/MinecraftTimer'
 export { default as TradeResupply } from './entities/components/TradeResupply';
 export { default as MinecraftTradeTable } from './entities/components/MinecraftTradeTable';
 export { default as MinecraftTrail } from './entities/components/MinecraftTrail';
+export { default as MinecraftTrailPlacementConditionsEntry } from './entities/components/MinecraftTrailPlacementConditionsEntry';
 export { default as MinecraftTransformation } from './entities/components/MinecraftTransformation';
 export { default as MinecraftTransient } from './entities/components/MinecraftTransient';
 export { default as Trust } from './entities/components/Trust';

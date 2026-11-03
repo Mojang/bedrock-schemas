@@ -75,6 +75,22 @@ export default interface MinecraftCollisionBox {
 
   /**
    * @remarks
+   * An array of boxes that define the area of the block that collides
+   * with entities.
+   */
+  Usingcustomboxes?: MinecraftCollisionBoxUsingcustomboxes[];
+
+}
+
+
+/**
+ * An array of boxes that define the area of the block that collides
+ * with entities.
+ */
+export interface MinecraftCollisionBoxUsingcustomboxes {
+
+  /**
+   * @remarks
    * Maximum position of the bounds of the collision box. "max" is
    * specified as [x, y, z] and must be in the range (0, 0, 0) to
    * (16, 24, 16), inclusive.

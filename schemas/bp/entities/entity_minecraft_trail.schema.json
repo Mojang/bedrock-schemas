@@ -6,69 +6,99 @@
   "properties": {
     "block_type": {
       "title": "Block Type",
-      "description": "The type of block that is spawned as a trail behind the entity. Solid blocks cannot be spawned at an offset of (0, 0, 0).",
+      "description": "The type of block that is placed. Solid blocks cannot be placed at the entity's position when offset is [0, 0, 0].",
       "type": "string",
       "default": "air"
     },
-    "force_replace_matched_blocks": {
-      "title": "Force Replace Matched Blocks",
-      "description": "When true, the trail will replace blocks that match the replaceable blocks list even if normal placement rules prevent it.",
-      "type": "boolean",
-      "default": false
-    },
-    "radius": {
-      "title": "Radius",
-      "description": "When provided, the trail spawns blocks across a (2 * radius + 1) by (2 * radius + 1) horizontal area centered on the spawn offset. Uses the legacy four-corner sampling when omitted.",
+    "extent": {
+      "title": "Extent",
+      "description": "Maximum horizontal distance from the center at which blocks can be placed.",
       "type": "integer",
-      "minimum": -1,
       "maximum": 16,
-      "default": -1
+      "default": 0
     },
-    "replaceable_blocks": {
+    "offset": {
       "anyOf": [
         {
           "type": "array",
           "items": {
-            "type": "object",
-            "properties": {
-              "name": {
-                "title": "Name",
-                "type": "string",
-                "default": ""
-              },
-              "states": {
-                "anyOf": [
-                  {
-                    "type": "integer"
-                  },
-                  {
-                    "type": "string"
-                  },
-                  {
-                    "type": "boolean"
-                  }
-                ],
-                "title": "States"
-              },
-              "tags": {
-                "title": "Tags",
-                "type": "string",
-                "default": ""
-              }
-            }
+            "type": "number"
           }
         },
         {
-          "type": "string",
-          "minLength": 1
-        },
-        {
-          "type": "object"
+          "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
+          "type": "object",
+          "properties": {
+            "x": {
+              "title": "X",
+              "type": "number",
+              "default": 0
+            },
+            "y": {
+              "title": "Y",
+              "type": "number",
+              "default": 0
+            },
+            "z": {
+              "title": "Z",
+              "type": "number",
+              "default": 0
+            }
+          },
+          "defaultSnippets": [
+            {
+              "label": "Offset (object)",
+              "description": "Use Offset as an object",
+              "body": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+              }
+            }
+          ]
         }
       ],
-      "description": "A list of blocks that can be replaced by the trail block. If the block at the spawn offset is not in this list, the trail block will not spawn. If omitted it will default to only air blocks."
+      "title": "Offset",
+      "description": "Offset from the entity's position used to determine where trail blocks are placed and placement checks are applied, capped at 16 blocks away. X and Z are relative to the entity's orientation and rotate to its nearest cardinal facing; Y is a vertical offset.",
+      "defaultSnippets": [
+        {
+          "label": "Offset (object)",
+          "description": "Use Offset as an object",
+          "body": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+          }
+        }
+      ]
     },
-    "spawn_filter": {
+    "place_only_on_block_position_change": {
+      "title": "Place Only On Block Position Change",
+      "description": "When true, trail blocks are only placed on ticks where the bottom of the entity moves into a different block position, or where the entity lands (goes from airborne to grounded). Standing still or moving within the same block does not place blocks. Defaults to false.",
+      "type": "boolean",
+      "default": false
+    },
+    "placement_checks": {
+      "title": "Placement Checks",
+      "description": "Controls the checks applied at each trail block placement position before placing the trail block. 'none' applies no placement checks, 'block' applies block placement conditions, and 'standard' applies standard block placement rules, including clearance from entities that obblock placement.",
+      "type": "string",
+      "enum": [
+        "block",
+        "none",
+        "standard"
+      ],
+      "default": "block"
+    },
+    "placement_conditions": {
+      "title": "Placement Conditions",
+      "description": "Conditions that must all be satisfied relative to the trail block placement position. Block types within one condition are alternatives. When omitted, defaults to [{ \"y_offset\": 0, \"block_types\": [\"minecraft:air\"] }].",
+      "type": "array",
+      "items": {
+        "$ref": "./entity_minecraft_trail_placement_conditions_entry.schema.json"
+      },
+      "minLength": 1
+    },
+    "placement_filter": {
       "anyOf": [
         {
           "type": "object",
@@ -104,63 +134,66 @@
           "type": "object"
         }
       ],
-      "title": "Spawn Filter",
-      "description": "One or more conditions that must be met in order to cause the chosen block type to spawn."
+      "description": "One or more conditions that must be met in order to cause the chosen block type to be placed."
     },
-    "spawn_offset": {
+    "shape": {
+      "title": "Shape",
+      "description": "Controls the horizontal placement pattern. 'corners' places four corner blocks, 'square' fills a square, and 'circle' fills a circular disk. Defaults to 'corners'.",
+      "type": "string",
+      "enum": [
+        "circle",
+        "corners",
+        "square"
+      ],
+      "default": "corners"
+    },
+    "spawn_filter": {
+      "title": "Spawn Filter",
+      "description": "Conditions that must be met for the trail block to be placed.",
       "anyOf": [
+        {
+          "type": "object"
+        },
         {
           "type": "array",
           "items": {
-            "type": "number"
+            "type": "object"
           }
         },
         {
-          "description": "\n\nProperties:\n• x (float) = 0\n• y (float) = 0\n• z (float) = 0",
           "type": "object",
           "properties": {
-            "x": {
-              "title": "X",
-              "type": "number",
-              "default": 0
+            "all_of": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
             },
-            "y": {
-              "title": "Y",
-              "type": "number",
-              "default": 0
+            "any_of": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
             },
-            "z": {
-              "title": "Z",
-              "type": "number",
-              "default": 0
-            }
-          },
-          "defaultSnippets": [
-            {
-              "label": "Spawn Offset (object)",
-              "description": "Use Spawn Offset as an object",
-              "body": {
-                "x": 0,
-                "y": 0,
-                "z": 0
+            "none_of": {
+              "type": "array",
+              "items": {
+                "type": "object"
               }
             }
-          ]
-        }
-      ],
-      "title": "Spawn Offset",
-      "description": "The offset from the entity's current position at which to spawn the block, capped at 16 blocks away.",
-      "defaultSnippets": [
-        {
-          "label": "Spawn Offset (object)",
-          "description": "Use Spawn Offset as an object",
-          "body": {
-            "x": 0,
-            "y": 0,
-            "z": 0
           }
         }
       ]
+    },
+    "spawn_offset": {
+      "title": "Spawn Offset",
+      "description": "Offset from the entity's position where the trail block is placed.",
+      "type": "array",
+      "items": {
+        "type": "number"
+      },
+      "minItems": 3,
+      "maxItems": 3
     }
   }
 }

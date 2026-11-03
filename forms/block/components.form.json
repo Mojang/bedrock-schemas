@@ -178,7 +178,8 @@
         {
           "id": "minecraft:collision_box",
           "dataType": "objectArray",
-          "maxLength": 16,
+          "minLength": 1,
+          "maxLength": 32,
           "technicalDescription": "The area covered by all boxes must be within Vec3(0,0,0) to Vec3(16,24,16)",
           "subFormId": "block/bounding_box_data"
         }

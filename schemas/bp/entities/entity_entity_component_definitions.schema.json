@@ -4859,10 +4859,12 @@
           "label": "Entity Teleport",
           "description": "Defines an entity's teleporting behavior.",
           "body": {
+            "can_teleport_into_liquid": false,
             "dark_teleport_chance": 0.009999999776482582,
             "light_teleport_chance": 0.009999999776482582,
             "max_random_teleport_time": 20,
             "min_random_teleport_time": 0,
+            "on_teleport_sound": "teleport",
             "random_teleport_cube": [
               32,
               16,
@@ -4871,6 +4873,15 @@
             "random_teleports": true,
             "target_distance": 16,
             "target_teleport_chance": 1,
+            "target_teleport_distance": {
+              "max": 16,
+              "min": 16
+            },
+            "target_teleport_offset": [
+              4,
+              8,
+              4
+            ],
             "teleports_on_projectile_hit": false
           }
         }
@@ -4955,10 +4966,27 @@
           "description": "Causes an entity to leave a trail of blocks as it moves about the world. Obeys Mob Griefing rules.",
           "body": {
             "block_type": "air",
-            "force_replace_matched_blocks": false,
-            "radius": -1,
-            "replaceable_blocks": [],
-            "spawn_filter": {
+            "extent": 0,
+            "offset": [
+              0,
+              0,
+              0
+            ],
+            "place_only_on_block_position_change": false,
+            "placement_checks": "block",
+            "placement_conditions": [
+              {
+                "block_types": [
+                  {
+                    "name": "minecraft:air",
+                    "states": {},
+                    "tags": ""
+                  }
+                ],
+                "y_offset": 0
+              }
+            ],
+            "placement_filter": {
               "AND": null,
               "NOT": null,
               "OR": null,
@@ -4968,6 +4996,7 @@
               "any_of": null,
               "none_of": null
             },
+            "shape": "corners",
             "spawn_offset": [
               0,
               0,
