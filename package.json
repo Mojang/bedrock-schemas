@@ -24,11 +24,13 @@
     "LICENSE"
   ],
   "scripts": {
+    "validate": "node scripts/validate.mjs",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run typecheck"
   },
   "devDependencies": {
-    "typescript": "5.0.0"
+    "ajv": "8.18.0",
+    "typescript": "5.9.3"
   },
   "exports": {
     ".": {
