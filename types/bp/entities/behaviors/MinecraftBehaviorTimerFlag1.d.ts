@@ -111,6 +111,13 @@ export default interface MinecraftBehaviorTimerFlag1 {
    */
   priority?: number;
 
+  /**
+   * @remarks
+   * Whether the 'on_end' events run when another goal interrupts this
+   * goal before its duration elapses.
+   */
+  trigger_on_end_when_interrupted?: boolean;
+
 }
 
 

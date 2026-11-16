@@ -56,7 +56,7 @@ export default interface MinecraftSpellEffects {
    * Player: [{"display_on_screen_animation":true,"duration":30,"effect":"raid_omen"}]
    *
    */
-  add_effects?: object[];
+  add_effects?: MinecraftSpellEffectsAddEffects[];
 
   /**
    * @remarks
@@ -68,5 +68,50 @@ export default interface MinecraftSpellEffects {
    *
    */
   remove_effects?: string[];
+
+}
+
+
+/**
+ * Entity MobEffectChangeComponentEffect 
+ * (MobEffectChangeComponentEffect)
+ */
+export interface MinecraftSpellEffectsAddEffects {
+
+  /**
+   * @remarks
+   * Whether the effect is ambient.
+   */
+  ambient?: boolean;
+
+  /**
+   * @remarks
+   * The amplifier of the effect.
+   */
+  amplifier?: number;
+
+  /**
+   * @remarks
+   * Whether the effect displays an on-screen animation.
+   */
+  display_on_screen_animation?: boolean;
+
+  /**
+   * @remarks
+   * The duration of the effect in seconds, or "infinite".
+   */
+  duration?: object;
+
+  /**
+   * @remarks
+   * The name of the effect to apply.
+   */
+  effect?: string;
+
+  /**
+   * @remarks
+   * Whether the effect is visible.
+   */
+  visible?: boolean;
 
 }

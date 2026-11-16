@@ -7335,7 +7335,8 @@
               },
               "target": "self"
             },
-            "priority": 0
+            "priority": 0,
+            "trigger_on_end_when_interrupted": true
           }
         }
       ]
@@ -7386,7 +7387,8 @@
               },
               "target": "self"
             },
-            "priority": 0
+            "priority": 0,
+            "trigger_on_end_when_interrupted": true
           }
         }
       ]
@@ -7437,7 +7439,8 @@
               },
               "target": "self"
             },
-            "priority": 0
+            "priority": 0,
+            "trigger_on_end_when_interrupted": true
           }
         }
       ]

@@ -286,7 +286,7 @@ export interface BiomeComponentsMinecraftMapTints {
    * Controls whether the grass will use a custom tint color or a
    * noise based tint color.
    */
-  grass: object;
+  grass?: object;
 
 }
 

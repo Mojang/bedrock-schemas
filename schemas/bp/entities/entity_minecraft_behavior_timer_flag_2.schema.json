@@ -132,6 +132,12 @@
       "description": "As priority approaches 0, the priority is increased. The higher the priority, the sooner this behavior will be executed as a goal.\n\nSample values:\n• sniffer: 2",
       "type": "integer",
       "default": 0
+    },
+    "trigger_on_end_when_interrupted": {
+      "title": "Trigger On End When Interrupted",
+      "description": "Whether the 'on_end' events run when another goal interrupts this goal before its duration elapses.",
+      "type": "boolean",
+      "default": true
     }
   }
 }

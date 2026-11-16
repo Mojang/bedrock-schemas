@@ -81,7 +81,7 @@ export default interface MinecraftTransformation {
    * List of components to add to the entity after the 
    * transformation
    */
-  add?: object;
+  add?: MinecraftTransformationAdd;
 
   /**
    * @remarks
@@ -99,7 +99,7 @@ export default interface MinecraftTransformation {
    *
    *
    */
-  delay?: object;
+  delay?: MinecraftTransformationDelay;
 
   /**
    * @remarks
@@ -172,6 +172,23 @@ export default interface MinecraftTransformation {
    *
    */
   transformation_sound?: string[];
+
+}
+
+
+/**
+ * Entity TransformationAddComponents 
+ * (TransformationAddComponents)
+ * List of components to add to the entity after the
+ * transformation.
+ */
+export interface MinecraftTransformationAdd {
+
+  /**
+   * @remarks
+   * Names of component groups to add
+   */
+  component_groups?: string[];
 
 }
 
@@ -753,6 +770,76 @@ export enum MinecraftTransformationBeginTransformSound {
   water = `water`,
   whine = `whine`,
   windChargeBurst = `wind_charge.burst`
+}
+
+
+/**
+ * Entity TransformationDelay (TransformationDelay)
+ * Defines the properties of the delay for the transformation.
+ */
+export interface MinecraftTransformationDelay {
+
+  /**
+   * @remarks
+   * Chance that the entity will look for nearby blocks that can
+   * speed up the transformation. Value must be between 0.0 and 
+   * 1.0
+   */
+  block_assist_chance?: number;
+
+  /**
+   * @remarks
+   * Chance that, once a block is found, will help speed up the
+   * transformation
+   */
+  block_chance?: number;
+
+  /**
+   * @remarks
+   * Maximum number of blocks the entity will look for to aid in the
+   * transformation. If not defined or set to 0, it will be set to
+   * the block radius
+   */
+  block_max?: number;
+
+  /**
+   * @remarks
+   * Distance in Blocks that the entity will search for blocks that
+   * can help the transformation
+   */
+  block_radius?: number;
+
+  /**
+   * @remarks
+   * List of blocks that can help the transformation of this 
+   * entity
+   */
+  block_types?: string[];
+
+  /**
+   * @remarks
+   * Time in seconds to be added to value to have the maximum random
+   * time range value until the entity transforms (if non-zero then
+   * the time in seconds before the entity transforms will be random
+   * between value+range_min and value+range_max)
+   */
+  range_max?: number;
+
+  /**
+   * @remarks
+   * Time in seconds to be added to value to have the minimum random
+   * time range value until the entity transforms (if non-zero then
+   * the time in seconds before the entity transforms will be random
+   * between value+range_min and value+range_max)
+   */
+  range_min?: number;
+
+  /**
+   * @remarks
+   * Time in seconds before the entity transforms
+   */
+  value?: number;
+
 }
 
 

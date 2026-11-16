@@ -1,0 +1,29 @@
+{
+  "id": "item minecraft:projectile",
+  "fields": [
+    {
+      "id": "minimum_critical_power",
+      "title": "Minimum Critical Power",
+      "description": "Specifies the minimum launch power a player must reach for the projectile to critically hit. Negative values disable critical hits.",
+      "dataType": "float",
+      "defaultValue": -1
+    },
+    {
+      "id": "projectile_entity",
+      "title": "Projectile Entity",
+      "description": "Which entity is to be fired as a projectile.",
+      "dataType": "string",
+      "minLength": 0,
+      "validity": [
+        {
+          "comparison": "pattern",
+          "value": "^(?:\\w+(?:\\.\\w+)*:(?=\\w))?(?:\\w+(?:\\.\\w+)*)(?:<((?:\\w+(?:\\.\\w+)*:(?=\\w))?\\w+(?:\\.\\w+)*)*>)?$"
+        }
+      ],
+      "isRequired": true
+    }
+  ],
+  "description": "Projectile items shoot out, like an arrow.",
+  "title": "Item Minecraft Projectile",
+  "dataVersion": "1.26.70"
+}

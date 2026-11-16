@@ -43,8 +43,23 @@ export interface BlockEntityContainer {
 
   /**
    * @remarks
+   * Determines whether interacting with this block opens its
+   * container UI. Defaults to true. When false, normal block
+   * interaction events can run instead.
+   */
+  show_ui_on_interaction?: boolean;
+
+  /**
+   * @remarks
    * Sets the number of slots in the container.
    */
   slot_count: number;
+
+  /**
+   * @remarks
+   * Optional container title, stored as a language file key or raw
+   * text. Must be nonempty and at most 256 characters.
+   */
+  title?: string;
 
 }

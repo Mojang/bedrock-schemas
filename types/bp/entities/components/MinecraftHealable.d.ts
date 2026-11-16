@@ -109,7 +109,7 @@ export default interface MinecraftHealable {
    * Parrot: [{"effects":[{"amplifier":0,"chance":1,"duration":1000,"name":"fatal_poison"}],"heal_amount":0,"item":"cookie"}]
    *
    */
-  items?: object[];
+  items?: MinecraftHealableItems[];
 
 }
 
@@ -148,5 +148,71 @@ export interface MinecraftHealableFilters {
    * The value being compared with the test.
    */
   value?: object;
+
+}
+
+
+/**
+ * Entity HealableComponentFeedItem (HealableComponentFeedItem)
+ */
+export interface MinecraftHealableItems {
+
+  /**
+   * @remarks
+   * The effects to apply when this item is used to heal the 
+   * entity.
+   */
+  effects?: MinecraftHealableItemsEffects[];
+
+  /**
+   * @remarks
+   * The amount of health this entity gains when fed this item.
+   */
+  heal_amount?: number;
+
+  /**
+   * @remarks
+   * Item identifier that can be used to heal this entity.
+   */
+  item?: string;
+
+  /**
+   * @remarks
+   * The feed item used will transform to this item upon successful
+   * interaction.
+   */
+  result_item?: string;
+
+}
+
+
+/**
+ * Entity HealableComponentEffect (HealableComponentEffect)
+ */
+export interface MinecraftHealableItemsEffects {
+
+  /**
+   * @remarks
+   * The amplifier of the effect.
+   */
+  amplifier?: number;
+
+  /**
+   * @remarks
+   * The chance that the effect is applied.
+   */
+  chance?: number;
+
+  /**
+   * @remarks
+   * The duration of the effect in seconds, or "infinite".
+   */
+  duration?: object;
+
+  /**
+   * @remarks
+   * The name of the effect to apply.
+   */
+  name?: string;
 
 }

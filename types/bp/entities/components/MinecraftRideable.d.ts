@@ -283,7 +283,7 @@ export default interface MinecraftRideable {
    * Cow: {"position":[0,1,0]}, {"position":[0,1.15,0]}
    *
    */
-  seats?: object[];
+  seats?: MinecraftRideableSeats[];
 
 }
 
@@ -292,4 +292,62 @@ export enum MinecraftRideableDismountMode {
   default = `default`,
   onTopCenter = `on_top_center`,
   lookDirection = `look_direction`
+}
+
+
+/**
+ * Entity SeatDescription (SeatDescription)
+ */
+export interface MinecraftRideableSeats {
+
+  /**
+   * @remarks
+   * When the camera relaxes to the full distance after being pushed by
+   * an obstacle, this value can override the default movement. This
+   * value describes the stiffness of the spring that pushes the
+   * camera back out. Negative values are ignored.
+   */
+  camera_relax_distance_smoothing?: number;
+
+  /**
+   * @remarks
+   * Angle in degrees that a rider is allowed to rotate while riding
+   * this entity. Omit this property for no limit.
+   */
+  lock_rider_rotation?: number;
+
+  /**
+   * @remarks
+   * Defines the maximum number of riders that can be riding this
+   * entity for this seat to be valid.
+   */
+  max_rider_count?: number;
+
+  /**
+   * @remarks
+   * Defines the minimum number of riders that need to be riding this
+   * entity before this seat can be used.
+   */
+  min_rider_count?: number;
+
+  /**
+   * @remarks
+   * Position of this seat relative to this entity's position.
+   */
+  position?: number[];
+
+  /**
+   * @remarks
+   * Offset to rotate riders by.
+   */
+  rotate_rider_by?: { [key: string]: string };
+
+  /**
+   * @remarks
+   * A different radius that the third_person and third_person_front cameras
+   * should use for the player is in this seat. Negative values are
+   * ignored.
+   */
+  third_person_camera_radius?: number;
+
 }

@@ -91,6 +91,13 @@
       "title": "Priority",
       "dataType": "int",
       "defaultValue": 0
+    },
+    {
+      "id": "trigger_on_end_when_interrupted",
+      "title": "Trigger On End When Interrupted",
+      "description": "Whether the 'on_end' events run when another goal interrupts this goal before its duration elapses.",
+      "dataType": "boolean",
+      "defaultValue": true
     }
   ],
   "title": "Entity TimerActorFlagBaseGoalDefinition",

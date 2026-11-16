@@ -32,7 +32,7 @@ export default interface MinecraftTimer {
    * can be picked before firing the event and an optional weight.
    * Incompatible with time.
    */
-  random_time_choices?: object[];
+  random_time_choices?: MinecraftTimerRandomTimeChoices[];
 
   /**
    * @remarks
@@ -56,6 +56,18 @@ export default interface MinecraftTimer {
    * string.
    */
   time_down_event?: MinecraftTimerTimeDownEvent;
+
+}
+
+
+/**
+ * Entity TimerWeightChoiceEntry (TimerWeightChoiceEntry)
+ */
+export interface MinecraftTimerRandomTimeChoices {
+
+  value?: number;
+
+  weight?: number;
 
 }
 

@@ -6,7 +6,7 @@
   "properties": {
     "mob_effects": {
       "title": "Mob Effects",
-      "description": "List of names of effects the entity is immune to.\n\nSample values:\n• parched: [\"weakness\"]\n• polar_bear: [\"freezing\"]\n• silverfish: [\"infested\"]",
+      "description": "List of names of effects the entity is immune to.\n\nSample values:\n• bogged: [\"freezing\"]\n• parched: [\"freezing\",\"weakness\"]",
       "type": "array",
       "items": {
         "type": "string"

@@ -401,7 +401,7 @@
       "title": "Minecraft Projectile",
       "description": "Projectile items shoot out, like an arrow.",
       "dataType": "object",
-      "subFormId": "item/minecraft_projectile"
+      "subFormId": "item/item_minecraft_projectile"
     },
     {
       "id": "minecraft:rarity",
@@ -589,5 +589,5 @@
   ],
   "description": "List of all components used in this item.",
   "title": "Item Components",
-  "dataVersion": "1.26.50"
+  "dataVersion": "1.26.70"
 }
