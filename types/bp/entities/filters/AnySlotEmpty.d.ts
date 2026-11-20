@@ -141,6 +141,7 @@ export enum AnySlotEmptyValue {
   feet = `feet`,
   hand = `hand`,
   head = `head`,
+  interactionHand = `interaction_hand`,
   inventory = `inventory`,
   leg = `leg`,
   mainHand = `main_hand`,

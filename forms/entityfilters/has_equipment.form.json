@@ -62,6 +62,10 @@
           "title": "Head"
         },
         {
+          "id": "interaction_hand",
+          "title": "Interaction Hand"
+        },
+        {
           "id": "inventory",
           "title": "Inventory"
         },
